@@ -1,0 +1,61 @@
+
+@import "~bootstrap/scss/bootstrap";
+@import "./styles/variables";
+@import "./styles/mixins";
+@import "node_modules/react-modal-video/scss/modal-video.scss";
+// @import "~react-image-gallery/styles/scss/image-gallery.scss";
+// @import "~video-react/styles/scss/video-react";
+
+//layouts
+@import "./layouts/Navbar/Navbar.scss";
+@import "./layouts/Footer/Footer.scss";
+
+//components
+@import "./components/ButtonTheme/ButtonTheme.scss";
+@import "./components/BreadCrumbs/BreadCrumbs.scss";
+@import "./components/BottomTabNavigator/BottomTabNavigator.scss";
+@import "./components/ReviewCard/ReviewCard.scss";
+@import "./components/Modals/ApplyNow/ApplyNow.scss";
+@import "./components/BackToTop/BackToTop.scss";
+// sections **********************
+
+//home sections
+@import "./sections/Home/HomeHeader/HomeHeader.scss";
+@import "./sections/Home/Welcome/Welcome.scss";
+@import "./sections/Home/InfoTabs/InfoTabs.scss";
+@import "./sections/Home/OurPrograms/OurPrograms.scss";
+@import "./sections/Home/HomeFooter/HomeFooter.scss";
+@import "./sections/Home/VideoSlider/VideoSlider.scss";
+@import "./sections/Home/Curriculum/Curriculum";
+@import "./sections/Home/CovidSafety/CovidSafety";
+@import "./sections/Home/Mentors/Mentors";
+@import "./sections/Home/AgsSlider/AgsSlider";
+
+
+// ********************** sections
+
+//global setting
+
+.container {
+//   @media #{$xl} {
+//     max-width: 85% !important;
+//   }
+  @media #{$xxl} {
+    max-width: 85% !important;
+  }
+}
+
+// body {
+//   font-family: $noto !important;
+//   color: $heading-color;
+// }
+@font-face {
+  font-family: 'Optima nova LT Pro Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Optima nova LT Pro Regular'), url('./assets/fonts/OptimaNovaLTProRegular.woff') format('woff');
+}
+
+*{
+  font-family: "Optima nova LT Pro Regular";
+}

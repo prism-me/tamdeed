@@ -1,0 +1,35 @@
+.apply-now {
+  z-index: 1111;
+  .apply-now-header {
+    color: $primary-color;
+  }
+  .query-form-column {
+    input,
+    select {
+      border-radius: 0;
+      //   border: none;
+    }
+    .country_code {
+      @media #{$xsm} {
+        margin-bottom: 1rem;
+      }
+    }
+    p {
+      color: $primary-color;
+      line-height: 1.25rem;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .btn-submit {
+      border-radius: 0;
+      background-color: $primary-color;
+      border-color: $primary-color;
+      color: $text-secondary;
+      text-transform: uppercase;
+      font-weight: bold;
+      width: 50%;
+      margin: auto;
+      display: block;
+    }
+  }
+}

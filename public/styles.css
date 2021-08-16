@@ -1,0 +1,28 @@
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #eddcc04a;
+  color: #002049;
+}
+
+.content {
+}
+.content h1{
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+.btn-submit {
+  border-radius: 0;
+  background-color: #002049;
+  border-color: #002049;
+  color: #eddcc0;
+  text-transform: uppercase;
+  font-weight: bold;
+  width: 50%;
+  margin: auto;
+  margin-top: 2rem;
+  display: block;
+}

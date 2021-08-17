@@ -1,0 +1,206 @@
+/*--AGS Experience css--*/
+.btn-h {
+    padding-left: 5rem;
+}
+
+.btn-h > .viewButton {
+    font-weight: 500;
+    background: transparent;
+    border-bottom: 1px solid black;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    margin: 0 2rem;
+}
+
+.info-tabs.ex-paths{
+    width: 100%;
+    display: flex;
+    height: 100%;
+    position: relative;
+}
+
+.info-tabs.ex-paths:before{
+    content: "";
+    position: absolute;
+    top: -100px;
+    bottom: 0;
+    left: 0;
+    height: 120px;
+    z-index: 999;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../../assets/images/about/path_group.png");
+}
+
+.exp-img {
+    width: 450px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+@media (max-width: 540px) {
+    .exp-img {
+        width: 60%;
+        height: 200px;
+        margin: 0 auto;
+    }
+
+    .info-tabs.ex-paths:before{
+        top: -100px !important;
+        height: 140px !important;
+    }
+}
+
+@media (max-width: 1290px) {
+    .info-tabs.ex-paths:before{
+        top: -140px !important;
+        height: 180px !important;
+    }
+}
+
+@media (max-width: 3200px) {
+    .info-tabs.ex-paths:before{
+        top: -230px;
+        height: 240px;
+    }
+}
+
+/*--Principle Message css--*/
+.cont-hld {
+    display: flex;
+    width: 100%;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #737575;
+    position: relative;
+}
+
+.cont-hld > .op-div {
+    display: flex;
+    background: #5252527a;
+    height: inherit;
+    width: 100%;
+    /*z-index: 4;*/
+    position: absolute;
+}
+
+.cont-hld > .wavy-div {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    /*background: #1A2C52;*/
+    margin-top: 10%;
+    position: relative;
+}
+
+.cont-hld > .wavy-div:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-position: center;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../../assets/images/about/path_bg.png");
+}
+
+
+.cont-hld > .vid-cont {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.cont-hld > .vid-cont .bg-img-hld {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.cont-hld > .vid-cont > .bg-img-hld > .video-promo-content {
+    position: absolute;
+}
+
+.cont-hld > .vid-cont > .bg-img-hld > .bg-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*position: absolute;*/
+    /*width: 980px;*/
+    /*height: 504px;*/
+    width: 100%;
+    height: 100%;
+    margin-top: 8%;
+    border-radius: 50px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 540px) {
+    .cont-hld {
+        height: 130px !important;
+    }
+    .cont-hld > .vid-cont > .bg-img-hld > .bg-img {
+        width: 300px !important;
+    }
+    .cont-hld > .wavy-div{
+        margin-top: 12% !important;
+    }
+}
+
+@media (max-width: 760px) {
+    .cont-hld {
+        height: 130px !important;
+    }
+    .cont-hld > .vid-cont > .bg-img-hld > .bg-img {
+        width: 300px !important;
+    }
+    .cont-hld > .wavy-div{
+        margin-top: 8% !important;
+    }
+}
+
+@media (max-width: 1024px){
+    .cont-hld {
+        height: 230px !important;
+    }
+    .cont-hld > .vid-cont > .bg-img-hld > .bg-img {
+        width: 480px !important;
+    }
+    .cont-hld > .wavy-div{
+        margin-top: 10% !important;
+    }
+}
+
+@media (max-width: 1879px){
+    .cont-hld {
+        height: 340px !important;
+    }
+    .cont-hld > .vid-cont > .bg-img-hld > .bg-img {
+        width: 600px !important;
+    }
+    .cont-hld > .wavy-div{
+        margin-top: 7% !important;
+    }
+}
+
+@media (max-width: 3020px){
+    .cont-hld {
+        height: 750px;
+    }
+    .cont-hld > .vid-cont > .bg-img-hld > .bg-img {
+        width: 920px;
+    }
+    .cont-hld > .wavy-div{
+        margin-top: 7% ;
+    }
+}

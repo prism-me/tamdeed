@@ -1,7 +1,8 @@
 .footer-Wrape {
   color: $white;
   background-color: $bg-color;
-  padding: 3rem 0;
+  padding: 5rem 0;
+  position: relative;
   @media #{$sm} {
     padding-bottom: 4rem;
   }
@@ -64,6 +65,20 @@
    color: white;
     margin-left: 0.5rem;
   }
+}
+
+.footer-Wrape:before{
+  content: "";
+  display: block;
+  border-color: #9a9ea5 !important;
+  position: absolute;
+  border-radius: 0 0 400% 200%;
+  width: 100%;
+  box-shadow: inset 0px -7px 7px -5px #8a8a8a;
+  height: 60px;
+  background-color: #ffffff;
+  right: 0;
+  top: -20px;
 }
 
 @media (min-width: 540px) and (max-width: 720px) {

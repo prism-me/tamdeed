@@ -17,8 +17,9 @@
       position: relative;
       z-index: 888;
       @media #{$sm} {
-        height: 75vh !important;
-        align-items: flex-start !important;
+        height: 50vh !important;
+        //align-items: flex-start !important;
+        padding: 0;
         // padding-top: 3rem;
       }
       // @media #{$xl} {
@@ -42,6 +43,10 @@
           box-shadow: 0 50px 100px rgba(0, 0, 0, 0.1);
           border-radius: 50px;
           padding: 2rem 4rem;
+          @media #{$sm,$md} {
+            width: 100%;
+            padding: 0;
+          }
           .intro-title {
             font-size: 25px;
             color: $bg-color;

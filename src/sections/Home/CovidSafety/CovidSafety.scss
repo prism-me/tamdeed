@@ -27,9 +27,9 @@
     position: relative;
     z-index: 888;
     @media #{$sm} {
-      height: 75vh !important;
-      align-items: flex-start !important;
-      // padding-top: 3rem;
+      height: 60vh !important;
+      //align-items: flex-start !important;
+       padding-top: 0;
     }
     // @media #{$xl} {
     //   height: 80vh ;
@@ -50,6 +50,10 @@
       .cardStyle{
         padding: 1rem;
         width: 950px;
+        @media #{$sm,$md} {
+          width: 100%;
+          padding: 0;
+        }
         border-radius: 30px;
         .subtitle{
           margin-top: 0.5rem;

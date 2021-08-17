@@ -18,7 +18,7 @@ export default function MainNavbar() {
             expand="lg"
         >
           <Hidden smUp>
-            <Navbar.Brand href="#">
+            <Navbar.Brand href="/">
               {/*<CgMenuLeftAlt*/}
               {/*  onClick={() => props.toggleDrawer(true)}*/}
               {/*  className="nav-toggle-override"*/}
@@ -27,9 +27,11 @@ export default function MainNavbar() {
             </Navbar.Brand>
           </Hidden>
           <Hidden smDown>
+            {/*<LinkContainer to="/">*/}
             <Navbar.Brand href="/">
               <img src={logo} alt="pigeon-logo" />
             </Navbar.Brand>
+            {/*</LinkContainer>*/}
           </Hidden>
           {/* <Navbar.Toggle aria-controls="responsive-navbar-nav" /> */}
           <Navbar.Collapse id="responsive-navbar-nav">

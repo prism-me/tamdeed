@@ -28,7 +28,8 @@
     z-index: 888;
     @media #{$sm} {
       height: 75vh !important;
-      align-items: flex-start !important;
+      //align-items: flex-start !important;
+      padding: 0;
       // padding-top: 3rem;
     }
     // @media #{$xl} {
@@ -51,6 +52,9 @@
         padding: 1rem;
         width: 950px;
         border-radius: 30px;
+        @media #{$sm,$md} {
+          width: 100%;
+        }
         .viewButton{
           font-weight: 500;
           background: transparent;
@@ -61,14 +65,13 @@
           margin: 0 2rem;
         }
         .intro-title {
-          font-size: 1.5rem;
+          font-size: 25px;
           color: $bg-color;
           text-align: center;
           font-weight: 700;
           @media #{$sm} {
-            font-size: 1.8rem;
-            margin: 1rem 0 !important;
-            margin-top: 9rem !important;
+            font-size: 1rem;
+            margin: 1rem 0;
           }
         }
         .subtitle{

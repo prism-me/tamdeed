@@ -9,9 +9,7 @@
   position: relative;
   z-index: 888;
   @media #{$sm} {
-    height: 75vh !important;
-    align-items: flex-start !important;
-    // padding-top: 3rem;
+    height: 70vh !important;
   }
   // @media #{$xl} {
   //   height: 80vh ;
@@ -27,6 +25,9 @@
     width: 100%;
     height: 100%;
     background: rgba($color: #000000, $alpha: 0.5);
+    @media #{$sm} {
+      height: 97%;
+    }
   }
   .description-column {
     color: $white;
@@ -37,13 +38,13 @@
     align-items: center;
     height: 100%;
     .header-logo-wrapper {
-      @media #{$sm} {
-        position: absolute;
-        width: 100%;
-        background-color: $primary-color;
-        top: 0;
-        padding: 1rem;
-      }
+      //@media #{$sm} {
+      //  position: absolute;
+      //  width: 100%;
+      //  background-color: $primary-color;
+      //  top: 0;
+      //  padding: 1rem;
+      //}
       .header-logo {
         width: 100%;
         @include margin-vertical(2,'rem');
@@ -56,10 +57,10 @@
     .intro-title {
       font-size: 30px;
       font-weight: 500;
-      @media #{$sm} {
+      @media #{$sm,$md} {
         font-size: 1.8rem;
-        margin: 1rem 0 !important;
-        margin-top: 9rem !important;
+        margin: 1rem 0;
+        margin-top: 2rem;
       }
     }
     .intro-title2 {
@@ -151,7 +152,7 @@
   .iconSpace{
     margin-top: 10rem;
     margin-right: 4rem;
-    @media #{$sm} {
+    @media #{$sm,$md} {
       margin-top: 1rem;
       margin-right: 0;
     }

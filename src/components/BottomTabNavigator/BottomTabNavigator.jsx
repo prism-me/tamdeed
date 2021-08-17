@@ -9,6 +9,7 @@ import {
 } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import ApplyNow from "../Modals/ApplyNow/ApplyNow";
+import ContactMailIcon from '@material-ui/icons/ContactMail';
 
 const useStyles = makeStyles({
   root: {
@@ -35,12 +36,13 @@ function BottomTabNavigator() {
       >
         <Link to="/">
           <AiOutlineHome className="tab-icon" />
-          <p>Home</p>
         </Link>
-        <a href="mailto:enrollment@eahm.ae">
-          <IoMailOutline className="tab-icon" />
-          <p>Email</p>
-        </a>
+        <Link to="#">
+          <ContactMailIcon className="tab-icon" />
+        </Link>
+        {/*<a href="mailto:enrollment@eahm.ae">*/}
+        {/*  <IoMailOutline className="tab-icon" />*/}
+        {/*</a>*/}
         <Link to="#" onClick={() => setModalShow(true)}>
           <IoPaperPlaneOutline className="tab-icon" />
           <p>Apply</p>

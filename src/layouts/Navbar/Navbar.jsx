@@ -8,8 +8,8 @@ import { Hidden } from "@material-ui/core";
 import { LinkContainer } from "react-router-bootstrap";
 import { API } from "../../http/API";
 import NavDropdown from "react-bootstrap/NavDropdown";
-
-export default function MainNavbar() {
+import { CgMenuLeftAlt } from "react-icons/cg";
+export default function MainNavbar(props) {
 
   return (
       <div className="navbar-wrap">
@@ -17,23 +17,26 @@ export default function MainNavbar() {
             collapseOnSelect
             expand="lg"
         >
-          <Hidden smUp>
-            <Navbar.Brand href="/">
-              {/*<CgMenuLeftAlt*/}
-              {/*  onClick={() => props.toggleDrawer(true)}*/}
-              {/*  className="nav-toggle-override"*/}
-              {/*/>*/}
-              <img src={logo} alt="pigeon-logo" />
+          <LinkContainer to="/">
+            <Navbar.Brand>
+              <Hidden smDown>
+                <Navbar.Brand>
+                  <img src={logo} alt="AGS-logo" />
+                </Navbar.Brand>
+              </Hidden>
+              <Hidden mdUp>
+                <Navbar.Brand>
+                  <div className={"d-flex mr-auto"}>
+                    <CgMenuLeftAlt
+                        onClick={() => props.toggleDrawer(true)}
+                        className="nav-toggle-override "
+                    />
+                    <img src={logo} alt="AGS-logo" />
+                  </div>
+                </Navbar.Brand>
+              </Hidden>
             </Navbar.Brand>
-          </Hidden>
-          <Hidden smDown>
-            {/*<LinkContainer to="/">*/}
-            <Navbar.Brand href="/">
-              <img src={logo} alt="pigeon-logo" />
-            </Navbar.Brand>
-            {/*</LinkContainer>*/}
-          </Hidden>
-          {/* <Navbar.Toggle aria-controls="responsive-navbar-nav" /> */}
+          </LinkContainer>
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ml-auto navborder">
               <LinkContainer to="/about">

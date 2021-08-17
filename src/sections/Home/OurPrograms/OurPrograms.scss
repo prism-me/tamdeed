@@ -8,7 +8,8 @@
       padding: 0 8rem;
       height: 70vh;
       // background-image: url("../../../assets/images/ug-images/1920x967.jpg");
-      background-size: cover;
+      //background-size: cover;
+      background-size: 100%;
       background-position: center;
       background-repeat: no-repeat;
       display: flex;
@@ -16,11 +17,16 @@
       align-items: center;
       position: relative;
       z-index: 888;
+      transition: background-size 1s ease-in-out;
+      &:hover{
+        background-size: 120% /* work with the background-size */
+      }
       @media #{$sm} {
         height: 50vh !important;
-        //align-items: flex-start !important;
         padding: 0;
-        // padding-top: 3rem;
+      }
+      @media #{$sm,$md,$lg} {
+        background-size: cover;
       }
       // @media #{$xl} {
       //   height: 80vh ;

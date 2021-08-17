@@ -115,26 +115,21 @@
         font-size: 40px !important;
       }
     }
+    .divstyle {
+      position: relative;
+      min-width: 300px;
+      height: auto;
+      overflow: hidden;
+      border-radius: 15px;
+      margin: 0 auto;
+      padding: 40px 0;
+      transition: .5s;
+    }
+    .divstyle:hover {
+      transform:scale(1.3);
+    }
   }
-  //.divstyle {
-  //  position: relative;
-  //  min-width: 300px;
-  //  height: auto;
-  //  overflow: hidden;
-  //  border-radius: 15px;
-  //  margin: 0 auto;
-  //  padding: 40px 0;
-  //  transition: .5s;
-  //}
-  //.divstyle:hover {
-  //  transform:scale(1.3);
-  //}
-  //
-  //.divstyle:before {
-  //  content: '';
-  //  position: absolute;
-  //  z-index: 1;
-  //}
+
   input[type="range"] {
     -webkit-appearance: none;
   }

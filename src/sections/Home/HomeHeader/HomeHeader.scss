@@ -11,9 +11,12 @@
   @media #{$sm} {
     height: 70vh !important;
   }
-  // @media #{$xl} {
-  //   height: 80vh ;
-  // }
+   @media #{$md} {
+     height: 60vh ;
+   }
+  @media #{$lg} {
+    height: 80vh;
+  }
   @media #{$xxl} {
     height: 80vh;
   }
@@ -25,7 +28,7 @@
     width: 100%;
     height: 100%;
     background: rgba($color: #000000, $alpha: 0.5);
-    @media #{$sm} {
+    @media #{$sm,$md,$lg} {
       height: 97%;
     }
   }
@@ -152,8 +155,11 @@
   .iconSpace{
     margin-top: 10rem;
     margin-right: 4rem;
-    @media #{$sm,$md} {
+    @media #{$sm} {
       margin-top: 1rem;
+      margin-right: 0;
+    }
+    @media #{$md} {
       margin-right: 0;
     }
   }

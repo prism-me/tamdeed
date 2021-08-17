@@ -18,7 +18,7 @@
     padding: 0 10rem;
     height: 70vh;
     // background-image: url("../../../assets/images/ug-images/1920x967.jpg");
-    background-size: cover;
+    background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
@@ -26,10 +26,22 @@
     align-items: center;
     position: relative;
     z-index: 888;
+    //-webkit-transition: all .5s;
+    //-moz-transition: all .5s;
+    //-o-transition: all .5s;
+    //transition: all .5s;
+    transition: background-size 1s ease-in-out;
+    &:hover{
+        background-size: 120% /* work with the background-size */
+    }
     @media #{$sm} {
       height: 60vh !important;
+      background-size: cover;
       //align-items: flex-start !important;
        padding: 0;
+    }
+    @media #{$sm,$md,$lg} {
+      background-size: cover;
     }
     // @media #{$xl} {
     //   height: 80vh ;
@@ -63,5 +75,22 @@
       }
     }
   }
+  //.parent {
+  //  overflow: hidden;
+  //  position: relative;
+  //  cursor: pointer;
+  //}
+  //
+  //.parent:hover .Covid, .parent:focus .Covid {
+  //  -ms-transform: scale(1.2);
+  //  -moz-transform: scale(1.2);
+  //  -webkit-transform: scale(1.2);
+  //  -o-transform: scale(1.2);
+  //  transform: scale(1.2);
+  //}
+  //
+  //.parent:hover .Covid:before, .parent:focus .Covid:before {
+  //  display: block;
+  //}
 }
 

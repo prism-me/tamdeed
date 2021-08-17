@@ -15,12 +15,12 @@ function Curriculum(props) {
                     <Card className={"cardStyle"}>
                         <Card.Body>
                                 <Row>
-                                    <Col sm={3} className={"d-flex justify-content-center align-items-center"}>
+                                    <Col xs={12} sm={3} md={12} lg={3} className={"d-flex justify-content-center align-items-center"}>
                                         <h2 className={" intro-title"}>
                                             OUR <br/> CURRICULUM
                                         </h2>
                                     </Col>
-                                    <Col sm>
+                                    <Col xs sm md lg>
                                         <p className={"subtitle"}>
                                             The school curriculum is project-based, and student centered. It
                                             encourages,

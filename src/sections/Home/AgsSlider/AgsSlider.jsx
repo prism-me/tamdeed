@@ -89,7 +89,7 @@ export default function AgsSlider() {
                                  style={{ backgroundImage: `url(${slides.thumbnail})` }}
                             >
                                 <div className="video-promo-content mt-4 ">
-                                    <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="RBZutrFFhTA" onClose={() => setOpen(false)} />
+                                    {/*<ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="RBZutrFFhTA" onClose={() => setOpen(false)} />*/}
                                     <button className="btn video-play-icon" onClick={()=> setOpen(true)}>
                                         <PlayArrowIcon className={"playSize"}/>
                                     </button>

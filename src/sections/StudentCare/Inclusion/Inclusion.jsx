@@ -1,19 +1,33 @@
-import React from "react";
+import React, {useState} from "react";
 import {Col, Container, Row} from "react-bootstrap";
-import img1 from "../../../assets/images/ug-images/450x350(5).jpg";
-import img2 from "../../../assets/images/ug-images/450x350(5).jpg";
-import img3 from "../../../assets/images/ug-images/450x350(5).jpg";
-import img4 from "../../../assets/images/ug-images/450x350(5).jpg";
-import ErrorOutlineIcon from '@material-ui/icons/ErrorOutline/';
+import std1 from "../../../assets/images/studentcare/student1.png";
+import std2 from "../../../assets/images/studentcare/student2.png";
+import std3 from "../../../assets/images/studentcare/student3.png";
+import std4 from "../../../assets/images/studentcare/student4.png";
+import std5 from "../../../assets/images/studentcare/student5.png";
+
+import ModalVideo from 'react-modal-video'
+import PlayArrowIcon from "@material-ui/icons/PlayArrow";
 
 function Inclusion() {
+    const [isOpen, setOpen] = useState(false)
     return (
         <div className="Inclusion">
             <Container>
                 <div className={"HowToSellspacing"}>
                     <Row>
                         <Col sm={4} md={4} lg={4}>
-                            <img src={img1} alt="" className={"img-fluid InclusionImg"}/>
+                            <div className="d-flex justify-content-center align-items-center imgheight"
+                                 style={{ backgroundImage: `url(${std1})` }}
+                            >
+                                <div className="video-promo-content mt-4 ">
+                                    <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="RBZutrFFhTA" onClose={() => setOpen(false)} />
+                                    <button className="btn video-play-icon" onClick={()=> setOpen(true)}>
+                                        <PlayArrowIcon className={"playSize"}/>
+                                    </button>
+                                </div>
+                            </div>
+                            {/*<img src={img1} alt="" className={"img-fluid InclusionImg"}/>*/}
                         </Col>
                         <Col sm md lg >
                             <h3 className="title">
@@ -71,15 +85,35 @@ function Inclusion() {
                                 Learn more
                             </button>
                         </Col>
-                        <Col sm={3} md={3} lg={3}>
-                            <img src={img2} alt="" className={"img-fluid InclusionImg"}/>
+                        <Col sm={4} md={4} lg={4}>
+                            <div className="d-flex justify-content-center align-items-center imgheight"
+                                 style={{ backgroundImage: `url(${std2})` }}
+                            >
+                                <div className="video-promo-content mt-4 ">
+                                    <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="RBZutrFFhTA" onClose={() => setOpen(false)} />
+                                    <button className="btn video-play-icon" onClick={()=> setOpen(true)}>
+                                        <PlayArrowIcon className={"playSize"}/>
+                                    </button>
+                                </div>
+                            </div>
+                            {/*<img src={img2} alt="" className={"img-fluid InclusionImg"}/>*/}
                         </Col>
                     </Row>
                 </div>
                 <div className={"HowToSellspacing"}>
                 <Row>
                     <Col sm={4} md={4} lg={4}>
-                        <img src={img1} alt="" className={"img-fluid InclusionImg"}/>
+                        <div className="d-flex justify-content-center align-items-center imgheight"
+                             style={{ backgroundImage: `url(${std3})` }}
+                        >
+                            <div className="video-promo-content mt-4 ">
+                                <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="RBZutrFFhTA" onClose={() => setOpen(false)} />
+                                <button className="btn video-play-icon" onClick={()=> setOpen(true)}>
+                                    <PlayArrowIcon className={"playSize"}/>
+                                </button>
+                            </div>
+                        </div>
+                        {/*<img src={img2} alt="" className={"img-fluid InclusionImg"}/>*/}
                     </Col>
                     <Col sm md lg >
                         <h3 className="title">
@@ -110,15 +144,35 @@ function Inclusion() {
                             aspect of their learning or social, emotional wellbeing.
                         </p>
                     </Col>
-                    <Col sm={3} md={3} lg={3}>
-                        <img src={img2} alt="" className={"img-fluid InclusionImg"}/>
+                    <Col sm={4} md={4} lg={4}>
+                        <div className="d-flex justify-content-center align-items-center imgheight"
+                             style={{ backgroundImage: `url(${std4})` }}
+                        >
+                            <div className="video-promo-content mt-4 ">
+                                <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="RBZutrFFhTA" onClose={() => setOpen(false)} />
+                                <button className="btn video-play-icon" onClick={()=> setOpen(true)}>
+                                    <PlayArrowIcon className={"playSize"}/>
+                                </button>
+                            </div>
+                        </div>
+                        {/*<img src={img2} alt="" className={"img-fluid InclusionImg"}/>*/}
                     </Col>
                 </Row>
                 </div>
                 <div className={"HowToSellspacing"}>
                 <Row>
                     <Col sm={4} md={4} lg={4}>
-                        <img src={img1} alt="" className={"img-fluid InclusionImg"}/>
+                        <div className="d-flex justify-content-center align-items-center imgheight"
+                             style={{ backgroundImage: `url(${std5})` }}
+                        >
+                            <div className="video-promo-content mt-4 ">
+                                <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="RBZutrFFhTA" onClose={() => setOpen(false)} />
+                                <button className="btn video-play-icon" onClick={()=> setOpen(true)}>
+                                    <PlayArrowIcon className={"playSize"}/>
+                                </button>
+                            </div>
+                        </div>
+                        {/*<img src={img2} alt="" className={"img-fluid InclusionImg"}/>*/}
                     </Col>
                     <Col sm md lg >
                         <h3 className="title">

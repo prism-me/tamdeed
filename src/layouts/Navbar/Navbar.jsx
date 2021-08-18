@@ -54,7 +54,7 @@ export default function MainNavbar(props) {
               <LinkContainer to="/contact">
                 <Nav.Link>Contact Us</Nav.Link>
               </LinkContainer>
-              <LinkContainer to="/enroll">
+              <LinkContainer to="/Enroll">
                 <button className={"enrollButton"}>Enroll</button>
               </LinkContainer>
             </Nav>

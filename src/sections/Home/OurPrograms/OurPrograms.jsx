@@ -11,14 +11,14 @@ function OurPrograms() {
   return (
     <div className="our-programs">
       <div
-          className=" cont-hld"
+          className="programs"
           style={{ backgroundImage: `url(${header_bg})` }}
       >
         <div className="op-div">
         </div>
         <div className="wavy-div">
         </div>
-        <div  className="vid-cont">
+        <div  className="description-column">
           <Container>
             <Card shadow style={{borderRadius:"20px"}} className={"cardStyle"}>
               <Card.Body>

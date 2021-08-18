@@ -188,7 +188,7 @@ export default function Layout(props) {
             toggleDrawer={(show) => toggleDrawer(show)}
         />
         {props.children}
-        {/*<BackToTop/>*/}
+        <BackToTop/>
         <Footer />
         <BottomTabNavigator />
       </div>

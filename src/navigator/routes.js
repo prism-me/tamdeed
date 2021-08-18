@@ -6,6 +6,7 @@ import {STRINGS} from "../utils/base";
 
 const Home = lazy(() => import('../pages/Home'));
 const About = lazy(() => import('../pages/About'));
+const Academics = lazy(() => import('../pages/Academics'));
 
 
 export const routes = [
@@ -27,6 +28,13 @@ export const routes = [
     name: "About",
     path: `${STRINGS.ROUTES.ABOUT_US}`,
     component: About,
+    isPrivate: false,
+    exact: true,
+  },
+  {
+    name: "Academics",
+    path: `${STRINGS.ROUTES.ACADEMICS}`,
+    component: Academics,
     isPrivate: false,
     exact: true,
   },

@@ -1,14 +1,13 @@
 import React from 'react';
 import exp_bg_img from "../../../assets/images/about/exp_bg_img.jpg";
-import "../about.css";
 import {Grid} from "@material-ui/core";
 
 const AgsExperience = () => {
     return (
         <Grid container xs={12} sm={12} md={12} lg={12} xl={12} className="ex-paths info-tabs justify-content-center">
             <h3 className="InfoTitle">ABOUT THE AGS EXPERIENCE</h3>
-            <Grid item xs={12} sm={12} md={12} lg={12} xl={12} className="d-flex w-100 flex-wrap">
-                <Grid item xs={12} sm={12} md={6} lg={5} xl={5} >
+            <Grid item xs={12} justifyContent={"center"} sm={12} md={12} lg={12} xl={12} className="d-flex w-100 flex-wrap justify-content-center">
+                <Grid item justifyContent={'center'} xs={12} sm={12} md={6} lg={5} xl={5} className="d-flex justify-content-center w-100" >
                     <img alt={"#"} src={exp_bg_img}
                          className="exp-img d-flex justify-content-center align-items-center"/>
                 </Grid>

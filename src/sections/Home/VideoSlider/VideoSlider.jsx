@@ -105,7 +105,26 @@ import Tooltip from "@material-ui/core/Tooltip";
 // import Popover from "@material-ui/core/Popover";
 import screenful from "screenfull";
 import Controls from "../../../components/Controls";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
+const responsive = {
+    desktop: {
+        breakpoint: { max: 3000, min: 1024 },
+        items: 4,
+        slidesToSlide: 4 // optional, default to 1.
+    },
+    tablet: {
+        breakpoint: { max: 1024, min: 464 },
+        items: 2,
+        slidesToSlide: 2 // optional, default to 1.
+    },
+    mobile: {
+        breakpoint: { max: 464, min: 0 },
+        items: 1,
+        slidesToSlide: 1 // optional, default to 1.
+    }
+};
 const useStyles = makeStyles((theme) => ({
     playerWrapper: {
         width: "100%",
@@ -235,7 +254,22 @@ function VideoSlider() {
 
     return (
         <>
-            <Container maxWidth="md">
+            <Carousel
+                responsive={responsive}
+                // centerMode={true}
+                swipeable={false}
+                draggable={false}
+                ssr={true} // means to render carousel on server-side.
+                infinite={true}
+                autoPlay={true}
+                autoPlaySpeed={3000}
+                keyBoardControl={true}
+                customTransition="all .5"
+                transitionDuration={700}
+                arrows={false}
+                containerClass="carousel-container"
+            >
+            <Container >
                 <div
                     ref={playerContainerRef}
                     className={classes.playerWrapper}
@@ -263,8 +297,8 @@ function VideoSlider() {
                         onToggleFullScreen={toggleFullScreen}
                     />
                 </div>
-                <canvas ref={canvasRef} />
             </Container>
+            </Carousel>
         </>
     );
 }

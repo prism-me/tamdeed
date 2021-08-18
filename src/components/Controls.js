@@ -98,43 +98,59 @@ const Controls = forwardRef(
 
         return (
             <div ref={ref} className={classes.controlsWrapper}>
-                <Grid
-                    container
-                    direction="row"
-                    alignItems="center"
-                    justify="center"
-                    style={{ flexGrow: 1 }}
+                <div
+                    className={"d-flex justify-content-center align-items-center"}
                 >
-                    <Grid container  alignItems="center" justify="center">
-                        <IconButton
-                            onClick={onPlayPause}
-                            className={classes.controlIcons}
-                            aria-label="play"
-                        >
-                            {playing ? (
-                                <PauseIcon fontSize="inherit" />
-                            ) : (
-                                <PlayArrowIcon fontSize="inherit" />
-                            )}
-                        </IconButton>
-                    </Grid>
-                </Grid>
-                <Grid
-                    container
-                    direction="row"
-                    justify="flex-end"
-                    alignItems="center"
-                    style={{ padding: 16 }}
-                >
-                    <Grid item>
-                        <IconButton
-                            onClick={onToggleFullScreen}
-                            className={classes.bottomIcons}
-                        >
-                            <FullScreen fontSize="large" />
-                        </IconButton>
-                    </Grid>
-                </Grid>
+                        <div className="video-promo-content mt-4 ">
+                            {/*<ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="RBZutrFFhTA" onClose={() => setOpen(false)} />*/}
+                            <button className="btn video-play-icon" onClick={onPlayPause}>
+                                {playing ? (
+                                    <PauseIcon fontSize="playSize" />
+                                ) : (
+                                    <PlayArrowIcon fontSize="playSize" />
+                                )}
+                                {/*<PlayArrowIcon className={"playSize"}/>*/}
+                            </button>
+                           <div className={"d-flex justify-content-between align-items-center"}>
+                               <h5 className={"overview-heading"}>
+                                   heading
+                               </h5>
+                               <IconButton
+                                   onClick={onToggleFullScreen}
+                                   className={classes.bottomIcons}
+                               >
+                                   <FullScreen fontSize="large" />
+                               </IconButton>
+                           </div>
+                        </div>
+                        {/*<IconButton*/}
+                        {/*    onClick={onPlayPause}*/}
+                        {/*    className={classes.controlIcons}*/}
+                        {/*    aria-label="play"*/}
+                        {/*>*/}
+                        {/*    {playing ? (*/}
+                        {/*        <PauseIcon fontSize="inherit" />*/}
+                        {/*    ) : (*/}
+                        {/*        <PlayArrowIcon fontSize="inherit" />*/}
+                        {/*    )}*/}
+                        {/*</IconButton>*/}
+                </div>
+                {/*<Grid*/}
+                {/*    container*/}
+                {/*    direction="row"*/}
+                {/*    justify="flex-end"*/}
+                {/*    alignItems="center"*/}
+                {/*    style={{ padding: 16 }}*/}
+                {/*>*/}
+                {/*    <Grid item>*/}
+                {/*        <IconButton*/}
+                {/*            onClick={onToggleFullScreen}*/}
+                {/*            className={classes.bottomIcons}*/}
+                {/*        >*/}
+                {/*            <FullScreen fontSize="large" />*/}
+                {/*        </IconButton>*/}
+                {/*    </Grid>*/}
+                {/*</Grid>*/}
             </div>
         );
     }

@@ -35,13 +35,13 @@
     &:hover{
         background-size: 120% /* work with the background-size */
     }
-    @media #{$sm} {
-      height: 60vh !important;
+    @media #{$lg} {
+      height: 48vh !important;
       background-size: cover;
       //align-items: flex-start !important;
        padding: 0;
     }
-    @media #{$sm,$md,$lg} {
+    @media #{$md} {
       background-size: cover;
     }
     // @media #{$xl} {

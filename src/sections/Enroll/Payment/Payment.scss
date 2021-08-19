@@ -1,6 +1,6 @@
 .Payment{
   padding-top: 22rem;
-  @media #{$sm} {
+  @media #{$sm,$md} {
     padding-top: 2rem;
   }
   .FeesButton{

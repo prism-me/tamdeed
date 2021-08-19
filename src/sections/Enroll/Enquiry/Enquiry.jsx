@@ -83,7 +83,7 @@ function Enquiry() {
                     </div>
                 </div>
             </Hidden>
-           <Hidden smUp>
+           <Hidden mdUp>
                <Container fluid>
                    <Row>
                        <Col sm>

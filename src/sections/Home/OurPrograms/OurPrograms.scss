@@ -22,11 +22,13 @@
       &:hover{
         background-size: 120% /* work with the background-size */
       }
-      //@media #{$sm} {
-      //  height: 50vh !important;
-      //  padding: 0;
-      //}
-      @media #{$md,$lg} {
+      @media #{$lg} {
+        height: 35vh !important;
+        background-size: cover;
+        //align-items: flex-start !important;
+        padding: 0;
+      }
+      @media #{$md} {
         background-size: cover;
       }
       // @media #{$xl} {

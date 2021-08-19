@@ -1,7 +1,10 @@
 .FeesPayments-page{
   padding-top: 19rem;
-  @media #{$sm} {
+  @media #{$sm,$md,$lg} {
     padding-top: 2rem;
+  }
+  @media #{$lg} {
+    padding-top: 8rem;
   }
   .Title{
     margin-bottom: 2rem;
@@ -31,13 +34,12 @@
     &:hover{
       background-size: 120% /* work with the background-size */
     }
-    //@media #{$sm} {
-    //  height: 80vh !important;
-    //  //align-items: flex-start !important;
-    //  padding: 0;
-    //  // padding-top: 3rem;
-    //}
-    @media #{$md,$lg} {
+    @media #{$lg} {
+      height: 46vh !important;
+      background-size: cover;
+      padding: 0;
+    }
+    @media #{$md} {
       background-size: cover;
     }
     // @media #{$xl} {

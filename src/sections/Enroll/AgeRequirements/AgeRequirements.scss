@@ -4,7 +4,7 @@
     @media #{$sm} {
       padding-top: 2rem;
     }
-    @media #{$sm,$md} {
+    @media #{$md} {
       padding-top: 2rem;
     }
     .Title{
@@ -13,16 +13,17 @@
       margin: 1.5rem 3rem;
       text-align: left;
       text-transform: uppercase;
-      @media #{$sm,$xsm} {
-        font-size: 25px !important;
+      @media #{$sm} {
+        font-size: 22px;
       }
     }
     .subTitle{
       font-size: 18px;
       font-weight: 500;
       margin: 0 3rem;
-      @media #{$sm,$xsm} {
-        font-size: 16px !important;
+      @media #{$sm} {
+        font-size: 16px;
+        margin: 0 1rem;
       }
     }
     .agereqButton{
@@ -37,9 +38,10 @@
       margin-top: 1rem;
       margin-bottom: 5rem;
       @media #{$sm,$md} {
-        margin: 0;
+        margin-top: 0.5rem;
+        margin-bottom: 0;
+        font-size: 16px;
       }
-
     }
   }
 }

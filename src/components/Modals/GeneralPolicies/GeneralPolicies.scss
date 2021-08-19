@@ -4,16 +4,25 @@
     font-size: 20px;
     font-weight: 700;
     color: $bg-color;
+    @media #{$sm} {
+      font-size: 18px;
+    }
   }
   .UlStyle{
     color: $bg-color;
     font-size: 20px;
     font-weight: 500;
+    @media #{$sm} {
+      font-size: 18px;
+    }
   }
   .SubTitle{
     color: $bg-color;
     font-size: 20px;
     font-weight: 500;
+    @media #{$sm} {
+      font-size: 18px;
+    }
   }
   .modalIcon{
     background: $bg-color;
@@ -31,6 +40,9 @@
   }
   .modal-body {
     padding: 1.5rem 3rem;
+    @media #{$sm} {
+      padding: 1.5rem 2rem;
+    }
   }
   .modal-content{
     border-radius: 60px;

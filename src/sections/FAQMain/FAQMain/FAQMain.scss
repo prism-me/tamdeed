@@ -10,8 +10,8 @@
       margin: 2rem 0;
       text-align: center;
       text-transform: uppercase;
-      @media #{$sm,$xsm} {
-        font-size: 25px !important;
+      @media #{$sm} {
+        font-size: 22px;
       }
     }
     .accordianStyle{

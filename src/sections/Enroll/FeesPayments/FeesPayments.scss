@@ -11,7 +11,7 @@
     font-weight: 500;
     color: $primary-color;
     @media #{$sm} {
-      text-align: center;
+      font-size: 22px;
     }
   }
   .FeesPayments {
@@ -31,13 +31,13 @@
     &:hover{
       background-size: 120% /* work with the background-size */
     }
-    @media #{$sm} {
-      height: 80vh !important;
-      //align-items: flex-start !important;
-      padding: 0;
-      // padding-top: 3rem;
-    }
-    @media #{$sm,$md,$lg} {
+    //@media #{$sm} {
+    //  height: 80vh !important;
+    //  //align-items: flex-start !important;
+    //  padding: 0;
+    //  // padding-top: 3rem;
+    //}
+    @media #{$md,$lg} {
       background-size: cover;
     }
     // @media #{$xl} {
@@ -65,7 +65,7 @@
         padding: 1rem;
         width: 950px;
         border-radius: 30px;
-        @media #{$sm,$md} {
+        @media #{$md} {
           width: 100%;
           padding: 1.5rem 1rem;
         }
@@ -77,7 +77,7 @@
           border-right: 0;
           border-top: 0;
           margin: 0 2rem;
-          @media #{$sm,$md} {
+          @media #{$md} {
             margin: 0;
           }
         }
@@ -86,19 +86,19 @@
           color: $bg-color;
           text-align: center;
           font-weight: 700;
-          @media #{$sm} {
-            font-size: 25px;
-            margin-bottom: 1rem;
-          }
+          //@media #{$sm} {
+          //  font-size: 25px;
+          //  margin-bottom: 1rem;
+          //}
         }
         .subtitle{
           margin-top: 0.5rem;
           font-size: 1rem;
           text-align: justify;
           font-weight: 500;
-          @media #{$sm,$md} {
-            margin-top: 0;
-          }
+          //@media #{$sm,$md} {
+          //  margin-top: 0;
+          //}
         }
         .table thead th {
           border-bottom: 1px solid #CDB786;
@@ -139,18 +139,42 @@
       }
     }
   }
-  .FeesButton{
-    border-bottom: 1px solid #4838FF;
-    font-weight: 500;
-    font-size: 18px;
-    color: #4838FF;
-    background: transparent;
-    border-left: 0;
-    border-right: 0;
-    border-top: 0;
-    margin: 0 2rem;
-    @media #{$sm,$md} {
-      margin: 0;
+  //Design on MbL Screen
+  .cardStyleMBL{
+    width: 100%;
+    padding: 1.5rem 1rem;
+    border-radius: 30px;
+    .viewButton{
+      font-weight: 500;
+      background: transparent;
+      border-bottom: 1px solid black;
+      border-left: 0;
+      border-right: 0;
+      border-top: 0;
+      margin: 0 2rem;
+      @media #{$sm,$md} {
+        margin: 0;
+      }
+    }
+    .intro-title {
+      font-size: 22px;
+      color: $bg-color;
+      text-align: center;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .subtitle{
+      margin-top: 0;
+      font-size: 1rem;
+      text-align: justify;
+      font-weight: 500;
+    }
+    .table thead th {
+      border-bottom: 1px solid #CDB786;
+      border-top: none;
+    }
+    .table td {
+      border-bottom: 1px solid #CDB786;
     }
   }
 }

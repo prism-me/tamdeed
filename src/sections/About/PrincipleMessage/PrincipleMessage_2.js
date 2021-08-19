@@ -8,7 +8,7 @@ import {Grid} from "@material-ui/core";
 
 const PrincipleMessage = () => {
     return (
-        <Grid container className="info-tabs justify-content-center">
+        <Grid container className="info-tabs justify-content-center p-main">
             <h3 className="InfoTitle">PRINCIPLE MESSAGE</h3>
             <Grid container sm={12} className="d-flex w-100" style={{
                 backgroundColor:"#fffff"

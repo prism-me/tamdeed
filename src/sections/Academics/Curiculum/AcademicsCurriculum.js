@@ -11,10 +11,7 @@ const AcademicsCurriculum = () => {
         <div className={"AgsSlider"}>
             <h3 className={"InfoTitle"}>OUR CURRICULUM</h3>
             <Grid container className="d-flex w-100 ">
-                <Grid item className="d-flex w-100 text-center" style={{
-                    margin: "0 7rem",
-                    lineHeight: "1.3rem"
-                }}>
+                <Grid item className="curr-sec">
                     <p>The school curriculum is project-based, and student centered. It encourages, requires, and builds
                         critical thinking, driven by inquiry combined with both knowledge and comprehensive skills. This
                         allows learners to make authentic connections between different theories and be able to apply
@@ -94,7 +91,7 @@ const AcademicsCurriculum = () => {
                 </div>
             </div>
             <Grid className="d-flex w-100 justify-content-center" >
-                <Grid className="d-flex text-center" style={{width:"27%"}}>
+                <Grid className="curr-footer-text" >
                     <p>“Coming together is a <strong>beginning</strong>, staying together is <strong>progress</strong>, and working together is <strong>success.</strong>” Henry Ford.</p>
                 </Grid>
             </Grid>

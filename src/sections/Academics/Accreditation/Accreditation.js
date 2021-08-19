@@ -16,7 +16,7 @@ const AgsEthos = () => {
                     </div>
                 </Grid>
             </Grid>
-            <Grid container className="justify-content-center ethos_bg">
+            <Grid container className="justify-content-center ac-bg ethos_bg">
                 <img alt={'#'} className={"ethos_bg"} src={bg_img_e} style={{
                     visibility: "hidden",
                     display: "inline-block"
@@ -31,9 +31,11 @@ const AgsEthos = () => {
                                     <Col>
                                         <Col xs sm md lg>
                                             <p className={"subtitle"}>
-                                                American Gulf School is a candidate school for the International
-                                                Baccalaureate (IB) Primary Years Programme and Middle Years Programme
-                                                and pursuing authorization as an IB World School.
+                                                <strong>American Gulf School</strong> is a candidate school for
+                                                the <strong>International
+                                                Baccalaureate (IB) Primary Years Programme </strong> and <strong> Middle
+                                                Years Programme </strong>and pursuing <strong>authorization</strong> as
+                                                an <strong>IB World School.</strong>
                                             </p>
                                         </Col>
                                     </Col>
@@ -64,6 +66,25 @@ const AgsEthos = () => {
                             </Col>
                         </Card.Body>
                     </Card>
+                </Grid>
+            </Grid>
+            <Grid className="sm-ac-cont">
+                <h3 className={"InfoTitle"}>ACCREDITATIONS</h3>
+                <Grid container className="sm-ac-body">
+                    <Grid item className="b-para">
+                        <p><strong>American Gulf School</strong> is a candidate school for the <strong>International
+                            Baccalaureate (IB) Primary Years Programme </strong> and <strong> Middle Years
+                            Programme </strong>and pursuing <strong>authorization</strong> as an <strong>IB World
+                            School.</strong></p>
+                        <p>IB World Schools share
+                            a common philosophy—a commitment to improve the teaching and learning of
+                            a diverse and inclusive community of students by delivering challenging,
+                            high quality programmes of international education that share a powerful
+                            vision.
+                        </p>
+                        <p>American Gulf School also applied for Cognia accreditation for
+                            American Curriculum Schools.</p>
+                    </Grid>
                 </Grid>
             </Grid>
         </Grid>

@@ -6,6 +6,7 @@ import AccordionDetails from '@material-ui/core/AccordionDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import {Container} from "react-bootstrap";
+import Documents from "../../../components/Modals/Documents/Documents";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -19,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
 
 function AdmissionProcedure (props) {
     const classes = useStyles();
+    const [modalShow, setModalShow] = React.useState(false);
     return (
         <div className="AdmissionProcedure">
             <h1 className="Title">
@@ -28,13 +30,16 @@ function AdmissionProcedure (props) {
                 <div className={classes.root}>
                             <Accordion className={"accordianStyle"}>
                                 <AccordionSummary
-                                    expandIcon={<ExpandMoreIcon />}
                                     aria-controls="panel1a-content"
                                     id="panel1a-header"
                                     className={"accordianBorderStyle"}
                                 >
                                     <Typography className={classes.heading}>
-                                        <b>STEP 1 </b>&mdash; STEP 1 – Complete the online application
+                                        <a href={"#applyOnline"}
+                                           className={"text-dark text-decoration-none"}
+                                        >
+                                            <b>STEP 1 </b>&mdash; Complete the online application
+                                        </a>
                                     </Typography>
                                 </AccordionSummary>
                             </Accordion>
@@ -107,8 +112,13 @@ function AdmissionProcedure (props) {
                                 </AccordionDetails>
                             </Accordion>
                     <center>
-                        <button className={"admissionButton"}>Click here to view the documents to be submitted once a student has been accepted and enrolled</button>
+                        <button
+                            className={"admissionButton"}
+                            onClick={() => setModalShow(true)}
+                        >
+                            Click here to view the documents to be submitted once a student has been accepted and enrolled</button>
                     </center>
+                    <Documents show={modalShow} onHide={() => setModalShow(false)} />
                 </div>
             </Container>
         </div>

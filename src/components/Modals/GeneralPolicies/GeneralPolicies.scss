@@ -1,0 +1,38 @@
+.GeneralPolicies {
+  z-index: 1111;
+  .Title {
+    font-size: 20px;
+    font-weight: 700;
+    color: $bg-color;
+  }
+  .UlStyle{
+    color: $bg-color;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .SubTitle{
+    color: $bg-color;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .modalIcon{
+    background: $bg-color;
+    color: $white;
+    padding: 1.5rem;
+    border-radius: 100%;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .modal-body {
+    padding: 1.5rem 3rem;
+  }
+  .modal-content{
+    border-radius: 60px;
+  }
+}

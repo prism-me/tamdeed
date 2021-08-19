@@ -1,5 +1,5 @@
 .home-page{
-  .AgeRequirements{
+  .Covid{
     padding-top: 3rem;
     @media #{$sm} {
       padding-top: 2rem;
@@ -11,35 +11,20 @@
       font-size: 25px;
       font-weight: 500;
       margin: 1.5rem 3rem;
-      text-align: left;
       text-transform: uppercase;
+      text-align: center;
       @media #{$sm,$xsm} {
         font-size: 25px !important;
       }
     }
     .subTitle{
       font-size: 18px;
+      text-align: center;
       font-weight: 500;
       margin: 0 3rem;
       @media #{$sm,$xsm} {
         font-size: 16px !important;
       }
-    }
-    .agereqButton{
-      border-bottom: 1px solid #4838FF;
-      font-weight: 500;
-      font-size: 18px;
-      color: #4838FF;
-      background: transparent;
-      border-left: 0;
-      border-right: 0;
-      border-top: 0;
-      margin-top: 1rem;
-      margin-bottom: 5rem;
-      @media #{$sm,$md} {
-        margin: 0;
-      }
-
     }
   }
 }

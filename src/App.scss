@@ -17,6 +17,10 @@
 @import "./components/ReviewCard/ReviewCard.scss";
 @import "./components/Modals/ApplyNow/ApplyNow.scss";
 @import "./components/BackToTop/BackToTop.scss";
+@import "./components/Modals/Documents/Documents";
+@import "./components/Modals/Ages/Ages";
+@import "./components/Modals/GeneralPolicies/GeneralPolicies";
+
 // sections **********************
 
 //home sections
@@ -44,6 +48,12 @@
 @import "sections/Enroll/Enquiry/Enquiry";
 @import "sections/Enroll/FeesPayments/FeesPayments";
 @import "sections/Enroll/ApplyOnline/ApplyOnline";
+@import "sections/Enroll/Covid/Covid";
+@import "sections/Enroll/AdmissionContact/AdmissionContact";
+@import "sections/Enroll/Payment/Payment";
+
+//FAQMAIN
+@import "sections/FAQMain/FAQMain/FAQMain";
 
 // ********************** sections
 

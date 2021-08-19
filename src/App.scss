@@ -34,6 +34,16 @@
 //Academics
 @import "./sections/Academics/academics";
 
+// Student Care
+@import "./sections/StudentCare/Inclusion/Inclusion";
+
+// Enroll
+@import "sections/Enroll/FAQ/FAQ";
+@import "sections/Enroll/AdmissionProcedure/AdmissionProcedure";
+@import "sections/Enroll/AgeRequirements/AgeRequirements";
+@import "sections/Enroll/Enquiry/Enquiry";
+@import "sections/Enroll/FeesPayments/FeesPayments";
+@import "sections/Enroll/ApplyOnline/ApplyOnline";
 
 // ********************** sections
 
@@ -52,6 +62,12 @@
 //   font-family: $noto !important;
 //   color: $heading-color;
 // }
+
+@font-face {
+  font-family: 'Optima nova LT Medium';
+  src: local('Optimal nova LT Medium'), url("./assets/fonts/50a07a2502cdd8e376c745d1d519c76f.woff2") format("woff2");
+}
+
 @font-face {
   font-family: 'Optima nova LT Pro Regular';
   font-style: normal;
@@ -59,6 +75,9 @@
   src: local('Optima nova LT Pro Regular'), url('./assets/fonts/OptimaNovaLTProRegular.woff') format('woff');
 }
 
+//*{
+//  font-family: "Optima nova LT Pro Regular";
+//}
 *{
-  font-family: "Optima nova LT Pro Regular";
+  font-family: "Optima nova LT Medium";
 }

@@ -9,7 +9,7 @@ export default class Academics extends Component {
 
     render() {
         return (
-            <div className="home-page">
+            <div className="home-page about-section">
                 <AcademicHeader/>
                 <Accreditation/>
                 <InfoTabs />

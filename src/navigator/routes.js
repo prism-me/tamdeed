@@ -7,6 +7,8 @@ import {STRINGS} from "../utils/base";
 const Home = lazy(() => import('../pages/Home'));
 const About = lazy(() => import('../pages/About'));
 const Academics = lazy(() => import('../pages/Academics'));
+const StudentCare = lazy(() => import('../pages/StudentCare'));
+const Enroll = lazy(() => import('../pages/Enroll'));
 
 
 export const routes = [
@@ -35,6 +37,19 @@ export const routes = [
     name: "Academics",
     path: `${STRINGS.ROUTES.ACADEMICS}`,
     component: Academics,
+    isPrivate: false,
+    exact: true,
+  },
+  {
+    name: "StudentCare",
+    path: "/Student-care",
+    component: StudentCare,
+    isPrivate: false,
+    exact: true,
+  }, {
+    name: "Enroll",
+    path: "/Enroll",
+    component: Enroll,
     isPrivate: false,
     exact: true,
   },

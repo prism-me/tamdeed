@@ -9,6 +9,7 @@ import { LinkContainer } from "react-router-bootstrap";
 import { API } from "../../http/API";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { CgMenuLeftAlt } from "react-icons/cg";
+import {STRINGS} from "../../utils/base";
 export default function MainNavbar(props) {
 
   return (
@@ -39,10 +40,10 @@ export default function MainNavbar(props) {
           </LinkContainer>
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ml-auto navborder">
-              <LinkContainer to="/about">
+              <LinkContainer to={STRINGS.ROUTES.ABOUT_US}>
                 <Nav.Link>About Us</Nav.Link>
               </LinkContainer>
-              <LinkContainer to="/academics">
+              <LinkContainer to={STRINGS.ROUTES.ACADEMICS}>
                 <Nav.Link> Academics </Nav.Link>
               </LinkContainer>
               <LinkContainer to="/Student-care">
@@ -54,7 +55,7 @@ export default function MainNavbar(props) {
               <LinkContainer to="/contact">
                 <Nav.Link>Contact Us</Nav.Link>
               </LinkContainer>
-              <LinkContainer to="/enroll">
+              <LinkContainer to="/Enroll">
                 <button className={"enrollButton"}>Enroll</button>
               </LinkContainer>
             </Nav>

@@ -11,6 +11,10 @@ function CovidSafety(props) {
                     className="Covid"
                     style={{ backgroundImage: `url(${header_bg})` }}
                 >
+                    <div className="op-div">
+                    </div>
+                    <div className="wavy-div">
+                    </div>
                     <div className="description-column">
                         <Container>
                             <Card className={"cardStyle"}>

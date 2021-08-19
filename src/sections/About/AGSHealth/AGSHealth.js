@@ -4,7 +4,7 @@ import health_bg_img from "../../../assets/images/about/health_.png";
 
 const AGSHealth = () => {
     return (
-        <Grid container xs={12} sm={12} md={12} lg={12} xl={12} className="info-tabs justify-content-center" style={{
+        <Grid container xs={12} sm={12} md={12} lg={12} xl={12} className="justify-content-center ags-heath-main" style={{
             paddingTop:"0"
         }}>
             <h3 className="InfoTitle">HEALTH AND SAFETY</h3>
@@ -16,10 +16,7 @@ const AGSHealth = () => {
                          className="exp-img d-flex justify-content-center align-items-center"/>
                 </Grid>
                 <Grid item xs={12} sm={12} md={6} lg={7} xl={7} className="d-flex w-100 flex-column align-items-center">
-                    <div className="d-flex" style={{
-                        padding: "5rem",
-                        textAlign: "start",
-                    }}>
+                    <div className="d-flex txt-c" >
                         <p>American Gulf School believes that the safety of every child is paramount and as such, places
                             great importance on the health, safety and wellbeing of all its learners. AGS has created a
                             learning environment that ensures all staff are well aware in child protection, health, and

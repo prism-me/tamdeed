@@ -4,9 +4,10 @@
     @media #{$sm} {
       padding-top: 2rem;
     }
-    .Programs {
-      padding: 0 8rem;
+    .programs {
+      //padding: 0 8rem;
       height: 70vh;
+        overflow: hidden;
       // background-image: url("../../../assets/images/ug-images/1920x967.jpg");
       //background-size: cover;
       background-size: 100%;
@@ -44,6 +45,11 @@
         background: rgba($color: #000000, $alpha: 0.5);
       }
       .description-column {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        margin-top: 5rem;
         .cardStyle{
           width: 700px;
           box-shadow: 0 50px 100px rgba(0, 0, 0, 0.1);
@@ -84,98 +90,37 @@
           }
         }
       }
+      .op-div {
+        display: flex;
+        background: #5252527a;
+        height: inherit;
+        width: 100%;
+        /*z-index: 4;*/
+        position: absolute;
+      }
+      .wavy-div {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        /*background: #1A2C52;*/
+        margin-top: 30%;
+        position: relative;
+        &::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            background-position: center;
+            width: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url("../../../assets/images/about/path_bg.png");
+          }
+      }
     }
     @media #{$xsm} {
       padding: 1rem 0 !important;
-    }
-  }
-}
-.cont-hld {
-  display: flex;
-  width: 100%;
-  height: 500px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: #737575;
-  position: relative;
-}
-
-.cont-hld > .op-div {
-  display: flex;
-  background: #5252527a;
-  height: inherit;
-  width: 100%;
-  /*z-index: 4;*/
-  position: absolute;
-}
-
-.cont-hld > .wavy-div {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  /*background: #1A2C52;*/
-  margin-top: 10%;
-  position: relative;
-}
-
-.cont-hld > .wavy-div:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  background-position: center;
-  width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url("../../../assets/images/about/path_bg.png");
-}
-.cont-hld > .vid-cont {
-  display: flex;
-  //width: 100%;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  margin-top: 5rem;
-  margin-left: 18rem;
-  margin-bottom: 2rem;
-  .cardStyle{
-    width: 700px;
-    box-shadow: 0 50px 100px rgba(0, 0, 0, 0.1);
-    border-radius: 50px;
-    padding: 2rem 4rem;
-    @media #{$sm,$md} {
-      width: 100%;
-      padding: 1.5rem;
-    }
-    .intro-title {
-      font-size: 25px;
-      color: $bg-color;
-      margin-bottom: 2rem;
-      text-align: center;
-      font-weight: 700;
-      @media #{$sm} {
-        font-size: 20px;
-      }
-    }
-    .formFields{
-      border-radius: 60px;
-      //border: 1px solid;
-      //border-image-slice: 1;
-      //border-image-source: $gradient;
-    }
-    .enroll{
-      background: $bg-color;
-      border: none;
-      color: white;
-      padding: 0.5rem 3rem;
-      margin-top: 1rem;
-      border-radius: 20px;
-    }
-    .enroll:hover{
-      border: 1px solid $bg-color;
-      background: $hover-color;
-      color: $primary-color;
     }
   }
 }

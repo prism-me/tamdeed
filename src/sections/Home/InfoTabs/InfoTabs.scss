@@ -12,7 +12,7 @@
         font-weight: 500;
         color: $primary-color;
         @media #{$sm} {
-          text-align: center;
+          font-size: 22px;
         }
       }
     @-webkit-keyframes ripple-white {
@@ -122,6 +122,9 @@
       padding: 40px 0;
       transition: .5s;
       z-index: 1;
+      @media #{$sm} {
+        padding: 0;
+      }
     }
     .divstyle:hover {
       transform:scale(1.3);

@@ -81,13 +81,6 @@
   right: 0;
   top: -20px;
   @media #{$sm} {
-    top: -7px;
-    height: 30px;
-  }
-}
-
-@media (min-width: 540px) and (max-width: 720px) {
-  .footer-Wrape .footericonsize {
-    width: 20%
+    content: none;
   }
 }

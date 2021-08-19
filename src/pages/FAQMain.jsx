@@ -1,14 +1,6 @@
 import React, { Component, lazy } from "react";
 
-import FAQ from "../sections/Enroll/FAQ";
-import AdmissionProcedure from "../sections/Enroll/AdmissionProcedure";
-import AgeRequirements from "../sections/Enroll/AgeRequirements";
-import Enquiry from "../sections/Enroll/Enquiry";
-import FeesPayments from "../sections/Enroll/FeesPayments";
-import ApplyOnline from "../sections/Enroll/ApplyOnline";
-import Covid from "../sections/Enroll/Covid";
-import AdmissionContact from "../sections/Enroll/AdmissionContact";
-import Payment from "../sections/Enroll/Payment";
+import FAQ from "../sections/FAQMain/FAQMain";
 
 const faqList = [
     {
@@ -56,22 +48,14 @@ const faqList = [
         answer: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.`,
     },
 ]
-export default class Enroll extends Component {
+export default class FAQMain extends Component {
 
     render() {
         return (
             <div className="home-page">
-                <AdmissionProcedure/>
-                <AgeRequirements/>
-                <Enquiry/>
-                <FeesPayments/>
-                <Payment/>
-                <ApplyOnline/>
                 <FAQ
                     faqList={faqList}
                 />
-                <AdmissionContact/>
-                <Covid/>
             </div>
         );
     }

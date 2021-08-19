@@ -12,7 +12,7 @@
       font-weight: 500;
       color: $primary-color;
       @media #{$sm} {
-        text-align: center;
+        font-size: 22px;
       }
     }
     @-webkit-keyframes ripple-white {
@@ -83,12 +83,15 @@
       padding: 2%;
       .title{
         font-size: 16px;
+        @media #{$sm,$lsm,$xsm,$tiny,$md} {
+          font-size: 14px;
+        }
       }
       @media #{$lg} {
-        font-size: 12px;
+        font-size: 16px;
       }
       @media #{$sm,$lsm,$xsm,$tiny,$md} {
-        font-size: 12px;
+        font-size: 16px;
       }
     }
 
@@ -124,6 +127,9 @@
       margin: 0 auto;
       padding: 40px 0;
       transition: .5s;
+      @media #{$sm} {
+        padding: 0;
+      }
     }
     .divstyle:hover {
       transform:scale(1.3);

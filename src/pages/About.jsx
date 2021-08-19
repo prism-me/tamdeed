@@ -12,7 +12,7 @@ export default class About extends Component {
 
     render() {
         return (
-            <div className="home-page">
+            <div className="home-page about-section">
                 <AboutHeader/>
                 <AGSExperience/>
                 <PrincipleMessage/>

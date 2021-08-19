@@ -8,9 +8,9 @@ const AboutHeader = () => {
 
             <div
                 className="home-header wave-container"
-                style={{ backgroundImage: `url(${header_bg})`,width:"100%",height:"100vh" }}
+                style={{ backgroundImage: `url(${header_bg})`, }}
             >
-                <img alt={"#"} className="home-header position-absolute" style={{visibility:"hidden",display:"inline-block",width:"100%"}} src={header_bg}/>
+                <img alt={"#"} className="home-header wave-container position-absolute" style={{visibility:"hidden",display:"inline-block"}} src={header_bg}/>
                 <Container>
                     <Row>
                         <Col sm={5}>

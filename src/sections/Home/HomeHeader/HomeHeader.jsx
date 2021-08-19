@@ -5,6 +5,7 @@ import logo from "./../../../assets/images/agslogo/Logo (1).png";
 import header_bg from "./../../../assets/images/agsbanners/HomePage.jpg";
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 import ModalVideo from 'react-modal-video'
+import Hidden from "@material-ui/core/Hidden";
 
 function HomeHeader(props) {
   const [isOpen, setOpen] = useState(false)
@@ -33,19 +34,23 @@ function HomeHeader(props) {
                     </p>
                   </div>
                 </Col>
-                <Col sm={{ span: 6}} className={"iconSpace"}>
-                  <div className="video-promo-content">
-                    <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="RBZutrFFhTA" onClose={() => setOpen(false)} />
-                    <button className="btn About-video-play-icon" onClick={()=> setOpen(true)}>
-                      <PlayArrowIcon className={"AboutVideoplaySize"}/>
-                    </button>
-                  </div>
-                </Col>
+                <Hidden smDown>
+                  <Col sm={{ span: 6}} className={"iconSpace"}>
+                    <div className="video-promo-content">
+                      <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="RBZutrFFhTA" onClose={() => setOpen(false)} />
+                      <button className="btn About-video-play-icon" onClick={()=> setOpen(true)}>
+                        <PlayArrowIcon className={"AboutVideoplaySize"}/>
+                      </button>
+                    </div>
+                  </Col>
+                </Hidden>
               </Row>
             </Container>
           </div>
-          <div className={"waves"}>
-          </div>
+          <Hidden smDown>
+            <div className={"waves"}>
+            </div>
+          </Hidden>
         </div>
     {/*<div*/}
     {/*  className="home-header"*/}

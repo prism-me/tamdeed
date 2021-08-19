@@ -125,7 +125,17 @@
   //.parent:hover .Covid:before, .parent:focus .Covid:before {
   //  display: block;
   //}
-
-
+//Design on MbL Screen
+  .cardStyleMBL{
+    padding: 1rem;
+    text-align: justify;
+    width: 100%;
+    border-radius: 30px;
+    .subtitle{
+      margin-top: 0.5rem;
+      font-size: 18px;
+      font-weight: 500;
+    }
+  }
 }
 

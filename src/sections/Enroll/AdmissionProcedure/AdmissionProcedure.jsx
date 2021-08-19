@@ -56,7 +56,17 @@ function AdmissionProcedure (props) {
                                 </AccordionSummary>
                                 <AccordionDetails>
                                     <Typography>
-                                        ertyusdfghjxcvb
+                                        For international enrollments from outside the UAE, it is important for parents of children
+                                        enrolling into Grade 2 or above to finalize the Transfer Certificate and Report Cards
+                                        attestation process prior to leaving the country they are residing in.
+                                        <ol>
+                                            <li>Copy of student’s passport</li>
+                                            <li>Progress reports from the last two years (Reports must be translated to English with
+                                                official stamp)</li>
+                                            <li>Copy of recent Standardized Assessments results (MAP, CAT4, etc.)</li>
+                                            <li>Copy of any previously identified special educational needs including individual
+                                                educational plans (IEP, ILP, etc.)</li>
+                                        </ol>
                                     </Typography>
                                 </AccordionDetails>
                             </Accordion>
@@ -73,7 +83,12 @@ function AdmissionProcedure (props) {
                                 </AccordionSummary>
                                 <AccordionDetails>
                                     <Typography>
-                                        ertyusdfghjxcvb
+                                        An application fee of AED 525 per student (inclusive of VAT, non-refundable, nontransferable and non-deductible) must be paid after submission of documents and
+                                        completion of online application form to proceed with the assessment. Please refer
+                                        to here for payment details. For students based outside the UAE and unable to
+                                        attend an assessment in person, they will sit for CAT4 assessments and virtual
+                                        interviews. Please note that a completed application does not guarantee admission
+                                        to American Gulf School; the application fee is non-refundable for denied admissions.
                                     </Typography>
                                 </AccordionDetails>
                             </Accordion>
@@ -90,7 +105,11 @@ function AdmissionProcedure (props) {
                                 </AccordionSummary>
                                 <AccordionDetails>
                                     <Typography>
-                                        ertyusdfghjxcvb
+                                        Once all the required documentation has been completed, submitted and checked
+                                        by the Admissions Committee, a decision will be communicated to the
+                                        parents/guardians of their successful or unsuccessful application via email within 2 to
+                                        3 days(further interview might be required). Offer Letters will be sent to successful
+                                        applicants.
                                     </Typography>
                                 </AccordionDetails>
                             </Accordion>
@@ -107,7 +126,12 @@ function AdmissionProcedure (props) {
                                 </AccordionSummary>
                                 <AccordionDetails>
                                     <Typography>
-                                        ertyusdfghjxcvb
+                                        Once the applicant is accepted, the non-refundable Registration Fee of AED
+                                        2,500 will be required within 10 days to secure their seat. This fee is
+                                        adjustable against the first term’s tuition fees. The first term tuition is due
+                                        prior to the student’s first day of school. Completed forms and remaining
+                                        documentation must be submitted to our Admissions Office with the
+                                        Registration Fee.
                                     </Typography>
                                 </AccordionDetails>
                             </Accordion>

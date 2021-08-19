@@ -16,6 +16,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 import {useHistory} from "react-router-dom";
 import ClipLoader from "react-spinners/BounceLoader";
 import BackToTop from "../components/BackToTop";
+import {STRINGS} from "../utils/base";
 
 
 const drawerWidth = 280;
@@ -117,7 +118,7 @@ export default function Layout(props) {
                   <ListItem button>
                     <ListItemText
                         onClick={() => {
-                          history.push("/");
+                          history.push(`${STRINGS.ROUTES.ABOUT_US}`);
                           toggleDrawer(false);
                         }}
                         primary="About us"
@@ -126,7 +127,7 @@ export default function Layout(props) {
                     <ListItem button>
                         <ListItemText
                             onClick={() => {
-                                history.push("/Academics");
+                                history.push(`${STRINGS.ROUTES.ACADEMICS}`);
                                 toggleDrawer(false);
                             }}
                             primary="Academics"

@@ -1,3 +1,8 @@
+.a-header {
+  width: 100%;
+  height: 100vh;
+}
+
 .accreditation-paths {
   display: flex;
   position: relative;
@@ -8,7 +13,7 @@
     display: block;
     position: absolute;
     bottom: 0;
-    top: -118px;
+    top: -100px;
     left: 0;
     z-index: 888;
     width: 100%;
@@ -16,6 +21,10 @@
     background-image: url("../../assets/images/academics/paths_hd.png");
     background-repeat: no-repeat;
     background-size: cover;
+    @media #{$lg,$xl,$xxl} {
+      top: -140px;
+      height: 141px;
+    }
   }
 
   .v-calendar-sec {
@@ -32,6 +41,7 @@
     background: #ffffff !important;
     padding: 0.7rem 2rem;
     @media #{$sm} {
+      display: none;
       margin-top: -1rem;
       padding: 0.3rem;
       font-size: 12px;
@@ -82,5 +92,64 @@
     }
   }
 
+}
 
+.ac-bg.ethos_bg {
+  @media #{$sm} {
+    display: none;
+  }
+}
+
+.sm-ac-cont {
+  display: none;
+  flex-direction: column;
+  @media #{$sm} {
+    display: flex;
+    width: 100%;
+  }
+
+  .sm-ac-body {
+    display: flex;
+    width: 100%;
+
+    .b-para {
+      text-align: justify;
+      padding: 1rem 2rem;
+    }
+  }
+}
+
+.AgsSlider .curr-sec {
+  display: flex;
+  width: 100%;
+  padding: 1rem 2rem;
+  text-align: center;
+
+  @media #{$sm} {
+    text-align: justify;
+  }
+}
+
+.AgsSlider .curr-footer-text {
+  display: flex;
+  text-align: center
+}
+
+@media only screen and (min-width: 2401px) and (max-width: 13000px) {
+  .ethos_bg .cardStyle .card-body {
+    text-align: center;
+    font-size: 3.7rem;
+  }
+  .home-page.about-section .InfoTitle {
+    font-size: 3rem;
+  }
+  .AgsSlider .curr-sec{
+    font-size: 3rem;
+  }
+  .AgsSlider .curr-footer-text{
+    font-size: 2rem;
+  }
+  .accreditation-paths .v-calendar-sec .txt-w{
+    font-size: 2rem;
+  }
 }

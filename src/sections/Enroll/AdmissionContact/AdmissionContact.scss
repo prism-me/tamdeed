@@ -12,8 +12,8 @@
       font-weight: 500;
       text-transform: uppercase;
       text-align: center;
-      @media #{$sm,$xsm} {
-        font-size: 25px !important;
+      @media #{$sm} {
+        font-size: 22px;
       }
     }
     .subTitle{
@@ -21,8 +21,8 @@
       text-align: center;
       font-weight: 400;
       margin-bottom: 1rem;
-      @media #{$sm,$xsm} {
-        font-size: 18px !important;
+      @media #{$sm} {
+        font-size: 18px;
       }
     }
   }

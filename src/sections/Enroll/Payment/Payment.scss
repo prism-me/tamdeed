@@ -1,6 +1,6 @@
 .Payment{
-  padding-top: 20rem;
-  @media #{$sm} {
+  padding-top: 22rem;
+  @media #{$sm,$md} {
     padding-top: 2rem;
   }
   .FeesButton{
@@ -15,6 +15,7 @@
     margin: 0 2rem;
     @media #{$sm,$md} {
       margin: 0;
+      font-size: 16px;
     }
   }
 }

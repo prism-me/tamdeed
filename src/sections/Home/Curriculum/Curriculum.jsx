@@ -53,7 +53,7 @@ function Curriculum(props) {
                     </div>
                 </div>
             </Hidden>
-            <Hidden smUp>
+            <Hidden mdUp>
                 <Container>
                     <Card className={"cardStyleMBL"}>
                         <Card.Body>

@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import BottomNavigation from "@material-ui/core/BottomNavigation";
 // import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import { AiOutlineHome } from "react-icons/ai";
+import InputIcon from '@material-ui/icons/Input';
 import {
   IoMailOutline,
   IoPaperPlaneOutline,
@@ -10,7 +11,8 @@ import {
 import { Link } from "react-router-dom";
 import ApplyNow from "../Modals/ApplyNow/ApplyNow";
 import ContactMailIcon from '@material-ui/icons/ContactMail';
-
+import PhoneIcon from '@material-ui/icons/Phone';
+import PersonAddIcon from '@material-ui/icons/PersonAdd';
 const useStyles = makeStyles({
   root: {
     width: "100%",
@@ -34,21 +36,25 @@ function BottomTabNavigator() {
         onChange={handleChange}
         className={classes.root}
       >
-        <Link to="/">
-          <AiOutlineHome className="tab-icon" />
+        <Link to="#">
+          <button className={"BNButton d-flex justify-content-between align-items-center"}>
+            <InputIcon className={"iconSize"}/>
+            <span>AGS Portal</span>
+          </button>
+        </Link>
+        <Link to="/Enroll">
+          <button className={"BNButton d-flex justify-content-between align-items-center"}>
+            <PersonAddIcon className={"iconSize"}/>
+            <span>ENROLL</span>
+          </button>
         </Link>
         <Link to="#">
-          <ContactMailIcon className="tab-icon" />
-        </Link>
-        {/*<a href="mailto:enrollment@eahm.ae">*/}
-        {/*  <IoMailOutline className="tab-icon" />*/}
-        {/*</a>*/}
-        <Link to="#" onClick={() => setModalShow(true)}>
-          <IoPaperPlaneOutline className="tab-icon" />
-          <p>Apply</p>
+          <button className={"BNButton d-flex justify-content-between align-items-center"}>
+            <PhoneIcon className={"iconSize"}/>
+            <span>Contact Us</span>
+          </button>
         </Link>
       </BottomNavigation>
-      <ApplyNow show={modalShow} onHide={() => setModalShow(false)} type="ug" />
     </div>
   );
 }

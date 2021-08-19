@@ -12,7 +12,7 @@
       font-weight: 500;
       color: $primary-color;
       @media #{$sm} {
-        text-align: center;
+        font-size: 22px;
       }
     }
     .overview-heading {
@@ -46,6 +46,7 @@
       }
       @media #{$sm,$lsm,$xsm,$tiny,$md} {
         font-size: 12px;
+        bottom: 0;
       }
     }
 

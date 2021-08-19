@@ -44,7 +44,7 @@ function OurPrograms() {
           </div>
         </div>
       </Hidden>
-      <Hidden mdUp>
+      <Hidden smUp>
         <Container>
           <Card shadow style={{borderRadius:"20px"}} className={"cardStyleMBL"}>
             <Card.Body>

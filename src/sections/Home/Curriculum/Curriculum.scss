@@ -11,7 +11,7 @@
     font-weight: 500;
     color: $primary-color;
     @media #{$sm} {
-      text-align: center;
+      font-size: 22px;
     }
   }
   .Curriculum {
@@ -134,7 +134,7 @@
   //Design on mbl screen
   .cardStyleMBL{
     width: 100%;
-    padding: 1.5rem 1rem;
+    padding: 0 1rem;
     border-radius: 30px;
     .viewButton{
       font-weight: 500;
@@ -146,14 +146,14 @@
       margin: 0;
     }
     .intro-title {
-      font-size: 25px;
+      font-size: 22px;
       color: $bg-color;
       text-align: center;
       font-weight: 700;
       margin-bottom: 1rem;
     }
     .subtitle{
-      font-size: 1rem;
+      font-size: 16px;
       text-align: justify;
       font-weight: 500;
       margin-top: 0;

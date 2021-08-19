@@ -37,7 +37,7 @@ function CovidSafety(props) {
                 </div>
             </div>
             </Hidden>
-            <Hidden mdUp>
+            <Hidden smUp>
                 <Container>
                     <Card className={"cardStyleMBL"}>
                         <Card.Body>

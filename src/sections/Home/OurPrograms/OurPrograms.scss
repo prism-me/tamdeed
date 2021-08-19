@@ -22,11 +22,11 @@
       &:hover{
         background-size: 120% /* work with the background-size */
       }
-      @media #{$sm} {
-        height: 50vh !important;
-        padding: 0;
-      }
-      @media #{$sm,$md,$lg} {
+      //@media #{$sm} {
+      //  height: 50vh !important;
+      //  padding: 0;
+      //}
+      @media #{$md,$lg} {
         background-size: cover;
       }
       // @media #{$xl} {
@@ -55,7 +55,7 @@
           box-shadow: 0 50px 100px rgba(0, 0, 0, 0.1);
           border-radius: 50px;
           padding: 2rem 4rem;
-          @media #{$sm,$md} {
+          @media #{$md} {
             width: 100%;
             padding: 1.5rem;
           }
@@ -65,7 +65,7 @@
             margin-bottom: 2rem;
             text-align: center;
             font-weight: 700;
-            @media #{$sm} {
+            @media #{$md} {
               font-size: 20px;
             }
           }
@@ -119,17 +119,14 @@
           }
       }
     }
-    @media #{$xsm} {
-      padding: 1rem 0 !important;
-    }
     //Design on MBL Screen
     .cardStyleMBL{
       width: 100%;
-      padding: 1.5rem;
+      padding: 1rem;
       box-shadow: 0 50px 100px rgba(0, 0, 0, 0.1);
       border-radius: 50px;
       .intro-title {
-        font-size: 25px;
+        font-size: 22px;
         color: $bg-color;
         margin-bottom: 2rem;
         text-align: center;

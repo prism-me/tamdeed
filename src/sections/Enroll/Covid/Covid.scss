@@ -13,8 +13,8 @@
       margin: 1.5rem 3rem;
       text-transform: uppercase;
       text-align: center;
-      @media #{$sm,$xsm} {
-        font-size: 25px !important;
+      @media #{$sm} {
+        font-size: 22px;
       }
     }
     .subTitle{
@@ -22,8 +22,9 @@
       text-align: center;
       font-weight: 500;
       margin: 0 3rem;
-      @media #{$sm,$xsm} {
-        font-size: 16px !important;
+      @media #{$sm} {
+        font-size: 16px;
+        margin: 0;
       }
     }
   }

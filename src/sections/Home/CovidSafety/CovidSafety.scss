@@ -11,7 +11,7 @@
     font-weight: 500;
     color: $primary-color;
     @media #{$sm} {
-      text-align: center;
+      font-size: 22px;
     }
   }
   .Covid {
@@ -68,7 +68,7 @@
         padding: 1rem;
         width: 950px;
         text-align: justify;
-        @media #{$sm,$md} {
+        @media #{$md} {
           width: 100%;
         }
         border-radius: 30px;
@@ -127,13 +127,12 @@
   //}
 //Design on MbL Screen
   .cardStyleMBL{
-    padding: 1rem;
     text-align: justify;
     width: 100%;
     border-radius: 30px;
     .subtitle{
       margin-top: 0.5rem;
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 500;
     }
   }

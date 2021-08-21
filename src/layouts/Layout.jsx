@@ -145,7 +145,7 @@ export default function Layout(props) {
                     <ListItem button>
                         <ListItemText
                             onClick={() => {
-                                history.push("/AGS-Portal");
+                                history.push(`${STRINGS.ROUTES.AGS_PORTAL}`);
                                 toggleDrawer(false);
                             }}
                             primary="AGS Portal"

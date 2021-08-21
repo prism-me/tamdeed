@@ -20,6 +20,7 @@
 @import "./components/Modals/Documents/Documents";
 @import "./components/Modals/Ages/Ages";
 @import "./components/Modals/GeneralPolicies/GeneralPolicies";
+@import "./components/BackGroundVideo/BackGroundVideo";
 
 // sections **********************
 
@@ -42,6 +43,7 @@
 
 // Student Care
 @import "./sections/StudentCare/Inclusion/Inclusion";
+@import "./sections/StudentCare/Tabs/TabPanel";
 
 // Enroll
 @import "sections/Enroll/FAQ/FAQ";

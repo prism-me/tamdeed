@@ -16,7 +16,7 @@ const Ages = (props) => {
                         <ArrowBackIcon/>
                     </span>
             <Modal.Body>
-                <Table responsive="sm" className={"text-center"}>
+                <Table responsive="sm" className={"text-center TableMB"}>
                     <thead>
                     <tr>
                         <th>Age</th>

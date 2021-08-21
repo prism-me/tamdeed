@@ -3,6 +3,7 @@
   .Title {
     font-size: 20px;
     font-weight: 700;
+    text-align: justify;
     color: $bg-color;
     @media #{$sm} {
       font-size: 18px;
@@ -11,6 +12,7 @@
   .UlStyle{
     color: $bg-color;
     font-size: 20px;
+    text-align: justify;
     font-weight: 500;
     @media #{$sm} {
       font-size: 18px;
@@ -20,6 +22,7 @@
       color: $bg-color;
       font-size: 20px;
       font-weight: 500;
+      text-align: justify;
       @media #{$sm} {
         font-size: 18px;
       }

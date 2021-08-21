@@ -107,6 +107,8 @@ import screenful from "screenfull";
 import Controls from "../../../components/Controls";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import ags1 from "../../../assets/images/LifeInAGS/ags1.png";
+
 
 const responsive = {
     desktop: {
@@ -136,109 +138,20 @@ const useStyles = makeStyles((theme) => ({
         //   },
         // },
     },
-
-    controlsWrapper: {
-        position: "absolute",
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        background: "rgba(0,0,0,0.4)",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-between",
-    },
-    topControls: {
-        display: "flex",
-        justifyContent: "flex-end",
-        padding: theme.spacing(2),
-    },
-    middleControls: {
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-    },
-    bottomWrapper: {
-        display: "flex",
-        flexDirection: "column",
-        padding: theme.spacing(2),
-    },
-
-    bottomControls: {
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
-    },
-
-    button: {
-        margin: theme.spacing(1),
-    },
-    controlIcons: {
-        color: "#777",
-
-        fontSize: 50,
-        transform: "scale(0.9)",
-        "&:hover": {
-            color: "#fff",
-            transform: "scale(1)",
-        },
-    },
-
-    bottomIcons: {
-        color: "#999",
-        "&:hover": {
-            color: "#fff",
-        },
-    },
-
-    volumeSlider: {
-        width: 100,
-    },
 }));
-
-const PrettoSlider = withStyles({
-    root: {
-        height: 8,
-    },
-    thumb: {
-        height: 24,
-        width: 24,
-        backgroundColor: "#fff",
-        border: "2px solid currentColor",
-        marginTop: -8,
-        marginLeft: -12,
-        "&:focus, &:hover, &$active": {
-            boxShadow: "inherit",
-        },
-    },
-    active: {},
-    valueLabel: {
-        left: "calc(-50% + 4px)",
-    },
-    track: {
-        height: 8,
-        borderRadius: 4,
-    },
-    rail: {
-        height: 8,
-        borderRadius: 4,
-    },
-})(Slider);
 
 let count = 0;
 
 function VideoSlider() {
     const classes = useStyles();
-    const [showControls, setShowControls] = useState(false);
     const [state, setState] = useState({
-        playing: true,
+        playing: false,
         controls: false,
     });
 
     const playerRef = useRef(null);
     const playerContainerRef = useRef(null);
     const controlsRef = useRef(null);
-    const canvasRef = useRef(null);
     const {
         playing,
         controls,
@@ -248,28 +161,52 @@ function VideoSlider() {
         setState({ ...state, playing: !state.playing });
     };
 
-    const toggleFullScreen = () => {
-        screenful.toggle(playerContainerRef.current);
-    };
-
     return (
         <>
             <Carousel
-                responsive={responsive}
-                // centerMode={true}
                 swipeable={false}
                 draggable={false}
+                arrows={false}
+                showDots={true}
+                responsive={responsive}
                 ssr={true} // means to render carousel on server-side.
                 infinite={true}
                 autoPlay={true}
-                autoPlaySpeed={3000}
+                autoPlaySpeed={1000}
                 keyBoardControl={true}
                 customTransition="all .5"
-                transitionDuration={700}
-                arrows={false}
+                transitionDuration={500}
                 containerClass="carousel-container"
+                dotListClass="custom-dot-list-style"
+                itemClass="carousel-item-padding-40-px"
             >
-            <Container >
+
+                <div
+                    ref={playerContainerRef}
+                    className={"divstyle"}
+                >
+                    <ReactPlayer
+                        ref={playerRef}
+                        width="100%"
+                        height="100%"
+                        url="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+                        playing={playing}
+                        controls={false}
+                        config={{
+                            file: {
+                                attributes: {
+                                    crossorigin: "anonymous",
+                                },
+                            },
+                        }}
+                    />
+
+                    <Controls
+                        ref={controlsRef}
+                        onPlayPause={handlePlayPause}
+                        playing={playing}
+                    />
+                </div>
                 <div
                     ref={playerContainerRef}
                     className={classes.playerWrapper}
@@ -294,10 +231,86 @@ function VideoSlider() {
                         ref={controlsRef}
                         onPlayPause={handlePlayPause}
                         playing={playing}
-                        onToggleFullScreen={toggleFullScreen}
                     />
                 </div>
-            </Container>
+                <div
+                    ref={playerContainerRef}
+                    className={classes.playerWrapper}
+                >
+                    <ReactPlayer
+                        ref={playerRef}
+                        width="100%"
+                        height="100%"
+                        url="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+                        playing={playing}
+                        controls={false}
+                        config={{
+                            file: {
+                                attributes: {
+                                    crossorigin: "anonymous",
+                                },
+                            },
+                        }}
+                    />
+
+                    <Controls
+                        ref={controlsRef}
+                        onPlayPause={handlePlayPause}
+                        playing={playing}
+                    />
+                </div>
+                <div
+                    ref={playerContainerRef}
+                    className={classes.playerWrapper}
+                >
+                    <ReactPlayer
+                        ref={playerRef}
+                        width="100%"
+                        height="100%"
+                        url="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+                        playing={playing}
+                        controls={false}
+                        config={{
+                            file: {
+                                attributes: {
+                                    crossorigin: "anonymous",
+                                },
+                            },
+                        }}
+                    />
+
+                    <Controls
+                        ref={controlsRef}
+                        onPlayPause={handlePlayPause}
+                        playing={playing}
+                    />
+                </div>
+                <div
+                    ref={playerContainerRef}
+                    className={classes.playerWrapper}
+                >
+                    <ReactPlayer
+                        ref={playerRef}
+                        width="100%"
+                        height="100%"
+                        url="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+                        playing={playing}
+                        controls={false}
+                        config={{
+                            file: {
+                                attributes: {
+                                    crossorigin: "anonymous",
+                                },
+                            },
+                        }}
+                    />
+
+                    <Controls
+                        ref={controlsRef}
+                        onPlayPause={handlePlayPause}
+                        playing={playing}
+                    />
+                </div>
             </Carousel>
         </>
     );

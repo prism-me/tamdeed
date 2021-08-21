@@ -21,6 +21,10 @@ const useStyles = makeStyles((theme) => ({
 function AdmissionProcedure (props) {
     const classes = useStyles();
     const [modalShow, setModalShow] = React.useState(false);
+    const scrollToBottom = () => {
+        const bottomEle = document.getElementById("applyOnline");
+        bottomEle.scrollIntoView({ behavior: "smooth" });
+    }
     return (
         <div className="AdmissionProcedure">
             <h1 className="Title">
@@ -35,11 +39,11 @@ function AdmissionProcedure (props) {
                                     className={"accordianBorderStyle"}
                                 >
                                     <Typography className={classes.heading}>
-                                        <a href={"#applyOnline"}
-                                           className={"text-dark text-decoration-none"}
-                                        >
+                                        <button
+                                           className={"AccButton stretched-link"}
+                                           onClick={scrollToBottom}>
                                             <b>STEP 1 </b>&mdash; Complete the online application
-                                        </a>
+                                        </button>
                                     </Typography>
                                 </AccordionSummary>
                             </Accordion>

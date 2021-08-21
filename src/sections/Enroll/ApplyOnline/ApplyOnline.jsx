@@ -9,7 +9,7 @@ export default function ApplyOnline() {
     //     setOpenBooking(true)
     // };
     return(
-        <div className="ApplyOnline" id={"#applyOnline"}>
+        <div className="ApplyOnline" id={"applyOnline"}>
                 <Container>
                     <div className={"applyBackground d-flex justify-content-between align-items-center"}>
                     {/*<Row>*/}

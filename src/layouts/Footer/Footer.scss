@@ -1,10 +1,15 @@
 .footer-Wrape {
   color: $white;
-  background-color: $bg-color;
+  //background-color: $bg-color;
   padding: 5rem 0;
   position: relative;
+  background-image: url("../../assets/images/icons/eahm-logo-white.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   @media #{$sm} {
     padding-bottom: 4rem;
+    background-color: $bg-color;
   }
   .nav-link{
     color: white;
@@ -67,24 +72,24 @@
   }
 }
 
-.footer-Wrape:before{
-  content: "";
-  display: block;
-  border-color: #9a9ea5 !important;
-  position: absolute;
-  border-radius: 0 0 200% 200%;
-  width: 100%;
-  box-shadow: inset 0px -5px 2px -5px #8a8a8a;
-  //height: 60px;
-  height: 40px;
-  background-color: #ffffff;
-  right: 0;
-  top: -20px;
-  @media #{$sm} {
-    top: -7px;
-    height: 30px;
-  }
-}
+//.footer-Wrape:before{
+//  content: "";
+//  display: block;
+//  border-color: #9a9ea5 !important;
+//  position: absolute;
+//  border-radius: 0 0 200% 200%;
+//  width: 100%;
+//  box-shadow: inset 0px -5px 2px -5px #8a8a8a;
+//  //height: 60px;
+//  height: 40px;
+//  background-color: #ffffff;
+//  right: 0;
+//  top: -20px;
+//  @media #{$sm} {
+//    top: -7px;
+//    height: 30px;
+//  }
+//}
 
 @media (min-width: 540px) and (max-width: 720px) {
   .footer-Wrape .footericonsize {

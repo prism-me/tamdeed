@@ -3,5 +3,6 @@ export const STRINGS = {
         ABOUT_US: "/about",
         ACADEMICS: "/academics",
         AGS_PORTAL: "/agsPortal",
+        CONTACT_US: "/contact",
     }
 }

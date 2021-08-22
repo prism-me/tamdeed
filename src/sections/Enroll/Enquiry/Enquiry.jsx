@@ -6,7 +6,7 @@ import {Hidden} from "@material-ui/core";
 function Enquiry() {
 
     return (
-        <div className="Enquiry-page">
+        <div className="Enquiry-page" id={"Enquiry"}>
             <h1 className="Title">
                 ENQUIRY
             </h1>

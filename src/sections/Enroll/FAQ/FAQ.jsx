@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
 function FAQ (props) {
     const classes = useStyles();
     return (
-        <div className="FAQ">
+        <div className="FAQ" id={"FAQs"}>
             <h1 className="FAQTitle">
                 FREQUENTLY ASKED QUESTIONS
             </h1>

@@ -14,7 +14,7 @@ function Inclusion() {
     return (
         <div className="Inclusion">
             <Container>
-                <div className={"HowToSellspacing"}>
+                <div className={"HowToSellspacing"} id={"INCLUSION"}>
                     <Row>
                         <Col sm={4} md={4} lg={4}>
                             <div className="d-flex justify-content-center align-items-center imgheight"
@@ -57,7 +57,7 @@ function Inclusion() {
                         </Col>
                     </Row>
                 </div>
-                <div className={"HowToSellspacing"}>
+                <div className={"HowToSellspacing"} id={"ACADEMIC "}>
                     <Row>
                         <Col sm md lg >
                             <h3 className="title">
@@ -100,7 +100,7 @@ function Inclusion() {
                         </Col>
                     </Row>
                 </div>
-                <div className={"HowToSellspacing"}>
+                <div className={"HowToSellspacing"} id={"SCHOOL"}>
                 <Row>
                     <Col sm={4} md={4} lg={4}>
                         <div className="d-flex justify-content-center align-items-center imgheight"
@@ -128,7 +128,7 @@ function Inclusion() {
                     </Col>
                 </Row>
                 </div>
-                <div className={"HowToSellspacing"}>
+                <div className={"HowToSellspacing"} id={"GUIDANCE"}>
                 <Row>
                     <Col sm md lg >
                         <h3 className="title">
@@ -159,7 +159,7 @@ function Inclusion() {
                     </Col>
                 </Row>
                 </div>
-                <div className={"HowToSellspacing"}>
+                <div className={"HowToSellspacing"} id={"WELLBEING"}>
                 <Row>
                     <Col sm={4} md={4} lg={4}>
                         <div className="d-flex justify-content-center align-items-center imgheight"

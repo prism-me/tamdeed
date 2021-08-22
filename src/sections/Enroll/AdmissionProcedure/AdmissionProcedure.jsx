@@ -26,7 +26,7 @@ function AdmissionProcedure (props) {
         bottomEle.scrollIntoView({ behavior: "smooth" });
     }
     return (
-        <div className="AdmissionProcedure">
+        <div className="AdmissionProcedure" id={"Admissions"}>
             <h1 className="Title">
                 ADMISSIONS PROCEDURE
             </h1>

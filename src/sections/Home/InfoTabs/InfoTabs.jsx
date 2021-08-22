@@ -71,7 +71,7 @@ export default function InfoTabs() {
             ssr={true} // means to render carousel on server-side.
             infinite={true}
             autoPlay={true}
-            autoPlaySpeed={1000}
+            autoPlaySpeed={5000}
             keyBoardControl={true}
             customTransition="all .5"
             transitionDuration={500}
@@ -87,6 +87,9 @@ export default function InfoTabs() {
                         height='100%'
                         light={exper1}
                     />
+                    <h5 className={"overview-heading"}>
+                        Provide self directed & engaged learning.
+                    </h5>
                 </div>
                 <div className={"divstyle"}>
                     <ReactPlayer
@@ -96,6 +99,9 @@ export default function InfoTabs() {
                         height='100%'
                         light={exper2}
                     />
+                    <h5 className={"overview-heading"}>
+                        manpower taking on challenges.
+                    </h5>
                 </div>
                 <div className={"divstyle"}>
                     <ReactPlayer
@@ -105,6 +111,9 @@ export default function InfoTabs() {
                         height='100%'
                         light={exper3}
                     />
+                    <h5 className={"overview-heading"}>
+                        Stimulate critical thinking among all the children
+                    </h5>
                 </div>
                 <div className={"divstyle"}>
                     <ReactPlayer
@@ -114,6 +123,9 @@ export default function InfoTabs() {
                         height='100%'
                         light={exper1}
                     />
+                    <h5 className={"overview-heading"}>
+                        Provide self directed & engaged learning.
+                    </h5>
                 </div>
                 <div className={"divstyle"}>
                     <ReactPlayer
@@ -123,6 +135,9 @@ export default function InfoTabs() {
                         height='100%'
                         light={exper2}
                     />
+                  <h5 className={"overview-heading"}>
+                    Provide self directed & engaged learning.
+                  </h5>
                 </div>
             {/*{*/}
             {/*  slidesData.map((slides, index) => (*/}

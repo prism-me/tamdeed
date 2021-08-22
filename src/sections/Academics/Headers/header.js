@@ -35,6 +35,8 @@ const AcademicHeader = () => {
                     </Col>
                 </Row>
             </Container>
+            <div className={"waves"}>
+            </div>
         </div>
 
     );

@@ -35,6 +35,8 @@ const AboutHeader = () => {
                         </Col>
                     </Row>
                 </Container>
+                <div className={"waves"}>
+                </div>
             </div>
 
     );

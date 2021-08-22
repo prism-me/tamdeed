@@ -49,10 +49,10 @@ export default function MainNavbar(props) {
               <LinkContainer to="/Student-care">
                 <Nav.Link> Student care </Nav.Link>
               </LinkContainer>
-              <LinkContainer to="/AGS-Portal">
+              <LinkContainer to={STRINGS.ROUTES.AGS_PORTAL}>
                 <Nav.Link>AGS Portal</Nav.Link>
               </LinkContainer>
-              <LinkContainer to="/contact">
+              <LinkContainer to={STRINGS.ROUTES.CONTACT_US}>
                 <Nav.Link>Contact Us</Nav.Link>
               </LinkContainer>
               <LinkContainer to="/Enroll">

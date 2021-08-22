@@ -1,5 +1,8 @@
 .Inclusion {
-  padding-top: 10rem;
+  padding-top: 3rem;
+  @media #{$sm,$md} {
+    padding-top: 2rem;
+  }
   .HowToSellspacing{
     margin: 2rem 0;
     .HowToSellbtn{
@@ -126,8 +129,5 @@
         font-size: 40px !important;
       }
     }
-  }
-  @media #{$sm,$md} {
-    padding-top: 2rem;
   }
 }

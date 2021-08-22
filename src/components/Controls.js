@@ -8,6 +8,7 @@ import Slider from "@material-ui/core/Slider";
 import Tooltip from "@material-ui/core/Tooltip";
 import Grid from "@material-ui/core/Grid";
 import FullScreen from "@material-ui/icons/Fullscreen";
+import ags1 from "../assets/images/LifeInAGS/ags1.png";
 
 const useStyles = makeStyles((theme) => ({
     controlsWrapper: {
@@ -17,14 +18,12 @@ const useStyles = makeStyles((theme) => ({
         right: 0,
         bottom: 0,
         height: "100%",
-        background: "rgba(0,0,0,0.6)",
         display: "flex",
         flexDirection: "column",
-        justifyContent: "space-between",
+        justifyContent: "center",
     },
     controlIcons: {
-        color: "#777",
-
+        color: "#fff",
         fontSize: 50,
         transform: "scale(0.9)",
         "&:hover": {
@@ -32,47 +31,7 @@ const useStyles = makeStyles((theme) => ({
             transform: "scale(1)",
         },
     },
-
-    bottomIcons: {
-        color: "#999",
-        "&:hover": {
-            color: "#fff",
-        },
-    },
-
-    volumeSlider: {
-        width: 100,
-    },
 }));
-
-const PrettoSlider = withStyles({
-    root: {
-        height: 8,
-    },
-    thumb: {
-        height: 24,
-        width: 24,
-        backgroundColor: "#fff",
-        border: "2px solid currentColor",
-        marginTop: -8,
-        marginLeft: -12,
-        "&:focus, &:hover, &$active": {
-            boxShadow: "inherit",
-        },
-    },
-    active: {},
-    valueLabel: {
-        left: "calc(-50% + 4px)",
-    },
-    track: {
-        height: 8,
-        borderRadius: 4,
-    },
-    rail: {
-        height: 8,
-        borderRadius: 4,
-    },
-})(Slider);
 
 const Controls = forwardRef(
     (
@@ -97,11 +56,12 @@ const Controls = forwardRef(
         const id = open ? "simple-popover" : undefined;
 
         return (
-            <div ref={ref} className={classes.controlsWrapper}>
+            <div ref={ref} className={classes.controlsWrapper}
+            >
                 <div
                     className={"d-flex justify-content-center align-items-center"}
                 >
-                        <div className="video-promo-content mt-4 ">
+                        <div className="video-promo-content">
                             {/*<ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="RBZutrFFhTA" onClose={() => setOpen(false)} />*/}
                             <button className="btn video-play-icon" onClick={onPlayPause}>
                                 {playing ? (
@@ -111,46 +71,13 @@ const Controls = forwardRef(
                                 )}
                                 {/*<PlayArrowIcon className={"playSize"}/>*/}
                             </button>
-                           <div className={"d-flex justify-content-between align-items-center"}>
+                           <div className={"d-flex justify-content-start align-items-center"}>
                                <h5 className={"overview-heading"}>
                                    heading
                                </h5>
-                               <IconButton
-                                   onClick={onToggleFullScreen}
-                                   className={classes.bottomIcons}
-                               >
-                                   <FullScreen fontSize="large" />
-                               </IconButton>
                            </div>
                         </div>
-                        {/*<IconButton*/}
-                        {/*    onClick={onPlayPause}*/}
-                        {/*    className={classes.controlIcons}*/}
-                        {/*    aria-label="play"*/}
-                        {/*>*/}
-                        {/*    {playing ? (*/}
-                        {/*        <PauseIcon fontSize="inherit" />*/}
-                        {/*    ) : (*/}
-                        {/*        <PlayArrowIcon fontSize="inherit" />*/}
-                        {/*    )}*/}
-                        {/*</IconButton>*/}
                 </div>
-                {/*<Grid*/}
-                {/*    container*/}
-                {/*    direction="row"*/}
-                {/*    justify="flex-end"*/}
-                {/*    alignItems="center"*/}
-                {/*    style={{ padding: 16 }}*/}
-                {/*>*/}
-                {/*    <Grid item>*/}
-                {/*        <IconButton*/}
-                {/*            onClick={onToggleFullScreen}*/}
-                {/*            className={classes.bottomIcons}*/}
-                {/*        >*/}
-                {/*            <FullScreen fontSize="large" />*/}
-                {/*        </IconButton>*/}
-                {/*    </Grid>*/}
-                {/*</Grid>*/}
             </div>
         );
     }

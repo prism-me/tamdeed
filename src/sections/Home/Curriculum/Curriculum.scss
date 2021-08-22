@@ -9,8 +9,16 @@
     text-transform: uppercase;
     text-align: center;
     font-weight: 500;
+    position: absolute;
+    left: 35%;
+    margin-top: 3rem;
+    z-index: 999;
     color: $primary-color;
-    @media #{$sm} {
+    @media #{$sm,$md} {
+      font-size: 22px;
+      position: static;
+      left: 0;
+      margin-top: 0;
       text-align: center;
     }
   }
@@ -32,13 +40,13 @@
     &:hover{
       background-size: 120% /* work with the background-size */
     }
-    @media #{$sm} {
-      height: 80vh !important;
+    @media #{$lg} {
+      height: 45vh !important;
+      background-size: cover;
       //align-items: flex-start !important;
       padding: 0;
-      // padding-top: 3rem;
     }
-    @media #{$sm,$md,$lg} {
+    @media #{$md} {
       background-size: cover;
     }
     // @media #{$xl} {
@@ -129,6 +137,52 @@
         background-repeat: no-repeat;
         background-image: url("../../../assets/images/agsbackgrounds/Path 4.1.png");
       }
+      &::after{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        top: -490px;
+        left: 0;
+        z-index: 1200;
+        height: 220px;
+        background-position: center;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url("../../../assets/images/agsbackgrounds/uppercurve.png");
+        //@media #{$lg} {
+          //top:5px;
+          //height: 170px;
+        //}
+      }
+    }
+  }
+  //Design on mbl screen
+  .cardStyleMBL{
+    width: 100%;
+    padding: 0 1rem;
+    border-radius: 30px;
+    .viewButton{
+      font-weight: 500;
+      background: transparent;
+      border-bottom: 1px solid black;
+      border-left: 0;
+      border-right: 0;
+      border-top: 0;
+      margin: 0;
+    }
+    .intro-title {
+      font-size: 22px;
+      color: $bg-color;
+      text-align: center;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .subtitle{
+      font-size: 16px;
+      text-align: justify;
+      font-weight: 500;
+      margin-top: 0;
     }
   }
 }

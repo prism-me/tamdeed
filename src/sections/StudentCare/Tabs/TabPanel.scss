@@ -1,0 +1,37 @@
+.TabPanel{
+  flex-grow: 1;
+  width: 100%;
+  padding-top: 10rem;
+  @media #{$sm,$md} {
+    padding-top: 2rem;
+  }
+  .TabStyle{
+    color: $white;
+  }
+  .MuiAppBar-colorPrimary{
+    background: $white;
+  }
+  .MuiPaper-elevation4{
+    box-shadow: none;
+  }
+  .MuiTab-root {
+    border-radius: 100px;
+    border: 1px solid $primary-color;
+    width: 360px;
+  }
+  .PrivateTabIndicator-colorPrimary-12 {
+    //background-color: $white;
+    display: none;
+  }
+  .MuiTabScrollButton-root {
+   display: none;
+    @media #{$sm,$md} {
+      display: block;
+      color: $primary-color;
+    }
+  }
+  .MuiTab-textColorPrimary.Mui-selected {
+    color: $white;
+    background: $bg-color;
+  }
+}

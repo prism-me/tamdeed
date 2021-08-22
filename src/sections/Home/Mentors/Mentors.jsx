@@ -63,23 +63,25 @@ export default function Mentors() {
         <div className={"Mentors"}>
             <h3 className={"InfoTitle"}>MEET THE MENTORS</h3>
             <Carousel
-                responsive={responsive}
-                // centerMode={true}
                 swipeable={false}
                 draggable={false}
+                arrows={false}
+                showDots={true}
+                responsive={responsive}
                 ssr={true} // means to render carousel on server-side.
                 infinite={true}
                 autoPlay={true}
-                autoPlaySpeed={3000}
+                autoPlaySpeed={1000}
                 keyBoardControl={true}
                 customTransition="all .5"
-                transitionDuration={700}
-                arrows={false}
+                transitionDuration={500}
                 containerClass="carousel-container"
+                dotListClass="custom-dot-list-style"
+                itemClass="carousel-item-padding-40-px"
             >
                 {
                     slidesData.map((slides, index) => (
-                        <div className={"mx-2 divstyle"}>
+                        <div className={"divstyle"}>
                             <div className="imgheight"
                                  style={{ backgroundImage: `url(${slides.thumbnail})` }}
                             >
@@ -94,39 +96,6 @@ export default function Mentors() {
                     ))
                 }
             </Carousel>
-            <div className={"d-flex justify-content-center align-items-center mt-3"}>
-                <div className="custom-slider">
-                    <input
-                        type="range"
-                        // value={Math.round(Math.abs(transform) / value)}
-                        defaultValue={0}
-                        // max={
-                        //   (carouselItemWidth *
-                        //       (carouselState.totalItems - carouselState.slidesToShow) +
-                        //       (this.state.additionalTransfrom === 150 ? 0 : 150)) /
-                        //   value
-                        // }
-                        // onChange={e => {
-                        //   if (this.Carousel.isAnimationAllowed) {
-                        //     this.Carousel.isAnimationAllowed = false;
-                        //   }
-                        //   const nextTransform = e.target.value * value;
-                        //   const nextSlide = Math.round(nextTransform / carouselItemWidth);
-                        //   if (
-                        //       e.target.value == 0 &&
-                        //       this.state.additionalTransfrom === 150
-                        //   ) {
-                        //     this.Carousel.isAnimationAllowed = true;
-                        //     this.setState({ additionalTransfrom: 0 });
-                        //   }
-                        //   this.Carousel.setState({
-                        //     transform: -nextTransform, // padding 20px and 5 items.
-                        //     currentSlide: nextSlide
-                        //   });
-                        // }}
-                    />
-                </div>
-            </div>
         </div>
     )
 }

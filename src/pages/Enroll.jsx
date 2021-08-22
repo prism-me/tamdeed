@@ -5,6 +5,10 @@ import AdmissionProcedure from "../sections/Enroll/AdmissionProcedure";
 import AgeRequirements from "../sections/Enroll/AgeRequirements";
 import Enquiry from "../sections/Enroll/Enquiry";
 import FeesPayments from "../sections/Enroll/FeesPayments";
+import ApplyOnline from "../sections/Enroll/ApplyOnline";
+import Covid from "../sections/Enroll/Covid";
+import AdmissionContact from "../sections/Enroll/AdmissionContact";
+import Payment from "../sections/Enroll/Payment";
 
 const faqList = [
     {
@@ -61,9 +65,13 @@ export default class Enroll extends Component {
                 <AgeRequirements/>
                 <Enquiry/>
                 <FeesPayments/>
+                <Payment/>
+                <ApplyOnline/>
                 <FAQ
                     faqList={faqList}
                 />
+                <AdmissionContact/>
+                <Covid/>
             </div>
         );
     }

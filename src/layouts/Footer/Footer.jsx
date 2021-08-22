@@ -46,7 +46,7 @@ function Footer() {
                   OUR SCHOOL
                 </h5>
                 <Nav className="flex-column">
-                  <LinkContainer to="#">
+                  <LinkContainer to="/about">
                     <Nav.Link className=" fdeco"> About us </Nav.Link>
                   </LinkContainer>
                   <LinkContainer to="#">
@@ -58,7 +58,7 @@ function Footer() {
                   <LinkContainer to="#">
                     <Nav.Link className=" fdeco"> Join Our Team </Nav.Link>
                   </LinkContainer>
-                  <LinkContainer to="#">
+                  <LinkContainer to="/FAQMain">
                     <Nav.Link className=" fdeco">  FAQs </Nav.Link>
                   </LinkContainer>
                 </Nav>
@@ -71,7 +71,7 @@ function Footer() {
                   <LinkContainer to="#">
                     <Nav.Link className=" fdeco">  Virtual Admissions </Nav.Link>
                   </LinkContainer>
-                  <LinkContainer to="#">
+                  <LinkContainer to="/Enroll">
                     <Nav.Link className=" fdeco">Enroll Online</Nav.Link>
                   </LinkContainer>
                   <LinkContainer to="#">
@@ -90,13 +90,13 @@ function Footer() {
                   ACADEMICS
                 </h5>
                 <Nav className="flex-column">
-                  <LinkContainer to="#">
+                  <LinkContainer to="/academics">
                     <Nav.Link className=" fdeco"> Academic Calendar </Nav.Link>
                   </LinkContainer>
                   <LinkContainer to="#">
                     <Nav.Link className=" fdeco">  Our Curriculum </Nav.Link>
                   </LinkContainer>
-                  <LinkContainer to="#">
+                  <LinkContainer to="/Student-care">
                     <Nav.Link className=" fdeco">  Student Care support  </Nav.Link>
                   </LinkContainer>
                 </Nav>
@@ -118,21 +118,6 @@ function Footer() {
                 <p>
                   Working Hours : 9am-5pm Mon-Fri
                 </p>
-                {/*<h5 className={"mb-3 font-weight-bold FooterHeading "}>*/}
-                {/*  Follow Us on*/}
-                {/*</h5>*/}
-                {/*<a href="#">*/}
-                {/*  <img src={facebook} alt="Facebook-Icon" className={"footericonsize"}/>*/}
-                {/*  /!*<FacebookIcon className={"footericonsize"}/>*!/*/}
-                {/*</a>*/}
-                {/*<a href="#">*/}
-                {/*  <img src={instagram} alt="Instagram-Icon" className={"footericonsize"}/>*/}
-                {/*  /!*<InstagramIcon className={"footericonsize"}/>*!/*/}
-                {/*</a>*/}
-                {/*<a href="#">*/}
-                {/*  <img src={linkedin} alt="Linkedin-ICON" className={"footericonsize"}/>*/}
-                {/*  /!*<LinkedInIcon className={"footericonsize"}/>*!/*/}
-                {/*</a>*/}
               </Col>
             </Row>
           </Container>

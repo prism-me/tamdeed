@@ -10,34 +10,58 @@ import { API } from "../../http/API";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { CgMenuLeftAlt } from "react-icons/cg";
 import {STRINGS} from "../../utils/base";
-export default function MainNavbar(props) {
 
+export default function MainNavbar(props) {
+  const history = useHistory();
   return (
       <div className="navbar-wrap">
         <Navbar
             collapseOnSelect
             expand="lg"
         >
-          <LinkContainer to="/">
+          <Hidden mdUp>
             <Navbar.Brand>
-              <Hidden smDown>
-                <Navbar.Brand>
-                  <img src={logo} alt="AGS-logo" />
-                </Navbar.Brand>
-              </Hidden>
-              <Hidden mdUp>
-                <Navbar.Brand>
-                  <div className={"d-flex mr-auto"}>
-                    <CgMenuLeftAlt
-                        onClick={() => props.toggleDrawer(true)}
-                        className="nav-toggle-override "
-                    />
-                    <img src={logo} alt="AGS-logo" />
-                  </div>
-                </Navbar.Brand>
-              </Hidden>
+              <CgMenuLeftAlt
+                  onClick={() => props.toggleDrawer(true)}
+                  className="nav-toggle-override"
+              />
+              <img
+                  src={logo}
+                  alt="AGS-logo"
+                  onClick={() => history.push("/")}
+              />
             </Navbar.Brand>
-          </LinkContainer>
+          </Hidden>
+          <Hidden smDown>
+            <Navbar.Brand
+                // href="/"
+                // href={`/` || `/${props.global.activeLanguage}`}
+            >
+              <img src={logo} alt="AGS-logo"
+                   onClick={() => history.push("/")}
+              />
+            </Navbar.Brand>
+          </Hidden>
+          {/*<LinkContainer to="/">*/}
+          {/*  <Navbar.Brand>*/}
+          {/*    <Hidden smDown>*/}
+          {/*      <Navbar.Brand>*/}
+          {/*        <img src={logo} alt="AGS-logo" />*/}
+          {/*      </Navbar.Brand>*/}
+          {/*    </Hidden>*/}
+          {/*    <Hidden mdUp>*/}
+          {/*      <Navbar.Brand>*/}
+          {/*        <div className={"d-flex mr-auto"}>*/}
+          {/*          <CgMenuLeftAlt*/}
+          {/*              onClick={() => props.toggleDrawer(true)}*/}
+          {/*              className="nav-toggle-override "*/}
+          {/*          />*/}
+          {/*          <img src={logo} alt="AGS-logo" />*/}
+          {/*        </div>*/}
+          {/*      </Navbar.Brand>*/}
+          {/*    </Hidden>*/}
+          {/*  </Navbar.Brand>*/}
+          {/*</LinkContainer>*/}
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ml-auto navborder">
               <LinkContainer to={STRINGS.ROUTES.ABOUT_US}>

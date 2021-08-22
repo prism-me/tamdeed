@@ -9,25 +9,26 @@ export default function ApplyOnline() {
     //     setOpenBooking(true)
     // };
     return(
-        <div className="ApplyOnline">
-
-            <Container fluid>
-                <Row>
-                    <Col sm md="auto" lg>
-                        <p>Apply Online by filling the form and submitting related documents </p>
-                    </Col>
-                    <Col sm md="auto" lg>
-                        <button className="btn btn-lg shadow btnstyleB"
+        <div className="ApplyOnline" id={"applyOnline"}>
+                <Container>
+                    <div className={"applyBackground d-flex justify-content-between align-items-center"}>
+                    {/*<Row>*/}
+                    {/*    <Col sm md="auto" lg>*/}
+                            <p className={"m-0"}>Apply Online by filling the form and submitting related documents </p>
+                        {/*</Col>*/}
+                        {/*<Col sm md="auto" lg>*/}
+                            <button className="btn btn-lg shadow btnstyleB"
                                 // onClick={handleBYI}
-                        >
-                            Book Now!
-                        </button>
-                    </Col>
-                </Row>
-            </Container>
-            <BookInterestDialog
-                open={openBooking}
-                setOpen={setOpenBooking}/>
+                            >
+                                Apply Online
+                            </button>
+                    {/*    </Col>*/}
+                    {/*</Row>*/}
+                    </div>
+                </Container>
+            {/*<BookInterestDialog*/}
+            {/*    open={openBooking}*/}
+            {/*    setOpen={setOpenBooking}/>*/}
         </div>
     )
 }

@@ -1,0 +1,28 @@
+.home-page{
+  .FAQMain{
+    padding-top: 10rem;
+    @media #{$sm} {
+      padding-top: 2rem;
+    }
+    .FAQTitle{
+      font-size: 25px;
+      font-weight: 500;
+      margin: 2rem 0;
+      text-align: center;
+      text-transform: uppercase;
+      @media #{$sm} {
+        font-size: 22px;
+      }
+    }
+    .accordianStyle{
+      margin-bottom: 1rem;
+      border-bottom: 1px solid $hover-color;
+    }
+    .MuiPaper-elevation1{
+      box-shadow: none;
+    }
+    .MuiAccordion-root:before{
+      height: 0;
+    }
+  }
+}

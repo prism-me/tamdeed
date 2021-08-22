@@ -11,6 +11,7 @@ const AgsPortal = lazy(() => import('../pages/AGSPortal'));
 const ContactUs = lazy(() => import('../pages/ContactUs'));
 const StudentCare = lazy(() => import('../pages/StudentCare'));
 const Enroll = lazy(() => import('../pages/Enroll'));
+const FAQMain = lazy(() => import('../pages/FAQMain'));
 
 
 export const routes = [
@@ -62,10 +63,18 @@ export const routes = [
     component: StudentCare,
     isPrivate: false,
     exact: true,
-  }, {
+  },
+  {
     name: "Enroll",
     path: "/Enroll",
     component: Enroll,
+    isPrivate: false,
+    exact: true,
+  },
+  {
+    name: "FAQ",
+    path: "/FAQMain",
+    component: FAQMain,
     isPrivate: false,
     exact: true,
   },

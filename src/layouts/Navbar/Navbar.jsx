@@ -36,6 +36,7 @@ export default function MainNavbar(props) {
             <Navbar.Brand
                 // href="/"
                 // href={`/` || `/${props.global.activeLanguage}`}
+                style={{cursor:"pointer"}}
             >
               <img src={logo} alt="AGS-logo"
                    onClick={() => history.push("/")}

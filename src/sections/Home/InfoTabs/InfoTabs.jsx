@@ -6,6 +6,7 @@ import "react-multi-carousel/lib/styles.css";
 import exper1 from "../../../assets/images/ExperienceAGS/exper1.png";
 import exper2 from "../../../assets/images/ExperienceAGS/exper2.png";
 import exper3 from "../../../assets/images/ExperienceAGS/exper3.png";
+import ReactPlayer from "react-player";
 
 export default function InfoTabs() {
   const responsive = {
@@ -70,7 +71,7 @@ export default function InfoTabs() {
             ssr={true} // means to render carousel on server-side.
             infinite={true}
             autoPlay={true}
-            autoPlaySpeed={1000}
+            autoPlaySpeed={5000}
             keyBoardControl={true}
             customTransition="all .5"
             transitionDuration={500}
@@ -78,25 +79,85 @@ export default function InfoTabs() {
             dotListClass="custom-dot-list-style"
             itemClass="carousel-item-padding-40-px"
         >
-            {
-              slidesData.map((slides, index) => (
-                  <div className={"divstyle"}>
-                    <div className="d-flex justify-content-center align-items-center imgheight"
-                         style={{ backgroundImage: `url(${slides.thumbnail})` }}
-                    >
-                      <div className="video-promo-content mt-4 ">
-                        {/*<ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="RBZutrFFhTA" onClose={() => setOpen(false)} />*/}
-                        <button className="btn video-play-icon" onClick={()=> setOpen(true)}>
-                          <PlayArrowIcon className={"playSize"}/>
-                        </button>
-                        <h5 className={"overview-heading"}>
-                          {slides.title}
-                        </h5>
-                      </div>
-                    </div>
-                  </div>
-              ))
-            }
+                <div className={"divstyle"}>
+                    <ReactPlayer
+                        className='react-player'
+                        url='https://www.youtube.com/watch?v=ysz5S6PUM-U'
+                        width='100%'
+                        height='100%'
+                        light={exper1}
+                    />
+                    <h5 className={"overview-heading"}>
+                        Provide self directed & engaged learning.
+                    </h5>
+                </div>
+                <div className={"divstyle"}>
+                    <ReactPlayer
+                        className='react-player'
+                        url='https://www.youtube.com/watch?v=ysz5S6PUM-U'
+                        width='100%'
+                        height='100%'
+                        light={exper2}
+                    />
+                    <h5 className={"overview-heading"}>
+                        manpower taking on challenges.
+                    </h5>
+                </div>
+                <div className={"divstyle"}>
+                    <ReactPlayer
+                        className='react-player'
+                        url='https://www.youtube.com/watch?v=ysz5S6PUM-U'
+                        width='100%'
+                        height='100%'
+                        light={exper3}
+                    />
+                    <h5 className={"overview-heading"}>
+                        Stimulate critical thinking among all the children
+                    </h5>
+                </div>
+                <div className={"divstyle"}>
+                    <ReactPlayer
+                        className='react-player'
+                        url='https://www.youtube.com/watch?v=ysz5S6PUM-U'
+                        width='100%'
+                        height='100%'
+                        light={exper1}
+                    />
+                    <h5 className={"overview-heading"}>
+                        Provide self directed & engaged learning.
+                    </h5>
+                </div>
+                <div className={"divstyle"}>
+                    <ReactPlayer
+                        className='react-player'
+                        url='https://www.youtube.com/watch?v=ysz5S6PUM-U'
+                        width='100%'
+                        height='100%'
+                        light={exper2}
+                    />
+                  <h5 className={"overview-heading"}>
+                    Provide self directed & engaged learning.
+                  </h5>
+                </div>
+            {/*{*/}
+            {/*  slidesData.map((slides, index) => (*/}
+            {/*      <div className={"divstyle"}>*/}
+            {/*        <div className="d-flex justify-content-center align-items-center imgheight"*/}
+            {/*             style={{ backgroundImage: `url(${slides.thumbnail})` }}*/}
+            {/*        >*/}
+            {/*          <div className="video-promo-content mt-4 ">*/}
+            {/*            /!*<ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="RBZutrFFhTA" onClose={() => setOpen(false)} />*!/*/}
+            {/*            <button className="btn video-play-icon" onClick={()=> setOpen(true)}>*/}
+            {/*              <PlayArrowIcon className={"playSize"}/>*/}
+            {/*            </button>*/}
+            {/*            <h5 className={"overview-heading"}>*/}
+            {/*              {slides.title}*/}
+            {/*            </h5>*/}
+            {/*          </div>*/}
+            {/*        </div>*/}
+            {/*      </div>*/}
+            {/*  ))*/}
+            {/*}*/}
         </Carousel>
       </div>
   )

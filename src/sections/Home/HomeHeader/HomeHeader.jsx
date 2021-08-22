@@ -15,6 +15,7 @@ function HomeHeader(props) {
     const bottomEle = document.getElementById("video-id");
     bottomEle.scrollIntoView({ behavior: "smooth" });
   }
+
   return (
       <>
         <Hidden smDown>
@@ -47,8 +48,7 @@ function HomeHeader(props) {
                       <Hidden smDown>
                         <Col sm={{ span: 6}} className={"iconSpace"}>
                           <div className="video-promo-content">
-                            <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="RBZutrFFhTA" onClose={() => setOpen(false)} />
-                            <button className="btn About-video-play-icon" onClick={()=> setOpen(true)}>
+                            <button className="btn About-video-play-icon">
                               <PlayArrowIcon className={"AboutVideoplaySize"}/>
                             </button>
                           </div>

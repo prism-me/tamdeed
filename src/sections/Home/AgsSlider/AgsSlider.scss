@@ -135,8 +135,9 @@
       transform:scale(1.3);
       z-index: 9999;
     }
-
-
+    li{
+      z-index: 9999;
+    }
     //.react-multi-carousel-dot button {
     //  //border-radius: 0 100% 0% 100%;
     //  border-radius: 0;

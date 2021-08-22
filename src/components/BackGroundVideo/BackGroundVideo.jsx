@@ -1,11 +1,7 @@
 import React from 'react';
 
 const BackGroundVideo = ({ videoSource, children, blur }) => {
-    // const video = React.useRef(null);
-    // React.useEffect(() => {
-    //   console.log(video.current.style);
-    //   video.current.style.filter = "blur(10px)";
-    // }, []);
+
     return (
         <div className={"BackgroundDiv"}>
             {/*<div className='container'>*/}

@@ -8,24 +8,24 @@
   position: relative;
   width: 100%;
 
-  &::before {
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: 0;
-    top: -100px;
-    left: 0;
-    z-index: 888;
-    width: 100%;
-    height: 120px;
-    background-image: url("../../assets/images/academics/paths_hd.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    @media #{$lg,$xl,$xxl} {
-      top: -140px;
-      height: 141px;
-    }
-  }
+  //&::before {
+  //  content: "";
+  //  display: block;
+  //  position: absolute;
+  //  bottom: 0;
+  //  top: -100px;
+  //  left: 0;
+  //  z-index: 888;
+  //  width: 100%;
+  //  height: 120px;
+  //  background-image: url("../../assets/images/academics/paths_hd.png");
+  //  background-repeat: no-repeat;
+  //  background-size: cover;
+  //  @media #{$lg,$xl,$xxl} {
+  //    top: -140px;
+  //    height: 141px;
+  //  }
+  //}
 
   .v-calendar-sec {
     position: absolute;

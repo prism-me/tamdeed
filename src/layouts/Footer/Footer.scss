@@ -1,10 +1,15 @@
 .footer-Wrape {
   color: $white;
-  background-color: $bg-color;
+  //background-color: $bg-color;
   padding: 5rem 0;
   position: relative;
+  background-image: url("../../assets/images/icons/eahm-logo-white.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   @media #{$sm} {
     padding-bottom: 4rem;
+    background-color: $bg-color;
   }
   .nav-link{
     color: white;
@@ -82,5 +87,10 @@
   top: -20px;
   @media #{$sm} {
     content: none;
+
+@media (min-width: 540px) and (max-width: 720px) {
+  .footer-Wrape .footericonsize {
+    width: 20%
+
   }
 }

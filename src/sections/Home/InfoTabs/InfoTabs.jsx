@@ -6,6 +6,7 @@ import "react-multi-carousel/lib/styles.css";
 import exper1 from "../../../assets/images/ExperienceAGS/exper1.png";
 import exper2 from "../../../assets/images/ExperienceAGS/exper2.png";
 import exper3 from "../../../assets/images/ExperienceAGS/exper3.png";
+import ReactPlayer from "react-player";
 
 export default function InfoTabs() {
   const responsive = {
@@ -78,25 +79,70 @@ export default function InfoTabs() {
             dotListClass="custom-dot-list-style"
             itemClass="carousel-item-padding-40-px"
         >
-            {
-              slidesData.map((slides, index) => (
-                  <div className={"divstyle"}>
-                    <div className="d-flex justify-content-center align-items-center imgheight"
-                         style={{ backgroundImage: `url(${slides.thumbnail})` }}
-                    >
-                      <div className="video-promo-content mt-4 ">
-                        {/*<ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="RBZutrFFhTA" onClose={() => setOpen(false)} />*/}
-                        <button className="btn video-play-icon" onClick={()=> setOpen(true)}>
-                          <PlayArrowIcon className={"playSize"}/>
-                        </button>
-                        <h5 className={"overview-heading"}>
-                          {slides.title}
-                        </h5>
-                      </div>
-                    </div>
-                  </div>
-              ))
-            }
+                <div className={"divstyle"}>
+                    <ReactPlayer
+                        className='react-player'
+                        url='https://www.youtube.com/watch?v=ysz5S6PUM-U'
+                        width='100%'
+                        height='100%'
+                        light={exper1}
+                    />
+                </div>
+                <div className={"divstyle"}>
+                    <ReactPlayer
+                        className='react-player'
+                        url='https://www.youtube.com/watch?v=ysz5S6PUM-U'
+                        width='100%'
+                        height='100%'
+                        light={exper2}
+                    />
+                </div>
+                <div className={"divstyle"}>
+                    <ReactPlayer
+                        className='react-player'
+                        url='https://www.youtube.com/watch?v=ysz5S6PUM-U'
+                        width='100%'
+                        height='100%'
+                        light={exper3}
+                    />
+                </div>
+                <div className={"divstyle"}>
+                    <ReactPlayer
+                        className='react-player'
+                        url='https://www.youtube.com/watch?v=ysz5S6PUM-U'
+                        width='100%'
+                        height='100%'
+                        light={exper1}
+                    />
+                </div>
+                <div className={"divstyle"}>
+                    <ReactPlayer
+                        className='react-player'
+                        url='https://www.youtube.com/watch?v=ysz5S6PUM-U'
+                        width='100%'
+                        height='100%'
+                        light={exper2}
+                    />
+                </div>
+            {/*{*/}
+            {/*  slidesData.map((slides, index) => (*/}
+            {/*      <div className={"divstyle"}>*/}
+            {/*        <div className="d-flex justify-content-center align-items-center imgheight"*/}
+            {/*             style={{ backgroundImage: `url(${slides.thumbnail})` }}*/}
+            {/*        >*/}
+            {/*          <div className="video-promo-content mt-4 ">*/}
+            {/*            /!*<ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="RBZutrFFhTA" onClose={() => setOpen(false)} />*!/*/}
+            {/*            <button className="btn video-play-icon" onClick={()=> setOpen(true)}>*/}
+            {/*              <PlayArrowIcon className={"playSize"}/>*/}
+            {/*            </button>*/}
+            {/*            <h5 className={"overview-heading"}>*/}
+            {/*              {slides.title}*/}
+            {/*            </h5>*/}
+            {/*          </div>*/}
+            {/*        </div>*/}
+            {/*      </div>*/}
+            {/*  ))*/}
+            {/*}*/}
         </Carousel>
       </div>
   )

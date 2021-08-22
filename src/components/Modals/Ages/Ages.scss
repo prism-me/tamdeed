@@ -38,6 +38,11 @@
   .modal-content{
     border-radius: 60px;
   }
+  .TableMB{
+    @media #{$sm} {
+      width: 900px;
+    }
+  }
   .table thead th {
     border-bottom: 1px solid #CDB786;
     border-top: none;

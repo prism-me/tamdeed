@@ -39,13 +39,34 @@
       border-radius: 0;
     }
     .navbar-brand {
-      //width: 198px;
+      width: 150px;
       img {
         width: 100%;
+        @media #{$md} {
+          width: 200px;
+        }
+        @media #{$sm} {
+          width: 43%;
+        }
       }
-      //@media #{$sm} {
-      //  width: 130px;
-      //}
+      @media #{$md} {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin: 0%;
+        //padding-bottom: 1rem;
+        align-items: center;
+        z-index: 999999;
+      }
+      @media #{$sm} {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin: 0%;
+        //padding-bottom: 1rem;
+        z-index: 999999;
+      }
     }
     .nav-link {
       font-size: 14px;

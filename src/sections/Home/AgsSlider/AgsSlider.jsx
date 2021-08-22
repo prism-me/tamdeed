@@ -6,6 +6,7 @@ import "react-multi-carousel/lib/styles.css";
 import ags1 from "../../../assets/images/LifeInAGS/ags1.png";
 import ags2 from "../../../assets/images/LifeInAGS/ags2.png";
 import ags3 from "../../../assets/images/LifeInAGS/ags3.png";
+import BackGroundVideo from "../../../components/BackGroundVideo/BackGroundVideo";
 
 export default function AgsSlider() {
     const responsive = {
@@ -64,77 +65,72 @@ export default function AgsSlider() {
         },
     ];
     const [isOpen, setOpen] = useState(false)
+    const videoSource = "https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4";
+    const scrollToBottom = () => {
+        const bottomEle = document.getElementById("video-id");
+        bottomEle.scrollIntoView({ behavior: "smooth" });
+    }
     return(
+        // <div style={{ height: '', }} >
+        //     <BackGroundVideo
+        //         blur={2}
+        //         videoSource={videoSource} >
+        //         <div className='content'>
+        //             <div className='sub-content' >
+        //                 <h1>Background Video</h1>
+        //                 <p>Learn how to create a background video in React</p>
+        //                 <button
+        //                     className="btn btn-outline-dark"
+        //                     onClick={scrollToBottom}>
+        //                     Let's go!
+        //                 </button>
+        //                 {/* <img
+        //       className="view-image"
+        //       src="https://www.jing.fm/clipimg/detail/139-1394959_panda-cartoon-png-cute-cartoon-panda-bear.png"
+        //       alt="profile" /> */}
+        //             </div>
+        //         </div>
+        //     </BackGroundVideo>
+        // </div>
         <div className={"AgsSlider"}>
             <h3 className={"InfoTitle"}>LIFE AT AMERICAN GULF SCHOOL</h3>
             <Carousel
-                responsive={responsive}
-                // centerMode={true}
                 swipeable={false}
                 draggable={false}
+                arrows={false}
+                showDots={true}
+                responsive={responsive}
                 ssr={true} // means to render carousel on server-side.
                 infinite={true}
                 autoPlay={true}
-                autoPlaySpeed={3000}
+                autoPlaySpeed={1000}
                 keyBoardControl={true}
                 customTransition="all .5"
-                transitionDuration={700}
-                arrows={false}
+                transitionDuration={500}
                 containerClass="carousel-container"
+                dotListClass="custom-dot-list-style"
+                itemClass="carousel-item-padding-40-px"
             >
-                {
-                    slidesData.map((slides, index) => (
-                        <div className={"mx-2 divstyle"}>
-                            <div className="d-flex justify-content-center align-items-center imgheight"
-                                 style={{ backgroundImage: `url(${slides.thumbnail})` }}
-                            >
-                                <div className="video-promo-content mt-4 ">
-                                    {/*<ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="RBZutrFFhTA" onClose={() => setOpen(false)} />*/}
-                                    <button className="btn video-play-icon" onClick={()=> setOpen(true)}>
-                                        <PlayArrowIcon className={"playSize"}/>
-                                    </button>
-                                    <h5 className={"overview-heading"}>
-                                        {slides.title} &mdash; <span className={"title"}>{slides.Subtitle}</span>
-                                    </h5>
+                    {
+                        slidesData.map((slides, index) => (
+                            <div className={"divstyle"}>
+                                <div className="d-flex justify-content-center align-items-center imgheight"
+                                     style={{ backgroundImage: `url(${slides.thumbnail})` }}
+                                >
+                                    <div className="video-promo-content mt-4 ">
+                                        {/*<ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="RBZutrFFhTA" onClose={() => setOpen(false)} />*/}
+                                        <button className="btn video-play-icon" onClick={()=> setOpen(true)}>
+                                            <PlayArrowIcon className={"playSize"}/>
+                                        </button>
+                                        <h5 className={"overview-heading"}>
+                                            {slides.title} &mdash; <span className={"title"}>{slides.Subtitle}</span>
+                                        </h5>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    ))
-                }
+                        ))
+                    }
             </Carousel>
-            <div className={"d-flex justify-content-center align-items-center mt-3"}>
-                <div className="custom-slider">
-                    <input
-                        type="range"
-                        // value={Math.round(Math.abs(transform) / value)}
-                        defaultValue={0}
-                        // max={
-                        //   (carouselItemWidth *
-                        //       (carouselState.totalItems - carouselState.slidesToShow) +
-                        //       (this.state.additionalTransfrom === 150 ? 0 : 150)) /
-                        //   value
-                        // }
-                        // onChange={e => {
-                        //   if (this.Carousel.isAnimationAllowed) {
-                        //     this.Carousel.isAnimationAllowed = false;
-                        //   }
-                        //   const nextTransform = e.target.value * value;
-                        //   const nextSlide = Math.round(nextTransform / carouselItemWidth);
-                        //   if (
-                        //       e.target.value == 0 &&
-                        //       this.state.additionalTransfrom === 150
-                        //   ) {
-                        //     this.Carousel.isAnimationAllowed = true;
-                        //     this.setState({ additionalTransfrom: 0 });
-                        //   }
-                        //   this.Carousel.setState({
-                        //     transform: -nextTransform, // padding 20px and 5 items.
-                        //     currentSlide: nextSlide
-                        //   });
-                        // }}
-                    />
-                </div>
-            </div>
         </div>
     )
 }

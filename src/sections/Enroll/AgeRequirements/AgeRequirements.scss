@@ -15,6 +15,7 @@
       text-transform: uppercase;
       @media #{$sm} {
         font-size: 22px;
+        text-align: center;
       }
     }
     .subTitle{
@@ -24,6 +25,7 @@
       @media #{$sm} {
         font-size: 16px;
         margin: 0 1rem;
+        text-align: center;
       }
     }
     .agereqButton{

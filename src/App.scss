@@ -20,6 +20,7 @@
 @import "./components/Modals/Documents/Documents";
 @import "./components/Modals/Ages/Ages";
 @import "./components/Modals/GeneralPolicies/GeneralPolicies";
+@import "./components/BackGroundVideo/BackGroundVideo";
 
 // sections **********************
 
@@ -37,9 +38,14 @@
 
 //Academics
 @import "./sections/Academics/academics";
+//Ags-Portal
+@import "./sections/AGSPortal/ags_portal";
+//Contact Us
+@import "./sections/ContactUs/contact";
 
 // Student Care
 @import "./sections/StudentCare/Inclusion/Inclusion";
+@import "./sections/StudentCare/Tabs/TabPanel";
 
 // Enroll
 @import "sections/Enroll/FAQ/FAQ";
@@ -90,4 +96,16 @@
 //}
 *{
   font-family: "Optima nova LT Medium";
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }

@@ -7,15 +7,15 @@ import fb_icon from "../../assets/images/contact/Facebook.png";
 import insta_icon from "../../assets/images/contact/Instagram.png";
 import twitter_icon from "../../assets/images/contact/Twitter.png";
 import bg_img from "../../assets/images/contact/Rectangle 235.png";
-import $ from "jquery";
+// import $ from "jquery";
 
 const Contact = () => {
 
     useEffect(()=>{
-        $(".back-to-top").css("display","none")
-        return ()=>{
-            $(".back-to-top").css("display","flex")
-        }
+        // $(".back-to-top").css("display","none")
+        // return ()=>{
+        //     $(".back-to-top").css("display","flex")
+        // }
     },[])
 
     return (

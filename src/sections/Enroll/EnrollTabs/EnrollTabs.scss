@@ -1,0 +1,32 @@
+.EnrollTabs{
+  padding-top: 10rem;
+  @media #{$sm,$md} {
+    padding-top: 2rem;
+  }
+  .TabButton{
+    background: $white;
+    border: 1px solid $bg-color;
+    border-radius: 100px;
+    color: $primary-color;
+    width: 250px;
+    font-size: 18px;
+    font-weight: 500;
+    &:focus , &.active , &:hover{
+      background: $bg-color;
+      color: $white;
+    }
+  }
+  .buttons-flex {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+  }
+}
+.EnrollTabTitle{
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 0;
+}

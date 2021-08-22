@@ -65,33 +65,7 @@ export default function AgsSlider() {
         },
     ];
     const [isOpen, setOpen] = useState(false)
-    const videoSource = "https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4";
-    const scrollToBottom = () => {
-        const bottomEle = document.getElementById("video-id");
-        bottomEle.scrollIntoView({ behavior: "smooth" });
-    }
     return(
-        // <div style={{ height: '', }} >
-        //     <BackGroundVideo
-        //         blur={2}
-        //         videoSource={videoSource} >
-        //         <div className='content'>
-        //             <div className='sub-content' >
-        //                 <h1>Background Video</h1>
-        //                 <p>Learn how to create a background video in React</p>
-        //                 <button
-        //                     className="btn btn-outline-dark"
-        //                     onClick={scrollToBottom}>
-        //                     Let's go!
-        //                 </button>
-        //                 {/* <img
-        //       className="view-image"
-        //       src="https://www.jing.fm/clipimg/detail/139-1394959_panda-cartoon-png-cute-cartoon-panda-bear.png"
-        //       alt="profile" /> */}
-        //             </div>
-        //         </div>
-        //     </BackGroundVideo>
-        // </div>
         <div className={"AgsSlider"}>
             <h3 className={"InfoTitle"}>LIFE AT AMERICAN GULF SCHOOL</h3>
             <Carousel

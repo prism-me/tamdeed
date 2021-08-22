@@ -8,7 +8,7 @@ const BackGroundVideo = ({ videoSource, children, blur }) => {
     // }, []);
     return (
         <div className={"BackgroundDiv"}>
-            <div className='container'>
+            {/*<div className='container'>*/}
                 <video
                     style={{ filter: `blur(${blur}px)`, WebkitFilter: `blur(${blur}px)` }}
                     autoPlay="autoplay"
@@ -22,7 +22,7 @@ const BackGroundVideo = ({ videoSource, children, blur }) => {
                     Your browser does not support the video tag.
                 </video>
                 {children}
-            </div>
+            {/*</div>*/}
             {/* <span id="video-bottom"></span> */}
         </div>
     )

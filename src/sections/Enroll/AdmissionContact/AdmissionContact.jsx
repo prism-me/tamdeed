@@ -3,7 +3,7 @@ import React from "react";
 
 function AdmissionContact (props) {
     return (
-        <div className="AdmissionContact container">
+        <div className="AdmissionContact container" id={"Contact"}>
             <h1 className="Title">
                 ADMISSION CONTACT DETAILS
             </h1>

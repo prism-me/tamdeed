@@ -9,6 +9,7 @@ import ApplyOnline from "../sections/Enroll/ApplyOnline";
 import Covid from "../sections/Enroll/Covid";
 import AdmissionContact from "../sections/Enroll/AdmissionContact";
 import Payment from "../sections/Enroll/Payment";
+import EnrollTabs from "../sections/Enroll/EnrollTabs";
 
 const faqList = [
     {
@@ -61,6 +62,7 @@ export default class Enroll extends Component {
     render() {
         return (
             <div className="home-page">
+                <EnrollTabs/>
                 <AdmissionProcedure/>
                 <AgeRequirements/>
                 <Enquiry/>

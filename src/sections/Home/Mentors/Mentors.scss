@@ -73,26 +73,26 @@
         height: 30vh;
       }
     }
-    .react-multi-carousel-dot button {
-      //border-radius: 0 100% 0% 100%;
-      border-radius: 0;
-      padding: 0 0.5rem;
-      box-shadow: none;
-      border-width: 0;
-      width: calc(20px + 40px);
-      border-style: none;
-      border-color: transparent;
-      margin-right: 0;
-      cursor: pointer;
-      border: none;
-    }
-    .react-multi-carousel-dot--active button {
-      background: $bg-color;
-    }
+    //.react-multi-carousel-dot button {
+    //  //border-radius: 0 100% 0% 100%;
+    //  border-radius: 0;
+    //  padding: 0 0.5rem;
+    //  box-shadow: none;
+    //  border-width: 0;
+    //  width: calc(20px + 40px);
+    //  border-style: none;
+    //  border-color: transparent;
+    //  margin-right: 0;
+    //  cursor: pointer;
+    //  border: none;
+    //}
+    //.react-multi-carousel-dot--active button {
+    //  background: $bg-color;
+    //}
     .divstyle {
       padding: 40px 5px;
       @media #{$sm} {
-        padding: 0;
+          padding: 30px 0;
       }
     }
   }

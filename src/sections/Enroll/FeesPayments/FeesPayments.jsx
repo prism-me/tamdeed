@@ -5,7 +5,7 @@ import {Hidden} from "@material-ui/core";
 
 function FeesPayments(props) {
     return (
-        <div  className="FeesPayments-page">
+        <div  className="FeesPayments-page" id={"Payments"}>
                 <h3 className={"Title"}>FEES AND PAYMENTS</h3>
             <Hidden smDown>
                 <div

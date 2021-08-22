@@ -76,7 +76,7 @@ export default function MainNavbar(props) {
               <LinkContainer to={STRINGS.ROUTES.AGS_PORTAL}>
                 <Nav.Link>AGS Portal</Nav.Link>
               </LinkContainer>
-              <LinkContainer to="/contact">
+              <LinkContainer to={STRINGS.ROUTES.CONTACT_US}>
                 <Nav.Link>Contact Us</Nav.Link>
               </LinkContainer>
               <LinkContainer to="/Enroll">

@@ -154,7 +154,7 @@ export default function Layout(props) {
                     <ListItem button>
                         <ListItemText
                             onClick={() => {
-                                history.push("/Contact-us");
+                                history.push(`${STRINGS.ROUTES.CONTACT_US}`);
                                 toggleDrawer(false);
                             }}
                             primary="Contact us"

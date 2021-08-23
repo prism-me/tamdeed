@@ -10,7 +10,7 @@ const AcademicsCurriculum = () => {
     return (
         <div className={"AgsSlider"}>
             <h3 className={"InfoTitle"}>OUR CURRICULUM</h3>
-            <Grid container className="d-flex w-100 ">
+            <Grid container className="d-flex w-100 justify-content-center">
                 <Grid item className="curr-sec">
                     <p>The school curriculum is project-based, and student centered. It encourages, requires, and builds
                         critical thinking, driven by inquiry combined with both knowledge and comprehensive skills. This
@@ -22,8 +22,8 @@ const AcademicsCurriculum = () => {
             </Grid>
             <Grid className="d-flex w-100 justify-content-center">
                 <Grid className="d-flex w-100 justify-content-center flex-wrap">
-                    <div className={"mx-2 divstyle"}>
-                        <div className="d-flex justify-content-center align-items-center imgheight"
+                    <div className={"mx-2 divstyle wc"} >
+                        <div className="d-flex justify-content-center align-items-center imgheight ch"
                              style={{backgroundImage: `url(${kindergarten_img})`}}
                         >
                             <div className="video-promo-content mt-4 ">
@@ -33,8 +33,8 @@ const AcademicsCurriculum = () => {
                             </div>
                         </div>
                     </div>
-                    <div className={"mx-2 divstyle"}>
-                        <div className="d-flex justify-content-center align-items-center imgheight"
+                    <div className={"mx-2 divstyle wc"} >
+                        <div className="d-flex justify-content-center align-items-center imgheight ch"
                              style={{backgroundImage: `url(${p_school})`}}
                         >
                             <div className="video-promo-content mt-4 ">
@@ -44,9 +44,9 @@ const AcademicsCurriculum = () => {
                             </div>
                         </div>
                     </div>
-                    <div className={"mx-2 divstyle"}>
-                        <div className="d-flex justify-content-center align-items-center imgheight"
-                             style={{backgroundImage: `url(${middle_school})`}}
+                    <div className={"mx-2 divstyle wc"} >
+                        <div className="d-flex justify-content-center align-items-center imgheight ch"
+                             style={{backgroundImage: `url(${middle_school})`,}}
                         >
                             <div className="video-promo-content mt-4 ">
                                 <h5 className={"overview-heading position-static text-nowrap"}>

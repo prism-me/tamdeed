@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import "../sections/About/about.css";
 import AcademicHeader from "../sections/Academics/Headers/header";
 import Accreditation from "../sections/Academics/Accreditation/Accreditation";
 import InfoTabs from "../sections/Home/InfoTabs";

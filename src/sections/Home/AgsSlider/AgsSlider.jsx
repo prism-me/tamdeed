@@ -65,6 +65,11 @@ export default function AgsSlider() {
         },
     ];
     const [isOpen, setOpen] = useState(false)
+    const [isOpen1, setOpen1] = useState(false)
+    const [isOpen2, setOpen2] = useState(false)
+    const [isOpen3, setOpen3] = useState(false)
+    const [isOpen4, setOpen4] = useState(false)
+    const [isOpen5, setOpen5] = useState(false)
     return(
         <div className={"AgsSlider"}>
             <h3 className={"InfoTitle"}>LIFE AT AMERICAN GULF SCHOOL</h3>
@@ -77,7 +82,7 @@ export default function AgsSlider() {
                 ssr={true} // means to render carousel on server-side.
                 infinite={true}
                 autoPlay={true}
-                autoPlaySpeed={1000}
+                autoPlaySpeed={3000}
                 keyBoardControl={true}
                 customTransition="all .5"
                 transitionDuration={500}
@@ -85,25 +90,100 @@ export default function AgsSlider() {
                 dotListClass="custom-dot-list-style"
                 itemClass="carousel-item-padding-40-px SpacingItem"
             >
-                    {
-                        slidesData.map((slides, index) => (
+                    {/*{*/}
+                    {/*    slidesData.map((slides, index) => (*/}
                             <div className={"divstyle"}>
                                 <div className="d-flex justify-content-center align-items-center imgheight"
-                                     style={{ backgroundImage: `url(${slides.thumbnail})` }}
+                                     style={{ backgroundImage: `url(${ags1})` }}
                                 >
                                     <div className="video-promo-content mt-4 ">
-                                        {/*<ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="RBZutrFFhTA" onClose={() => setOpen(false)} />*/}
+                                        <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="RBZutrFFhTA" onClose={() => setOpen(false)} />
                                         <button className="btn video-play-icon" onClick={()=> setOpen(true)}>
                                             <PlayArrowIcon className={"playSize"}/>
                                         </button>
                                         <h5 className={"overview-heading"}>
-                                            {slides.title} &mdash; <span className={"title"}>{slides.Subtitle}</span>
+                                            ART &mdash; <span className={"title"}>To stimulate thoughts, emotions and ideas through senses.</span>
                                         </h5>
                                     </div>
                                 </div>
                             </div>
-                        ))
-                    }
+                            <div className={"divstyle"}>
+                                <div className="d-flex justify-content-center align-items-center imgheight"
+                                     style={{ backgroundImage: `url(${ags2})` }}
+                                >
+                                    <div className="video-promo-content mt-4 ">
+                                        <ModalVideo channel='youtube' autoplay isOpen={isOpen1} videoId="RBZutrFFhTA" onClose={() => setOpen1(false)} />
+                                        <button className="btn video-play-icon" onClick={()=> setOpen1(true)}>
+                                            <PlayArrowIcon className={"playSize"}/>
+                                        </button>
+                                        <h5 className={"overview-heading"}>
+                                            ART &mdash; <span className={"title"}>To stimulate thoughts, emotions and ideas through senses.</span>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className={"divstyle"}>
+                                <div className="d-flex justify-content-center align-items-center imgheight"
+                                     style={{ backgroundImage: `url(${ags3})` }}
+                                >
+                                    <div className="video-promo-content mt-4 ">
+                                        <ModalVideo channel='youtube' autoplay isOpen={isOpen2} videoId="RBZutrFFhTA" onClose={() => setOpen2(false)} />
+                                        <button className="btn video-play-icon" onClick={()=> setOpen2(true)}>
+                                            <PlayArrowIcon className={"playSize"}/>
+                                        </button>
+                                        <h5 className={"overview-heading"}>
+                                            ART &mdash; <span className={"title"}>To stimulate thoughts, emotions and ideas through senses.</span>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className={"divstyle"}>
+                                <div className="d-flex justify-content-center align-items-center imgheight"
+                                     style={{ backgroundImage: `url(${ags1})` }}
+                                >
+                                    <div className="video-promo-content mt-4 ">
+                                        <ModalVideo channel='youtube' autoplay isOpen={isOpen3} videoId="RBZutrFFhTA" onClose={() => setOpen3(false)} />
+                                        <button className="btn video-play-icon" onClick={()=> setOpen3(true)}>
+                                            <PlayArrowIcon className={"playSize"}/>
+                                        </button>
+                                        <h5 className={"overview-heading"}>
+                                            ART &mdash; <span className={"title"}>To stimulate thoughts, emotions and ideas through senses.</span>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className={"divstyle"}>
+                                <div className="d-flex justify-content-center align-items-center imgheight"
+                                     style={{ backgroundImage: `url(${ags3})` }}
+                                >
+                                    <div className="video-promo-content mt-4 ">
+                                        <ModalVideo channel='youtube' autoplay isOpen={isOpen4} videoId="RBZutrFFhTA" onClose={() => setOpen4(false)} />
+                                        <button className="btn video-play-icon" onClick={()=> setOpen4(true)}>
+                                            <PlayArrowIcon className={"playSize"}/>
+                                        </button>
+                                        <h5 className={"overview-heading"}>
+                                            ART &mdash; <span className={"title"}>To stimulate thoughts, emotions and ideas through senses.</span>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className={"divstyle"}>
+                                <div className="d-flex justify-content-center align-items-center imgheight"
+                                     style={{ backgroundImage: `url(${ags2})` }}
+                                >
+                                    <div className="video-promo-content mt-4 ">
+                                        <ModalVideo channel='youtube' autoplay isOpen={isOpen5} videoId="RBZutrFFhTA" onClose={() => setOpen5(false)} />
+                                        <button className="btn video-play-icon" onClick={()=> setOpen5(true)}>
+                                            <PlayArrowIcon className={"playSize"}/>
+                                        </button>
+                                        <h5 className={"overview-heading"}>
+                                            ART &mdash; <span className={"title"}>To stimulate thoughts, emotions and ideas through senses.</span>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                    {/*    ))*/}
+                    {/*}*/}
             </Carousel>
         </div>
     )

@@ -12,15 +12,17 @@ import PauseIcon from "@material-ui/icons/Pause";
 
 function HomeHeader(props) {
   const [isOpen, setOpen] = useState(false)
-
     const [isPlaying, setIsPlaying] = useState(false);
-    const videoRef = useRef<HTMLVideoElement>(null);
+    // const [isVideo, setIsVideo] = useState(false);
     const togglePlay = () => {
+      const myVideo = document.getElementById("video-id");
       // play or pause the video element
-      if (isPlaying) {
-        videoRef.current?.pause();
+      if (myVideo.paused) {
+        myVideo.play();
+        // setIsVideo(true);
       } else {
-        videoRef.current?.play();
+        myVideo.pause();
+        // setIsVideo(false);
       }
       // update the state
       setIsPlaying(!isPlaying);
@@ -34,9 +36,7 @@ function HomeHeader(props) {
           <div style={{ height: '', }} className={"BackgroundVideoDiv"} >
             <BackGroundVideo
                 // blur={2}
-                videoSource={videoSource}
-                // videoRef={videoRef}
-            >
+                videoSource={videoSource}>
               <div className='content'>
                 {/*<div className='sub-content' >*/}
                 <div className={"inner-header flex"}>
@@ -77,10 +77,10 @@ function HomeHeader(props) {
                     </Row>
                   </Container>
                 </div>
-                <Hidden smDown>
-                  <div className={"waves"}>
-                  </div>
-                </Hidden>
+                {/*<Hidden smDown>*/}
+                {/*  <div className={"waves"}>*/}
+                {/*  </div>*/}
+                {/*</Hidden>*/}
               </div>
             </BackGroundVideo>
           </div>

@@ -1,5 +1,6 @@
 .FeesPayments-page{
-  padding-top: 19rem;
+  //padding-top: 19rem;
+  padding-top: 12rem;
   @media #{$sm,$md,$lg} {
     padding-top: 2rem;
   }
@@ -70,10 +71,10 @@
     //  background: rgba($color: #000000, $alpha: 0.5);
     //}
     .description-column {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: absolute;
+      //display: flex;
+      //justify-content: center;
+      //align-items: center;
+      //position: absolute;
       margin-top: 50%;
       .cardStyle{
         margin-top: 16%;

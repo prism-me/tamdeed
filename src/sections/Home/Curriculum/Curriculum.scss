@@ -21,10 +21,13 @@
       margin-top: 0;
       text-align: center;
     }
+    @media #{$lg} {
+      left: 28%;
+    }
   }
   .Curriculum {
     //padding: 0 10rem;
-    overflow: hidden;
+    //overflow: hidden;
     height: 100vh;
     // background-image: url("../../../assets/images/ug-images/1920x967.jpg");
     //background-size: cover;
@@ -55,20 +58,20 @@
     @media #{$xxl} {
       height: 80vh;
     }
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      z-index: -1;
-      width: 100%;
-      height: 100%;
-      background: rgba($color: #000000, $alpha: 0.5);
-    }
+    //&::before {
+    //  content: "";
+    //  position: absolute;
+    //  top: 0;
+    //  z-index: -1;
+    //  width: 100%;
+    //  height: 100%;
+    //  background: rgba($color: #000000, $alpha: 0.5);
+    //}
     .description-column {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: absolute;
+      //display: flex;
+      //justify-content: center;
+      //align-items: center;
+      //position: absolute;
       .cardStyle{
         padding: 1rem;
         width: 950px;

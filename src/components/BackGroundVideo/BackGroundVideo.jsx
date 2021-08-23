@@ -1,4 +1,5 @@
 import React from 'react';
+import header_bg from "./../../assets/images/agsbanners/HomePage.jpg";
 
 const BackGroundVideo = ({ videoSource, children, blur }) => {
 
@@ -12,6 +13,7 @@ const BackGroundVideo = ({ videoSource, children, blur }) => {
                     muted
                     // ref={video}
                     id="video-id"
+                    poster={header_bg}
                     className='video' >
                     {/* TODO make it accept multiple media types */}
                     <source src={videoSource} type="video/mp4" />

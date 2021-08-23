@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import {Card, Col, Container, Row} from "react-bootstrap";
-import header_bg from "./../../../assets/images/agsbackgrounds/Mask.jpg";
+import header_bg from "./../../../assets/images/agsbackgrounds/Homepage_CurriculumCourse&Syllabus_Background.png";
 import {Hidden} from "@material-ui/core";
 
 function CovidSafety(props) {
@@ -13,10 +13,10 @@ function CovidSafety(props) {
                     className="Covid"
                     style={{ backgroundImage: `url(${header_bg})` }}
                 >
-                    <div className="op-div">
-                    </div>
-                    <div className="wavy-div">
-                    </div>
+                    {/*<div className="op-div">*/}
+                    {/*</div>*/}
+                    {/*<div className="wavy-div">*/}
+                    {/*</div>*/}
                     <div className="description-column">
                         <Container>
                             <Card className={"cardStyle"}>

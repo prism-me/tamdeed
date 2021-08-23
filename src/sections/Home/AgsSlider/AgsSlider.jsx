@@ -83,7 +83,7 @@ export default function AgsSlider() {
                 transitionDuration={500}
                 containerClass="carousel-container"
                 dotListClass="custom-dot-list-style"
-                itemClass="carousel-item-padding-40-px"
+                itemClass="carousel-item-padding-40-px SpacingItem"
             >
                     {
                         slidesData.map((slides, index) => (

@@ -1,11 +1,11 @@
-import React, {useState} from "react";
-import {Card, Col, Container, Form, Row} from "react-bootstrap";
+import React, { useState } from "react";
+import { Card, Col, Container, Form, Row } from "react-bootstrap";
 import header_bg from "../../../assets/images/agsbackgrounds/curriBg.jpg";
-import {Hidden} from "@material-ui/core";
+import { Hidden } from "@material-ui/core";
 import Spinner from "../../../components/Spinner/Spinner";
 import SnackBar from "../../../components/SnackBar/SnackBar";
-import {API} from "../../../http/API";
-import {convertedDate, currentDate, STRINGS} from "../../../utils/base";
+import { API } from "../../../http/API";
+import { convertedDate, currentDate, STRINGS } from "../../../utils/base";
 
 const defaultState = {
     isOpen: false,
@@ -23,9 +23,9 @@ const defaultState = {
 
 function Enquiry() {
     const [init, setInit] = useState(defaultState);
-    let {isSubmitResponse, parent_name, parent_email, parent_phone, child_dob, isOpen, message, variant,cb_phone,cb_parent_name,isSubmitResponseCB} = init;
+    let { isSubmitResponse, parent_name, parent_email, parent_phone, child_dob, isOpen, message, variant, cb_phone, cb_parent_name, isSubmitResponseCB } = init;
     const validation = (obj, type) => {
-        let valid = {error: true, message: ""}
+        let valid = { error: true, message: "" }
         let emailRegex = STRINGS.REGEX.EMAIL;
         if (type === "bst") {
             if (obj.parent_email === "") {
@@ -61,7 +61,7 @@ function Enquiry() {
     const handleSubmitBookTour = (e) => {
         e.preventDefault();
 
-        let validate = validation(init,"bst")
+        let validate = validation(init, "bst")
         if (validate.error) {
             let inputData = {
                 parent_name: init.parent_name,
@@ -110,7 +110,7 @@ function Enquiry() {
     const handleSubmitReqCall = (e) => {
         e.preventDefault();
 
-        let validate = validation(init,"cb")
+        let validate = validation(init, "cb")
         if (validate.error) {
             let inputData = {
                 parent_name: init.cb_parent_name,
@@ -169,7 +169,7 @@ function Enquiry() {
     }
 
     return (
-        <div className="Enquiry-page">
+        <div className="Enquiry-page" id={"Enquiry"}>
             <SnackBar
                 isOpen={isOpen}
                 message={message}
@@ -182,7 +182,7 @@ function Enquiry() {
             <Hidden smDown>
                 <div
                     className="Enquiry"
-                    style={{backgroundImage: `url(${header_bg})`}}
+                    style={{ backgroundImage: `url(${header_bg})` }}
                 >
                     <div className="op-div">
                     </div>
@@ -192,7 +192,7 @@ function Enquiry() {
                         <Container fluid>
                             <Row>
                                 <Col sm>
-                                    <Card shadow style={{borderRadius: "20px"}} className={"cardStyle"}>
+                                    <Card shadow style={{ borderRadius: "20px" }} className={"cardStyle"}>
                                         <Card.Body>
                                             <h2 className={" intro-title"}>
                                                 Request A Call Back
@@ -210,7 +210,7 @@ function Enquiry() {
                                                         value={cb_parent_name}
                                                         type="text"
                                                         placeholder="Parent/Guardian’s Name"
-                                                        className={"formFields"}/>
+                                                        className={"formFields"} />
                                                 </Form.Group>
                                                 <Form.Group className="mb-3" controlId="formGroupNumber">
                                                     <Form.Control
@@ -219,13 +219,13 @@ function Enquiry() {
                                                         onChange={handleChange}
                                                         type="number"
                                                         placeholder="Parent/Guardian’s Mobile Number"
-                                                        className={"formFields"}/>
+                                                        className={"formFields"} />
                                                 </Form.Group>
                                                 <center>
                                                     {
                                                         isSubmitResponseCB ?
                                                             <button type={"submit"} className={"enroll"}>SUBMIT</button> :
-                                                            <Spinner color1={"#1a2c52"} size={"sm"}/>
+                                                            <Spinner color1={"#1a2c52"} size={"sm"} />
                                                     }
                                                 </center>
                                             </Form>
@@ -233,7 +233,7 @@ function Enquiry() {
                                     </Card>
                                 </Col>
                                 <Col sm>
-                                    <Card shadow style={{borderRadius: "20px"}} className={"cardStyle"}>
+                                    <Card shadow style={{ borderRadius: "20px" }} className={"cardStyle"}>
                                         <Card.Body>
                                             <h2 className={" intro-title"}>
                                                 Book a School Tour
@@ -251,38 +251,38 @@ function Enquiry() {
                                                 <Form.Group className="mb-3" controlId="formGroupName"
                                                 >
                                                     <Form.Control name={"parent_name"} onChange={handleChange}
-                                                                  type="text"
-                                                                  value={parent_name}
-                                                                  placeholder="Parent/Guardian’s Full Name"
-                                                                  className={"formFields"}/>
+                                                        type="text"
+                                                        value={parent_name}
+                                                        placeholder="Parent/Guardian’s Full Name"
+                                                        className={"formFields"} />
                                                 </Form.Group>
                                                 <Form.Group className="mb-3" controlId="formGroupEmail">
                                                     <Form.Control name={"parent_email"} onChange={handleChange}
-                                                                  type="text"
-                                                                  value={parent_email}
-                                                                  placeholder="Parent/Guardian’s Email"
-                                                                  className={"formFields"}/>
+                                                        type="text"
+                                                        value={parent_email}
+                                                        placeholder="Parent/Guardian’s Email"
+                                                        className={"formFields"} />
                                                 </Form.Group>
                                                 <Form.Group className="mb-3" controlId="formGroupNumber">
                                                     <Form.Control name={"parent_phone"} onChange={handleChange}
-                                                                  type="number"
-                                                                  value={parent_phone}
-                                                                  placeholder="Parent/Guardian’s Mobile Number"
-                                                                  className={"formFields"}/>
+                                                        type="number"
+                                                        value={parent_phone}
+                                                        placeholder="Parent/Guardian’s Mobile Number"
+                                                        className={"formFields"} />
                                                 </Form.Group>
                                                 <Form.Group className="mb-3" controlId="formGroupNumber">
                                                     <Form.Control name={"child_dob"} onChange={handleChange}
-                                                                  type="date"
-                                                                  value={child_dob}
-                                                                  placeholder="Child’s Date Of Birth"
-                                                                  className={"formFields"}/>
+                                                        type="date"
+                                                        value={child_dob}
+                                                        placeholder="Child’s Date Of Birth"
+                                                        className={"formFields"} />
                                                 </Form.Group>
                                                 <center>
                                                     {
                                                         isSubmitResponse ?
                                                             <button type={"submit"}
-                                                                    className={"enroll"}>SUBMIT</button> :
-                                                            <Spinner color1={"#1a2c52"} size={"sm"}/>
+                                                                className={"enroll"}>SUBMIT</button> :
+                                                            <Spinner color1={"#1a2c52"} size={"sm"} />
                                                     }
                                                 </center>
                                             </Form>
@@ -298,7 +298,7 @@ function Enquiry() {
                 <Container fluid>
                     <Row>
                         <Col sm>
-                            <Card shadow style={{borderRadius: "20px"}} className={"cardStyleMBL"}>
+                            <Card shadow style={{ borderRadius: "20px" }} className={"cardStyleMBL"}>
                                 <Card.Body>
                                     <h2 className={" intro-title"}>
                                         Request A Call Back
@@ -315,7 +315,7 @@ function Enquiry() {
                                                 value={cb_parent_name}
                                                 type="text"
                                                 placeholder="Parent/Guardian’s Name"
-                                                className={"formFields"}/>
+                                                className={"formFields"} />
                                         </Form.Group>
                                         <Form.Group className="mb-3" controlId="formGroupNumber">
                                             <Form.Control
@@ -324,13 +324,13 @@ function Enquiry() {
                                                 onChange={handleChange}
                                                 type="number"
                                                 placeholder="Parent/Guardian’s Mobile Number"
-                                                className={"formFields"}/>
+                                                className={"formFields"} />
                                         </Form.Group>
                                         <center>
                                             {
                                                 isSubmitResponseCB ?
                                                     <button type={"submit"} className={"enroll"}>SUBMIT</button> :
-                                                    <Spinner color1={"#1a2c52"} size={"sm"}/>
+                                                    <Spinner color1={"#1a2c52"} size={"sm"} />
                                             }
                                         </center>
                                     </Form>
@@ -338,7 +338,7 @@ function Enquiry() {
                             </Card>
                         </Col>
                         <Col sm>
-                            <Card shadow style={{borderRadius: "20px"}} className={"cardStyleMBL"}>
+                            <Card shadow style={{ borderRadius: "20px" }} className={"cardStyleMBL"}>
                                 <Card.Body>
                                     <h2 className={" intro-title"}>
                                         Book a School Tour
@@ -353,38 +353,38 @@ function Enquiry() {
                                         <Form.Group className="mb-3" controlId="formGroupName"
                                         >
                                             <Form.Control name={"parent_name"} onChange={handleChange}
-                                                          type="text"
-                                                          value={parent_name}
-                                                          placeholder="Parent/Guardian’s Full Name"
-                                                          className={"formFields"}/>
+                                                type="text"
+                                                value={parent_name}
+                                                placeholder="Parent/Guardian’s Full Name"
+                                                className={"formFields"} />
                                         </Form.Group>
                                         <Form.Group className="mb-3" controlId="formGroupEmail">
                                             <Form.Control name={"parent_email"} onChange={handleChange}
-                                                          type="text"
-                                                          value={parent_email}
-                                                          placeholder="Parent/Guardian’s Email"
-                                                          className={"formFields"}/>
+                                                type="text"
+                                                value={parent_email}
+                                                placeholder="Parent/Guardian’s Email"
+                                                className={"formFields"} />
                                         </Form.Group>
                                         <Form.Group className="mb-3" controlId="formGroupNumber">
                                             <Form.Control name={"parent_phone"} onChange={handleChange}
-                                                          type="number"
-                                                          value={parent_phone}
-                                                          placeholder="Parent/Guardian’s Mobile Number"
-                                                          className={"formFields"}/>
+                                                type="number"
+                                                value={parent_phone}
+                                                placeholder="Parent/Guardian’s Mobile Number"
+                                                className={"formFields"} />
                                         </Form.Group>
                                         <Form.Group className="mb-3" controlId="formGroupNumber">
                                             <Form.Control name={"child_dob"} onChange={handleChange}
-                                                          type="date"
-                                                          value={child_dob}
-                                                          placeholder="Child’s Date Of Birth"
-                                                          className={"formFields"}/>
+                                                type="date"
+                                                value={child_dob}
+                                                placeholder="Child’s Date Of Birth"
+                                                className={"formFields"} />
                                         </Form.Group>
                                         <center>
                                             {
                                                 isSubmitResponse ?
                                                     <button type={"submit"}
-                                                            className={"enroll"}>SUBMIT</button> :
-                                                    <Spinner color1={"#1a2c52"} size={"sm"}/>
+                                                        className={"enroll"}>SUBMIT</button> :
+                                                    <Spinner color1={"#1a2c52"} size={"sm"} />
                                             }
                                         </center>
                                     </Form>

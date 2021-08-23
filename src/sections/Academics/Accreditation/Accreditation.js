@@ -1,9 +1,18 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Grid} from "@material-ui/core";
 import {Card, Col, Row} from "react-bootstrap";
 import bg_img_e from "../../../assets/images/about/AGS_E_bg.jpg"
+import CalendarView from "../CalendarView/CalenderView";
+
+const defaultState = {
+    modalShow: false
+}
 
 const AgsEthos = () => {
+
+    const [init, setInit] = useState(defaultState);
+    let {modalShow} = init;
+
     return (
         <Grid container className="info-tabs justify-content-center accreditation-paths">
             <Grid className="v-calendar-sec">
@@ -12,8 +21,16 @@ const AgsEthos = () => {
                 </Grid>
                 <Grid className="btn-w">
                     <div className="d-flex w-100">
-                        <button className="view-c-btn">View Calender</button>
+                        <button className="view-c-btn" onClick={() => setInit({
+                            ...init,
+                            modalShow: true
+                        })}>View Calender
+                        </button>
                     </div>
+                    <CalendarView show={modalShow} onHide={() => setInit({
+                        ...init,
+                        modalShow: false
+                    })}/>
                 </Grid>
             </Grid>
             <Grid container className="justify-content-center ac-bg ethos_bg">

@@ -31,7 +31,7 @@
     position: absolute;
     display: flex;
     width: 90%;
-    z-index: 1222;
+    z-index: 1;
     margin: 2rem 3rem;
     opacity: 0.9;
     box-shadow: 0 4px 15px #BEBEBE;
@@ -143,13 +143,115 @@
   .home-page.about-section .InfoTitle {
     font-size: 3rem;
   }
-  .AgsSlider .curr-sec{
+  .AgsSlider .curr-sec {
     font-size: 3rem;
   }
-  .AgsSlider .curr-footer-text{
+  .AgsSlider .curr-footer-text {
     font-size: 2rem;
   }
-  .accreditation-paths .v-calendar-sec .txt-w{
+  .accreditation-paths .v-calendar-sec .txt-w {
     font-size: 2rem;
+  }
+}
+
+.Ages.Academic {
+  z-index: 1111;
+
+  .header {
+    display: flex;
+    width: 100%;
+    padding: 2rem 3rem 0 3rem;
+
+    .heading {
+      display: flex;
+      width: 100%;
+      align-items: flex-end;
+      border-bottom: 1px solid #CDB786;
+      margin: 0 1rem;
+
+      p {
+        display: flex;
+        text-transform: uppercase;
+        color: $bg_color;
+        font-size: 25px;
+        font-weight: bold;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .modal-sec {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 1rem;
+
+    .card-holder {
+      display: flex;
+      flex-direction: column;
+      .card-head{
+        display: flex;
+        p{
+          color: $bg_color;
+          font-weight: 600;
+          margin-bottom: 0;
+        }
+      }
+      .card-sec{
+        display: flex;
+        width: 100%;
+        margin: 1rem 0;
+        .circle-holder{
+          display: flex;
+          flex-direction: column;
+          width: 140px;
+          margin: 0 1rem;
+          ._circle{
+            display: flex;
+            border-radius: 50%;
+            font-weight: bold;
+            color: #CDB786;
+            background-color: $bg_color;
+            border: 3px solid #CDB786;
+            flex-direction: column;
+            padding: 1rem;
+            justify-content: center;
+            align-items: center;
+            ._circle-inner{
+              display: flex;
+              align-items: center;
+              font-size: 3rem;
+              font-family: "Optima nova LT Medium";
+              font-weight: lighter;
+              ._circle-em{
+                font-size: 12px;
+                text-transform: uppercase;
+              }
+            }
+            ._circle-month{
+              font-size: 16px;
+              text-transform: uppercase;
+            }
+          }
+          ._circle.lg{
+            border-radius: 65px;
+          }
+          ._circle-txt{
+            display: flex;
+            margin: 0.4rem 0;
+            p{
+              font-size: 16px;
+              color: $bg_color;
+              margin-bottom: 0;
+              text-align: center;
+            }
+          }
+        }
+        .circle-holder.lg{
+          width: 200px;
+        }
+      }
+    }
+
   }
 }

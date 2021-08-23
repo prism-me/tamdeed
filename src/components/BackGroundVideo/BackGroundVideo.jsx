@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import header_bg from "./../../assets/images/agsbackgrounds/image 2.jpg";
+import header_bg from "./../../assets/images/agsbackgrounds/image 2.png";
 import PlayArrowIcon from "@material-ui/icons/PlayArrow";
 import StopIcon from "@material-ui/icons/Stop";
 

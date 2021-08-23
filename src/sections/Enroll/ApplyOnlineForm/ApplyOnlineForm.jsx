@@ -8,40 +8,40 @@ import Slide from "@material-ui/core/Slide";
 import useStyles from "./style";
 import {Container} from "react-bootstrap";
 
-const Transition = React.forwardRef(function Transition(props, ref) {
-    return <Slide direction="left" ref={ref} {...props} />;
-});
+// const Transition = React.forwardRef(function Transition(props, ref) {
+//     return <Slide direction="left" ref={ref} {...props} />;
+// });
 
 export default function ApplyOnlineForm({open, setOpen,}) {
-    const classes = useStyles();
-    const handleClose = () => {
-        setOpen(false);
-    };
+    // const classes = useStyles();
+    // const handleClose = () => {
+    //     setOpen(false);
+    // };
     return (
         <div className={"home-page"}>
-            <Dialog
-                fullScreen
-                open={open}
-                onClose={handleClose}
-                TransitionComponent={Transition}
-            >
-                <AppBar className={classes.appBar}>
-                    <Toolbar>
-                        <IconButton
-                            edge="start"
-                            onClick={handleClose}
-                            aria-label="close"
-                            className={classes.closeIcon}
-                        >
-                            <CloseIcon />
-                        </IconButton>
-                    </Toolbar>
-                </AppBar>
+            {/*<Dialog*/}
+            {/*    fullScreen*/}
+            {/*    open={open}*/}
+            {/*    onClose={handleClose}*/}
+            {/*    TransitionComponent={Transition}*/}
+            {/*>*/}
+            {/*    <AppBar className={classes.appBar}>*/}
+            {/*        <Toolbar>*/}
+            {/*            <IconButton*/}
+            {/*                edge="start"*/}
+            {/*                onClick={handleClose}*/}
+            {/*                aria-label="close"*/}
+            {/*                className={classes.closeIcon}*/}
+            {/*            >*/}
+            {/*                <CloseIcon />*/}
+            {/*            </IconButton>*/}
+            {/*        </Toolbar>*/}
+            {/*    </AppBar>*/}
                 <Container>
                     <div iw-id="admissions-enquiry">
                     </div>
                 </Container>
-            </Dialog>
+            {/*</Dialog>*/}
         </div>
     );
 }

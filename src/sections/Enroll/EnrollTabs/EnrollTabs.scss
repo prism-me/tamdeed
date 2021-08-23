@@ -33,4 +33,7 @@
   text-align: center;
   margin-top: 2rem;
   margin-bottom: 0;
+  @media #{$sm} {
+    padding: 0 2rem
+  }
 }

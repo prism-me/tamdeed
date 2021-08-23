@@ -56,7 +56,6 @@ export default function ApplyOnlineForm({open, setOpen,}) {
                 </AppBar>
                 <Container>
                     <div iw-id="admissions-enquiry">
-
                     </div>
                 </Container>
             </Dialog>

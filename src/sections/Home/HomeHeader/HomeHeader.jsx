@@ -2,12 +2,12 @@ import axios from "axios";
 import React, {useEffect, useRef, useState} from "react";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import logo from "./../../../assets/images/agslogo/Logo (1).png";
-import header_bg from "./../../../assets/images/agsbanners/HomePage.jpg";
+// import header_bg from "./../../../assets/images/agsbanners/HomePage.jpg";
+import header_bg from "./../../../assets/images/agsbackgrounds/image 2.png";
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 import ModalVideo from 'react-modal-video'
 import Hidden from "@material-ui/core/Hidden";
 import BackGroundVideo from "../../../components/BackGroundVideo/BackGroundVideo";
-import StopIcon from '@material-ui/icons/Stop';
 import PauseIcon from "@material-ui/icons/Pause";
 
 function HomeHeader(props) {
@@ -22,6 +22,7 @@ function HomeHeader(props) {
         // setIsVideo(true);
       } else {
         myVideo.pause();
+        myVideo.load()
         // setIsVideo(false);
       }
       // update the state
@@ -33,7 +34,7 @@ function HomeHeader(props) {
   return (
       <>
         <Hidden smDown>
-          <div style={{ height: '', }} className={"BackgroundVideoDiv"} >
+          <div style={{ height: '', backgroundImage:`url(${isPlaying && header_bg})` }} className={"BackgroundVideoDiv"} >
             <BackGroundVideo
                 // blur={2}
                 videoSource={videoSource}>
@@ -66,7 +67,7 @@ function HomeHeader(props) {
                                     onClick={togglePlay}
                             >
                               {isPlaying ? (
-                                  <StopIcon className={"AboutVideoplaySize"}/>
+                                  <PauseIcon className={"AboutVideoplaySize"}/>
                               ) : (
                                   <PlayArrowIcon className={"AboutVideoplaySize"}/>
                               )}

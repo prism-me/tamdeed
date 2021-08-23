@@ -21,7 +21,7 @@ function HomeHeader(props) {
         <Hidden smDown>
           <div style={{ height: '', }} >
             <BackGroundVideo
-                blur={2}
+                // blur={2}
                 videoSource={videoSource} >
               <div className='content'>
                 {/*<div className='sub-content' >*/}
@@ -48,7 +48,7 @@ function HomeHeader(props) {
                       <Hidden smDown>
                         <Col sm={{ span: 6}} className={"iconSpace"}>
                           <div className="video-promo-content">
-                            <button className="btn About-video-play-icon">
+                            <button className="btn About-video-play-icon playbutton">
                               <PlayArrowIcon className={"AboutVideoplaySize"}/>
                             </button>
                           </div>
@@ -61,11 +61,6 @@ function HomeHeader(props) {
                   <div className={"waves"}>
                   </div>
                 </Hidden>
-                {/*  <img*/}
-                {/*className="view-image"*/}
-                {/*src="https://www.jing.fm/clipimg/detail/139-1394959_panda-cartoon-png-cute-cartoon-panda-bear.png"*/}
-                {/*alt="profile" />*/}
-                {/*</div>*/}
               </div>
             </BackGroundVideo>
           </div>

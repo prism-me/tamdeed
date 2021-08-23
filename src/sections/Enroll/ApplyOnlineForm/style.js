@@ -8,11 +8,6 @@ const useStyles = makeStyles((theme) =>
             color: "#fff",
             boxShadow:"none"
         },
-        title: {
-            marginLeft: theme.spacing(2),
-            flex: 1,
-            color: "black"
-        },
         closeIcon: {
             backgroundColor: "#1A2C52",
             color:"#fff"

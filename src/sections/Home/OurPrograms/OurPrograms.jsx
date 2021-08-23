@@ -1,10 +1,6 @@
 import React, {useState} from "react";
 import {Card, Container, Form} from "react-bootstrap";
-import header_bg from "../../../assets/images/agsbackgrounds/curriBg.jpg";
-// import {Grid} from "@material-ui/core";
-// import vid_bg_img from "../../../assets/images/about/vid_img.jpg";
-// import ModalVideo from "react-modal-video";
-// import PlayArrowIcon from "@material-ui/icons/PlayArrow";
+import header_bg from "../../../assets/images/agsbackgrounds/image1.png";
 import Hidden from "@material-ui/core/Hidden";
 import Spinner from "../../../components/Spinner/Spinner";
 import {API} from "../../../http/API";
@@ -115,10 +111,10 @@ function OurPrograms() {
                     className="programs"
                     style={{backgroundImage: `url(${header_bg})`}}
                 >
-                    <div className="op-div">
-                    </div>
-                    <div className="wavy-div">
-                    </div>
+                    {/*<div className="op-div">*/}
+                    {/*</div>*/}
+                    {/*<div className="wavy-div">*/}
+                    {/*</div>*/}
                     <div className="description-column">
                         <Container>
                             <Card shadow style={{borderRadius: "20px"}} className={"cardStyle"}>

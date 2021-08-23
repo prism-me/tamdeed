@@ -12,6 +12,7 @@ const ContactUs = lazy(() => import('../pages/ContactUs'));
 const StudentCare = lazy(() => import('../pages/StudentCare'));
 const Enroll = lazy(() => import('../pages/Enroll'));
 const FAQMain = lazy(() => import('../pages/FAQMain'));
+const OnlineForm = lazy(() => import('../pages/OnlineForm'));
 
 
 export const routes = [
@@ -75,6 +76,13 @@ export const routes = [
     name: "FAQ",
     path: "/FAQMain",
     component: FAQMain,
+    isPrivate: false,
+    exact: true,
+  },
+  {
+    name: "OnlineForm",
+    path: "/OnlineForm",
+    component: OnlineForm,
     isPrivate: false,
     exact: true,
   },

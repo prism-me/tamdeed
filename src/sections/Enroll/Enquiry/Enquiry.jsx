@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Card, Col, Container, Form, Row } from "react-bootstrap";
-import header_bg from "../../../assets/images/agsbackgrounds/curriBg.jpg";
+import header_bg from "../../../assets/images/agsbackgrounds/image1.png";
 import { Hidden } from "@material-ui/core";
 import Spinner from "../../../components/Spinner/Spinner";
 import SnackBar from "../../../components/SnackBar/SnackBar";
@@ -184,10 +184,10 @@ function Enquiry() {
                     className="Enquiry"
                     style={{ backgroundImage: `url(${header_bg})` }}
                 >
-                    <div className="op-div">
-                    </div>
-                    <div className="wavy-div">
-                    </div>
+                    {/*<div className="op-div">*/}
+                    {/*</div>*/}
+                    {/*<div className="wavy-div">*/}
+                    {/*</div>*/}
                     <div className="description-column">
                         <Container fluid>
                             <Row>

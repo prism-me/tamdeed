@@ -8,6 +8,9 @@ export default function ApplyOnline() {
     // const handleBYI = (menuItem) => {
     //     setOpenForm(true)
     // };
+    function refreshPage() {
+        window.location.reload(false);
+    }
     const history = useHistory();
     return(
         <div className="ApplyOnline" id={"applyOnline"}>
@@ -16,7 +19,10 @@ export default function ApplyOnline() {
                             <p className={"m-0"}>Apply Online by filling the form and submitting related documents </p>
                             <button className="btn btn-lg shadow btnstyleB"
                                     // onClick={handleBYI}
-                                    onClick={() => history.push('/OnlineForm')}
+                                    onClick={() => {
+                                        history.push('/OnlineForm');
+                                        refreshPage()
+                                    }}
                             >
                                 Apply Online
                             </button>

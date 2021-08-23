@@ -123,10 +123,10 @@ function HomeHeader(props) {
                 </Row>
               </Container>
             </div>
-            <Hidden smDown>
-              <div className={"waves"}>
-              </div>
-            </Hidden>
+            {/*<Hidden smDown>*/}
+            {/*  <div className={"waves"}>*/}
+            {/*  </div>*/}
+            {/*</Hidden>*/}
           </div>
         </Hidden>
         </>

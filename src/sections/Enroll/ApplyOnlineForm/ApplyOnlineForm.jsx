@@ -1,22 +1,8 @@
-// import React, { useState } from "react";
-//
-// export default function ApplyOnlineForm() {
-//
-//     return(
-//         <div   iw-id="admissions-enquiry">
-//
-//         </div>
-//     )
-// }
-
-import React, { useState } from "react";
+import React  from "react";
 import Dialog from "@material-ui/core/Dialog";
-import Box from '@material-ui/core/Box';
-import Grid from '@material-ui/core/Grid';
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
-import Typography from "@material-ui/core/Typography";
 import CloseIcon from "@material-ui/icons/Close";
 import Slide from "@material-ui/core/Slide";
 import useStyles from "./style";
@@ -31,9 +17,6 @@ export default function ApplyOnlineForm({open, setOpen,}) {
     const handleClose = () => {
         setOpen(false);
     };
-
-
-
     return (
         <div className={"home-page"}>
             <Dialog

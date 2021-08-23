@@ -1,32 +1,19 @@
 import React, {useEffect} from 'react';
 import header_bg from "./../../assets/images/agsbanners/HomePage.jpg";
+import PlayArrowIcon from "@material-ui/icons/PlayArrow";
+import StopIcon from "@material-ui/icons/Stop";
 
-const BackGroundVideo = ({ videoSource, children, blur }) => {
-    // useEffect(() => {
-    //     const BackgroundDiv = document.querySelector('.BackgroundDiv')
-    //     const video = BackgroundDiv.querySelector('.video')
-    //     const playButton = BackgroundDiv.querySelector('.playButton')
-    //     playButton.addEventListener('click',(e)=>{
-    //         if (video.paused){
-    //             video.play()
-    //             e.target.textContent='play'
-    //         }
-    //         else {
-    //             video.pause()
-    //             e.target.textContent='pause'
-    //         }
-    //     })
-    //         }, [])
+const BackGroundVideo = ({ videoSource, children, blur,videoRef }) => {
 
     return (
         <div className={"BackgroundDiv"}>
             {/*<div className='container'>*/}
                 <video
                     // style={{ filter: `blur(${blur}px)`, WebkitFilter: `blur(${blur}px)` }}
-                    autoPlay="autoplay"
-                    loop="loop"
-                    muted
-                    // ref={video}
+                    // autoPlay="autoplay"
+                    // loop="loop"
+                    // muted
+                    ref={videoRef}
                     id="video-id"
                     poster={header_bg}
                     className='video' >

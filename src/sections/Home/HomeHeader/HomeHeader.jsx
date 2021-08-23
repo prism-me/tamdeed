@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useRef, useState} from "react";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import logo from "./../../../assets/images/agslogo/Logo (1).png";
 import header_bg from "./../../../assets/images/agsbanners/HomePage.jpg";
@@ -7,22 +7,36 @@ import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 import ModalVideo from 'react-modal-video'
 import Hidden from "@material-ui/core/Hidden";
 import BackGroundVideo from "../../../components/BackGroundVideo/BackGroundVideo";
+import StopIcon from '@material-ui/icons/Stop';
+import PauseIcon from "@material-ui/icons/Pause";
 
 function HomeHeader(props) {
   const [isOpen, setOpen] = useState(false)
+
+    const [isPlaying, setIsPlaying] = useState(false);
+    const videoRef = useRef<HTMLVideoElement>(null);
+    const togglePlay = () => {
+      // play or pause the video element
+      if (isPlaying) {
+        videoRef.current?.pause();
+      } else {
+        videoRef.current?.play();
+      }
+      // update the state
+      setIsPlaying(!isPlaying);
+    }
+
   const videoSource = "https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4";
-  const scrollToBottom = () => {
-    const bottomEle = document.getElementById("video-id");
-    bottomEle.scrollIntoView({ behavior: "smooth" });
-  }
 
   return (
       <>
         <Hidden smDown>
-          <div style={{ height: '', }} >
+          <div style={{ height: '', }} className={"BackgroundVideoDiv"} >
             <BackGroundVideo
                 // blur={2}
-                videoSource={videoSource} >
+                videoSource={videoSource}
+                // videoRef={videoRef}
+            >
               <div className='content'>
                 {/*<div className='sub-content' >*/}
                 <div className={"inner-header flex"}>
@@ -48,8 +62,14 @@ function HomeHeader(props) {
                       <Hidden smDown>
                         <Col sm={{ span: 6}} className={"iconSpace"}>
                           <div className="video-promo-content">
-                            <button className="btn About-video-play-icon playbutton">
-                              <PlayArrowIcon className={"AboutVideoplaySize"}/>
+                            <button className="btn About-video-play-icon"
+                                    onClick={togglePlay}
+                            >
+                              {isPlaying ? (
+                                  <StopIcon className={"AboutVideoplaySize"}/>
+                              ) : (
+                                  <PlayArrowIcon className={"AboutVideoplaySize"}/>
+                              )}
                             </button>
                           </div>
                         </Col>

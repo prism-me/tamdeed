@@ -8,8 +8,8 @@ import {Grid} from "@material-ui/core";
 
 const PrincipleMessage = () => {
     return (
-        <div className="info-tabs p-main">
-            <h3 className="InfoTitle">PRINCIPLE MESSAGE</h3>
+        <div className="Principal p-main">
+            <h3 className="InfoTitle">PRINCIPAL MESSAGE</h3>
             <div className="p-cont">
                 <div className="cont-hld" style={{
                     backgroundImage: `url(${principle_sec_bg})`

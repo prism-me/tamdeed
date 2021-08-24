@@ -63,7 +63,7 @@
         text-align: center;
       }
       h2 {
-        font-size: 25px;
+        font-size: 22px;
         font-weight: 500;
         margin-bottom: 0;
       }
@@ -133,10 +133,15 @@
     width: 100%;
     justify-content: center;
     background-image: url("../../assets/images/agsbackgrounds/backgroundCurve.png");
-    background-size: cover;
+    //background-size: cover;
+    background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
+    transition: background-size 1s ease-in-out;
+    &:hover{
+      background-size: 120% /* work with the background-size */
+    }
     @media #{$xxl} {
       height: 900px;
     }
@@ -163,7 +168,7 @@
         margin-top: 16rem;
       }
       @media #{$xxl}{
-        margin-top: 13rem;
+        margin-top: 8rem;
         width: 60%;
       }
       @media #{$xl}{

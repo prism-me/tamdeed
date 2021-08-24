@@ -1,5 +1,5 @@
 import React from 'react';
-import header_bg from "../../../assets/images/academics/hd_bg.png";
+import header_bg from "../../../assets/images/agsbackgrounds/Academics_bg.png";
 import {Col, Container, Row} from "react-bootstrap";
 import logo from "../../../assets/images/agslogo/Logo (1).png";
 

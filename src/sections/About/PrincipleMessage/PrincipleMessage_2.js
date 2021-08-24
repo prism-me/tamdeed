@@ -8,12 +8,10 @@ import {Grid} from "@material-ui/core";
 
 const PrincipleMessage = () => {
     return (
-        <Grid container className="info-tabs justify-content-center p-main">
+        <div className="info-tabs p-main">
             <h3 className="InfoTitle">PRINCIPLE MESSAGE</h3>
-            <Grid container sm={12} className="d-flex w-100" style={{
-                backgroundColor:"#fffff"
-            }}>
-                <Grid item sm={12} className="cont-hld" style={{
+            <div className="p-cont">
+                <div className="cont-hld" style={{
                     backgroundImage: `url(${principle_sec_bg})`
                 }}>
                     <img alt={""} className={"cont-hld"} src={principle_sec_bg} style={{
@@ -37,9 +35,9 @@ const PrincipleMessage = () => {
                             </div>
                         </div>
                     </Grid>
-                </Grid>
-            </Grid>
-        </Grid>
+                </div>
+            </div>
+        </div>
     );
 };
 

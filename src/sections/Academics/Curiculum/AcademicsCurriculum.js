@@ -57,39 +57,6 @@ const AcademicsCurriculum = () => {
                     </div>
                 </Grid>
             </Grid>
-            <div className={"d-flex justify-content-center align-items-center mt-3"}>
-                <div className="custom-slider">
-                    <input
-                        type="range"
-                        // value={Math.round(Math.abs(transform) / value)}
-                        defaultValue={0}
-                        // max={
-                        //   (carouselItemWidth *
-                        //       (carouselState.totalItems - carouselState.slidesToShow) +
-                        //       (this.state.additionalTransfrom === 150 ? 0 : 150)) /
-                        //   value
-                        // }
-                        // onChange={e => {
-                        //   if (this.Carousel.isAnimationAllowed) {
-                        //     this.Carousel.isAnimationAllowed = false;
-                        //   }
-                        //   const nextTransform = e.target.value * value;
-                        //   const nextSlide = Math.round(nextTransform / carouselItemWidth);
-                        //   if (
-                        //       e.target.value == 0 &&
-                        //       this.state.additionalTransfrom === 150
-                        //   ) {
-                        //     this.Carousel.isAnimationAllowed = true;
-                        //     this.setState({ additionalTransfrom: 0 });
-                        //   }
-                        //   this.Carousel.setState({
-                        //     transform: -nextTransform, // padding 20px and 5 items.
-                        //     currentSlide: nextSlide
-                        //   });
-                        // }}
-                    />
-                </div>
-            </div>
             <Grid className="d-flex w-100 justify-content-center" >
                 <Grid className="curr-footer-text" >
                     <p>“Coming together is a <strong>beginning</strong>, staying together is <strong>progress</strong>, and working together is <strong>success.</strong>” Henry Ford.</p>

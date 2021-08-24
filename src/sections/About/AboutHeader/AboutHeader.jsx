@@ -7,7 +7,7 @@ const AboutHeader = () => {
     return (
 
             <div
-                className="home-header wave-container"
+                className="home-header"
                 style={{ backgroundImage: `url(${header_bg})`, }}
             >
                 <img alt={"#"} className="home-header wave-container position-absolute" style={{visibility:"hidden",display:"inline-block"}} src={header_bg}/>
@@ -31,12 +31,9 @@ const AboutHeader = () => {
                             </div>
                         </Col>
                         <Col sm={{ span: 6}} className={"iconSpace"}>
-
                         </Col>
                     </Row>
                 </Container>
-                <div className={"waves"}>
-                </div>
             </div>
 
     );

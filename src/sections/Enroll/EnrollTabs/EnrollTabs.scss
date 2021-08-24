@@ -15,6 +15,10 @@
       background: $bg-color;
       color: $white;
     }
+    @media #{$lg} {
+      width: 190px;
+      font-size: 15px;
+    }
   }
   .buttons-flex {
     display: -webkit-flex;
@@ -29,4 +33,7 @@
   text-align: center;
   margin-top: 2rem;
   margin-bottom: 0;
+  @media #{$sm} {
+    padding: 0 2rem
+  }
 }

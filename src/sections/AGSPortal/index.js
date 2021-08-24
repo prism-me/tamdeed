@@ -2,7 +2,9 @@ import React from 'react';
 import ic_email from "../../assets/images/ags-portal/mail-icon.png";
 import ic_phone from "../../assets/images/ags-portal/phone-icon.png";
 import bg_img from "../../assets/images/ags-portal/bg.png";
-
+import {Col, Row} from "react-bootstrap";
+import PhoneOutlinedIcon from '@material-ui/icons/PhoneOutlined';
+import MailOutlineIcon from '@material-ui/icons/MailOutline';
 const AgsPortalComponent = () => {
     return (
         <div className="ags-portal-main">
@@ -33,27 +35,46 @@ const AgsPortalComponent = () => {
                         </div>
                     </div>
                 </div>
-                <div className="row">
                     <div className="footer-info">
-                        <div className="info-holder">
-                            <div className="txt">
-                                <p>For IT support, please contact us at:</p>
-                            </div>
-                            <div className="email">
-                                <div className="icon">
-                                    <img alt={"#"} src={ic_email} className="ic-email"/>
-                                </div>
-                                <div className="txt">helpdesk@ags.ae</div>
-                            </div>
-                            <div className="phone">
-                                <div className="icon">
-                                    <img alt={"#"} src={ic_phone} className="ic-phone"/>
-                                </div>
-                                <div className="txt">050-000000</div>
-                            </div>
+                <Row>
+                    <Col sm="auto">
+                        <div className="txt">
+                            <p>For IT support, please contact us at:</p>
                         </div>
+                    </Col>
+                    <Col sm="auto">
+                        <div className="email">
+                            <p>
+                                <MailOutlineIcon/> helpdesk@ags.ae
+                            </p>
+                            {/*<div className="icon">*/}
+                            {/*    <img alt={"#"} src={ic_email} className="ic-email"/>*/}
+                            {/*</div>*/}
+                            {/*<div className="txt">helpdesk@ags.ae</div>*/}
+                        </div>
+                    </Col>
+                    <Col sm="auto">
+                        <div className="phone">
+                            <p>
+                               <PhoneOutlinedIcon/> 050-000000
+                            </p>
+                            {/*<div className="icon">*/}
+                            {/*    <img alt={"#"} src={ic_phone} className="ic-phone"/>*/}
+                            {/*</div>*/}
+                            {/*<div className="txt">050-000000</div>*/}
+                        </div>
+                    </Col>
+                </Row>
                     </div>
-                </div>
+                {/*<div className="row">*/}
+                {/*    <div className="footer-info">*/}
+                {/*        <div className="info-holder">*/}
+                {/*            */}
+                {/*           */}
+                {/*            */}
+                {/*        </div>*/}
+                {/*    </div>*/}
+                {/*</div>*/}
             </div>
         </div>
     );

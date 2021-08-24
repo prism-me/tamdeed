@@ -22,9 +22,9 @@ function Curriculum(props) {
                                 <Card.Body>
                                     <Row>
                                         <Col xs={12} sm={3} md={12} lg={3} className={"d-flex justify-content-center align-items-center"}>
-                                            <h2 className={" intro-title"}>
+                                            <h4 className={" intro-title"}>
                                                 OUR <br/> CURRICULUM
-                                            </h2>
+                                            </h4>
                                         </Col>
                                         <Col xs sm md lg>
                                             <p className={"subtitle"}>
@@ -59,9 +59,9 @@ function Curriculum(props) {
                         <Card.Body>
                             <Row>
                                 <Col xs={12} sm={3} md={12} lg={3} className={"d-flex justify-content-center align-items-center"}>
-                                    <h2 className={" intro-title"}>
+                                    <h4 className={" intro-title"}>
                                         OUR <br/> CURRICULUM
-                                    </h2>
+                                    </h4>
                                 </Col>
                                 <Col xs sm md lg>
                                     <p className={"subtitle"}>

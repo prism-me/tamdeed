@@ -2,7 +2,7 @@ import axios from "axios";
 import React, {useEffect, useRef, useState} from "react";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import logo from "./../../../assets/images/agslogo/Logo (1).png";
-// import header_bg from "./../../../assets/images/agsbanners/HomePage.jpg";
+import header_bgMB from "./../../../assets/images/agsbanners/HomePage.jpg";
 import header_bg from "./../../../assets/images/agsbackgrounds/image 2.png";
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 import ModalVideo from 'react-modal-video'
@@ -51,9 +51,9 @@ function HomeHeader(props) {
                           <h1 className="intro-title">
                             AMERICAN GULF SCHOOL
                           </h1>
-                          <h2 className={"intro-title2"}>
+                          <p className={"intro-title2"}>
                             EDUCATION DONE RIGHT
-                          </h2>
+                          </p>
                           <p className={"subtitle"}>
                             Take a look at what the CEO of the school
                             <br /> has to say about.
@@ -88,7 +88,7 @@ function HomeHeader(props) {
         </Hidden>
         <Hidden mdUp>
           <div className="home-header"
-               style={{ backgroundImage: `url(${header_bg})` }}
+               style={{ backgroundImage: `url(${header_bgMB})` }}
           >
             <div className={"inner-header flex"}>
               <Container>
@@ -101,9 +101,9 @@ function HomeHeader(props) {
                       <h1 className="intro-title">
                         AMERICAN GULF SCHOOL
                       </h1>
-                      <h2 className={"intro-title2"}>
+                      <p className={"intro-title2"}>
                         EDUCATION DONE RIGHT
-                      </h2>
+                      </p>
                       <p className={"subtitle"}>
                         Take a look at what the CEO of the school
                         <br /> has to say about.

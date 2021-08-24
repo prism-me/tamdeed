@@ -74,13 +74,13 @@ function Footer() {
                   <LinkContainer to="/Enroll">
                     <Nav.Link className=" fdeco">Enroll Online</Nav.Link>
                   </LinkContainer>
-                  <LinkContainer to="#">
+                  <LinkContainer to="/Enroll">
                     <Nav.Link className=" fdeco"> Tuition Fees</Nav.Link>
                   </LinkContainer>
-                  <LinkContainer to="#">
+                  <LinkContainer to="/Enroll">
                     <Nav.Link className=" fdeco"> Request for a callback </Nav.Link>
                   </LinkContainer>
-                  <LinkContainer to="#">
+                  <LinkContainer to="/Enroll">
                     <Nav.Link className=" fdeco"> School Tours</Nav.Link>
                   </LinkContainer>
                 </Nav>

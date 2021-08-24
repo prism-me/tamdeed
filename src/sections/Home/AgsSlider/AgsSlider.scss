@@ -2,7 +2,7 @@
   .AgsSlider {
     padding-top: 6rem;
     //padding-top: 3rem;
-    @media #{$sm} {
+    @media #{$sm,$md} {
       padding-top: 2rem;
     }
     .InfoTitle {

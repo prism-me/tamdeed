@@ -24,6 +24,12 @@
         left: 39%;
         bottom: -31%
       }
+      //@media #{$_2xl} {
+      //  bottom: -32%;
+      //}
+      //@media #{$_4xl} {
+      //  bottom: -39%;
+      //}
     }
     .overview-heading {
       position: absolute;

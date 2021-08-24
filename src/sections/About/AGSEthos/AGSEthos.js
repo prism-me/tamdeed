@@ -5,9 +5,9 @@ import bg_img_e from "../../../assets/images/about/AGS_E_bg.jpg"
 
 const AgsEthos = () => {
     return (
-        <Grid container className="info-tabs justify-content-center ethos-main">
+        <div className="info-tabs ethos-main">
             {/*<h3 className="InfoTitle">AGS` ETHOS</h3>*/}
-        <Grid container className="ethos_bg">
+        <div className="ethos_bg">
             <img alt={'#'} className={"ethos_bg"} src={bg_img_e} style={{
                 visibility: "hidden",
                 display:"inline-block"
@@ -15,7 +15,7 @@ const AgsEthos = () => {
             <h3 className="InfoTitle-Ethos">AGS` ETHOS</h3>
             <Grid container sm={12} className="d-flex w-100 justify-content-center align-items-center position-absolute">
                 <Card className={"cardStyle"}>
-                    <Card.Body className="card-body" style={{padding:"2.3rem"}}>
+                    <Card.Body className="card-body">
                         <Grid container className="card-cont">
                             <div className="cont-sep">
                                 <Grid item className={""}>
@@ -87,8 +87,8 @@ const AgsEthos = () => {
                     </Card.Body>
                 </Card>
             </Grid>
-        </Grid>
-        </Grid>
+        </div>
+        </div>
     );
 };
 

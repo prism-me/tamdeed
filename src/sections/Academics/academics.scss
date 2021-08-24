@@ -32,14 +32,16 @@
     display: flex;
     width: 90%;
     z-index: 1;
-    margin: 2rem 3rem;
+    margin: 0 3rem;
+    font-size: 25px;
     opacity: 0.9;
+    color: #000000;
     box-shadow: 0 4px 15px #BEBEBE;
     //-webkit-backdrop-filter: blur(15px);
     //backdrop-filter: blur(15px);
     border-radius: 200px;
     background: #ffffff !important;
-    padding: 0.7rem 2rem;
+    padding: 1rem 2rem;
     @media #{$sm} {
       display: none;
       margin-top: -1rem;
@@ -92,13 +94,141 @@
     }
   }
 
+  .small-calendar-view {
+    visibility: hidden;
+    @media #{$sm} {
+      visibility: visible;
+    }
+    .view-c-btn {
+      background: #1A2C52;
+      border: none;
+      color: #ffffff;
+      padding: 0.3rem 2.5rem;
+      border-radius: 60px;
+      @media #{$sm} {
+        padding: 0.6rem;
+        font-size: 12px;
+      }
+    }
+  }
+
 }
 
-.ac-bg.ethos_bg {
-  @media #{$sm} {
-    display: none;
+.ac-main {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 3rem;
+  @media #{$xxl} {
+    height: 700px;
+  }
+
+  .ac-bg {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-image: url("../../assets/images/academics/BG.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    @media #{$xxl} {
+      height: 900px;
+    }
+    @media #{$lg,$xl} {
+      height: 540px;
+    }
+    @media #{$sm} {
+      display: none;
+    }
+
+    .InfoTitle-Ethos {
+      margin-top: 20rem;
+      position: absolute;
+      margin-bottom: 2rem;
+      font-size: 25px;
+      text-transform: uppercase;
+      text-align: center;
+      font-weight: 500;
+      color: #000000;
+      @media #{$_3xl} {
+        margin-top: 16rem;
+      }
+      @media #{$_5xl} {
+        margin-top: 16rem;
+      }
+      @media #{$xxl}{
+        margin-top: 13rem;
+        width: 60%;
+      }
+      @media #{$xl}{
+        margin-top: 6rem;
+      }
+      @media #{$lg}{
+        margin-top: 6rem;
+      }
+      @media #{$sm,$md}{
+        margin-top: 6rem;
+      }
+    }
+
+    .cardStyle {
+      margin-top: 22rem;
+      width: 65%;
+      height: 350px;
+      box-shadow: 0 50px 100px rgba(0, 0, 0, 0.1);
+      border-radius: 50px;
+      padding: 2rem 4rem;
+      @media #{$_3xl} {
+        margin-top: 30rem;
+      }
+      @media #{$_5xl} {
+        margin-top: 33rem;
+      }
+      @media #{$xxl}{
+        margin-top: 22rem;
+        width: 65%;
+        height: 350px;
+      }
+      @media #{$xl}{
+        margin-top: 10rem;
+        width: 60%;
+      }
+      @media #{$lg}{
+        margin-top: 10rem;
+        width: 70%;
+      }
+      @media #{$sm,$md}{
+        margin-top: 9rem;
+        width: 95%;
+        padding: 2rem 2rem;
+      }
+
+      .card-body {
+        padding: 0;
+        display: flex;
+        align-items: center;
+        @media #{$_3xl} {
+          max-width: 100%;
+        }
+
+        .col {
+          text-align: center;
+          color: #000000;
+        }
+      }
+
+      .intro-title {
+        font-size: 23px;
+        color: #1A2C52;
+        text-align: center;
+        font-weight: 700;
+      }
+    }
   }
 }
+
 
 .sm-ac-cont {
   display: none;
@@ -115,44 +245,72 @@
     .b-para {
       text-align: justify;
       padding: 1rem 2rem;
+
+      p {
+        text-align: center;
+      }
     }
   }
 }
 
-.AgsSlider .curr-sec {
-  display: flex;
-  width: 100%;
-  padding: 1rem 2rem;
-  text-align: center;
+.AgsSlider {
+  justify-content: center;
 
-  @media #{$sm} {
-    text-align: justify;
-  }
-}
-
-.AgsSlider .curr-footer-text {
-  display: flex;
-  text-align: center
-}
-
-@media only screen and (min-width: 2401px) and (max-width: 13000px) {
-  .ethos_bg .cardStyle .card-body {
+  .curr-sec {
+    display: flex;
+    width: 100%;
+    padding: 1rem 2rem;
     text-align: center;
-    font-size: 3.7rem;
+    font-size: 18px;
+    font-family: "Optima nova LT Medium";
+    color: #000000;
+    @media #{$xxl} {
+      font-size: 18px;
+      width: 84%;
+    }
+    @media #{$sm} {
+      text-align: justify;
+    }
   }
-  .home-page.about-section .InfoTitle {
-    font-size: 3rem;
+
+  .curr-footer-text {
+    display: flex;
+    text-align: center;
+    color: #000000;
+    @media #{$xxl} {
+      width: 28%;
+    }
   }
-  .AgsSlider .curr-sec {
-    font-size: 3rem;
+
+  .divstyle.wc {
+    width: 420px;
   }
-  .AgsSlider .curr-footer-text {
-    font-size: 2rem;
-  }
-  .accreditation-paths .v-calendar-sec .txt-w {
-    font-size: 2rem;
+
+  .imgheight.ch {
+    height: 450px;
+    border-radius: 50px;
   }
 }
+
+
+//@media only screen and (min-width: 2401px) and (max-width: 13000px) {
+//  .ethos_bg .cardStyle .card-body {
+//    text-align: center;
+//    font-size: 3.7rem;
+//  }
+//  .home-page.about-section .InfoTitle {
+//    font-size: 3rem;
+//  }
+//  .AgsSlider .curr-sec {
+//    font-size: 3rem;
+//  }
+//  .AgsSlider .curr-footer-text {
+//    font-size: 2rem;
+//  }
+//  .accreditation-paths .v-calendar-sec .txt-w {
+//    font-size: 2rem;
+//  }
+//}
 
 .Ages.Academic {
   z-index: 1111;
@@ -189,24 +347,30 @@
     .card-holder {
       display: flex;
       flex-direction: column;
-      .card-head{
+
+      .card-head {
         display: flex;
-        p{
+
+        p {
           color: $bg_color;
           font-weight: 600;
           margin-bottom: 0;
         }
       }
-      .card-sec{
+
+      .card-sec {
         display: flex;
         width: 100%;
+        flex-wrap: wrap;
         margin: 1rem 0;
-        .circle-holder{
+
+        .circle-holder {
           display: flex;
           flex-direction: column;
           width: 140px;
           margin: 0 1rem;
-          ._circle{
+
+          ._circle {
             display: flex;
             border-radius: 50%;
             font-weight: bold;
@@ -217,29 +381,35 @@
             padding: 1rem;
             justify-content: center;
             align-items: center;
-            ._circle-inner{
+
+            ._circle-inner {
               display: flex;
               align-items: center;
               font-size: 3rem;
               font-family: "Optima nova LT Medium";
               font-weight: lighter;
-              ._circle-em{
+
+              ._circle-em {
                 font-size: 12px;
                 text-transform: uppercase;
               }
             }
-            ._circle-month{
+
+            ._circle-month {
               font-size: 16px;
               text-transform: uppercase;
             }
           }
-          ._circle.lg{
+
+          ._circle.lg {
             border-radius: 65px;
           }
-          ._circle-txt{
+
+          ._circle-txt {
             display: flex;
             margin: 0.4rem 0;
-            p{
+
+            p {
               font-size: 16px;
               color: $bg_color;
               margin-bottom: 0;
@@ -247,7 +417,8 @@
             }
           }
         }
-        .circle-holder.lg{
+
+        .circle-holder.lg {
           width: 200px;
         }
       }

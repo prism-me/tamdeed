@@ -13,7 +13,7 @@ const AcademicHeader = () => {
             <img alt={"#"} className="home-header position-absolute" style={{visibility:"hidden",display:"inline-block",width:"100%"}} src={header_bg}/>
             <Container>
                 <Row>
-                    <Col sm={5}>
+                    <Col sm={12} md={12} lg={5} xs={12}>
                         <div className="description-column">
                             <div className="header-logo-wrapper">
                                 <img src={logo} alt="AGS Logo" className="header-logo" />

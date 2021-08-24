@@ -1,6 +1,6 @@
 .home-page {
   .Enquiry-page {
-    padding-top: 5rem;
+    //padding-top: 5rem;
     @media #{$sm,$md,$lg} {
       padding-top: 2rem;
     }
@@ -56,13 +56,8 @@
       //  background: rgba($color: #000000, $alpha: 0.5);
       //}
       .description-column {
-        //display: flex;
-        //justify-content: center;
-        //align-items: center;
-        //position: absolute;
-        //margin-top: 5rem;
+        margin-top: 20%;
         .cardStyle{
-          margin-top: 20rem;
           width: 100%;
           box-shadow: 0 50px 100px rgba(0, 0, 0, 0.1);
           border-radius: 50px;

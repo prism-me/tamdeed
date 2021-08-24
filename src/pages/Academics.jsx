@@ -3,6 +3,7 @@ import AcademicHeader from "../sections/Academics/Headers/header";
 import Accreditation from "../sections/Academics/Accreditation/Accreditation";
 import InfoTabs from "../sections/Home/InfoTabs";
 import AcademicsCurriculum from "../sections/Academics/Curiculum/AcademicsCurriculum";
+import ACTabs from "../sections/Academics/ACTabs";
 
 export default class Academics extends Component {
 
@@ -11,7 +12,7 @@ export default class Academics extends Component {
             <div className="home-page about-section">
                 <AcademicHeader/>
                 <Accreditation/>
-                <InfoTabs />
+                <ACTabs />
                 <AcademicsCurriculum/>
             </div>
         );

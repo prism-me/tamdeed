@@ -194,9 +194,9 @@ function Enquiry() {
                                 <Col sm>
                                     <Card shadow style={{ borderRadius: "20px" }} className={"cardStyle"}>
                                         <Card.Body>
-                                            <h2 className={" intro-title"}>
+                                            <h4 className={" intro-title"}>
                                                 Request A Call Back
-                                            </h2>
+                                            </h4>
                                             <p className={"subTitle"}>
                                                 For more information about admissions and tours, request a call back
                                                 from our
@@ -235,9 +235,9 @@ function Enquiry() {
                                 <Col sm>
                                     <Card shadow style={{ borderRadius: "20px" }} className={"cardStyle"}>
                                         <Card.Body>
-                                            <h2 className={" intro-title"}>
+                                            <h4 className={" intro-title"}>
                                                 Book a School Tour
-                                            </h2>
+                                            </h4>
                                             <p className={"subTitle"}>
                                                 Book a tour with our Admissions team to visit American Gulf School
                                                 Sharjah,
@@ -300,9 +300,9 @@ function Enquiry() {
                         <Col sm>
                             <Card shadow style={{ borderRadius: "20px" }} className={"cardStyleMBL"}>
                                 <Card.Body>
-                                    <h2 className={" intro-title"}>
+                                    <h4 className={" intro-title"}>
                                         Request A Call Back
-                                    </h2>
+                                    </h4>
                                     <p className={"subTitle"}>
                                         For more information about admissions and tours, request a call back from our
                                         team by filling in the form below.
@@ -340,9 +340,9 @@ function Enquiry() {
                         <Col sm>
                             <Card shadow style={{ borderRadius: "20px" }} className={"cardStyleMBL"}>
                                 <Card.Body>
-                                    <h2 className={" intro-title"}>
+                                    <h4 className={" intro-title"}>
                                         Book a School Tour
-                                    </h2>
+                                    </h4>
                                     <p className={"subTitle"}>
                                         Book a tour with our Admissions team to visit American Gulf School Sharjah,
                                         located in Al Rahmaniya 4, Sharjah.

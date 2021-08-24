@@ -66,7 +66,7 @@ export default function InfoTabs() {
     const [isOpen5, setOpen5] = useState(false)
   return(
       <div className={"info-tabs"}>
-        <h3 className={"InfoTitle"}>EXPERIENCE THE AGS DIFFERENCE</h3>
+        <h2 className={"InfoTitle"}>EXPERIENCE THE AGS DIFFERENCE</h2>
         <Carousel
             swipeable={false}
             draggable={false}

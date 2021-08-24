@@ -30,9 +30,9 @@ function Inclusion() {
                             {/*<img src={img1} alt="" className={"img-fluid InclusionImg"}/>*/}
                         </Col>
                         <Col sm md lg >
-                            <h3 className="title">
+                            <h2 className="title">
                                 INCLUSION
-                            </h3>
+                            </h2>
                             <p className={"subTitle"}>
                                 American Gulf School is an equal opportunities school and we
                                 strongly believe in equality and diversity. We welcome learners

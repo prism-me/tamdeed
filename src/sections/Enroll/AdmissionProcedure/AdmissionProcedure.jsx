@@ -27,9 +27,9 @@ function AdmissionProcedure (props) {
     }
     return (
         <div className="AdmissionProcedure" id={"Admissions"}>
-            <h1 className="Title">
+            <h2 className="Title">
                 ADMISSIONS PROCEDURE
-            </h1>
+            </h2>
             <Container>
                 <div className={classes.root}>
                             <Accordion className={"accordianStyle"}>

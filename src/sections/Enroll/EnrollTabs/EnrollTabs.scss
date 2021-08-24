@@ -8,23 +8,22 @@
     border: 1px solid $bg-color;
     border-radius: 100px;
     color: $primary-color;
-    width: 250px;
-    font-size: 18px;
     font-weight: 500;
+    width: 208px;
+    font-size: 16px;
+    margin: 0.5rem;
     &:focus , &.active , &:hover{
       background: $bg-color;
       color: $white;
     }
     @media #{$lg} {
-      width: 190px;
-      font-size: 15px;
+      width: 154px;
+      font-size: 14px;
     }
   }
   .buttons-flex {
-    display: -webkit-flex;
-    display: flex;
-    -webkit-justify-content: space-between;
-    justify-content: space-between;
+    display: block;
+    justify-content: space-around;
   }
 }
 .EnrollTabTitle{

@@ -119,9 +119,9 @@ function OurPrograms() {
                         <Container>
                             <Card shadow style={{borderRadius: "20px"}} className={"cardStyle"}>
                                 <Card.Body>
-                                    <h2 className={" intro-title"}>
+                                    <h4 className={" intro-title"}>
                                         Join the waitlist for our 2022 programs.
-                                    </h2>
+                                    </h4>
                                     <Form onSubmit={handleSubmit}>
                                         <Form.Group className="mb-3" controlId="formGroupName">
                                             <Form.Control name={"name"} value={name} onChange={handleChange} type="text"
@@ -152,9 +152,9 @@ function OurPrograms() {
                 <Container>
                     <Card shadow style={{borderRadius: "20px"}} className={"cardStyleMBL"}>
                         <Card.Body>
-                            <h2 className={" intro-title"}>
+                            <h4 className={" intro-title"}>
                                 Join the waitlist for our 2022 programs.
-                            </h2>
+                            </h4>
                             <Form onSubmit={handleSubmit}>
                                 <Form.Group className="mb-3" controlId="formGroupName">
                                     <Form.Control name={"name"} value={name} onChange={handleChange} type="text"

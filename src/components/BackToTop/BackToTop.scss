@@ -1,11 +1,18 @@
 .back-to-top {
-  display: flex;
-  justify-content: flex-end;
-  padding-top: 1rem;
-  padding-bottom: 2rem;
-  padding-right: 4rem;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    animation: fadeIn 700ms ease-in-out 1s both;
+    cursor: pointer;
+    z-index: 999999;
+  //display: flex;
+  //justify-content: flex-end;
+  //padding-top: 1rem;
+  //padding-bottom: 2rem;
+  //padding-right: 4rem;
   @media #{$sm} {
-    padding-bottom: 1rem;
+    bottom: 4rem;
+    right: 0.5rem;
   }
   .outer-circle {
     cursor: pointer;

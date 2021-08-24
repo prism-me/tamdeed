@@ -1,7 +1,7 @@
 .home-page {
   .Mentors {
     padding-top: 3rem;
-    @media #{$sm} {
+    @media #{$sm,$md} {
       padding-top: 2rem;
     }
     .InfoTitle {
@@ -10,9 +10,19 @@
       text-transform: uppercase;
       text-align: center;
       font-weight: 500;
+      position: absolute;
+      left: 42%;
+      bottom: -185%;
       color: $primary-color;
-      @media #{$sm} {
+      @media #{$sm,$md} {
         font-size: 22px;
+        position: static;
+        left: 0;
+        bottom: 0;
+      }
+      @media #{$lg} {
+        left: 39%;
+        bottom: -31%
       }
     }
     .overview-heading {
@@ -91,8 +101,8 @@
     //}
     .divstyle {
       padding: 40px 5px;
-      @media #{$sm} {
-          padding: 30px 0;
+      @media #{$sm ,$md} {
+        padding: 0 0 30px 0;
       }
     }
   }

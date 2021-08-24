@@ -7,10 +7,10 @@ const AcademicHeader = () => {
     return (
 
         <div
-            className="home-header wave-container ac-header"
+            className="home-header"
             style={{ backgroundImage: `url(${header_bg})`}}
         >
-            <img alt={"#"} className="home-header position-absolute" style={{visibility:"hidden",display:"inline-block",width:"100%"}} src={header_bg}/>
+            {/*<img alt={"#"} className="home-header position-absolute" style={{visibility:"hidden",display:"inline-block",width:"100%"}} src={header_bg}/>*/}
             <Container>
                 <Row>
                     <Col sm={12} md={12} lg={5} xs={12}>
@@ -31,12 +31,9 @@ const AcademicHeader = () => {
                         </div>
                     </Col>
                     <Col sm={{ span: 6}} className={"iconSpace"}>
-
                     </Col>
                 </Row>
             </Container>
-            <div className={"waves"}>
-            </div>
         </div>
 
     );

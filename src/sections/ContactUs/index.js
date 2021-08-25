@@ -7,7 +7,7 @@ import fb_icon from "../../assets/images/contact/Facebook.png";
 import insta_icon from "../../assets/images/contact/Instagram.png";
 import twitter_icon from "../../assets/images/contact/Twitter.png";
 import bg_img from "../../assets/images/contact/Rectangle 235.png";
-import $ from "jquery";
+// import $ from "jquery";
 import {STRINGS} from "../../utils/base";
 import {API} from "../../http/API";
 import SnackBar from "../../components/SnackBar/SnackBar";
@@ -28,12 +28,12 @@ const Contact = () => {
     const [init, setInit] = useState(defaultState);
     let {name, email, phone, _message, isRequestPending, isOpen, message, variant} = init;
 
-    useEffect(() => {
-        $(".back-to-top").css("display", "none")
-        return () => {
-            $(".back-to-top").css("display", "flex")
-        }
-    }, []);
+    // useEffect(() => {
+        // $(".back-to-top").css("display", "none")
+        // return () => {
+        //     $(".back-to-top").css("display", "flex")
+        // }
+    // }, []);
 
     const validation = (obj) => {
         let valid = {error: true, message: ""}

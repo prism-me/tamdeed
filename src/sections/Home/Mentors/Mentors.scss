@@ -12,7 +12,7 @@
       font-weight: 500;
       position: absolute;
       left: 42%;
-      bottom: -185%;
+      bottom: -192%;
       color: $primary-color;
       @media #{$sm,$md} {
         font-size: 22px;
@@ -22,7 +22,7 @@
       }
       @media #{$lg} {
         left: 39%;
-        bottom: -31%
+        bottom: -34%;
       }
       //@media #{$_2xl} {
       //  bottom: -32%;

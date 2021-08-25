@@ -11,7 +11,7 @@
     font-weight: 500;
     position: absolute;
     left: 35%;
-    bottom: -469%;
+    bottom: -482%;
     z-index: 999;
     color: $primary-color;
     @media #{$sm,$md} {
@@ -23,7 +23,7 @@
     }
     @media #{$lg} {
       left: 30%;
-      bottom: -169%;
+      bottom: -176%;
     }
     //@media #{$_2xl} {
     //  bottom: -172%;

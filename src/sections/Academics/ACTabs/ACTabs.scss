@@ -98,12 +98,6 @@
       }
     }
 
-    .SpacingItem{
-      &:hover{
-        z-index: 9999 !important;
-      }
-    }
-
     .imgheight{
       position: relative;
       background-repeat: no-repeat;
@@ -128,45 +122,24 @@
       }
     }
     .divstyle {
-      position: relative;
-      min-width: 300px;
-      height: auto;
-      //overflow: hidden;
-      border-radius: 15px;
-      margin: 0 auto;
-      padding: 40px 5px;
       transition: .5s;
-      @media #{$sm} {
-        padding: 0 0 30px 0;
-      }
     }
     .divstyle:hover {
       transform:scale(1.3);
-      z-index: 9999;
     }
-    .react-player{
-      height: 40vh !important;
-      border-radius: 30px;
+    .owl-item{
+      padding: 40px 0;
+      &:hover{
+        z-index: 9999 !important;
+        padding: 40px 0;
+      }
+      @media #{$sm} {
+        padding: 0;
+      }
     }
-    .react-player__preview{
-      border-radius: 30px;
+    .owl-dots {
+      display: block !important;
     }
-    //.react-multi-carousel-dot button {
-    //  //border-radius: 0 100% 0% 100%;
-    //  border-radius: 0;
-    //  padding: 0 0.5rem;
-    //  box-shadow: none;
-    //  border-width: 0;
-    //  width: calc(20px + 40px);
-    //  border-style: none;
-    //  border-color: transparent;
-    //  margin-right: 0;
-    //  cursor: pointer;
-    //  border: none;
-    //}
-    //.react-multi-carousel-dot--active button {
-    //  background: $bg-color;
-    //}
   }
 }
 

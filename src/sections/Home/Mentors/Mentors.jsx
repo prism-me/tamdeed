@@ -1,7 +1,4 @@
 import React, {useState} from "react";
-import PlayArrowIcon from '@material-ui/icons/PlayArrow';
-import ModalVideo from 'react-modal-video'
-import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import mentor from "../../../assets/images/agsMentors/mentor.png";
 import mentor4 from "../../../assets/images/agsMentors/mentor2.png";

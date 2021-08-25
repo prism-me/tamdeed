@@ -8,7 +8,7 @@ import p_school from "../../../assets/images/academics/p_school.jpg";
 const AcademicsCurriculum = () => {
 
     return (
-        <div className={"AgsSlider"}>
+        <div className={"Academics"}>
             <h3 className={"InfoTitle"}>OUR CURRICULUM</h3>
             <Grid container className="d-flex w-100 justify-content-center">
                 <Grid item className="curr-sec">

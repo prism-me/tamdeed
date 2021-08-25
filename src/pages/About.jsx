@@ -6,6 +6,7 @@ import PrincipleMessage from "../sections/About/PrincipleMessage/PrincipleMessag
 import AgsEthos from "../sections/About/AGSEthos/AGSEthos";
 import AGSHealth from "../sections/About/AGSHealth/AGSHealth";
 import Mentors from "../sections/Home/Mentors";
+import PrincipalSlider from "../sections/About/PrincipalSlider";
 
 export default class About extends Component {
 
@@ -17,7 +18,7 @@ export default class About extends Component {
                 <PrincipleMessage/>
                 <AgsEthos/>
                 <AGSHealth/>
-                <Mentors />
+                <PrincipalSlider />
             </div>
         );
     }

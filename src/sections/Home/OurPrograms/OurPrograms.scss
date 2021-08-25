@@ -31,9 +31,12 @@
       @media #{$md} {
         background-size: cover;
       }
-      // @media #{$xl} {
-      //   height: 80vh ;
+      // @media #{$_2xl} {
+      //   height: 50vh ;
       // }
+      //@media #{$_4xl} {
+      //  height: 50vh ;
+      //}
       @media #{$xxl} {
         height: 80vh;
       }

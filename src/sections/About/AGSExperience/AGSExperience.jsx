@@ -4,7 +4,7 @@ import exp_bg_img from "../../../assets/images/about/exp_bg_img.jpg";
 const AgsExperience = () => {
     return (
         <div className="ex-paths">
-            <h3 className="InfoTitle">ABOUT THE AGS EXPERIENCE</h3>
+            <h2 className="InfoTitle">ABOUT THE AGS EXPERIENCE</h2>
             <div className="ex-content">
                 <div className="ex-img-hld" >
                     <img alt={"#"} src={exp_bg_img}

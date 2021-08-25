@@ -21,9 +21,9 @@ const AgsEthos = () => {
                                 <Grid item className={""}>
                                     <Grid container>
                                         <Grid item xs={12} sm={12} md={12} lg={12} className={"d-flex align-items-center"}>
-                                            <h2 className={"intro-title"}>
+                                            <h4 className={"intro-title"}>
                                                 OUR VISION
-                                            </h2>
+                                            </h4>
                                         </Grid>
                                         <Grid item xs={12} sm={12} md={12} lg={12}>
                                             <p className={"subtitle"}>
@@ -37,9 +37,9 @@ const AgsEthos = () => {
                                 <Grid item className={""}>
                                     <Grid container>
                                         <Grid item xs={12} sm={12} md={12} lg={12} className={"d-flex align-items-center"}>
-                                            <h2 className={"intro-title"}>
+                                            <h4 className={"intro-title"}>
                                                 OUR MISSION
-                                            </h2>
+                                            </h4>
                                         </Grid>
                                         <Grid >
                                             <p className={"subtitle"}>
@@ -57,23 +57,23 @@ const AgsEthos = () => {
                             <Grid item className={""}>
                                 <Grid container>
                                     <Grid item xs={12} sm={12} md={12} lg={12} className={"d-flex align-items-center"}>
-                                        <h2 className={"intro-title"}>
+                                        <h4 className={"intro-title"}>
                                             OUR MOTTO
-                                        </h2>
+                                        </h4>
                                     </Grid>
-                                    <Col xs sm md lg>
+                                    <Grid item xs sm md lg>
                                         <p className={"subtitle"}>
                                             Aspire, Grow, Succeed
                                         </p>
-                                    </Col>
+                                    </Grid>
                                 </Grid>
                             </Grid>
                             <Grid item className={""}>
                                 <Grid container>
                                     <Grid item xs={12} sm={12} md={12} lg={12} className={"d-flex align-items-center"}>
-                                        <h2 className={"intro-title"}>
+                                        <h4 className={"intro-title"}>
                                             OUR VALUES
-                                        </h2>
+                                        </h4>
                                     </Grid>
                                     <Grid >
                                         <p className={"subtitle"}>

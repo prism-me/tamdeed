@@ -1,5 +1,5 @@
 .home-page {
-  .Mentors {
+  .PrincipalSlider {
     padding-top: 3rem;
     @media #{$sm,$md} {
       padding-top: 2rem;
@@ -10,26 +10,10 @@
       text-transform: uppercase;
       text-align: center;
       font-weight: 500;
-      position: absolute;
-      left: 42%;
-      bottom: -185%;
       color: $primary-color;
       @media #{$sm,$md} {
         font-size: 22px;
-        position: static;
-        left: 0;
-        bottom: 0;
       }
-      @media #{$lg} {
-        left: 39%;
-        bottom: -31%
-      }
-      //@media #{$_2xl} {
-      //  bottom: -32%;
-      //}
-      //@media #{$_4xl} {
-      //  bottom: -39%;
-      //}
     }
     .overview-heading {
       position: absolute;

@@ -7,25 +7,11 @@ import mentor from "../../../assets/images/agsMentors/mentor.png";
 import mentor4 from "../../../assets/images/agsMentors/mentor2.png";
 import mentor2 from "../../../assets/images/agsMentors/mentor3.png";
 import mentor3 from "../../../assets/images/agsMentors/mentor4.png";
+import OwlCarousel from "react-owl-carousel";
+import "owl.carousel/dist/assets/owl.carousel.css";
+import "owl.carousel/dist/assets/owl.theme.default.css";
 
 export default function Mentors() {
-    const responsive = {
-        desktop: {
-            breakpoint: { max: 3000, min: 1024 },
-            items: 4,
-            slidesToSlide: 4 // optional, default to 1.
-        },
-        tablet: {
-            breakpoint: { max: 1024, min: 464 },
-            items: 2,
-            slidesToSlide: 2 // optional, default to 1.
-        },
-        mobile: {
-            breakpoint: { max: 464, min: 0 },
-            items: 1,
-            slidesToSlide: 1 // optional, default to 1.
-        }
-    };
     const slidesData = [
         {
             thumbnail: mentor,
@@ -58,28 +44,32 @@ export default function Mentors() {
             Subtitle: "Nunc eu massa",
         },
     ];
-    const [isOpen, setOpen] = useState(false)
+    const options = {
+        loop: true,
+        margin: 10,
+        items: 4,
+        autoplay: true,
+        dots:true,
+        responsive:{
+            0: {
+                items: 1,
+            },
+            450: {
+                items: 2,
+            },
+            600: {
+                items: 3,
+            },
+            1000: {
+                items: 4,
+            },
+        }
+    };
     return(
         <div className={"Mentors"}>
             <h3 className={"InfoTitle"}>MEET THE MENTORS</h3>
-            <Carousel
-                swipeable={false}
-                draggable={false}
-                arrows={false}
-                showDots={true}
-                responsive={responsive}
-                ssr={true} // means to render carousel on server-side.
-                infinite={true}
-                autoPlay={true}
-                autoPlaySpeed={1000}
-                keyBoardControl={true}
-                customTransition="all .5"
-                transitionDuration={500}
-                containerClass="carousel-container"
-                dotListClass="custom-dot-list-style"
-                itemClass="carousel-item-padding-40-px"
-            >
-                {
+            <OwlCarousel className="owl-theme" {...options}>
+            {
                     slidesData.map((slides, index) => (
                         <div className={"divstyle"}>
                             <div className="imgheight"
@@ -95,7 +85,7 @@ export default function Mentors() {
                         </div>
                     ))
                 }
-            </Carousel>
+            </OwlCarousel>
         </div>
     )
 }

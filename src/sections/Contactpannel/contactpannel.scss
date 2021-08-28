@@ -1,0 +1,21 @@
+.contact-pannel-main {
+  position: fixed;
+    top: 25%;
+    right:0px;
+    transform: rotate(-90deg);
+    padding:10px;
+    z-index: 9999999;
+    margin-right: -85px;
+
+  .contact-pannel-btn{
+    background:none;
+    border: 2px solid #CDB786;
+    color: #1A2C52;
+    padding: 0 3rem;
+    border-radius: 60px;
+    padding: 10px;
+    width: 200px;
+    box-shadow: 0px 0px 15px #ccc;
+  }
+
+}

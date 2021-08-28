@@ -13,6 +13,8 @@ const StudentCare = lazy(() => import('../pages/StudentCare'));
 const Enroll = lazy(() => import('../pages/Enroll'));
 const FAQMain = lazy(() => import('../pages/FAQMain'));
 const OnlineForm = lazy(() => import('../pages/OnlineForm'));
+const Carrers = lazy(() => import('../pages/Careers'));
+const Primaryschool = lazy(() => import('../pages/Primaryschool'));
 
 
 export const routes = [
@@ -83,6 +85,20 @@ export const routes = [
     name: "OnlineForm",
     path: "/OnlineForm",
     component: OnlineForm,
+    isPrivate: false,
+    exact: true,
+  },
+  {
+    name: "Carrers",
+    path: `${STRINGS.ROUTES.CAREERS}`,
+    component: Carrers,
+    isPrivate: false,
+    exact: true,
+  },
+  {
+    name: "Primary-school",
+    path: `${STRINGS.ROUTES.PRIMARYSCHOOL}`,
+    component: Primaryschool,
     isPrivate: false,
     exact: true,
   },

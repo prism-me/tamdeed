@@ -1,0 +1,70 @@
+.home-page{
+  .carrers-join{
+    margin-top: 2rem;
+    @media #{$sm,$md,$xsm,$tiny} {
+      margin-top: 0rem;
+    }
+    @media #{$sm,$md} {
+      padding-top: 0rem;
+    }
+  }
+  .position-main{
+    padding-top: 0px;
+  }
+  .school-main{
+    margin-top: 0px;
+  }
+  .schoolbtn{
+    background: #ffffff;
+    border: 1px solid #1A2C52;
+    border-radius: 100px;
+    color: #FFFFFF;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    background: #1A2C52;
+    @media #{$sm,$md,$xsm,$tiny} {
+      width: auto;
+    }
+  }
+  .school-main .ac-bg .card-body{
+    display: unset;
+  }
+  .school-main .ac-bg .cardStyle{
+    width: 80%;
+    height: auto;
+    text-align: center;
+    margin: 18rem auto;
+    @media #{$sm,$md,$xsm,$tiny} {
+      padding: 2rem 0;
+      width: 100%;
+      margin: 14rem auto auto auto;
+    }
+  }
+  .school-main .ac-bg .cardStyle .subtitle{
+    font-size: 25px;
+    color:#1A2C52;
+    @media #{$sm,$md,$xsm,$tiny} {
+      font-size: 18px;
+    }
+  }
+  .school-main .ac-bg{
+    background-image: url("./../../../assets/images/agsbackgrounds/backgroundCurve.png");
+    height: 750px;
+    @media #{$sm,$md,$xsm,$tiny} {
+      height: 600px;
+      
+    }
+  }
+  .school-main .ac-bg .InfoTitle-Ethos{
+    margin-top: 6rem;
+  }
+  .m-row{
+    margin: 0;
+    .cardStyle{
+      margin: 10px 0px;
+      text-align: center;
+    }
+  }
+  
+}

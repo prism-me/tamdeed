@@ -1,0 +1,15 @@
+.fixed_phone {
+    padding: 5px 20px;
+    box-shadow: 1px 1px 5px 1px;
+    border-radius: 24px;
+    color: #ccc !important;
+    position: fixed;
+    right: -55px;
+    top: 40%;
+    transform: rotate(-90deg);
+    z-index: 999;
+}
+
+a:hover {
+    text-decoration: none;
+}

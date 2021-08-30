@@ -10,9 +10,13 @@ const Academics = lazy(() => import('../pages/Academics'));
 const AgsPortal = lazy(() => import('../pages/AGSPortal'));
 const ContactUs = lazy(() => import('../pages/ContactUs'));
 const StudentCare = lazy(() => import('../pages/StudentCare'));
+const MiddleSchool = lazy(() => import('../pages/MiddleSchool'));
+const KinderGarten = lazy(() => import('../pages/KinderGarten'));
 const Enroll = lazy(() => import('../pages/Enroll'));
 const FAQMain = lazy(() => import('../pages/FAQMain'));
 const OnlineForm = lazy(() => import('../pages/OnlineForm'));
+const Carrers = lazy(() => import('../pages/Careers'));
+const Primaryschool = lazy(() => import('../pages/Primaryschool'));
 
 
 export const routes = [
@@ -83,6 +87,30 @@ export const routes = [
     name: "OnlineForm",
     path: "/OnlineForm",
     component: OnlineForm,
+    isPrivate: false,
+    exact: true,
+  },
+  {
+
+    name: "Carrers",
+    path: `${STRINGS.ROUTES.CAREERS}`,
+    component: Carrers,
+
+    name: "MiddleSchool",
+    path: "/Middle-school",
+    component: MiddleSchool,
+    isPrivate: false,
+    exact: true,
+  },
+  {
+
+    name: "Primary-school",
+    path: `${STRINGS.ROUTES.PRIMARYSCHOOL}`,
+    component: Primaryschool,
+
+    name: "KinderGarten",
+    path: "/KinderGarten",
+    component: KinderGarten,
     isPrivate: false,
     exact: true,
   },

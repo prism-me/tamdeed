@@ -1,12 +1,16 @@
 import React, { useState } from "react";
-import {Card, Col, Container, Row} from "react-bootstrap";
+import { Card, Col, Container, Row } from "react-bootstrap";
 import header_bg from "./../../../assets/images/agsbackgrounds/backgroundCurve.png";
-import {Hidden} from "@material-ui/core";
+import { Hidden } from "@material-ui/core";
+import { withNamespaces } from 'react-i18next';
 
-function Curriculum(props) {
+function Curriculum({ props, t }) {
     return (
-        <div  className="Curriculum-page">
-            <h3 className={"Title"}>CURRICULUM COURSE AND SYLLABUS</h3>
+        <div className="Curriculum-page">
+            <h3 className={"Title"}>
+                {t('CurriculumTitle')}
+                {/* CURRICULUM COURSE AND SYLLABUS */}
+            </h3>
             <Hidden smDown>
                 <div
                     className="Curriculum"
@@ -23,12 +27,17 @@ function Curriculum(props) {
                                     <Row>
                                         <Col xs={12} sm={3} md={12} lg={3} className={"d-flex justify-content-center align-items-center"}>
                                             <h4 className={" intro-title"}>
-                                                OUR <br/> CURRICULUM
+                                                {t('CurriculumsubTitle1')}
+                                                {/* OUR */}
+                                                <br />
+                                                {t('CurriculumsubTitle2')}
+                                                {/* CURRICULUM */}
                                             </h4>
                                         </Col>
                                         <Col xs sm md lg>
                                             <p className={"subtitle"}>
-                                                The school curriculum is project-based, and student centered. It
+                                                {t('Curriculumdescription')}
+                                                {/* The school curriculum is project-based, and student centered. It
                                                 encourages,
                                                 requires, and builds critical thinking, driven by
                                                 inquiry combined with both
@@ -42,9 +51,12 @@ function Curriculum(props) {
                                                 and Design Labs, gives our learners the practice and
                                                 experience to apply their
                                                 knowledge and skills they are being
-                                                taught to succeed within the 21st century.
+                                                taught to succeed within the 21st century. */}
                                             </p>
-                                            <button className={"viewButton"}>View in detail ></button>
+                                            <button className={"viewButton"}>
+                                                {t('CurriculumButton')}
+                                                {/* View in detail > */}
+                                            </button>
                                         </Col>
                                     </Row>
                                 </Card.Body>
@@ -60,12 +72,17 @@ function Curriculum(props) {
                             <Row>
                                 <Col xs={12} sm={3} md={12} lg={3} className={"d-flex justify-content-center align-items-center"}>
                                     <h4 className={" intro-title"}>
-                                        OUR <br/> CURRICULUM
+                                        {t('CurriculumsubTitle1')}
+                                        {/* OUR  */}
+                                        <br />
+                                        {t('CurriculumsubTitle2')}
+                                        {/* CURRICULUM */}
                                     </h4>
                                 </Col>
                                 <Col xs sm md lg>
                                     <p className={"subtitle"}>
-                                        The school curriculum is project-based, and student centered. It
+                                        {t('Curriculumdescription')}
+                                        {/* The school curriculum is project-based, and student centered. It
                                         encourages,
                                         requires, and builds critical thinking, driven by
                                         inquiry combined with both
@@ -79,9 +96,12 @@ function Curriculum(props) {
                                         and Design Labs, gives our learners the practice and
                                         experience to apply their
                                         knowledge and skills they are being
-                                        taught to succeed within the 21st century.
+                                        taught to succeed within the 21st century. */}
                                     </p>
-                                    <button className={"viewButton"}>View in detail ></button>
+                                    <button className={"viewButton"}>
+                                        {t('CurriculumButton')}
+                                        {/* View in detail > */}
+                                    </button>
                                 </Col>
                             </Row>
                         </Card.Body>
@@ -92,4 +112,4 @@ function Curriculum(props) {
     );
 }
 
-export default Curriculum;
+export default withNamespaces()(Curriculum);

@@ -7,7 +7,7 @@ import Navigation from "./navigator/Navigation";
 import ScrollToTop from "./utils/ScrollToTop";
 import { Suspense } from "react";
 
-function App() {
+function App({ t }) {
   return (
     <BrowserRouter>
       <Suspense fallback={<p>Loading...</p>}>

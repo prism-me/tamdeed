@@ -6,12 +6,20 @@ import SimpleReactLightbox from "simple-react-lightbox";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import './i18n';
+import { Provider } from "react-redux";
+import { persistor, store } from "./store";
+import { PersistGate } from 'redux-persist/integration/react'
 
 ReactDOM.render(
   <React.StrictMode>
-    <SimpleReactLightbox>
-      <App />
-    </SimpleReactLightbox>
+    <Provider store={store}>
+      <PersistGate persistor={persistor} loading={null}>
+        <SimpleReactLightbox>
+          <App />
+        </SimpleReactLightbox>
+      </PersistGate>
+    </Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );

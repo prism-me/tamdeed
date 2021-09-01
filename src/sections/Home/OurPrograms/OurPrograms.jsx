@@ -1,11 +1,12 @@
-import React, {useState} from "react";
-import {Card, Container, Form} from "react-bootstrap";
+import React, { useState } from "react";
+import { Card, Container, Form } from "react-bootstrap";
 import header_bg from "../../../assets/images/agsbackgrounds/image1.png";
 import Hidden from "@material-ui/core/Hidden";
 import Spinner from "../../../components/Spinner/Spinner";
-import {API} from "../../../http/API";
-import {STRINGS} from "../../../utils/base";
+import { API } from "../../../http/API";
+import { STRINGS } from "../../../utils/base";
 import SnackBar from "../../../components/SnackBar/SnackBar";
+import { withNamespaces } from 'react-i18next';
 
 const defaultState = {
     isRequestPending: false,
@@ -16,13 +17,13 @@ const defaultState = {
     email: ''
 }
 
-function OurPrograms() {
+function OurPrograms({ t }) {
 
     const [init, setInit] = useState(defaultState);
-    let {name, email, isRequestPending, isOpen, message, variant} = init;
+    let { name, email, isRequestPending, isOpen, message, variant } = init;
 
     const validation = (obj) => {
-        let valid = {error: true, message: ""}
+        let valid = { error: true, message: "" }
         let emailRegex = STRINGS.REGEX.EMAIL;
 
         if (obj.email === "") {
@@ -109,7 +110,7 @@ function OurPrograms() {
             <Hidden smDown>
                 <div
                     className="programs"
-                    style={{backgroundImage: `url(${header_bg})`}}
+                    style={{ backgroundImage: `url(${header_bg})` }}
                 >
                     {/*<div className="op-div">*/}
                     {/*</div>*/}
@@ -117,27 +118,31 @@ function OurPrograms() {
                     {/*</div>*/}
                     <div className="description-column">
                         <Container>
-                            <Card shadow style={{borderRadius: "20px"}} className={"cardStyle"}>
+                            <Card shadow style={{ borderRadius: "20px" }} className={"cardStyle"}>
                                 <Card.Body>
                                     <h4 className={" intro-title"}>
-                                        Join the waitlist for our 2022 programs.
+                                        {t('waitlistTitle')}
+                                        {/* Join the waitlist for our 2022 programs. */}
                                     </h4>
                                     <Form onSubmit={handleSubmit}>
                                         <Form.Group className="mb-3" controlId="formGroupName">
                                             <Form.Control name={"name"} value={name} onChange={handleChange} type="text"
-                                                          placeholder="Enter your name"
-                                                          className={"formFields"}/>
+                                                placeholder={t('waitlistName')}
+                                                className={"formFields"} />
                                         </Form.Group>
                                         <Form.Group className="mb-3" controlId="formGroupEmail">
                                             <Form.Control name={"email"} value={email} onChange={handleChange}
-                                                          type="text" placeholder="Enter your email address"
-                                                          className={"formFields"}/>
+                                                type="text" placeholder={t('waitlistAddress')}
+                                                className={"formFields"} />
                                         </Form.Group>
                                         <center>
                                             {
                                                 !isRequestPending ?
-                                                    <button className={"enroll"}>Enroll</button> :
-                                                    <Spinner color1={"#1a2c52"} size={"sm"}/>
+                                                    <button className={"enroll"}>
+                                                        {t('waitlistEnroll')}
+                                                        {/* Enroll */}
+                                                    </button> :
+                                                    <Spinner color1={"#1a2c52"} size={"sm"} />
                                             }
 
                                         </center>
@@ -150,27 +155,28 @@ function OurPrograms() {
             </Hidden>
             <Hidden smUp>
                 <Container>
-                    <Card shadow style={{borderRadius: "20px"}} className={"cardStyleMBL"}>
+                    <Card shadow style={{ borderRadius: "20px" }} className={"cardStyleMBL"}>
                         <Card.Body>
                             <h4 className={" intro-title"}>
-                                Join the waitlist for our 2022 programs.
+                                {t('waitlistTitle')}
+                                {/* Join the waitlist for our 2022 programs. */}
                             </h4>
                             <Form onSubmit={handleSubmit}>
                                 <Form.Group className="mb-3" controlId="formGroupName">
                                     <Form.Control name={"name"} value={name} onChange={handleChange} type="text"
-                                                  placeholder="Enter your name"
-                                                  className={"formFields"}/>
+                                        placeholder="Enter your name"
+                                        className={"formFields"} />
                                 </Form.Group>
                                 <Form.Group className="mb-3" controlId="formGroupEmail">
                                     <Form.Control name={"email"} value={email} onChange={handleChange}
-                                                  type="text" placeholder="Enter your email address"
-                                                  className={"formFields"}/>
+                                        type="text" placeholder="Enter your email address"
+                                        className={"formFields"} />
                                 </Form.Group>
                                 <center>
                                     {
                                         !isRequestPending ?
                                             <button className={"enroll"}>Enroll</button> :
-                                            <Spinner color1={"#1a2c52"} size={"sm"}/>
+                                            <Spinner color1={"#1a2c52"} size={"sm"} />
                                     }
 
                                 </center>
@@ -183,4 +189,4 @@ function OurPrograms() {
     );
 }
 
-export default OurPrograms;
+export default withNamespaces()(OurPrograms);

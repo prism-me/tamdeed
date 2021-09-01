@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "react-multi-carousel/lib/styles.css";
 import mentor from "../../../assets/images/agsMentors/mentor.png";
 import mentor4 from "../../../assets/images/agsMentors/mentor2.png";
@@ -7,8 +7,9 @@ import mentor3 from "../../../assets/images/agsMentors/mentor4.png";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
+import { withNamespaces } from 'react-i18next';
 
-export default function Mentors() {
+function Mentors({ t }) {
     const slidesData = [
         {
             thumbnail: mentor,
@@ -46,8 +47,8 @@ export default function Mentors() {
         margin: 10,
         items: 4,
         autoplay: true,
-        dots:true,
-        responsive:{
+        dots: true,
+        responsive: {
             0: {
                 items: 1,
             },
@@ -62,19 +63,22 @@ export default function Mentors() {
             },
         }
     };
-    return(
+    return (
         <div className={"Mentors"}>
-            <h3 className={"InfoTitle"}>MEET THE MENTORS</h3>
+            <h3 className={"InfoTitle"}>
+                {t('MentorsTitle')}
+                {/* MEET THE MENTORS */}
+            </h3>
             <OwlCarousel className="owl-theme" {...options}>
-            {
+                {
                     slidesData.map((slides, index) => (
                         <div className={"divstyle"}>
                             <div className="imgheight"
-                                 style={{ backgroundImage: `url(${slides.thumbnail})` }}
+                                style={{ backgroundImage: `url(${slides.thumbnail})` }}
                             >
-                                    <h5 className={"overview-heading"}>
-                                        {slides.title}
-                                    </h5>
+                                <h5 className={"overview-heading"}>
+                                    {slides.title}
+                                </h5>
                                 <p className={"subTitle"}>
                                     {slides.Subtitle}
                                 </p>
@@ -86,3 +90,5 @@ export default function Mentors() {
         </div>
     )
 }
+
+export default withNamespaces()(Mentors);

@@ -6,9 +6,9 @@ export default class Primaryschool extends Component {
 
   render() {
     return (
-      <div className="home-page TabPanel">
-          <Contactpannel/>
-          <Schoolinclusion />
+      <div className="home-page">
+        <Contactpannel />
+        <Schoolinclusion />
       </div>
     );
   }

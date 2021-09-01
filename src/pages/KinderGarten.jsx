@@ -7,7 +7,7 @@ export default class KinderGarten extends Component {
         return (
             <div className="home-page">
                 <KinderGartenSection />
-                <PhoneFixedSection />
+                {/* <PhoneFixedSection /> */}
             </div>
         );
     }

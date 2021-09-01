@@ -7,7 +7,7 @@ export default class MiddleSchool extends Component {
         return (
             <div className="home-page">
                 <MiddleSchoolSection />
-                <PhoneFixedSection />
+                {/* <PhoneFixedSection /> */}
             </div>
         );
     }

@@ -10,7 +10,7 @@ import PlayArrowIcon from "@material-ui/icons/PlayArrow";
 function Inclusion() {
   const [isOpen, setOpen] = useState(false);
   return (
-    <div className="Inclusion">
+    <div className="KinderGarten">
       <Container>
         <div className={"HowToSellspacing"}>
           <Row className="TopKinderTitle">
@@ -58,7 +58,7 @@ function Inclusion() {
         </div>
         <div className={"HowToSellspacing"}>
           <Row className="MiddleAlignCenter">
-            <Col sm={12} className="MobileView mb-4">
+            {/* <Col sm={12} className="MobileView mb-4">
               <div
                 className="d-flex justify-content-center align-items-center imgheight"
                 style={{ backgroundImage: `url(${std2})` }}
@@ -79,8 +79,8 @@ function Inclusion() {
                   </button>
                 </div>
               </div>
-            </Col>
-            <Col sm={12} md={8} lg={8} className="pr-5 MobileSpacing">
+            </Col> */}
+            <Col sm={12} md={8} lg={8} >
               <p className={"subTitle mt-3"}>
                 At AGS we ensure that to achieve these goals and expectations,
                 our KG department is flexible, ensuring children’s learning is
@@ -97,7 +97,7 @@ function Inclusion() {
                 when needed.
               </p>
             </Col>
-            <Col sm={12} md={4} lg={4} className="DesktopView MiddleAlignCenter">
+            <Col sm={12} md={4} lg={4} className="MiddleAlignCenter">
               <div
                 className="d-flex justify-content-center align-items-center imgheight"
                 style={{ backgroundImage: `url(${std2})` }}

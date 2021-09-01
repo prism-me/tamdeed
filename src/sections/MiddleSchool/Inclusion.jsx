@@ -10,7 +10,7 @@ import PlayArrowIcon from "@material-ui/icons/PlayArrow";
 function Inclusion() {
   const [isOpen, setOpen] = useState(false);
   return (
-    <div className="Inclusion">
+    <div className="MiddleSchool">
       <Container>
         <div className={"HowToSellspacing"}>
           <Row className="MiddleAlignCenter">
@@ -36,9 +36,9 @@ function Inclusion() {
                 </div>
               </div>
             </Col>
-            <Col sm={12} md={8} lg={8} className="pl-5 MobileSpacing">
-              <h3 className="title mb-5">Nec ornare.</h3>
-              <p className={"subTitle mt-3"}>
+            <Col sm={12} md={8} lg={8} className="TabMobileSpacing">
+              <h3 className="title">Nec ornare.</h3>
+              <p className={"subTitle"}>
                 Quam sit eget in leo. Consectetur pellentesque adipiscing aenean
                 amet leo vitae. Risus ornare dui quis donec mauris amet purus.
                 Praesent enim commodo urna lacinia. Volutpat varius nullam quis
@@ -56,7 +56,7 @@ function Inclusion() {
         </div>
         <div className={"HowToSellspacing"}>
           <Row className="MiddleAlignCenter">
-            <Col sm={12} className="MobileView">
+            {/* <Col sm={12} className="MobileView">
               <div
                 className="d-flex justify-content-center align-items-center imgheight"
                 style={{ backgroundImage: `url(${std2})` }}
@@ -77,10 +77,10 @@ function Inclusion() {
                   </button>
                 </div>
               </div>
-            </Col>
-            <Col sm={12} md={8} lg={8} className="pr-5 MobileSpacing">
-              <h3 className="title mb-5">Turpis vitae.</h3>
-              <p className={"subTitle mt-3"}>
+            </Col> */}
+            <Col sm={12} md={8} lg={8} className="TabMobileSpacing">
+              <h3 className="title">Turpis vitae.</h3>
+              <p className={"subTitle"}>
                 Congue faucibus at aliquet tincidunt nisi, habitant euismod
                 mauris. Ultrices porta turpis lectus ut. Ipsum leo mi augue
                 viverra. Ipsum, leo quam augue aliquam at vitae blandit neque
@@ -145,9 +145,9 @@ function Inclusion() {
                 </div>
               </div>
             </Col>
-            <Col sm={12} md={8} lg={8} className="pl-5 MobileSpacing">
-              <h3 className="title mb-5">Pellentesque.</h3>
-              <p className={"subTitle mt-3"}>
+            <Col sm={12} md={8} lg={8} className="TabMobileSpacing">
+              <h3 className="title">Pellentesque.</h3>
+              <p className={"subTitle"}>
                 Ac quam at et, libero orci fames at convallis. Pellentesque
                 lacus sit aliquet tellus proin. Non in orci rhoncus, proin nisi,
                 hendrerit in pretium sit. <br />

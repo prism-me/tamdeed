@@ -1,42 +1,12 @@
 @import '../../styles/variables';
 
-.Inclusion {
-  .MainTitle {
-    text-align: center;
-  }
-  @media #{$sm} { 
-    .MobileView {
-      display: block !important;
-    }
-    .DesktopView {
-      display: none !important;
-    }
-    .MobileSpacing {
-      text-align: center;
-      margin: 0 !important;
-    }
-    .MobileBottomSpacing {
-      margin-bottom: 2rem;
-    }
-    padding-top: 0.5rem;
-  }
-  .MobileView {
-    display: none;
-  }
-  .DesktopView {
-    display: block;
-  }  
-  .MiddleAlignCenter {
-    align-items: center;
-  }
-  .lastSection {
-    margin-bottom: 5rem !important;
-  }
-  .TopKinderTitle {
-    margin-top: 7 rem;
+.KinderGarten {
+  padding-top: 6rem;
+  @media #{$sm,$md} {
+    padding-top: 1rem;
   }
   .HowToSellspacing{
-    margin: 5rem 0;
+    margin: 3rem 0;
     .HowToSellbtn{
       border: 1px solid #61dafb;
       background: transparent;
@@ -45,7 +15,7 @@
     .title{
       font-size: 25px;
       font-weight: 500;
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
       @media #{$sm,$md} {
         margin-top: 1rem;
       }
@@ -161,5 +131,8 @@
         font-size: 40px !important;
       }
     }
+  }
+  ul{
+    padding-left: 1.2rem
   }
 }

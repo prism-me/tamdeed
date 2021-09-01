@@ -15,14 +15,14 @@
     margin-top: 0px;
   }
   .schoolbtn{
-    background: #ffffff;
-    border: 1px solid #1A2C52;
+    background: $white;
+    border: 1px solid $bg-color;
     border-radius: 100px;
-    color: #FFFFFF;
+    color: $white;
     width: 100%;
     font-size: 18px;
     font-weight: 500;
-    background: #1A2C52;
+    background: $bg-color;
     @media #{$sm,$md,$xsm,$tiny} {
       width: auto;
     }
@@ -34,36 +34,62 @@
     width: 80%;
     height: auto;
     text-align: center;
-    margin: 18rem auto;
+    margin: 12rem auto;
     @media #{$sm,$md,$xsm,$tiny} {
       padding: 2rem 0;
       width: 100%;
-      margin: 14rem auto auto auto;
+      margin: 7rem auto auto auto;
     }
   }
   .school-main .ac-bg .cardStyle .subtitle{
-    font-size: 25px;
-    color:#1A2C52;
+    font-size: 21px;
+    color: $bg-color;
     @media #{$sm,$md,$xsm,$tiny} {
       font-size: 18px;
     }
   }
-  .school-main .ac-bg{
-    background-image: url("./../../../assets/images/agsbackgrounds/backgroundCurve.png");
-    height: 750px;
-    @media #{$sm,$md,$xsm,$tiny} {
-      height: 600px;
-      
+  .Position-Title {
+    margin-top: 20rem;
+    position: absolute;
+    margin-bottom: 2rem;
+    font-size: 25px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 500;
+    color: #000000;
+    @media #{$_3xl} {
+      margin-top: 24rem;
+    }
+    @media #{$_5xl} {
+      margin-top: 29rem;
+    }
+    @media #{$xl}{
+      margin-top: 2rem;
+    }
+    @media #{$lg}{
+      margin-top: 2rem;
+    }
+    @media #{$sm,$md}{
+      margin-top: 0rem;
     }
   }
-  .school-main .ac-bg .InfoTitle-Ethos{
-    margin-top: 6rem;
+  .school-main .ac-bg{
+    background-image: url("./../../../assets/images/agsbackgrounds/backgroundCurve.png");
+    margin-top: 3rem;
   }
+  // .school-main .ac-bg .InfoTitle-Ethos{
+  //   margin-top: 6rem;
+  // }
   .m-row{
     margin: 0;
     .cardStyle{
       margin: 10px 0px;
       text-align: center;
+      p {
+        @media #{$sm} {
+          font-size: 20px;
+        }
+      }
     }
   }
   

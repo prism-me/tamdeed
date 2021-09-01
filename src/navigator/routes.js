@@ -2,7 +2,7 @@
 // import PgAdmission from "../pages/PgAdmission";
 
 import { lazy } from 'react';
-import {STRINGS} from "../utils/base";
+import { STRINGS } from "../utils/base";
 
 const Home = lazy(() => import('../pages/Home'));
 const About = lazy(() => import('../pages/About'));
@@ -15,7 +15,7 @@ const KinderGarten = lazy(() => import('../pages/KinderGarten'));
 const Enroll = lazy(() => import('../pages/Enroll'));
 const FAQMain = lazy(() => import('../pages/FAQMain'));
 const OnlineForm = lazy(() => import('../pages/OnlineForm'));
-const Carrers = lazy(() => import('../pages/Careers'));
+const careers = lazy(() => import('../pages/Careers'));
 const Primaryschool = lazy(() => import('../pages/Primaryschool'));
 
 
@@ -91,11 +91,16 @@ export const routes = [
     exact: true,
   },
   {
-
-    name: "Carrers",
-    path: `${STRINGS.ROUTES.CAREERS}`,
-    component: Carrers,
-
+    name: "careers",
+    path: "/careers",
+    component: careers,
+    isPrivate: false,
+    exact: true,
+  },
+  {
+    // name: "careers",
+    // path: `${STRINGS.ROUTES.CAREERS}`,
+    // component: careers,
     name: "MiddleSchool",
     path: "/Middle-school",
     component: MiddleSchool,
@@ -103,10 +108,17 @@ export const routes = [
     exact: true,
   },
   {
-
     name: "Primary-school",
-    path: `${STRINGS.ROUTES.PRIMARYSCHOOL}`,
+    path: "/primary-school",
     component: Primaryschool,
+    isPrivate: false,
+    exact: true,
+  },
+  {
+
+    // name: "Primary-school",
+    // path: `${STRINGS.ROUTES.PRIMARYSCHOOL}`,
+    // component: Primaryschool,
 
     name: "KinderGarten",
     path: "/KinderGarten",

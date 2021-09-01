@@ -13,10 +13,11 @@ import {
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
-import {useHistory} from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import ClipLoader from "react-spinners/BounceLoader";
 import BackToTop from "../components/BackToTop";
-import {STRINGS} from "../utils/base";
+import { STRINGS } from "../utils/base";
+import Contactpannel from "../sections/Contactpannel";
 
 
 const drawerWidth = 280;
@@ -69,129 +70,129 @@ export default function Layout(props) {
   const { global } = props;
 
   return (
-      <div>
-        <div
-            className={`${
-                props.showSpinner ? "d-flex" : "d-none"
-            } flex-column text-center align-items-center justify-content-center`}
-            style={{
-              position: "absolute",
-              zIndex: 99999,
-              height: "100%",
-              width: "100%",
-              background: "rgba(255,255,255,0.6)",
-            }}
-        >
-          <ClipLoader
-              color={"#e65550"}
-              loading={true}
-              size={80}
-          />
-        </div>
-
-        <Hidden mdUp>
-          <nav className={classes.drawer}>
-            <Drawer
-                classes={{
-                  paper: classes.drawerPaper,
-                }}
-                anchor={"left"}
-                open={drawerOpen}
-                onClose={() => toggleDrawer(false)}
-            >
-              <div className="drawer-menu">
-                  <div className="drawer-logo d-flex justify-content-center align-items-center">
-                      <img
-                          src={logo}
-                          alt="AGS Logo"
-                          style={{width:"40%", paddingTop:"2rem"}}
-                          onClick={() => {
-                              history.push("/");
-                              toggleDrawer(false);
-                          }}
-                      />
-                  </div>
-                <List
-                    component="nav"
-                    aria-label="main mailbox folders"
-                >
-                  <ListItem button>
-                    <ListItemText
-                        onClick={() => {
-                          history.push(`${STRINGS.ROUTES.ABOUT_US}`);
-                          toggleDrawer(false);
-                        }}
-                        primary="About us"
-                    />
-                  </ListItem>
-                    <ListItem button>
-                        <ListItemText
-                            onClick={() => {
-                                history.push(`${STRINGS.ROUTES.ACADEMICS}`);
-                                toggleDrawer(false);
-                            }}
-                            primary="Academics"
-                        />
-                    </ListItem>
-                    <ListItem button>
-                        <ListItemText
-                            onClick={() => {
-                                history.push("/Student-care");
-                                toggleDrawer(false);
-                            }}
-                            primary="Student care"
-                        />
-                    </ListItem>
-                    <ListItem button>
-                        <ListItemText
-                            onClick={() => {
-                                history.push(`${STRINGS.ROUTES.AGS_PORTAL}`);
-                                toggleDrawer(false);
-                            }}
-                            primary="AGS Portal"
-                        />
-                    </ListItem>
-                    <ListItem button>
-                        <ListItemText
-                            onClick={() => {
-                                history.push(`${STRINGS.ROUTES.CONTACT_US}`);
-                                toggleDrawer(false);
-                            }}
-                            primary="Contact us"
-                        />
-                    </ListItem>
-                    <ListItem button>
-                        <ListItemText
-                            onClick={() => {
-                                history.push("/Enroll");
-                                toggleDrawer(false);
-                            }}
-                            // primary="Enroll"
-                        >
-                            <button style={{
-                                background: "#1A2C52",
-                                border: "none",
-                                color: "white",
-                                padding: "0.5rem 0rem",
-                                borderRadius: "60px",
-                                width: "100%"
-                            }}>Enroll</button>
-                        </ListItemText>
-                    </ListItem>
-                </List>
-              </div>
-            </Drawer>
-          </nav>
-        </Hidden>
-
-        <Navbar
-            show={visible}
-            toggleDrawer={(show) => toggleDrawer(show)}
+    <div>
+      <div
+        className={`${props.showSpinner ? "d-flex" : "d-none"
+          } flex-column text-center align-items-center justify-content-center`}
+        style={{
+          position: "absolute",
+          zIndex: 99999,
+          height: "100%",
+          width: "100%",
+          background: "rgba(255,255,255,0.6)",
+        }}
+      >
+        <ClipLoader
+          color={"#e65550"}
+          loading={true}
+          size={80}
         />
-        {props.children}
-        <BackToTop/>
-        <Footer />
-        <BottomTabNavigator />
       </div>
+
+      <Hidden mdUp>
+        <nav className={classes.drawer}>
+          <Drawer
+            classes={{
+              paper: classes.drawerPaper,
+            }}
+            anchor={"left"}
+            open={drawerOpen}
+            onClose={() => toggleDrawer(false)}
+          >
+            <div className="drawer-menu">
+              <div className="drawer-logo d-flex justify-content-center align-items-center">
+                <img
+                  src={logo}
+                  alt="AGS Logo"
+                  style={{ width: "40%", paddingTop: "2rem" }}
+                  onClick={() => {
+                    history.push("/");
+                    toggleDrawer(false);
+                  }}
+                />
+              </div>
+              <List
+                component="nav"
+                aria-label="main mailbox folders"
+              >
+                <ListItem button>
+                  <ListItemText
+                    onClick={() => {
+                      history.push(`${STRINGS.ROUTES.ABOUT_US}`);
+                      toggleDrawer(false);
+                    }}
+                    primary="About us"
+                  />
+                </ListItem>
+                <ListItem button>
+                  <ListItemText
+                    onClick={() => {
+                      history.push(`${STRINGS.ROUTES.ACADEMICS}`);
+                      toggleDrawer(false);
+                    }}
+                    primary="Academics"
+                  />
+                </ListItem>
+                <ListItem button>
+                  <ListItemText
+                    onClick={() => {
+                      history.push("/Student-care");
+                      toggleDrawer(false);
+                    }}
+                    primary="Student care"
+                  />
+                </ListItem>
+                <ListItem button>
+                  <ListItemText
+                    onClick={() => {
+                      history.push(`${STRINGS.ROUTES.AGS_PORTAL}`);
+                      toggleDrawer(false);
+                    }}
+                    primary="AGS Portal"
+                  />
+                </ListItem>
+                <ListItem button>
+                  <ListItemText
+                    onClick={() => {
+                      history.push(`${STRINGS.ROUTES.CONTACT_US}`);
+                      toggleDrawer(false);
+                    }}
+                    primary="Contact us"
+                  />
+                </ListItem>
+                <ListItem button>
+                  <ListItemText
+                    onClick={() => {
+                      history.push("/Enroll");
+                      toggleDrawer(false);
+                    }}
+                  // primary="Enroll"
+                  >
+                    <button style={{
+                      background: "#1A2C52",
+                      border: "none",
+                      color: "white",
+                      padding: "0.5rem 0rem",
+                      borderRadius: "60px",
+                      width: "100%"
+                    }}>Enroll</button>
+                  </ListItemText>
+                </ListItem>
+              </List>
+            </div>
+          </Drawer>
+        </nav>
+      </Hidden>
+
+      <Navbar
+        show={visible}
+        toggleDrawer={(show) => toggleDrawer(show)}
+      />
+      <Contactpannel />
+      {props.children}
+      <BackToTop />
+      <Footer />
+      <BottomTabNavigator />
+    </div>
   );
 }

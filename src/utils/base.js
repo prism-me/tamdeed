@@ -6,7 +6,7 @@ export const STRINGS = {
         ACADEMICS: "/academics",
         AGS_PORTAL: "/agsPortal",
         CONTACT_US: "/contact",
-        CAREERS: "/carrers",
+        CAREERS: "/careers",
         PRIMARYSCHOOL: "/Primary-school",
     },
     REQUEST_STATUS: 200,

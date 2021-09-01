@@ -40,6 +40,7 @@
 @import "./sections/About/PrincipalSlider/PrincipalSlider";
 //Academics
 @import "./sections/Academics/academics";
+@import "./sections/Academics/ACTabs/ACTabs.scss";
 //Ags-Portal
 @import "./sections/AGSPortal/ags_portal";
 //Contact Us
@@ -71,6 +72,8 @@
 //CAREERS
 @import "./sections/Careers/Ourteam/Ourteam";
 @import "./sections/Careers/Positions/Positions";
+@import "./sections/Careers/jointeam/jointeam.scss";
+@import "./sections/Careers/ContentSection/ContentSection.scss";
 
 //CONTACT PANNEL
 @import "./sections/Contactpannel/contactpannel";
@@ -93,23 +96,21 @@
 //   color: $heading-color;
 // }
 
-@font-face {
-  font-family: 'Optima nova LT Medium';
-  src: local('Optimal nova LT Medium'), url("./assets/fonts/50a07a2502cdd8e376c745d1d519c76f.woff2") format("woff2");
+// font AGS
+@import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+
+
+// * {
+//   font-family: 'Marcellus SC', serif, 'Marcellus';
+// }
+
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Marcellus SC', serif;
 }
 
-@font-face {
-  font-family: 'Optima nova LT Pro Regular';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Optima nova LT Pro Regular'), url('./assets/fonts/OptimaNovaLTProRegular.woff') format('woff');
-}
-
-//*{
-//  font-family: "Optima nova LT Pro Regular";
-//}
-* {
-  font-family: "Optima nova LT Medium";
+p,span,div{
+  font-family: 'Marcellus',serif;
 }
 
 /* Chrome, Safari, Edge, Opera */

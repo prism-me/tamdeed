@@ -6,7 +6,7 @@ import Spinner from "../../../components/Spinner/Spinner";
 import { API } from "../../../http/API";
 import { STRINGS } from "../../../utils/base";
 import SnackBar from "../../../components/SnackBar/SnackBar";
-import { withNamespaces } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 
 const defaultState = {
     isRequestPending: false,
@@ -17,8 +17,8 @@ const defaultState = {
     email: ''
 }
 
-function OurPrograms({ t }) {
-
+function OurPrograms() {
+    const { t } = useTranslation();
     const [init, setInit] = useState(defaultState);
     let { name, email, isRequestPending, isOpen, message, variant } = init;
 
@@ -189,4 +189,4 @@ function OurPrograms({ t }) {
     );
 }
 
-export default withNamespaces()(OurPrograms);
+export default OurPrograms;

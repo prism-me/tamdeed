@@ -9,9 +9,11 @@ import ModalVideo from 'react-modal-video'
 import Hidden from "@material-ui/core/Hidden";
 import BackGroundVideo from "../../../components/BackGroundVideo/BackGroundVideo";
 import PauseIcon from "@material-ui/icons/Pause";
-import { withNamespaces } from 'react-i18next';
+// import { withNamespaces } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 
-function HomeHeader({ props, t }) {
+function HomeHeader(props) {
+  const { t } = useTranslation();
   const [isOpen, setOpen] = useState(false)
   const [isPlaying, setIsPlaying] = useState(false);
   // const [isVideo, setIsVideo] = useState(false);
@@ -144,4 +146,4 @@ function HomeHeader({ props, t }) {
   );
 }
 
-export default withNamespaces()(HomeHeader);
+export default HomeHeader;

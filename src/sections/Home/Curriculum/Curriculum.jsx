@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import header_bg from "./../../../assets/images/agsbackgrounds/backgroundCurve.png";
 import { Hidden } from "@material-ui/core";
-import { withNamespaces } from 'react-i18next';
+// import { withNamespaces } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 
-function Curriculum({ props, t }) {
+function Curriculum(props) {
+    const { t } = useTranslation();
     return (
         <div className="Curriculum-page">
             <h3 className={"Title"}>
@@ -112,4 +114,4 @@ function Curriculum({ props, t }) {
     );
 }
 
-export default withNamespaces()(Curriculum);
+export default Curriculum;

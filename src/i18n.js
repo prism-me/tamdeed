@@ -1,7 +1,7 @@
 import i18n from "i18next";
-import detector from "i18next-browser-languagedetector";
-import { reactI18nextModule } from "react-i18next";
-
+import LanguageDetector from 'i18next-browser-languagedetector';
+import { initReactI18next } from "react-i18next";
+import HttpApi from 'i18next-http-backend';
 import translationEN from './utils/en/translation.json';
 import translationAR from './utils/ar/translation.json';
 
@@ -16,23 +16,35 @@ const resources = {
 };
 
 i18n
-    .use(detector)
-    .use(reactI18nextModule) // passes i18n down to react-i18next
+    .use(HttpApi)
+    .use(LanguageDetector)
+    .use(initReactI18next) // passes i18n down to react-i18next
     .init({
         resources,
-        lng: "en",
-        debug: true,
+        supportedLngs: ['en', 'ar'],
+        // lng: "en",
+        fallbackLng: 'en',
+        debug: false,
 
         // // have a common namespace used around the full app
         // ns: ["translations"],
         // defaultNS: "translations",
 
-        keySeparator: false, // we do not use keys in form messages.welcome
-
-        interpolation: {
-            escapeValue: false, // react already safes from xss
-            formatSeparator: ","
+        // Options for language detector
+        detection: {
+            order: ['path', 'cookie', 'htmlTag'],
+            caches: ['cookie'],
         },
+
+        // backend: {
+        //     loadPath: './utils/{{lng}}/translation.json',
+        // },
+        // keySeparator: false, // we do not use keys in form messages.welcome
+
+        // interpolation: {
+        //     escapeValue: false, // react already safes from xss
+        //     formatSeparator: ","
+        // },
         react: {
             wait: true
         }

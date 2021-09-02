@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import header_bg from "./../../../assets/images/agsbackgrounds/backgroundCurve.png";
 import { Hidden } from "@material-ui/core";
-import { withNamespaces } from 'react-i18next';
+// import { withNamespaces } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 
-function CovidSafety({ props, t }) {
+function CovidSafety(props) {
+    const { t } = useTranslation();
     return (
         <div className="Covid-page">
             <h3 className={"Title"}>
@@ -64,4 +66,4 @@ function CovidSafety({ props, t }) {
     );
 }
 
-export default withNamespaces()(CovidSafety);
+export default CovidSafety;

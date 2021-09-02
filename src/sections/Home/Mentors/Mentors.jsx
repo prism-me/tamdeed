@@ -7,9 +7,11 @@ import mentor3 from "../../../assets/images/agsMentors/mentor4.png";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
-import { withNamespaces } from 'react-i18next';
+// import { withNamespaces } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 
-function Mentors({ t }) {
+function Mentors() {
+    const { t } = useTranslation();
     const slidesData = [
         {
             thumbnail: mentor,
@@ -30,6 +32,16 @@ function Mentors({ t }) {
             thumbnail: mentor4,
             title: "Commodo male",
             Subtitle: "Aliquet nec nunc",
+        },
+        {
+            thumbnail: mentor2,
+            title: "Mi amet",
+            Subtitle: "Nibh varius vestibulum",
+        },
+        {
+            thumbnail: mentor3,
+            title: "Commodo aliquam",
+            Subtitle: "Nunc eu massa",
         },
         {
             thumbnail: mentor2,
@@ -91,4 +103,4 @@ function Mentors({ t }) {
     )
 }
 
-export default withNamespaces()(Mentors);
+export default Mentors;

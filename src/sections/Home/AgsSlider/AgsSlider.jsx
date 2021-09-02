@@ -8,9 +8,11 @@ import ModalVideo from 'react-modal-video'
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
-import { withNamespaces } from 'react-i18next';
+// import { withNamespaces } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 
-function AgsSlider({ props, t }) {
+function AgsSlider(props) {
+    const { t } = useTranslation();
     const slidesData = [
         {
             thumbnail: ags1,
@@ -48,6 +50,19 @@ function AgsSlider({ props, t }) {
             Subtitle: "Enjoyment, amusement and light hearted play time.",
             video_link: "https://youtu.be/DohvORAMlHs",
         },
+        {
+            thumbnail: ags3,
+            title: "FUN",
+            Subtitle: "Enjoyment, amusement and light hearted play time.",
+            video_link: "https://youtu.be/Nv_o3Kn9jPY",
+        },
+        {
+            thumbnail: ags1,
+            title: "FUN",
+            Subtitle: "Enjoyment, amusement and light hearted play time.",
+            video_link: "https://youtu.be/DohvORAMlHs",
+        },
+
     ];
 
     const [openVideo, setOpenVideo] = useState(false);
@@ -119,4 +134,4 @@ function AgsSlider({ props, t }) {
         </div>
     )
 }
-export default withNamespaces()(AgsSlider);
+export default AgsSlider;

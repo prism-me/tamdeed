@@ -11,13 +11,41 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import { CgMenuLeftAlt } from "react-icons/cg";
 import { STRINGS } from "../../utils/base";
 import i18n from '../../i18n';
-import { withNamespaces } from 'react-i18next';
+// import { withNamespaces } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
+import i18next from 'i18next'
+import cookies from 'js-cookie'
+import classNames from 'classnames'
+
+const languages = [
+  {
+    code: 'en',
+    name: 'English',
+    country_code: 'gb',
+  },
+  {
+    code: 'ar',
+    name: 'العربية',
+    dir: 'rtl',
+    country_code: 'sa',
+  },
+]
 
 function MainNavbar(props) {
+  const currentLanguageCode = cookies.get('i18next') || 'en'
+  const currentLanguage = languages.find((l) => l.code === currentLanguageCode)
+  const { t } = useTranslation();
+
+  useEffect(() => {
+    console.log('Setting page stuff')
+    document.body.dir = currentLanguage.dir || 'ltr'
+    document.title = t('app_title')
+  }, [currentLanguage, t])
+
   const history = useHistory();
-  const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
-  }
+  // const changeLanguage = (lng) => {
+  //   i18n.changeLanguage(lng);
+  // }
   return (
     <div className="navbar-wrap">
       <Navbar
@@ -48,26 +76,6 @@ function MainNavbar(props) {
             />
           </Navbar.Brand>
         </Hidden>
-        {/*<LinkContainer to="/">*/}
-        {/*  <Navbar.Brand>*/}
-        {/*    <Hidden smDown>*/}
-        {/*      <Navbar.Brand>*/}
-        {/*        <img src={logo} alt="AGS-logo" />*/}
-        {/*      </Navbar.Brand>*/}
-        {/*    </Hidden>*/}
-        {/*    <Hidden mdUp>*/}
-        {/*      <Navbar.Brand>*/}
-        {/*        <div className={"d-flex mr-auto"}>*/}
-        {/*          <CgMenuLeftAlt*/}
-        {/*              onClick={() => props.toggleDrawer(true)}*/}
-        {/*              className="nav-toggle-override "*/}
-        {/*          />*/}
-        {/*          <img src={logo} alt="AGS-logo" />*/}
-        {/*        </div>*/}
-        {/*      </Navbar.Brand>*/}
-        {/*    </Hidden>*/}
-        {/*  </Navbar.Brand>*/}
-        {/*</LinkContainer>*/}
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ml-auto navborder">
             <LinkContainer to={STRINGS.ROUTES.ABOUT_US}>
@@ -90,11 +98,30 @@ function MainNavbar(props) {
             </LinkContainer>
             <NavDropdown
               id="nav-dropdown-dark-example"
-              title="Language"
+              title={t('language')}
               menuVariant="light"
             >
-              <NavDropdown.Item onClick={() => changeLanguage('en')}>en</NavDropdown.Item>
-              <NavDropdown.Item onClick={() => changeLanguage('ar')}>ar</NavDropdown.Item>
+              {languages.map(({ code, name, country_code }) => (
+                <NavDropdown.Item key={country_code}>
+                  <a
+                    href="#"
+                    className={classNames('dropdown-item', {
+                      disabled: currentLanguageCode === code,
+                    })}
+                    onClick={() => {
+                      i18next.changeLanguage(code)
+                    }}
+                  >
+                    <span
+                      className={`flag-icon flag-icon-${country_code} mx-2`}
+                      style={{
+                        opacity: currentLanguageCode === code ? 0.5 : 1,
+                      }}
+                    ></span>
+                    {name}
+                  </a>
+                </NavDropdown.Item>
+              ))}
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
@@ -102,4 +129,4 @@ function MainNavbar(props) {
     </div>
   );
 }
-export default withNamespaces()(MainNavbar);
+export default MainNavbar;

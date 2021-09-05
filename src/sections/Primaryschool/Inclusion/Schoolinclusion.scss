@@ -1,5 +1,5 @@
 .SchoolTopspacing {
-  padding-top: 7rem;
+  padding-top: 8rem;
   @media #{$sm,$md} {
     padding-top: 2rem;
   }
@@ -14,7 +14,7 @@
     }
     .subTitle {
       margin-top: 0 !important;
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 400;
       margin-bottom: 2rem;
     }
@@ -119,13 +119,13 @@
   }
   .SchoolMiddlespacing{
     text-align: center; 
-    margin-top: 5rem;
+    margin-top: 1rem;
     @media #{$sm,$md} {
       margin-top: 2rem;
     }
     .subTitle {
       margin-top: 0 !important;
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 400;
       margin-bottom: 2rem;
     }

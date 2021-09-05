@@ -1,9 +1,15 @@
 @import '../../styles/variables';
 
 .KinderGarten {
-  padding-top: 6rem;
+  padding-top: 8rem;
   @media #{$sm,$md} {
     padding-top: 1rem;
+  }
+  .subTitle {
+    margin-top: 0 !important;
+    font-size: 17px;
+    font-weight: 400;
+    margin-bottom: 1rem;
   }
   .HowToSellspacing{
     margin: 3rem 0;
@@ -22,7 +28,7 @@
     }
     .subTitle {
       margin-top: 0 !important;
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 400;
       margin-bottom: 1rem;
     }

@@ -22,6 +22,7 @@
     }
   }
   .buttons-flex {
+    text-align: center;
     display: block;
     justify-content: space-around;
   }
@@ -33,6 +34,6 @@
   margin: 2rem 2rem 0 2rem;
   margin-bottom: 0;
   @media #{$sm} {
-    padding: 0 2rem
+    margin: 2rem 1rem 0 1rem;
   }
 }

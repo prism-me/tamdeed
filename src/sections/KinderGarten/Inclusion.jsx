@@ -14,7 +14,7 @@ function Inclusion() {
       <Container>
         <div className={"HowToSellspacing"}>
           <Row className="TopKinderTitle">
-            <h4 className="text-center w-100">KINDERGARTEN</h4>
+            <h4 className="text-center w-100 mb-4">KINDERGARTEN</h4>
           </Row>
           <Row className="MiddleAlignCenter">
             <Col sm={12} md={12} lg={12}>

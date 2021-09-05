@@ -18,6 +18,7 @@
     color: $primary-color;
     @media #{$sm,$md} {
       font-size: 22px;
+      margin-top: 0;
     }
     // @media #{$lg} {
     // }
@@ -50,7 +51,7 @@
       background-size: 120% /* work with the background-size */
     }
     @media #{$lg} {
-      height: 45vh !important;
+      height: 45vh;
       background-size: cover;
       //align-items: flex-start !important;
       padding: 0;
@@ -58,12 +59,11 @@
     @media #{$md} {
       background-size: cover;
     }
-     //@media #{$_2xl} {
-     //  height: 50vh;
-     //}
+  
     @media #{$xxl} {
       height: 80vh;
     }
+  
     //@media #{$_4xl} {
     //  height: 50vh;
     //}

@@ -164,18 +164,21 @@ function OurPrograms() {
                             <Form onSubmit={handleSubmit}>
                                 <Form.Group className="mb-3" controlId="formGroupName">
                                     <Form.Control name={"name"} value={name} onChange={handleChange} type="text"
-                                        placeholder="Enter your name"
+                                        placeholder={t('waitlistName')}
                                         className={"formFields"} />
                                 </Form.Group>
                                 <Form.Group className="mb-3" controlId="formGroupEmail">
                                     <Form.Control name={"email"} value={email} onChange={handleChange}
-                                        type="text" placeholder="Enter your email address"
+                                        type="text" placeholder={t('waitlistAddress')}
                                         className={"formFields"} />
                                 </Form.Group>
                                 <center>
                                     {
                                         !isRequestPending ?
-                                            <button className={"enroll"}>Enroll</button> :
+                                            <button className={"enroll"}>
+                                                {t('waitlistEnroll')}
+                                                {/* Enroll */}
+                                            </button> :
                                             <Spinner color1={"#1a2c52"} size={"sm"} />
                                     }
 

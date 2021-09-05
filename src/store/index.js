@@ -6,7 +6,6 @@ import {
 import storage from "redux-persist/lib/storage";
 import globalReducer from "../redux/global/reducers";
 
-
 const persistConfig = {
     key: "root",
     storage,

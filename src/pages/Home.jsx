@@ -14,13 +14,13 @@ export default class Home extends Component {
   render() {
     return (
       <div className="home-page">
-        <HomeHeader/>
+        <HomeHeader />
         <InfoTabs />
         <Curriculum />
         <Mentors />
-        <OurPrograms/>
+        <OurPrograms />
         <AgsSlider />
-        <CovidSafety/>
+        <CovidSafety />
       </div>
     );
   }

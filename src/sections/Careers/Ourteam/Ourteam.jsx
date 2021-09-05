@@ -63,7 +63,7 @@ export default function Ourteam() {
         }
     };
     return (
-        <div className={"Colleagues"}>
+        <div className={"Colleagues"} dir={"ltr"}>
             <h3 className={"InfoTitle"}>MEET YOUR  COLLEAGUES</h3>
             <OwlCarousel className="owl-theme" {...options}>
                 {

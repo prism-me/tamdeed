@@ -10,20 +10,18 @@
       text-transform: uppercase;
       text-align: center;
       font-weight: 500;
-      position: absolute;
-      left: 42%;
-      bottom: -192%;
+      margin-top: -7rem;
+      // position: absolute;
+      // left: 42%;
+      // bottom: -192%;
       color: $primary-color;
       @media #{$sm,$md} {
         font-size: 22px;
-        position: static;
-        left: 0;
-        bottom: 0;
+        margin-top: 0;
       }
-      @media #{$lg} {
-        left: 39%;
-        bottom: -34%;
-      }
+      // @media #{$lg} {
+        
+      // }
       //@media #{$_2xl} {
       //  bottom: -32%;
       //}

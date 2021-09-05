@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import AcademicHeader from "../sections/Academics/Headers/header";
 import Accreditation from "../sections/Academics/Accreditation/Accreditation";
 import InfoTabs from "../sections/Home/InfoTabs";
@@ -10,10 +10,10 @@ export default class Academics extends Component {
     render() {
         return (
             <div className="home-page about-section">
-                <AcademicHeader/>
-                <Accreditation/>
+                <AcademicHeader />
+                <Accreditation />
                 <ACTabs />
-                <AcademicsCurriculum/>
+                <AcademicsCurriculum />
             </div>
         );
     }

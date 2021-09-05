@@ -76,7 +76,7 @@ function Mentors() {
         }
     };
     return (
-        <div className={"Mentors"}>
+        <div className={"Mentors"} dir="ltr">
             <h3 className={"InfoTitle"}>
                 {t('MentorsTitle')}
                 {/* MEET THE MENTORS */}

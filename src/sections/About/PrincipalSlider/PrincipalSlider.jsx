@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "react-multi-carousel/lib/styles.css";
 import mentor from "../../../assets/images/agsMentors/mentor.png";
 import mentor4 from "../../../assets/images/agsMentors/mentor2.png";
@@ -46,8 +46,8 @@ export default function PrincipalSlider() {
         margin: 10,
         items: 4,
         autoplay: true,
-        dots:true,
-        responsive:{
+        dots: true,
+        responsive: {
             0: {
                 items: 1,
             },
@@ -62,15 +62,15 @@ export default function PrincipalSlider() {
             },
         }
     };
-    return(
-        <div className={"PrincipalSlider"}>
+    return (
+        <div className={"PrincipalSlider"} dir="ltr">
             <h3 className={"InfoTitle"}>MEET THE MENTORS</h3>
             <OwlCarousel className="owl-theme" {...options}>
                 {
                     slidesData.map((slides, index) => (
                         <div className={"divstyle"}>
                             <div className="imgheight"
-                                 style={{ backgroundImage: `url(${slides.thumbnail})` }}
+                                style={{ backgroundImage: `url(${slides.thumbnail})` }}
                             >
                                 <h5 className={"overview-heading"}>
                                     {slides.title}

@@ -10,22 +10,17 @@
     text-transform: uppercase;
     text-align: center;
     font-weight: 500;
-    position: absolute;
-    left: 34%;
-    bottom: -109%;
+    margin-top: 2rem;
+    // position: absolute;
+    // left: 34%;
+    // bottom: -109%;
     z-index: 999;
     color: $primary-color;
     @media #{$sm,$md} {
       font-size: 22px;
-      position: static;
-      left: 0;
-      bottom: 0;
-      text-align: center;
     }
-    @media #{$lg} {
-      left: 30%;
-      bottom: 7%
-    }
+    // @media #{$lg} {
+    // }
     //@media #{$_2xl} {
     //  left: 34%;
     //  bottom: 8%;
@@ -39,6 +34,7 @@
     //padding: 0 10rem;
     //overflow: hidden;
     height: 100vh;
+    margin-top: -9rem;
     // background-image: url("../../../assets/images/ug-images/1920x967.jpg");
     //background-size: cover;
     background-size: 100%;

@@ -73,6 +73,9 @@
       font-weight: 500;
       color: $primary-color;
       margin-right: 0.6rem;
+      @media #{$lg} {
+        font-size: 13px;
+      }
     }
 
     .nav-toggle-override {

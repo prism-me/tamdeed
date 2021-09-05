@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import AboutHeader from "../sections/About/AboutHeader/AboutHeader";
 import AGSExperience from "../sections/About/AGSExperience/AGSExperience";
 // import PrincipleMessage from "../sections/About/PrincipleMessage/PrincipleMessage";
@@ -13,11 +13,11 @@ export default class About extends Component {
     render() {
         return (
             <div className="home-page about-section">
-                <AboutHeader/>
-                <AGSExperience/>
-                <PrincipleMessage/>
-                <AgsEthos/>
-                <AGSHealth/>
+                <AboutHeader />
+                <AGSExperience />
+                <PrincipleMessage />
+                <AgsEthos />
+                <AGSHealth />
                 <PrincipalSlider />
             </div>
         );

@@ -35,7 +35,7 @@ function InfoTabs() {
     },
     {
       thumbnail: exper1,
-      title: "mpower taking on challenges.",
+      title: "manpower taking on challenges.",
       video_link: "https://youtu.be/Nv_o3Kn9jPY",
     },
     {
@@ -45,7 +45,7 @@ function InfoTabs() {
     },
     {
       thumbnail: exper1,
-      title: "mpower taking on challenges.",
+      title: "manpower taking on challenges.",
       video_link: "https://youtu.be/Nv_o3Kn9jPY",
     },
     {
@@ -79,7 +79,7 @@ function InfoTabs() {
     }
   };
   return (
-    <div className={"info-tabs"}>
+    <div className={"info-tabs"} dir="ltr">
       <h2 className={"InfoTitle"}>
         {t('ExperienceTitle')}
         {/* EXPERIENCE THE AGS DIFFERENCE */}

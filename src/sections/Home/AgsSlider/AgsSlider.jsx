@@ -90,7 +90,7 @@ function AgsSlider(props) {
         }
     };
     return (
-        <div className={"AgsSlider"}>
+        <div className={"AgsSlider"} dir="ltr">
             <h3 className={"InfoTitle"}>
                 {t('AgsTitle')}
                 {/* LIFE AT AMERICAN GULF SCHOOL */}

@@ -31,6 +31,8 @@ const languages = [
   },
 ]
 
+// export const baseUrl = i18n.language === 'ar' ? '' : '/' + i18n.language;
+
 function MainNavbar(props) {
   const currentLanguageCode = cookies.get('i18next') || 'en'
   const currentLanguage = languages.find((l) => l.code === currentLanguageCode)
@@ -84,7 +86,8 @@ function MainNavbar(props) {
             <LinkContainer to={STRINGS.ROUTES.ACADEMICS}>
               <Nav.Link> Academics </Nav.Link>
             </LinkContainer>
-            <LinkContainer to="/Student-care">
+            {/* <LinkContainer to={baseUrl + "/Student-care"}> */}
+            <LinkContainer to={"/Student-care"}>
               <Nav.Link> Student care </Nav.Link>
             </LinkContainer>
             <LinkContainer to={STRINGS.ROUTES.AGS_PORTAL}>

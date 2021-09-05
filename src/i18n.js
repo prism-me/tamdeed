@@ -15,6 +15,16 @@ const resources = {
     }
 };
 
+// i18n.on('languageChanged', function (lng) {
+//     // if the language we switched to is the default language we need to remove the /en from URL
+//     if (lng === i18n.options.fallbackLng[0]) {
+//         if (window.location.pathname.includes('/' + i18n.options.fallbackLng[0])) {
+//             const newUrl = window.location.pathname.replace('/' + i18n.options.fallbackLng[0], '')
+//             window.location.replace(newUrl)
+//         }
+//     }
+// })
+
 i18n
     .use(HttpApi)
     .use(LanguageDetector)
@@ -22,11 +32,12 @@ i18n
     .init({
         resources,
         supportedLngs: ['en', 'ar'],
+        // whitelist: ['en', 'ar'],
         // lng: "en",
         fallbackLng: 'en',
-        debug: false,
+        debug: true,
 
-        // // have a common namespace used around the full app
+        // have a common namespace used around the full app
         // ns: ["translations"],
         // defaultNS: "translations",
 
@@ -34,17 +45,20 @@ i18n
         detection: {
             order: ['path', 'cookie', 'htmlTag'],
             caches: ['cookie'],
+            // lookupFromPathIndex: 0,
+            // checkWhitelist: true
         },
 
         // backend: {
         //     loadPath: './utils/{{lng}}/translation.json',
         // },
-        // keySeparator: false, // we do not use keys in form messages.welcome
 
-        // interpolation: {
-        //     escapeValue: false, // react already safes from xss
-        //     formatSeparator: ","
-        // },
+        keySeparator: false, // we do not use keys in form messages.welcome
+
+        interpolation: {
+            escapeValue: false, // react already safes from xss
+            formatSeparator: ","
+        },
         react: {
             wait: true
         }

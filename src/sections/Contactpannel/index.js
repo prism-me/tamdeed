@@ -4,7 +4,7 @@ const Contactpannel = () => {
     return (
         <div className="contact-pannel-main">
             <div className="contact-number">
-                <a href='tel:06 000000' class="contact-pannel-btn"><PhoneOutlinedIcon />  06-00000</a>
+                <a href='tel:06 000000' class="contact-pannel-btn text-decoration-none"><PhoneOutlinedIcon />  06-00000</a>
             </div>
         </div>
     );

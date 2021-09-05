@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 import ModalVideo from 'react-modal-video'
 import exper1 from "../../../assets/images/ExperienceAGS/exper1.png";
@@ -49,8 +49,8 @@ export default function ACTabs() {
         margin: 10,
         items: 4,
         autoplay: true,
-        dots:true,
-        responsive:{
+        dots: true,
+        responsive: {
             0: {
                 items: 1,
             },
@@ -65,24 +65,24 @@ export default function ACTabs() {
             },
         }
     };
-    return(
-        <div className={"ACTabs"}>
+    return (
+        <div className={"ACTabs"} dir="ltr">
             <h2 className={"InfoTitle"}>EXPERIENCE THE AGS DIFFERENCE</h2>
             <OwlCarousel className="owl-theme" {...options}>
-                { slidesData.map((slides, index) => (
+                {slidesData.map((slides, index) => (
                     <div className={"divstyle"}>
                         <div className="d-flex justify-content-center align-items-center imgheight"
-                             style={{ backgroundImage: `url(${slides.thumbnail})` }}
+                            style={{ backgroundImage: `url(${slides.thumbnail})` }}
                         >
                             <div className="video-promo-content mt-4 ">
                                 {slides.video_link && (
                                     <button className="btn video-play-icon"
-                                            onClick={() => {
-                                                setCurrentIndex(index);
-                                                setOpenVideo(true);
-                                            }}
+                                        onClick={() => {
+                                            setCurrentIndex(index);
+                                            setOpenVideo(true);
+                                        }}
                                     >
-                                        <PlayArrowIcon className={"playSize"}/>
+                                        <PlayArrowIcon className={"playSize"} />
                                     </button>
                                 )}
                                 <h5 className={"overview-heading"}>

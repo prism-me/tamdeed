@@ -37,7 +37,8 @@ function HomeHeader(props) {
   return (
     <>
       <Hidden smDown>
-        <div style={{ height: '', backgroundImage: `url(${isPlaying && header_bg})` }} className={"BackgroundVideoDiv"} >
+        <div style={{ height: '', backgroundImage: `url(${isPlaying && header_bg})` }} className={isPlaying ? "videoBottom" : "BackgroundDiv"}>
+
           <BackGroundVideo
             // blur={2}
             videoSource={videoSource}>

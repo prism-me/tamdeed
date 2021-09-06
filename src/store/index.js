@@ -4,7 +4,8 @@ import {
     persistReducer,
 } from "redux-persist";
 import storage from "redux-persist/lib/storage";
-import globalReducer from "../redux/global/reducers";
+import { routerReducer } from "react-router-redux";
+import globalReducer from "../redux/global/reducerI18";
 
 const persistConfig = {
     key: "root",
@@ -14,6 +15,7 @@ const persistConfig = {
 
 const rootReducer = combineReducers({
     globalReducer: globalReducer,
+    routing: routerReducer
 });
 
 

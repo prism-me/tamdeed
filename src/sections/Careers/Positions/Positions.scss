@@ -15,7 +15,6 @@
     margin-top: 0px;
   }
   .schoolbtn{
-    background: $white;
     border: 1px solid $bg-color;
     border-radius: 100px;
     color: $white;
@@ -23,6 +22,10 @@
     font-size: 18px;
     font-weight: 500;
     background: $bg-color;
+    &:hover{
+      background: $hover-color;
+      color: $black;
+    }
     @media #{$sm,$md,$xsm,$tiny} {
       width: auto;
     }

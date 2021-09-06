@@ -3,21 +3,12 @@ import { Redirect, Switch } from "react-router-dom";
 import { withRouter, Router } from "react-router-dom";
 import { routes } from "./routes";
 import Route from "./../components/CustomRoute";
-// import i18n from "../i18n";
-
-
-// const baseRouteUrl = "/:locale(en|ar)?";
-// export const baseUrl = i18n.language === 'ar' ? '' : '/' + i18n.language;
-// import { customHistory } from "history";
-// import Home from "../pages/Home";
-// import Login from "../components/Modals/Login/Login";
-// import Register from "../components/Modals/Register/Register";
+import { connect } from "react-redux";
 
 class Navigation extends Component {
 
   state = {
     loginModal: false,
-    // isOpen: false
   };
   setLoginModal = (status) => { };
   render() {
@@ -57,32 +48,22 @@ class Navigation extends Component {
         /> */}
         {routes.map((route) => {
           return (
-
-            //   <div>
-            //     <Router>
-            //       <Switch>
-            //         <Route exact path={`/:lng(en|ar)?`.route.path} component={route.component} />
-            //         exact={route.exact}
-            //         {/* regex CHECK
-            //         ... */}
-            //         isPrivate={route.isPrivate}
-            //         {/* <Route component={NoMatch} /> */}
-            //       </Switch>
-            //     </Router>
-            //   </div>
-
             <Route
-              path={route.path}
+              path={`/${this.props.currentLng}${route.path}`}
               exact={route.exact}
               component={route.component}
               isPrivate={route.isPrivate}
             />
           );
         })}
-        <Redirect to="/" />
+        <Redirect to={`/${this.props.currentLng}`} />
       </Switch>
     );
   }
 }
 
-export default withRouter(Navigation);
+const mapStateToProps = ({ globalReducer }) => ({
+  currentLng: globalReducer.currentLng
+})
+
+export default connect(mapStateToProps)(withRouter(Navigation));

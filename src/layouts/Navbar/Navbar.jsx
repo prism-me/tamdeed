@@ -16,6 +16,8 @@ import { useTranslation } from 'react-i18next';
 import i18next from 'i18next'
 import cookies from 'js-cookie'
 import classNames from 'classnames'
+import { useDispatch } from "react-redux";
+import * as Actions from "../../redux/global/actions";
 
 const languages = [
   {
@@ -31,12 +33,12 @@ const languages = [
   },
 ]
 
-// export const baseUrl = i18n.language === 'ar' ? '' : '/' + i18n.language;
-
 function MainNavbar(props) {
+
   const currentLanguageCode = cookies.get('i18next') || 'en'
   const currentLanguage = languages.find((l) => l.code === currentLanguageCode)
   const { t } = useTranslation();
+  let dispatch = useDispatch();
 
   useEffect(() => {
     console.log('Setting page stuff')
@@ -45,9 +47,8 @@ function MainNavbar(props) {
   }, [currentLanguage, t])
 
   const history = useHistory();
-  // const changeLanguage = (lng) => {
-  //   i18n.changeLanguage(lng);
-  // }
+
+  console.log("main", `/${currentLanguageCode}${STRINGS.ROUTES.ABOUT_US}`)
   return (
     <div className="navbar-wrap">
       <Navbar
@@ -80,23 +81,23 @@ function MainNavbar(props) {
         </Hidden>
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ml-auto navborder">
-            <LinkContainer to={STRINGS.ROUTES.ABOUT_US}>
+            <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.ABOUT_US}`}>
               <Nav.Link>About Us</Nav.Link>
             </LinkContainer>
-            <LinkContainer to={STRINGS.ROUTES.ACADEMICS}>
+            <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.ACADEMICS}`}>
               <Nav.Link> Academics </Nav.Link>
             </LinkContainer>
             {/* <LinkContainer to={baseUrl + "/Student-care"}> */}
-            <LinkContainer to={"/Student-care"}>
+            <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.STUDENT_CARE}`}>
               <Nav.Link> Student care </Nav.Link>
             </LinkContainer>
-            <LinkContainer to={STRINGS.ROUTES.AGS_PORTAL}>
+            <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.AGS_PORTAL}`}>
               <Nav.Link>AGS Portal</Nav.Link>
             </LinkContainer>
-            <LinkContainer to={STRINGS.ROUTES.CONTACT_US}>
+            <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.CONTACT_US}`}>
               <Nav.Link>Contact Us</Nav.Link>
             </LinkContainer>
-            <LinkContainer to="/Enroll">
+            <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.ENROLL}`}>
               <button className={"enrollButton"}>Enroll</button>
             </LinkContainer>
             <NavDropdown
@@ -112,7 +113,9 @@ function MainNavbar(props) {
                       disabled: currentLanguageCode === code,
                     })}
                     onClick={() => {
-                      i18next.changeLanguage(code)
+                      i18next.changeLanguage(code);
+                      //history.push(`/${code}${STRINGS.ROUTES.ABOUT_US}`)
+                      dispatch(Actions.setCurrentLngCode(code))
                     }}
                   >
                     <span
@@ -132,4 +135,5 @@ function MainNavbar(props) {
     </div>
   );
 }
+
 export default MainNavbar;

@@ -87,7 +87,6 @@ function MainNavbar(props) {
             <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.ACADEMICS}`}>
               <Nav.Link> Academics </Nav.Link>
             </LinkContainer>
-            {/* <LinkContainer to={baseUrl + "/Student-care"}> */}
             <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.STUDENT_CARE}`}>
               <Nav.Link> Student care </Nav.Link>
             </LinkContainer>

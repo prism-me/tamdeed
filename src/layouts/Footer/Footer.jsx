@@ -9,8 +9,17 @@ import TwitterIcon from '@material-ui/icons/Twitter';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import PhoneIcon from '@material-ui/icons/Phone';
 import { STRINGS } from "../../utils/base";
+import { useTranslation } from 'react-i18next';
+import cookies from 'js-cookie'
 
 function Footer() {
+  const currentLanguageCode = cookies.get('i18next') || 'en'
+
+  {
+    console.log("language", currentLanguageCode)
+  }
+
+  const { t } = useTranslation();
   return (
     <div className={"footer-Wrape"}>
       <footer>
@@ -47,7 +56,7 @@ function Footer() {
                 OUR SCHOOL
               </h5>
               <Nav className="flex-column">
-                <LinkContainer to={STRINGS.ROUTES.ABOUT_US}>
+                <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.ABOUT_US}`}>
                   <Nav.Link className=" fdeco"> About us </Nav.Link>
                 </LinkContainer>
                 <LinkContainer to="#">
@@ -56,10 +65,10 @@ function Footer() {
                 <LinkContainer to="#">
                   <Nav.Link className=" fdeco">  Our Team </Nav.Link>
                 </LinkContainer>
-                <LinkContainer to="/careers">
+                <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.CAREERS}`}>
                   <Nav.Link className=" fdeco"> Join Our Team </Nav.Link>
                 </LinkContainer>
-                <LinkContainer to="/FAQMain">
+                <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.FAQ}`}>
                   <Nav.Link className=" fdeco">  FAQs </Nav.Link>
                 </LinkContainer>
               </Nav>
@@ -72,16 +81,16 @@ function Footer() {
                 <LinkContainer to="#">
                   <Nav.Link className=" fdeco">  Virtual Admissions </Nav.Link>
                 </LinkContainer>
-                <LinkContainer to="/Enroll">
+                <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.ENROLL}`}>
                   <Nav.Link className=" fdeco">Enroll Online</Nav.Link>
                 </LinkContainer>
-                <LinkContainer to="/Enroll">
+                <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.ENROLL}`}>
                   <Nav.Link className=" fdeco"> Tuition Fees</Nav.Link>
                 </LinkContainer>
-                <LinkContainer to="/Enroll">
+                <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.ENROLL}`}>
                   <Nav.Link className=" fdeco"> Request for a callback </Nav.Link>
                 </LinkContainer>
-                <LinkContainer to="/Enroll">
+                <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.ENROLL}`}>
                   <Nav.Link className=" fdeco"> School Tours</Nav.Link>
                 </LinkContainer>
               </Nav>
@@ -91,13 +100,13 @@ function Footer() {
                 ACADEMICS
               </h5>
               <Nav className="flex-column">
-                <LinkContainer to="/academics">
+                <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.ACADEMICS}`}>
                   <Nav.Link className=" fdeco"> Academic Calendar </Nav.Link>
                 </LinkContainer>
                 <LinkContainer to="#">
                   <Nav.Link className=" fdeco">  Our Curriculum </Nav.Link>
                 </LinkContainer>
-                <LinkContainer to="/Student-care">
+                <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.STUDENT_CARE}`}>
                   <Nav.Link className=" fdeco">  Student Care support  </Nav.Link>
                 </LinkContainer>
               </Nav>

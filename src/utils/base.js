@@ -10,6 +10,10 @@ export const STRINGS = {
         CAREERS: "/careers",
         ENROLL: "/Enroll",
         PRIMARYSCHOOL: "/Primary-school",
+        MIDDLE_SCHOOL: "/Middle-school",
+        KINDERGARTEN: "/KinderGarten",
+        FAQ: "/FAQMain",
+        ONLINE_FORM: "OnlineForm"
     },
     REQUEST_STATUS: 200,
     REGEX: {

@@ -1,12 +1,14 @@
 import React from 'react';
-
 import { Grid } from "@material-ui/core";
 import kindergarten_img from "../../../assets/images/academics/kindergarten_img.jpg";
 import middle_school from "../../../assets/images/academics/m_school.jpg";
 import p_school from "../../../assets/images/academics/p_school.jpg";
 import { useHistory } from "react-router-dom";
+import cookies from 'js-cookie'
+import { STRINGS } from "../../../utils/base";
 
 const AcademicsCurriculum = () => {
+    const currentLanguageCode = cookies.get('i18next') || 'en'
     const history = useHistory();
 
     return (
@@ -27,7 +29,7 @@ const AcademicsCurriculum = () => {
                     <div className={"mx-2 divstyle wc"}
                         style={{ cursor: "pointer" }}
                         onClick={() => {
-                            history.push('/KinderGarten');
+                            history.push(`/${currentLanguageCode}${STRINGS.ROUTES.KINDERGARTEN}`);
                         }}
                     >
                         <div className="d-flex justify-content-center align-items-center imgheight ch"
@@ -43,7 +45,7 @@ const AcademicsCurriculum = () => {
                     <div className={"mx-2 divstyle wc"}
                         style={{ cursor: "pointer" }}
                         onClick={() => {
-                            history.push('/primary-school');
+                            history.push(`/${currentLanguageCode}${STRINGS.ROUTES.PRIMARYSCHOOL}`);
                         }}
                     >
                         <div className="d-flex justify-content-center align-items-center imgheight ch"
@@ -63,7 +65,7 @@ const AcademicsCurriculum = () => {
                             <div className="video-promo-content mt-4 "
                                 style={{ cursor: "pointer" }}
                                 onClick={() => {
-                                    history.push('/Middle-school');
+                                    history.push(`/${currentLanguageCode}${STRINGS.ROUTES.MIDDLE_SCHOOL}`);
                                 }}
                             >
                                 <h5 className={"overview-heading position-static text-nowrap"}>

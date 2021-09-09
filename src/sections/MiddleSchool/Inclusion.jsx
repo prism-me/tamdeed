@@ -11,10 +11,13 @@ function Inclusion() {
   const [isOpen, setOpen] = useState(false);
   return (
     <div className="MiddleSchool">
+      <h3 className={"InfoTitle"}>
+        Middle School
+      </h3>
       <Container>
         <div className={"HowToSellspacing"}>
           <Row className="MiddleAlignCenter">
-            <Col sm={12} md={4} lg={4}>
+            <Col sm={12} md={4} lg={12}>
               <div
                 className="d-flex justify-content-center align-items-center imgheight"
                 style={{ backgroundImage: `url(${std1})` }}
@@ -36,7 +39,7 @@ function Inclusion() {
                 </div>
               </div>
             </Col>
-            <Col sm={12} md={8} lg={8} className="TabMobileSpacing">
+            <Col sm={12} md={8} lg={12}>
               <h3 className="title">Nec ornare.</h3>
               <p className={"subTitle"}>
                 Quam sit eget in leo. Consectetur pellentesque adipiscing aenean
@@ -55,32 +58,10 @@ function Inclusion() {
           </Row>
         </div>
         <div className={"HowToSellspacing"}>
-          <Row className="MiddleAlignCenter">
-            {/* <Col sm={12} className="MobileView">
-              <div
-                className="d-flex justify-content-center align-items-center imgheight"
-                style={{ backgroundImage: `url(${std2})` }}
-              >
-                <div className="video-promo-content mt-4 ">
-                  <ModalVideo
-                    channel="youtube"
-                    autoplay
-                    isOpen={isOpen}
-                    videoId="RBZutrFFhTA"
-                    onClose={() => setOpen(false)}
-                  />
-                  <button
-                    className="btn video-play-icon"
-                    onClick={() => setOpen(true)}
-                  >
-                    <PlayArrowIcon className={"playSize"} />
-                  </button>
-                </div>
-              </div>
-            </Col> */}
-            <Col sm={12} md={8} lg={8} className="TabMobileSpacing">
-              <h3 className="title">Turpis vitae.</h3>
-              <p className={"subTitle"}>
+          <Row className="TabMobileSpacing">
+            <Col sm={12} md={8} lg={8}>
+              <h3 className="title1">Turpis vitae.</h3>
+              <p className={"subTitle1"}>
                 Congue faucibus at aliquet tincidunt nisi, habitant euismod
                 mauris. Ultrices porta turpis lectus ut. Ipsum leo mi augue
                 viverra. Ipsum, leo quam augue aliquam at vitae blandit neque
@@ -97,7 +78,7 @@ function Inclusion() {
                 Mattis nulla.
               </p>
             </Col>
-            <Col sm={12} md={4} lg={4} className="DesktopView">
+            <Col sm={12} md={4} lg={4}>
               <div
                 className="d-flex justify-content-center align-items-center imgheight"
                 style={{ backgroundImage: `url(${std2})` }}
@@ -121,8 +102,8 @@ function Inclusion() {
             </Col>
           </Row>
         </div>
-        <div className={"HowToSellspacing lastSection"}>
-          <Row className="MiddleAlignCenter">
+        <div className={"HowToSellspacing"}>
+          <Row className="TabMobileSpacing mb-5">
             <Col sm={12} md={4} lg={4}>
               <div
                 className="d-flex justify-content-center align-items-center imgheight"
@@ -145,9 +126,9 @@ function Inclusion() {
                 </div>
               </div>
             </Col>
-            <Col sm={12} md={8} lg={8} className="TabMobileSpacing">
-              <h3 className="title">Pellentesque.</h3>
-              <p className={"subTitle"}>
+            <Col sm={12} md={8} lg={8}>
+              <h3 className="title1">Pellentesque.</h3>
+              <p className={"subTitle2"}>
                 Ac quam at et, libero orci fames at convallis. Pellentesque
                 lacus sit aliquet tellus proin. Non in orci rhoncus, proin nisi,
                 hendrerit in pretium sit. <br />

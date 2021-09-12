@@ -17,8 +17,8 @@ export default class Home extends Component {
   componentDidMount() {
 
     API.get('/mentors').then(response => {
-      this.setState({ mentorsData: response.data });
-      // console.log("mentors", response.data);
+      this.setState({ mentorsData: response.data.data });
+      // console.log("mentors", response.data.data);
     })
       .catch(err => {
         console.log(err)

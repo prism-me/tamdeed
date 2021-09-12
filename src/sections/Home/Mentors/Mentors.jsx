@@ -10,7 +10,7 @@ import "owl.carousel/dist/assets/owl.theme.default.css";
 // import { withNamespaces } from 'react-i18next';
 import { useTranslation } from 'react-i18next';
 
-function Mentors() {
+function Mentors(props) {
     const { t } = useTranslation();
     const slidesData = [
         {
@@ -81,9 +81,12 @@ function Mentors() {
                 {t('MentorsTitle')}
                 {/* MEET THE MENTORS */}
             </h3>
+            {
+                console.log("MentorsData", props.mentors.data)
+            }
             <OwlCarousel className="owl-theme" {...options}>
                 {
-                    slidesData.map((slides, index) => (
+                    props.mentors.data.map((slides, index) => (
                         <div className={"divstyle"}>
                             <div className="imgheight"
                                 style={{ backgroundImage: `url(${slides.thumbnail})` }}

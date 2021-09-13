@@ -1,8 +1,15 @@
 import React, { useState } from "react";
 import "react-multi-carousel/lib/styles.css";
-import ags1 from "../../../assets/images/LifeInAGS/ags1.png";
-import ags2 from "../../../assets/images/LifeInAGS/ags2.png";
-import ags3 from "../../../assets/images/LifeInAGS/ags3.png";
+import ags1 from "../../../assets/images/LifeatAGS_ Third Batch/Third Batch _ 330x350/Image1.jpg";
+import ags2 from "../../../assets/images/LifeatAGS_ Third Batch/Third Batch _ 330x350/Image2.jpg";
+import ags3 from "../../../assets/images/LifeatAGS_ Third Batch/Third Batch _ 330x350/Image3.jpg";
+import ags4 from "../../../assets/images/LifeatAGS_ Third Batch/Third Batch _ 330x350/Image4.jpg";
+import ags5 from "../../../assets/images/LifeatAGS_ Third Batch/Third Batch _ 330x350/Image5.jpg";
+// import ags6 from "../../../assets/images/LifeatAGS_ Third Batch/Third Batch _ 330x350/Image6.jpg";
+// import ags7 from "../../../assets/images/LifeatAGS_ Third Batch/Third Batch _ 330x350/Image7.jpg";
+// import ags8 from "../../../assets/images/LifeatAGS_ Third Batch/Third Batch _ 330x350/Image8.jpg";
+// import ags9 from "../../../assets/images/LifeatAGS_ Third Batch/Third Batch _ 330x350/Image9.jpg";
+// import ags10 from "../../../assets/images/LifeatAGS_ Third Batch/Third Batch _ 330x350/Image10.jpg";
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 import ModalVideo from 'react-modal-video'
 import OwlCarousel from "react-owl-carousel";
@@ -16,53 +23,64 @@ function AgsSlider(props) {
     const slidesData = [
         {
             thumbnail: ags1,
-            title: "ART",
+            title: "ACADEMICS",
             Subtitle: "To stimulate thoughts, emotions and ideas through senses.",
-            video_link: "https://youtu.be/6uerYnp1DM4",
+            video_link: "https://youtu.be/frWc_ZHTt5M",
         },
         {
             thumbnail: ags2,
+            title: "ARTS",
+            Subtitle: "To stimulate thoughts, emotions and ideas through senses.",
+            video_link: "https://youtu.be/abGC90lI0H8",
+        },
+        {
+            thumbnail: ags3,
+            title: "DRAMA",
+            Subtitle: "Enjoyment, amusement and light hearted play time.",
+            video_link: "https://youtu.be/t229_pI2wcM",
+        },
+        {
+            thumbnail: ags4,
+            title: "MUSIC",
+            Subtitle: "Outdoor sports to healthier lifestyle.",
+            video_link: "https://youtu.be/Ii1yWlWa86o",
+        },
+        {
+            thumbnail: ags5,
             title: "SPORTS",
             Subtitle: "Educating swimming skills to articulate physical growth.",
-            video_link: "https://youtu.be/Nv_o3Kn9jPY",
+            video_link: "https://youtu.be/eWfMxXOHQjw",
         },
-        {
-            thumbnail: ags3,
-            title: "FUN",
-            Subtitle: "Enjoyment, amusement and light hearted play time.",
-            video_link: "https://youtu.be/DohvORAMlHs",
-        },
-        {
-            thumbnail: ags2,
-            title: "ADVENTUROUS",
-            Subtitle: "Outdoor sports to healthier lifestyle.",
-            video_link: "https://youtu.be/6uerYnp1DM4",
-        },
-        {
-            thumbnail: ags3,
-            title: "FUN",
-            Subtitle: "Enjoyment, amusement and light hearted play time.",
-            video_link: "https://youtu.be/Nv_o3Kn9jPY",
-        },
-        {
-            thumbnail: ags1,
-            title: "FUN",
-            Subtitle: "Enjoyment, amusement and light hearted play time.",
-            video_link: "https://youtu.be/DohvORAMlHs",
-        },
-        {
-            thumbnail: ags3,
-            title: "FUN",
-            Subtitle: "Enjoyment, amusement and light hearted play time.",
-            video_link: "https://youtu.be/Nv_o3Kn9jPY",
-        },
-        {
-            thumbnail: ags1,
-            title: "FUN",
-            Subtitle: "Enjoyment, amusement and light hearted play time.",
-            video_link: "https://youtu.be/DohvORAMlHs",
-        },
-
+        // {
+        //     thumbnail: ags6,
+        //     title: "FUN",
+        //     Subtitle: "Enjoyment, amusement and light hearted play time.",
+        //     video_link: "https://youtu.be/Nv_o3Kn9jPY",
+        // },
+        // {
+        //     thumbnail: ags7,
+        //     title: "FUN",
+        //     Subtitle: "Enjoyment, amusement and light hearted play time.",
+        //     video_link: "https://youtu.be/DohvORAMlHs",
+        // },
+        // {
+        //     thumbnail: ags8,
+        //     title: "FUN",
+        //     Subtitle: "Enjoyment, amusement and light hearted play time.",
+        //     video_link: "https://youtu.be/Nv_o3Kn9jPY",
+        // },
+        // {
+        //     thumbnail: ags9,
+        //     title: "FUN",
+        //     Subtitle: "Enjoyment, amusement and light hearted play time.",
+        //     video_link: "https://youtu.be/DohvORAMlHs",
+        // },
+        // {
+        //     thumbnail: ags10,
+        //     title: "FUN",
+        //     Subtitle: "Enjoyment, amusement and light hearted play time.",
+        //     video_link: "https://youtu.be/DohvORAMlHs",
+        // },
     ];
 
     const [openVideo, setOpenVideo] = useState(false);

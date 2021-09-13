@@ -1,9 +1,15 @@
 import React, { useState } from "react";
 import "react-multi-carousel/lib/styles.css";
-import mentor from "../../../assets/images/agsMentors/mentor.png";
-import mentor4 from "../../../assets/images/agsMentors/mentor2.png";
-import mentor2 from "../../../assets/images/agsMentors/mentor3.png";
-import mentor3 from "../../../assets/images/agsMentors/mentor4.png";
+import mentor1 from "../../../assets/images/Meetthementors_ Second Batch/Second Batch _ 320x400/Image1.jpg";
+import mentor2 from "../../../assets/images/Meetthementors_ Second Batch/Second Batch _ 320x400/Image2.jpg";
+import mentor3 from "../../../assets/images/Meetthementors_ Second Batch/Second Batch _ 320x400/Image3.jpg";
+import mentor4 from "../../../assets/images/Meetthementors_ Second Batch/Second Batch _ 320x400/Image4.jpg";
+import mentor5 from "../../../assets/images/Meetthementors_ Second Batch/Second Batch _ 320x400/Image5.jpg";
+import mentor6 from "../../../assets/images/Meetthementors_ Second Batch/Second Batch _ 320x400/Image6.jpg";
+import mentor7 from "../../../assets/images/Meetthementors_ Second Batch/Second Batch _ 320x400/Image7.jpg";
+import mentor8 from "../../../assets/images/Meetthementors_ Second Batch/Second Batch _ 320x400/Image8.jpg";
+import mentor9 from "../../../assets/images/Meetthementors_ Second Batch/Second Batch _ 320x400/Image9.jpg";
+import mentor10 from "../../../assets/images/Meetthementors_ Second Batch/Second Batch _ 320x400/Image10.jpg";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
@@ -11,33 +17,53 @@ import "owl.carousel/dist/assets/owl.theme.default.css";
 export default function PrincipalSlider() {
     const slidesData = [
         {
-            thumbnail: mentor,
-            title: "Aliquam fringilla",
+            thumbnail: mentor1,
+            title: "Sarah Qadir",
             Subtitle: "Adipiscing at sem",
         },
         {
             thumbnail: mentor2,
-            title: "Commodo aliquam",
+            title: "Samia Yassin",
             Subtitle: "Nunc eu massa",
         },
         {
             thumbnail: mentor3,
-            title: "Neque eu",
+            title: "Ross Moore",
             Subtitle: "Dapibus tellus eros",
         },
         {
             thumbnail: mentor4,
-            title: "Commodo male",
+            title: "Rasha Abou Zaki",
             Subtitle: "Aliquet nec nunc",
         },
         {
-            thumbnail: mentor2,
-            title: "Mi amet",
+            thumbnail: mentor5,
+            title: "Michael Skillern",
             Subtitle: "Nibh varius vestibulum",
         },
         {
-            thumbnail: mentor3,
-            title: "Commodo aliquam",
+            thumbnail: mentor6,
+            title: "Melissa Davis",
+            Subtitle: "Nunc eu massa",
+        },
+        {
+            thumbnail: mentor7,
+            title: "Leona Dowling",
+            Subtitle: "Nibh varius vestibulum",
+        },
+        {
+            thumbnail: mentor8,
+            title: "Huda Omary",
+            Subtitle: "Nunc eu massa",
+        },
+        {
+            thumbnail: mentor9,
+            title: "Haneen Almushasha",
+            Subtitle: "Nunc eu massa",
+        },
+        {
+            thumbnail: mentor10,
+            title: "Connor Stanton",
             Subtitle: "Nunc eu massa",
         },
     ];

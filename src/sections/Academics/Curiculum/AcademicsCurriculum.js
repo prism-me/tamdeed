@@ -1,8 +1,8 @@
 import React from 'react';
 import { Grid } from "@material-ui/core";
-import kindergarten_img from "../../../assets/images/academics/kindergarten_img.jpg";
-import middle_school from "../../../assets/images/academics/m_school.jpg";
-import p_school from "../../../assets/images/academics/p_school.jpg";
+import kindergarten_img from "../../../assets/images/Curriculum/Kindergarten.JPG";
+import middle_school from "../../../assets/images/Curriculum/MiddleSchool.jpg";
+import p_school from "../../../assets/images/Curriculum/PrimarySchool.JPG";
 import { useHistory } from "react-router-dom";
 import cookies from 'js-cookie'
 import { STRINGS } from "../../../utils/base";
@@ -16,12 +16,7 @@ const AcademicsCurriculum = () => {
             <h3 className={"InfoTitle"}>OUR CURRICULUM</h3>
             <Grid container className="d-flex w-100 justify-content-center">
                 <Grid item className="curr-sec">
-                    <p>The school curriculum is project-based, and student centered. It encourages, requires, and builds
-                        critical thinking, driven by inquiry combined with both knowledge and comprehensive skills. This
-                        allows learners to make authentic connections between different theories and be able to apply
-                        this knowledge in unfamiliar real-life situations. The use of our STREAM, Media, Fabrication and
-                        Design Labs, gives our learners the practice and experience to apply their knowledge and skills
-                        they are being taught to succeed within the 21st century.</p>
+                    <p>The American Gulf School curriculum is project-based, and learner centered. It encourages, requires, and builds critical thinking, driven by inquiry combined with both knowledge and comprehensive skills. This allows learners to make authentic connections between different theories and be able to apply this knowledge in unfamiliar real-life situations. The use of our STREAM, Media, Fabrication, and Design Labs, give our learners the practice and experience to apply the knowledge and skills they are being taught to succeed within the 21st century.</p>
                 </Grid>
             </Grid>
             <Grid className="d-flex w-100 justify-content-center">

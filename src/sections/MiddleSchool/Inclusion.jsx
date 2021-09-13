@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import std1 from "../../assets/images/studentcare/student1.png";
-import std2 from "../../assets/images/studentcare/student2.png";
-import std3 from "../../assets/images/studentcare/student3.png";
+import std1 from "../../assets/images/studentcare/AcademicSupport.jpg";
+import std2 from "../../assets/images/studentcare/AcademicSupport.jpg";
+import std3 from "../../assets/images/studentcare/AcademicSupport.jpg";
 import "./Inclusion.scss";
 import ModalVideo from "react-modal-video";
 import PlayArrowIcon from "@material-ui/icons/PlayArrow";
@@ -40,19 +40,11 @@ function Inclusion() {
               </div>
             </Col>
             <Col sm={12} md={8} lg={12}>
-              <h3 className="title">Nec ornare.</h3>
+              {/* <h3 className="title">Nec ornare.</h3> */}
               <p className={"subTitle"}>
-                Quam sit eget in leo. Consectetur pellentesque adipiscing aenean
-                amet leo vitae. Risus ornare dui quis donec mauris amet purus.
-                Praesent enim commodo urna lacinia. Volutpat varius nullam quis
-                sed quam enim. Neque, velit ac et, elementum. Vulputate tempor
-                duis at lectus. Sed lorem eget tellus, vel odio diam magna nunc.
-                Massa ipsum aliquam ullamcorper amet. Et nunc facilisi sed
-                aliquet bibendum cras curabitur commodo netus. Turpis
-                consectetur in pellentesque quam justo, ac dictumst consequat.
-                Molestie vulputate sed mattis netus nunc, vel ante. <br />
-                Id netus vestibulum donec neque. Bibendum aliquam orci convallis
-                velit.
+                The AGS Middle School is designed for learners aged 11 to 16. It develops active learners and internationally minded young people who can empathize with others and pursue lives of purpose and meaning.
+                It empowers learners to inquire into a wide range of issues and ideas of significance locally, nationally, and globally – essential qualities for global leaders of the future.
+                It builds upon the knowledge, skills, and attitudes developed in Primary School.The result is young people who are creative, critical, and reflective thinkers.
               </p>
             </Col>
           </Row>
@@ -60,23 +52,22 @@ function Inclusion() {
         <div className={"HowToSellspacing"}>
           <Row className="TabMobileSpacing">
             <Col sm={12} md={8} lg={8}>
-              <h3 className="title1">Turpis vitae.</h3>
+              <h3 className="title1">Middle Years Program</h3>
               <p className={"subTitle1"}>
-                Congue faucibus at aliquet tincidunt nisi, habitant euismod
-                mauris. Ultrices porta turpis lectus ut. Ipsum leo mi augue
-                viverra. Ipsum, leo quam augue aliquam at vitae blandit neque
-                leo. At massa varius orci, sagittis accumsan neque quam nisl.
-                Fames nisi, in cum pellentesque auctor tortor. <br />
-                Id ac nisi cras vitae bibendum sed turpis porttitor. Eu in eget
-                cras odio. <br />
-                Viverra pellentesque arcu ultrices nibh purus nisi, sed. Proin
-                sit id id nunc varius elementum amet morbi volutpat. Ultrices
-                purus, lorem bibendum augue enim elementum donec eleifend
-                egestas. Commodo ut ultrices amet mi, maecenas lorem diam
-                dignissim. <br />
-                Aenean nisl lectus ut ultrices orci cursus eu faucibus odio.
-                Mattis nulla.
+                The Middle Years Program encourages learners to make practical connections between their studies and the real world. It is designed to help learners develop their personal understanding, their emerging sense of self, and their own responsibility in their community.
               </p>
+              <p><b>The Middle school offers 8 subject groups:</b></p>
+              <ul>
+                <li>Language Acquisition</li>
+                <li> Language and Literature</li>
+                <li>Individuals and Society </li>
+                <li>Sciences </li>
+                <li>Mathematics </li>
+                <li>Arts </li>
+                <li>Physical and Health Education </li>
+                <li>Design </li>
+              </ul>
+              <p className={"subTitle1"}>In Grades 9 and 10, learners have the option to take courses from six of the eight subject groups within certain limits, to provide greater flexibility in meeting local requirements and individual learner needs.</p>
             </Col>
             <Col sm={12} md={4} lg={4}>
               <div
@@ -102,8 +93,22 @@ function Inclusion() {
             </Col>
           </Row>
         </div>
+        <Row className="MiddleAlignCenter">
+          <Col sm={12} md={12} lg={12} className="pt-3">
+            <p className={"subTitle text-center"}>
+              Each year, learners in the Middle School also engage in at least one collaboratively planned interdisciplinary unit that involves at least two subject groups.
+            </p>
+          </Col>
+        </Row>
+        <Row className="MiddleAlignCenter">
+          <Col sm={12} md={12} lg={12} className="pt-3">
+            <p className={"subTitle text-center"}>
+              Middle School learners also complete a long-term project, where they decide what they want to learn about, identify what they already know, discover what they will need to know in order to complete the project and create a proposal or criteria for completing it.
+            </p>
+          </Col>
+        </Row>
         <div className={"HowToSellspacing"}>
-          <Row className="TabMobileSpacing mb-5">
+          <Row className="TabMobileSpacing">
             <Col sm={12} md={4} lg={4}>
               <div
                 className="d-flex justify-content-center align-items-center imgheight"
@@ -127,15 +132,47 @@ function Inclusion() {
               </div>
             </Col>
             <Col sm={12} md={8} lg={8}>
-              <h3 className="title1">Pellentesque.</h3>
+              <h3 className="title1">International Mindedness and Multilingualism</h3>
               <p className={"subTitle2"}>
-                Ac quam at et, libero orci fames at convallis. Pellentesque
-                lacus sit aliquet tellus proin. Non in orci rhoncus, proin nisi,
-                hendrerit in pretium sit. <br />
-                Elementum in euismod leo fermentum tortor, facilisi id leo.
-                Vulputate donec rhoncus aliquam lobortis enim ultricies sapien
-                dis tortor. Condimentum.
+                We view nationality as an institutional capturing of one form of identity, and within our school, we believe that people of all nations have more in common than they do differences. American Gulf School appreciates the diverse cultures of the world and believes that education is a vehicle for creating a better, more peaceful world.
+                <br />
+                The AGS library has a variety of books to help learners from different backgrounds to read books in their mother tongue.
               </p>
+            </Col>
+          </Row>
+        </div>
+        <div className={"HowToSellspacing"}>
+          <Row className="TabMobileSpacing mb-5">
+            <Col sm={12} md={8} lg={8}>
+              <h3 className="title1">Lifelong Learners</h3>
+              <p className={"subTitle1"}>
+                At American Gulf School, we believe that lifelong learning enables each learner to develop confidence and perseverance to tackle any challenge they are given. We encourage learners to work together inside and outside the classroom as well as online, to achieve better results.
+              </p>
+              <p className={"subTitle1"}>
+                Lifelong learning builds self-awareness and respect for others. Learners develop invaluable leadership skills through learning to plan, negotiate, compromise, and consider. They are taught how to take constructive criticism and act upon it, as well as how to give it in order to get the task completed, therefore learning from it.
+              </p>
+            </Col>
+            <Col sm={12} md={4} lg={4}>
+              <div
+                className="d-flex justify-content-center align-items-center imgheight"
+                style={{ backgroundImage: `url(${std2})` }}
+              >
+                <div className="video-promo-content mt-4 ">
+                  <ModalVideo
+                    channel="youtube"
+                    autoplay
+                    isOpen={isOpen}
+                    videoId="RBZutrFFhTA"
+                    onClose={() => setOpen(false)}
+                  />
+                  <button
+                    className="btn video-play-icon"
+                    onClick={() => setOpen(true)}
+                  >
+                    <PlayArrowIcon className={"playSize"} />
+                  </button>
+                </div>
+              </div>
             </Col>
           </Row>
         </div>

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import std1 from "../../assets/images/studentcare/student1.png";
-import std2 from "../../assets/images/studentcare/student2.png";
-import std3 from "../../assets/images/studentcare/student3.png";
+import std1 from "../../assets/images/studentcare/AcademicSupport.jpg";
+import std2 from "../../assets/images/studentcare/AcademicSupport.jpg";
+import std3 from "../../assets/images/studentcare/AcademicSupport.jpg";
 import "./Inclusion.scss";
 import ModalVideo from "react-modal-video";
 import PlayArrowIcon from "@material-ui/icons/PlayArrow";
@@ -43,15 +43,7 @@ function Inclusion() {
           <Row className="MiddleAlignCenter">
             <Col sm={12} md={12} lg={12} className="pt-5">
               <p className={"subTitle mt-3 text-center"}>
-                American Gulf School has created a dynamic Pre-K, KG1 and KG2
-                Program to fulfill the developmental needs and interests of 3-
-                to 6-year-old learners. Learning at AGS is a holistic learning
-                experience that ensures all aspects of development are
-                integrated (social, emotional, physical, and cognitive). At AGS,
-                we believe that learners will only make excellent academic
-                growth when they are happy, feel safe and are settled socially.
-                We place a strong emphasis on pastoral care from the moment a
-                child joins our school.
+                American Gulf School has created a dynamic Pre-K, KG1 and KG2 Program to fulfill the developmental needs and interests of 3- to 6-year-old learners. Learning at AGS is a holistic learning experience that ensures all aspects of development are integrated (social, emotional, physical, and cognitive). At AGS, we believe that learners will only make excellent academic growth when they are happy, feel safe and are settled socially. We place a strong emphasis on pastoral care from the moment a child joins our school.
               </p>
             </Col>
           </Row>
@@ -82,19 +74,7 @@ function Inclusion() {
             </Col> */}
             <Col sm={12} md={8} lg={8} >
               <p className={"subTitle mt-3"}>
-                At AGS we ensure that to achieve these goals and expectations,
-                our KG department is flexible, ensuring children’s learning is
-                through play and practical hands-on activities. The curriculum
-                is designed to foster curiosity, inspire, and teach children to
-                be reflective. To support learning, our classroom environments
-                are set up so learners can move freely around areas for reading,
-                writing, art, construction, imaginative play, science, and
-                mathematics. Class sizes of no more than 15 children are
-                permitted. Learners benefit from the educational experiences
-                that their teachers provide for them. It is for this reason that
-                each classroom is staffed by a qualified, experienced teacher,
-                one full-time teacher assistant and academic support teacher
-                when needed.
+                At AGS we ensure that to achieve these goals and expectations, our KG department is flexible, ensuring children’s learning is through play and practical hands-on activities. Our Kindergarten curriculum is designed to foster curiosity, inspire, and teach children to be reflective. To support learning, our classroom environments are set up so learners can move freely around areas for reading, writing, art, construction, imaginative play, science, and mathematics. Class sizes of no more than 15 children are permitted.  Learners benefit from the educational experiences that their teachers provide for them. It is for this reason that each classroom is staffed by a qualified, experienced teacher, one full-time teacher assistant and an academic support teacher when needed.
               </p>
             </Col>
             <Col sm={12} md={4} lg={4} className="MiddleAlignCenter">
@@ -124,24 +104,14 @@ function Inclusion() {
         <Row className="MiddleAlignCenter">
           <Col sm={12} md={12} lg={12} className="pt-3">
             <p className={"subTitle text-center"}>
-              Each child’s mental, physical, and social abilities are developed
-              through a multi-sensory approach to education. Individual and
-              group activities stimulate cognitive development and social
-              growth. In addition, teachers often divide classes into smaller
-              work groups and employ a system of learning centers to maximize
-              each child’s achievement.
+              Each child’s mental, physical, and social abilities are developed through a multi-sensory approach to education. Individual and group activities stimulate cognitive development and social growth. In addition, teachers often divide classes into smaller work groups and employ a system of learning centers to maximize each child’s achievement.
             </p>
           </Col>
         </Row>
         <Row className="MiddleAlignCenter">
           <Col sm={12} md={12} lg={12} className="pt-3">
             <p className={"subTitle text-center"}>
-              We continually and consistently encourage each child to grow and
-              develop individually, honoring each child’s uniqueness. Young
-              children need extended periods of time and as much space as
-              possible to discover, investigate and play, with a variety of
-              materials, in order to learn about themselves, other people and
-              the world around them.
+              At American Gulf School, we continually and consistently encourage each child to grow and develop individually, honoring each child’s uniqueness. Young children need extended periods of time and as much space as possible to discover, investigate and play, with a variety of materials, in order to learn about themselves, other people and the world around them.
             </p>
           </Col>
         </Row>
@@ -172,9 +142,7 @@ function Inclusion() {
             </Col>
             <Col sm={12} md={8} lg={8} className="pl-5 MobileSpacing">
               <p className={"subTitle mt-3"}>
-                The KG environment reflects the natural developmental stages of
-                learning and characterizes our program through our well-equipped
-                and organized:
+                The KG environment reflects the natural developmental stages of learning and characterizes our program through our well-equipped and organized:
                 <ul>
                   <li>Classrooms</li>
                   <li>Resource room</li>

@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
-import {Grid} from "@material-ui/core";
-import {Card, Col, Row} from "react-bootstrap";
+import React, { useState } from 'react';
+import { Grid } from "@material-ui/core";
+import { Card, Col, Row } from "react-bootstrap";
 import bg_img_e from "../../../assets/images/academics/BG.png";
 import CalendarView from "../CalendarView/CalenderView";
 
@@ -11,7 +11,7 @@ const defaultState = {
 const AgsEthos = () => {
 
     const [init, setInit] = useState(defaultState);
-    let {modalShow} = init;
+    let { modalShow } = init;
 
     return (
         <Grid container className="info-tabs justify-content-center accreditation-paths">
@@ -30,7 +30,7 @@ const AgsEthos = () => {
                     <CalendarView show={modalShow} onHide={() => setInit({
                         ...init,
                         modalShow: false
-                    })}/>
+                    })} />
                 </Grid>
             </Grid>
             <div className="d-flex w-100 justify-content-center small-calendar-view">
@@ -45,10 +45,10 @@ const AgsEthos = () => {
                     <img alt={'#'} className={"ac-bg"} src={bg_img_e} style={{
                         visibility: "hidden",
                         display: "inline-block"
-                    }}/>
+                    }} />
                     <h3 className="InfoTitle-Ethos">ACCREDITATIONS</h3>
                     <Grid container sm={12}
-                          className="d-flex w-100 justify-content-center align-items-center position-absolute">
+                        className="d-flex w-100 justify-content-center align-items-center position-absolute">
                         <Card className={"cardStyle"}>
                             <Card.Body >
                                 <Col>
@@ -58,8 +58,8 @@ const AgsEthos = () => {
                                                 <p className={"subtitle"}>
                                                     <strong>American Gulf School</strong> is a candidate school for
                                                     the <strong>International
-                                                    Baccalaureate (IB) Primary Years Programme </strong> and <strong> Middle
-                                                    Years Programme </strong>and pursuing <strong>authorization</strong> as
+                                                        Baccalaureate (IB) Primary Years Programme </strong> and <strong> Middle
+                                                            Years Programme </strong>and pursuing <strong>authorization</strong> as
                                                     an <strong>IB World School.</strong>
                                                 </p>
                                             </Col>
@@ -69,11 +69,7 @@ const AgsEthos = () => {
                                         <Col>
                                             <Col xs sm md lg>
                                                 <p className={"subtitle"}>
-                                                    IB World Schools share
-                                                    a common philosophy—a commitment to improve the teaching and learning of
-                                                    a diverse and inclusive community of students by delivering challenging,
-                                                    high quality programmes of international education that share a powerful
-                                                    vision.
+                                                    IB World Schools share a common philosophy—a commitment to improving the teaching and learning of a diverse and inclusive community of learners by delivering challenging, high quality programmes of International education within the UAE that share a powerful vision.
                                                 </p>
                                             </Col>
                                         </Col>
@@ -82,8 +78,7 @@ const AgsEthos = () => {
                                         <Col>
                                             <Col xs sm md lg>
                                                 <p className={"subtitle"}>
-                                                    American Gulf School also applied for Cognia accreditation for
-                                                    American Curriculum Schools.
+                                                    American Gulf School has also applied for Cognia accreditation for American Curriculum Schools.
                                                 </p>
                                             </Col>
                                         </Col>
@@ -100,16 +95,13 @@ const AgsEthos = () => {
                     <Grid item className="b-para">
                         <p><strong>American Gulf School</strong> is a candidate school for the <strong>International
                             Baccalaureate (IB) Primary Years Programme </strong> and <strong> Middle Years
-                            Programme </strong>and pursuing <strong>authorization</strong> as an <strong>IB World
-                            School.</strong></p>
-                        <p>IB World Schools share
-                            a common philosophy—a commitment to improve the teaching and learning of
-                            a diverse and inclusive community of students by delivering challenging,
-                            high quality programmes of international education that share a powerful
-                            vision.
+                                Programme </strong>and pursuing <strong>authorization</strong> as an <strong>IB World
+                                    School.</strong>
                         </p>
-                        <p>American Gulf School also applied for Cognia accreditation for
-                            American Curriculum Schools.</p>
+                        <p>
+                            IB World Schools share a common philosophy—a commitment to improving the teaching and learning of a diverse and inclusive community of learners by delivering challenging, high quality programmes of International education within the UAE that share a powerful vision.
+                        </p>
+                        <p>American Gulf School has also applied for Cognia accreditation for American Curriculum Schools.</p>
                     </Grid>
                 </Grid>
             </Grid>

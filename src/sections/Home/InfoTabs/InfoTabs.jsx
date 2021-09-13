@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 import ModalVideo from 'react-modal-video'
-import exper1 from "../../../assets/images/ExperienceAGS/exper1.png";
-import exper2 from "../../../assets/images/ExperienceAGS/exper2.png";
-import exper3 from "../../../assets/images/ExperienceAGS/exper3.png";
+import exper1 from "../../../assets/images/ExperiencewithAGS/Fully Bilingual School/FullyBilingualSchool.jpg";
+import exper2 from "../../../assets/images/ExperiencewithAGS/International Baccalaureate Candidate/IBCandidateSchool.JPG";
+import exper3 from "../../../assets/images/ExperiencewithAGS/Project Based Learning and Teaching/Project-BasedTeachingandLearning.JPG";
+import exper4 from "../../../assets/images/ExperiencewithAGS/Full Academic Support For Child's Learning Needs/FullAcademicSupport.JPG";
+import exper5 from "../../../assets/images/ExperiencewithAGS/Stream and Fabrication Labs/StreamandFabrictonLabs.JPG";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
@@ -15,43 +17,31 @@ function InfoTabs() {
   const slidesData = [
     {
       thumbnail: exper1,
-      title: "Provide self directed & engaged learning.",
-      video_link: "https://youtu.be/6uerYnp1DM4",
+      // title: "Provide self directed & engaged learning.",
+      title: "Fully Bilingual School",
+      video_link: "https://youtu.be/-RbBzRWBiSE",
     },
     {
       thumbnail: exper2,
-      title: "manpower taking on challenges.",
-      video_link: "https://youtu.be/Nv_o3Kn9jPY",
+      // title: "manpower taking on challenges.",
+      title: "International Baccalaureate Candidate",
+      video_link: "https://youtu.be/8q9rBaO-q3A",
     },
     {
       thumbnail: exper3,
-      title: "Stimulate critical thinking among all the children",
-      video_link: "https://youtu.be/DohvORAMlHs",
+      // title: "Stimulate critical thinking among all the children",
+      title: "Project Based Learning and Teaching",
+      video_link: "https://youtu.be/EP4A8OZi9Eg",
     },
     {
-      thumbnail: exper2,
-      title: "Provide self directed & engaged learning.",
-      video_link: "https://youtu.be/6uerYnp1DM4",
+      thumbnail: exper4,
+      title: "Full Academic Support For Child's Learning Needs",
+      video_link: "https://youtu.be/PzRbz8BnnMA",
     },
     {
-      thumbnail: exper1,
-      title: "manpower taking on challenges.",
-      video_link: "https://youtu.be/Nv_o3Kn9jPY",
-    },
-    {
-      thumbnail: exper3,
-      title: "Stimulate critical thinking among all the children",
-      video_link: "https://youtu.be/DohvORAMlHs",
-    },
-    {
-      thumbnail: exper1,
-      title: "manpower taking on challenges.",
-      video_link: "https://youtu.be/Nv_o3Kn9jPY",
-    },
-    {
-      thumbnail: exper3,
-      title: "Stimulate critical thinking among all the children",
-      video_link: "https://youtu.be/DohvORAMlHs",
+      thumbnail: exper5,
+      title: "Stream and Fabrication Labs",
+      video_link: "https://youtu.be/Rbts9BxV26U",
     },
   ];
   const [openVideo, setOpenVideo] = useState(false);

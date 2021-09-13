@@ -99,7 +99,7 @@ function MainNavbar(props) {
             <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.ENROLL}`}>
               <button className={"enrollButton"}>Enroll</button>
             </LinkContainer>
-            <NavDropdown
+            {/* <NavDropdown
               id="nav-dropdown-dark-example"
               title={t('language')}
               menuVariant="light"
@@ -127,7 +127,7 @@ function MainNavbar(props) {
                   </a>
                 </NavDropdown.Item>
               ))}
-            </NavDropdown>
+            </NavDropdown> */}
           </Nav>
         </Navbar.Collapse>
       </Navbar>

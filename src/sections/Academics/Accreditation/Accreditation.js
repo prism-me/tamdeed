@@ -15,7 +15,7 @@ const AgsEthos = () => {
 
     return (
         <Grid container className="info-tabs justify-content-center accreditation-paths">
-            <Grid className="v-calendar-sec" id={"calenderDiv"}>
+            <Grid className="v-calendar-sec" id={"Academic_Calendar"}>
                 <Grid className="txt-w">
                     <h2 className={"CalenderTitle"}>View our Academic Calendar to learn about the schedule in advance</h2>
                 </Grid>

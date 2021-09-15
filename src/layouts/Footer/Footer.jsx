@@ -89,15 +89,24 @@ function Footer() {
                 <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.ENROLL}`}>
                   <Nav.Link className=" fdeco">Enroll Online</Nav.Link>
                 </LinkContainer>
-                <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.ENROLL}`}>
-                  <Nav.Link className=" fdeco"> Tuition Fees</Nav.Link>
-                </LinkContainer>
-                <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.ENROLL}`}>
-                  <Nav.Link className=" fdeco"> Request for a callback </Nav.Link>
-                </LinkContainer>
-                <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.ENROLL}`}>
-                  <Nav.Link className=" fdeco"> School Tours</Nav.Link>
-                </LinkContainer>
+                {/* <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.ENROLL}`}> */}
+                <HashLink to={`/${currentLanguageCode}${STRINGS.ROUTES.ENROLL}` + "#Tuition_Fees"} className={"hashLinkStyling"}>
+                  Tuition Fees
+                </HashLink>
+                {/* <Nav.Link className=" fdeco"> Tuition Fees</Nav.Link>
+                </LinkContainer> */}
+                {/* <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.ENROLL}`}> */}
+                <HashLink to={`/${currentLanguageCode}${STRINGS.ROUTES.ENROLL}` + "#Request_for_a_callback"} className={"hashLinkStyling"}>
+                  Request for a callback
+                </HashLink>
+                {/* <Nav.Link className=" fdeco"> Request for a callback </Nav.Link>
+                </LinkContainer> */}
+                {/* <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.ENROLL}`}> */}
+                <HashLink to={`/${currentLanguageCode}${STRINGS.ROUTES.ENROLL}` + "#School_Tour"} className={"hashLinkStyling"}>
+                  School Tours
+                </HashLink>
+                {/* <Nav.Link className=" fdeco"> School Tours</Nav.Link>
+                </LinkContainer> */}
               </Nav>
             </Col>
             <Col sm={6} xs={6} md={6} lg>
@@ -108,14 +117,17 @@ function Footer() {
                 {/* <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.ACADEMICS}`}
                   onClick={scrollToBottom1}
                 > */}
-                <HashLink to={`/${currentLanguageCode}${STRINGS.ROUTES.ACADEMICS}` + "#calenderDiv"}
-                  style={{ scrollBehavior: "smooth" }}
-                >Academic Calendar</HashLink>
+                <HashLink to={`/${currentLanguageCode}${STRINGS.ROUTES.ACADEMICS}` + "#Academic_Calendar"} className={"hashLinkStyling"}>
+                  Academic Calendar
+                </HashLink>
                 {/* <Nav.Link className=" fdeco"> Academic Calendar </Nav.Link> */}
                 {/* </LinkContainer> */}
-                <LinkContainer to="#">
-                  <Nav.Link className=" fdeco">  Our Curriculum </Nav.Link>
-                </LinkContainer>
+                {/* <LinkContainer to="#"> */}
+                <HashLink to={`/${currentLanguageCode}${STRINGS.ROUTES.ACADEMICS}` + "#Our_Curriculum"} className={"hashLinkStyling"}>
+                  Our Curriculum
+                </HashLink>
+                {/* <Nav.Link className=" fdeco">  Our Curriculum </Nav.Link> */}
+                {/* </LinkContainer> */}
                 <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.STUDENT_CARE}`}>
                   <Nav.Link className=" fdeco">  Student Care support  </Nav.Link>
                 </LinkContainer>

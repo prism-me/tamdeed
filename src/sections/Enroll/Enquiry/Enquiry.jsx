@@ -191,7 +191,7 @@ function Enquiry() {
                     <div className="description-column">
                         <Container fluid>
                             <Row>
-                                <Col sm>
+                                <Col sm id={"Request_for_a_callback"}>
                                     <Card shadow style={{ borderRadius: "20px" }} className={"cardStyle"}>
                                         <Card.Body>
                                             <h4 className={" intro-title"}>
@@ -232,7 +232,7 @@ function Enquiry() {
                                         </Card.Body>
                                     </Card>
                                 </Col>
-                                <Col sm>
+                                <Col sm id={"School_Tour"}>
                                     <Card shadow style={{ borderRadius: "20px" }} className={"cardStyle"}>
                                         <Card.Body>
                                             <h4 className={" intro-title"}>

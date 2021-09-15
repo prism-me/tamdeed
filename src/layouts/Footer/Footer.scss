@@ -12,6 +12,25 @@
     padding-bottom: 4rem;
     background-color: $bg-color;
   }
+
+  .hashLinkStyling{
+    color: $white;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    padding-top: 0.5rem;
+    &:hover{
+      font-weight: bold;
+    }
+    @media #{$sm,$xsm,$tiny} {
+      font-size: 14px;
+      overflow-wrap: break-word;
+    }
+    @media #{$md} {
+      font-size: 18px;
+      overflow-wrap: break-word;
+    }
+  }
+
   .nav-link{
     color: white;
     padding-top: 0.5rem !important;

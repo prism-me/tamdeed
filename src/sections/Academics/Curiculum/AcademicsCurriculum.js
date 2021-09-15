@@ -12,7 +12,7 @@ const AcademicsCurriculum = () => {
     const history = useHistory();
 
     return (
-        <div className={"Academics"}>
+        <div className={"Academics"} id={"Our_Curriculum"}>
             <h3 className={"InfoTitle"}>OUR CURRICULUM</h3>
             <Grid container className="d-flex w-100 justify-content-center">
                 <Grid item className="curr-sec">

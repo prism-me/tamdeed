@@ -10,7 +10,11 @@ import ModalVideo from 'react-modal-video'
 import PlayArrowIcon from "@material-ui/icons/PlayArrow";
 
 function Inclusion() {
-    const [isOpen, setOpen] = useState(false)
+    const [isOpenI, setOpenI] = useState(false)
+    const [isOpenAS, setOpenAS] = useState(false)
+    const [isOpenA, setOpenA] = useState(false)
+    const [isOpenSC, setOpenSC] = useState(false)
+    const [isOpenW, setOpenW] = useState(false)
     return (
         <div className="Inclusion">
             <Container>
@@ -21,8 +25,8 @@ function Inclusion() {
                                 style={{ backgroundImage: `url(${std1})` }}
                             >
                                 <div className="video-promo-content mt-4 ">
-                                    <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="RBZutrFFhTA" onClose={() => setOpen(false)} />
-                                    <button className="btn video-play-icon" onClick={() => setOpen(true)}>
+                                    <ModalVideo channel='youtube' autoplay isOpen={isOpenI} videoId="0_Je7OBcP3g" onClose={() => setOpenI(false)} />
+                                    <button className="btn video-play-icon" onClick={() => setOpenI(true)}>
                                         <PlayArrowIcon className={"playSize"} />
                                     </button>
                                 </div>
@@ -71,8 +75,8 @@ function Inclusion() {
                                 style={{ backgroundImage: `url(${std2})` }}
                             >
                                 <div className="video-promo-content mt-4 ">
-                                    <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="RBZutrFFhTA" onClose={() => setOpen(false)} />
-                                    <button className="btn video-play-icon" onClick={() => setOpen(true)}>
+                                    <ModalVideo channel='youtube' autoplay isOpen={isOpenAS} videoId="Ta5wnA7-X-o" onClose={() => setOpenAS(false)} />
+                                    <button className="btn video-play-icon" onClick={() => setOpenAS(true)}>
                                         <PlayArrowIcon className={"playSize"} />
                                     </button>
                                 </div>
@@ -87,8 +91,8 @@ function Inclusion() {
                                 style={{ backgroundImage: `url(${std3})` }}
                             >
                                 <div className="video-promo-content mt-4 ">
-                                    <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="RBZutrFFhTA" onClose={() => setOpen(false)} />
-                                    <button className="btn video-play-icon" onClick={() => setOpen(true)}>
+                                    <ModalVideo channel='youtube' autoplay isOpen={isOpenSC} videoId="UwVUxm0PilM" onClose={() => setOpenSC(false)} />
+                                    <button className="btn video-play-icon" onClick={() => setOpenSC(true)}>
                                         <PlayArrowIcon className={"playSize"} />
                                     </button>
                                 </div>
@@ -119,8 +123,8 @@ function Inclusion() {
                                 style={{ backgroundImage: `url(${std4})` }}
                             >
                                 <div className="video-promo-content mt-4 ">
-                                    <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="RBZutrFFhTA" onClose={() => setOpen(false)} />
-                                    <button className="btn video-play-icon" onClick={() => setOpen(true)}>
+                                    <ModalVideo channel='youtube' autoplay isOpen={isOpenA} videoId="JltBgY3eeis" onClose={() => setOpenA(false)} />
+                                    <button className="btn video-play-icon" onClick={() => setOpenA(true)}>
                                         <PlayArrowIcon className={"playSize"} />
                                     </button>
                                 </div>
@@ -135,8 +139,8 @@ function Inclusion() {
                                 style={{ backgroundImage: `url(${std5})` }}
                             >
                                 <div className="video-promo-content mt-4 ">
-                                    <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="RBZutrFFhTA" onClose={() => setOpen(false)} />
-                                    <button className="btn video-play-icon" onClick={() => setOpen(true)}>
+                                    <ModalVideo channel='youtube' autoplay isOpen={isOpenW} videoId="ngB-1yju0zs" onClose={() => setOpenW(false)} />
+                                    <button className="btn video-play-icon" onClick={() => setOpenW(true)}>
                                         <PlayArrowIcon className={"playSize"} />
                                     </button>
                                 </div>

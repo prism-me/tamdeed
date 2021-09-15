@@ -24,7 +24,7 @@ const PrincipleMessage = () => {
                             <div className="bg-img-hld">
                                 <img alt={"#"} src={vid_bg_img} className="bg-img" />
                                 <div className="video-promo-content mt-4 ">
-                                    <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="Q0TW_I8kr1M" onClose={() => setOpen(false)} />
+                                    <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="AmLy5qM7dEI" onClose={() => setOpen(false)} />
                                     <button className="btn video-play-icon" onClick={() => setOpen(true)}>
                                         <PlayArrowIcon className={"playSize"} />
                                     </button>

@@ -12,7 +12,7 @@ const BackGroundVideo = ({ videoSource, children, blur, videoRef }) => {
                 // style={{ filter: `blur(${blur}px)`, WebkitFilter: `blur(${blur}px)` }}
                 // autoPlay="autoplay"
                 // loop="loop"
-                muted
+                // muted
                 // ref={video}
                 id={"video-id"}
                 poster={header_bg}

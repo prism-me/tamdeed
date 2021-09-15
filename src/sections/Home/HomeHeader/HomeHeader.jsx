@@ -4,6 +4,7 @@ import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import logo from "./../../../assets/images/agslogo/Logo (1).png";
 import header_bgMB from "./../../../assets/images/agsbanners/HomePage.jpg";
 import header_bg from "./../../../assets/images/agsbackgrounds/image 2.png";
+import AGSPrincipalWelcomeMessage from "./../../../assets/images/bannerVideo/AGSPrincipalWelcomeMessage.mp4";
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 import ModalVideo from 'react-modal-video'
 import Hidden from "@material-ui/core/Hidden";
@@ -32,7 +33,7 @@ function HomeHeader(props) {
     setIsPlaying(!isPlaying);
   }
 
-  const videoSource = "https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4";
+  const videoSource = AGSPrincipalWelcomeMessage;
 
   return (
     <>

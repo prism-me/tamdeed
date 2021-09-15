@@ -1,5 +1,5 @@
 import React from 'react';
-import {Hidden} from "@material-ui/core";
+import { Hidden } from "@material-ui/core";
 
 export default function EnrollTabs() {
     const scrollToBottom1 = () => {
@@ -28,47 +28,45 @@ export default function EnrollTabs() {
     }
     return (
         <>
-        <Hidden smDown>
-            <div className={"EnrollTabs"}>
-                <div className={"buttons-flex"}>
-                    <button className={"TabButton btn-lg"}
+            <Hidden smDown>
+                <div className={"EnrollTabs"}>
+                    <div className={"buttons-flex"}>
+                        <button className={"TabButton btn-lg"}
                             onClick={scrollToBottom1}
-                    >
-                        Admissions Process
-                    </button>
-                    <button className={"TabButton btn-lg"}
+                        >
+                            Admissions Process
+                        </button>
+                        <button className={"TabButton btn-lg"}
                             onClick={scrollToBottom2}
-                    >
-                        Enquiry
-                    </button>
-                    <button className={"TabButton btn-lg"}
+                        >
+                            Enquiry
+                        </button>
+                        <button className={"TabButton btn-lg"}
                             onClick={scrollToBottom3}
-                    >
-                        Fees and Payments
-                    </button>
-                    <button className={"TabButton btn-lg"}
+                        >
+                            Fees and Payments
+                        </button>
+                        <button className={"TabButton btn-lg"}
                             onClick={scrollToBottom4}
-                    >
-                        Online Application
-                    </button>
-                    <button className={"TabButton btn-lg"}
+                        >
+                            Online Application
+                        </button>
+                        <button className={"TabButton btn-lg"}
                             onClick={scrollToBottom5}
-                    >
-                        FAQs
-                    </button>
-                    <button className={"TabButton btn-lg"}
+                        >
+                            FAQs
+                        </button>
+                        <button className={"TabButton btn-lg"}
                             onClick={scrollToBottom6}
-                    >
-                        Contact us
-                    </button>
+                        >
+                            Contact us
+                        </button>
+                    </div>
                 </div>
-            </div>
-        </Hidden>
-        <p className={"EnrollTabTitle"}>
-            Thank you for considering joining the American Gulf School family. After
-            conducting a tour with us, please adhere to the below steps for acceptance and
-            registration.
-        </p>
-    </>
+            </Hidden>
+            <p className={"EnrollTabTitle"}>
+                Thank you for considering joining the American Gulf School family. After conducting a tour with us, please adhere to the below steps for acceptance and registration.
+            </p>
+        </>
     );
 }

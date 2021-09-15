@@ -16,7 +16,7 @@ function Schoolinclusion() {
                                 style={{ backgroundImage: `url(${schoolleft})` }}
                             >
                                 <div className="video-promo-content mt-4 ">
-                                    <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="RBZutrFFhTA" onClose={() => setOpen(false)} />
+                                    <ModalVideo channel='youtube' youtube={{ autoplay: 1, mute: 1 }} isOpen={isOpen} videoId="RBZutrFFhTA" onClose={() => setOpen(false)} />
                                     <button className="btn video-play-icon" onClick={() => setOpen(true)}>
                                         <PlayArrowIcon className={"playSize"} />
                                     </button>

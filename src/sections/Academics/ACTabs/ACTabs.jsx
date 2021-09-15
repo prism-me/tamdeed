@@ -96,6 +96,7 @@ export default function ACTabs() {
             </OwlCarousel>
             <ModalVideo
                 channel="youtube"
+                youtube={{ autoplay: 1, mute: 1 }}
                 isOpen={openVideo}
                 videoId={slidesData[currentIndex]?.video_link?.split("/")[3]}
                 onClose={() => setOpenVideo(false)}

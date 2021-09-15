@@ -9,6 +9,7 @@ import TwitterIcon from '@material-ui/icons/Twitter';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import PhoneIcon from '@material-ui/icons/Phone';
 import { STRINGS } from "../../utils/base";
+import { HashLink } from "react-router-hash-link"
 import { useTranslation } from 'react-i18next';
 import cookies from 'js-cookie'
 
@@ -20,6 +21,10 @@ function Footer() {
   }
 
   const { t } = useTranslation();
+  const scrollToBottom1 = () => {
+    const bottomEle = document.getElementById("calenderDiv");
+    bottomEle.scrollIntoView({ behavior: "smooth" });
+  }
   return (
     <div className={"footer-Wrape"}>
       <footer>
@@ -100,9 +105,14 @@ function Footer() {
                 ACADEMICS
               </h5>
               <Nav className="flex-column">
-                <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.ACADEMICS}`}>
-                  <Nav.Link className=" fdeco"> Academic Calendar </Nav.Link>
-                </LinkContainer>
+                {/* <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.ACADEMICS}`}
+                  onClick={scrollToBottom1}
+                > */}
+                <HashLink to={`/${currentLanguageCode}${STRINGS.ROUTES.ACADEMICS}` + "#calenderDiv"}
+                  style={{ scrollBehavior: "smooth" }}
+                >Academic Calendar</HashLink>
+                {/* <Nav.Link className=" fdeco"> Academic Calendar </Nav.Link> */}
+                {/* </LinkContainer> */}
                 <LinkContainer to="#">
                   <Nav.Link className=" fdeco">  Our Curriculum </Nav.Link>
                 </LinkContainer>
@@ -132,7 +142,7 @@ function Footer() {
           </Row>
         </Container>
       </footer>
-    </div>
+    </div >
   );
 }
 

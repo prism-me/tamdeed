@@ -28,7 +28,7 @@ const AcademicsCurriculum = () => {
                         }}
                     >
                         <div className="d-flex justify-content-center align-items-center imgheight ch"
-                            style={{ backgroundImage: `url(${kindergarten_img})` }}
+                        // style={{ backgroundImage: `url(${kindergarten_img})` }}
                         >
                             <div className="video-promo-content mt-4 ">
                                 <h5 className={"overview-heading position-static text-nowrap"}>
@@ -44,7 +44,7 @@ const AcademicsCurriculum = () => {
                         }}
                     >
                         <div className="d-flex justify-content-center align-items-center imgheight ch"
-                            style={{ backgroundImage: `url(${p_school})` }}
+                        // style={{ backgroundImage: `url(${p_school})` }}
                         >
                             <div className="video-promo-content mt-4 ">
                                 <h5 className={"overview-heading position-static text-nowrap"}>
@@ -53,16 +53,16 @@ const AcademicsCurriculum = () => {
                             </div>
                         </div>
                     </div>
-                    <div className={"mx-2 divstyle wc"} >
+                    <div className={"mx-2 divstyle wc"}
+                        style={{ cursor: "pointer" }}
+                        onClick={() => {
+                            history.push(`/${currentLanguageCode}${STRINGS.ROUTES.MIDDLE_SCHOOL}`);
+                        }}
+                    >
                         <div className="d-flex justify-content-center align-items-center imgheight ch"
-                            style={{ backgroundImage: `url(${middle_school})`, }}
+                        // style={{ backgroundImage: `url(${middle_school})`, }}
                         >
-                            <div className="video-promo-content mt-4 "
-                                style={{ cursor: "pointer" }}
-                                onClick={() => {
-                                    history.push(`/${currentLanguageCode}${STRINGS.ROUTES.MIDDLE_SCHOOL}`);
-                                }}
-                            >
+                            <div className="video-promo-content mt-4 ">
                                 <h5 className={"overview-heading position-static text-nowrap"}>
                                     Middle School
                                 </h5>

@@ -25,7 +25,7 @@ function Inclusion() {
                 <div className="video-promo-content mt-4 ">
                   <ModalVideo
                     channel="youtube"
-                    autoplay
+                    youtube={{ autoplay: 1, mute: 1 }}
                     isOpen={isOpen}
                     videoId="RBZutrFFhTA"
                     onClose={() => setOpen(false)}
@@ -85,7 +85,7 @@ function Inclusion() {
                 <div className="video-promo-content mt-4 ">
                   <ModalVideo
                     channel="youtube"
-                    autoplay
+                    youtube={{ autoplay: 1, mute: 1 }}
                     isOpen={isOpen}
                     videoId="RBZutrFFhTA"
                     onClose={() => setOpen(false)}
@@ -126,7 +126,7 @@ function Inclusion() {
                 <div className="video-promo-content mt-4 ">
                   <ModalVideo
                     channel="youtube"
-                    autoplay
+                    youtube={{ autoplay: 1, mute: 1 }}
                     isOpen={isOpen}
                     videoId="RBZutrFFhTA"
                     onClose={() => setOpen(false)}

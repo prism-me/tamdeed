@@ -51,36 +51,6 @@ function AgsSlider(props) {
             Subtitle: "Educating swimming skills to articulate physical growth.",
             video_link: "https://youtu.be/eWfMxXOHQjw",
         },
-        // {
-        //     thumbnail: ags6,
-        //     title: "FUN",
-        //     Subtitle: "Enjoyment, amusement and light hearted play time.",
-        //     video_link: "https://youtu.be/Nv_o3Kn9jPY",
-        // },
-        // {
-        //     thumbnail: ags7,
-        //     title: "FUN",
-        //     Subtitle: "Enjoyment, amusement and light hearted play time.",
-        //     video_link: "https://youtu.be/DohvORAMlHs",
-        // },
-        // {
-        //     thumbnail: ags8,
-        //     title: "FUN",
-        //     Subtitle: "Enjoyment, amusement and light hearted play time.",
-        //     video_link: "https://youtu.be/Nv_o3Kn9jPY",
-        // },
-        // {
-        //     thumbnail: ags9,
-        //     title: "FUN",
-        //     Subtitle: "Enjoyment, amusement and light hearted play time.",
-        //     video_link: "https://youtu.be/DohvORAMlHs",
-        // },
-        // {
-        //     thumbnail: ags10,
-        //     title: "FUN",
-        //     Subtitle: "Enjoyment, amusement and light hearted play time.",
-        //     video_link: "https://youtu.be/DohvORAMlHs",
-        // },
     ];
 
     const [openVideo, setOpenVideo] = useState(false);
@@ -145,6 +115,10 @@ function AgsSlider(props) {
             </OwlCarousel>
             <ModalVideo
                 channel="youtube"
+                youtube={{
+                    autoplay: 1,
+                    mute: 1
+                }}
                 isOpen={openVideo}
                 videoId={slidesData[currentIndex]?.video_link?.split("/")[3]}
                 onClose={() => setOpenVideo(false)}

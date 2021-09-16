@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid } from "@material-ui/core";
 import { Card, Col, Row } from "react-bootstrap";
-import bg_img_e from "../../../assets/images/about/AGS_E_bg.jpg"
+import bg_img_e from "../../../assets/images/agsbackgrounds/AGSEthos.png"
 
 const AgsEthos = () => {
     return (

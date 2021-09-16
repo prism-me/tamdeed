@@ -132,7 +132,7 @@
     display: flex;
     width: 100%;
     justify-content: center;
-    background-image: url("../../assets/images/agsbackgrounds/backgroundCurve.png");
+    background-image: url("../../assets/images/agsbackgrounds/AccreditationCurve.png");
     //background-size: cover;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -312,7 +312,7 @@
     padding: 1rem 2rem;
     text-align: center;
     font-size: 18px;
-    font-family: "Optima nova LT Medium";
+    // font-family: "Optima nova LT Medium";
     color: #000000;
     @media #{$xxl} {
       font-size: 18px;
@@ -437,7 +437,7 @@
               display: flex;
               align-items: center;
               font-size: 3rem;
-              font-family: "Optima nova LT Medium";
+              // font-family: "Optima nova LT Medium";
               font-weight: lighter;
 
               ._circle-em {

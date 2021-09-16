@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import logo from "./../../../assets/images/agslogo/Logo (1).png";
 import header_bgMB from "./../../../assets/images/agsbanners/HomePage.jpg";
-import header_bg from "./../../../assets/images/agsbackgrounds/image 2.png";
+import header_bg from "./../../../assets/images/agsbanners/homepageBanner.png";
 import AGSPrincipalWelcomeMessage from "./../../../assets/images/bannerVideo/AGSPrincipalWelcomeMessage.mp4";
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 import ModalVideo from 'react-modal-video'

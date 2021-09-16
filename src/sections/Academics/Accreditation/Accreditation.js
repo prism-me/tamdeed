@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Grid } from "@material-ui/core";
 import { Card, Col, Row } from "react-bootstrap";
-import bg_img_e from "../../../assets/images/academics/BG.png";
+import bg_img_e from "../../../assets/images/agsbackgrounds/AccreditationCurve.png";
 import CalendarView from "../CalendarView/CalenderView";
 
 const defaultState = {

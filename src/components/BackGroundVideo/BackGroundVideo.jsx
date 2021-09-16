@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-import header_bg from "./../../assets/images/agsbackgrounds/image 2.png";
-import PlayArrowIcon from "@material-ui/icons/PlayArrow";
-import StopIcon from "@material-ui/icons/Stop";
+import header_bg from "./../../assets/images/agsbanners/homepageBanner.png";
+// import PlayArrowIcon from "@material-ui/icons/PlayArrow";
+// import StopIcon from "@material-ui/icons/Stop";
 
 const BackGroundVideo = ({ videoSource, children, blur, videoRef }) => {
 

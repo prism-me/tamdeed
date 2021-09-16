@@ -1,8 +1,8 @@
 import React from 'react';
 import { Grid } from "@material-ui/core";
-import kindergarten_img from "../../../assets/images/Curriculum/Kindergarten.JPG";
-import middle_school from "../../../assets/images/Curriculum/MiddleSchool.jpg";
-import p_school from "../../../assets/images/Curriculum/PrimarySchool.JPG";
+import kindergarten_img from "../../../assets/images/Curriculum/Kindergarten.png";
+import middle_school from "../../../assets/images/Curriculum/MiddleSchool.png";
+import p_school from "../../../assets/images/Curriculum/PrimarySchool.png";
 import { useHistory } from "react-router-dom";
 import cookies from 'js-cookie'
 import { STRINGS } from "../../../utils/base";
@@ -28,7 +28,7 @@ const AcademicsCurriculum = () => {
                         }}
                     >
                         <div className="d-flex justify-content-center align-items-center imgheight ch"
-                        // style={{ backgroundImage: `url(${kindergarten_img})` }}
+                            style={{ backgroundImage: `url(${kindergarten_img})` }}
                         >
                             <div className="video-promo-content mt-4 ">
                                 <h5 className={"overview-heading position-static text-nowrap"}>
@@ -44,7 +44,7 @@ const AcademicsCurriculum = () => {
                         }}
                     >
                         <div className="d-flex justify-content-center align-items-center imgheight ch"
-                        // style={{ backgroundImage: `url(${p_school})` }}
+                            style={{ backgroundImage: `url(${p_school})` }}
                         >
                             <div className="video-promo-content mt-4 ">
                                 <h5 className={"overview-heading position-static text-nowrap"}>
@@ -60,7 +60,7 @@ const AcademicsCurriculum = () => {
                         }}
                     >
                         <div className="d-flex justify-content-center align-items-center imgheight ch"
-                        // style={{ backgroundImage: `url(${middle_school})`, }}
+                            style={{ backgroundImage: `url(${middle_school})`, }}
                         >
                             <div className="video-promo-content mt-4 ">
                                 <h5 className={"overview-heading position-static text-nowrap"}>

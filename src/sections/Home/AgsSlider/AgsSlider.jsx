@@ -1,15 +1,10 @@
 import React, { useState } from "react";
 import "react-multi-carousel/lib/styles.css";
-import ags1 from "../../../assets/images/LifeatAGS_ Third Batch/Third Batch _ 330x350/Image1.jpg";
-import ags2 from "../../../assets/images/LifeatAGS_ Third Batch/Third Batch _ 330x350/Image2.jpg";
-import ags3 from "../../../assets/images/LifeatAGS_ Third Batch/Third Batch _ 330x350/Image3.jpg";
-import ags4 from "../../../assets/images/LifeatAGS_ Third Batch/Third Batch _ 330x350/Image4.jpg";
-import ags5 from "../../../assets/images/LifeatAGS_ Third Batch/Third Batch _ 330x350/Image5.jpg";
-// import ags6 from "../../../assets/images/LifeatAGS_ Third Batch/Third Batch _ 330x350/Image6.jpg";
-// import ags7 from "../../../assets/images/LifeatAGS_ Third Batch/Third Batch _ 330x350/Image7.jpg";
-// import ags8 from "../../../assets/images/LifeatAGS_ Third Batch/Third Batch _ 330x350/Image8.jpg";
-// import ags9 from "../../../assets/images/LifeatAGS_ Third Batch/Third Batch _ 330x350/Image9.jpg";
-// import ags10 from "../../../assets/images/LifeatAGS_ Third Batch/Third Batch _ 330x350/Image10.jpg";
+import ags1 from "../../../assets/images/LifeatAGS/Acadamics.png";
+import ags2 from "../../../assets/images/LifeatAGS/Acadamics.png";
+import ags3 from "../../../assets/images/LifeatAGS/Acadamics.png";
+import ags4 from "../../../assets/images/LifeatAGS/Acadamics.png";
+import ags5 from "../../../assets/images/LifeatAGS/Acadamics.png";
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 import ModalVideo from 'react-modal-video'
 import OwlCarousel from "react-owl-carousel";

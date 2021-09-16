@@ -1,6 +1,6 @@
 import React from 'react';
-import header_bg from "../../../assets/images/agsbackgrounds/Academics_bg.png";
-import {Col, Container, Row} from "react-bootstrap";
+import header_bg from "../../../assets/images/agsbanners/SchoolMain.png";
+import { Col, Container, Row } from "react-bootstrap";
 import logo from "../../../assets/images/agslogo/Logo (1).png";
 
 const AcademicHeader = () => {
@@ -8,7 +8,7 @@ const AcademicHeader = () => {
 
         <div
             className="home-header"
-            style={{ backgroundImage: `url(${header_bg})`}}
+            style={{ backgroundImage: `url(${header_bg})` }}
         >
             {/*<img alt={"#"} className="home-header position-absolute" style={{visibility:"hidden",display:"inline-block",width:"100%"}} src={header_bg}/>*/}
             <Container>
@@ -30,7 +30,7 @@ const AcademicHeader = () => {
                             </p>
                         </div>
                     </Col>
-                    <Col sm={{ span: 6}} className={"iconSpace"}>
+                    <Col sm={{ span: 6 }} className={"iconSpace"}>
                     </Col>
                 </Row>
             </Container>

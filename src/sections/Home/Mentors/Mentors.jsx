@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import "react-multi-carousel/lib/styles.css";
-import mentor1 from "../../../assets/images/Meetthementors_ Second Batch/Second Batch _ 320x400/Image1.jpg";
-import mentor2 from "../../../assets/images/Meetthementors_ Second Batch/Second Batch _ 320x400/Image2.jpg";
-import mentor3 from "../../../assets/images/Meetthementors_ Second Batch/Second Batch _ 320x400/Image3.jpg";
-import mentor4 from "../../../assets/images/Meetthementors_ Second Batch/Second Batch _ 320x400/Image4.jpg";
-import mentor5 from "../../../assets/images/Meetthementors_ Second Batch/Second Batch _ 320x400/Image5.jpg";
-import mentor6 from "../../../assets/images/Meetthementors_ Second Batch/Second Batch _ 320x400/Image6.jpg";
-import mentor7 from "../../../assets/images/Meetthementors_ Second Batch/Second Batch _ 320x400/Image7.jpg";
-import mentor8 from "../../../assets/images/Meetthementors_ Second Batch/Second Batch _ 320x400/Image8.jpg";
-import mentor9 from "../../../assets/images/Meetthementors_ Second Batch/Second Batch _ 320x400/Image9.jpg";
-import mentor10 from "../../../assets/images/Meetthementors_ Second Batch/Second Batch _ 320x400/Image10.jpg";
+import mentor1 from "../../../assets/images/MeetMentorsFirstbatch/AliObeidat.png";
+import mentor2 from "../../../assets/images/MeetMentorsFirstbatch/BrittanyWood.png";
+import mentor3 from "../../../assets/images/MeetMentorsFirstbatch/DinaTahabsen.png";
+import mentor4 from "../../../assets/images/MeetMentorsFirstbatch/EdricPascoe.png";
+import mentor5 from "../../../assets/images/MeetMentorsFirstbatch/EmmaPascoe.png";
+import mentor6 from "../../../assets/images/MeetMentorsFirstbatch/JordanBrooks.png";
+import mentor7 from "../../../assets/images/MeetMentorsFirstbatch/KirstyHoward.png";
+import mentor8 from "../../../assets/images/MeetMentorsFirstbatch/ManarAbouHamdan.png";
+import mentor9 from "../../../assets/images/MeetMentorsFirstbatch/SalmaHafez.png";
+import mentor10 from "../../../assets/images/MeetMentorsFirstbatch/TaleenAkijian.png";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
@@ -24,52 +24,52 @@ function Mentors(props) {
     const slidesData = [
         {
             thumbnail: mentor1,
-            title: "Sarah Qadir",
+            title: "Ali Obeidat",
             Subtitle: "Adipiscing at sem",
         },
         {
             thumbnail: mentor2,
-            title: "Samia Yassin",
+            title: "Brittany Wood",
             Subtitle: "Nunc eu massa",
         },
         {
             thumbnail: mentor3,
-            title: "Ross Moore",
+            title: "Dina Tahabsen",
             Subtitle: "Dapibus tellus eros",
         },
         {
             thumbnail: mentor4,
-            title: "Rasha Abou Zaki",
+            title: "Edric Pascoe",
             Subtitle: "Aliquet nec nunc",
         },
         {
             thumbnail: mentor5,
-            title: "Michael Skillern",
+            title: "Emma Pascoe",
             Subtitle: "Nibh varius vestibulum",
         },
         {
             thumbnail: mentor6,
-            title: "Melissa Davis",
+            title: "Jordan Brooks",
             Subtitle: "Nunc eu massa",
         },
         {
             thumbnail: mentor7,
-            title: "Leona Dowling",
+            title: "Kirsty Howard",
             Subtitle: "Nibh varius vestibulum",
         },
         {
             thumbnail: mentor8,
-            title: "Huda Omary",
+            title: "Manar Abou Hamdan",
             Subtitle: "Nunc eu massa",
         },
         {
             thumbnail: mentor9,
-            title: "Haneen Almushasha",
+            title: "Salma Hafez",
             Subtitle: "Nunc eu massa",
         },
         {
             thumbnail: mentor10,
-            title: "Connor Stanton",
+            title: "Taleen Akijian",
             Subtitle: "Nunc eu massa",
         },
     ];

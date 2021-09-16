@@ -1,9 +1,15 @@
 import React, { useState } from "react";
 import "react-multi-carousel/lib/styles.css";
-import mentor from "../../../assets/images/agsMentors/mentor.png";
-import mentor4 from "../../../assets/images/agsMentors/mentor2.png";
-import mentor2 from "../../../assets/images/agsMentors/mentor3.png";
-import mentor3 from "../../../assets/images/agsMentors/mentor4.png";
+import mentor1 from "../../../assets/images/MeetMentorsThirdBatch/AyaKred.png";
+import mentor2 from "../../../assets/images/MeetMentorsThirdBatch/DarrenBaxter.png";
+import mentor3 from "../../../assets/images/MeetMentorsThirdBatch/EllenMiles.png";
+import mentor4 from "../../../assets/images/MeetMentorsThirdBatch/MichaelaSchmidt.png";
+import mentor5 from "../../../assets/images/MeetMentorsThirdBatch/OmaimaSawalha.png";
+import mentor6 from "../../../assets/images/MeetMentorsThirdBatch/ParisBradfield.png";
+import mentor7 from "../../../assets/images/MeetMentorsThirdBatch/RachelFarrel.png";
+import mentor8 from "../../../assets/images/MeetMentorsThirdBatch/VivieneGrobler.png";
+import mentor9 from "../../../assets/images/MeetMentorsThirdBatch/YasinKol.png";
+import mentor10 from "../../../assets/images/MeetMentorsThirdBatch/YazanNebso.png";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
@@ -11,33 +17,53 @@ import "owl.carousel/dist/assets/owl.theme.default.css";
 export default function Ourteam() {
     const slidesData = [
         {
-            thumbnail: mentor,
-            title: "Aliquam fringilla",
+            thumbnail: mentor1,
+            title: "Aya Kred",
             Subtitle: "Adipiscing at sem",
         },
         {
             thumbnail: mentor2,
-            title: "Commodo aliquam",
+            title: "Darren Baxter",
             Subtitle: "Nunc eu massa",
         },
         {
             thumbnail: mentor3,
-            title: "Neque eu",
+            title: "Ellen Miles",
             Subtitle: "Dapibus tellus eros",
         },
         {
             thumbnail: mentor4,
-            title: "Commodo male",
+            title: "Michaela Schmidt",
             Subtitle: "Aliquet nec nunc",
         },
         {
-            thumbnail: mentor2,
-            title: "Mi amet",
+            thumbnail: mentor5,
+            title: "Omaima Sawalha",
             Subtitle: "Nibh varius vestibulum",
         },
         {
-            thumbnail: mentor3,
-            title: "Commodo aliquam",
+            thumbnail: mentor6,
+            title: "Paris Bradfield",
+            Subtitle: "Nunc eu massa",
+        },
+        {
+            thumbnail: mentor7,
+            title: "Rachel Farrel",
+            Subtitle: "Nunc eu massa",
+        },
+        {
+            thumbnail: mentor8,
+            title: "Viviene Grobler",
+            Subtitle: "Nunc eu massa",
+        },
+        {
+            thumbnail: mentor9,
+            title: "Yasin Kol",
+            Subtitle: "Nunc eu massa",
+        },
+        {
+            thumbnail: mentor10,
+            title: "Yazan Nebso",
             Subtitle: "Nunc eu massa",
         },
     ];

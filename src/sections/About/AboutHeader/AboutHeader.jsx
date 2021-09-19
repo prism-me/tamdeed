@@ -24,10 +24,10 @@ const AboutHeader = () => {
                             <h2 className={"intro-title2"}>
                                 EDUCATION DONE RIGHT
                             </h2>
-                            <p className={"subtitle"}>
+                            {/* <p className={"subtitle"}>
                                 Take a look at what the CEO of the school
-                                <br /> has to say about.
-                            </p>
+                                <br /> has to say.
+                            </p> */}
                         </div>
                     </Col>
                     <Col sm={{ span: 6 }} className={"iconSpace"}>

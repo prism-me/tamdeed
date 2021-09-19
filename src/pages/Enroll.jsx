@@ -26,7 +26,7 @@ const faqList = [
     },
     {
         question: 'Who is the Principal of the school?',
-        answer: `Larry Savery is the principal of the school. Larry has more than 25 years of educational experience in the US, Central America, and the Middle East. Fifteen of those years have been in leading school reform and administration including 4 years in the United Arab Emirates.Larry completed his Bachelor’s Degree in Communication with minors in English, Drama & Spanish from Loyola University. While teaching and coaching and leading various departments, he completed his Master’s Degree in Educational Leadership from the University of New Orleans.`,
+        answer: `Larry Savery is the principal of the school. Larry has more than 25 years of educational experience in the US, Central America, and the Middle East. Fifteen of those years have been in leading school reform and administration including 4 years in the United Arab Emirates. Larry completed his Bachelor’s Degree in Communication with minors in English, Drama & Spanish from Loyola University. While teaching and coaching and leading various departments, he completed his Master’s Degree in Educational Leadership from the University of New Orleans.`,
     },
     {
         question: 'What makes American Gulf School unique?',

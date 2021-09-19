@@ -59,7 +59,7 @@ const AgsEthos = () => {
                                                     <strong>American Gulf School</strong> is a candidate school for
                                                     the <strong>International
                                                         Baccalaureate (IB) Primary Years Programme </strong> and <strong> Middle
-                                                            Years Programme </strong>and pursuing <strong>authorization</strong> as
+                                                            Years Programme </strong>and pursuing authorization as
                                                     an <strong>IB World School.</strong>
                                                 </p>
                                             </Col>
@@ -95,7 +95,7 @@ const AgsEthos = () => {
                     <Grid item className="b-para">
                         <p><strong>American Gulf School</strong> is a candidate school for the <strong>International
                             Baccalaureate (IB) Primary Years Programme </strong> and <strong> Middle Years
-                                Programme </strong>and pursuing <strong>authorization</strong> as an <strong>IB World
+                                Programme </strong>and pursuing authorization as an <strong>IB World
                                     School.</strong>
                         </p>
                         <p>

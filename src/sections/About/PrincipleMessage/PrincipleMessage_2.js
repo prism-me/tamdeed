@@ -10,7 +10,7 @@ const PrincipleMessage = () => {
     const [isOpen, setOpen] = useState(false)
     return (
         <div className="Principal p-main">
-            <h3 className="InfoTitle">PRINCIPAL MESSAGE</h3>
+            <h3 className="InfoTitle">PRINCIPAL'S MESSAGE</h3>
             <div className="p-cont">
                 <div className="cont-hld" style={{
                     backgroundImage: `url(${principle_sec_bg})`

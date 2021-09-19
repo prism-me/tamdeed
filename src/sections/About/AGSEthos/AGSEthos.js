@@ -12,7 +12,7 @@ const AgsEthos = () => {
                     visibility: "hidden",
                     display: "inline-block"
                 }} />
-                <h3 className="InfoTitle-Ethos">AGS` ETHOS</h3>
+                <h3 className="InfoTitle-Ethos">AGS ETHOS</h3>
                 <Grid container sm={12} className="d-flex w-100 justify-content-center align-items-center position-absolute">
                     <Card className={"cardStyle"}>
                         <Card.Body className="card-body">
@@ -41,7 +41,7 @@ const AgsEthos = () => {
                                             </Grid>
                                             <Grid >
                                                 <p className={"subtitle"}>
-                                                    To provide a safe, friendly learning environment where our learners follow an innovative evolving 21st century curriculum that promotes design thinking skills. We will focus on nurturing academic excellence through fun and engaging lessons that will encompass our values in our international-minded future leaders.
+                                                    To provide a safe, friendly learning environment where our learners follow an innovative and evolving 21st century curriculum that promotes design thinking skills. We will focus on nurturing academic excellence through fun and engaging lessons that will encompass our values in our international-minded future leaders.
                                                 </p>
                                             </Grid>
                                         </Grid>

@@ -16,7 +16,7 @@ const AgsPortalComponent = () => {
                     <div className="col-12 col-lg-12 col-md-12">
                         <div className="ags-p-info">
                             <p>
-                                AGS ensured that all stakeholders have access to the portal to stay informed of recent announcements, news, events, and updates.
+                                AGS ensures that all stakeholders have access to the portal to stay informed of recent announcements, news, events, and updates.
                             </p>
                         </div>
                     </div>

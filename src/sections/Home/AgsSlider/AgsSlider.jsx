@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import "react-multi-carousel/lib/styles.css";
 import ags1 from "../../../assets/images/LifeatAGS/Acadamics.png";
-import ags2 from "../../../assets/images/LifeatAGS/Acadamics.png";
-import ags3 from "../../../assets/images/LifeatAGS/Acadamics.png";
-import ags4 from "../../../assets/images/LifeatAGS/Acadamics.png";
-import ags5 from "../../../assets/images/LifeatAGS/Acadamics.png";
+import ags2 from "../../../assets/images/LifeatAGS/Arts.jpg";
+import ags3 from "../../../assets/images/LifeatAGS/drama.jpg";
+import ags4 from "../../../assets/images/LifeatAGS/Music.jpg";
+import ags5 from "../../../assets/images/LifeatAGS/sport.jpg";
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 import ModalVideo from 'react-modal-video'
 import OwlCarousel from "react-owl-carousel";

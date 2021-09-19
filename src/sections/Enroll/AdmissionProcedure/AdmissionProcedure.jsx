@@ -60,7 +60,7 @@ function AdmissionProcedure(props) {
                         </AccordionSummary>
                         <AccordionDetails>
                             <Typography>
-                                For international enrollments from outside the UAE, it is important for parents of children enrolling into Grade 2 or above to finalize the Transfer Certificate and Report Cards attestation process prior to leaving the country they are residing in.
+                                For international enrollments from outside the UAE, it is important for parents of children enrolling into Grade 2 or above to finalize the Transfer Certificate and Report Cards attestation process prior to leaving the country they are residing in
                                 <ol>
                                     <li>Copy of student’s passport</li>
                                     <li>Progress reports from the last two years (Reports must be translated to English with

@@ -12,27 +12,25 @@ const AcademicHeader = () => {
         >
             {/*<img alt={"#"} className="home-header position-absolute" style={{visibility:"hidden",display:"inline-block",width:"100%"}} src={header_bg}/>*/}
             <Container>
-                <Row>
-                    <Col sm={12} md={12} lg={5} xs={12}>
-                        <div className="description-column">
-                            <div className="header-logo-wrapper">
-                                <img src={logo} alt="AGS Logo" className="header-logo" />
-                            </div>
-                            <h1 className="intro-title">
-                                AMERICAN GULF SCHOOL
-                            </h1>
-                            <h2 className={"intro-title2"}>
-                                EDUCATION DONE RIGHT
-                            </h2>
-                            {/* <p className={"subtitle"}>
+                {/* <Row>
+                    <Col sm={12} md={12} lg={5} xs={12}> */}
+                <div className="description-column">
+                    <div className="header-logo-wrapper">
+                        <img src={logo} alt="AGS Logo" className="header-logo" />
+                    </div>
+                    <h1 className="intro-title">
+                        AMERICAN GULF SCHOOL
+                    </h1>
+                    <h2 className={"intro-title2"}>
+                        EDUCATION DONE RIGHT
+                    </h2>
+                    {/* <p className={"subtitle"}>
                                 Take a look at what the CEO of the school
                                 <br /> has to say.
                             </p> */}
-                        </div>
-                    </Col>
-                    <Col sm={{ span: 6 }} className={"iconSpace"}>
-                    </Col>
-                </Row>
+                </div>
+                {/* </Col>
+                </Row> */}
             </Container>
         </div>
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Card, Container, Form } from "react-bootstrap";
-import header_bg from "../../../assets/images/agsbackgrounds/JoinourWaitlistCruve.png";
+import header_bg from "../../../assets/images/agsbackgrounds/JoinPhoto.JPG";
 import Hidden from "@material-ui/core/Hidden";
 import Spinner from "../../../components/Spinner/Spinner";
 import { API } from "../../../http/API";

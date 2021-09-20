@@ -1,7 +1,9 @@
 .Covid-page{
   padding-top: 3rem;
+  padding-bottom: 2rem;
   @media #{$sm} {
     padding-top: 2rem;
+    padding-bottom: 0;
   }
   .Title{
     margin-bottom: 2rem;
@@ -32,8 +34,8 @@
   .Covid {
     //padding: 0 10rem;
     //overflow: hidden;
-    height: 100vh;
-    margin-top: -9rem;
+    height: 70vh;
+    // margin-top: -9rem;
     // background-image: url("../../../assets/images/ug-images/1920x967.jpg");
     background-size: 100%;
     background-position: center;

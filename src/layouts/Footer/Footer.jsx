@@ -12,10 +12,12 @@ import { STRINGS } from "../../utils/base";
 import { HashLink } from "react-router-hash-link"
 import { useTranslation } from 'react-i18next';
 import cookies from 'js-cookie'
+import logo from "./../../assets/images/agslogo/Logo (1).png";
+import { useHistory } from "react-router-dom";
 
 function Footer() {
   const currentLanguageCode = cookies.get('i18next') || 'en'
-
+  const history = useHistory();
   {
     console.log("language", currentLanguageCode)
   }
@@ -31,11 +33,16 @@ function Footer() {
         <Container>
           <Row>
             <Col sm={6} xs={6} md={6} lg>
-              <h5 className={"font-weight-bold FooterHeading"}>
-                AMERICAN<br />
-                GULF SCHOOL
-              </h5>
-              <p>
+              <div className="d-flex justify-contennt-start align-items-center">
+                <img src={logo} alt="AGS-logo"
+                  onClick={() => history.push("/")}
+                  className="footerlogo" />
+                <h5 className={"font-weight-bold FooterHeading ml-1"}>
+                  AMERICAN<br />
+                  GULF SCHOOL
+                </h5>
+              </div>
+              <p className="socialIcon">
                 SOCIAL
                 <a href="#" className={"footericonsize"}>
                   <FacebookIcon />
@@ -138,17 +145,17 @@ function Footer() {
                 Contact Us
               </h5>
               <p>
-                Al RahmaniyaShaghrafah 4 - Sharjah -
+                Al Rahmaniya Shaghrafah 4 - Sharjah -
                 United Arab Emirates
               </p>
               <a href="mailto:Info@ags.ae" className=" text-white fdeco">
-                <MailOutlineIcon /> Info@ags.ae
+                <MailOutlineIcon className="iconSize" /> Info@ags.ae
               </a>
               <p>
-                <PhoneIcon /> 06 000000
+                <a href='tel:06-5061111' class="contact-pannel-btn text-decoration-none text-white fdeco"><PhoneIcon className="iconSize" /> 06-5061111</a>
               </p>
               <p>
-                Working Hours : 9am-5pm Mon-Fri
+                Working Hours : 7:45 AM - 3:45 PM ( Sunday - Thursday )
               </p>
             </Col>
           </Row>

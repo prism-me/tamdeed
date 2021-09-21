@@ -18,7 +18,8 @@ import ClipLoader from "react-spinners/BounceLoader";
 import BackToTop from "../components/BackToTop";
 import { STRINGS } from "../utils/base";
 import Contactpannel from "../sections/Contactpannel";
-
+import cookies from 'js-cookie'
+import ClearIcon from '@material-ui/icons/Clear';
 
 const drawerWidth = 280;
 const useStyles = makeStyles((theme) => ({
@@ -57,6 +58,7 @@ const useStyles = makeStyles((theme) => ({
 
 
 export default function Layout(props) {
+  const currentLanguageCode = cookies.get('i18next') || 'en'
   const history = useHistory();
   const classes = useStyles();
   const theme = useTheme();
@@ -99,12 +101,21 @@ export default function Layout(props) {
             open={drawerOpen}
             onClose={() => toggleDrawer(false)}
           >
+            <div className="d-flex justify-content-end align-items-center">
+              <span className="DrawerCloseIcon">
+                <ClearIcon
+                  onClick={() => {
+                    toggleDrawer(false);
+                  }}
+                />
+              </span>
+            </div>
             <div className="drawer-menu">
               <div className="drawer-logo d-flex justify-content-center align-items-center">
                 <img
                   src={logo}
                   alt="AGS Logo"
-                  style={{ width: "40%", paddingTop: "2rem" }}
+                  style={{ width: "40%" }}
                   onClick={() => {
                     history.push("/");
                     toggleDrawer(false);
@@ -114,11 +125,14 @@ export default function Layout(props) {
               <List
                 component="nav"
                 aria-label="main mailbox folders"
+                className="ListStyle"
               >
-                <ListItem button>
+                <ListItem button
+                  selected={true}
+                >
                   <ListItemText
                     onClick={() => {
-                      history.push(`${STRINGS.ROUTES.ABOUT_US}`);
+                      history.push(`/${currentLanguageCode}${STRINGS.ROUTES.ABOUT_US}`);
                       toggleDrawer(false);
                     }}
                     primary="About us"
@@ -127,7 +141,7 @@ export default function Layout(props) {
                 <ListItem button>
                   <ListItemText
                     onClick={() => {
-                      history.push(`${STRINGS.ROUTES.ACADEMICS}`);
+                      history.push(`/${currentLanguageCode}${STRINGS.ROUTES.ACADEMICS}`);
                       toggleDrawer(false);
                     }}
                     primary="Academics"
@@ -136,7 +150,7 @@ export default function Layout(props) {
                 <ListItem button>
                   <ListItemText
                     onClick={() => {
-                      history.push("/Student-care");
+                      history.push(`/${currentLanguageCode}${STRINGS.ROUTES.STUDENT_CARE}`);
                       toggleDrawer(false);
                     }}
                     primary="Student care"
@@ -145,7 +159,7 @@ export default function Layout(props) {
                 <ListItem button>
                   <ListItemText
                     onClick={() => {
-                      history.push(`${STRINGS.ROUTES.AGS_PORTAL}`);
+                      history.push(`/${currentLanguageCode}${STRINGS.ROUTES.AGS_PORTAL}`);
                       toggleDrawer(false);
                     }}
                     primary="AGS Portal"
@@ -154,7 +168,7 @@ export default function Layout(props) {
                 <ListItem button>
                   <ListItemText
                     onClick={() => {
-                      history.push(`${STRINGS.ROUTES.CONTACT_US}`);
+                      history.push(`/${currentLanguageCode}${STRINGS.ROUTES.CONTACT_US}`);
                       toggleDrawer(false);
                     }}
                     primary="Contact us"
@@ -163,7 +177,7 @@ export default function Layout(props) {
                 <ListItem button>
                   <ListItemText
                     onClick={() => {
-                      history.push("/Enroll");
+                      history.push(`/${currentLanguageCode}${STRINGS.ROUTES.ENROLL}`);
                       toggleDrawer(false);
                     }}
                   // primary="Enroll"

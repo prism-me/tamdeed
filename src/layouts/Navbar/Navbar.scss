@@ -1,14 +1,14 @@
 .navbar-wrap {
   .navbar {
     position: absolute;
-    width: 90%;
+    width: 100%;
     z-index: 1222;
-    margin: 2rem 3rem;
-    opacity: 0.9;
-    box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(15px);
-    border-radius: 200px;
-    background: $white !important;
+    // margin: 1rem 1rem;
+    // opacity: 0.9;
+    // box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.1);
+    // backdrop-filter: blur(15px);
+    // border-radius: 200px;
+    // background: $white !important;
     @include padding-horizontal(2, "rem");
     &::before {
       content: "";
@@ -39,7 +39,7 @@
       border-radius: 0;
     }
     .navbar-brand {
-      width: 150px;
+      width: 200px;
       img {
         width: 100%;
         @media #{$md} {
@@ -69,9 +69,9 @@
       }
     }
     .nav-link {
-      font-size: 14px;
+      font-size: 18px;
       font-weight: 500;
-      color: $primary-color;
+      color: $white;
       margin-right: 0.6rem;
       @media #{$lg} {
         font-size: 13px;
@@ -81,6 +81,12 @@
     .nav-toggle-override {
       font-size: 30px;
       margin-right: 1rem;
+    }
+    .nav-toggle-overrideDesktop {
+      font-size: 30px;
+      margin-left: 1rem;
+      cursor: pointer;
+      color: $bg-color;
     }
     .nav-link {
       &.active {
@@ -102,5 +108,27 @@
       background: $hover-color;
       color: $primary-color;
     }
+  }
+}
+.DrawerCloseIcon{
+  background: $bg-color;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  cursor: pointer;
+}
+.ListStyle {
+  margin: 0rem 1rem !important;
+}
+.MuiTypography-body1 {
+  font-size: 1.1rem !important;
+  font-family: 'Marcellus',serif !important;
+  &.active{
+    background-color: $text-secondary;
   }
 }

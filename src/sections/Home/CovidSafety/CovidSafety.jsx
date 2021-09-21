@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
-import header_bg from "./../../../assets/images/agsbackgrounds/Covid19Safety.jpg";
+import header_bg from "./../../../assets/images/agsbackgrounds/Covidbackground.jpg";
 import { Hidden } from "@material-ui/core";
 // import { withNamespaces } from 'react-i18next';
 import { useTranslation } from 'react-i18next';

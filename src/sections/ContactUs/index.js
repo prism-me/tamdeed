@@ -176,7 +176,7 @@ const Contact = () => {
                                     <img alt={"#"} src={location_icon} />
                                 </div>
                                 <div className="text">
-                                    <p>Al RahmaniyaShaghrafah 4 - Sharjah - United Arab Emirates</p>
+                                    <p>Al Rahmaniya Shaghrafah 4 - Sharjah - United Arab Emirates</p>
                                 </div>
                             </div>
                             <div className="info-group">
@@ -189,7 +189,7 @@ const Contact = () => {
                                             <img alt={"#"} src={phone_icon} />
                                         </div>
                                         <div className="txt">
-                                            06-000000
+                                            05-69990871
                                         </div>
                                     </div>
                                     <div className="icon-txt-hld">
@@ -210,7 +210,7 @@ const Contact = () => {
                                             <img alt={"#"} src={phone_icon} />
                                         </div>
                                         <div className="txt">
-                                            06-000000
+                                            06-5061111
                                         </div>
                                     </div>
                                     <div className="icon-txt-hld">

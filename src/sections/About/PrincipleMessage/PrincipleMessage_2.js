@@ -1,5 +1,5 @@
 import { React, useState } from 'react';
-import principle_sec_bg from "../../../assets/images/about/principle_sec_bg_2.png";
+import principle_sec_bg from "../../../assets/images/agsbackgrounds/PrincipalMessage.jpg";
 import vid_bg_img from "../../../assets/images/about/PrincipalMessageThumbnail.jpg";
 import ModalVideo from "react-modal-video";
 import PlayArrowIcon from "@material-ui/icons/PlayArrow";

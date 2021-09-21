@@ -1,7 +1,7 @@
 import React from 'react';
 // import ic_email from "../../assets/images/ags-portal/mail-icon.png";
 // import ic_phone from "../../assets/images/ags-portal/phone-icon.png";
-import bg_img from "../../assets/images/agsbackgrounds/AGSPortalCurve.png";
+import bg_img from "../../assets/images/agsbackgrounds/AgsPortal.jpg";
 import { Col, Row } from "react-bootstrap";
 import PhoneOutlinedIcon from '@material-ui/icons/PhoneOutlined';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
@@ -55,7 +55,7 @@ const AgsPortalComponent = () => {
                         <Col sm="auto">
                             <div className="phone">
                                 <p>
-                                    <PhoneOutlinedIcon /> 050-000000
+                                    <PhoneOutlinedIcon />  06-5061111
                                 </p>
                                 {/*<div className="icon">*/}
                                 {/*    <img alt={"#"} src={ic_phone} className="ic-phone"/>*/}

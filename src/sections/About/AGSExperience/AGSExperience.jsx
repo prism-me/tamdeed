@@ -1,5 +1,5 @@
 import React from 'react';
-import exp_bg_img from "../../../assets/images/about/About the AGS Experience Photo.JPG";
+import exp_bg_img from "../../../assets/images/about/AGSExperince.jpg";
 
 const AgsExperience = () => {
     return (

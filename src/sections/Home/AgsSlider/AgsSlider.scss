@@ -76,12 +76,17 @@
     }
     .overview-heading {
       position: absolute;
-      bottom: 5%;
-      left: 12px;
+      // bottom: 5%;
       font-size: 18px;
       font-weight: 500;
       color: $white;
-      padding: 2%;
+      bottom: -2%;
+      padding: 4%;
+      width: 100%;
+      background: #00000085;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+      height: 25%;
       .title{
         font-size: 16px;
         @media #{$sm,$lsm,$xsm,$tiny,$md} {

@@ -99,11 +99,12 @@ export default function Ourteam() {
                                 style={{ backgroundImage: `url(${slides.thumbnail})` }}
                             >
                                 <h5 className={"overview-heading"}>
-                                    {slides.title}
-                                </h5>
-                                <p className={"subTitle"}>
+                                    {slides.title} <br />
                                     {slides.Subtitle}
-                                </p>
+                                </h5>
+                                {/* <p className={"subTitle"}>
+                                    {slides.Subtitle}
+                                </p> */}
                             </div>
                         </div>
                     ))

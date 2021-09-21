@@ -49,26 +49,28 @@ function HomeHeader(props) {
                 <Container>
                   <Row>
                     <Col sm={5}>
-                      <div className="description-column">
-                        <div className="header-logo-wrapper">
-                          <img src={logo} alt="AGS Logo" className="header-logo" />
+                      {!isPlaying ? (
+                        <div className="description-column">
+                          <div className="header-logo-wrapper">
+                            <img src={logo} alt="AGS Logo" className="header-logo" />
+                          </div>
+                          <h1 className="intro-title">
+                            {t('headerTitle')}
+                            {/* AMERICAN GULF SCHOOL */}
+                          </h1>
+                          <p className={"intro-title2"}>
+                            {t('subTitle')}
+                            {/* EDUCATION DONE RIGHT */}
+                          </p>
+                          <p className={"subtitle"}>
+                            {t('subTitle1')}
+                            {/* Take a look at what the CEO of the school */}
+                            <br />
+                            {t('subTitle2')}
+                            {/* has to say about. */}
+                          </p>
                         </div>
-                        <h1 className="intro-title">
-                          {t('headerTitle')}
-                          {/* AMERICAN GULF SCHOOL */}
-                        </h1>
-                        <p className={"intro-title2"}>
-                          {t('subTitle')}
-                          {/* EDUCATION DONE RIGHT */}
-                        </p>
-                        <p className={"subtitle"}>
-                          {t('subTitle1')}
-                          {/* Take a look at what the CEO of the school */}
-                          <br />
-                          {t('subTitle2')}
-                          {/* has to say about. */}
-                        </p>
-                      </div>
+                      ) : ""}
                     </Col>
                     <Hidden smDown>
                       <Col sm={{ span: 6 }} className={"iconSpace"}>
@@ -88,10 +90,6 @@ function HomeHeader(props) {
                   </Row>
                 </Container>
               </div>
-              {/*<Hidden smDown>*/}
-              {/*  <div className={"waves"}>*/}
-              {/*  </div>*/}
-              {/*</Hidden>*/}
             </div>
           </BackGroundVideo>
         </div>
@@ -104,26 +102,7 @@ function HomeHeader(props) {
             <Container>
               <Row>
                 <Col sm={5}>
-                  <div className="description-column">
-                    <div className="header-logo-wrapper">
-                      <img src={logo} alt="AGS Logo" className="header-logo" />
-                    </div>
-                    <h1 className="intro-title">
-                      {t('headerTitle')}
-                      {/* AMERICAN GULF SCHOOL */}
-                    </h1>
-                    <p className={"intro-title2"}>
-                      {t('subTitle')}
-                      {/* EDUCATION DONE RIGHT */}
-                    </p>
-                    <p className={"subtitle"}>
-                      {t('subTitle1')}
-                      {/* Take a look at what the CEO of the school */}
-                      <br />
-                      {t('subTitle2')}
-                      {/* has to say about. */}
-                    </p>
-                  </div>
+
                 </Col>
                 <Hidden smDown>
                   <Col sm={{ span: 6 }} className={"iconSpace"}>
@@ -138,10 +117,6 @@ function HomeHeader(props) {
               </Row>
             </Container>
           </div>
-          {/*<Hidden smDown>*/}
-          {/*  <div className={"waves"}>*/}
-          {/*  </div>*/}
-          {/*</Hidden>*/}
         </div>
       </Hidden>
     </>

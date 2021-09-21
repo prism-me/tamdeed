@@ -19,6 +19,18 @@ import classNames from 'classnames'
 import { useDispatch } from "react-redux";
 import * as Actions from "../../redux/global/actions";
 
+// import * as React from 'react';
+import Box from '@material-ui/core/Box';
+import Drawer from '@material-ui/core/Drawer';
+import Button from '@material-ui/core/Button';
+import List from '@material-ui/core/List';
+import Divider from '@material-ui/core/Divider';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import MenuIcon from '@material-ui/icons/Menu';
+import ClearIcon from '@material-ui/icons/Clear';
+
 const languages = [
   {
     code: 'en',
@@ -35,6 +47,88 @@ const languages = [
 
 function MainNavbar(props) {
 
+  const [state, setState] = React.useState({
+    right: false,
+  });
+
+  const toggleDrawer = (anchor, open) => (event) => {
+    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+      return;
+    }
+
+    setState({ ...state, [anchor]: open });
+  };
+
+  const list = (anchor) => (
+    <Box
+      sx={{ width: "400px" }}
+      role="presentation"
+      onClick={toggleDrawer(anchor, false)}
+      onKeyDown={toggleDrawer(anchor, false)}
+    >
+      <div className="d-flex justify-content-end align-items-center">
+        <span className="DrawerCloseIcon">
+          <ClearIcon
+            onClick={() => {
+              toggleDrawer(false);
+            }}
+          />
+        </span>
+      </div>
+      <List
+        component="nav"
+        aria-label="main mailbox folders"
+        className="ListStyle"
+      >
+        <ListItem button>
+          <ListItemText
+            onClick={() => {
+              history.push(`/${currentLanguageCode}${STRINGS.ROUTES.ABOUT_US}`);
+              toggleDrawer(false);
+            }}
+            primary="About us"
+          />
+        </ListItem>
+        <ListItem button>
+          <ListItemText
+            onClick={() => {
+              history.push(`/${currentLanguageCode}${STRINGS.ROUTES.ACADEMICS}`);
+              toggleDrawer(false);
+            }}
+            primary="Academics"
+          />
+        </ListItem>
+        <ListItem button>
+          <ListItemText
+            onClick={() => {
+              history.push(`/${currentLanguageCode}${STRINGS.ROUTES.STUDENT_CARE}`);
+              toggleDrawer(false);
+            }}
+            primary="Student care"
+          />
+        </ListItem>
+        <ListItem button>
+          <ListItemText
+            onClick={() => {
+              history.push(`/${currentLanguageCode}${STRINGS.ROUTES.AGS_PORTAL}`);
+              toggleDrawer(false);
+            }}
+            primary="AGS Portal"
+          />
+        </ListItem>
+        <ListItem button>
+          <ListItemText
+            onClick={() => {
+              history.push(`/${currentLanguageCode}${STRINGS.ROUTES.CONTACT_US}`);
+              toggleDrawer(false);
+            }}
+            primary="Contact us"
+          />
+        </ListItem>
+      </List>
+    </Box>
+  );
+
   const currentLanguageCode = cookies.get('i18next') || 'en'
   const currentLanguage = languages.find((l) => l.code === currentLanguageCode)
   const { t } = useTranslation();
@@ -50,56 +144,81 @@ function MainNavbar(props) {
 
   console.log("main", `/${currentLanguageCode}${STRINGS.ROUTES.ABOUT_US}`)
   return (
-    <div className="navbar-wrap">
-      <Navbar
-        collapseOnSelect
-        expand="lg"
-      >
-        <Hidden mdUp>
-          <Navbar.Brand>
-            <CgMenuLeftAlt
-              onClick={() => props.toggleDrawer(true)}
-              className="nav-toggle-override"
-            />
-            <img
-              src={logo}
-              alt="AGS-logo"
-              onClick={() => history.push("/")}
-            />
-          </Navbar.Brand>
-        </Hidden>
-        <Hidden smDown>
-          <Navbar.Brand
-            // href="/"
-            // href={`/` || `/${props.global.activeLanguage}`}
-            style={{ cursor: "pointer" }}
-          >
-            <img src={logo} alt="AGS-logo"
-              onClick={() => history.push("/")}
-            />
-          </Navbar.Brand>
-        </Hidden>
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="ml-auto navborder">
-            <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.ABOUT_US}`}>
-              <Nav.Link>About Us</Nav.Link>
-            </LinkContainer>
-            <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.ACADEMICS}`}>
-              <Nav.Link> Academics </Nav.Link>
-            </LinkContainer>
-            <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.STUDENT_CARE}`}>
-              <Nav.Link> Student care </Nav.Link>
-            </LinkContainer>
-            <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.AGS_PORTAL}`}>
-              <Nav.Link>AGS Portal</Nav.Link>
-            </LinkContainer>
-            <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.CONTACT_US}`}>
-              <Nav.Link>Contact Us</Nav.Link>
-            </LinkContainer>
-            <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.ENROLL}`}>
-              <button className={"enrollButton"}>Enroll</button>
-            </LinkContainer>
-            {/* <NavDropdown
+    <>
+      <div className="navbar-wrap">
+        <Navbar
+          collapseOnSelect
+          expand="lg"
+        >
+          <Hidden mdUp>
+            <Navbar.Brand>
+              <CgMenuLeftAlt
+                onClick={() => props.toggleDrawer(true)}
+                className="nav-toggle-override"
+              />
+              <img
+                src={logo}
+                alt="AGS-logo"
+                onClick={() => history.push("/")}
+              />
+            </Navbar.Brand>
+          </Hidden>
+          <Hidden smDown>
+            <Navbar.Brand
+              // href="/"
+              // href={`/` || `/${props.global.activeLanguage}`}
+              style={{ cursor: "pointer" }}
+            >
+              <img src={logo} alt="AGS-logo"
+                onClick={() => history.push("/")}
+              />
+            </Navbar.Brand>
+          </Hidden>
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="ml-auto navborder">
+              {/* <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.ABOUT_US}`}>
+                <Nav.Link>About Us</Nav.Link>
+              </LinkContainer>
+              <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.ACADEMICS}`}>
+                <Nav.Link> Academics </Nav.Link>
+              </LinkContainer>
+              <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.STUDENT_CARE}`}>
+                <Nav.Link> Student care </Nav.Link>
+              </LinkContainer>
+              <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.AGS_PORTAL}`}>
+                <Nav.Link>AGS Portal</Nav.Link>
+              </LinkContainer>
+              <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.CONTACT_US}`}>
+                <Nav.Link>Contact Us</Nav.Link>
+              </LinkContainer> */}
+              <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.ENROLL}`}>
+                <button className={"enrollButton"}>Enroll</button>
+              </LinkContainer>
+              <Hidden smDown>
+                <div
+                  // href="/"
+                  // href={`/` || `/${props.global.activeLanguage}`}
+                  style={{ cursor: "pointer" }}
+                >
+                  {['right'].map((anchor) => (
+                    <React.Fragment key={anchor}>
+                      <MenuIcon
+                        onClick={toggleDrawer(anchor, true)}
+                        className="nav-toggle-overrideDesktop"
+                      />
+                      {/* <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button> */}
+                      <Drawer
+                        anchor={anchor}
+                        open={state[anchor]}
+                        onClose={toggleDrawer(anchor, false)}
+                      >
+                        {list(anchor)}
+                      </Drawer>
+                    </React.Fragment>
+                  ))}
+                </div>
+              </Hidden>
+              {/* <NavDropdown
               id="nav-dropdown-dark-example"
               title={t('language')}
               menuVariant="light"
@@ -128,10 +247,11 @@ function MainNavbar(props) {
                 </NavDropdown.Item>
               ))}
             </NavDropdown> */}
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
-    </div>
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
+      </div>
+    </>
   );
 }
 

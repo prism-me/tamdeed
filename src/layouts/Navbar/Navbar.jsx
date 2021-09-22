@@ -51,9 +51,7 @@ function MainNavbar(props) {
   const [state, setState] = React.useState({
     right: false,
   });
-  const togglePlay = () => {
-    setIsPlaying(!isPlaying);
-  }
+
   const toggleDrawer = (anchor, open) => (event) => {
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
       return;

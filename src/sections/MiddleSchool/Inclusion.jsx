@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import std1 from "../../assets/images/studentcare/AcademicSupport.jpg";
-import std2 from "../../assets/images/studentcare/AcademicSupport.jpg";
-import std3 from "../../assets/images/studentcare/AcademicSupport.jpg";
+import std1 from "../../assets/images/studentcare/acadamicsupport.jpg";
+import std2 from "../../assets/images/studentcare/acadamicsupport.jpg";
+import std3 from "../../assets/images/studentcare/acadamicsupport.jpg";
 import "./Inclusion.scss";
 import ModalVideo from "react-modal-video";
 import PlayArrowIcon from "@material-ui/icons/PlayArrow";

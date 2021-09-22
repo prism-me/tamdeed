@@ -39,7 +39,6 @@ function HomeHeader(props) {
     <>
       <Hidden smDown>
         <div style={{ height: '', backgroundImage: `url(${isPlaying && header_bg})` }} className={isPlaying ? "videoBottom" : "BackgroundDiv"}>
-
           <BackGroundVideo
             // blur={2}
             videoSource={videoSource}>
@@ -101,9 +100,6 @@ function HomeHeader(props) {
           <div className={"inner-header flex"}>
             <Container>
               <Row>
-                <Col sm={5}>
-
-                </Col>
                 <Hidden smDown>
                   <Col sm={{ span: 6 }} className={"iconSpace"}>
                     <div className="video-promo-content">

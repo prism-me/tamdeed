@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import std1 from "../../../assets/images/studentcare/Inclusion.JPG";
-import std2 from "../../../assets/images/studentcare/AcademicSupport.jpg";
-import std3 from "../../../assets/images/studentcare/SchoolClinic.jpg";
-import std4 from "../../../assets/images/studentcare/Academic.JPG";
-import std5 from "../../../assets/images/studentcare/Academic.JPG";
+import std1 from "../../../assets/images/studentcare/inclusion.jpg";
+import std2 from "../../../assets/images/studentcare/acadamicsupport.jpg";
+import std3 from "../../../assets/images/studentcare/schoolclinic.jpg";
+import std4 from "../../../assets/images/studentcare/Academic.jpg";
+import std5 from "../../../assets/images/studentcare/Academic.jpg";
 
 import ModalVideo from 'react-modal-video'
 import PlayArrowIcon from "@material-ui/icons/PlayArrow";

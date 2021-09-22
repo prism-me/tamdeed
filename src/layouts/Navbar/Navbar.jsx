@@ -30,6 +30,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import MenuIcon from '@material-ui/icons/Menu';
 import ClearIcon from '@material-ui/icons/Clear';
+import logoSidebar from "./../../assets/images/agslogo/Logo.png";
 
 const languages = [
   {
@@ -61,7 +62,7 @@ function MainNavbar(props) {
 
   const list = (anchor) => (
     <Box
-      sx={{ width: "400px" }}
+      sx={{ width: "340px" }}
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
@@ -74,6 +75,17 @@ function MainNavbar(props) {
             }}
           />
         </span>
+      </div>
+      <div className="drawer-logo d-flex justify-content-center align-items-center">
+        <img
+          src={logoSidebar}
+          alt="AGS Logo"
+          style={{ width: "40%" }}
+          onClick={() => {
+            history.push("/");
+            toggleDrawer(false);
+          }}
+        />
       </div>
       <List
         component="nav"
@@ -124,6 +136,24 @@ function MainNavbar(props) {
             }}
             primary="Contact us"
           />
+        </ListItem>
+        <ListItem button>
+          <ListItemText
+            onClick={() => {
+              history.push(`/${currentLanguageCode}${STRINGS.ROUTES.ENROLL}`);
+              toggleDrawer(false);
+            }}
+          // primary="Enroll"
+          >
+            <button style={{
+              background: "#1A2C52",
+              border: "none",
+              color: "white",
+              padding: "0.5rem 0rem",
+              borderRadius: "60px",
+              width: "88%"
+            }}>Enroll</button>
+          </ListItemText>
         </ListItem>
       </List>
     </Box>

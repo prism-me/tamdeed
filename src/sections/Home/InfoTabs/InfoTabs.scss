@@ -11,9 +11,6 @@
         text-align: center;
         font-weight: 500;
         margin-top: -5rem;
-        // position: absolute;
-        // left: 37%;
-        // bottom: -21%;
         color: $primary-color;
         @media #{$sm,$md} {
           font-size: 22px;
@@ -23,16 +20,6 @@
         @media #{$xxl} {
           margin-top: -9rem;
         }
-        // @media #{$lg} {
-        // }
-        //@media #{$_2xl} {
-        //  left: 38%;
-        //  bottom: 48%;
-        //}
-        //@media #{$_4xl} {
-        //  left: 39%;
-        //  bottom: 42%;
-        //}
       }
     @-webkit-keyframes ripple-white {
       0% {
@@ -94,12 +81,10 @@
     }
     .overview-heading {
       position: absolute;
-      // left: 12px;
       font-size: 18px;
       font-weight: 500;
       color: $white;
       padding: 4%;
-      // bottom: -8px;
       top: 80%;
       background: #00000085;
       border-bottom-left-radius: 30px;

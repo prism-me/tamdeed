@@ -132,3 +132,8 @@
     background-color: $text-secondary;
   }
 }
+
+.MuiPaper-root {
+  color: $bg-color !important;
+  background-color: #ffffffe6 !important;
+}

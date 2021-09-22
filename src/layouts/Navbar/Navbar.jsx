@@ -47,11 +47,13 @@ const languages = [
 ]
 
 function MainNavbar(props) {
-
+  const [isPlaying, setIsPlaying] = useState(false);
   const [state, setState] = React.useState({
     right: false,
   });
-
+  const togglePlay = () => {
+    setIsPlaying(!isPlaying);
+  }
   const toggleDrawer = (anchor, open) => (event) => {
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
       return;
@@ -76,11 +78,11 @@ function MainNavbar(props) {
           />
         </span>
       </div>
-      <div className="drawer-logo d-flex justify-content-center align-items-center">
+      <div className="drawer-logo d-flex justify-content-start align-items-center">
         <img
           src={logoSidebar}
           alt="AGS Logo"
-          style={{ width: "40%" }}
+          style={{ width: "37%", marginLeft: "1.5rem" }}
           onClick={() => {
             history.push("/");
             toggleDrawer(false);
@@ -149,9 +151,9 @@ function MainNavbar(props) {
               background: "#1A2C52",
               border: "none",
               color: "white",
-              padding: "0.5rem 0rem",
+              padding: "0.3rem 0rem",
               borderRadius: "60px",
-              width: "88%"
+              width: "43%"
             }}>Enroll</button>
           </ListItemText>
         </ListItem>
@@ -193,17 +195,19 @@ function MainNavbar(props) {
               />
             </Navbar.Brand>
           </Hidden>
-          <Hidden smDown>
-            <Navbar.Brand
-              // href="/"
-              // href={`/` || `/${props.global.activeLanguage}`}
-              style={{ cursor: "pointer" }}
-            >
-              <img src={logo} alt="AGS-logo"
-                onClick={() => history.push("/")}
-              />
-            </Navbar.Brand>
-          </Hidden>
+          {!isPlaying ? (
+            <Hidden smDown>
+              <Navbar.Brand
+                // href="/"
+                // href={`/` || `/${props.global.activeLanguage}`}
+                style={{ cursor: "pointer" }}
+              >
+                <img src={logo} alt="AGS-logo"
+                  onClick={() => history.push("/")}
+                />
+              </Navbar.Brand>
+            </Hidden>
+          ) : null}
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ml-auto navborder">
               {/* <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.ABOUT_US}`}>

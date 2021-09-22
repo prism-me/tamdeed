@@ -11,32 +11,14 @@
     text-transform: uppercase;
     text-align: center;
     font-weight: 500;
-    // position: absolute;
-    // left: 35%;
-    // bottom: -482%;
     z-index: 999;
     color: $primary-color;
     @media #{$sm,$md} {
       font-size: 22px;
     }
-    // @media #{$lg} {
-      
-    // }
-    //@media #{$_2xl} {
-    //  bottom: -172%;
-    //}
-    //@media #{$_4xl} {
-    //  left: 37%;
-    //  bottom: -178%;
-    //}
-
   }
   .Covid {
-    //padding: 0 10rem;
-    //overflow: hidden;
-    height: 70vh;
-    // margin-top: -9rem;
-    // background-image: url("../../../assets/images/ug-images/1920x967.jpg");
+    height: 62vh;
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -45,46 +27,21 @@
     align-items: center;
     position: relative;
     z-index: 888;
-    //-webkit-transition: all .5s;
-    //-moz-transition: all .5s;
-    //-o-transition: all .5s;
-    //transition: all .5s;
     transition: background-size 1s ease-in-out;
     &:hover{
         background-size: 120% /* work with the background-size */
     }
     @media #{$lg} {
-      height: 48vh !important;
+      height: 48vh;
       background-size: cover;
-      //align-items: flex-start !important;
-       padding: 0;
     }
     @media #{$md} {
       background-size: cover;
     }
-    // @media #{$_2xl} {
-    //   height: 50vh ;
-    // }
-    //@media #{$_4xl} {
-    //  height: 50vh ;
-    //}
     @media #{$xxl} {
       height: 80vh;
     }
-    //&::before {
-    //  content: "";
-    //  position: absolute;
-    //  top: 0;
-    //  z-index: -1;
-    //  width: 100%;
-    //  height: 100%;
-    //  background: rgba($color: #000000, $alpha: 0.5);
-    //}
     .description-column {
-      //display: flex;
-      //justify-content: center;
-      //align-items: center;
-      //position: absolute;
       .cardStyle{
         padding: 1rem;
         width: 950px;
@@ -100,70 +57,7 @@
         }
       }
     }
-    .op-div {
-      display: flex;
-      background: #5252527a;
-      height: inherit;
-      width: 100%;
-      /*z-index: 4;*/
-      position: absolute;
-    }
-    .wavy-div {
-      display: flex;
-      width: 100%;
-      height: 250px;
-      /*background: #1A2C52;*/
-      margin-top: 40%;
-      position: relative;
-      &::before{
-        content: "";
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        background-position: center;
-        width: 100%;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-image: url("../../../assets/images/agsbackgrounds/Path 4.1.png");
-      }
-      &::after{
-        content: "";
-        position: absolute;
-        bottom: 0;
-        top: -520px;
-        left: 0;
-        z-index: 1200;
-        height: 240px;
-        background-position: center;
-        width: 100%;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-image: url("../../../assets/images/agsbackgrounds/uppercurve.png");
-        //@media #{$lg} {
-        //top:5px;
-        //height: 170px;
-        //}
-      }
-    }
   }
-  //.parent {
-  //  overflow: hidden;
-  //  position: relative;
-  //  cursor: pointer;
-  //}
-  //
-  //.parent:hover .Covid, .parent:focus .Covid {
-  //  -ms-transform: scale(1.2);
-  //  -moz-transform: scale(1.2);
-  //  -webkit-transform: scale(1.2);
-  //  -o-transform: scale(1.2);
-  //  transform: scale(1.2);
-  //}
-  //
-  //.parent:hover .Covid:before, .parent:focus .Covid:before {
-  //  display: block;
-  //}
 //Design on MbL Screen
   .cardStyleMBL{
     text-align: justify;

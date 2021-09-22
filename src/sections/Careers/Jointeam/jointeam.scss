@@ -4,15 +4,13 @@
       @media #{$sm,$md} {
         padding-top: 2rem;
       }
-      @media #{$sm,$md} {
-        padding-top: 2rem;
-      }
       .Title{
         font-size: 25px;
         font-weight: 500;
         margin: 1.5rem 3rem;
         text-transform: uppercase;
         text-align: center;
+        color: $primary-color;
         @media #{$sm} {
           font-size: 22px;
         }

@@ -1,10 +1,11 @@
-.agsHealth{
+.AGSExperience {
     padding-top: 3rem;
     @media #{$sm} {
       padding-top: 2rem;
     }
     .Title{
         margin-bottom: 2rem;
+        margin-top: -3rem;
         font-size: 25px;
         text-transform: uppercase;
         font-weight: 500;
@@ -26,5 +27,12 @@
         @media #{$sm,$md} {
           margin-top: 1rem;
         }
+      }
+      .viewButton{
+          border-top: none;
+          border-bottom: 1px solid black;
+          border-left: none;
+          border-right: none;
+          background: transparent;
       }
 }

@@ -72,6 +72,29 @@
           animation: ripple-white 1s linear infinite;
           -webkit-transition: 0.5s;
         }
+        .subtitle {
+          margin-top: 2rem;
+          font-size: 16px;
+          font-weight: 500;
+          text-align: justify;
+          padding: 0.5rem 2rem;
+        }
+        .quotemark1{
+          color: $bg-color;
+          transform: rotate(191deg);
+          font-size: 35px;
+          position: absolute;
+          top: 266%;
+          left: 8.5%;
+        }
+        .quotemark2{
+          color: $bg-color;
+          transform: rotate(18deg);
+          font-size: 35px;
+          position: absolute;
+          top: 297%;
+          left: 62%;
+        }
         .imgheight{
           position: relative;
           background-repeat: no-repeat;

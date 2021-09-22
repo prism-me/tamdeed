@@ -1,99 +1,111 @@
 .home-page{
-  .carrers-join{
-    margin-top: 2rem;
-    @media #{$sm,$md,$xsm,$tiny} {
-      margin-top: 0rem;
-    }
-    @media #{$sm,$md} {
-      padding-top: 0rem;
-    }
-  }
-  .position-main{
-    padding-top: 0px;
-  }
-  .school-main{
-    margin-top: 0px;
-  }
-  .schoolbtn{
-    border: 1px solid $bg-color;
-    border-radius: 100px;
-    color: $white;
-    width: 100%;
-    font-size: 18px;
-    font-weight: 500;
-    background: $bg-color;
-    &:hover{
-      background: $hover-color;
-      color: $black;
-    }
-    @media #{$sm,$md,$xsm,$tiny} {
-      width: auto;
-    }
-  }
-  .school-main .ac-bg .card-body{
-    display: unset;
-  }
-  .school-main .ac-bg .cardStyle{
-    width: 80%;
-    height: auto;
-    text-align: center;
-    margin: 12rem auto;
-    @media #{$sm,$md,$xsm,$tiny} {
-      padding: 2rem 0;
-      width: 100%;
-      margin: 7rem auto auto auto;
-    }
-  }
-  .school-main .ac-bg .cardStyle .subtitle{
-    font-size: 21px;
-    color: $bg-color;
-    @media #{$sm,$md,$xsm,$tiny} {
-      font-size: 18px;
-    }
-  }
-  .Position-Title {
-    margin-top: 20rem;
-    position: absolute;
-    margin-bottom: 2rem;
-    font-size: 25px;
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: 500;
-    color: #000000;
-    @media #{$_3xl} {
-      margin-top: 24rem;
-    }
-    @media #{$_5xl} {
-      margin-top: 29rem;
-    }
-    @media #{$xl}{
-      margin-top: 2rem;
-    }
-    @media #{$lg}{
-      margin-top: 2rem;
-    }
-    @media #{$sm,$md}{
-      margin-top: 0rem;
-    }
-  }
-  .school-main .ac-bg{
-    background-image: url("./../../../assets/images/agsbackgrounds/AGSCareersPhoto.jpg");
-    margin-top: 3rem;
-  }
-  // .school-main .ac-bg .InfoTitle-Ethos{
-  //   margin-top: 6rem;
-  // }
-  .m-row{
-    margin: 0;
-    .cardStyle{
-      margin: 10px 0px;
+  .Position{
+    padding-top: 1rem;
+      @media #{$sm,$md} {
+        padding-top: 0;
+      }
+    .Title{
+      margin-bottom: 2rem;
+      font-size: 25px;
+      text-transform: uppercase;
+      font-weight: 500;
       text-align: center;
-      p {
-        @media #{$sm} {
-          font-size: 20px;
+      color: $primary-color;
+      @media #{$sm,$md} {
+        font-size: 22px;
+        margin-bottom: 1rem;
+      }
+    }
+    .PositionDiv {
+      height: 57vh;
+      //background-size: cover;
+      background-size: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      z-index: 888;
+      transition: background-size 1s ease-in-out;
+      &:hover{
+        background-size: 120% /* work with the background-size */
+      }
+      @media #{$lg} {
+        height: 25vh;
+        background-size: cover;
+      }
+      @media #{$md} {
+        background-size: cover;
+      }
+    
+      @media #{$xxl} {
+        height: 80vh;
+      }
+
+      .description-column {
+        .cardStyle{
+          margin-top: 8rem;
+          padding: 1rem;
+          width: 83%;
+          border-radius: 50px;
+          @media #{$sm,$md} {
+            width: 100%;
+            padding: 1.5rem 1rem;
+          }
+          .schoolbtn{
+            border: 1px solid $bg-color;
+            border-radius: 100px;
+            color: $white;
+            // width: 100%;
+            font-size: 18px;
+            font-weight: 500;
+            background: $bg-color;
+            &:hover{
+              background: $hover-color;
+              color: $black;
+            }
+            @media #{$sm,$md,$xsm,$tiny} {
+              width: auto;
+            }
+          }
+          .subtitle{
+            margin-top: 0.5rem;
+            font-size: 21px;
+            text-align: center;
+            font-weight: 500;
+            @media #{$sm,$md} {
+              margin-top: 0;
+            }
+          }
         }
       }
     }
-  }
-  
+    //Design on mbl screen
+    .schoolbtn{
+      border: 1px solid $bg-color;
+      border-radius: 100px;
+      color: $white;
+      width: auto;
+      font-size: 18px;
+      font-weight: 500;
+      background: $bg-color;
+      &:hover{
+        background: $hover-color;
+        color: $black;
+      }
+    }
+    .m-row{
+      margin: 0;
+      .cardStyle{
+        margin: 10px 0px;
+        text-align: center;
+        p {
+          @media #{$sm} {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  } 
 }

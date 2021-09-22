@@ -102,9 +102,6 @@ export default function Ourteam() {
                                     {slides.title} <br />
                                     {slides.Subtitle}
                                 </h5>
-                                {/* <p className={"subTitle"}>
-                                    {slides.Subtitle}
-                                </p> */}
                             </div>
                         </div>
                     ))

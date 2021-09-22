@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
-import header_bg from "./../../../assets/images/agsbackgrounds/CurriculumPhoto.JPG";
+import header_bg from "./../../../assets/images/agsbackgrounds/curriculumcourse.jpg";
 import { Hidden } from "@material-ui/core";
 // import { withNamespaces } from 'react-i18next';
 import { useTranslation } from 'react-i18next';
@@ -18,10 +18,6 @@ function Curriculum(props) {
                     className="Curriculum"
                     style={{ backgroundImage: `url(${header_bg})` }}
                 >
-                    {/*<div className="op-div">*/}
-                    {/*</div>*/}
-                    {/*<div className="wavy-div">*/}
-                    {/*</div>*/}
                     <div className="description-column">
                         <Container>
                             <Card className={"cardStyle"}>

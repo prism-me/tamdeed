@@ -14,7 +14,7 @@ const AgsPortalComponent = () => {
         window.open("https://agsae.isams.cloud/");
     }
     function staffClick() {
-        window.open("https://agsae.isams.cloud/");
+        window.open("https://sites.google.com/ags.ae/ags-intranet/home?");
     }
     function stdClick() {
         window.open("https://launchpad.classlink.com/ags");

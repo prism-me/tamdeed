@@ -163,7 +163,7 @@
     }
 
   .agsPortal {
-    height: 45vh;
+    height: 65vh;
     //background-size: cover;
     background-size: 100%;
     background-position: center;
@@ -178,19 +178,23 @@
       background-size: 120% /* work with the background-size */
     }
     @media #{$lg} {
-      height: 20vh;
+      height: 24vh;
       background-size: cover;
     }
-    @media #{$md} {
-      background-size: cover;
-      height: 20vh;
-    }
+    // @media #{$md} {
+    //   background-size: cover;
+    //   height: 20vh;
+    // }
   
     @media #{$xxl} {
       height: 45vh;
     }
 
     .description-column {
+      margin-top: 10rem;
+      @media #{$sm,$md} {
+        margin-top: 0;
+      }
       .btn-holder {
         display: flex;
         width: 100%;

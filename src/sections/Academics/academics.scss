@@ -423,7 +423,7 @@
 
           ._circle {
             display: flex;
-            border-radius: 50%;
+            // border-radius: 50%;
             font-weight: bold;
             color: #CDB786;
             background-color: $bg_color;
@@ -436,7 +436,8 @@
             ._circle-inner {
               display: flex;
               align-items: center;
-              font-size: 3rem;
+              justify-content: center;
+              font-size: 2rem;
               // font-family: "Optima nova LT Medium";
               font-weight: lighter;
 
@@ -452,16 +453,18 @@
             }
           }
 
-          ._circle.lg {
-            border-radius: 65px;
-          }
+          // ._circle.lg {
+            // border-radius: 65px;
+          // }
 
           ._circle-txt {
             display: flex;
+            justify-content: center;
+            align-items: center;
             margin: 0.4rem 0;
 
             p {
-              font-size: 16px;
+              font-size: 14px;
               color: $bg_color;
               margin-bottom: 0;
               text-align: center;

@@ -14,6 +14,11 @@
           font-size: 22px;
         }
       }
+      .principalmsgHr{
+        margin-top: 3rem;
+        border: 2px solid #e40909;
+        width: 30%;
+      }
         @-webkit-keyframes ripple-white {
           0% {
             -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1),
@@ -72,8 +77,18 @@
           animation: ripple-white 1s linear infinite;
           -webkit-transition: 0.5s;
         }
+
+
+        .sucessDiv {
+          background-image:url('../../../assets/images/agsbackgrounds/Quote.png');
+          background-repeat:no-repeat;
+          background-position:left top;
+        }
+        
+      
+
         .subtitle {
-          margin-top: 2rem;
+          // margin-top: 2rem;
           font-size: 16px;
           font-weight: 500;
           text-align: justify;

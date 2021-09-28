@@ -2,16 +2,21 @@ import React, { useEffect, useState } from 'react';
 import location_icon from "../../assets/images/contact/map-pin.png";
 import phone_icon from "../../assets/images/contact/phone.png";
 import email_icon from "../../assets/images/contact/mail.png";
-import youtube_icon from "../../assets/images/contact/Youtube.png";
-import fb_icon from "../../assets/images/contact/Facebook.png";
-import insta_icon from "../../assets/images/contact/Instagram.png";
-import twitter_icon from "../../assets/images/contact/Twitter.png";
+// import youtube_icon from "../../assets/images/contact/Youtube.png";
+// import fb_icon from "../../assets/images/contact/Facebook.png";
+// import insta_icon from "../../assets/images/contact/Instagram.png";
+// import twitter_icon from "../../assets/images/contact/Twitter.png";
 import bg_img from "../../assets/images/agsbanners/contactUs.png";
 // import $ from "jquery";
 import { STRINGS } from "../../utils/base";
 import { API } from "../../http/API";
 import SnackBar from "../../components/SnackBar/SnackBar";
 import Spinner from "../../components/Spinner/Spinner";
+import LocationOnIcon from '@material-ui/icons/LocationOn';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import MailOutlineIcon from '@material-ui/icons/MailOutline';
+import InstagramIcon from '@material-ui/icons/Instagram';
+import FacebookIcon from '@material-ui/icons/Facebook';
 
 const defaultState = {
     isRequestPending: false,
@@ -173,7 +178,9 @@ const Contact = () => {
                         <div className="card-foot">
                             <div className="address-label">
                                 <div className="icon">
-                                    <img alt={"#"} src={location_icon} />
+                                    <a href="https://www.google.com/maps/place/American+Gulf+School/@25.3382268,55.5628731,17z/data=!3m1!4b1!4m5!3m4!1s0x3ef5f5ef006a4c83:0xcf95030e29d9fb7!8m2!3d25.3382268!4d55.5650618" className="text-decoration-none text-white" target="_blank">
+                                        <img alt={"#"} src={location_icon} />
+                                    </a>
                                 </div>
                                 <div className="text">
                                     <p>Al Rahmaniya Shaghrafah 4 - Sharjah - United Arab Emirates</p>
@@ -189,7 +196,7 @@ const Contact = () => {
                                             <img alt={"#"} src={phone_icon} />
                                         </div>
                                         <div className="txt">
-                                            05-69990871
+                                            <a href="tel: 05-69990871" className="text-decoration-none text-white">  05-69990871</a>
                                         </div>
                                     </div>
                                     <div className="icon-txt-hld">
@@ -197,7 +204,7 @@ const Contact = () => {
                                             <img alt={"#"} src={email_icon} />
                                         </div>
                                         <div className="txt">
-                                            admissions@ags.ae
+                                            <a href="mailto:admissions@ags.ae" className="text-decoration-none text-white"> admissions@ags.ae</a>
                                         </div>
                                     </div>
                                 </div>
@@ -207,10 +214,11 @@ const Contact = () => {
                                     </div>
                                     <div className="icon-txt-hld">
                                         <div className="icon">
+
                                             <img alt={"#"} src={phone_icon} />
                                         </div>
                                         <div className="txt">
-                                            06-5061111
+                                            <a href="tel:06-5061111" className="text-decoration-none text-white"> 06-5061111</a>
                                         </div>
                                     </div>
                                     <div className="icon-txt-hld">
@@ -218,23 +226,41 @@ const Contact = () => {
                                             <img alt={"#"} src={email_icon} />
                                         </div>
                                         <div className="txt">
-                                            info@ags.ae
+                                            <a href="mailto:info@ags.ae" className="text-decoration-none text-white">info@ags.ae</a>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="info-item ic">
                                     <div className="icon-txt-hld ic">
                                         <div className="icon">
-                                            <img alt={"#"} src={youtube_icon} />
+                                            {/* <img alt={"#"} src={youtube_icon} /> */}
+                                            <a href="https://www.facebook.com/American-Gulf-School-Sharjah-106277764954110" className={"text-white"} target="_blank">
+                                                <FacebookIcon />
+                                            </a>
                                         </div>
                                         <div className="icon">
-                                            <img alt={"#"} src={insta_icon} />
+                                            {/* <img alt={"#"} src={insta_icon} /> */}
+                                            <a href="mailto:admissions@ags.ae" className={"text-white"}>
+                                                <MailOutlineIcon />
+                                            </a>
                                         </div>
                                         <div className="icon">
-                                            <img alt={"#"} src={fb_icon} />
+                                            {/* <img alt={"#"} src={fb_icon} /> */}
+                                            <a href="https://www.google.com/maps/place/American+Gulf+School/@25.3382268,55.5628731,17z/data=!3m1!4b1!4m5!3m4!1s0x3ef5f5ef006a4c83:0xcf95030e29d9fb7!8m2!3d25.3382268!4d55.5650618" className={"text-white"} target="_blank">
+                                                <LocationOnIcon />
+                                            </a>
                                         </div>
                                         <div className="icon">
-                                            <img alt={"#"} src={twitter_icon} />
+                                            {/* <img alt={"#"} src={twitter_icon} /> */}
+                                            <a href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQFmCcDlQ1gXZAAAAXwsFxY43sOt4cYab_4gAvY6oE1xWq3uaDQKZNL_mZjiN84VWH918aUvSOxZvlRF3Tcw8L-OTOg52iUs6gq9t3IX9h8f4seCgDit8xUABkKWId9PhKDaTNI=&originalReferer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Famerican-gulf-school-sharjah%2F" className={"text-white"} target="_blank">
+                                                <LinkedInIcon />
+                                            </a>
+                                        </div>
+                                        <div className="icon">
+                                            {/* <img alt={"#"} src={twitter_icon} /> */}
+                                            <a href="https://www.instagram.com/ags_shj/?hl=en" className={"text-white"} target="_blank">
+                                                <InstagramIcon />
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -248,11 +274,11 @@ const Contact = () => {
             </div>
             <div className="contact-footer">
                 <div className="address-map">
-                    <div className="btn-hld">
+                    {/* <div className="btn-hld">
                         <button className="btn">Share Location</button>
-                    </div>
+                    </div> */}
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14423.484524133519!2d55.56093361751506!3d25.342105034139998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ef5f40e118ee9a9%3A0x322230539da7a8e3!2sAl%20RahmaniyaShaghrafah%204%20-%20Sharjah%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2s!4v1629034203974!5m2!1sen!2s"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3605.9867160428666!2d55.562873115012394!3d25.338226783830823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ef5f5ef006a4c83%3A0xcf95030e29d9fb7!2sAmerican%20Gulf%20School!5e0!3m2!1sen!2s!4v1632827655730!5m2!1sen!2s"
                         width="100%" style={{ border: "0" }} loading="lazy" />
                 </div>
             </div>

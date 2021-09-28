@@ -14,6 +14,8 @@ import { useTranslation } from 'react-i18next';
 import cookies from 'js-cookie'
 import logo from "./../../assets/images/agslogo/Logo (1).png";
 import { useHistory } from "react-router-dom";
+import LocationOnIcon from '@material-ui/icons/LocationOn';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
 function Footer() {
   const currentLanguageCode = cookies.get('i18next') || 'en'
@@ -44,22 +46,25 @@ function Footer() {
               </div>
               <p className="socialIcon">
                 SOCIAL
-                <a href="#" className={"footericonsize"}>
+                <a href="https://www.facebook.com/American-Gulf-School-Sharjah-106277764954110" className={"footericonsize"} target="_blank">
                   <FacebookIcon />
                 </a>
-                <a href="#" className={"footericonsize"}>
-                  <YouTubeIcon />
+                <a href="mailto:admissions@ags.ae" className={"footericonsize"}>
+                  <MailOutlineIcon />
                 </a>
-                <a href="#" className={"footericonsize"}>
-                  <TwitterIcon />
+                <a href="https://www.google.com/maps/place/American+Gulf+School/@25.3382268,55.5628731,17z/data=!3m1!4b1!4m5!3m4!1s0x3ef5f5ef006a4c83:0xcf95030e29d9fb7!8m2!3d25.3382268!4d55.5650618" className={"footericonsize"} target="_blank">
+                  <LocationOnIcon />
                 </a>
-                <a href="#" className={"footericonsize"}>
+                <a href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQFmCcDlQ1gXZAAAAXwsFxY43sOt4cYab_4gAvY6oE1xWq3uaDQKZNL_mZjiN84VWH918aUvSOxZvlRF3Tcw8L-OTOg52iUs6gq9t3IX9h8f4seCgDit8xUABkKWId9PhKDaTNI=&originalReferer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Famerican-gulf-school-sharjah%2F" className={"footericonsize"} target="_blank">
+                  <LinkedInIcon />
+                </a>
+                <a href="https://www.instagram.com/ags_shj/?hl=en" className={"footericonsize"} target="_blank">
                   <InstagramIcon />
                 </a>
               </p>
               <div>
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14423.484524133519!2d55.56093361751506!3d25.342105034139998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ef5f40e118ee9a9%3A0x322230539da7a8e3!2sAl%20RahmaniyaShaghrafah%204%20-%20Sharjah%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2s!4v1629034203974!5m2!1sen!2s"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3605.9867160428666!2d55.562873115012394!3d25.338226783830823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ef5f5ef006a4c83%3A0xcf95030e29d9fb7!2sAmerican%20Gulf%20School!5e0!3m2!1sen!2s!4v1632827655730!5m2!1sen!2s"
                   width="100%" style={{ border: "0" }} loading="lazy"></iframe>
               </div>
             </Col>
@@ -71,7 +76,7 @@ function Footer() {
                 <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.ABOUT_US}`}>
                   <Nav.Link className=" fdeco"> About us </Nav.Link>
                 </LinkContainer>
-                <LinkContainer to="#">
+                <LinkContainer to="https://www.google.com/maps/place/American+Gulf+School/@25.3382268,55.5628731,17z/data=!3m1!4b1!4m5!3m4!1s0x3ef5f5ef006a4c83:0xcf95030e29d9fb7!8m2!3d25.3382268!4d55.5650618?shorturl=1">
                   <Nav.Link className=" fdeco"> Campus Location </Nav.Link>
                 </LinkContainer>
                 <LinkContainer to="#">

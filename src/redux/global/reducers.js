@@ -1,23 +1,30 @@
-// import { types } from "./types";
+import { types } from "./types";
 
 let initialState = {
-    counter: 12,
-    name: "faiza zakir khan",
-    products: [],
-    currentRole: 'admin'
+  showSpinner: false,
+  activeLanguage: "en",
 };
-
 const globalReducer = (state = initialState, action) => {
-    switch (action.type) {
-        case "SET_ROLE":
-            return {
-                ...state,
-                currentRole: action.payload.role,
-            };
-
-        default: {
-            return state;
-        }
+  switch (action.type) {
+    case types.SHOW_SPINNER:
+      return {
+        ...state,
+        showSpinner: true,
+      };
+    case types.HIDE_SPINNER:
+      return {
+        ...state,
+        showSpinner: false,
+      };
+    case "SET_ACTIVE_LANGUAGE_SUCCESS":
+      // debugger;
+      return {
+        ...state,
+        activeLanguage: action.payload.language || "en",
+      };
+    default: {
+      return state;
     }
+  }
 };
 export default globalReducer;

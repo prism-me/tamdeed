@@ -9,11 +9,8 @@ import exper5 from "../../../assets/images/ExperiencewithAGS/Stream and Fabricat
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
-// import { withNamespaces } from 'react-i18next';
-import { useTranslation } from 'react-i18next';
 
 function InfoTabs() {
-  const { t } = useTranslation();
   const slidesData = [
     {
       thumbnail: exper1,
@@ -71,8 +68,7 @@ function InfoTabs() {
   return (
     <div className={"info-tabs"} dir="ltr">
       <h2 className={"InfoTitle"}>
-        {t('ExperienceTitle')}
-        {/* EXPERIENCE THE AGS DIFFERENCE */}
+        EXPERIENCE THE AGS DIFFERENCE
       </h2>
       <OwlCarousel className="owl-theme" {...options}>
         {slidesData.map((slides, index) => (

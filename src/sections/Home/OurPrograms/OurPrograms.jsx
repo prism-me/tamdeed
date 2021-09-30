@@ -6,7 +6,6 @@ import Spinner from "../../../components/Spinner/Spinner";
 import { API } from "../../../http/API";
 import { STRINGS } from "../../../utils/base";
 import SnackBar from "../../../components/SnackBar/SnackBar";
-import { useTranslation } from 'react-i18next';
 
 const defaultState = {
     isRequestPending: false,
@@ -18,7 +17,6 @@ const defaultState = {
 }
 
 function OurPrograms() {
-    const { t } = useTranslation();
     const [init, setInit] = useState(defaultState);
     let { name, email, isRequestPending, isOpen, message, variant } = init;
 
@@ -121,26 +119,24 @@ function OurPrograms() {
                             <Card shadow style={{ borderRadius: "20px" }} className={"cardStyle"}>
                                 <Card.Body>
                                     <h4 className={" intro-title"}>
-                                        {t('waitlistTitle')}
-                                        {/* Join the waitlist for our 2022 programs. */}
+                                        Join the waitlist for our 2022 programs.
                                     </h4>
                                     <Form onSubmit={handleSubmit}>
                                         <Form.Group className="mb-3" controlId="formGroupName">
                                             <Form.Control name={"name"} value={name} onChange={handleChange} type="text"
-                                                placeholder={t('waitlistName')}
+                                                placeholder="Enter Username"
                                                 className={"formFields"} />
                                         </Form.Group>
                                         <Form.Group className="mb-3" controlId="formGroupEmail">
                                             <Form.Control name={"email"} value={email} onChange={handleChange}
-                                                type="text" placeholder={t('waitlistAddress')}
+                                                type="text" placeholder="Enter User Email"
                                                 className={"formFields"} />
                                         </Form.Group>
                                         <center>
                                             {
                                                 !isRequestPending ?
                                                     <button className={"enroll"}>
-                                                        {t('waitlistEnroll')}
-                                                        {/* Enroll */}
+                                                        Enroll
                                                     </button> :
                                                     <Spinner color1={"#1a2c52"} size={"sm"} />
                                             }
@@ -158,26 +154,24 @@ function OurPrograms() {
                     <Card shadow style={{ borderRadius: "20px" }} className={"cardStyleMBL"}>
                         <Card.Body>
                             <h4 className={" intro-title"}>
-                                {t('waitlistTitle')}
-                                {/* Join the waitlist for our 2022 programs. */}
+                                Join the waitlist for our 2022 programs.
                             </h4>
                             <Form onSubmit={handleSubmit}>
                                 <Form.Group className="mb-3" controlId="formGroupName">
                                     <Form.Control name={"name"} value={name} onChange={handleChange} type="text"
-                                        placeholder={t('waitlistName')}
+                                        placeholder="Enter Username"
                                         className={"formFields"} />
                                 </Form.Group>
                                 <Form.Group className="mb-3" controlId="formGroupEmail">
                                     <Form.Control name={"email"} value={email} onChange={handleChange}
-                                        type="text" placeholder={t('waitlistAddress')}
+                                        type="text" placeholder="Enter User Email"
                                         className={"formFields"} />
                                 </Form.Group>
                                 <center>
                                     {
                                         !isRequestPending ?
                                             <button className={"enroll"}>
-                                                {t('waitlistEnroll')}
-                                                {/* Enroll */}
+                                                Enroll
                                             </button> :
                                             <Spinner color1={"#1a2c52"} size={"sm"} />
                                     }

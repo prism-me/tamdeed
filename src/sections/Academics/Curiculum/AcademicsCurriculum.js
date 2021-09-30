@@ -4,13 +4,10 @@ import kindergarten_img from "../../../assets/images/Curriculum/Kindergarten.png
 import middle_school from "../../../assets/images/Curriculum/MiddleSchool.png";
 import p_school from "../../../assets/images/Curriculum/PrimarySchool.png";
 import { useHistory } from "react-router-dom";
-import cookies from 'js-cookie'
 import { STRINGS } from "../../../utils/base";
 
 const AcademicsCurriculum = () => {
-    const currentLanguageCode = cookies.get('i18next') || 'en'
     const history = useHistory();
-
     return (
         <div className={"Academics"} id={"Our_Curriculum"}>
             <h3 className={"InfoTitle"}>OUR CURRICULUM</h3>
@@ -24,7 +21,7 @@ const AcademicsCurriculum = () => {
                     <div className={"mx-2 divstyle wc"}
                         style={{ cursor: "pointer" }}
                         onClick={() => {
-                            history.push(`/${currentLanguageCode}${STRINGS.ROUTES.KINDERGARTEN}`);
+                            history.push(`/${STRINGS.ROUTES.KINDERGARTEN}`);
                         }}
                     >
                         <div className="d-flex justify-content-center align-items-center imgheight ch"
@@ -40,7 +37,7 @@ const AcademicsCurriculum = () => {
                     <div className={"mx-2 divstyle wc"}
                         style={{ cursor: "pointer" }}
                         onClick={() => {
-                            history.push(`/${currentLanguageCode}${STRINGS.ROUTES.PRIMARYSCHOOL}`);
+                            history.push(`/${STRINGS.ROUTES.PRIMARYSCHOOL}`);
                         }}
                     >
                         <div className="d-flex justify-content-center align-items-center imgheight ch"
@@ -56,7 +53,7 @@ const AcademicsCurriculum = () => {
                     <div className={"mx-2 divstyle wc"}
                         style={{ cursor: "pointer" }}
                         onClick={() => {
-                            history.push(`/${currentLanguageCode}${STRINGS.ROUTES.MIDDLE_SCHOOL}`);
+                            history.push(`/${STRINGS.ROUTES.MIDDLE_SCHOOL}`);
                         }}
                     >
                         <div className="d-flex justify-content-center align-items-center imgheight ch"

@@ -9,15 +9,6 @@ export function getDomainValues(domains) {
     };
 }
 
-export function setCurrentLngCode(data) {
-    return {
-        type: types.SET_ACTIVE_LANGUAGE,
-        payload: {
-            code: data
-        }
-    };
-}
-
 export function loginRequest(user) {
     return {
         type: types.LOGIN_REQUEST,

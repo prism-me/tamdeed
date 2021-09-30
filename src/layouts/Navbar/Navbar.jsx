@@ -1,53 +1,23 @@
 import React, { useEffect, useReducer, useState } from "react";
-import { Navbar, Nav, Form } from "react-bootstrap";
-
+import { Navbar, Nav, Dropdown } from "react-bootstrap";
 import logo from "./../../assets/images/agslogo/Logo (2).png";
-
 import { useHistory } from "react-router-dom";
 import { Hidden } from "@material-ui/core";
 import { LinkContainer } from "react-router-bootstrap";
 import { API } from "../../http/API";
-import NavDropdown from "react-bootstrap/NavDropdown";
+import { types } from "../../redux/global/types";
 import { CgMenuLeftAlt } from "react-icons/cg";
-import { STRINGS } from "../../utils/base";
-import i18n from '../../i18n';
-// import { withNamespaces } from 'react-i18next';
-import { useTranslation } from 'react-i18next';
-import i18next from 'i18next'
-import cookies from 'js-cookie'
-import classNames from 'classnames'
-import { useDispatch } from "react-redux";
-import * as Actions from "../../redux/global/actions";
-
-// import * as React from 'react';
 import Box from '@material-ui/core/Box';
 import Drawer from '@material-ui/core/Drawer';
-import Button from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
-import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import MenuIcon from '@material-ui/icons/Menu';
 import ClearIcon from '@material-ui/icons/Clear';
 import logoSidebar from "./../../assets/images/agslogo/Logo.png";
-
-const languages = [
-  {
-    code: 'en',
-    name: 'English',
-    country_code: 'gb',
-  },
-  {
-    code: 'ar',
-    name: 'العربية',
-    dir: 'rtl',
-    country_code: 'sa',
-  },
-]
+import { connect } from "react-redux";
 
 function MainNavbar(props) {
-  const [isPlaying, setIsPlaying] = useState(false);
   const [state, setState] = React.useState({
     right: false,
   });
@@ -95,52 +65,57 @@ function MainNavbar(props) {
         <ListItem button>
           <ListItemText
             onClick={() => {
-              history.push(`/${currentLanguageCode}${STRINGS.ROUTES.ABOUT_US}`);
+              history.push(`/${props.global.activeLanguage}/about`);
               toggleDrawer(false);
             }}
-            primary="About us"
+            // primary="About us"
+            primary={props.global.activeLanguage === "en" ? "About Us" : "معلومات عنا"}
           />
         </ListItem>
         <ListItem button>
           <ListItemText
             onClick={() => {
-              history.push(`/${currentLanguageCode}${STRINGS.ROUTES.ACADEMICS}`);
+              history.push(`/${props.global.activeLanguage}/academics`);
               toggleDrawer(false);
             }}
-            primary="Academics"
+            // primary="Academics"
+            primary={props.global.activeLanguage === "en" ? "Academics" : "أكاديميون"}
           />
         </ListItem>
         <ListItem button>
           <ListItemText
             onClick={() => {
-              history.push(`/${currentLanguageCode}${STRINGS.ROUTES.STUDENT_CARE}`);
+              history.push(`/${props.global.activeLanguage}/Student-care`);
               toggleDrawer(false);
             }}
-            primary="Student care"
+            // primary="Student care"
+            primary={props.global.activeLanguage === "en" ? "Student Care" : "رعاية الطلاب"}
           />
         </ListItem>
         <ListItem button>
           <ListItemText
             onClick={() => {
-              history.push(`/${currentLanguageCode}${STRINGS.ROUTES.AGS_PORTAL}`);
+              history.push(`/${props.global.activeLanguage}/agsPortal`);
               toggleDrawer(false);
             }}
-            primary="AGS Portal"
+            // primary="AGS Portal"
+            primary={props.global.activeLanguage === "en" ? "AGS Portal" : "بوابة AGS"}
           />
         </ListItem>
         <ListItem button>
           <ListItemText
             onClick={() => {
-              history.push(`/${currentLanguageCode}${STRINGS.ROUTES.CONTACT_US}`);
+              history.push(`/${props.global.activeLanguage}/contact`);
               toggleDrawer(false);
             }}
-            primary="Contact us"
+            // primary="Contact us"
+            primary={props.global.activeLanguage === "en" ? "Contact Us" : "اتصل بنا"}
           />
         </ListItem>
         <ListItem button>
           <ListItemText
             onClick={() => {
-              history.push(`/${currentLanguageCode}${STRINGS.ROUTES.ENROLL}`);
+              history.push(`/${props.global.activeLanguage}/Enroll`);
               toggleDrawer(false);
             }}
           // primary="Enroll"
@@ -152,27 +127,17 @@ function MainNavbar(props) {
               padding: "0.3rem 0rem",
               borderRadius: "60px",
               width: "43%"
-            }}>Enroll</button>
+            }}>
+              {props.global.activeLanguage === "en" ? "Enroll" : "يتسجل"}
+            </button>
           </ListItemText>
         </ListItem>
       </List>
     </Box>
   );
 
-  const currentLanguageCode = cookies.get('i18next') || 'en'
-  const currentLanguage = languages.find((l) => l.code === currentLanguageCode)
-  const { t } = useTranslation();
-  let dispatch = useDispatch();
-
-  useEffect(() => {
-    console.log('Setting page stuff')
-    document.body.dir = currentLanguage.dir || 'ltr'
-    document.title = t('app_title')
-  }, [currentLanguage, t])
-
   const history = useHistory();
 
-  console.log("main", `/${currentLanguageCode}${STRINGS.ROUTES.ABOUT_US}`)
   return (
     <>
       <div className="navbar-wrap">
@@ -193,38 +158,51 @@ function MainNavbar(props) {
               />
             </Navbar.Brand>
           </Hidden>
-          {!isPlaying ? (
-            <Hidden smDown>
-              <Navbar.Brand
-                // href="/"
-                // href={`/` || `/${props.global.activeLanguage}`}
-                style={{ cursor: "pointer" }}
-              >
-                <img src={logo} alt="AGS-logo"
-                  onClick={() => history.push("/")}
-                />
-              </Navbar.Brand>
-            </Hidden>
-          ) : null}
+          <Hidden smDown>
+            <Navbar.Brand
+              // href="/"
+              // href={`/` || `/${props.global.activeLanguage}`}
+              style={{ cursor: "pointer" }}
+            >
+              <img src={logo} alt="AGS-logo"
+                onClick={() => history.push("/")}
+              />
+            </Navbar.Brand>
+          </Hidden>
+
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ml-auto navborder">
-              {/* <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.ABOUT_US}`}>
-                <Nav.Link>About Us</Nav.Link>
-              </LinkContainer>
-              <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.ACADEMICS}`}>
-                <Nav.Link> Academics </Nav.Link>
-              </LinkContainer>
-              <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.STUDENT_CARE}`}>
-                <Nav.Link> Student care </Nav.Link>
-              </LinkContainer>
-              <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.AGS_PORTAL}`}>
-                <Nav.Link>AGS Portal</Nav.Link>
-              </LinkContainer>
-              <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.CONTACT_US}`}>
-                <Nav.Link>Contact Us</Nav.Link>
-              </LinkContainer> */}
-              <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.ENROLL}`}>
-                <button className={"enrollButton"}>Enroll</button>
+              <div className="dropdown mr-2 ">
+                <Dropdown>
+                  <Dropdown.Toggle
+                    variant=" btn-sm"
+                    id="dropdown-basic">
+                    {props.global.activeLanguage === "en" ? "Language" : "اللغة"}
+                  </Dropdown.Toggle>
+                  <Dropdown.Menu>
+                    <Dropdown.Item as="button"
+                      className={props.global.activeLanguage === "en" ? "active" : ""}
+                    >
+                      <div onClick={() => {
+                        props.setActiveLanguage("en");
+                      }}>
+                        {props.global.activeLanguage === "en" ? "English" : "الإنجليزية"}
+                      </div>
+                    </Dropdown.Item>
+                    <Dropdown.Item as="button" className={props.global.activeLanguage === "ar" ? "active" : ""}>
+                      <div onClick={() => {
+                        props.setActiveLanguage("ar");
+                      }}>
+                        {props.global.activeLanguage === "en" ? "العربية" : "العربية"}
+                      </div>
+                    </Dropdown.Item>
+                  </Dropdown.Menu>
+                </Dropdown>
+              </div>
+              <LinkContainer to={`/${props.global.activeLanguage}/Enroll`}>
+                <button className={"enrollButton"}>
+                  {props.global.activeLanguage === "en" ? "Enroll" : "يتسجل"}
+                </button>
               </LinkContainer>
               <Hidden smDown>
                 <div
@@ -238,7 +216,6 @@ function MainNavbar(props) {
                         onClick={toggleDrawer(anchor, true)}
                         className="nav-toggle-overrideDesktop"
                       />
-                      {/* <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button> */}
                       <Drawer
                         anchor={anchor}
                         open={state[anchor]}
@@ -250,35 +227,6 @@ function MainNavbar(props) {
                   ))}
                 </div>
               </Hidden>
-              {/* <NavDropdown
-              id="nav-dropdown-dark-example"
-              title={t('language')}
-              menuVariant="light"
-            >
-              {languages.map(({ code, name, country_code }) => (
-                <NavDropdown.Item key={country_code}>
-                  <a
-                    href="#"
-                    className={classNames('dropdown-item', {
-                      disabled: currentLanguageCode === code,
-                    })}
-                    onClick={() => {
-                      i18next.changeLanguage(code);
-                      //history.push(`/${code}${STRINGS.ROUTES.ABOUT_US}`)
-                      dispatch(Actions.setCurrentLngCode(code))
-                    }}
-                  >
-                    <span
-                      className={`flag-icon flag-icon-${country_code} mx-2`}
-                      style={{
-                        opacity: currentLanguageCode === code ? 0.5 : 1,
-                      }}
-                    ></span>
-                    {name}
-                  </a>
-                </NavDropdown.Item>
-              ))}
-            </NavDropdown> */}
             </Nav>
           </Navbar.Collapse>
         </Navbar>
@@ -287,4 +235,32 @@ function MainNavbar(props) {
   );
 }
 
-export default MainNavbar;
+const mapStateToProps = (state) => {
+  return {
+    user: state.userReducer,
+    products: state?.productReducer?.products,
+    allProducts: state?.productReducer?.allProducts,
+    searchData: state?.productReducer?.searchData,
+    totalProducts: state?.productReducer?.totalProducts,
+    categories: state?.productReducer?.categories,
+    global: state.globalReducer,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    logout: () =>
+      dispatch({
+        type: "LOGOUT",
+      }),
+    setActiveLanguage: (language) =>
+      dispatch({
+        type: types.SET_ACTIVE_LANGUAGE,
+        payload: {
+          language: language,
+        },
+      }),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(MainNavbar);

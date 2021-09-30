@@ -137,3 +137,7 @@
   color: $bg-color !important;
   background-color: #ffffffe6 !important;
 }
+
+.btn:focus, .btn.focus {
+  box-shadow: none !important;
+}

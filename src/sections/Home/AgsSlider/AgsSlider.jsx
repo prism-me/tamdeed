@@ -10,11 +10,8 @@ import ModalVideo from 'react-modal-video'
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
-// import { withNamespaces } from 'react-i18next';
-import { useTranslation } from 'react-i18next';
 
 function AgsSlider(props) {
-    const { t } = useTranslation();
     const slidesData = [
         {
             thumbnail: ags1,
@@ -75,8 +72,7 @@ function AgsSlider(props) {
     return (
         <div className={"AgsSlider"} dir="ltr">
             <h3 className={"InfoTitle"}>
-                {t('AgsTitle')}
-                {/* LIFE AT AMERICAN GULF SCHOOL */}
+                LIFE AT AMERICAN GULF SCHOOL
             </h3>
 
             <OwlCarousel className="owl-theme" {...options}>

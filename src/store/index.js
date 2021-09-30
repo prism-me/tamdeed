@@ -1,29 +1,59 @@
-import { createStore, combineReducers } from "redux";
+import {
+    createStore,
+    combineReducers,
+    applyMiddleware,
+    compose,
+} from "redux";
+import { authReducer } from "../redux/users/reducers";
 import {
     persistStore,
     persistReducer,
 } from "redux-persist";
 import storage from "redux-persist/lib/storage";
-import { routerReducer } from "react-router-redux";
-import globalReducer from "../redux/global/reducerI18";
+import createSagaMiddleware from "redux-saga";
+import { all, fork } from "redux-saga/effects";
+import productsWatcher from "./../redux/products/sagas";
+import { productReducer } from "../redux/products";
+import globalReducer from "../redux/global/reducers";
+import globalWatcher from "../redux/global/sagas";
 
 const persistConfig = {
     key: "root",
     storage,
 };
 
+function* rootSaga() {
+    yield all([fork(productsWatcher)]);
+    yield all([fork(globalWatcher)]);
+}
 
 const rootReducer = combineReducers({
     globalReducer: globalReducer,
-    routing: routerReducer
+    userReducer: authReducer,
+    productReducer: productReducer,
 });
-
 
 const persistedReducer = persistReducer(
     persistConfig,
     rootReducer
 );
 
+const sagaMiddleware = createSagaMiddleware();
 
-export const store = createStore(persistedReducer);
+let enhancer;
+if (window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) {
+    enhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__(
+        applyMiddleware(sagaMiddleware)
+    );
+} else {
+    enhancer = compose(applyMiddleware(sagaMiddleware));
+}
+
+export const store = createStore(
+    persistedReducer,
+    enhancer
+);
+
+sagaMiddleware.run(rootSaga);
+
 export const persistor = persistStore(store);

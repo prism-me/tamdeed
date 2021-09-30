@@ -14,13 +14,13 @@ import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 // import { withNamespaces } from 'react-i18next';
-import { useTranslation } from 'react-i18next';
+// import { useTranslation } from 'react-i18next';
 
 function Mentors(props) {
-    {
-        console.log("MentorsData", props.mentors)
-    }
-    const { t } = useTranslation();
+    // {
+    //     console.log("MentorsData", props.mentors)
+    // }
+
     const slidesData = [
         {
             thumbnail: mentor1,
@@ -97,8 +97,7 @@ function Mentors(props) {
     return (
         <div className={"Mentors"} dir="ltr">
             <h3 className={"InfoTitle"}>
-                {t('MentorsTitle')}
-                {/* MEET THE MENTORS */}
+                MEET THE MENTORS
             </h3>
             <OwlCarousel className="owl-theme" {...options}>
                 {

@@ -2,10 +2,8 @@ import React, { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { STRINGS } from "../../../utils/base";
 import { useHistory } from "react-router-dom";
-import cookies from 'js-cookie'
 
 export default function ApplyOnline() {
-    const currentLanguageCode = cookies.get('i18next') || 'en'
     // const [openForm, setOpenForm] = useState(false);
     //
     // const handleBYI = (menuItem) => {
@@ -23,7 +21,7 @@ export default function ApplyOnline() {
                     <button className="btn btn-lg shadow btnstyleB"
                         // onClick={handleBYI}
                         onClick={() => {
-                            history.push(`/${currentLanguageCode}${STRINGS.ROUTES.ONLINE_FORM}`);
+                            history.push(`/${STRINGS.ROUTES.ONLINE_FORM}`);
                             refreshPage()
                         }}
                     >

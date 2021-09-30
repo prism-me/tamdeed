@@ -2,11 +2,41 @@
 <html lang="en">
 
 <head>
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        "gtm.start": new Date().getTime(),
+        event: "gtm.js",
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != "dataLayer" ? "&l=" + l : "";
+      j.async = true;
+      j.src =
+        "https://www.googletagmanager.com/gtm.js?id=" +
+        i +
+        dl;
+      f.parentNode.insertBefore(j, f);
+    })(
+      window,
+      document,
+      "script",
+      "dataLayer",
+      "GTM-MPLTRRZ"
+    );
+  </script>
+  <!-- End Google Tag Manager -->
+
   <meta charset="utf-8" />
-  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
-  <meta name="description" content="AMERICAN GULF SCHOOL EDUCATION DONE RIGHT" />
+  <meta property="og:type" content="website" />
+  <meta name="robots" content="noindex, follow" />
+  <meta name="description"
+    content="Global Website of Pigeon Corporation - This page provides information about Pigeon Global." />
   <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
   <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -24,34 +54,6 @@
     -->
   <title>AGS | AMERICAN GULF SCHOOL</title>
 
-  <!-- Global site tag (gtag.js) - Google Ads: 370874949 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-370874949"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-
-    gtag("config", "AW-370874949");
-  </script>
-  <!-- Event snippet for Conversion conversion page
-    In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-  <script>
-    function gtag_report_conversion(url) {
-      var callback = function () {
-        if (typeof url != "undefined") {
-          window.location = url;
-        }
-      };
-      gtag("event", "conversion", {
-        send_to: "AW-370874949/YgSdCO7y8JECEMW07LAB",
-        event_callback: callback,
-      });
-      return false;
-    }
-  </script>
-
   <script type="text/javascript">
     var fwq = {
       apiRootUrl: 'https://agsae.isams.cloud/api/Rest/1.0/',
@@ -68,8 +70,18 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 </head>
 
-<body dir="ltr">
-  <noscript>You need to enable JavaScript to run this app.</noscript>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MPLTRRZ" height="0" width="0"
+      style="display: none; visibility: hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <noscript>You need to enable JavaScript to run this
+    app.</noscript>
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous"
+    src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v11.0&appId=481764742916718&autoLogAppEvents=1"
+    nonce="tYYxLN7g"></script>
   <div id="root"></div>
   <!--
       This HTML file is a template.

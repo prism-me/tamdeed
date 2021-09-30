@@ -1,32 +1,25 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
+import { Provider } from "react-redux";
 import SimpleReactLightbox from "simple-react-lightbox";
-// import "react-image-lightbox/style.css";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+import "react-image-lightbox/style.css"; // This only needs to be imported once in your app
+import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import './i18n';
-import { Provider } from "react-redux";
-import { persistor, store } from "./store";
-import { PersistGate } from 'redux-persist/integration/react'
-import { I18nextProvider } from 'react-i18next';
-import i18n from './i18n';
+import { store } from "./store";
+import TimeAgo from "javascript-time-ago";
 
+import en from "javascript-time-ago/locale/en";
 
-
+TimeAgo.addDefaultLocale(en);
 
 ReactDOM.render(
   <React.StrictMode>
-    <I18nextProvider i18n={i18n}>
-      <Provider store={store}>
-        <PersistGate persistor={persistor} loading={null}>
-          <SimpleReactLightbox>
-            <App />
-          </SimpleReactLightbox>
-        </PersistGate>
-      </Provider>
-    </I18nextProvider>
+    <Provider store={store}>
+      <SimpleReactLightbox>
+        <App />
+      </SimpleReactLightbox>
+    </Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );

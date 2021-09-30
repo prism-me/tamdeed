@@ -3,28 +3,17 @@ import Container from "@material-ui/core/Container";
 import { Col, Nav, Row } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import FacebookIcon from '@material-ui/icons/Facebook';
-import YouTubeIcon from '@material-ui/icons/YouTube';
 import InstagramIcon from '@material-ui/icons/Instagram';
-import TwitterIcon from '@material-ui/icons/Twitter';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import PhoneIcon from '@material-ui/icons/Phone';
-import { STRINGS } from "../../utils/base";
 import { HashLink } from "react-router-hash-link"
-import { useTranslation } from 'react-i18next';
-import cookies from 'js-cookie'
 import logo from "./../../assets/images/agslogo/Logo (1).png";
 import { useHistory } from "react-router-dom";
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
 function Footer() {
-  const currentLanguageCode = cookies.get('i18next') || 'en'
   const history = useHistory();
-  {
-    console.log("language", currentLanguageCode)
-  }
-
-  const { t } = useTranslation();
   const scrollToBottom1 = () => {
     const bottomEle = document.getElementById("calenderDiv");
     bottomEle.scrollIntoView({ behavior: "smooth" });
@@ -73,7 +62,7 @@ function Footer() {
                 OUR SCHOOL
               </h5>
               <Nav className="flex-column">
-                <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.ABOUT_US}`}>
+                <LinkContainer to="/about">
                   <Nav.Link className=" fdeco"> About us </Nav.Link>
                 </LinkContainer>
                 <LinkContainer to="https://www.google.com/maps/place/American+Gulf+School/@25.3382268,55.5628731,17z/data=!3m1!4b1!4m5!3m4!1s0x3ef5f5ef006a4c83:0xcf95030e29d9fb7!8m2!3d25.3382268!4d55.5650618?shorturl=1">
@@ -82,10 +71,10 @@ function Footer() {
                 <LinkContainer to="#">
                   <Nav.Link className=" fdeco">  Our Team </Nav.Link>
                 </LinkContainer>
-                <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.CAREERS}`}>
+                <LinkContainer to="/careers">
                   <Nav.Link className=" fdeco"> Join Our Team </Nav.Link>
                 </LinkContainer>
-                <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.FAQ}`}>
+                <LinkContainer to="/FAQMain">
                   <Nav.Link className=" fdeco">  FAQs </Nav.Link>
                 </LinkContainer>
               </Nav>
@@ -98,23 +87,23 @@ function Footer() {
                 <LinkContainer to="#">
                   <Nav.Link className=" fdeco">  Virtual Admissions </Nav.Link>
                 </LinkContainer>
-                <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.ENROLL}`}>
+                <LinkContainer to="/Enroll">
                   <Nav.Link className=" fdeco">Enroll Online</Nav.Link>
                 </LinkContainer>
                 {/* <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.ENROLL}`}> */}
-                <HashLink to={`/${currentLanguageCode}${STRINGS.ROUTES.ENROLL}` + "#Tuition_Fees"} className={"hashLinkStyling"}>
+                <HashLink to={"/Enroll" + "#Tuition_Fees"} className={"hashLinkStyling"}>
                   Tuition Fees
                 </HashLink>
                 {/* <Nav.Link className=" fdeco"> Tuition Fees</Nav.Link>
                 </LinkContainer> */}
                 {/* <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.ENROLL}`}> */}
-                <HashLink to={`/${currentLanguageCode}${STRINGS.ROUTES.ENROLL}` + "#Request_for_a_callback"} className={"hashLinkStyling"}>
+                <HashLink to={"/Enroll" + "#Request_for_a_callback"} className={"hashLinkStyling"}>
                   Request for a callback
                 </HashLink>
                 {/* <Nav.Link className=" fdeco"> Request for a callback </Nav.Link>
                 </LinkContainer> */}
                 {/* <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.ENROLL}`}> */}
-                <HashLink to={`/${currentLanguageCode}${STRINGS.ROUTES.ENROLL}` + "#School_Tour"} className={"hashLinkStyling"}>
+                <HashLink to={"/Enroll" + "#School_Tour"} className={"hashLinkStyling"}>
                   School Tours
                 </HashLink>
                 {/* <Nav.Link className=" fdeco"> School Tours</Nav.Link>
@@ -129,18 +118,18 @@ function Footer() {
                 {/* <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.ACADEMICS}`}
                   onClick={scrollToBottom1}
                 > */}
-                <HashLink to={`/${currentLanguageCode}${STRINGS.ROUTES.ACADEMICS}` + "#Academic_Calendar"} className={"hashLinkStyling"}>
+                <HashLink to={"/academics" + "#Academic_Calendar"} className={"hashLinkStyling"}>
                   Academic Calendar
                 </HashLink>
                 {/* <Nav.Link className=" fdeco"> Academic Calendar </Nav.Link> */}
                 {/* </LinkContainer> */}
                 {/* <LinkContainer to="#"> */}
-                <HashLink to={`/${currentLanguageCode}${STRINGS.ROUTES.ACADEMICS}` + "#Our_Curriculum"} className={"hashLinkStyling"}>
+                <HashLink to={"/academics" + "#Our_Curriculum"} className={"hashLinkStyling"}>
                   Our Curriculum
                 </HashLink>
                 {/* <Nav.Link className=" fdeco">  Our Curriculum </Nav.Link> */}
                 {/* </LinkContainer> */}
-                <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.STUDENT_CARE}`}>
+                <LinkContainer to="/Student-care">
                   <Nav.Link className=" fdeco">  Student Care support  </Nav.Link>
                 </LinkContainer>
               </Nav>

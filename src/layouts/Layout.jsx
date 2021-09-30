@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import BottomTabNavigator from "../components/BottomTabNavigator";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
-import Divider from "@material-ui/core/Divider";
 import Hidden from "@material-ui/core/Hidden";
 import Drawer from "@material-ui/core/Drawer";
 import logo from "../assets/images/agslogo/Logo.png";
@@ -18,8 +17,10 @@ import ClipLoader from "react-spinners/BounceLoader";
 import BackToTop from "../components/BackToTop";
 import { STRINGS } from "../utils/base";
 import Contactpannel from "../sections/Contactpannel";
-import cookies from 'js-cookie'
 import ClearIcon from '@material-ui/icons/Clear';
+import { types } from "../redux/global/types";
+import "./Layout.scss";
+import { connect } from "react-redux";
 
 const drawerWidth = 280;
 const useStyles = makeStyles((theme) => ({
@@ -56,9 +57,7 @@ const useStyles = makeStyles((theme) => ({
   nested: { paddingLeft: theme.spacing(4) }
 }));
 
-
-export default function Layout(props) {
-  const currentLanguageCode = cookies.get('i18next') || 'en'
+function Layout(props) {
   const history = useHistory();
   const classes = useStyles();
   const theme = useTheme();
@@ -70,9 +69,13 @@ export default function Layout(props) {
     setDrawerOpen(open);
   };
   const { global } = props;
-
   return (
-    <div>
+    <div
+      className={`layout ${global?.activeLanguage === "ar"
+        ? "arabic-direction"
+        : "english-direction"
+        }`}
+    >
       <div
         className={`${props.showSpinner ? "d-flex" : "d-none"
           } flex-column text-center align-items-center justify-content-center`}
@@ -132,52 +135,57 @@ export default function Layout(props) {
                 >
                   <ListItemText
                     onClick={() => {
-                      history.push(`/${currentLanguageCode}${STRINGS.ROUTES.ABOUT_US}`);
+                      history.push(`/${global.activeLanguage}/about`);
                       toggleDrawer(false);
                     }}
-                    primary="About us"
+                    // primary="About us"
+                    primary={global.activeLanguage === "en" ? "About Us" : "معلومات عنا"}
                   />
                 </ListItem>
                 <ListItem button>
                   <ListItemText
                     onClick={() => {
-                      history.push(`/${currentLanguageCode}${STRINGS.ROUTES.ACADEMICS}`);
+                      history.push(`/${global.activeLanguage}/academics`);
                       toggleDrawer(false);
                     }}
-                    primary="Academics"
+                    // primary="Academics"
+                    primary={global.activeLanguage === "en" ? "Academics" : "أكاديميون"}
                   />
                 </ListItem>
                 <ListItem button>
                   <ListItemText
                     onClick={() => {
-                      history.push(`/${currentLanguageCode}${STRINGS.ROUTES.STUDENT_CARE}`);
+                      history.push(`/${global.activeLanguage}/Student-care`);
                       toggleDrawer(false);
                     }}
-                    primary="Student care"
+                    // primary="Student care"
+                    primary={global.activeLanguage === "en" ? "Student Care" : "رعاية الطلاب"}
                   />
                 </ListItem>
                 <ListItem button>
                   <ListItemText
                     onClick={() => {
-                      history.push(`/${currentLanguageCode}${STRINGS.ROUTES.AGS_PORTAL}`);
+                      history.push(`/${global.activeLanguage}/agsPortal`);
                       toggleDrawer(false);
                     }}
-                    primary="AGS Portal"
+                    // primary="AGS Portal"
+                    primary={global.activeLanguage === "en" ? "AGS Portal" : "بوابة AGS"}
                   />
                 </ListItem>
                 <ListItem button>
                   <ListItemText
                     onClick={() => {
-                      history.push(`/${currentLanguageCode}${STRINGS.ROUTES.CONTACT_US}`);
+                      history.push(`/${global.activeLanguage}/contact`);
                       toggleDrawer(false);
                     }}
-                    primary="Contact us"
+                    // primary="Contact us"
+                    primary={global.activeLanguage === "en" ? "Contact Us" : "اتصل بنا"}
                   />
                 </ListItem>
                 <ListItem button>
                   <ListItemText
                     onClick={() => {
-                      history.push(`/${currentLanguageCode}${STRINGS.ROUTES.ENROLL}`);
+                      history.push(`/${global.activeLanguage}/Enroll`);
                       toggleDrawer(false);
                     }}
                   // primary="Enroll"
@@ -189,7 +197,9 @@ export default function Layout(props) {
                       padding: "0.5rem 0rem",
                       borderRadius: "60px",
                       width: "100%"
-                    }}>Enroll</button>
+                    }}>
+                      {global.activeLanguage === "en" ? "Enroll" : "يتسجل"}
+                    </button>
                   </ListItemText>
                 </ListItem>
               </List>
@@ -210,3 +220,31 @@ export default function Layout(props) {
     </div>
   );
 }
+
+
+const mapStateToProps = (state) => {
+  return {
+    products: state?.productReducer?.products,
+    totalProducts: state?.productReducer?.totalProducts,
+    categories: state?.productReducer?.categories,
+    showSpinner: state?.globalReducer?.showSpinner,
+    global: state.globalReducer,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    logout: () =>
+      dispatch({
+        type: "LOGOUT",
+      }),
+    setActiveLanguage: (language) =>
+      dispatch({
+        type: types.SET_ACTIVE_LANGUAGE,
+        payload: {
+          language: language,
+        },
+      }),
+  };
+};
+export default connect(mapStateToProps, mapDispatchToProps)(Layout);

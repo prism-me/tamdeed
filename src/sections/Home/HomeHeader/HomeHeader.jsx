@@ -11,10 +11,9 @@ import Hidden from "@material-ui/core/Hidden";
 import BackGroundVideo from "../../../components/BackGroundVideo/BackGroundVideo";
 import PauseIcon from "@material-ui/icons/Pause";
 // import { withNamespaces } from 'react-i18next';
-import { useTranslation } from 'react-i18next';
+// import { useTranslation } from 'react-i18next';
 
 function HomeHeader(props) {
-  const { t } = useTranslation();
   const [isOpen, setOpen] = useState(false)
   const [isPlaying, setIsPlaying] = useState(false);
   // const [isVideo, setIsVideo] = useState(false);
@@ -54,19 +53,15 @@ function HomeHeader(props) {
                             <img src={logo} alt="AGS Logo" className="header-logo" />
                           </div>
                           <h1 className="intro-title">
-                            {t('headerTitle')}
-                            {/* AMERICAN GULF SCHOOL */}
+                            AMERICAN GULF SCHOOL
                           </h1>
                           <p className={"intro-title2"}>
-                            {t('subTitle')}
-                            {/* EDUCATION DONE RIGHT */}
+                            EDUCATION DONE RIGHT
                           </p>
                           <p className={"subtitle"}>
-                            {t('subTitle1')}
-                            {/* Take a look at what the CEO of the school */}
+                            Take a look at what the CEO of the school
                             <br />
-                            {t('subTitle2')}
-                            {/* has to say about. */}
+                            has to say.
                           </p>
                         </div>
                       ) : ""}

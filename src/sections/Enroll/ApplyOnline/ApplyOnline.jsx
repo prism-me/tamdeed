@@ -21,7 +21,7 @@ export default function ApplyOnline() {
                     <button className="btn btn-lg shadow btnstyleB"
                         // onClick={handleBYI}
                         onClick={() => {
-                            history.push(`/${STRINGS.ROUTES.ONLINE_FORM}`);
+                            history.push("/OnlineForm");
                             refreshPage()
                         }}
                     >

@@ -13,14 +13,11 @@ import mentor10 from "../../../assets/images/MeetMentorsFirstbatch/TaleenAkijian
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
-// import { withNamespaces } from 'react-i18next';
-// import { useTranslation } from 'react-i18next';
 
 function Mentors(props) {
     // {
     //     console.log("MentorsData", props.mentors)
     // }
-
     const slidesData = [
         {
             thumbnail: mentor1,
@@ -101,18 +98,28 @@ function Mentors(props) {
             </h3>
             <OwlCarousel className="owl-theme" {...options}>
                 {
-                    slidesData.map((slides, index) => (
+                    props.mentors.map((slides, index) => (
                         <div className={"divstyle"}>
                             <div className="imgheight"
-                                style={{ backgroundImage: `url(${slides.thumbnail})` }}
+                                style={{ backgroundImage: `url(${slides.avatar})` }}
                             >
                                 <h5 className={"overview-heading"}>
-                                    {slides.title}<br />
-                                    {slides.Subtitle}
+                                    {/* {slides.name} */}
+                                    {
+                                        props.isArabic
+                                            ? slides?.arabic?.name
+                                            : slides.name
+                                    }
+                                    <br />
+                                    <span
+                                        dangerouslySetInnerHTML={{
+                                            __html:
+                                                props.isArabic
+                                                    ? slides.description
+                                                    : slides.description
+                                        }}
+                                    ></span>
                                 </h5>
-                                {/* <p className={"subTitle"}>
-                                    {slides.Subtitle}
-                                </p> */}
                             </div>
                         </div>
                     ))

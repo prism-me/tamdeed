@@ -10,7 +10,11 @@ import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 
-function InfoTabs() {
+function InfoTabs(props) {
+
+  {
+    console.log("expData", props.expData)
+  }
   const slidesData = [
     {
       thumbnail: exper1,
@@ -71,7 +75,7 @@ function InfoTabs() {
         EXPERIENCE THE AGS DIFFERENCE
       </h2>
       <OwlCarousel className="owl-theme" {...options}>
-        {slidesData.map((slides, index) => (
+        {props.expData.map((slides, index) => (
           <div className={"divstyle"}>
             <div className="d-flex justify-content-center align-items-center imgheight"
               style={{ backgroundImage: `url(${slides.thumbnail})` }}
@@ -88,7 +92,12 @@ function InfoTabs() {
                   </button>
                 )}
                 <h5 className={"overview-heading"}>
-                  {slides.title}
+                  {
+                    props.isArabic
+                      ? slides?.arabic?.title
+                      : slides.title
+                  }
+                  {/* {slides.title} */}
                 </h5>
               </div>
             </div>

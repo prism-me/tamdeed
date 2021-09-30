@@ -21,14 +21,20 @@ function Curriculum(props) {
                                     <Row>
                                         <Col xs={12} sm={3} md={12} lg={3} className={"d-flex justify-content-center align-items-center"}>
                                             <h4 className={" intro-title"}>
-                                                OUR
+                                                {props.Curriculum?.title}
+                                                {/* OUR
                                                 <br />
-                                                CURRICULUM
+                                                CURRICULUM */}
                                             </h4>
                                         </Col>
                                         <Col xs sm md lg>
-                                            <p className={"subtitle"}>
-                                                The school curriculum is project-based, and student centered. It
+                                            <p className={"subtitle"}
+                                                dangerouslySetInnerHTML={{
+                                                    __html:
+                                                        props.Curriculum?.description,
+                                                }}
+                                            >
+                                                {/* The school curriculum is project-based, and student centered. It
                                                 encourages,
                                                 requires, and builds critical thinking, driven by
                                                 inquiry combined with both
@@ -42,7 +48,7 @@ function Curriculum(props) {
                                                 and Design Labs, gives our learners the practice and
                                                 experience to apply their
                                                 knowledge and skills they are being
-                                                taught to succeed within the 21st century.
+                                                taught to succeed within the 21st century. */}
                                             </p>
                                             <button className={"viewButton"}>
                                                 View in detail >
@@ -62,14 +68,20 @@ function Curriculum(props) {
                             <Row>
                                 <Col xs={12} sm={3} md={12} lg={3} className={"d-flex justify-content-center align-items-center"}>
                                     <h4 className={" intro-title"}>
-                                        OUR
+                                        {props.Curriculum?.title}
+                                        {/* OUR
                                         <br />
-                                        CURRICULUM
+                                        CURRICULUM */}
                                     </h4>
                                 </Col>
                                 <Col xs sm md lg>
-                                    <p className={"subtitle"}>
-                                        The school curriculum is project-based, and student centered. It
+                                    <p className={"subtitle"}
+                                        dangerouslySetInnerHTML={{
+                                            __html:
+                                                props.Curriculum?.description,
+                                        }}
+                                    >
+                                        {/* The school curriculum is project-based, and student centered. It
                                         encourages,
                                         requires, and builds critical thinking, driven by
                                         inquiry combined with both
@@ -83,7 +95,7 @@ function Curriculum(props) {
                                         and Design Labs, gives our learners the practice and
                                         experience to apply their
                                         knowledge and skills they are being
-                                        taught to succeed within the 21st century.
+                                        taught to succeed within the 21st century. */}
                                     </p>
                                     <button className={"viewButton"}>
                                         View in detail >

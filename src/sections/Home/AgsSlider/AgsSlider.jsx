@@ -12,6 +12,7 @@ import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 
 function AgsSlider(props) {
+
     const slidesData = [
         {
             thumbnail: ags1,
@@ -77,7 +78,7 @@ function AgsSlider(props) {
 
             <OwlCarousel className="owl-theme" {...options}>
                 {
-                    slidesData.map((slides, index) => (
+                    props.lifeagsData.map((slides, index) => (
                         <div className="item">
                             <div className={"divstyle"}>
                                 <div className="d-flex justify-content-center align-items-center imgheight"
@@ -95,7 +96,12 @@ function AgsSlider(props) {
                                             </button>
                                         )}
                                         <h5 className={"overview-heading"}>
-                                            {slides.title} &mdash; {slides.Subtitle}
+                                            {
+                                                props.isArabic
+                                                    ? slides?.arabic?.title
+                                                    : slides.title
+                                            }
+                                            {/* &mdash; {slides.Subtitle} */}
                                         </h5>
                                     </div>
                                 </div>

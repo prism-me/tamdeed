@@ -15,12 +15,12 @@ import ListItemText from "@material-ui/core/ListItemText";
 import { useHistory } from "react-router-dom";
 import ClipLoader from "react-spinners/BounceLoader";
 import BackToTop from "../components/BackToTop";
-import { STRINGS } from "../utils/base";
 import Contactpannel from "../sections/Contactpannel";
 import ClearIcon from '@material-ui/icons/Clear';
 import { types } from "../redux/global/types";
 import "./Layout.scss";
 import { connect } from "react-redux";
+
 
 const drawerWidth = 280;
 const useStyles = makeStyles((theme) => ({
@@ -68,6 +68,7 @@ function Layout(props) {
   const toggleDrawer = (open) => {
     setDrawerOpen(open);
   };
+
   const { global } = props;
   return (
     <div
@@ -87,11 +88,7 @@ function Layout(props) {
           background: "rgba(255,255,255,0.6)",
         }}
       >
-        <ClipLoader
-          color={"#e65550"}
-          loading={true}
-          size={80}
-        />
+        <ClipLoader color={"#e65550"} loading={true} size={80} />
       </div>
 
       <Hidden mdUp>

@@ -34,6 +34,7 @@ function HomeHeader(props) {
 
   const videoSource = AGSPrincipalWelcomeMessage;
 
+
   return (
     <>
       <Hidden smDown>
@@ -53,15 +54,22 @@ function HomeHeader(props) {
                             <img src={logo} alt="AGS Logo" className="header-logo" />
                           </div>
                           <h1 className="intro-title">
-                            AMERICAN GULF SCHOOL
+                            {props.banner?.title}
+                            {/* AMERICAN GULF SCHOOL */}
                           </h1>
-                          <p className={"intro-title2"}>
-                            EDUCATION DONE RIGHT
+                          <p className={"intro-title2"} >
+                            {props.banner?.subtitle}
+                            {/* EDUCATION DONE RIGHT */}
                           </p>
-                          <p className={"subtitle"}>
-                            Take a look at what the CEO of the school
+                          <p className={"subtitle"}
+                            dangerouslySetInnerHTML={{
+                              __html:
+                                props.banner?.description,
+                            }}
+                          >
+                            {/* Take a look at what the CEO of the school
                             <br />
-                            has to say.
+                            has to say. */}
                           </p>
                         </div>
                       ) : ""}

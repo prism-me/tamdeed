@@ -6,14 +6,24 @@ import p_school from "../../../assets/images/Curriculum/PrimarySchool.png";
 import { useHistory } from "react-router-dom";
 import { STRINGS } from "../../../utils/base";
 
-const AcademicsCurriculum = () => {
+const AcademicsCurriculum = (props) => {
     const history = useHistory();
     return (
         <div className={"Academics"} id={"Our_Curriculum"}>
-            <h3 className={"InfoTitle"}>OUR CURRICULUM</h3>
+            <h3 className={"InfoTitle"}>
+                {props.curriSection?.title}
+                {/* OUR CURRICULUM */}
+            </h3>
             <Grid container className="d-flex w-100 justify-content-center">
                 <Grid item className="curr-sec">
-                    <p>The American Gulf School curriculum is project-based, and learner centered. It encourages, requires, and builds critical thinking, driven by inquiry combined with both knowledge and comprehensive skills. This allows learners to make authentic connections between different theories and be able to apply this knowledge in unfamiliar real-life situations. The use of our STREAM, Media, Fabrication, and Design Labs, give our learners the practice and experience to apply the knowledge and skills they are being taught to succeed within the 21st century.</p>
+                    <p
+                        dangerouslySetInnerHTML={{
+                            __html:
+                                props.curriSection?.description
+                        }}
+                    >
+                        {/* The American Gulf School curriculum is project-based, and learner centered. It encourages, requires, and builds critical thinking, driven by inquiry combined with both knowledge and comprehensive skills. This allows learners to make authentic connections between different theories and be able to apply this knowledge in unfamiliar real-life situations. The use of our STREAM, Media, Fabrication, and Design Labs, give our learners the practice and experience to apply the knowledge and skills they are being taught to succeed within the 21st century. */}
+                    </p>
                 </Grid>
             </Grid>
             <Grid className="d-flex w-100 justify-content-center">
@@ -29,7 +39,8 @@ const AcademicsCurriculum = () => {
                         >
                             <div className="video-promo-content mt-4 ">
                                 <h5 className={"overview-heading position-static text-nowrap"}>
-                                    Kindergarten
+                                    {props.kinderSection?.title}
+                                    {/* Kindergarten */}
                                 </h5>
                             </div>
                         </div>
@@ -45,7 +56,8 @@ const AcademicsCurriculum = () => {
                         >
                             <div className="video-promo-content mt-4 ">
                                 <h5 className={"overview-heading position-static text-nowrap"}>
-                                    Primary School
+                                    {props.primSection?.title}
+                                    {/* Primary School */}
                                 </h5>
                             </div>
                         </div>
@@ -61,7 +73,8 @@ const AcademicsCurriculum = () => {
                         >
                             <div className="video-promo-content mt-4 ">
                                 <h5 className={"overview-heading position-static text-nowrap"}>
-                                    Middle School
+                                    {props.midSection?.title}
+                                    {/* Middle School */}
                                 </h5>
                             </div>
                         </div>
@@ -70,7 +83,14 @@ const AcademicsCurriculum = () => {
             </Grid>
             <Grid className="d-flex w-100 justify-content-center" >
                 <Grid className="curr-footer-text" >
-                    <p>“Coming together is a <strong>beginning</strong>, staying together is <strong>progress</strong>, and working together is <strong>success.</strong>” Henry Ford.</p>
+                    <p
+                        dangerouslySetInnerHTML={{
+                            __html:
+                                props.quote?.description
+                        }}
+                    >
+                        {/* “Coming together is a <strong>beginning</strong>, staying together is <strong>progress</strong>, and working together is <strong>success.</strong>” Henry Ford. */}
+                    </p>
                 </Grid>
             </Grid>
         </div>

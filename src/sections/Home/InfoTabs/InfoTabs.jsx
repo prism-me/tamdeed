@@ -11,10 +11,6 @@ import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 
 function InfoTabs(props) {
-
-  {
-    console.log("expData", props.expData)
-  }
   const slidesData = [
     {
       thumbnail: exper1,

@@ -14,7 +14,7 @@ import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 
-export default function PrincipalSlider() {
+export default function PrincipalSlider(props) {
     const slidesData = [
         {
             thumbnail: mentor1,
@@ -93,18 +93,28 @@ export default function PrincipalSlider() {
             <h3 className={"InfoTitle"}>MEET THE MENTORS</h3>
             <OwlCarousel className="owl-theme" {...options}>
                 {
-                    slidesData.map((slides, index) => (
+                    props.mentors.map((slides, index) => (
                         <div className={"divstyle"}>
                             <div className="imgheight"
-                                style={{ backgroundImage: `url(${slides.thumbnail})` }}
+                                style={{ backgroundImage: `url(${slides.avatar})` }}
                             >
                                 <h5 className={"overview-heading"}>
-                                    {slides.title} <br />
-                                    {slides.Subtitle}
+                                    {/* {slides.name} */}
+                                    {
+                                        props.isArabic
+                                            ? slides?.arabic?.name
+                                            : slides.name
+                                    }
+                                    <br />
+                                    <span
+                                        dangerouslySetInnerHTML={{
+                                            __html:
+                                                props.isArabic
+                                                    ? slides.description
+                                                    : slides.description
+                                        }}
+                                    ></span>
                                 </h5>
-                                {/* <p className={"subTitle"}>
-                                    {slides.Subtitle}
-                                </p> */}
                             </div>
                         </div>
                     ))

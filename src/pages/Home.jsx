@@ -1,4 +1,4 @@
-import React, { Component, lazy } from "react";
+import React, { Component } from "react";
 import HomeHeader from "../sections/Home/HomeHeader";
 import Curriculum from "../sections/Home/Curriculum";
 import Mentors from "../sections/Home/Mentors";
@@ -138,11 +138,6 @@ class Home extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    products: state?.productReducer?.products,
-    categoryProducts:
-      state?.productReducer?.categoryProducts,
-    totalProducts: state?.productReducer?.totalProducts,
-    categories: state?.productReducer?.categories,
     showSpinner: state?.globalReducer?.showSpinner,
     global: state.globalReducer,
   };
@@ -150,10 +145,6 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    // getProducts: (page) => dispatch(getProducts(page)),
-    // getCategories: () => dispatch(getCategories()),
-    // getCategoryProducts: (category) =>
-    //   dispatch(getCategoryProducts(category)),
   };
 };
 export default connect(

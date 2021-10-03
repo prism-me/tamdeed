@@ -8,7 +8,7 @@ const defaultState = {
     modalShow: false
 }
 
-const AgsEthos = () => {
+const AgsEthos = (props) => {
 
     const [init, setInit] = useState(defaultState);
     let { modalShow } = init;
@@ -18,7 +18,10 @@ const AgsEthos = () => {
             <Grid container className="info-tabs justify-content-center accreditation-paths">
                 <Grid className="v-calendar-sec" id={"Academic_Calendar"}>
                     <Grid className="txt-w">
-                        <h2 className={"CalenderTitle"}>View our Academic Calendar to learn about the schedule in advance</h2>
+                        <h2 className={"CalenderTitle"}>
+                            {props.calendSection?.title}
+                            {/* View our Academic Calendar to learn about the schedule in advance */}
+                        </h2>
                     </Grid>
                     <Grid className="btn-w">
                         <div className="d-flex w-100">
@@ -44,7 +47,8 @@ const AgsEthos = () => {
             </Grid>
             <div className="Accreditation">
                 <h3 className={"Title"}>
-                    ACCREDITATIONS
+                    {props.accrSection?.title}
+                    {/* ACCREDITATIONS */}
                 </h3>
                 <Hidden smDown>
                     <div
@@ -55,19 +59,24 @@ const AgsEthos = () => {
                             <Container>
                                 <Card className={"cardStyle"}>
                                     <Card.Body >
-                                        <p className={"subtitle"}>
-                                            <strong>American Gulf School</strong> is a candidate school for
+                                        <p className={"subtitle"}
+                                            dangerouslySetInnerHTML={{
+                                                __html:
+                                                    props.accrSection?.description
+                                            }}
+                                        >
+                                            {/* <strong>American Gulf School</strong> is a candidate school for
                                             the <strong>International
                                                 Baccalaureate (IB) Primary Years Programme </strong> and <strong> Middle
                                                     Years Programme </strong>and pursuing authorization as
-                                            an <strong>IB World School.</strong>
+                                            an <strong>IB World School.</strong> */}
                                         </p>
-                                        <p className={"subtitle"}>
+                                        {/* <p className={"subtitle"}>
                                             IB World Schools share a common philosophy—a commitment to improving the teaching and learning of a diverse and inclusive community of learners by delivering challenging, high quality programmes of International education within the UAE that share a powerful vision.
                                         </p>
                                         <p className={"subtitle"}>
                                             American Gulf School has also applied for Cognia accreditation for American Curriculum Schools.
-                                        </p>
+                                        </p> */}
                                     </Card.Body>
                                 </Card>
                             </Container>
@@ -78,19 +87,24 @@ const AgsEthos = () => {
                     <Container>
                         <Card className={"cardStyleMBL"}>
                             <Card.Body >
-                                <p className={"subtitle"}>
-                                    <strong>American Gulf School</strong> is a candidate school for
+                                <p className={"subtitle"}
+                                    dangerouslySetInnerHTML={{
+                                        __html:
+                                            props.accrSection?.description
+                                    }}
+                                >
+                                    {/* <strong>American Gulf School</strong> is a candidate school for
                                     the <strong>International
                                         Baccalaureate (IB) Primary Years Programme </strong> and <strong> Middle
                                             Years Programme </strong>and pursuing authorization as
-                                    an <strong>IB World School.</strong>
+                                    an <strong>IB World School.</strong> */}
                                 </p>
-                                <p className={"subtitle"}>
+                                {/* <p className={"subtitle"}>
                                     IB World Schools share a common philosophy—a commitment to improving the teaching and learning of a diverse and inclusive community of learners by delivering challenging, high quality programmes of International education within the UAE that share a powerful vision.
                                 </p>
                                 <p className={"subtitle"}>
                                     American Gulf School has also applied for Cognia accreditation for American Curriculum Schools.
-                                </p>
+                                </p> */}
                             </Card.Body>
                         </Card>
                     </Container>

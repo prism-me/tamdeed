@@ -10,7 +10,7 @@ import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 
-export default function ACTabs() {
+export default function ACTabs(props) {
     const slidesData = [
         {
             thumbnail: exper1,
@@ -69,7 +69,7 @@ export default function ACTabs() {
         <div className={"ACTabs"} dir="ltr">
             <h2 className={"InfoTitle"}>EXPERIENCE THE AGS DIFFERENCE</h2>
             <OwlCarousel className="owl-theme" {...options}>
-                {slidesData.map((slides, index) => (
+                {props.expData.map((slides, index) => (
                     <div className={"divstyle"}>
                         <div className="d-flex justify-content-center align-items-center imgheight"
                             style={{ backgroundImage: `url(${slides.thumbnail})` }}
@@ -86,7 +86,12 @@ export default function ACTabs() {
                                     </button>
                                 )}
                                 <h5 className={"overview-heading"}>
-                                    {slides.title}
+                                    {
+                                        props.isArabic
+                                            ? slides?.arabic?.title
+                                            : slides.title
+                                    }
+                                    {/* {slides.title} */}
                                 </h5>
                             </div>
                         </div>

@@ -19,52 +19,52 @@ export default function Ourteam() {
         {
             thumbnail: mentor1,
             title: "Aya Kred",
-            Subtitle: "Adipiscing at sem",
+            Subtitle: "Support Teacher",
         },
         {
             thumbnail: mentor2,
             title: "Darren Baxter",
-            Subtitle: "Nunc eu massa",
+            Subtitle: "PYP Coordinator",
         },
         {
             thumbnail: mentor3,
             title: "Ellen Miles",
-            Subtitle: "Dapibus tellus eros",
+            Subtitle: "MYP English Teacher",
         },
         {
             thumbnail: mentor4,
             title: "Michaela Schmidt",
-            Subtitle: "Aliquet nec nunc",
+            Subtitle: "MYP English Teacher",
         },
         {
             thumbnail: mentor5,
             title: "Omaima Sawalha",
-            Subtitle: "Nibh varius vestibulum",
+            Subtitle: "Head of Inclusion",
         },
         {
             thumbnail: mentor6,
             title: "Paris Bradfield",
-            Subtitle: "Nunc eu massa",
+            Subtitle: "Grade 5 Teacher",
         },
         {
             thumbnail: mentor7,
             title: "Rachel Farrel",
-            Subtitle: "Nunc eu massa",
+            Subtitle: "PE Teacher",
         },
         {
             thumbnail: mentor8,
             title: "Viviene Grobler",
-            Subtitle: "Nunc eu massa",
+            Subtitle: "Grade 3 Teacher",
         },
         {
             thumbnail: mentor9,
             title: "Yasin Kol",
-            Subtitle: "Nunc eu massa",
+            Subtitle: "Math Teacher",
         },
         {
             thumbnail: mentor10,
             title: "Yazan Nebso",
-            Subtitle: "Nunc eu massa",
+            Subtitle: "Substitute Teacher",
         },
     ];
     const options = {

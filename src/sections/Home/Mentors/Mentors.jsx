@@ -25,52 +25,52 @@ function Mentors(props) {
         {
             thumbnail: mentor1,
             title: "Ali Obeidat",
-            Subtitle: "Adipiscing at sem",
+            Subtitle: "Social Studies Teacher",
         },
         {
             thumbnail: mentor2,
             title: "Brittany Wood",
-            Subtitle: "Nunc eu massa",
+            Subtitle: "Drama Teacher",
         },
         {
             thumbnail: mentor3,
             title: "Dina Tahabsen",
-            Subtitle: "Dapibus tellus eros",
+            Subtitle: "Arabic Teacher",
         },
         {
             thumbnail: mentor4,
             title: "Edric Pascoe",
-            Subtitle: "Aliquet nec nunc",
+            Subtitle: "Grade 5 Teacher",
         },
         {
             thumbnail: mentor5,
             title: "Emma Pascoe",
-            Subtitle: "Nibh varius vestibulum",
+            Subtitle: "KG Teacher",
         },
         {
             thumbnail: mentor6,
             title: "Jordan Brooks",
-            Subtitle: "Nunc eu massa",
+            Subtitle: "Reading Specialist",
         },
         {
             thumbnail: mentor7,
             title: "Kirsty Howard",
-            Subtitle: "Nibh varius vestibulum",
+            Subtitle: "Science Teacher",
         },
         {
             thumbnail: mentor8,
             title: "Manar Abou Hamdan",
-            Subtitle: "Nunc eu massa",
+            Subtitle: "KG Teacher",
         },
         {
             thumbnail: mentor9,
             title: "Salma Hafez",
-            Subtitle: "Nunc eu massa",
+            Subtitle: "Arabic Teacher",
         },
         {
             thumbnail: mentor10,
             title: "Taleen Akijian",
-            Subtitle: "Nunc eu massa",
+            Subtitle: "Vice Principal",
         },
     ];
     const options = {
@@ -97,8 +97,7 @@ function Mentors(props) {
     return (
         <div className={"Mentors"} dir="ltr">
             <h3 className={"InfoTitle"}>
-                {t('MentorsTitle')}
-                {/* MEET THE MENTORS */}
+                MEET THE MENTORS
             </h3>
             <OwlCarousel className="owl-theme" {...options}>
                 {

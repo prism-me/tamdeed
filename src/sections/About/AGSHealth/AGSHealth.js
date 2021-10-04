@@ -1,5 +1,5 @@
 import React from 'react';
-import health_bg_img from "../../../assets/images/about/health_.png";
+import health_bg_img from "../../../assets/images/agsbackgrounds/health.jpg";
 import { Card, Col, Container, Row } from "react-bootstrap";
 
 const AGSHealth = () => {

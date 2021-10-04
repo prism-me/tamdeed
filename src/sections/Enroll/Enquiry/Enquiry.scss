@@ -16,7 +16,7 @@
       }
     }
     .Enquiry {
-      height: 100vh;
+      height: 80vh;
       //background-size: cover;
       background-size: 100%;
       background-position: center;
@@ -45,6 +45,7 @@
         height: 80vh;
       }
       .description-column {
+        margin-top: 16%;
         .cardStyle{
           width: 100%;
           box-shadow: 0 50px 100px rgba(0, 0, 0, 0.1);

@@ -51,7 +51,7 @@ function HomeHeader(props) {
                       {!isPlaying ? (
                         <div className="description-column">
                           <div className="header-logo-wrapper">
-                            <img src={logo} alt="AGS Logo" className="header-logo" />
+                            {/* <img src={logo} alt="AGS Logo" className="header-logo" /> */}
                           </div>
                           <h1 className="intro-title">
                             {t('headerTitle')}

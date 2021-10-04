@@ -1,5 +1,4 @@
-import React, { Component, lazy } from "react";
-
+import React, { Component } from "react";
 import FAQ from "../sections/Enroll/FAQ";
 import AdmissionProcedure from "../sections/Enroll/AdmissionProcedure";
 import AgeRequirements from "../sections/Enroll/AgeRequirements";
@@ -10,6 +9,9 @@ import Covid from "../sections/Enroll/Covid";
 import AdmissionContact from "../sections/Enroll/AdmissionContact";
 import Payment from "../sections/Enroll/Payment";
 import EnrollTabs from "../sections/Enroll/EnrollTabs";
+import { API } from "../http/API";
+import { connect } from "react-redux";
+// import { Helmet } from "react-helmet";
 
 const faqList = [
     {
@@ -57,24 +59,190 @@ const faqList = [
         answer: `No, the school does not provide the students with digital devices. The school has its own “Bring Your Own Device” Policy with the minimum specification set to maintain students' learning experiences at AGS. Click HERE to learn about the specs. `,
     },
 ]
-export default class Enroll extends Component {
 
+class Enroll extends Component {
+    state = {
+        currentPage: null,
+        content: null,
+        faqData: []
+    }
+
+    componentDidMount() {
+        let currentPage = null;
+        API.get(`/sections`)
+            .then((response) => {
+                // debugger;
+                if (
+                    response.status === 200 ||
+                    response.status === 201
+                ) {
+                    currentPage = response.data.data.filter(
+                        (x) => x.slug === "Enroll-page"
+                    );
+
+                    let lastElement = currentPage[currentPage.length - 1];
+                    this.setState({ lastElement });
+                    API.get(`/all_sections/${lastElement.page_id}`)
+                        .then(
+                            (response) => {
+                                if (response.data.data) {
+                                    // debugger;
+                                    this.setState({
+                                        content:
+                                            response.data.data[
+                                                response.data.data?.length - 1
+                                            ]?.content,
+                                    });
+                                }
+                            }
+                        )
+                        .catch((err) => console.log(err));
+                }
+            })
+            .catch((err) => console.log(err));
+
+        API.get(`/sections`)
+            .then((response) => {
+                // debugger;
+                if (
+                    response.status === 200 ||
+                    response.status === 201
+                ) {
+                    let currentPage = response.data.data.filter(
+                        (x) => x.slug === "faq-page"
+                    );
+
+                    let lastElement = currentPage[currentPage.length - 1];
+                    this.setState({ lastElement });
+                    API.get(`/all_sections/${lastElement.page_id}`)
+                        .then(
+                            (response) => {
+                                if (response.data.data) {
+                                    // debugger;
+                                    let content =
+                                        response.data.data?.[response.data.data.length - 1]
+                                            ?.content;
+                                    this.setState({ faqData: content });
+                                }
+                            }
+                        )
+                        .catch((err) => console.log(err));
+                }
+            })
+            .catch((err) => console.log(err));
+    }
     render() {
+        const {
+            content
+        } = this.state;
+        const { global } = this.props;
         return (
             <div className="home-page">
-                <EnrollTabs />
-                <AdmissionProcedure />
-                <AgeRequirements />
+                <EnrollTabs
+                    introSec={
+                        global?.activeLanguage === "ar"
+                            ? content?.arabic?.intro
+                            : content?.intro
+                    }
+                />
+                <AdmissionProcedure
+                    stepOne={
+                        global?.activeLanguage === "ar"
+                            ? content?.arabic?.step1
+                            : content?.step1
+                    }
+                    stepTwo={
+                        global?.activeLanguage === "ar"
+                            ? content?.arabic?.step2
+                            : content?.step2
+                    }
+                    stepThree={
+                        global?.activeLanguage === "ar"
+                            ? content?.arabic?.step3
+                            : content?.step3
+                    }
+                    stepFour={
+                        global?.activeLanguage === "ar"
+                            ? content?.arabic?.step4
+                            : content?.step4
+                    }
+                    stepFive={
+                        global?.activeLanguage === "ar"
+                            ? content?.arabic?.step5
+                            : content?.step5
+                    }
+                    docData={
+                        global?.activeLanguage === "ar"
+                            ? content?.arabic?.documents
+                            : content?.documents
+                    }
+                />
+                <AgeRequirements
+                    ageRequirementSec={
+                        global?.activeLanguage === "ar"
+                            ? content?.arabic?.ageRequirement
+                            : content?.ageRequirement
+                    }
+                    ReqSec={
+                        global?.activeLanguage === "ar"
+                            ? content?.arabic?.ageRequirementModal
+                            : content?.ageRequirementModal
+                    }
+                />
                 <Enquiry />
                 <FeesPayments />
-                <Payment />
-                <ApplyOnline />
+                <Payment
+                    genrData={
+                        global?.activeLanguage === "ar"
+                            ? content?.arabic?.generalPolicies
+                            : content?.generalPolicies
+                    }
+                />
+                <ApplyOnline
+                    applyOnlineSec={
+                        global?.activeLanguage === "ar"
+                            ? content?.arabic?.applyOnline
+                            : content?.applyOnline
+                    }
+                    language={global?.activeLanguage}
+                />
                 <FAQ
-                    faqList={faqList}
+                    faqData={
+                        this.props.global?.activeLanguage === "ar"
+                            ? this.state.faqData?.arabic?.faq
+                            : this.state.faqData?.faq
+                    }
+                    language={this.props.global?.activeLanguage}
+                    isArabic={
+                        this.props.global?.activeLanguage === "ar"
+                    }
+                // faqList={faqList}
                 />
                 <AdmissionContact />
-                <Covid />
+                <Covid
+                    covidSec={
+                        global?.activeLanguage === "ar"
+                            ? content?.arabic?.covidSection
+                            : content?.covidSection
+                    }
+                />
             </div>
         );
     }
 }
+
+const mapStateToProps = (state) => {
+    return {
+        showSpinner: state?.globalReducer?.showSpinner,
+        global: state.globalReducer,
+    };
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+    };
+};
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Enroll);

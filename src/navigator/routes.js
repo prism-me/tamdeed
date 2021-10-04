@@ -72,7 +72,7 @@ export const routes = [
   },
   {
     name: "FAQ",
-    path: "/FAQMain",
+    path: "/FAQ",
     component: FAQMain,
     isPrivate: false,
     exact: true,

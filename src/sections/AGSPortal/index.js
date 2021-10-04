@@ -1,6 +1,4 @@
 import React from 'react';
-// import ic_email from "../../assets/images/ags-portal/mail-icon.png";
-// import ic_phone from "../../assets/images/ags-portal/phone-icon.png";
 import bg_img from "../../assets/images/agsbackgrounds/AgsPortal.jpg";
 import { Col, Row, Container } from "react-bootstrap";
 import PhoneOutlinedIcon from '@material-ui/icons/PhoneOutlined';

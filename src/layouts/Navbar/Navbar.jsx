@@ -37,7 +37,9 @@ function MainNavbar(props) {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      <div className="d-flex justify-content-end align-items-center">
+      <div
+        className={props.global.activeLanguage === "ar" ? "d-flex justify-content-start align-items-center" : "d-flex justify-content-end align-items-center"}
+      >
         <span className="DrawerCloseIcon">
           <ClearIcon
             onClick={() => {
@@ -46,11 +48,13 @@ function MainNavbar(props) {
           />
         </span>
       </div>
-      <div className="drawer-logo d-flex justify-content-start align-items-center">
+      <div
+        className={props.global.activeLanguage === "ar" ? "drawer-logo d-flex justify-content-end align-items-center" : "drawer-logo d-flex justify-content-start align-items-center"}
+      >
         <img
           src={logoSidebar}
           alt="AGS Logo"
-          style={{ width: "37%", marginLeft: "1.5rem" }}
+          className={props.global.activeLanguage === "ar" ? "drawerImageArabic" : "drawerImage"}
           onClick={() => {
             history.push("/");
             toggleDrawer(false);
@@ -70,6 +74,7 @@ function MainNavbar(props) {
             }}
             // primary="About us"
             primary={props.global.activeLanguage === "en" ? "About Us" : "معلومات عنا"}
+            className={props.global.activeLanguage === "ar" ? "text-right" : ""}
           />
         </ListItem>
         <ListItem button>
@@ -80,6 +85,7 @@ function MainNavbar(props) {
             }}
             // primary="Academics"
             primary={props.global.activeLanguage === "en" ? "Academics" : "أكاديميون"}
+            className={props.global.activeLanguage === "ar" ? "text-right" : ""}
           />
         </ListItem>
         <ListItem button>
@@ -90,6 +96,7 @@ function MainNavbar(props) {
             }}
             // primary="Student care"
             primary={props.global.activeLanguage === "en" ? "Student Care" : "رعاية الطلاب"}
+            className={props.global.activeLanguage === "ar" ? "text-right" : ""}
           />
         </ListItem>
         <ListItem button>
@@ -100,6 +107,7 @@ function MainNavbar(props) {
             }}
             // primary="AGS Portal"
             primary={props.global.activeLanguage === "en" ? "AGS Portal" : "بوابة AGS"}
+            className={props.global.activeLanguage === "ar" ? "text-right" : ""}
           />
         </ListItem>
         <ListItem button>
@@ -110,6 +118,7 @@ function MainNavbar(props) {
             }}
             // primary="Contact us"
             primary={props.global.activeLanguage === "en" ? "Contact Us" : "اتصل بنا"}
+            className={props.global.activeLanguage === "ar" ? "text-right" : ""}
           />
         </ListItem>
         <ListItem button>
@@ -118,7 +127,8 @@ function MainNavbar(props) {
               history.push(`/${props.global.activeLanguage}/Enroll`);
               toggleDrawer(false);
             }}
-          // primary="Enroll"
+            // primary="Enroll"
+            className={props.global.activeLanguage === "ar" ? "text-right" : ""}
           >
             <button style={{
               background: "#1A2C52",
@@ -127,7 +137,8 @@ function MainNavbar(props) {
               padding: "0.3rem 0rem",
               borderRadius: "60px",
               width: "43%"
-            }}>
+            }}
+            >
               {props.global.activeLanguage === "en" ? "Enroll" : "يتسجل"}
             </button>
           </ListItemText>
@@ -171,8 +182,12 @@ function MainNavbar(props) {
           </Hidden>
 
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="ml-auto navborder">
-              <div className="dropdown mr-2 ">
+            <Nav
+              className={props.global.activeLanguage === "ar" ? "mr-auto navborder" : "ml-auto navborder"}
+            >
+              <div
+                className={props.global.activeLanguage === "ar" ? "dropdown ml-2" : "dropdown mr-2"}
+              >
                 <Dropdown>
                   <Dropdown.Toggle
                     variant=" btn-sm"
@@ -186,7 +201,7 @@ function MainNavbar(props) {
                       <div onClick={() => {
                         props.setActiveLanguage("en");
                       }}>
-                        {props.global.activeLanguage === "en" ? "English" : "الإنجليزية"}
+                        {props.global.activeLanguage === "en" ? "English" : "English"}
                       </div>
                     </Dropdown.Item>
                     <Dropdown.Item as="button" className={props.global.activeLanguage === "ar" ? "active" : ""}>
@@ -214,7 +229,7 @@ function MainNavbar(props) {
                     <React.Fragment key={anchor}>
                       <MenuIcon
                         onClick={toggleDrawer(anchor, true)}
-                        className="nav-toggle-overrideDesktop"
+                        className={props.global.activeLanguage === "ar" ? "nav-toggle-overrideDesktopArabic" : "nav-toggle-overrideDesktop"}
                       />
                       <Drawer
                         anchor={anchor}

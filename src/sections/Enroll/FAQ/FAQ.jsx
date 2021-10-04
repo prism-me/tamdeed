@@ -1,11 +1,7 @@
 import React from "react";
 import { makeStyles } from '@material-ui/core/styles';
-import Accordion from '@material-ui/core/Accordion';
-import AccordionSummary from '@material-ui/core/AccordionSummary';
-import AccordionDetails from '@material-ui/core/AccordionDetails';
-import Typography from '@material-ui/core/Typography';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import {Container} from "react-bootstrap";
+import { Container } from "react-bootstrap";
+import AccordionItem from "../../../components/AccordionItem";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -17,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-function FAQ (props) {
+function FAQ(props) {
     const classes = useStyles();
     return (
         <div className="FAQ" id={"FAQs"}>
@@ -26,27 +22,14 @@ function FAQ (props) {
             </h1>
             <Container>
                 <div className={classes.root}>
-                    {
-                        props.faqList?.map((x, i) => (
-                    <Accordion className={"accordianStyle"}>
-                        <AccordionSummary
-                            expandIcon={<ExpandMoreIcon />}
-                            aria-controls="panel1a-content"
-                            id="panel1a-header"
-                        >
-                            <Typography className={classes.heading}>
-                                {x.question}
-                                {/**/}
-                            </Typography>
-                        </AccordionSummary>
-                        <AccordionDetails>
-                            <Typography>
-                                {x.answer}
-                            </Typography>
-                        </AccordionDetails>
-                    </Accordion>
-                        ))
-                    }
+                    {props.faqData?.map((x, index) => (
+                        <AccordionItem
+                            key={index + x.questions}
+                            question={x.questions}
+                            answer={x.answers}
+                            index={index}
+                        />
+                    ))}
                 </div>
             </Container>
         </div>

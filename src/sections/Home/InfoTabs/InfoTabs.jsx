@@ -101,6 +101,9 @@ function InfoTabs(props) {
         ))
         }
       </OwlCarousel>
+      {/* {
+        console.log("videoLink", slidesData[currentIndex]?.video_link)
+      } */}
       <ModalVideo
         channel="youtube"
         youtube={{

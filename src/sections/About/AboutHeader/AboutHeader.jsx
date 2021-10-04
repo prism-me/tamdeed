@@ -8,7 +8,7 @@ const AboutHeader = (props) => {
 
         <div
             className="home-header"
-            style={{ backgroundImage: `url(${header_bg})`, }}
+            style={{ backgroundImage: `url(${props.banner?.image})`, }}
         >
             <img alt={"#"} className="home-header wave-container position-absolute" style={{ visibility: "hidden", display: "inline-block" }} src={header_bg} />
             <Container>

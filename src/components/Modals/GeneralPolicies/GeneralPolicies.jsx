@@ -16,7 +16,15 @@ const GeneralPolicies = (props) => {
                 <ArrowBackIcon />
             </span>
             <Modal.Body>
-                <h2 className={"Title"}>
+                <p className={"SubTitle"}
+                    dangerouslySetInnerHTML={{
+                        __html:
+                            props.genrPolicyData?.description
+                    }}
+                >
+                </p>
+
+                {/* <h2 className={"Title"}>
                     GENERAL POLICIES
                 </h2>
                 <p className={"SubTitle"}>
@@ -88,7 +96,7 @@ const GeneralPolicies = (props) => {
                             </a>
                         </Col>
                     </Row>
-                </Container>
+                </Container> */}
             </Modal.Body>
         </Modal>
     );

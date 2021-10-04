@@ -3,7 +3,6 @@ import vid_bg_img from "../../../assets/images/about/PrincipalMessageThumbnail.j
 import ModalVideo from "react-modal-video";
 import PlayArrowIcon from "@material-ui/icons/PlayArrow";
 import { Container } from "react-bootstrap";
-import FormatQuoteIcon from '@material-ui/icons/FormatQuote';
 
 const PrincipleMessage = (props) => {
     const [isOpen, setOpen] = useState(false)
@@ -15,17 +14,16 @@ const PrincipleMessage = (props) => {
             </h3>
             <Container>
                 <div className="d-flex justify-content-center align-items-center imgheight"
-                    style={{ backgroundImage: `url(${vid_bg_img})` }}
+                    style={{ backgroundImage: `url(${props.PrincipleMsg?.image})` }}
                 >
                     <div className="video-promo-content mt-4 ">
-                        <ModalVideo channel='youtube' youtube={{ autoplay: 1, mute: 1 }} isOpen={isOpen} videoId="AmLy5qM7dEI" onClose={() => setOpen(false)} />
+                        <ModalVideo channel='youtube' youtube={{ autoplay: 1, mute: 1 }} isOpen={isOpen} videoId={props.PrincipleMsg?.video_link?.split("/")[3]} onClose={() => setOpen(false)} />
                         <button className="btn video-play-icon" onClick={() => setOpen(true)}>
                             <PlayArrowIcon className={"playSize"} />
                         </button>
                     </div>
                 </div>
                 <hr className="principalmsgHr" />
-
                 <div className="sucessDiv">
                     <p className={"subtitle"}
                         dangerouslySetInnerHTML={{

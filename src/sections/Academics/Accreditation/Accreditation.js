@@ -28,13 +28,17 @@ const AgsEthos = (props) => {
                             <button className="view-c-btn" onClick={() => setInit({
                                 ...init,
                                 modalShow: true
-                            })}>View Calender
+                            })}>
+                                View Calender
                             </button>
                         </div>
                         <CalendarView show={modalShow} onHide={() => setInit({
                             ...init,
                             modalShow: false
-                        })} />
+                        })}
+                            calData={props.eventData}
+                            language={props.isArabic}
+                        />
                     </Grid>
                 </Grid>
                 <div className="d-flex w-100 justify-content-center small-calendar-view">

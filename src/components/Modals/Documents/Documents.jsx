@@ -4,7 +4,6 @@ import { MdClose } from "react-icons/md";
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 
 const Documents = (props) => {
-
     return (
         <Modal
             {...props}
@@ -23,7 +22,15 @@ const Documents = (props) => {
                     </Col>
                     <Col sm>
                         <Modal.Body>
-                            <h2 className={"Title"}>
+                            <p className={"SubTitle"}
+                                dangerouslySetInnerHTML={{
+                                    __html:
+                                        props.documentData?.description
+                                }}
+                            >
+                            </p>
+                            {/*<h2 className={"Title"}
+                            >
                                 Documents to be submitted once a student has been accepted and enrolled:
                             </h2>
                             <ul className={"UlStyle"}>
@@ -77,7 +84,7 @@ const Documents = (props) => {
                                 <li>Debit/Credit Card</li>
                                 <li>Cash</li>
                                 <li>Cheques</li>
-                            </ul>
+                            </ul> */}
                         </Modal.Body>
                     </Col>
                 </Row>

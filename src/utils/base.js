@@ -12,7 +12,7 @@ export const STRINGS = {
         PRIMARYSCHOOL: "/Primary-school",
         MIDDLE_SCHOOL: "/Middle-school",
         KINDERGARTEN: "/KinderGarten",
-        FAQ: "/FAQMain",
+        FAQ: "/FAQ",
         ONLINE_FORM: "OnlineForm"
     },
     REQUEST_STATUS: 200,

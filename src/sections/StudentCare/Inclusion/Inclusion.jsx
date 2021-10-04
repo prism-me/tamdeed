@@ -9,7 +9,7 @@ import std5 from "../../../assets/images/studentcare/Academic.jpg";
 import ModalVideo from 'react-modal-video'
 import PlayArrowIcon from "@material-ui/icons/PlayArrow";
 
-function Inclusion() {
+function Inclusion(props) {
     const [isOpenI, setOpenI] = useState(false)
     const [isOpenAS, setOpenAS] = useState(false)
     const [isOpenA, setOpenA] = useState(false)
@@ -18,40 +18,54 @@ function Inclusion() {
     return (
         <div className="Inclusion">
             <Container>
-                <div className={"HowToSellspacing"} id={"INCLUSION"}>
-                    <Row>
-                        <Col sm={4} md={4} lg={4}>
-                            <div className="d-flex justify-content-center align-items-center imgheight"
-                                style={{ backgroundImage: `url(${std1})` }}
-                            >
-                                <div className="video-promo-content mt-4 ">
-                                    <ModalVideo channel='youtube' youtube={{ autoplay: 1, mute: 1 }} isOpen={isOpenI} videoId="0_Je7OBcP3g" onClose={() => setOpenI(false)} />
-                                    <button className="btn video-play-icon" onClick={() => setOpenI(true)}>
-                                        <PlayArrowIcon className={"playSize"} />
-                                    </button>
+                {props.studentCareData?.map((x, index) => (
+                    <div className={"HowToSellspacing"} id={"INCLUSION"} key={index + x.title}>
+                        <Row>
+                            <Col sm={4} md={4} lg={4}>
+                                <div className="d-flex justify-content-center align-items-center imgheight"
+                                    style={{ backgroundImage: `url(${x.thumbnail})` }}
+                                >
+                                    <div className="video-promo-content mt-4 ">
+                                        <ModalVideo channel='youtube' youtube={{ autoplay: 1, mute: 1 }} isOpen={isOpenI} videoId={x?.video_link?.split("/")[3]} onClose={() => setOpenI(false)} />
+                                        <button className="btn video-play-icon" onClick={() => setOpenI(true)}>
+                                            <PlayArrowIcon className={"playSize"} />
+                                        </button>
+                                    </div>
                                 </div>
-                            </div>
-                        </Col>
-                        <Col sm md lg >
-                            <h2 className="title">
-                                INCLUSION
-                            </h2>
-                            <p className={"subTitle"}>
-                                American Gulf School is an equal opportunities school, and we strongly believe in equality and diversity. We welcome learners from any race, nationality or cultural background.
-                            </p>
-                            <p className={"subTitle"}>
-                                We believe that a well-designed curriculum will result in learners that are lifelong learners and who will have the ability to become civic, business and community leaders and advocates of the UAE in the international community.
-                            </p>
-                            <p className={"subTitle"}>
-                                Furthermore, our school believes that these learning beliefs are applied to all learners including learners that are in need of special assistance due to exceptional needs. This includes children who are on the gifted end of the learning continuum and children with learning challenges.
-                            </p>
-                            <button className={"LearnmoreButton"}>
-                                Learn more
-                            </button>
-                        </Col>
-                    </Row>
-                </div>
-                <div className={"HowToSellspacing"} id={"ACADEMIC "}>
+                            </Col>
+                            <Col sm md lg >
+                                <h2 className="title">
+                                    {
+                                        props.isArabic
+                                            ? x?.arabic?.title
+                                            : x.title
+                                    }
+                                    {/* INCLUSION */}
+                                </h2>
+                                <p className={"subTitle"}
+                                    dangerouslySetInnerHTML={{
+                                        __html:
+                                            props.isArabic
+                                                ? x.description
+                                                : x.description
+                                    }}
+                                >
+                                    {/* American Gulf School is an equal opportunities school, and we strongly believe in equality and diversity. We welcome learners from any race, nationality or cultural background. */}
+                                </p>
+                                {/* <p className={"subTitle"}>
+                                    We believe that a well-designed curriculum will result in learners that are lifelong learners and who will have the ability to become civic, business and community leaders and advocates of the UAE in the international community.
+                                </p>
+                                <p className={"subTitle"}>
+                                    Furthermore, our school believes that these learning beliefs are applied to all learners including learners that are in need of special assistance due to exceptional needs. This includes children who are on the gifted end of the learning continuum and children with learning challenges.
+                                </p> */}
+                                <button className={"LearnmoreButton"}>
+                                    Learn more
+                                </button>
+                            </Col>
+                        </Row>
+                    </div>
+                ))}
+                {/* <div className={"HowToSellspacing"} id={"ACADEMIC "}>
                     <Row>
                         <Col sm md lg >
                             <h3 className="title">
@@ -161,7 +175,7 @@ function Inclusion() {
                             </p>
                         </Col>
                     </Row>
-                </div>
+                </div> */}
             </Container>
         </div>
     );

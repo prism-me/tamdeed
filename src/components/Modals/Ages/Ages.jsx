@@ -17,7 +17,14 @@ const Ages = (props) => {
             </span>
             <Modal.Body>
                 <Table responsive="sm" className={"text-center TableMB"}>
-                    <thead>
+                    <p className={"SubTitle"}
+                        dangerouslySetInnerHTML={{
+                            __html:
+                                props.reqTableData?.description
+                        }}
+                    >
+                    </p>
+                    {/* <thead>
                         <tr>
                             <th>Age</th>
                             <th>American Gulf School (GRADE)</th>
@@ -134,7 +141,7 @@ const Ages = (props) => {
                             <td>4</td>
                             <td>Terminale</td>
                         </tr>
-                    </tbody>
+                    </tbody> */}
                 </Table>
             </Modal.Body>
         </Modal>

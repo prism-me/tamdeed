@@ -1,7 +1,7 @@
-import React, {useEffect} from "react";
-import {Modal, Button, Row, Col, Form, Container, Table, Card} from "react-bootstrap";
+import React, { useEffect } from "react";
+import { Modal, Button, Row, Col, Form, Container, Table, Card } from "react-bootstrap";
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
-import {Grid} from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 
 const CalendarView = (props) => {
     return (
@@ -11,13 +11,13 @@ const CalendarView = (props) => {
             aria-labelledby="contained-modal-title-vcenter"
             centered
             className="Ages Academic"
-            style={{paddingLeft: "0px"}}
+            style={{ paddingLeft: "0px" }}
         >
 
             <div className="header">
                 <span className={"modalIcon"} onClick={props.onHide}>
-                        <ArrowBackIcon/>
-                    </span>
+                    <ArrowBackIcon />
+                </span>
                 <div className="heading">
                     <p>Academic Calendar 2021 - 2022</p>
                 </div>
@@ -30,16 +30,30 @@ const CalendarView = (props) => {
                                 <p>TERM 1 : WINTER 2021</p>
                             </div>
                             <div className="card-sec">
-                                <div className="circle-holder">
-                                    <div className="_circle">
-                                        <div className="_circle-inner">29<span className="_circle-em">th</span></div>
-                                        <span className="_circle-month">AUG</span>
+                                {props.calData.map((slides, index) => (
+                                    <div className="circle-holder">
+                                        <div className="_circle">
+                                            <div className="_circle-inner">
+                                                {slides.date}
+                                                {/* 29<span className="_circle-em">th</span> */}
+                                            </div>
+                                            {/* <span className="_circle-month">AUG</span> */}
+                                        </div>
+                                        <div className="_circle-txt">
+                                            <p>
+                                                {
+                                                    props.language
+                                                        ? slides?.arabic?.name
+                                                        : slides.name
+                                                }
+                                                {/* First day of term */}
+                                            </p>
+                                        </div>
                                     </div>
-                                    <div className="_circle-txt">
-                                        <p>First day of term</p>
-                                    </div>
-                                </div>
-                                <div className="circle-holder">
+                                ))}
+
+
+                                {/* <div className="circle-holder">
                                     <div className="_circle">
                                         <div className="_circle-inner">21<span className="_circle-em">st</span></div>
                                         <span className="_circle-month">OCT</span>
@@ -117,7 +131,7 @@ const CalendarView = (props) => {
                                     <div className="_circle-txt">
                                         <p>Start of Ramadan (TBC)</p>
                                     </div>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                         <div className="card-row">

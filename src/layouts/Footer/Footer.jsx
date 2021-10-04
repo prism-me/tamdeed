@@ -11,8 +11,10 @@ import logo from "./../../assets/images/agslogo/Logo (1).png";
 import { useHistory } from "react-router-dom";
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import { connect } from "react-redux";
 
-function Footer() {
+function Footer(props) {
+  const { global } = props;
   const history = useHistory();
   const scrollToBottom1 = () => {
     const bottomEle = document.getElementById("calenderDiv");
@@ -62,7 +64,7 @@ function Footer() {
                 OUR SCHOOL
               </h5>
               <Nav className="flex-column">
-                <LinkContainer to="/about">
+                <LinkContainer to={`/${global.activeLanguage}/about`}>
                   <Nav.Link className=" fdeco"> About us </Nav.Link>
                 </LinkContainer>
                 <LinkContainer to="https://www.google.com/maps/place/American+Gulf+School/@25.3382268,55.5628731,17z/data=!3m1!4b1!4m5!3m4!1s0x3ef5f5ef006a4c83:0xcf95030e29d9fb7!8m2!3d25.3382268!4d55.5650618?shorturl=1">
@@ -71,10 +73,10 @@ function Footer() {
                 <LinkContainer to="#">
                   <Nav.Link className=" fdeco">  Our Team </Nav.Link>
                 </LinkContainer>
-                <LinkContainer to="/careers">
+                <LinkContainer to={`/${global.activeLanguage}/careers`}>
                   <Nav.Link className=" fdeco"> Join Our Team </Nav.Link>
                 </LinkContainer>
-                <LinkContainer to="/FAQMain">
+                <LinkContainer to={`/${global.activeLanguage}/FAQ`}>
                   <Nav.Link className=" fdeco">  FAQs </Nav.Link>
                 </LinkContainer>
               </Nav>
@@ -87,23 +89,23 @@ function Footer() {
                 <LinkContainer to="#">
                   <Nav.Link className=" fdeco">  Virtual Admissions </Nav.Link>
                 </LinkContainer>
-                <LinkContainer to="/Enroll">
+                <LinkContainer to={`/${global.activeLanguage}/Enroll`}>
                   <Nav.Link className=" fdeco">Enroll Online</Nav.Link>
                 </LinkContainer>
                 {/* <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.ENROLL}`}> */}
-                <HashLink to={"/Enroll" + "#Tuition_Fees"} className={"hashLinkStyling"}>
+                <HashLink to={`/${global.activeLanguage}/Enroll` + "#Tuition_Fees"} className={"hashLinkStyling"}>
                   Tuition Fees
                 </HashLink>
                 {/* <Nav.Link className=" fdeco"> Tuition Fees</Nav.Link>
                 </LinkContainer> */}
                 {/* <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.ENROLL}`}> */}
-                <HashLink to={"/Enroll" + "#Request_for_a_callback"} className={"hashLinkStyling"}>
+                <HashLink to={`/${global.activeLanguage}/Enroll` + "#Request_for_a_callback"} className={"hashLinkStyling"}>
                   Request for a callback
                 </HashLink>
                 {/* <Nav.Link className=" fdeco"> Request for a callback </Nav.Link>
                 </LinkContainer> */}
                 {/* <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.ENROLL}`}> */}
-                <HashLink to={"/Enroll" + "#School_Tour"} className={"hashLinkStyling"}>
+                <HashLink to={`/${global.activeLanguage}/Enroll` + "#School_Tour"} className={"hashLinkStyling"}>
                   School Tours
                 </HashLink>
                 {/* <Nav.Link className=" fdeco"> School Tours</Nav.Link>
@@ -118,18 +120,18 @@ function Footer() {
                 {/* <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.ACADEMICS}`}
                   onClick={scrollToBottom1}
                 > */}
-                <HashLink to={"/academics" + "#Academic_Calendar"} className={"hashLinkStyling"}>
+                <HashLink to={`/${global.activeLanguage}/academics` + "#Academic_Calendar"} className={"hashLinkStyling"}>
                   Academic Calendar
                 </HashLink>
                 {/* <Nav.Link className=" fdeco"> Academic Calendar </Nav.Link> */}
                 {/* </LinkContainer> */}
                 {/* <LinkContainer to="#"> */}
-                <HashLink to={"/academics" + "#Our_Curriculum"} className={"hashLinkStyling"}>
+                <HashLink to={`/${global.activeLanguage}/academics` + "#Our_Curriculum"} className={"hashLinkStyling"}>
                   Our Curriculum
                 </HashLink>
                 {/* <Nav.Link className=" fdeco">  Our Curriculum </Nav.Link> */}
                 {/* </LinkContainer> */}
-                <LinkContainer to="/Student-care">
+                <LinkContainer to={`/${global.activeLanguage}/Student-care`}>
                   <Nav.Link className=" fdeco">  Student Care support  </Nav.Link>
                 </LinkContainer>
               </Nav>
@@ -159,4 +161,17 @@ function Footer() {
   );
 }
 
-export default Footer;
+const mapStateToProps = (state) => {
+  return {
+    global: state.globalReducer,
+  };
+};
+const mapDispatchToProps = (dispatch) => {
+  return {
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Footer);

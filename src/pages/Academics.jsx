@@ -10,6 +10,7 @@ import { connect } from "react-redux";
 class Academics extends Component {
     state = {
         mentorsData: [],
+        eventData: [],
         currentPage: null,
         expData: [],
         content: null,
@@ -56,6 +57,13 @@ class Academics extends Component {
             .catch(err => {
                 console.log(err)
             })
+
+        API.get('/events').then(response => {
+            this.setState({ eventData: response.data.data });
+        })
+            .catch(err => {
+                console.log(err)
+            })
     }
     render() {
         const {
@@ -82,6 +90,8 @@ class Academics extends Component {
                             ? content?.arabic?.accreditationsSection
                             : content?.accreditationsSection
                     }
+                    eventData={this.state.eventData}
+                    isArabic={global?.activeLanguage === "ar"}
                 />
                 <ACTabs
                     expData={this.state.expData}
@@ -113,6 +123,7 @@ class Academics extends Component {
                             ? content?.arabic?.quoteSection
                             : content?.quoteSection
                     }
+                    language={global?.activeLanguage}
                 />
             </div>
         );

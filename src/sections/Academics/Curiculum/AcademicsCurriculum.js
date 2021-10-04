@@ -31,11 +31,14 @@ const AcademicsCurriculum = (props) => {
                     <div className={"mx-2 divstyle wc"}
                         style={{ cursor: "pointer" }}
                         onClick={() => {
-                            history.push(`/${STRINGS.ROUTES.KINDERGARTEN}`);
+                            history.push(
+                                `/${props.language
+                                }/KinderGarten`
+                            );
                         }}
                     >
                         <div className="d-flex justify-content-center align-items-center imgheight ch"
-                            style={{ backgroundImage: `url(${kindergarten_img})` }}
+                            style={{ backgroundImage: `url(${props.kinderSection?.image})` }}
                         >
                             <div className="video-promo-content mt-4 ">
                                 <h5 className={"overview-heading position-static text-nowrap"}>
@@ -48,11 +51,14 @@ const AcademicsCurriculum = (props) => {
                     <div className={"mx-2 divstyle wc"}
                         style={{ cursor: "pointer" }}
                         onClick={() => {
-                            history.push(`/${STRINGS.ROUTES.PRIMARYSCHOOL}`);
+                            history.push(
+                                `/${props.language
+                                }/Primary-school`
+                            );
                         }}
                     >
                         <div className="d-flex justify-content-center align-items-center imgheight ch"
-                            style={{ backgroundImage: `url(${p_school})` }}
+                            style={{ backgroundImage: `url(${props.primSection?.image})` }}
                         >
                             <div className="video-promo-content mt-4 ">
                                 <h5 className={"overview-heading position-static text-nowrap"}>
@@ -65,11 +71,14 @@ const AcademicsCurriculum = (props) => {
                     <div className={"mx-2 divstyle wc"}
                         style={{ cursor: "pointer" }}
                         onClick={() => {
-                            history.push(`/${STRINGS.ROUTES.MIDDLE_SCHOOL}`);
+                            history.push(
+                                `/${props.language
+                                }/Middle-school`
+                            );
                         }}
                     >
                         <div className="d-flex justify-content-center align-items-center imgheight ch"
-                            style={{ backgroundImage: `url(${middle_school})`, }}
+                            style={{ backgroundImage: `url(${props.midSection?.image})`, }}
                         >
                             <div className="video-promo-content mt-4 ">
                                 <h5 className={"overview-heading position-static text-nowrap"}>

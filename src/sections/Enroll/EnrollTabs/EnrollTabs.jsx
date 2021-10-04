@@ -1,7 +1,7 @@
 import React from 'react';
 import { Hidden } from "@material-ui/core";
 
-export default function EnrollTabs() {
+export default function EnrollTabs(props) {
     const scrollToBottom1 = () => {
         const bottomEle = document.getElementById("Admissions");
         bottomEle.scrollIntoView({ behavior: "smooth" });
@@ -65,7 +65,8 @@ export default function EnrollTabs() {
                 </div>
             </Hidden>
             <p className={"EnrollTabTitle"}>
-                Thank you for considering joining the American Gulf School family. After conducting a tour with us, please adhere to the below steps for acceptance and registration.
+                {props.introSec?.title}
+                {/* Thank you for considering joining the American Gulf School family. After conducting a tour with us, please adhere to the below steps for acceptance and registration. */}
             </p>
         </>
     );

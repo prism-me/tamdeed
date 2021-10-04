@@ -18,6 +18,7 @@ const defaultState = {
 
 function OurPrograms() {
     const [init, setInit] = useState(defaultState);
+
     let { name, email, isRequestPending, isOpen, message, variant } = init;
 
     const validation = (obj) => {

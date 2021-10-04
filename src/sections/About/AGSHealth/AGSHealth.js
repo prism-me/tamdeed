@@ -12,7 +12,7 @@ const AGSHealth = (props) => {
             <Container>
                 <Row>
                     <Col sm={12} lg={5}>
-                        <img alt={"#"} src={health_bg_img} className="healtImg" />
+                        <img alt={"#"} src={props.AgsHealth?.image} className="healtImg" />
                     </Col>
                     <Col sm={12} lg={7}>
                         <p className="subtitle"

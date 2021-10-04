@@ -3,23 +3,24 @@
   @media #{$sm,$md} {
     padding-top: 2rem;
   }
-    .title{
+    .Title{
       font-size: 25px;
       font-weight: 500;
       margin-bottom: 2rem;
+      text-align: center;
       @media #{$sm,$md} {
         margin-top: 2rem;
         margin-bottom: 1rem;
       }
     }
     .subTitle {
-      margin-top: 0 !important;
-      font-size: 17px;
+      font-size: 16px;
       font-weight: 400;
-      margin-bottom: 2rem;
+      // margin-bottom: 2rem;
     }
     .subTitle ul, .subTitle ol{
       margin: 0;
+      font-size: 16px;
       padding-left: 15px;
     }
 
@@ -115,18 +116,122 @@
         font-size: 40px !important;
       }
     }
-    
+    .card-foot {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      .PmIcon{
+        color: black;
+      }
+      .address-label {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        margin: 0.8rem 0;
+        @media #{$sm} {
+          margin: 0;
+          width: 100%;
+          padding: 0 1rem;
+          align-items: flex-start;
+          justify-content: center;
+        }
+
+        .icon {
+          display: flex;
+          margin: 0 2px;
+          @media #{$sm} {
+            margin: 0;
+          }
+        }
+
+        .text {
+          display: flex;
+          margin: 0 2px;
+
+          p {
+            font-size: 16px;
+            margin: 0;
+            @media #{$sm} {
+              text-align: center;
+            }
+          }
+        }
+      }
+
+      .info-group {
+        display: flex;
+        //width: 100%;
+        @media #{$sm} {
+          flex-direction: column;
+        }
+        .info-item {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          margin: 0 1rem;
+          @media #{$sm} {
+            margin: 0;
+          }
+
+          .txt {
+            display: flex;
+            margin: 0.3rem 0;
+            @media #{$sm} {
+              margin: 0.8rem 0;
+            }
+            p {
+              font-size: 16px;
+              font-weight: bold;
+              margin: 0;
+              color: #1A2C52;
+              text-transform: uppercase;
+              @media #{$sm} {
+                width: 100%;
+                text-align: center;
+              }
+            }
+          }
+
+          .icon-txt-hld{
+            display: flex;
+            align-items: center;
+            margin: 0.3rem 0;
+            @media #{$sm} {
+              margin: 0;
+              justify-content: center;
+            }
+            .icon{
+              margin: 0 3px;
+            }
+            .txt{
+              margin: 0 3px;
+            }
+          }
+          .icon-txt-hld.ic{
+            justify-content: center;
+            @media #{$sm} {
+              margin: 1rem 0;
+              justify-content: space-around;
+            }
+          }
+        }
+        .info-item.ic{
+          @media #{$sm} {
+            margin: 0;
+          }
+        }
+      }
+    } 
   }
   .SchoolMiddlespacing{
     text-align: center; 
-    margin-top: 1rem;
+    margin-top: 2rem;
     @media #{$sm,$md} {
       margin-top: 2rem;
     }
     .subTitle {
-      margin-top: 0 !important;
-      font-size: 17px;
+      font-size: 16px;
       font-weight: 400;
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
     }
   }

@@ -1,5 +1,5 @@
 .FeesPayments-page{
-  padding-top: 3rem;
+  padding-top: 9rem;
   @media #{$sm,$md,$lg} {
     padding-top: 2rem;
   }
@@ -22,9 +22,9 @@
     }
   }
   .FeesPayments {
-    height: 160vh;
-    background-size: cover;
-    // background-size: 100%;
+    height: 90vh;
+    // background-size: cover;
+    background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
@@ -37,9 +37,8 @@
       background-size: 120% /* work with the background-size */
     }
     @media #{$lg} {
-      height: 46vh !important;
+      // height: 46vh !important;
       background-size: cover;
-      padding: 0;
     }
     @media #{$md} {
       background-size: cover;
@@ -51,9 +50,8 @@
       height: 80vh;
     }
     .description-column {
-      // margin-top: 25%;
+      margin-top: 40%;
       .cardStyle{
-        // margin-top: 16%;
         padding: 1rem;
         width: 950px;
         border-radius: 30px;

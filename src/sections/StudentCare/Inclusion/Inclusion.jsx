@@ -4,7 +4,7 @@ import std1 from "../../../assets/images/studentcare/inclusion.jpg";
 import std2 from "../../../assets/images/studentcare/acadamicsupport.jpg";
 import std3 from "../../../assets/images/studentcare/schoolclinic.jpg";
 import std4 from "../../../assets/images/studentcare/Academic.jpg";
-import std5 from "../../../assets/images/studentcare/Academic.jpg";
+import std5 from "../../../assets/images/studentcare/wellbeing.jpg";
 
 import ModalVideo from 'react-modal-video'
 import PlayArrowIcon from "@material-ui/icons/PlayArrow";

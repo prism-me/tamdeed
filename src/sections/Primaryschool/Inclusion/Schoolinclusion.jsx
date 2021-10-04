@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import schoolleft from "../../../assets/images/Primaryschool/primaryschool.png";
+import schoolleft from "../../../assets/images/primary/PYPPhoto.jpg";
 import ModalVideo from 'react-modal-video'
 import PlayArrowIcon from "@material-ui/icons/PlayArrow";
 import LocationOnIcon from '@material-ui/icons/LocationOn';

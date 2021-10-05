@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid } from "@material-ui/core";
 import { Card, Col, Container, Row } from "react-bootstrap";
-import bg_img_e from "../../../assets/images/agsbackgrounds/AGSEthosPhoto.jpg"
+import bg_img_e from "../../../assets/images/agsbackgrounds/AGSEthos.jpg"
 import { Hidden } from "@material-ui/core";
 
 const AgsEthos = () => {

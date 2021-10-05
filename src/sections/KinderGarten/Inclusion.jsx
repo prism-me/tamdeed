@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import std1 from "../../assets/images/studentcare/acadamicsupport.jpg";
-import std2 from "../../assets/images/studentcare/acadamicsupport.jpg";
-import std3 from "../../assets/images/studentcare/acadamicsupport.jpg";
+import std1 from "../../assets/images/KG/KGBanner.JPG";
+import std2 from "../../assets/images/KG/KGPhoto1.jpg";
+import std3 from "../../assets/images/KG/KGPhoto2.jpg";
 import "./Inclusion.scss";
 import ModalVideo from "react-modal-video";
 import PlayArrowIcon from "@material-ui/icons/PlayArrow";
@@ -48,8 +48,8 @@ function Inclusion() {
             </Col>
           </Row>
         </div>
-        <div className={"HowToSellspacing"}>
-          <Row className="MiddleAlignCenter">
+        <div className={"HowToSellspacing featured-section"}>
+          <Row className="MiddleAlignCenter ">
             <Col sm={12} md={8} lg={8} >
               <p className={"subTitle mt-3"}>
                 At AGS we ensure that to achieve these goals and expectations, our KG department is flexible, ensuring children’s learning is through play and practical hands-on activities. Our Kindergarten curriculum is designed to foster curiosity, inspire, and teach children to be reflective. To support learning, our classroom environments are set up so learners can move freely around areas for reading, writing, art, construction, imaginative play, science, and mathematics. Class sizes of no more than 15 children are permitted.  Learners benefit from the educational experiences that their teachers provide for them. It is for this reason that each classroom is staffed by a qualified, experienced teacher, one full-time teacher assistant and an academic support teacher when needed.

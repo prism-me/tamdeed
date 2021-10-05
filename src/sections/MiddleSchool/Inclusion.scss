@@ -160,3 +160,17 @@
     }
   }
 }
+
+.featured-section{
+  background-color: $bg-color;
+  padding: 1.5rem;
+  border-radius: 20px;
+  margin: 2rem auto;
+  .TabMobileSpacing {
+    color: white;
+  }
+  .row{
+    align-items: center;
+    margin-top: -2rem;
+  }
+}

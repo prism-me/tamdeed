@@ -49,7 +49,7 @@ function Inclusion() {
             </Col>
           </Row>
         </div>
-        <div className={"HowToSellspacing"}>
+        <div className={"HowToSellspacing featured-section"}>
           <Row className="TabMobileSpacing">
             <Col sm={12} md={8} lg={8}>
               <h3 className="title1">Middle Years Program</h3>

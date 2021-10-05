@@ -31,7 +31,7 @@ function Schoolinclusion() {
                             </div>
                         </Col>
                         <Col sm={7} md={7} lg={7} >
-                            <p className={"subTitle"}>
+                            <p className={"subTitle headline"}>
                                 The AGS Primary School is a cross-curriculum program for learners aged between 6 and 11 years old. It combines 6 academic subjects:
                             </p>
                             <p className={"subTitle"}>
@@ -44,7 +44,7 @@ function Schoolinclusion() {
                                     <li>Physical, Social and Personal Education</li>
                                 </ul>
                             </p>
-                            <p className={"subTitle"}>
+                            <p className={"subTitle headline"}>
                                 Integrated with six transdisciplinary themes:
                             </p>
                             <p className={"subTitle"}>

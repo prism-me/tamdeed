@@ -103,6 +103,7 @@ class Home extends Component {
               ? content?.arabic?.banner
               : content?.banner
           }
+          bannerImg={content?.banner?.image}
         />
         <InfoTabs
           expData={this.state.expData}

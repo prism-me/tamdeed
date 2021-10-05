@@ -7,7 +7,8 @@ function Curriculum(props) {
     return (
         <div className="Curriculum-page">
             <h3 className={"Title"}>
-                CURRICULUM COURSE AND SYLLABUS
+                {props.Curriculum?.title}
+                {/* CURRICULUM COURSE AND SYLLABUS */}
             </h3>
             <Hidden smDown>
                 <div
@@ -21,7 +22,7 @@ function Curriculum(props) {
                                     <Row>
                                         <Col xs={12} sm={3} md={12} lg={3} className={"d-flex justify-content-center align-items-center"}>
                                             <h4 className={" intro-title"}>
-                                                {props.Curriculum?.title}
+                                                {props.Curriculum?.subtitle}
                                                 {/* OUR
                                                 <br />
                                                 CURRICULUM */}
@@ -68,7 +69,7 @@ function Curriculum(props) {
                             <Row>
                                 <Col xs={12} sm={3} md={12} lg={3} className={"d-flex justify-content-center align-items-center"}>
                                     <h4 className={" intro-title"}>
-                                        {props.Curriculum?.title}
+                                        {props.Curriculum?.subtitle}
                                         {/* OUR
                                         <br />
                                         CURRICULUM */}

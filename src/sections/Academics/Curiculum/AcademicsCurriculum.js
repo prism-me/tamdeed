@@ -38,7 +38,7 @@ const AcademicsCurriculum = (props) => {
                         }}
                     >
                         <div className="d-flex justify-content-center align-items-center imgheight ch"
-                            style={{ backgroundImage: `url(${props.kinderSection?.image})` }}
+                            style={{ backgroundImage: `url(${props?.kinderImg})` }}
                         >
                             <div className="video-promo-content mt-4 ">
                                 <h5 className={"overview-heading position-static text-nowrap"}>
@@ -58,7 +58,7 @@ const AcademicsCurriculum = (props) => {
                         }}
                     >
                         <div className="d-flex justify-content-center align-items-center imgheight ch"
-                            style={{ backgroundImage: `url(${props.primSection?.image})` }}
+                            style={{ backgroundImage: `url(${props?.primImg})` }}
                         >
                             <div className="video-promo-content mt-4 ">
                                 <h5 className={"overview-heading position-static text-nowrap"}>
@@ -78,7 +78,7 @@ const AcademicsCurriculum = (props) => {
                         }}
                     >
                         <div className="d-flex justify-content-center align-items-center imgheight ch"
-                            style={{ backgroundImage: `url(${props.midSection?.image})`, }}
+                            style={{ backgroundImage: `url(${props?.midImg})`, }}
                         >
                             <div className="video-promo-content mt-4 ">
                                 <h5 className={"overview-heading position-static text-nowrap"}>

@@ -76,14 +76,16 @@ export default function ACTabs(props) {
                         >
                             <div className="video-promo-content mt-4 ">
                                 {slides.video_link && (
-                                    <button className="btn video-play-icon"
-                                        onClick={() => {
-                                            setCurrentIndex(index);
-                                            setOpenVideo(true);
-                                        }}
-                                    >
-                                        <PlayArrowIcon className={"playSize"} />
-                                    </button>
+                                    slides.video_link?.length > 0 ?
+                                        <button className="btn video-play-icon"
+                                            onClick={() => {
+                                                setCurrentIndex(index);
+                                                setOpenVideo(true);
+                                            }}
+                                        >
+                                            <PlayArrowIcon className={"playSize"} />
+                                        </button>
+                                        : ""
                                 )}
                                 <h5 className={"overview-heading"}>
                                     {
@@ -103,7 +105,7 @@ export default function ACTabs(props) {
                 channel="youtube"
                 youtube={{ autoplay: 1, mute: 1 }}
                 isOpen={openVideo}
-                videoId={slidesData[currentIndex]?.video_link?.split("/")[3]}
+                videoId={props.expData[currentIndex]?.video_link?.split("/")[3]}
                 onClose={() => setOpenVideo(false)}
             />
         </div>

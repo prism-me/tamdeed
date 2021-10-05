@@ -78,6 +78,7 @@ class Academics extends Component {
                             ? content?.arabic?.banner
                             : content?.banner
                     }
+                    bannerImg={content?.banner.image}
                 />
                 <Accreditation
                     calendSection={
@@ -108,16 +109,19 @@ class Academics extends Component {
                             ? content?.arabic?.kindergartenSection
                             : content?.kindergartenSection
                     }
+                    kinderImg={content?.kindergartenSection.image}
                     primSection={
                         global?.activeLanguage === "ar"
                             ? content?.arabic?.primarySection
                             : content?.primarySection
                     }
+                    primImg={content?.primarySection.image}
                     midSection={
                         global?.activeLanguage === "ar"
                             ? content?.arabic?.middleSection
                             : content?.middleSection
                     }
+                    midImg={content?.middleSection.image}
                     quote={
                         global?.activeLanguage === "ar"
                             ? content?.arabic?.quoteSection

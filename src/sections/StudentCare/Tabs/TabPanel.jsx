@@ -1,33 +1,25 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
-import { Button } from "react-bootstrap";
 import { Hidden } from "@material-ui/core";
 
 export default function ScrollableTabsButtonAuto() {
     const scrollToBottom1 = () => {
-        const bottomEle = document.getElementById("INCLUSION");
+        const bottomEle = document.getElementById(0);
         bottomEle.scrollIntoView({ behavior: "smooth" });
     }
     const scrollToBottom2 = () => {
-        const bottomEle = document.getElementById("ACADEMIC ");
+        const bottomEle = document.getElementById(1);
         bottomEle.scrollIntoView({ behavior: "smooth" });
     }
     const scrollToBottom3 = () => {
-        const bottomEle = document.getElementById("SCHOOL");
+        const bottomEle = document.getElementById(2);
         bottomEle.scrollIntoView({ behavior: "smooth" });
     }
     const scrollToBottom4 = () => {
-        const bottomEle = document.getElementById("GUIDANCE");
+        const bottomEle = document.getElementById(3);
         bottomEle.scrollIntoView({ behavior: "smooth" });
     }
     const scrollToBottom5 = () => {
-        const bottomEle = document.getElementById("WELLBEING");
+        const bottomEle = document.getElementById(4);
         bottomEle.scrollIntoView({ behavior: "smooth" });
     }
     return (

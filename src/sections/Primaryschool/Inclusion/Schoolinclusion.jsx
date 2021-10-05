@@ -13,10 +13,10 @@ function Schoolinclusion(props) {
                     <Row className={"justify-content-center align-items-center"}>
                         <Col sm={5} md={5} lg={5}>
                             <div className="d-flex justify-content-center align-items-center imgheight"
-                                style={{ backgroundImage: `url(${props.secOne?.image})` }}
+                                style={{ backgroundImage: `url(${props.secOneVideo?.image})` }}
                             >
                                 <div className="video-promo-content mt-4 ">
-                                    <ModalVideo channel='youtube' youtube={{ autoplay: 1, mute: 1 }} isOpen={isOpen} videoId={props.secOne?.video_link?.split("/")[3]} onClose={() => setOpen(false)} />
+                                    <ModalVideo channel='youtube' youtube={{ autoplay: 1, mute: 1 }} isOpen={isOpen} videoId={props.secOneVideo?.video_link?.split("/")[3]} onClose={() => setOpen(false)} />
                                     <button className="btn video-play-icon" onClick={() => setOpen(true)}>
                                         <PlayArrowIcon className={"playSize"} />
                                     </button>

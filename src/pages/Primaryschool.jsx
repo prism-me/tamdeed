@@ -57,6 +57,7 @@ class Primaryschool extends Component {
               ? content?.arabic?.section1
               : content?.section1
           }
+          secOneVideo={content?.section1}
           secTwo={
             global?.activeLanguage === "ar"
               ? content?.arabic?.section2

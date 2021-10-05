@@ -23,14 +23,14 @@ function Inclusion(props) {
             <Col sm={12} md={12} lg={12}>
               <div
                 className="d-flex justify-content-center align-items-center imgheight"
-                style={{ backgroundImage: `url(${props.secOne?.image})` }}
+                style={{ backgroundImage: `url(${props.secOneVideo?.image})` }}
               >
                 <div className="video-promo-content mt-4 ">
                   <ModalVideo
                     channel="youtube"
                     youtube={{ autoplay: 1, mute: 1 }}
                     isOpen={isOpen}
-                    videoId={props.secOne?.video_link?.split("/")[3]}
+                    videoId={props.secOneVideo?.video_link?.split("/")[3]}
                     onClose={() => setOpen(false)}
                   />
                   <button
@@ -71,14 +71,14 @@ function Inclusion(props) {
             <Col sm={12} md={4} lg={4} className="MiddleAlignCenter">
               <div
                 className="d-flex justify-content-center align-items-center imgheight"
-                style={{ backgroundImage: `url(${props.secTwo?.image})` }}
+                style={{ backgroundImage: `url(${props.secTwoVideo?.image})` }}
               >
                 <div className="video-promo-content mt-4 ">
                   <ModalVideo
                     channel="youtube"
                     youtube={{ autoplay: 1, mute: 1 }}
                     isOpen={isOpen}
-                    videoId={props.secTwo?.video_link?.split("/")[3]}
+                    videoId={props.secTwoVideo?.video_link?.split("/")[3]}
                     onClose={() => setOpen(false)}
                   />
                   <button
@@ -122,14 +122,14 @@ function Inclusion(props) {
             <Col sm={12} md={4} lg={4} className='MobileBottomSpacing'>
               <div
                 className="d-flex justify-content-center align-items-center imgheight"
-                style={{ backgroundImage: `url(${props.secFive?.image})` }}
+                style={{ backgroundImage: `url(${props.secFiveVideo?.image})` }}
               >
                 <div className="video-promo-content mt-4 ">
                   <ModalVideo
                     channel="youtube"
                     youtube={{ autoplay: 1, mute: 1 }}
                     isOpen={isOpen}
-                    videoId={props.secFive?.video_link?.split("/")[3]}
+                    videoId={props.secFiveVideo?.video_link?.split("/")[3]}
                     onClose={() => setOpen(false)}
                   />
                   <button

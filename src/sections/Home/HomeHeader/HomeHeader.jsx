@@ -38,10 +38,12 @@ function HomeHeader(props) {
   return (
     <>
       <Hidden smDown>
-        <div style={{ height: '', backgroundImage: `url(${isPlaying && header_bg})` }} className={isPlaying ? "videoBottom" : "BackgroundDiv"}>
+        <div style={{ height: '', backgroundImage: `url(${isPlaying && props?.bannerImg})` }} className={isPlaying ? "videoBottom" : "BackgroundDiv"}>
           <BackGroundVideo
             // blur={2}
-            videoSource={videoSource}>
+            bannerImg={props?.bannerImg}
+            videoSource={videoSource}
+          >
             <div className='content'>
               {/*<div className='sub-content' >*/}
               <div className={"inner-header flex"}>

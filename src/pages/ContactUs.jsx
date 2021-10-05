@@ -1,12 +1,30 @@
 import React from "react";
 import Contact from "../sections/ContactUs/index.js";
-const ContactUs = () => {
+import { connect } from "react-redux";
 
-    return(
+const ContactUs = (props) => {
+
+    const { global } = props;
+    return (
         <div className="home-page">
-            <Contact/>
+            <Contact
+                language={global?.activeLanguage}
+            />
         </div>
     )
 }
+const mapStateToProps = (state) => {
+    return {
+        showSpinner: state?.globalReducer?.showSpinner,
+        global: state.globalReducer,
+    };
+};
 
-export default ContactUs;
+const mapDispatchToProps = (dispatch) => {
+    return {
+    };
+};
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(ContactUs);

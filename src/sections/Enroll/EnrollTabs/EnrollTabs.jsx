@@ -1,5 +1,6 @@
 import React from 'react';
 import { Hidden } from "@material-ui/core";
+import { constants } from "../../../utils/constants"
 
 export default function EnrollTabs(props) {
     const scrollToBottom1 = () => {
@@ -34,32 +35,62 @@ export default function EnrollTabs(props) {
                         <button className={"TabButton btn-lg"}
                             onClick={scrollToBottom1}
                         >
-                            Admissions Process
+                            {
+                                constants?.site_content?.enrollTabs?.tab1[
+                                props.language
+                                ]
+                            }
+                            {/* Admissions Process */}
                         </button>
                         <button className={"TabButton btn-lg"}
                             onClick={scrollToBottom2}
                         >
-                            Enquiry
+                            {
+                                constants?.site_content?.enrollTabs?.tab2[
+                                props.language
+                                ]
+                            }
+                            {/* Enquiry */}
                         </button>
                         <button className={"TabButton btn-lg"}
                             onClick={scrollToBottom3}
                         >
-                            Fees and Payments
+                            {
+                                constants?.site_content?.enrollTabs?.tab3[
+                                props.language
+                                ]
+                            }
+                            {/* Fees and Payments */}
                         </button>
                         <button className={"TabButton btn-lg"}
                             onClick={scrollToBottom4}
                         >
-                            Online Application
+                            {
+                                constants?.site_content?.enrollTabs?.tab4[
+                                props.language
+                                ]
+                            }
+                            {/* Online Application */}
                         </button>
                         <button className={"TabButton btn-lg"}
                             onClick={scrollToBottom5}
                         >
-                            FAQs
+                            {
+                                constants?.site_content?.enrollTabs?.tab5[
+                                props.language
+                                ]
+                            }
+                            {/* FAQs */}
                         </button>
                         <button className={"TabButton btn-lg"}
                             onClick={scrollToBottom6}
                         >
-                            Contact us
+                            {
+                                constants?.site_content?.contact_us?.title[
+                                props.language
+                                ]
+                            }
+                            {/* Contact us */}
                         </button>
                     </div>
                 </div>

@@ -1,6 +1,8 @@
 import React from 'react';
 import exp_bg_img from "../../../assets/images/about/AGSExperince.jpg";
 import { Card, Col, Container, Row } from "react-bootstrap";
+import { constants } from "../../../utils/constants"
+
 const AgsExperience = (props) => {
     return (
         <div className="AGSExperience">
@@ -22,7 +24,13 @@ const AgsExperience = (props) => {
                         >
                             {/* At American Gulf School, an American Curriculum School in Sharjah, we believe that a diverse curriculum broadens not only minds but opportunities too. Our learners are encouraged to question and experiment to find answers to critical thinking questions, giving each learner confidence within their own ability to achieve their full potential. It is designed and delivered to bring out the best in our learners, both academically and personally. We pride ourselves on being one of the best international schools in the UAE. */}
                         </p>
-                        <button className={"viewButton"}>View more > </button>
+                        <button className={"viewButton"}>
+                            {
+                                constants?.site_content?.view_more[
+                                props.language
+                                ]
+                            }
+                        </button>
                     </Col>
                 </Row>
             </Container>

@@ -93,10 +93,12 @@ class Academics extends Component {
                     }
                     eventData={this.state.eventData}
                     isArabic={global?.activeLanguage === "ar"}
+                    language={global?.activeLanguage}
                 />
                 <ACTabs
                     expData={this.state.expData}
                     isArabic={global?.activeLanguage === "ar"}
+                    language={global?.activeLanguage}
                 />
                 <AcademicsCurriculum
                     curriSection={

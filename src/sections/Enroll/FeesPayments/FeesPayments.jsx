@@ -2,11 +2,19 @@ import React, { useState } from "react";
 import { Card, Col, Container, Row, Table } from "react-bootstrap";
 import header_bg from "./../../../assets/images/agsbackgrounds/backgroundCurve.png";
 import { Hidden } from "@material-ui/core";
+import { constants } from "../../../utils/constants"
 
 function FeesPayments(props) {
     return (
         <div className="FeesPayments-page" id={"Payments"}>
-            <h3 className={"Title"} id={"Tuition_Fees"}>FEES AND PAYMENTS</h3>
+            <h3 className={"Title"} id={"Tuition_Fees"}>
+                {
+                    constants?.site_content?.enrollTabs?.tab3[
+                    props.language
+                    ]
+                }
+                {/* FEES AND PAYMENTS */}
+            </h3>
             <Hidden smDown>
                 <div
                     className="FeesPayments"

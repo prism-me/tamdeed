@@ -4,6 +4,8 @@ import { Card, Col, Container, Row } from "react-bootstrap";
 import bg_img_e from "../../../assets/images/agsbackgrounds/AccreditationPhoto.jpg";
 import CalendarView from "../CalendarView/CalenderView";
 import { Hidden } from "@material-ui/core";
+import { constants } from "../../../utils/constants"
+
 const defaultState = {
     modalShow: false
 }
@@ -29,7 +31,12 @@ const AgsEthos = (props) => {
                                 ...init,
                                 modalShow: true
                             })}>
-                                View Calender
+                                {
+                                    constants?.site_content?.view_calender[
+                                    props.language
+                                    ]
+                                }
+                                {/* View Calender */}
                             </button>
                         </div>
                         <CalendarView show={modalShow} onHide={() => setInit({
@@ -38,6 +45,7 @@ const AgsEthos = (props) => {
                         })}
                             calData={props.eventData}
                             language={props.isArabic}
+                            lang={props.language}
                         />
                     </Grid>
                 </Grid>
@@ -45,7 +53,13 @@ const AgsEthos = (props) => {
                     <button className="view-c-btn" onClick={() => setInit({
                         ...init,
                         modalShow: true
-                    })}>View Calender
+                    })}>
+                        {
+                            constants?.site_content?.view_calender[
+                            props.language
+                            ]
+                        }
+                        {/* View Calender */}
                     </button>
                 </div>
             </Grid>

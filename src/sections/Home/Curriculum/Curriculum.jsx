@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import header_bg from "./../../../assets/images/agsbackgrounds/curriculumcourse.jpg";
 import { Hidden } from "@material-ui/core";
+import { constants } from "../../../utils/constants"
 
 function Curriculum(props) {
     return (
@@ -52,7 +53,11 @@ function Curriculum(props) {
                                                 taught to succeed within the 21st century. */}
                                             </p>
                                             <button className={"viewButton"}>
-                                                View in detail >
+                                                {
+                                                    constants?.site_content?.read_more[
+                                                    props.language
+                                                    ]
+                                                }
                                             </button>
                                         </Col>
                                     </Row>
@@ -99,7 +104,11 @@ function Curriculum(props) {
                                         taught to succeed within the 21st century. */}
                                     </p>
                                     <button className={"viewButton"}>
-                                        View in detail >
+                                        {
+                                            constants?.site_content?.read_more[
+                                            props.language
+                                            ]
+                                        }
                                     </button>
                                 </Col>
                             </Row>

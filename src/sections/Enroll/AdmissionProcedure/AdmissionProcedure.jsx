@@ -7,6 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { Container } from "react-bootstrap";
 import Documents from "../../../components/Modals/Documents/Documents";
+import { constants } from "../../../utils/constants"
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -28,7 +29,12 @@ function AdmissionProcedure(props) {
     return (
         <div className="AdmissionProcedure" id={"Admissions"}>
             <h2 className="Title">
-                ADMISSIONS PROCEDURE
+                {
+                    constants?.site_content?.adm_procd[
+                    props.language
+                    ]
+                }
+                {/* ADMISSIONS PROCEDURE */}
             </h2>
             <Container>
                 <div className={classes.root}>
@@ -153,7 +159,13 @@ function AdmissionProcedure(props) {
                             className={"admissionButton"}
                             onClick={() => setModalShow(true)}
                         >
-                            Click here to view the documents to be submitted once a student has been accepted and enrolled</button>
+                            {
+                                constants?.site_content?.dec_btn[
+                                props.language
+                                ]
+                            }
+                            {/* Click here to view the documents to be submitted once a student has been accepted and enrolled */}
+                        </button>
                     </center>
                     <Documents show={modalShow} onHide={() => setModalShow(false)}
                         documentData={props.docData}

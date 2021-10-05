@@ -1,7 +1,8 @@
 import React from 'react';
 import { Hidden } from "@material-ui/core";
+import { constants } from "../../../utils/constants"
 
-export default function ScrollableTabsButtonAuto() {
+export default function ScrollableTabsButtonAuto(props) {
     const scrollToBottom1 = () => {
         const bottomEle = document.getElementById(0);
         bottomEle.scrollIntoView({ behavior: "smooth" });
@@ -29,27 +30,52 @@ export default function ScrollableTabsButtonAuto() {
                     <button className={"TabButton btn-lg"}
                         onClick={scrollToBottom1}
                     >
-                        Inclusion
+                        {
+                            constants?.site_content?.stdTabs?.tab1[
+                            props.language
+                            ]
+                        }
+                        {/* Inclusion */}
                     </button>
                     <button className={"TabButton btn-lg"}
                         onClick={scrollToBottom2}
                     >
-                        Academic Support
+                        {
+                            constants?.site_content?.stdTabs?.tab2[
+                            props.language
+                            ]
+                        }
+                        {/* Academic Support */}
                     </button>
                     <button className={"TabButton btn-lg"}
                         onClick={scrollToBottom3}
                     >
-                        School Clinic
+                        {
+                            constants?.site_content?.stdTabs?.tab3[
+                            props.language
+                            ]
+                        }
+                        {/* School Clinic */}
                     </button>
                     <button className={"TabButton btn-lg"}
                         onClick={scrollToBottom4}
                     >
-                        Academic Guidance
+                        {
+                            constants?.site_content?.stdTabs?.tab4[
+                            props.language
+                            ]
+                        }
+                        {/* Academic Guidance */}
                     </button>
                     <button className={"TabButton btn-lg"}
                         onClick={scrollToBottom5}
                     >
-                        Wellbeing
+                        {
+                            constants?.site_content?.stdTabs?.tab5[
+                            props.language
+                            ]
+                        }
+                        {/* Wellbeing */}
                     </button>
                 </div>
             </div>

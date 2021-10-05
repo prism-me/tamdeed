@@ -108,6 +108,7 @@ class Home extends Component {
         <InfoTabs
           expData={this.state.expData}
           isArabic={global?.activeLanguage === "ar"}
+          language={global?.activeLanguage}
         />
         <Curriculum
           Curriculum={
@@ -115,15 +116,20 @@ class Home extends Component {
               ? content?.arabic?.curriculmSection
               : content?.curriculmSection
           }
+          language={global?.activeLanguage}
         />
         <Mentors
           mentors={this.state.mentorsData}
           isArabic={global?.activeLanguage === "ar"}
+          language={global?.activeLanguage}
         />
-        <OurPrograms />
+        <OurPrograms
+          language={global?.activeLanguage}
+        />
         <AgsSlider
           lifeagsData={this.state.lifeagsData}
           isArabic={global?.activeLanguage === "ar"}
+          language={global?.activeLanguage}
         />
         <CovidSafety
           Covid={

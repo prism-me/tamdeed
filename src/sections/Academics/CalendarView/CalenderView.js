@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Modal, Button, Row, Col, Form, Container, Table, Card } from "react-bootstrap";
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import { Grid } from "@material-ui/core";
+import { constants } from "../../../utils/constants"
 
 const CalendarView = (props) => {
     return (
@@ -19,7 +20,14 @@ const CalendarView = (props) => {
                     <ArrowBackIcon />
                 </span>
                 <div className="heading">
-                    <p>Academic Calendar 2021 - 2022</p>
+                    <p>
+                        {
+                            constants?.site_content?.calender?.title[
+                            props.lang
+                            ]
+                        }
+                        {/* Academic Calendar 2021 - 2022 */}
+                    </p>
                 </div>
             </div>
             <Modal.Body>
@@ -27,7 +35,14 @@ const CalendarView = (props) => {
                     <Grid item className="card-holder">
                         <div className="card-row">
                             <div className="card-head">
-                                <p>TERM 1 : WINTER 2021</p>
+                                <p>
+                                    {
+                                        constants?.site_content?.calender?.term1[
+                                        props.lang
+                                        ]
+                                    }
+                                    {/* TERM 1 : WINTER 2021 */}
+                                </p>
                             </div>
                             <div className="card-sec">
                                 {props.calData.map((slides, index) => (
@@ -51,58 +66,18 @@ const CalendarView = (props) => {
                                         </div>
                                     </div>
                                 ))}
-
-
-                                {/* <div className="circle-holder">
-                                    <div className="_circle">
-                                        <div className="_circle-inner">21<span className="_circle-em">st</span></div>
-                                        <span className="_circle-month">OCT</span>
-                                    </div>
-                                    <div className="_circle-txt">
-                                        <p>Prophet Muhammad's (PBUH) birthday</p>
-                                    </div>
-                                </div>
-                                <div className="circle-holder">
-                                    <div className="_circle">
-                                        <div className="_circle-inner">03<span className="_circle-em">rd</span></div>
-                                        <span className="_circle-month">Nov</span>
-                                    </div>
-                                    <div className="_circle-txt">
-                                        <p>UAE Flag Day</p>
-                                    </div>
-                                </div>
-                                <div className="circle-holder">
-                                    <div className="_circle">
-                                        <div className="_circle-inner">01<span className="_circle-em">st</span></div>
-                                        <span className="_circle-month">Dec</span>
-                                    </div>
-                                    <div className="_circle-txt">
-                                        <p>Commemoration Day</p>
-                                    </div>
-                                </div>
-                                <div className="circle-holder">
-                                    <div className="_circle">
-                                        <div className="_circle-inner">02<span className="_circle-em">nd</span></div>
-                                        <span className="_circle-month">Dec</span>
-                                    </div>
-                                    <div className="_circle-txt">
-                                        <p>National Day</p>
-                                    </div>
-                                </div>
-                                <div className="circle-holder">
-                                    <div className="_circle">
-                                        <div className="_circle-inner">12<span className="_circle-em">th</span></div>
-                                        <span className="_circle-month">Dec</span>
-                                    </div>
-                                    <div className="_circle-txt">
-                                        <p>Beginning of Winter Break</p>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                         <div className="card-row">
                             <div className="card-head">
-                                <p>TERM 2 : SPRING 2022</p>
+                                <p>
+                                    {
+                                        constants?.site_content?.calender?.term2[
+                                        props.lang
+                                        ]
+                                    }
+                                    {/* TERM 2 : SPRING 2022 */}
+                                </p>
                             </div>
                             <div className="card-sec">
                                 <div className="circle-holder">
@@ -131,12 +106,19 @@ const CalendarView = (props) => {
                                     <div className="_circle-txt">
                                         <p>Start of Ramadan (TBC)</p>
                                     </div>
-                                </div> */}
+                                </div>
                             </div>
                         </div>
                         <div className="card-row">
                             <div className="card-head">
-                                <p>TERM 3 : SUMMER 2022</p>
+                                <p>
+                                    {
+                                        constants?.site_content?.calender?.term3[
+                                        props.lang
+                                        ]
+                                    }
+                                    {/* TERM 3 : SUMMER 2022 */}
+                                </p>
                             </div>
                             <div className="card-sec">
                                 <div className="circle-holder">

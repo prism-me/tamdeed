@@ -1,6 +1,6 @@
 import React from "react";
 import Ages from "../../../components/Modals/Ages/Ages";
-
+import { constants } from "../../../utils/constants"
 
 function AgeRequirements(props) {
     const [modalShow, setModalShow] = React.useState(false);
@@ -22,7 +22,12 @@ function AgeRequirements(props) {
                 <button className={"agereqButton"}
                     onClick={() => setModalShow(true)}
                 >
-                    Click here to view the detailed Age Requirement and Grade Level Placement.
+                    {
+                        constants?.site_content?.age_btn[
+                        props.language
+                        ]
+                    }
+                    {/* Click here to view the detailed Age Requirement and Grade Level Placement. */}
                 </button>
                 <Ages show={modalShow} onHide={() => setModalShow(false)}
                     reqTableData={props.ReqSec}

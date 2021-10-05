@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { STRINGS } from "../../../utils/base";
 import { useHistory } from "react-router-dom";
+import { constants } from "../../../utils/constants"
 
 export default function ApplyOnline(props) {
     // const [openForm, setOpenForm] = useState(false);
@@ -31,7 +32,12 @@ export default function ApplyOnline(props) {
                             refreshPage()
                         }}
                     >
-                        Apply Online
+                        {
+                            constants?.site_content?.app_online[
+                            props.language
+                            ]
+                        }
+                        {/* Apply Online */}
                     </button>
                 </div>
                 {/*<ApplyOnlineForm*/}

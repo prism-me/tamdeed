@@ -1,51 +1,13 @@
 import React, { useState } from "react";
 import "react-multi-carousel/lib/styles.css";
-import ags1 from "../../../assets/images/LifeatAGS/Acadamics.png";
-import ags2 from "../../../assets/images/LifeatAGS/Arts.jpg";
-import ags3 from "../../../assets/images/LifeatAGS/drama.jpg";
-import ags4 from "../../../assets/images/LifeatAGS/Music.jpg";
-import ags5 from "../../../assets/images/LifeatAGS/sport.jpg";
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 import ModalVideo from 'react-modal-video'
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
+import { constants } from "../../../utils/constants"
 
 function AgsSlider(props) {
-
-    const slidesData = [
-        {
-            thumbnail: ags1,
-            title: "ACADEMICS",
-            Subtitle: "To stimulate thoughts, emotions and ideas through senses.",
-            video_link: "https://youtu.be/frWc_ZHTt5M",
-        },
-        {
-            thumbnail: ags2,
-            title: "ARTS",
-            Subtitle: "To stimulate thoughts, emotions and ideas through senses.",
-            video_link: "https://youtu.be/abGC90lI0H8",
-        },
-        {
-            thumbnail: ags3,
-            title: "DRAMA",
-            Subtitle: "Enjoyment, amusement and light hearted play time.",
-            video_link: "https://youtu.be/t229_pI2wcM",
-        },
-        {
-            thumbnail: ags4,
-            title: "MUSIC",
-            Subtitle: "Outdoor sports to healthier lifestyle.",
-            video_link: "https://youtu.be/Ii1yWlWa86o",
-        },
-        {
-            thumbnail: ags5,
-            title: "SPORTS",
-            Subtitle: "Educating swimming skills to articulate physical growth.",
-            video_link: "https://youtu.be/eWfMxXOHQjw",
-        },
-    ];
-
     const [openVideo, setOpenVideo] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -73,7 +35,12 @@ function AgsSlider(props) {
     return (
         <div className={"AgsSlider"} dir="ltr">
             <h3 className={"InfoTitle"}>
-                LIFE AT AMERICAN GULF SCHOOL
+                {
+                    constants?.site_content?.life_at_ags[
+                    props.language
+                    ]
+                }
+                {/* LIFE AT AMERICAN GULF SCHOOL */}
             </h3>
 
             <OwlCarousel className="owl-theme" {...options}>

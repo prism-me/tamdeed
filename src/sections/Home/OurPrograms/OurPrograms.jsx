@@ -6,6 +6,7 @@ import Spinner from "../../../components/Spinner/Spinner";
 import { API } from "../../../http/API";
 import { STRINGS } from "../../../utils/base";
 import SnackBar from "../../../components/SnackBar/SnackBar";
+import { constants } from "../../../utils/constants"
 
 const defaultState = {
     isRequestPending: false,
@@ -16,7 +17,7 @@ const defaultState = {
     email: ''
 }
 
-function OurPrograms() {
+function OurPrograms(props) {
     const [init, setInit] = useState(defaultState);
 
     let { name, email, isRequestPending, isOpen, message, variant } = init;
@@ -120,24 +121,41 @@ function OurPrograms() {
                             <Card shadow style={{ borderRadius: "20px" }} className={"cardStyle"}>
                                 <Card.Body>
                                     <h4 className={" intro-title"}>
-                                        Join the waitlist for our 2022 programs.
+                                        {
+                                            constants?.site_content?.waitlist?.title[
+                                            props.language
+                                            ]
+                                        }
+                                        {/* Join the waitlist for our 2022 programs. */}
                                     </h4>
                                     <Form onSubmit={handleSubmit}>
                                         <Form.Group className="mb-3" controlId="formGroupName">
                                             <Form.Control name={"name"} value={name} onChange={handleChange} type="text"
-                                                placeholder="Enter Username"
+                                                placeholder={
+                                                    constants?.site_content?.waitlist?.enter_name[
+                                                    props.language
+                                                    ]
+                                                }
                                                 className={"formFields"} />
                                         </Form.Group>
                                         <Form.Group className="mb-3" controlId="formGroupEmail">
                                             <Form.Control name={"email"} value={email} onChange={handleChange}
-                                                type="text" placeholder="Enter User Email"
+                                                type="text" placeholder={
+                                                    constants?.site_content?.waitlist?.enter_email[
+                                                    props.language
+                                                    ]
+                                                }
                                                 className={"formFields"} />
                                         </Form.Group>
                                         <center>
                                             {
                                                 !isRequestPending ?
                                                     <button className={"enroll"}>
-                                                        Enroll
+                                                        {
+                                                            constants?.site_content?.waitlist?.enroll[
+                                                            props.language
+                                                            ]
+                                                        }
                                                     </button> :
                                                     <Spinner color1={"#1a2c52"} size={"sm"} />
                                             }

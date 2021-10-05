@@ -93,6 +93,7 @@ class About extends Component {
                             : content?.aboutSection
                     }
                     aboutImg={content?.aboutSection.image}
+                    language={global?.activeLanguage}
                 />
                 <PrincipleMessage
                     PrincipleMsg={
@@ -120,6 +121,7 @@ class About extends Component {
                 <PrincipalSlider
                     mentors={this.state.mentorsData}
                     isArabic={global?.activeLanguage === "ar"}
+                    language={global?.activeLanguage}
                 />
             </div>
         );

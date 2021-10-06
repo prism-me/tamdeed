@@ -4,7 +4,7 @@ import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import logo from "./../../../assets/images/agslogo/Logo (1).png";
 import header_bgMB from "./../../../assets/images/agsbanners/HomePage.JPG";
 import header_bg from "./../../../assets/images/agsbanners/homepageBanner.png";
-import AGSPrincipalWelcomeMessage from "./../../../assets/images/bannerVideo/AGSPrincipalWelcomeMessage.mp4";
+// import AGSPrincipalWelcomeMessage from "./../../../assets/images/bannerVideo/AGSPrincipalWelcomeMessage.mp4";
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 import ModalVideo from 'react-modal-video'
 import Hidden from "@material-ui/core/Hidden";
@@ -32,7 +32,7 @@ function HomeHeader(props) {
     setIsPlaying(!isPlaying);
   }
 
-  const videoSource = AGSPrincipalWelcomeMessage;
+  const videoSource = "https://american-gulf-school.b-cdn.net/videos/AGSPrincipalWelcomeMessage.mp4";
 
 
   return (
@@ -41,7 +41,7 @@ function HomeHeader(props) {
         <div style={{ height: '', backgroundImage: `url(${isPlaying && props?.bannerImg})` }} className={isPlaying ? "videoBottom" : "BackgroundDiv"}>
           <BackGroundVideo
             // blur={2}
-            bannerImg={props?.bannerImg}
+            bannerImg={props.bannerImg}
             videoSource={videoSource}
           >
             <div className='content'>

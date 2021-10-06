@@ -18,6 +18,10 @@
       font-weight: 400;
       // margin-bottom: 2rem;
     }
+    .headline{
+      color: $bg-color;
+      font-weight: bold;
+    }
     .subTitle ul, .subTitle ol{
       margin: 0;
       font-size: 16px;
@@ -234,4 +238,13 @@
       font-weight: 400;
       margin-bottom: 1rem;
     }
+  }
+
+  #ACADEMIC{
+    
+    background-color: $bg-color;
+    padding: 2rem;
+    border-radius: 20px;
+    color: white;
+    margin : 3rem auto 1.5rem;
   }

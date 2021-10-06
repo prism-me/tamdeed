@@ -1,7 +1,7 @@
 .footer-Wrape {
   color: $white;
   //background-color: $bg-color;
-  padding: 5rem 0;
+  padding-top: 5rem;
   position: relative;
   background-image: url("../../assets/images/icons/eahm-logo-white.png");
   background-repeat: no-repeat;
@@ -104,6 +104,24 @@
   width: 30%;
 }
 
+
+.footer-bottom{
+
+  margin-top: 5rem;
+  background-color: black;
+  padding: .7rem;
+
+  p{
+    margin-bottom: 0px;
+    font-size: 14px;
+    a{
+      color: $white;
+    }
+  }
+  .copyRight{
+    padding-top: .5rem;
+  }
+}
 //.footer-Wrape:before{
 //  content: "";
 //  display: block;

@@ -15,6 +15,11 @@
     font-size: 20px;
     font-weight: 500;
   }
+  .modalIconArabic{
+    transform: rotate(180deg);
+    margin-left: 0 !important;
+    margin-right: 1rem;
+  }
   .modalIcon{
     background: $bg-color;
     color: $white;
@@ -51,4 +56,10 @@
   .table td {
     border-bottom: 1px solid #CDB786;
   }
+}
+.agsModalDir{
+  direction: ltr;
+}
+.agsModalDirArabic{
+  direction: rtl;
 }

@@ -18,6 +18,7 @@ import logoSidebar from "./../../assets/images/agslogo/Logo.png";
 import { connect } from "react-redux";
 
 function MainNavbar(props) {
+  const history = useHistory();
   const [state, setState] = React.useState({
     right: false,
   });
@@ -146,8 +147,6 @@ function MainNavbar(props) {
       </List>
     </Box>
   );
-
-  const history = useHistory();
 
   return (
     <>

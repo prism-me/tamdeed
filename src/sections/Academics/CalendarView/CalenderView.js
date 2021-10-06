@@ -11,12 +11,21 @@ const CalendarView = (props) => {
             size="xl"
             aria-labelledby="contained-modal-title-vcenter"
             centered
-            className="Ages Academic"
+            // className="Ages Academic"
+            className={
+                props.language
+                    ? " Ages Academic agsModalDirArabic"
+                    : "Ages Academic  agsModalDir"
+            }
             style={{ paddingLeft: "0px" }}
         >
 
             <div className="header">
-                <span className={"modalIcon"} onClick={props.onHide}>
+                <span className={
+                    props.language
+                        ? "modalIcon modalIconArabic"
+                        : "modalIcon"}
+                    onClick={props.onHide}>
                     <ArrowBackIcon />
                 </span>
                 <div className="heading">

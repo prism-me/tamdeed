@@ -9,10 +9,20 @@ const GeneralPolicies = (props) => {
             size="lg"
             aria-labelledby="contained-modal-title-vcenter"
             centered
-            className="GeneralPolicies"
+            // className="GeneralPolicies"
+            className={
+                props.lang === "ar"
+                    ? "GeneralPolicies agsModalDirArabic"
+                    : "GeneralPolicies agsModalDir"
+            }
             style={{ paddingLeft: "0px" }}
         >
-            <span className={"modalIcon"} onClick={props.onHide}>
+            <span className={
+                props.lang === "ar"
+                    ? "modalIconArabic modalIcon"
+                    : "modalIcon"}
+                // className={"modalIcon"}
+                onClick={props.onHide}>
                 <ArrowBackIcon />
             </span>
             <Modal.Body>

@@ -201,7 +201,9 @@ function Footer(props) {
           </Row>
 
         </Container>
-        <FooterBottom />  
+        <FooterBottom
+          language={global.activeLanguage}
+        />
       </footer>
     </div >
   );

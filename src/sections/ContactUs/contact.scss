@@ -18,7 +18,10 @@
       @media #{$lg,$xl,$xxl} {
         justify-content: flex-end;
       }
-
+    .contact-cardArabic{
+      margin-right: 6rem;
+      margin-left: 0 !important;
+    }
       .contact-card {
         width: 700px;
         margin-top: 10rem;

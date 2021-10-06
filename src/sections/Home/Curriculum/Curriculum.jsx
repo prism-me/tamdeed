@@ -3,6 +3,7 @@ import { Card, Col, Container, Row } from "react-bootstrap";
 import header_bg from "./../../../assets/images/agsbackgrounds/curriculumcourse.jpg";
 import { Hidden } from "@material-ui/core";
 import { constants } from "../../../utils/constants"
+import { HashLink } from "react-router-hash-link";
 
 function Curriculum(props) {
     return (
@@ -52,13 +53,15 @@ function Curriculum(props) {
                                                 knowledge and skills they are being
                                                 taught to succeed within the 21st century. */}
                                             </p>
-                                            <button className={"viewButton"}>
-                                                {
-                                                    constants?.site_content?.read_more[
-                                                    props.language
-                                                    ]
-                                                }
-                                            </button>
+                                            <HashLink to={`/${props.language}/academics` + "#Our_Curriculum"} className={"hashLinkStyling"}>
+                                                <button className={"viewButton"}>
+                                                    {
+                                                        constants?.site_content?.read_more[
+                                                        props.language
+                                                        ]
+                                                    }
+                                                </button>
+                                            </HashLink>
                                         </Col>
                                     </Row>
                                 </Card.Body>
@@ -103,13 +106,15 @@ function Curriculum(props) {
                                         knowledge and skills they are being
                                         taught to succeed within the 21st century. */}
                                     </p>
-                                    <button className={"viewButton"}>
-                                        {
-                                            constants?.site_content?.read_more[
-                                            props.language
-                                            ]
-                                        }
-                                    </button>
+                                    <HashLink to={`/${props.language}/academics` + "#Our_Curriculum"} className={"hashLinkStyling"}>
+                                        <button className={"viewButton"}>
+                                            {
+                                                constants?.site_content?.read_more[
+                                                props.language
+                                                ]
+                                            }
+                                        </button>
+                                    </HashLink>
                                 </Col>
                             </Row>
                         </Card.Body>

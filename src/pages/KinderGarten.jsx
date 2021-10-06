@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import KinderGartenSection from "../sections/KinderGarten";
 import { API } from "../http/API";
 import { connect } from "react-redux";
-// import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet";
+import { constants } from "../utils/constants"
 
 class KinderGarten extends Component {
     state = {
@@ -51,6 +52,25 @@ class KinderGarten extends Component {
         const { global } = this.props;
         return (
             <div className="home-page">
+                <Helmet>
+                    <title>
+                        {`AGS | ${global?.activeLanguage === "ar"
+                            ? content?.arabic?.meta_details?.title ||
+                            constants?.site_content?.site_name :
+                            content?.meta_details?.title ||
+                            constants?.site_content?.site_name
+                            }`}
+                    </title>
+                    <meta
+                        name="description"
+                        content={global?.activeLanguage === "ar" ?
+                            content?.arabic?.meta_details
+                                ?.description || constants?.site_content?.seo_description
+                            : content?.meta_details
+                                ?.description || constants?.site_content?.seo_description
+                        }
+                    />
+                </Helmet>
                 <KinderGartenSection
                     secOne={
                         global?.activeLanguage === "ar"

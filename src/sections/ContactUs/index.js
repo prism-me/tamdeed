@@ -35,22 +35,46 @@ const Contact = (props) => {
 
         if (obj.email === "") {
             valid.error = false;
-            valid.message += valid.message ? "\nEmail Required" : "Email Required"
+            valid.message += valid.message ? `\n${constants?.site_content?.waitlist?.email_req[
+                props.language
+            ]
+                }` : `${constants?.site_content?.waitlist?.email_req[
+                props.language
+                ]
+                }`
         } else if (!emailRegex.test(obj.email)) {
             valid.error = false;
             valid.message += valid.message ? `\n${obj.email} is not a valid email` : `${obj.email} is not a valid email`
         }
         if (obj.name === "") {
             valid.error = false;
-            valid.message += valid.message ? "\nName Required" : "Name Required"
+            valid.message += valid.message ? `\n${constants?.site_content?.waitlist?.name_req[
+                props.language
+            ]
+                }` : `${constants?.site_content?.waitlist?.name_req[
+                props.language
+                ]
+                }`
         }
         if (obj.phone === "") {
             valid.error = false;
-            valid.message += valid.message ? "\nPhone Number Required" : "Phone Number Required"
+            valid.message += valid.message ? `\n${constants?.site_content?.contact_us?.numb_req[
+                props.language
+            ]
+                }` : `${constants?.site_content?.contact_us?.numb_req[
+                props.language
+                ]
+                }`
         }
         if (obj._message === "") {
             valid.error = false;
-            valid.message += valid.message ? "\nMessage Required" : "Message Required"
+            valid.message += valid.message ? `\n${constants?.site_content?.contact_us?.msg_req[
+                props.language
+            ]
+                }` : `${constants?.site_content?.contact_us?.msg_req[
+                props.language
+                ]
+                }`
         }
 
         return valid;
@@ -130,7 +154,7 @@ const Contact = (props) => {
             />
             <div className="contact-sec">
                 <div className="contact-card-holder">
-                    <div className="contact-card">
+                    <div className={props.language === "ar" ? "contact-card contact-cardArabic" : "contact-card"}>
                         <div className="card-head">
                             <div className="heading">
                                 {

@@ -27,6 +27,11 @@
       font-size: 18px;
     }
   }
+  .modalIconArabic{
+    transform: rotate(180deg);
+    margin-left: 0 !important;
+    margin-right: 1rem;
+  }
   .modalIcon{
     background: $bg-color;
     color: $white;
@@ -50,4 +55,11 @@
   .modal-content{
     border-radius: 60px;
   }
+}
+
+.agsModalDir{
+  direction: ltr;
+}
+.agsModalDirArabic{
+  direction: rtl;
 }

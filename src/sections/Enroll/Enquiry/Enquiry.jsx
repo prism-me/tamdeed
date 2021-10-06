@@ -31,29 +31,59 @@ function Enquiry(props) {
         if (type === "bst") {
             if (obj.parent_email === "") {
                 valid.error = false;
-                valid.message += valid.message ? "\nParent/Guardian’s Email Required" : "Parent/Guardian’s Email Required"
+                valid.message += valid.message ? `\n${constants?.site_content?.school_tour?.email_req[
+                    props.language
+                ]
+                    }` : `${constants?.site_content?.school_tour?.email_req[
+                    props.language
+                    ]
+                    }`
             } else if (!emailRegex.test(obj.parent_email)) {
                 valid.error = false;
                 valid.message += valid.message ? `\n${obj.parent_email} is not a valid email` : `${obj.parent_email} is not a valid email`
             }
             if (obj.parent_name === "") {
                 valid.error = false;
-                valid.message += valid.message ? "\nParent/Guardian’s Full Name Required" : "Parent/Guardian’s Full Name Required"
+                valid.message += valid.message ? `\n${constants?.site_content?.req_call?.name_req[
+                    props.language
+                ]
+                    }` : `${constants?.site_content?.req_call?.name_req[
+                    props.language
+                    ]
+                    }`
             }
 
             if (obj.parent_phone === "") {
                 valid.error = false;
-                valid.message += valid.message ? "\nParent/Guardian’s Mobile Number Required" : "Parent/Guardian’s Mobile Number Required"
+                valid.message += valid.message ? `\n${constants?.site_content?.req_call?.numb_req[
+                    props.language
+                ]
+                    }` : `${constants?.site_content?.req_call?.numb_req[
+                    props.language
+                    ]
+                    }`
             }
         }
         if (type === "cb") {
             if (obj.cb_parent_name === "") {
                 valid.error = false;
-                valid.message += valid.message ? "\nParent/Guardian’s Full Name Required" : "Parent/Guardian’s Full Name Required"
+                valid.message += valid.message ? `\n${constants?.site_content?.req_call?.name_req[
+                    props.language
+                ]
+                    }` : `${constants?.site_content?.req_call?.name_req[
+                    props.language
+                    ]
+                    }`
             }
             if (obj.cb_phone === "") {
                 valid.error = false;
-                valid.message += valid.message ? "\nParent/Guardian’s Mobile Number Required" : "Parent/Guardian’s Mobile Number Required"
+                valid.message += valid.message ? `\n${constants?.site_content?.req_call?.numb_req[
+                    props.language
+                ]
+                    }` : `${constants?.site_content?.req_call?.numb_req[
+                    props.language
+                    ]
+                    }`
             }
         }
         return valid;

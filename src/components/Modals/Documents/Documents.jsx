@@ -10,13 +10,21 @@ const Documents = (props) => {
             size="lg"
             aria-labelledby="contained-modal-title-vcenter"
             centered
-            className="Documents"
+            // className="Documents"
+            className={
+                props.lang === "ar"
+                    ? "Documents agsModalDirArabic"
+                    : "Documents agsModalDir"
+            }
             style={{ paddingLeft: "0px" }}
         >
             <Container>
                 <Row>
                     <Col sm="auto">
-                        <span className={"modalIcon"} onClick={props.onHide}>
+                        <span className={
+                            props.lang === "ar"
+                                ? "modalIconArabic modalIcon"
+                                : "modalIcon"} onClick={props.onHide}>
                             <ArrowBackIcon />
                         </span>
                     </Col>

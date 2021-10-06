@@ -49,12 +49,23 @@ function Inclusion(props) {
                                     }
                                     {/* INCLUSION */}
                                 </h2>
-                                <p className={"subTitle"}
+                                <p
+                                    className={
+                                        props.isArabic
+                                            ? "text-right subTitle"
+                                            : "text-left subTitle"
+                                    }
                                     dangerouslySetInnerHTML={{
                                         __html:
                                             props.isArabic
-                                                ? x.description
-                                                : x.description
+                                                ? x.description.substr(
+                                                    0,
+                                                    810
+                                                )
+                                                : x.description.substr(
+                                                    0,
+                                                    810
+                                                )
                                     }}
                                 >
                                     {/* American Gulf School is an equal opportunities school, and we strongly believe in equality and diversity. We welcome learners from any race, nationality or cultural background. */}

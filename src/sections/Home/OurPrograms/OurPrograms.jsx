@@ -28,14 +28,26 @@ function OurPrograms(props) {
 
         if (obj.email === "") {
             valid.error = false;
-            valid.message += valid.message ? "\nEmail Required" : "Email Required"
+            valid.message += valid.message ? `\n${constants?.site_content?.waitlist?.email_req[
+                props.language
+            ]
+                }` : `${constants?.site_content?.waitlist?.email_req[
+                props.language
+                ]
+                }`
         } else if (!emailRegex.test(obj.email)) {
             valid.error = false;
             valid.message += valid.message ? `\n${obj.email} is not a valid email` : `${obj.email} is not a valid email`
         }
         if (obj.name === "") {
             valid.error = false;
-            valid.message += valid.message ? "\nName Required" : "Name Required"
+            valid.message += valid.message ? `\n${constants?.site_content?.waitlist?.name_req[
+                props.language
+            ]
+                }` : `${constants?.site_content?.waitlist?.name_req[
+                props.language
+                ]
+                }`
         }
 
         return valid;
@@ -112,10 +124,6 @@ function OurPrograms(props) {
                     className="programs"
                     style={{ backgroundImage: `url(${header_bg})` }}
                 >
-                    {/*<div className="op-div">*/}
-                    {/*</div>*/}
-                    {/*<div className="wavy-div">*/}
-                    {/*</div>*/}
                     <div className="description-column">
                         <Container>
                             <Card shadow style={{ borderRadius: "20px" }} className={"cardStyle"}>
@@ -173,24 +181,42 @@ function OurPrograms(props) {
                     <Card shadow style={{ borderRadius: "20px" }} className={"cardStyleMBL"}>
                         <Card.Body>
                             <h4 className={" intro-title"}>
-                                Join the waitlist for our 2022 programs.
+                                {
+                                    constants?.site_content?.waitlist?.title[
+                                    props.language
+                                    ]
+                                }
+                                {/* Join the waitlist for our 2022 programs. */}
                             </h4>
                             <Form onSubmit={handleSubmit}>
                                 <Form.Group className="mb-3" controlId="formGroupName">
                                     <Form.Control name={"name"} value={name} onChange={handleChange} type="text"
-                                        placeholder="Enter Username"
+                                        placeholder={
+                                            constants?.site_content?.waitlist?.enter_name[
+                                            props.language
+                                            ]
+                                        }
                                         className={"formFields"} />
                                 </Form.Group>
                                 <Form.Group className="mb-3" controlId="formGroupEmail">
                                     <Form.Control name={"email"} value={email} onChange={handleChange}
-                                        type="text" placeholder="Enter User Email"
+                                        type="text" placeholder={
+                                            constants?.site_content?.waitlist?.enter_email[
+                                            props.language
+                                            ]
+                                        }
                                         className={"formFields"} />
                                 </Form.Group>
                                 <center>
                                     {
                                         !isRequestPending ?
                                             <button className={"enroll"}>
-                                                Enroll
+                                                {
+                                                    constants?.site_content?.waitlist?.enroll[
+                                                    props.language
+                                                    ]
+                                                }
+                                                {/* Enroll */}
                                             </button> :
                                             <Spinner color1={"#1a2c52"} size={"sm"} />
                                     }

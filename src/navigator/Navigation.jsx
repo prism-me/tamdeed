@@ -7,12 +7,6 @@ import Route from "./../components/CustomRoute";
 // import Register from "../components/Modals/Register/Register";
 import Error404 from "../pages/Error404";
 import { connect } from "react-redux";
-// import { getCategories, getProducts } from "../redux/products";
-import {
-  getCategories,
-  getCategoryProducts,
-  getProducts,
-} from "../redux/products";
 import { types } from "../redux/products/types";
 
 class Navigation extends Component {
@@ -121,6 +115,7 @@ class Navigation extends Component {
             />
           );
         })}
+
         {routes.map((route, index) => {
           return (
             <Route
@@ -146,11 +141,6 @@ class Navigation extends Component {
 const mapStateToProps = (state) => {
   return {
     user: state.userReducer,
-    products: state?.productReducer?.products,
-    allProducts: state?.productReducer?.allProducts,
-    searchData: state?.productReducer?.searchData,
-    totalProducts: state?.productReducer?.totalProducts,
-    categories: state?.productReducer?.categories,
     global: state.globalReducer,
   };
 };
@@ -168,9 +158,6 @@ const mapDispatchToProps = (dispatch) => {
           language: language,
         },
       }),
-    getProducts: (page) => dispatch(getProducts(page)),
-    getCategories: () => dispatch(getCategories()),
-    getCategoryProducts: (category) => dispatch(getCategoryProducts(category)),
   };
 };
 

@@ -21,6 +21,7 @@ function Payment(props) {
                 </button>
                 <GeneralPolicies show={modalShow} onHide={() => setModalShow(false)}
                     genrPolicyData={props.genrData}
+                    lang={props.language}
                 />
             </div>
         </div>

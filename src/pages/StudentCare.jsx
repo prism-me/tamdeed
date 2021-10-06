@@ -3,7 +3,8 @@ import Inclusion from "../sections/StudentCare/Inclusion";
 import TabPanel from "../sections/StudentCare/Tabs/TabPanel";
 import { API } from "../http/API";
 import { connect } from "react-redux";
-// import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet";
+import { constants } from "../utils/constants"
 
 class StudentCare extends Component {
     state = {
@@ -22,6 +23,17 @@ class StudentCare extends Component {
         const { global } = this.props;
         return (
             <div className="home-page">
+                <Helmet>
+                    <title>
+                        {`AGS | ${constants?.site_content?.meta_std[global?.activeLanguage]}`}
+                    </title>
+                    <meta
+                        name="description"
+                        content={
+                            constants?.site_content?.meta_std_description[global?.activeLanguage]
+                        }
+                    />
+                </Helmet>
                 <TabPanel
                     language={global?.activeLanguage}
                 />

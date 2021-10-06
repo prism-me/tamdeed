@@ -169,6 +169,7 @@ function AdmissionProcedure(props) {
                     </center>
                     <Documents show={modalShow} onHide={() => setModalShow(false)}
                         documentData={props.docData}
+                        lang={props.language}
                     />
                 </div>
             </Container>

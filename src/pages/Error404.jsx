@@ -1,9 +1,9 @@
 import React from "react";
 import ButtonTheme from "../components/ButtonTheme";
-import {useHistory} from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 export default function Error404(props) {
-    const history = useHistory();
+  const history = useHistory();
   return (
     <div className="error-wrapper">
       <span className="particle">4</span>
@@ -126,7 +126,7 @@ export default function Error404(props) {
           The page you are looking for was moved, removed, renamed or might
           never have existed.
         </p>
-        <ButtonTheme variant="primary" onClick={() => history.push("/")}>
+        <ButtonTheme className="errorbutton" onClick={() => history.push("/")}>
           Homepage
         </ButtonTheme>
         {/* <button onClick={() => props.history.push('/')} className="main-btn btn-eden">Homepage</button> */}

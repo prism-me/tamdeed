@@ -10,9 +10,17 @@ const Ages = (props) => {
             aria-labelledby="contained-modal-title-vcenter"
             centered
             className="Ages"
+            className={
+                props.lang === "ar"
+                    ? "Ages agsModalDirArabic"
+                    : "Ages agsModalDir"
+            }
             style={{ paddingLeft: "0px" }}
         >
-            <span className={"modalIcon"} onClick={props.onHide}>
+            <span className={
+                props.lang === "ar"
+                    ? "modalIconArabic modalIcon"
+                    : "modalIcon"} onClick={props.onHide}>
                 <ArrowBackIcon />
             </span>
             <Modal.Body>

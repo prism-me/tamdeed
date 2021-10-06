@@ -361,7 +361,12 @@
 //    font-size: 2rem;
 //  }
 //}
-
+.agsModalDir{
+  direction: ltr;
+}
+.agsModalDirArabic{
+  direction: rtl;
+}
 .Ages.Academic {
   z-index: 1111;
 

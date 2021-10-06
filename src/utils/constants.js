@@ -1,5 +1,37 @@
 export const constants = {
   site_content: {
+    site_name: {
+      en: "AMERICAN GULF SCHOOL",
+      ar: "مدرسة الخليج الأمريكية",
+    },
+    seo_description: {
+      en: "AGS | AMERICAN GULF SCHOOL",
+      ar: "AGS | مدرسة الخليج الأمريكية",
+    },
+    meta_cnt: {
+      en: "CONTACT US",
+      ar: "اتصل بنا",
+    },
+    meta_cnt_description: {
+      en: "CONTACT US",
+      ar: "اتصل بنا",
+    },
+    meta_std: {
+      en: "STUDENT CARE",
+      ar: "رعاية الطلاب",
+    },
+    meta_std_description: {
+      en: "STUDENT CARE",
+      ar: "رعاية الطلاب",
+    },
+    meta_career: {
+      en: "CAREER",
+      ar: "مسار مهني مسار وظيفي",
+    },
+    meta_career_description: {
+      en: "CAREER",
+      ar: "مسار مهني مسار وظيفي",
+    },
     exp_ags: {
       en: "EXPERIENCE THE AGS DIFFERENCE",
       ar: "تجربة فرق AGS",
@@ -10,11 +42,11 @@ export const constants = {
     },
     read_more: {
       en: "Read More >",
-      ar: "اقرأ أكثر",
+      ar: "اقرأ أكثر>",
     },
     learn_more: {
       en: "Learn More",
-      ar: "للمزيد",
+      ar: "للمزيد >",
     },
     waitlist: {
       title: {
@@ -48,7 +80,7 @@ export const constants = {
     },
     view_more: {
       en: "View More >",
-      ar: "عرض المزيد",
+      ar: "عرض المزيد >",
     },
     view_calender: {
       en: "View Calender",
@@ -279,6 +311,10 @@ export const constants = {
         en: "Parent/Guardian’s Full Name Required",
         ar: "مطلوب الاسم الكامل للوالد / الوصي"
       },
-    }
+    },
+    online_form_des: {
+      en: "Thank you for your interest in American Gulf School, we look forward to receiving your application. Please use this form to submit an application for your son/daughter. Once your application has been received, a member of the admissions team will contact you to request the essential supporting documents required to process your son/daughter’s application. Please note, your application will become ‘active’ once all of the essential supporting documents are received.",
+      ar: "نشكرك على اهتمامك بالمدرسة الخليجية الأمريكية ، ونتطلع إلى تلقي طلبك. يرجى استخدام هذا النموذج لتقديم طلب لابنك / ابنتك. بمجرد استلام طلبك ، سيتصل بك أحد أعضاء فريق القبول لطلب المستندات الداعمة الأساسية المطلوبة لمعالجة طلب ابنك / ابنتك. يرجى ملاحظة أن طلبك سيصبح نشطًا بمجرد استلام جميع المستندات الداعمة الأساسية."
+    },
   },
 };

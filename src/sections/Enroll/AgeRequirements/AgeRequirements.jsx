@@ -31,6 +31,7 @@ function AgeRequirements(props) {
                 </button>
                 <Ages show={modalShow} onHide={() => setModalShow(false)}
                     reqTableData={props.ReqSec}
+                    lang={props.language}
                 />
             </div>
         </div>

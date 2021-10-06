@@ -8,7 +8,8 @@ import { API } from "../http/API";
 import { connect } from "react-redux";
 import InfoTabs from "../sections/Home/InfoTabs";
 import OurPrograms from "../sections/Home/OurPrograms";
-// import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet";
+import { constants } from "../utils/constants"
 
 class Home extends Component {
   state = {
@@ -84,19 +85,29 @@ class Home extends Component {
     const { global } = this.props;
     return (
       <div className="home-page">
-        {/* <Helmet>
+        <Helmet>
           <title>
-            {this.state.currentPage?.meta_details?.title ||
-              constants.site_name}
+            {`AGS | ${global?.activeLanguage === "ar"
+              ? content?.arabic?.meta_details?.title ||
+              constants?.site_content?.site_name :
+              content?.meta_details?.title ||
+              constants?.site_content?.site_name
+              }`}
           </title>
+          {/* <title>
+            {`{ this.state.currentPage?.meta_details?.title ||
+              constants?.site_content?.site_name }`}
+          </title> */}
           <meta
             name="description"
-            content={
-              this.state.currentPage?.meta_details
-                ?.description || constants.seo_description
+            content={global?.activeLanguage === "ar" ?
+              content?.arabic?.meta_details
+                ?.description || constants?.site_content?.seo_description
+              : content?.meta_details
+                ?.description || constants?.site_content?.seo_description
             }
           />
-        </Helmet> */}
+        </Helmet>
         <HomeHeader
           banner={
             global?.activeLanguage === "ar"

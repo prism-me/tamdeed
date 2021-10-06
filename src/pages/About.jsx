@@ -7,7 +7,8 @@ import AGSHealth from "../sections/About/AGSHealth/AGSHealth";
 import PrincipalSlider from "../sections/About/PrincipalSlider";
 import { API } from "../http/API";
 import { connect } from "react-redux";
-// import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet";
+import { constants } from "../utils/constants"
 
 class About extends Component {
     state = {
@@ -65,19 +66,25 @@ class About extends Component {
         const { global } = this.props;
         return (
             <div className="home-page about-section">
-                {/* <Helmet>
-          <title>
-            {this.state.currentPage?.meta_details?.title ||
-              constants.site_name}
-          </title>
-          <meta
-            name="description"
-            content={
-              this.state.currentPage?.meta_details
-                ?.description || constants.seo_description
-            }
-          />
-        </Helmet> */}
+                <Helmet>
+                    <title>
+                        {`AGS | ${global?.activeLanguage === "ar"
+                            ? content?.arabic?.meta_details?.title ||
+                            constants?.site_content?.site_name :
+                            content?.meta_details?.title ||
+                            constants?.site_content?.site_name
+                            }`}
+                    </title>
+                    <meta
+                        name="description"
+                        content={global?.activeLanguage === "ar" ?
+                            content?.arabic?.meta_details
+                                ?.description || constants?.site_content?.seo_description
+                            : content?.meta_details
+                                ?.description || constants?.site_content?.seo_description
+                        }
+                    />
+                </Helmet>
                 <AboutHeader
                     banner={
                         global?.activeLanguage === "ar"

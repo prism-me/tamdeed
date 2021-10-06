@@ -9,12 +9,16 @@ import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import PhoneOutlinedIcon from '@material-ui/icons/PhoneOutlined';
+import { constants } from "../../../utils/constants"
 
 function Schoolinclusion(props) {
     const [isOpen, setOpen] = useState(false)
     return (
         <div className="SchoolTopspacing">
-            <h3 className="Title">PRIMARY SCHOOL</h3>
+            <h3 className="Title">
+                {props.secOne?.title}
+                {/* PRIMARY SCHOOL */}
+            </h3>
             <Container>
                 <div>
                     <Row className={"justify-content-center align-items-center"}>
@@ -31,10 +35,6 @@ function Schoolinclusion(props) {
                             </div>
                         </Col>
                         <Col sm={7} md={7} lg={7} >
-                            <h3 className="title">
-                                {props.secOne?.title}
-                                {/* PRIMARY SCHOOL */}
-                            </h3>
                             <p className={"subTitle"}
                                 dangerouslySetInnerHTML={{
                                     __html:
@@ -115,13 +115,27 @@ function Schoolinclusion(props) {
                             </a>
                         </div>
                         <div className="text">
-                            <p>Al Rahmaniya Shaghrafah 4 - Sharjah - United Arab Emirates</p>
+                            <p>
+                                {
+                                    constants?.site_content?.contact_us?.addr[
+                                    props.language
+                                    ]
+                                }
+                                {/* Al Rahmaniya Shaghrafah 4 - Sharjah - United Arab Emirates */}
+                            </p>
                         </div>
                     </div>
                     <div className="info-group">
                         <div className="info-item">
                             <div className="txt">
-                                <p>For Admissions</p>
+                                <p>
+                                    {
+                                        constants?.site_content?.contact_us?.admission[
+                                        props.language
+                                        ]
+                                    }
+                                    {/* For Admissions */}
+                                </p>
                             </div>
                             <div className="icon-txt-hld">
                                 <div className="icon">
@@ -142,7 +156,14 @@ function Schoolinclusion(props) {
                         </div>
                         <div className="info-item">
                             <div className="txt">
-                                <p>Help Desk & Queries</p>
+                                <p>
+                                    {
+                                        constants?.site_content?.contact_us?.help_desk[
+                                        props.language
+                                        ]
+                                    }
+                                    {/* Help Desk & Queries */}
+                                </p>
                             </div>
                             <div className="icon-txt-hld">
                                 <div className="icon">

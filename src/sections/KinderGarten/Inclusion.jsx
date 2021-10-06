@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import std1 from "../../assets/images/studentcare/acadamicsupport.jpg";
-import std2 from "../../assets/images/studentcare/acadamicsupport.jpg";
-import std3 from "../../assets/images/studentcare/acadamicsupport.jpg";
+import std1 from "../../assets/images/KG/KGBanner.JPG";
+import std2 from "../../assets/images/KG/KGPhoto1.jpg";
+import std3 from "../../assets/images/KG/KGPhoto2.jpg";
 import "./Inclusion.scss";
 import ModalVideo from "react-modal-video";
 import PlayArrowIcon from "@material-ui/icons/PlayArrow";
@@ -45,6 +45,7 @@ function Inclusion(props) {
           </Row>
           <Row className="MiddleAlignCenter">
             <Col sm={12} md={12} lg={12} className="pt-5">
+<<<<<<< HEAD
               <p className={"subTitle mt-3 text-center"}
                 dangerouslySetInnerHTML={{
                   __html:
@@ -52,12 +53,21 @@ function Inclusion(props) {
                 }}
               >
                 {/* American Gulf School has created a dynamic Pre-K, KG1 and KG2 Program to fulfill the developmental needs and interests of 3- to 6-year-old learners. Learning at AGS is a holistic learning experience that ensures all aspects of development are integrated (social, emotional, physical, and cognitive). At AGS, we believe that learners will only make excellent academic growth when they are happy, feel safe and are settled socially. We place a strong emphasis on pastoral care from the moment a child joins our school. */}
+=======
+              <p className={"subTitle mt-3 text-center"}>
+                American Gulf School has created a dynamic <strong>Pre-K, KG1 and KG2</strong> Program to fulfill the developmental needs and interests of 3- to 6-year-old learners. Learning at AGS is a holistic learning experience that ensures all aspects of development are integrated (social, emotional, physical, and cognitive). At AGS, we believe that learners will only make excellent academic growth when they are happy, feel safe and are settled socially. We place a strong emphasis on pastoral care from the moment a child joins our school.
+>>>>>>> aa57caaf6ee35ddfd1bb526d284be234a59cd5f0
               </p>
             </Col>
           </Row>
         </div>
+<<<<<<< HEAD
         <div className={"HowToSellspacing"}>
           <Row className="MiddleAlignCenter">
+=======
+        <div className={"HowToSellspacing featured-section"}>
+          <Row className="MiddleAlignCenter ">
+>>>>>>> aa57caaf6ee35ddfd1bb526d284be234a59cd5f0
             <Col sm={12} md={8} lg={8} >
               <p className={"subTitle mt-3"}
                 dangerouslySetInnerHTML={{
@@ -122,7 +132,11 @@ function Inclusion(props) {
             <Col sm={12} md={4} lg={4} className='MobileBottomSpacing'>
               <div
                 className="d-flex justify-content-center align-items-center imgheight"
+<<<<<<< HEAD
                 style={{ backgroundImage: `url(${props.secFive?.image})` }}
+=======
+                style={{ backgroundImage: `url(${std3})`, height: "410px" }}
+>>>>>>> aa57caaf6ee35ddfd1bb526d284be234a59cd5f0
               >
                 <div className="video-promo-content mt-4 ">
                   <ModalVideo
@@ -142,6 +156,7 @@ function Inclusion(props) {
               </div>
             </Col>
             <Col sm={12} md={8} lg={8} className="pl-5 MobileSpacing">
+<<<<<<< HEAD
               <p className={"subTitle mt-3"}
                 dangerouslySetInnerHTML={{
                   __html:
@@ -149,6 +164,12 @@ function Inclusion(props) {
                 }}
               >
                 {/* The KG environment reflects the natural developmental stages of learning and characterizes our program through our well-equipped and organized:
+=======
+              <p className={"subTitle mt-3"}>
+                <p className={"subTitle2"}>
+                  The KG environment reflects the natural developmental stages of learning and characterizes our program through our well-equipped and organized:
+                </p>
+>>>>>>> aa57caaf6ee35ddfd1bb526d284be234a59cd5f0
                 <ul>
                   <li>Classrooms</li>
                   <li>Resource room</li>
@@ -158,10 +179,19 @@ function Inclusion(props) {
                   <li>Outside play areas</li>
                 </ul> */}
               </p>
+<<<<<<< HEAD
               {/* <p className={"subTitle mt-3"}>
                 A learner's interaction in and with these spaces stimulates them
                 to become active learners, by providing ongoing opportunities
                 for them to:
+=======
+              <p className={"subTitle mt-3"}>
+                <p className={"subTitle2"}>
+                  A learner's interaction in and with these spaces stimulates them
+                  to become active learners, by providing ongoing opportunities
+                  for them to:
+                </p>
+>>>>>>> aa57caaf6ee35ddfd1bb526d284be234a59cd5f0
                 <ul>
                   <li>Make choices and decisions.</li>
                   <li>Use materials in flexible and imaginative ways.</li>

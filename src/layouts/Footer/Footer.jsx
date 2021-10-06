@@ -6,12 +6,16 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import PhoneIcon from '@material-ui/icons/Phone';
-import { HashLink } from "react-router-hash-link"
+import { STRINGS } from "../../utils/base";
+import { HashLink } from "react-router-hash-link";
+import { useTranslation } from 'react-i18next';
+import cookies from 'js-cookie'
 import logo from "./../../assets/images/agslogo/Logo (1).png";
 import { useHistory } from "react-router-dom";
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import { connect } from "react-redux";
+import FooterBottom from "./FooterBottom";
 
 function Footer(props) {
   const { global } = props;
@@ -35,7 +39,7 @@ function Footer(props) {
                   GULF SCHOOL
                 </h5>
               </div>
-              <p className="socialIcon">
+              {/* <p className="socialIcon">
                 SOCIAL
                 <a href="https://www.facebook.com/American-Gulf-School-Sharjah-106277764954110" className={"footericonsize"} target="_blank">
                   <FacebookIcon />
@@ -52,8 +56,8 @@ function Footer(props) {
                 <a href="https://www.instagram.com/ags_shj/?hl=en" className={"footericonsize"} target="_blank">
                   <InstagramIcon />
                 </a>
-              </p>
-              <div>
+              </p> */}
+              <div className="mt-4">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3605.9867160428666!2d55.562873115012394!3d25.338226783830823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ef5f5ef006a4c83%3A0xcf95030e29d9fb7!2sAmerican%20Gulf%20School!5e0!3m2!1sen!2s!4v1632827655730!5m2!1sen!2s"
                   width="100%" style={{ border: "0" }} loading="lazy"></iframe>
@@ -155,7 +159,9 @@ function Footer(props) {
               </p>
             </Col>
           </Row>
+
         </Container>
+        <FooterBottom />  
       </footer>
     </div >
   );

@@ -1,15 +1,22 @@
 import React, { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import schoolleft from "../../../assets/images/Primaryschool/primaryschool.png";
+import schoolleft from "../../../assets/images/primary/PYPPhoto.jpg";
 import ModalVideo from 'react-modal-video'
 import PlayArrowIcon from "@material-ui/icons/PlayArrow";
+import LocationOnIcon from '@material-ui/icons/LocationOn';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import MailOutlineIcon from '@material-ui/icons/MailOutline';
+import InstagramIcon from '@material-ui/icons/Instagram';
+import FacebookIcon from '@material-ui/icons/Facebook';
+import PhoneOutlinedIcon from '@material-ui/icons/PhoneOutlined';
 
 function Schoolinclusion(props) {
     const [isOpen, setOpen] = useState(false)
     return (
-        <div className="Inclusion">
+        <div className="SchoolTopspacing">
+            <h3 className="Title">PRIMARY SCHOOL</h3>
             <Container>
-                <div className={"SchoolTopspacing"} id={"INCLUSION"}>
+                <div>
                     <Row className={"justify-content-center align-items-center"}>
                         <Col sm={5} md={5} lg={5}>
                             <div className="d-flex justify-content-center align-items-center imgheight"
@@ -24,6 +31,7 @@ function Schoolinclusion(props) {
                             </div>
                         </Col>
                         <Col sm={7} md={7} lg={7} >
+<<<<<<< HEAD
                             <h3 className="title">
                                 {props.secOne?.title}
                                 {/* PRIMARY SCHOOL */}
@@ -35,6 +43,10 @@ function Schoolinclusion(props) {
                                 }}
                             >
                                 {/* The AGS Primary School is a cross-curriculum program for learners aged between 6 and 11 years old. It combines 6 academic subjects: */}
+=======
+                            <p className={"subTitle headline"}>
+                                The AGS Primary School is a cross-curriculum program for learners aged between 6 and 11 years old. It combines 6 academic subjects:
+>>>>>>> aa57caaf6ee35ddfd1bb526d284be234a59cd5f0
                             </p>
                             {/* <p className={"subTitle"}>
                                 <ul>
@@ -45,18 +57,30 @@ function Schoolinclusion(props) {
                                     <li>Language</li>
                                     <li>Physical, Social and Personal Education</li>
                                 </ul>
+<<<<<<< HEAD
                             </p> */}
                             {/* <p className={"subTitle"}>
+=======
+                            </p>
+                            <p className={"subTitle headline"}>
+>>>>>>> aa57caaf6ee35ddfd1bb526d284be234a59cd5f0
                                 Integrated with six transdisciplinary themes:
-                                <ol>
+                            </p>
+                            <p className={"subTitle"}>
+                                <ul>
                                     <li>How we organize ourselves</li>
                                     <li>Sharing the planet </li>
                                     <li>Where we are in place and time </li>
                                     <li>How we express ourselves</li>
                                     <li>How the world works</li>
                                     <li>Who we are</li>
+<<<<<<< HEAD
                                 </ol>
                             </p> */}
+=======
+                                </ul>
+                            </p>
+>>>>>>> aa57caaf6ee35ddfd1bb526d284be234a59cd5f0
                         </Col>
                     </Row>
                 </div>
@@ -98,8 +122,98 @@ function Schoolinclusion(props) {
                         </Col>
                     </Row>
                 </div>
+                <div className="card-foot">
+                    <div className="address-label">
+                        <div className="icon">
+                            <a href="https://www.google.com/maps/place/American+Gulf+School/@25.3382268,55.5628731,17z/data=!3m1!4b1!4m5!3m4!1s0x3ef5f5ef006a4c83:0xcf95030e29d9fb7!8m2!3d25.3382268!4d55.5650618" className="text-decoration-none PmIcon" target="_blank">
+                                <LocationOnIcon />{/* <img alt={"#"} src={location_icon} /> */}
+                            </a>
+                        </div>
+                        <div className="text">
+                            <p>Al Rahmaniya Shaghrafah 4 - Sharjah - United Arab Emirates</p>
+                        </div>
+                    </div>
+                    <div className="info-group">
+                        <div className="info-item">
+                            <div className="txt">
+                                <p>For Admissions</p>
+                            </div>
+                            <div className="icon-txt-hld">
+                                <div className="icon">
+                                    <PhoneOutlinedIcon />
+                                </div>
+                                <div className="txt">
+                                    <a href="tel: 05-69990871" className="text-decoration-none PmIcon">  05-69990871</a>
+                                </div>
+                            </div>
+                            <div className="icon-txt-hld">
+                                <div className="icon">
+                                    <MailOutlineIcon />
+                                </div>
+                                <div className="txt">
+                                    <a href="mailto:admissions@ags.ae" className="text-decoration-none PmIcon"> admissions@ags.ae</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="info-item">
+                            <div className="txt">
+                                <p>Help Desk & Queries</p>
+                            </div>
+                            <div className="icon-txt-hld">
+                                <div className="icon">
+                                    <PhoneOutlinedIcon />
+                                </div>
+                                <div className="txt">
+                                    <a href="tel:06-5061111" className="text-decoration-none PmIcon"> 06-5061111</a>
+                                </div>
+                            </div>
+                            <div className="icon-txt-hld">
+                                <div className="icon">
+                                    <MailOutlineIcon />
+                                </div>
+                                <div className="txt">
+                                    <a href="mailto:info@ags.ae" className="text-decoration-none PmIcon">info@ags.ae</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="info-item ic">
+                            <div className="icon-txt-hld ic">
+                                <div className="icon">
+                                    {/* <img alt={"#"} src={youtube_icon} /> */}
+                                    <a href="https://www.facebook.com/American-Gulf-School-Sharjah-106277764954110" className={"PmIcon"} target="_blank">
+                                        <FacebookIcon />
+                                    </a>
+                                </div>
+                                <div className="icon">
+                                    {/* <img alt={"#"} src={insta_icon} /> */}
+                                    <a href="mailto:admissions@ags.ae" className={"PmIcon"}>
+                                        <MailOutlineIcon />
+                                    </a>
+                                </div>
+                                <div className="icon">
+                                    {/* <img alt={"#"} src={fb_icon} /> */}
+                                    <a href="https://www.google.com/maps/place/American+Gulf+School/@25.3382268,55.5628731,17z/data=!3m1!4b1!4m5!3m4!1s0x3ef5f5ef006a4c83:0xcf95030e29d9fb7!8m2!3d25.3382268!4d55.5650618" className={"PmIcon"} target="_blank">
+                                        <LocationOnIcon />
+                                    </a>
+                                </div>
+                                <div className="icon">
+                                    {/* <img alt={"#"} src={twitter_icon} /> */}
+                                    <a href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQFmCcDlQ1gXZAAAAXwsFxY43sOt4cYab_4gAvY6oE1xWq3uaDQKZNL_mZjiN84VWH918aUvSOxZvlRF3Tcw8L-OTOg52iUs6gq9t3IX9h8f4seCgDit8xUABkKWId9PhKDaTNI=&originalReferer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Famerican-gulf-school-sharjah%2F" className={"PmIcon"} target="_blank">
+                                        <LinkedInIcon />
+                                    </a>
+                                </div>
+                                <div className="icon">
+                                    {/* <img alt={"#"} src={twitter_icon} /> */}
+                                    <a href="https://www.instagram.com/ags_shj/?hl=en" className={"PmIcon"} target="_blank">
+                                        <InstagramIcon />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div >
             </Container>
-        </div>
+        </div >
     );
 }
 export default Schoolinclusion;

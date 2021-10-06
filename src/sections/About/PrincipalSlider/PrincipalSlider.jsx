@@ -19,52 +19,52 @@ export default function PrincipalSlider(props) {
         {
             thumbnail: mentor1,
             title: "Sarah Qadir",
-            Subtitle: "Adipiscing at sem",
+            Subtitle: "PRE-K Teacher",
         },
         {
             thumbnail: mentor2,
             title: "Samia Yassin",
-            Subtitle: "Nunc eu massa",
+            Subtitle: "Arabic Teacher",
         },
         {
             thumbnail: mentor3,
             title: "Ross Moore",
-            Subtitle: "Dapibus tellus eros",
+            Subtitle: "PE Teacher",
         },
         {
             thumbnail: mentor4,
             title: "Rasha Abou Zaki",
-            Subtitle: "Aliquet nec nunc",
+            Subtitle: "KG Teacher",
         },
         {
             thumbnail: mentor5,
             title: "Michael Skillern",
-            Subtitle: "Nibh varius vestibulum",
+            Subtitle: "Music/Band Director",
         },
         {
             thumbnail: mentor6,
             title: "Melissa Davis",
-            Subtitle: "Nunc eu massa",
+            Subtitle: "Head of KG",
         },
         {
             thumbnail: mentor7,
             title: "Leona Dowling",
-            Subtitle: "Nibh varius vestibulum",
+            Subtitle: "Grade 2 Teacher",
         },
         {
             thumbnail: mentor8,
             title: "Huda Omary",
-            Subtitle: "Nunc eu massa",
+            Subtitle: "Islamic Teacher",
         },
         {
             thumbnail: mentor9,
             title: "Haneen Almushasha",
-            Subtitle: "Nunc eu massa",
+            Subtitle: "UAE Social Studies Teacher",
         },
         {
             thumbnail: mentor10,
             title: "Connor Stanton",
-            Subtitle: "Nunc eu massa",
+            Subtitle: "MYP Science Teacher",
         },
     ];
     const options = {

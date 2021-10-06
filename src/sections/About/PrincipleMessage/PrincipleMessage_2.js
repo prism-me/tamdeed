@@ -14,10 +14,10 @@ const PrincipleMessage = (props) => {
             </h3>
             <Container>
                 <div className="d-flex justify-content-center align-items-center imgheight"
-                    style={{ backgroundImage: `url(${props.PrincipleMsg?.image})` }}
+                    style={{ backgroundImage: `url(${props.PriVideo?.image})` }}
                 >
                     <div className="video-promo-content mt-4 ">
-                        <ModalVideo channel='youtube' youtube={{ autoplay: 1, mute: 1 }} isOpen={isOpen} videoId={props.PrincipleMsg?.video_link?.split("/")[3]} onClose={() => setOpen(false)} />
+                        <ModalVideo channel='youtube' youtube={{ autoplay: 1, mute: 1 }} isOpen={isOpen} videoId={props.PriVideo?.video_link?.split("/")[3]} onClose={() => setOpen(false)} />
                         <button className="btn video-play-icon" onClick={() => setOpen(true)}>
                             <PlayArrowIcon className={"playSize"} />
                         </button>

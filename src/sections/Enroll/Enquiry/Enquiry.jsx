@@ -6,6 +6,7 @@ import Spinner from "../../../components/Spinner/Spinner";
 import SnackBar from "../../../components/SnackBar/SnackBar";
 import { API } from "../../../http/API";
 import { convertedDate, currentDate, STRINGS } from "../../../utils/base";
+import { constants } from "../../../utils/constants"
 
 const defaultState = {
     isOpen: false,
@@ -21,7 +22,7 @@ const defaultState = {
     child_dob: currentDate(),
 }
 
-function Enquiry() {
+function Enquiry(props) {
     const [init, setInit] = useState(defaultState);
     let { isSubmitResponse, parent_name, parent_email, parent_phone, child_dob, isOpen, message, variant, cb_phone, cb_parent_name, isSubmitResponseCB } = init;
     const validation = (obj, type) => {
@@ -177,7 +178,12 @@ function Enquiry() {
                 onClose={cancelSnackBar}
             />
             <h1 className="Title">
-                ENQUIRY
+                {
+                    constants?.site_content?.enrollTabs?.tab2[
+                    props.language
+                    ]
+                }
+                {/* ENQUIRY */}
             </h1>
             <Hidden smDown>
                 <div
@@ -195,12 +201,22 @@ function Enquiry() {
                                     <Card shadow style={{ borderRadius: "20px" }} className={"cardStyle"}>
                                         <Card.Body>
                                             <h4 className={" intro-title"}>
-                                                Request A Call Back
+                                                {
+                                                    constants?.site_content?.req_call?.title[
+                                                    props.language
+                                                    ]
+                                                }
+                                                {/* Request A Call Back */}
                                             </h4>
                                             <p className={"subTitle"}>
-                                                For more information about admissions and tours, request a call back
+                                                {
+                                                    constants?.site_content?.req_call?.subtitle[
+                                                    props.language
+                                                    ]
+                                                }
+                                                {/* For more information about admissions and tours, request a call back
                                                 from our
-                                                team by filling in the form below.
+                                                team by filling in the form below. */}
                                             </p>
                                             <Form onSubmit={handleSubmitReqCall}>
                                                 <Form.Group className="mb-3" controlId="formGroupName">
@@ -209,7 +225,11 @@ function Enquiry() {
                                                         onChange={handleChange}
                                                         value={cb_parent_name}
                                                         type="text"
-                                                        placeholder="Parent/Guardian’s Name"
+                                                        placeholder={
+                                                            constants?.site_content?.req_call?.enter_pname[
+                                                            props.language
+                                                            ]
+                                                        }
                                                         className={"formFields"} />
                                                 </Form.Group>
                                                 <Form.Group className="mb-3" controlId="formGroupNumber">
@@ -218,13 +238,24 @@ function Enquiry() {
                                                         value={cb_phone}
                                                         onChange={handleChange}
                                                         type="number"
-                                                        placeholder="Parent/Guardian’s Mobile Number"
+                                                        placeholder={
+                                                            constants?.site_content?.req_call?.enter_pnumb[
+                                                            props.language
+                                                            ]
+                                                        }
                                                         className={"formFields"} />
                                                 </Form.Group>
                                                 <center>
                                                     {
                                                         isSubmitResponseCB ?
-                                                            <button type={"submit"} className={"enroll"}>SUBMIT</button> :
+                                                            <button type={"submit"} className={"enroll"}>
+                                                                {
+                                                                    constants?.site_content?.req_call?.submit[
+                                                                    props.language
+                                                                    ]
+                                                                }
+                                                                {/* SUBMIT */}
+                                                            </button> :
                                                             <Spinner color1={"#1a2c52"} size={"sm"} />
                                                     }
                                                 </center>
@@ -236,16 +267,26 @@ function Enquiry() {
                                     <Card shadow style={{ borderRadius: "20px" }} className={"cardStyle"}>
                                         <Card.Body>
                                             <h4 className={" intro-title"}>
-                                                Book a School Tour
+                                                {
+                                                    constants?.site_content?.school_tour?.title[
+                                                    props.language
+                                                    ]
+                                                }
+                                                {/* Book a School Tour */}
                                             </h4>
                                             <p className={"subTitle"}>
-                                                Book a tour with our Admissions team to visit American Gulf School
+                                                {
+                                                    constants?.site_content?.school_tour?.subtitle[
+                                                    props.language
+                                                    ]
+                                                }
+                                                {/* Book a tour with our Admissions team to visit American Gulf School
                                                 Sharjah,
                                                 located in Al Rahmaniya 4, Sharjah.
                                                 To book a tour of American Gulf School, please fill out the form below
                                                 and a
                                                 member of our Admissions team will contact you to arrange a suitable
-                                                time
+                                                time */}
                                             </p>
                                             <Form onSubmit={handleSubmitBookTour}>
                                                 <Form.Group className="mb-3" controlId="formGroupName"
@@ -253,21 +294,33 @@ function Enquiry() {
                                                     <Form.Control name={"parent_name"} onChange={handleChange}
                                                         type="text"
                                                         value={parent_name}
-                                                        placeholder="Parent/Guardian’s Full Name"
+                                                        placeholder={
+                                                            constants?.site_content?.school_tour?.enter_pname[
+                                                            props.language
+                                                            ]
+                                                        }
                                                         className={"formFields"} />
                                                 </Form.Group>
                                                 <Form.Group className="mb-3" controlId="formGroupEmail">
                                                     <Form.Control name={"parent_email"} onChange={handleChange}
                                                         type="text"
                                                         value={parent_email}
-                                                        placeholder="Parent/Guardian’s Email"
+                                                        placeholder={
+                                                            constants?.site_content?.school_tour?.enter_pemail[
+                                                            props.language
+                                                            ]
+                                                        }
                                                         className={"formFields"} />
                                                 </Form.Group>
                                                 <Form.Group className="mb-3" controlId="formGroupNumber">
                                                     <Form.Control name={"parent_phone"} onChange={handleChange}
                                                         type="number"
                                                         value={parent_phone}
-                                                        placeholder="Parent/Guardian’s Mobile Number"
+                                                        placeholder={
+                                                            constants?.site_content?.req_call?.enter_pnumb[
+                                                            props.language
+                                                            ]
+                                                        }
                                                         className={"formFields"} />
                                                 </Form.Group>
                                                 <Form.Group className="mb-3" controlId="formGroupNumber">
@@ -281,7 +334,14 @@ function Enquiry() {
                                                     {
                                                         isSubmitResponse ?
                                                             <button type={"submit"}
-                                                                className={"enroll"}>SUBMIT</button> :
+                                                                className={"enroll"}>
+                                                                {
+                                                                    constants?.site_content?.req_call?.submit[
+                                                                    props.language
+                                                                    ]
+                                                                }
+                                                                {/* SUBMIT */}
+                                                            </button> :
                                                             <Spinner color1={"#1a2c52"} size={"sm"} />
                                                     }
                                                 </center>
@@ -301,11 +361,21 @@ function Enquiry() {
                             <Card shadow style={{ borderRadius: "20px" }} className={"cardStyleMBL"}>
                                 <Card.Body>
                                     <h4 className={" intro-title"}>
-                                        Request A Call Back
+                                        {
+                                            constants?.site_content?.req_call?.title[
+                                            props.language
+                                            ]
+                                        }
+                                        {/* Request A Call Back */}
                                     </h4>
                                     <p className={"subTitle"}>
-                                        For more information about admissions and tours, request a call back from our
-                                        team by filling in the form below.
+                                        {
+                                            constants?.site_content?.req_call?.subtitle[
+                                            props.language
+                                            ]
+                                        }
+                                        {/* For more information about admissions and tours, request a call back from our
+                                        team by filling in the form below. */}
                                     </p>
                                     <Form onSubmit={handleSubmitReqCall}>
                                         <Form.Group className="mb-3" controlId="formGroupName">
@@ -314,7 +384,11 @@ function Enquiry() {
                                                 onChange={handleChange}
                                                 value={cb_parent_name}
                                                 type="text"
-                                                placeholder="Parent/Guardian’s Name"
+                                                placeholder={
+                                                    constants?.site_content?.req_call?.enter_pname[
+                                                    props.language
+                                                    ]
+                                                }
                                                 className={"formFields"} />
                                         </Form.Group>
                                         <Form.Group className="mb-3" controlId="formGroupNumber">
@@ -323,13 +397,24 @@ function Enquiry() {
                                                 value={cb_phone}
                                                 onChange={handleChange}
                                                 type="number"
-                                                placeholder="Parent/Guardian’s Mobile Number"
+                                                placeholder={
+                                                    constants?.site_content?.req_call?.enter_pnumb[
+                                                    props.language
+                                                    ]
+                                                }
                                                 className={"formFields"} />
                                         </Form.Group>
                                         <center>
                                             {
                                                 isSubmitResponseCB ?
-                                                    <button type={"submit"} className={"enroll"}>SUBMIT</button> :
+                                                    <button type={"submit"} className={"enroll"}>
+                                                        {
+                                                            constants?.site_content?.req_call?.submit[
+                                                            props.language
+                                                            ]
+                                                        }
+                                                        {/* SUBMIT */}
+                                                    </button> :
                                                     <Spinner color1={"#1a2c52"} size={"sm"} />
                                             }
                                         </center>
@@ -341,13 +426,23 @@ function Enquiry() {
                             <Card shadow style={{ borderRadius: "20px" }} className={"cardStyleMBL"}>
                                 <Card.Body>
                                     <h4 className={" intro-title"}>
-                                        Book a School Tour
+                                        {
+                                            constants?.site_content?.school_tour?.title[
+                                            props.language
+                                            ]
+                                        }
+                                        {/* Book a School Tour */}
                                     </h4>
                                     <p className={"subTitle"}>
-                                        Book a tour with our Admissions team to visit American Gulf School Sharjah,
+                                        {
+                                            constants?.site_content?.school_tour?.subtitle[
+                                            props.language
+                                            ]
+                                        }
+                                        {/* Book a tour with our Admissions team to visit American Gulf School Sharjah,
                                         located in Al Rahmaniya 4, Sharjah.
                                         To book a tour of American Gulf School, please fill out the form below and a
-                                        member of our Admissions team will contact you to arrange a suitable time
+                                        member of our Admissions team will contact you to arrange a suitable time */}
                                     </p>
                                     <Form onSubmit={handleSubmitBookTour}>
                                         <Form.Group className="mb-3" controlId="formGroupName"
@@ -355,21 +450,33 @@ function Enquiry() {
                                             <Form.Control name={"parent_name"} onChange={handleChange}
                                                 type="text"
                                                 value={parent_name}
-                                                placeholder="Parent/Guardian’s Full Name"
+                                                placeholder={
+                                                    constants?.site_content?.school_tour?.enter_pname[
+                                                    props.language
+                                                    ]
+                                                }
                                                 className={"formFields"} />
                                         </Form.Group>
                                         <Form.Group className="mb-3" controlId="formGroupEmail">
                                             <Form.Control name={"parent_email"} onChange={handleChange}
                                                 type="text"
                                                 value={parent_email}
-                                                placeholder="Parent/Guardian’s Email"
+                                                placeholder={
+                                                    constants?.site_content?.school_tour?.enter_pemail[
+                                                    props.language
+                                                    ]
+                                                }
                                                 className={"formFields"} />
                                         </Form.Group>
                                         <Form.Group className="mb-3" controlId="formGroupNumber">
                                             <Form.Control name={"parent_phone"} onChange={handleChange}
                                                 type="number"
                                                 value={parent_phone}
-                                                placeholder="Parent/Guardian’s Mobile Number"
+                                                placeholder={
+                                                    constants?.site_content?.req_call?.enter_pnumb[
+                                                    props.language
+                                                    ]
+                                                }
                                                 className={"formFields"} />
                                         </Form.Group>
                                         <Form.Group className="mb-3" controlId="formGroupNumber">
@@ -383,7 +490,14 @@ function Enquiry() {
                                             {
                                                 isSubmitResponse ?
                                                     <button type={"submit"}
-                                                        className={"enroll"}>SUBMIT</button> :
+                                                        className={"enroll"}>
+                                                        {
+                                                            constants?.site_content?.req_call?.submit[
+                                                            props.language
+                                                            ]
+                                                        }
+                                                        {/* SUBMIT */}
+                                                    </button> :
                                                     <Spinner color1={"#1a2c52"} size={"sm"} />
                                             }
                                         </center>

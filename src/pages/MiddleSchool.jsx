@@ -57,11 +57,13 @@ class MiddleSchool extends Component {
                             ? content?.arabic?.section1
                             : content?.section1
                     }
+                    secOneVideo={content?.section1}
                     secTwo={
                         global?.activeLanguage === "ar"
                             ? content?.arabic?.section2
                             : content?.section2
                     }
+                    secTwoVideo={content?.section2}
                     secThree={
                         global?.activeLanguage === "ar"
                             ? content?.arabic?.section3
@@ -77,6 +79,13 @@ class MiddleSchool extends Component {
                             ? content?.arabic?.section5
                             : content?.section5
                     }
+                    secFiveVideo={content?.section5}
+                    secSix={
+                        global?.activeLanguage === "ar"
+                            ? content?.arabic?.section6
+                            : content?.section6
+                    }
+                    secSixVideo={content?.section6}
                 />
             </div>
         );

@@ -5,6 +5,7 @@
   }
   .HowToSellspacing{
     margin: 2rem 0;
+    
     .HowToSellbtn{
       border: 1px solid #61dafb;
       background: transparent;
@@ -130,5 +131,11 @@
         font-size: 40px !important;
       }
     }
+  }
+  .dirlayoutOdd{
+    direction: rtl;
+  }
+  .dirlayoutOddArabic{
+    direction: ltr;
   }
 }

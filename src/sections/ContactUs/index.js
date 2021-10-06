@@ -2,12 +2,7 @@ import React, { useEffect, useState } from 'react';
 import location_icon from "../../assets/images/contact/map-pin.png";
 import phone_icon from "../../assets/images/contact/phone.png";
 import email_icon from "../../assets/images/contact/mail.png";
-// import youtube_icon from "../../assets/images/contact/Youtube.png";
-// import fb_icon from "../../assets/images/contact/Facebook.png";
-// import insta_icon from "../../assets/images/contact/Instagram.png";
-// import twitter_icon from "../../assets/images/contact/Twitter.png";
 import bg_img from "../../assets/images/agsbanners/contactUs.png";
-// import $ from "jquery";
 import { STRINGS } from "../../utils/base";
 import { API } from "../../http/API";
 import SnackBar from "../../components/SnackBar/SnackBar";
@@ -17,6 +12,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import FacebookIcon from '@material-ui/icons/Facebook';
+import { constants } from "../../utils/constants"
 
 const defaultState = {
     isRequestPending: false,
@@ -29,16 +25,9 @@ const defaultState = {
     _message: ""
 }
 
-const Contact = () => {
+const Contact = (props) => {
     const [init, setInit] = useState(defaultState);
     let { name, email, phone, _message, isRequestPending, isOpen, message, variant } = init;
-
-    // useEffect(() => {
-    // $(".back-to-top").css("display", "none")
-    // return () => {
-    //     $(".back-to-top").css("display", "flex")
-    // }
-    // }, []);
 
     const validation = (obj) => {
         let valid = { error: true, message: "" }
@@ -143,31 +132,61 @@ const Contact = () => {
                 <div className="contact-card-holder">
                     <div className="contact-card">
                         <div className="card-head">
-                            <div className="heading">Contact Us</div>
+                            <div className="heading">
+                                {
+                                    constants?.site_content?.contact_us?.title[
+                                    props.language
+                                    ]
+                                }
+                                {/* Contact Us */}
+                            </div>
                         </div>
                         <div className="card-body">
                             <div className="row">
                                 <div className="inp-group">
                                     <div className="inp">
                                         <input name={"name"} onChange={handleChange} value={name} type={"text"}
-                                            className="inp-text" placeholder={"Name"} />
+                                            className="inp-text" placeholder={
+                                                constants?.site_content?.contact_us?.name[
+                                                props.language
+                                                ]
+                                            } />
                                     </div>
                                     <div className="inp">
                                         <input name={"phone"} onChange={handleChange} value={phone} type={"number"}
-                                            className="inp-text" placeholder={"Phone Number"} />
+                                            className="inp-text" placeholder={
+                                                constants?.site_content?.contact_us?.phone[
+                                                props.language
+                                                ]
+                                            } />
                                     </div>
                                     <div className="inp">
                                         <input name={"email"} onChange={handleChange} value={email} type={"text"}
-                                            className="inp-text" placeholder={"Email Address"} />
+                                            className="inp-text" placeholder={
+                                                constants?.site_content?.contact_us?.email[
+                                                props.language
+                                                ]
+                                            } />
                                     </div>
                                     <div className="inp">
                                         <textarea name={"_message"} onChange={handleChange} value={_message} rows={4}
-                                            className="inp-text" placeholder={"Your Message"} />
+                                            className="inp-text" placeholder={
+                                                constants?.site_content?.contact_us?.msg[
+                                                props.language
+                                                ]
+                                            } />
                                     </div>
                                     <div className="inp-btn">
                                         {
                                             !isRequestPending ?
-                                                <button className="btn" onClick={handleSubmit}>Send</button> :
+                                                <button className="btn" onClick={handleSubmit}>
+                                                    {
+                                                        constants?.site_content?.contact_us?.send[
+                                                        props.language
+                                                        ]
+                                                    }
+                                                    {/* Send */}
+                                                </button> :
                                                 <Spinner color2={"#1a2c52"} color1={"white"} size={"sm"} />
 
                                         }
@@ -183,13 +202,27 @@ const Contact = () => {
                                     </a>
                                 </div>
                                 <div className="text">
-                                    <p>Al Rahmaniya Shaghrafah 4 - Sharjah - United Arab Emirates</p>
+                                    <p>
+                                        {
+                                            constants?.site_content?.contact_us?.addr[
+                                            props.language
+                                            ]
+                                        }
+                                        {/* Al Rahmaniya Shaghrafah 4 - Sharjah - United Arab Emirates */}
+                                    </p>
                                 </div>
                             </div>
                             <div className="info-group">
                                 <div className="info-item">
                                     <div className="txt">
-                                        <p>For Admissions</p>
+                                        <p>
+                                            {
+                                                constants?.site_content?.contact_us?.admission[
+                                                props.language
+                                                ]
+                                            }
+                                            {/* For Admissions */}
+                                        </p>
                                     </div>
                                     <div className="icon-txt-hld">
                                         <div className="icon">
@@ -210,7 +243,14 @@ const Contact = () => {
                                 </div>
                                 <div className="info-item">
                                     <div className="txt">
-                                        <p>Help Desk & Queries</p>
+                                        <p>
+                                            {
+                                                constants?.site_content?.contact_us?.help_desk[
+                                                props.language
+                                                ]
+                                            }
+                                            {/* Help Desk & Queries */}
+                                        </p>
                                     </div>
                                     <div className="icon-txt-hld">
                                         <div className="icon">

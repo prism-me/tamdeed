@@ -84,13 +84,16 @@ class About extends Component {
                             ? content?.arabic?.banner
                             : content?.banner
                     }
+                    bannerImage={content?.banner.image}
                 />
                 <AGSExperience
                     aboutAgs={
                         global?.activeLanguage === "ar"
                             ? content?.arabic?.aboutSection
-                            : content?.banner
+                            : content?.aboutSection
                     }
+                    aboutImg={content?.aboutSection.image}
+                    language={global?.activeLanguage}
                 />
                 <PrincipleMessage
                     PrincipleMsg={
@@ -98,6 +101,7 @@ class About extends Component {
                             ? content?.arabic?.principalSection
                             : content?.principalSection
                     }
+                    PriVideo={content?.principalSection}
                 />
                 <AgsEthos
                     AGSEthos={
@@ -112,10 +116,12 @@ class About extends Component {
                             ? content?.arabic?.healthSection
                             : content?.healthSection
                     }
+                    AgsImg={content?.healthSection.image}
                 />
                 <PrincipalSlider
                     mentors={this.state.mentorsData}
                     isArabic={global?.activeLanguage === "ar"}
+                    language={global?.activeLanguage}
                 />
             </div>
         );

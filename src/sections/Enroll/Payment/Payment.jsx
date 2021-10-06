@@ -5,6 +5,7 @@ import header_bg from "./../../../assets/images/agsbackgrounds/Mask.jpg";
 =======
 >>>>>>> aa57caaf6ee35ddfd1bb526d284be234a59cd5f0
 import GeneralPolicies from "../../../components/Modals/GeneralPolicies/GeneralPolicies";
+import { constants } from "../../../utils/constants"
 
 function Payment(props) {
     const [modalShow, setModalShow] = React.useState(false);
@@ -14,7 +15,12 @@ function Payment(props) {
                 <button className={"FeesButton"}
                     onClick={() => setModalShow(true)}
                 >
-                    Kindly read the General Policies, Fee Details and Payment Methods carefully.
+                    {
+                        constants?.site_content?.genr_policy[
+                        props.language
+                        ]
+                    }
+                    {/* Kindly read the General Policies, Fee Details and Payment Methods carefully. */}
                 </button>
                 <GeneralPolicies show={modalShow} onHide={() => setModalShow(false)}
                     genrPolicyData={props.genrData}

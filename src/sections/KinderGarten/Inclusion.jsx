@@ -23,14 +23,14 @@ function Inclusion(props) {
             <Col sm={12} md={12} lg={12}>
               <div
                 className="d-flex justify-content-center align-items-center imgheight"
-                style={{ backgroundImage: `url(${props.secOne?.image})` }}
+                style={{ backgroundImage: `url(${props.secOneVideo?.image})` }}
               >
                 <div className="video-promo-content mt-4 ">
                   <ModalVideo
                     channel="youtube"
                     youtube={{ autoplay: 1, mute: 1 }}
                     isOpen={isOpen}
-                    videoId={props.secOne?.video_link?.split("/")[3]}
+                    videoId={props.secOneVideo?.video_link?.split("/")[3]}
                     onClose={() => setOpen(false)}
                   />
                   <button
@@ -45,7 +45,6 @@ function Inclusion(props) {
           </Row>
           <Row className="MiddleAlignCenter">
             <Col sm={12} md={12} lg={12} className="pt-5">
-<<<<<<< HEAD
               <p className={"subTitle mt-3 text-center"}
                 dangerouslySetInnerHTML={{
                   __html:
@@ -53,21 +52,12 @@ function Inclusion(props) {
                 }}
               >
                 {/* American Gulf School has created a dynamic Pre-K, KG1 and KG2 Program to fulfill the developmental needs and interests of 3- to 6-year-old learners. Learning at AGS is a holistic learning experience that ensures all aspects of development are integrated (social, emotional, physical, and cognitive). At AGS, we believe that learners will only make excellent academic growth when they are happy, feel safe and are settled socially. We place a strong emphasis on pastoral care from the moment a child joins our school. */}
-=======
-              <p className={"subTitle mt-3 text-center"}>
-                American Gulf School has created a dynamic <strong>Pre-K, KG1 and KG2</strong> Program to fulfill the developmental needs and interests of 3- to 6-year-old learners. Learning at AGS is a holistic learning experience that ensures all aspects of development are integrated (social, emotional, physical, and cognitive). At AGS, we believe that learners will only make excellent academic growth when they are happy, feel safe and are settled socially. We place a strong emphasis on pastoral care from the moment a child joins our school.
->>>>>>> aa57caaf6ee35ddfd1bb526d284be234a59cd5f0
               </p>
             </Col>
           </Row>
         </div>
-<<<<<<< HEAD
-        <div className={"HowToSellspacing"}>
-          <Row className="MiddleAlignCenter">
-=======
         <div className={"HowToSellspacing featured-section"}>
           <Row className="MiddleAlignCenter ">
->>>>>>> aa57caaf6ee35ddfd1bb526d284be234a59cd5f0
             <Col sm={12} md={8} lg={8} >
               <p className={"subTitle mt-3"}
                 dangerouslySetInnerHTML={{
@@ -81,14 +71,14 @@ function Inclusion(props) {
             <Col sm={12} md={4} lg={4} className="MiddleAlignCenter">
               <div
                 className="d-flex justify-content-center align-items-center imgheight"
-                style={{ backgroundImage: `url(${props.secTwo?.image})` }}
+                style={{ backgroundImage: `url(${props.secTwoVideo?.image})` }}
               >
                 <div className="video-promo-content mt-4 ">
                   <ModalVideo
                     channel="youtube"
                     youtube={{ autoplay: 1, mute: 1 }}
                     isOpen={isOpen}
-                    videoId={props.secTwo?.video_link?.split("/")[3]}
+                    videoId={props.secTwoVideo?.video_link?.split("/")[3]}
                     onClose={() => setOpen(false)}
                   />
                   <button
@@ -132,18 +122,16 @@ function Inclusion(props) {
             <Col sm={12} md={4} lg={4} className='MobileBottomSpacing'>
               <div
                 className="d-flex justify-content-center align-items-center imgheight"
-<<<<<<< HEAD
-                style={{ backgroundImage: `url(${props.secFive?.image})` }}
-=======
-                style={{ backgroundImage: `url(${std3})`, height: "410px" }}
->>>>>>> aa57caaf6ee35ddfd1bb526d284be234a59cd5f0
+
+                style={{ backgroundImage: `url(${props.secFiveVideo?.image})` }}
+
               >
                 <div className="video-promo-content mt-4 ">
                   <ModalVideo
                     channel="youtube"
                     youtube={{ autoplay: 1, mute: 1 }}
                     isOpen={isOpen}
-                    videoId={props.secFive?.video_link?.split("/")[3]}
+                    videoId={props.secFiveVideo?.video_link?.split("/")[3]}
                     onClose={() => setOpen(false)}
                   />
                   <button
@@ -156,7 +144,6 @@ function Inclusion(props) {
               </div>
             </Col>
             <Col sm={12} md={8} lg={8} className="pl-5 MobileSpacing">
-<<<<<<< HEAD
               <p className={"subTitle mt-3"}
                 dangerouslySetInnerHTML={{
                   __html:
@@ -164,12 +151,6 @@ function Inclusion(props) {
                 }}
               >
                 {/* The KG environment reflects the natural developmental stages of learning and characterizes our program through our well-equipped and organized:
-=======
-              <p className={"subTitle mt-3"}>
-                <p className={"subTitle2"}>
-                  The KG environment reflects the natural developmental stages of learning and characterizes our program through our well-equipped and organized:
-                </p>
->>>>>>> aa57caaf6ee35ddfd1bb526d284be234a59cd5f0
                 <ul>
                   <li>Classrooms</li>
                   <li>Resource room</li>
@@ -179,19 +160,10 @@ function Inclusion(props) {
                   <li>Outside play areas</li>
                 </ul> */}
               </p>
-<<<<<<< HEAD
               {/* <p className={"subTitle mt-3"}>
                 A learner's interaction in and with these spaces stimulates them
                 to become active learners, by providing ongoing opportunities
                 for them to:
-=======
-              <p className={"subTitle mt-3"}>
-                <p className={"subTitle2"}>
-                  A learner's interaction in and with these spaces stimulates them
-                  to become active learners, by providing ongoing opportunities
-                  for them to:
-                </p>
->>>>>>> aa57caaf6ee35ddfd1bb526d284be234a59cd5f0
                 <ul>
                   <li>Make choices and decisions.</li>
                   <li>Use materials in flexible and imaginative ways.</li>

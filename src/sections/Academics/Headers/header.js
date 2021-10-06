@@ -8,7 +8,7 @@ const AcademicHeader = (props) => {
 
         <div
             className="home-header"
-            style={{ backgroundImage: `url(${props.banner?.image})` }}
+            style={{ backgroundImage: `url(${props?.bannerImg})` }}
         >
             {/*<img alt={"#"} className="home-header position-absolute" style={{visibility:"hidden",display:"inline-block",width:"100%"}} src={header_bg}/>*/}
             <Container>

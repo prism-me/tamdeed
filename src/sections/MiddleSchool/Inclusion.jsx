@@ -21,14 +21,14 @@ function Inclusion(props) {
             <Col sm={12} md={4} lg={12}>
               <div
                 className="d-flex justify-content-center align-items-center imgheight"
-                style={{ backgroundImage: `url(${props.secOne?.image})` }}
+                style={{ backgroundImage: `url(${props.secOneVideo?.image})` }}
               >
                 <div className="video-promo-content mt-4 ">
                   <ModalVideo
                     channel="youtube"
                     youtube={{ autoplay: 1, mute: 1 }}
                     isOpen={isOpen}
-                    videoId={props.secOne?.video_link?.split("/")[3]}
+                    videoId={props.secOneVideo?.video_link?.split("/")[3]}
                     onClose={() => setOpen(false)}
                   />
                   <button
@@ -58,7 +58,10 @@ function Inclusion(props) {
         <div className={"HowToSellspacing featured-section"}>
           <Row className="TabMobileSpacing">
             <Col sm={12} md={8} lg={8}>
-              <h3 className="title1">Middle Years Program</h3>
+              <h3 className="title1">
+                {props.secTwo?.title}
+                {/* Middle Years Program */}
+              </h3>
               <p className={"subTitle1"}
                 dangerouslySetInnerHTML={{
                   __html:
@@ -83,14 +86,14 @@ function Inclusion(props) {
             <Col sm={12} md={4} lg={4}>
               <div
                 className="d-flex justify-content-center align-items-center imgheight"
-                style={{ backgroundImage: `url(${props.secTwo?.image})` }}
+                style={{ backgroundImage: `url(${props.secTwoVideo?.image})` }}
               >
                 <div className="video-promo-content mt-4 ">
                   <ModalVideo
                     channel="youtube"
                     youtube={{ autoplay: 1, mute: 1 }}
                     isOpen={isOpen}
-                    videoId={props.secTwo?.video_link?.split("/")[3]}
+                    videoId={props.secTwoVideo?.video_link?.split("/")[3]}
                     onClose={() => setOpen(false)}
                   />
                   <button
@@ -133,14 +136,14 @@ function Inclusion(props) {
             <Col sm={12} md={4} lg={4}>
               <div
                 className="d-flex justify-content-center align-items-center imgheight"
-                style={{ backgroundImage: `url(${props.secFive?.image})` }}
+                style={{ backgroundImage: `url(${props.secFiveVideo?.image})` }}
               >
                 <div className="video-promo-content mt-4 ">
                   <ModalVideo
                     channel="youtube"
                     youtube={{ autoplay: 1, mute: 1 }}
                     isOpen={isOpen}
-                    videoId={props.secFive?.video_link?.split("/")[3]}
+                    videoId={props.secFiveVideo?.video_link?.split("/")[3]}
                     onClose={() => setOpen(false)}
                   />
                   <button
@@ -153,7 +156,10 @@ function Inclusion(props) {
               </div>
             </Col>
             <Col sm={12} md={8} lg={8}>
-              <h3 className="title1">International Mindedness and Multilingualism</h3>
+              <h3 className="title1">
+                {props.secFive?.title}
+                {/* International Mindedness and Multilingualism */}
+              </h3>
               <p className={"subTitle2"}
                 dangerouslySetInnerHTML={{
                   __html:
@@ -167,28 +173,36 @@ function Inclusion(props) {
             </Col>
           </Row>
         </div>
-        {/* <div className={"HowToSellspacing"}>
+        <div className={"HowToSellspacing"}>
           <Row className="TabMobileSpacing mb-5">
             <Col sm={12} md={8} lg={8}>
-              <h3 className="title1">Lifelong Learners</h3>
-              <p className={"subTitle1"}>
-                At American Gulf School, we believe that lifelong learning enables each learner to develop confidence and perseverance to tackle any challenge they are given. We encourage learners to work together inside and outside the classroom as well as online, to achieve better results.
+              <h3 className="title1">
+                {props.secSix?.title}
+                {/* Lifelong Learners */}
+              </h3>
+              <p className={"subTitle1"}
+                dangerouslySetInnerHTML={{
+                  __html:
+                    props.secSix?.description
+                }}
+              >
+                {/* At American Gulf School, we believe that lifelong learning enables each learner to develop confidence and perseverance to tackle any challenge they are given. We encourage learners to work together inside and outside the classroom as well as online, to achieve better results. */}
               </p>
-              <p className={"subTitle1"}>
+              {/* <p className={"subTitle1"}>
                 Lifelong learning builds self-awareness and respect for others. Learners develop invaluable leadership skills through learning to plan, negotiate, compromise, and consider. They are taught how to take constructive criticism and act upon it, as well as how to give it in order to get the task completed, therefore learning from it.
-              </p>
+              </p> */}
             </Col>
             <Col sm={12} md={4} lg={4}>
               <div
                 className="d-flex justify-content-center align-items-center imgheight"
-                style={{ backgroundImage: `url(${std2})` }}
+                style={{ backgroundImage: `url(${props.secSixVideo?.image})` }}
               >
                 <div className="video-promo-content mt-4 ">
                   <ModalVideo
                     channel="youtube"
                     youtube={{ autoplay: 1, mute: 1 }}
                     isOpen={isOpen}
-                    videoId="RBZutrFFhTA"
+                    videoId={props.secSixVideo?.video_link?.split("/")[3]}
                     onClose={() => setOpen(false)}
                   />
                   <button
@@ -201,7 +215,7 @@ function Inclusion(props) {
               </div>
             </Col>
           </Row>
-        </div> */}
+        </div>
       </Container>
     </div>
   );

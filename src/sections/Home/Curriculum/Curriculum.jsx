@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import header_bg from "./../../../assets/images/agsbackgrounds/curriculumcourse.jpg";
 import { Hidden } from "@material-ui/core";
+import { constants } from "../../../utils/constants"
 
 function Curriculum(props) {
     return (
         <div className="Curriculum-page">
             <h3 className={"Title"}>
-                CURRICULUM COURSE AND SYLLABUS
+                {props.Curriculum?.title}
+                {/* CURRICULUM COURSE AND SYLLABUS */}
             </h3>
             <Hidden smDown>
                 <div
@@ -21,7 +23,7 @@ function Curriculum(props) {
                                     <Row>
                                         <Col xs={12} sm={3} md={12} lg={3} className={"d-flex justify-content-center align-items-center"}>
                                             <h4 className={" intro-title"}>
-                                                {props.Curriculum?.title}
+                                                {props.Curriculum?.subtitle}
                                                 {/* OUR
                                                 <br />
                                                 CURRICULUM */}
@@ -51,7 +53,11 @@ function Curriculum(props) {
                                                 taught to succeed within the 21st century. */}
                                             </p>
                                             <button className={"viewButton"}>
-                                                View in detail >
+                                                {
+                                                    constants?.site_content?.read_more[
+                                                    props.language
+                                                    ]
+                                                }
                                             </button>
                                         </Col>
                                     </Row>
@@ -68,7 +74,7 @@ function Curriculum(props) {
                             <Row>
                                 <Col xs={12} sm={3} md={12} lg={3} className={"d-flex justify-content-center align-items-center"}>
                                     <h4 className={" intro-title"}>
-                                        {props.Curriculum?.title}
+                                        {props.Curriculum?.subtitle}
                                         {/* OUR
                                         <br />
                                         CURRICULUM */}
@@ -98,7 +104,11 @@ function Curriculum(props) {
                                         taught to succeed within the 21st century. */}
                                     </p>
                                     <button className={"viewButton"}>
-                                        View in detail >
+                                        {
+                                            constants?.site_content?.read_more[
+                                            props.language
+                                            ]
+                                        }
                                     </button>
                                 </Col>
                             </Row>

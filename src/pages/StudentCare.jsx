@@ -22,7 +22,9 @@ class StudentCare extends Component {
         const { global } = this.props;
         return (
             <div className="home-page">
-                <TabPanel />
+                <TabPanel
+                    language={global?.activeLanguage}
+                />
                 <Inclusion
                     studentCareData={this.state.stdData}
                     isArabic={

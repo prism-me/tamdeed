@@ -3,7 +3,7 @@ import header_bg from "./../../assets/images/agsbanners/homepageBanner.png";
 // import PlayArrowIcon from "@material-ui/icons/PlayArrow";
 // import StopIcon from "@material-ui/icons/Stop";
 
-const BackGroundVideo = ({ videoSource, children, blur, videoRef }) => {
+const BackGroundVideo = ({ videoSource, children, blur, videoRef, bannerImg }) => {
 
     return (
         <div className={"BackgroundDiv"}>
@@ -15,7 +15,7 @@ const BackGroundVideo = ({ videoSource, children, blur, videoRef }) => {
                 // muted
                 // ref={video}
                 id={"video-id"}
-                poster={header_bg}
+                poster={bannerImg}
                 className='video' >
                 {/* TODO make it accept multiple media types */}
                 <source src={videoSource} type="video/mp4" />

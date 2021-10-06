@@ -25,7 +25,6 @@ const PrincipleMessage = (props) => {
                 </div>
                 <hr className="principalmsgHr" />
                 <div className="sucessDiv">
-<<<<<<< HEAD
                     <p className={"subtitle"}
                         dangerouslySetInnerHTML={{
                             __html:
@@ -37,15 +36,6 @@ const PrincipleMessage = (props) => {
                         I hope the summer break has given you an opportunity to relax and to connect with your respective families and friends in meaningful ways.
                         At the American Gulf School (AGS), our core values are much more than just the delivery of information, and more about delving deeper into the potential that each and every one of you possesses. Our purpose is to inspire inner development, critical thinking, teamwork, and leadership. AGS will provide you with the starting point to grow and develop in a range of environments which include academic, sport, creative arts, and technology. It is our mission to be the catalyst to your personal development and future successes.
                         I am incredibly privileged to undertake this new journey with you, and along with our dedicated team of teaching professionals and staff, we hope you will be a mainstay in the American Gulf School family for years to come." */}
-=======
-                    <p className={"subtitle"}>
-                        Hello Everyone,<br />
-                        My name is Larry Savery, Principal of the American Gulf School in Sharjah, and it gives me great pleasure to welcome all of our students to the inaugural academic year at the American Gulf School of Sharjah.
-                        I hope the summer break has given you an opportunity to relax and to connect with your respective families and friends in meaningful ways.
-                        At the American Gulf School (AGS), our core values are much more than just the delivery of information, and more about delving deeper into the potential that each and every one of you possesses. Our purpose is to inspire inner development, critical thinking, teamwork, and leadership. AGS will provide you with the starting point to grow and develop in a range of environments which include academic, sport, creative arts, and technology. It is our mission to be the catalyst to your personal development and future successes.
-                        I am incredibly privileged to undertake this new journey with you, and along with our dedicated team of teaching professionals and staff, we hope you will be a mainstay in the American Gulf School family for years to come.
-                        <p className={"text-right principal-name"} style={{ fontSize: "13px" }}>Larry Savery, Principal of the American Gulf School</p>
->>>>>>> aa57caaf6ee35ddfd1bb526d284be234a59cd5f0
                     </p>
 
                 </div>

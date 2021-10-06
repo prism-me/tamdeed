@@ -31,7 +31,6 @@ function Schoolinclusion(props) {
                             </div>
                         </Col>
                         <Col sm={7} md={7} lg={7} >
-<<<<<<< HEAD
                             <h3 className="title">
                                 {props.secOne?.title}
                                 {/* PRIMARY SCHOOL */}
@@ -43,10 +42,6 @@ function Schoolinclusion(props) {
                                 }}
                             >
                                 {/* The AGS Primary School is a cross-curriculum program for learners aged between 6 and 11 years old. It combines 6 academic subjects: */}
-=======
-                            <p className={"subTitle headline"}>
-                                The AGS Primary School is a cross-curriculum program for learners aged between 6 and 11 years old. It combines 6 academic subjects:
->>>>>>> aa57caaf6ee35ddfd1bb526d284be234a59cd5f0
                             </p>
                             {/* <p className={"subTitle"}>
                                 <ul>
@@ -57,13 +52,8 @@ function Schoolinclusion(props) {
                                     <li>Language</li>
                                     <li>Physical, Social and Personal Education</li>
                                 </ul>
-<<<<<<< HEAD
                             </p> */}
                             {/* <p className={"subTitle"}>
-=======
-                            </p>
-                            <p className={"subTitle headline"}>
->>>>>>> aa57caaf6ee35ddfd1bb526d284be234a59cd5f0
                                 Integrated with six transdisciplinary themes:
                             </p>
                             <p className={"subTitle"}>
@@ -74,13 +64,8 @@ function Schoolinclusion(props) {
                                     <li>How we express ourselves</li>
                                     <li>How the world works</li>
                                     <li>Who we are</li>
-<<<<<<< HEAD
                                 </ol>
                             </p> */}
-=======
-                                </ul>
-                            </p>
->>>>>>> aa57caaf6ee35ddfd1bb526d284be234a59cd5f0
                         </Col>
                     </Row>
                 </div>

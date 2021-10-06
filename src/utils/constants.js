@@ -250,5 +250,35 @@ export const constants = {
         ar: "مطلوب البريد الإلكتروني للوالد / الوصي"
       },
     },
+    footer: {
+      logo_title: {
+        en: "AMERICAN GULF SCHOOL",
+        ar: "مدرسة الخليج الأمريكية"
+      },
+      subtitle: {
+        en: "For more information about admissions and tours, request a call back from our team by filling in the form below.",
+        ar: "لمزيد من المعلومات حول عمليات القبول والجولات ، اطلب معاودة الاتصال من فريقنا عن طريق ملء النموذج أدناه"
+      },
+      enter_pname: {
+        en: "Parent/Guardian’s Name",
+        ar: "اسم الوالد / الوصي"
+      },
+      enter_pnumb: {
+        en: "Parent/Guardian’s Mobile Number",
+        ar: "رقم هاتف الوالد / ولي الأمر"
+      },
+      submit: {
+        en: "Submit",
+        ar: "يقدم"
+      },
+      numb_req: {
+        en: "Parent/Guardian’s Mobile Number Required",
+        ar: "يجب إدخال رقم هاتف الوالد / الوصي"
+      },
+      name_req: {
+        en: "Parent/Guardian’s Full Name Required",
+        ar: "مطلوب الاسم الكامل للوالد / الوصي"
+      },
+    }
   },
 };

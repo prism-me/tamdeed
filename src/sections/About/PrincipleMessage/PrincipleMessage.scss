@@ -80,7 +80,7 @@
 
 
         .sucessDiv {
-          background-image:url('../../../assets/images/agsbackgrounds/Quote.png');
+          background-image:url('../../../assets/images/agsbackgrounds/QuoteA.png');
           background-repeat:no-repeat;
           background-position:left top;
         }
@@ -89,10 +89,17 @@
 
         .subtitle {
           // margin-top: 2rem;
-          font-size: 16px;
+          font-size: 15px;
           font-weight: 500;
+          font-style: italic;
           text-align: justify;
           padding: 0.5rem 2rem;
+          background-image:url('../../../assets/images/agsbackgrounds/QuoteB2.png');
+          background-repeat:no-repeat;
+          background-position:37% 85%;
+        }
+        .principal-name{
+          color: $bg-color;
         }
         .quoteSign{
           color: $bg-color;

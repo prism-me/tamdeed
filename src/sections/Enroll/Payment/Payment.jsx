@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Card, Col, Container, Row, Table } from "react-bootstrap";
-import header_bg from "./../../../assets/images/agsbackgrounds/Mask.jpg";
+// import header_bg from "./../../../assets/images/agsbackgrounds/Mask.jpg";
 import GeneralPolicies from "../../../components/Modals/GeneralPolicies/GeneralPolicies";
 import { constants } from "../../../utils/constants"
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Card, Col, Container, Form, Row } from "react-bootstrap";
-import header_bg from "../../../assets/images/agsbackgrounds/image1.png";
+import header_bg from "../../../assets/images/agsbackgrounds/EnquiryPhoto.JPG";
 import { Hidden } from "@material-ui/core";
 import Spinner from "../../../components/Spinner/Spinner";
 import SnackBar from "../../../components/SnackBar/SnackBar";

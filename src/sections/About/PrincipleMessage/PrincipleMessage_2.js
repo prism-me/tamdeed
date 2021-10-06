@@ -37,6 +37,7 @@ const PrincipleMessage = (props) => {
                         At the American Gulf School (AGS), our core values are much more than just the delivery of information, and more about delving deeper into the potential that each and every one of you possesses. Our purpose is to inspire inner development, critical thinking, teamwork, and leadership. AGS will provide you with the starting point to grow and develop in a range of environments which include academic, sport, creative arts, and technology. It is our mission to be the catalyst to your personal development and future successes.
                         I am incredibly privileged to undertake this new journey with you, and along with our dedicated team of teaching professionals and staff, we hope you will be a mainstay in the American Gulf School family for years to come." */}
                     </p>
+
                 </div>
             </Container>
         </div>

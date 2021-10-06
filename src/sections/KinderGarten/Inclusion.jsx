@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import std1 from "../../assets/images/studentcare/acadamicsupport.jpg";
-import std2 from "../../assets/images/studentcare/acadamicsupport.jpg";
-import std3 from "../../assets/images/studentcare/acadamicsupport.jpg";
+import std1 from "../../assets/images/KG/KGBanner.JPG";
+import std2 from "../../assets/images/KG/KGPhoto1.jpg";
+import std3 from "../../assets/images/KG/KGPhoto2.jpg";
 import "./Inclusion.scss";
 import ModalVideo from "react-modal-video";
 import PlayArrowIcon from "@material-ui/icons/PlayArrow";
@@ -56,8 +56,8 @@ function Inclusion(props) {
             </Col>
           </Row>
         </div>
-        <div className={"HowToSellspacing"}>
-          <Row className="MiddleAlignCenter">
+        <div className={"HowToSellspacing featured-section"}>
+          <Row className="MiddleAlignCenter ">
             <Col sm={12} md={8} lg={8} >
               <p className={"subTitle mt-3"}
                 dangerouslySetInnerHTML={{
@@ -122,7 +122,9 @@ function Inclusion(props) {
             <Col sm={12} md={4} lg={4} className='MobileBottomSpacing'>
               <div
                 className="d-flex justify-content-center align-items-center imgheight"
+
                 style={{ backgroundImage: `url(${props.secFiveVideo?.image})` }}
+
               >
                 <div className="video-promo-content mt-4 ">
                   <ModalVideo

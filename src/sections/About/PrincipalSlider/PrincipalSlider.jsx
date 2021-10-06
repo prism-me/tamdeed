@@ -6,7 +6,6 @@ import "owl.carousel/dist/assets/owl.theme.default.css";
 import { constants } from "../../../utils/constants"
 
 export default function PrincipalSlider(props) {
-
     const options = {
         loop: true,
         margin: 10,

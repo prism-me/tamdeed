@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Card, Col, Container, Row, Table } from "react-bootstrap";
-import header_bg from "./../../../assets/images/agsbackgrounds/backgroundCurve.png";
+import header_bg from "./../../../assets/images/agsbackgrounds/FeesPhoto.jpg";
 import { Hidden } from "@material-ui/core";
 
 function FeesPayments(props) {

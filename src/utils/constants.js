@@ -45,8 +45,12 @@ export const constants = {
       ar: "اقرأ أكثر>",
     },
     learn_more: {
-      en: "Learn More",
+      en: "Learn More >",
       ar: "للمزيد >",
+    },
+    learn_less: {
+      en: "Show Less >",
+      ar: "إظهار أقل>",
     },
     waitlist: {
       title: {

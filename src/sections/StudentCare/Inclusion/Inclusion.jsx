@@ -5,12 +5,16 @@ import std2 from "../../../assets/images/studentcare/acadamicsupport.jpg";
 import std3 from "../../../assets/images/studentcare/SchoolClinic.jpg";
 import std4 from "../../../assets/images/studentcare/Academic.jpg";
 import std5 from "../../../assets/images/studentcare/wellbeing.jpg";
-
+import { constants } from "../../../utils/constants"
 import ModalVideo from 'react-modal-video'
 import PlayArrowIcon from "@material-ui/icons/PlayArrow";
 
 function Inclusion(props) {
     const [isOpenI, setOpenI] = useState(false)
+    const [isReadMore, setIsReadMore] = useState(true);
+    const toggleReadMore = () => {
+        setIsReadMore(!isReadMore);
+    };
     // const [isOpenAS, setOpenAS] = useState(false)
     // const [isOpenA, setOpenA] = useState(false)
     // const [isOpenSC, setOpenSC] = useState(false)
@@ -55,8 +59,9 @@ function Inclusion(props) {
                                             ? "text-right subTitle"
                                             : "text-left subTitle"
                                     }
+                                    // {isReadMore ? text.slice(0, 1000) : text}
                                     dangerouslySetInnerHTML={{
-                                        __html:
+                                        __html: isReadMore ?
                                             props.isArabic
                                                 ? x.description.substr(
                                                     0,
@@ -65,7 +70,9 @@ function Inclusion(props) {
                                                 : x.description.substr(
                                                     0,
                                                     810
-                                                )
+                                                ) : props.isArabic
+                                                ? x.description
+                                                : x.description
                                     }}
                                 >
                                     {/* American Gulf School is an equal opportunities school, and we strongly believe in equality and diversity. We welcome learners from any race, nationality or cultural background. */}
@@ -77,9 +84,26 @@ function Inclusion(props) {
                                     Furthermore, our school believes that these learning beliefs are applied to all learners including learners that are in need of special assistance due to exceptional needs. This includes children who are on the gifted end of the learning continuum and children with learning challenges.
                                 </p> */}
                                 {index === 0 ?
-                                    <button className={"LearnmoreButton"}>
-                                        Learn more
-                                    </button>
+                                    // <button className={"LearnmoreButton"}>
+                                    //     Learn more
+                                    // </button>
+                                    <p onClick={toggleReadMore}>
+                                        {isReadMore ? <button className={"LearnmoreButton"}>
+                                            {
+                                                constants?.site_content?.learn_more[
+                                                props.language
+                                                ]
+                                            }
+                                            {/* Learn more */}
+                                        </button> : <button className={"LearnmoreButton"}>
+                                            {
+                                                constants?.site_content?.learn_less[
+                                                props.language
+                                                ]
+                                            }
+                                            {/* Show less */}
+                                        </button>}
+                                    </p>
                                     : ""
                                 }
 

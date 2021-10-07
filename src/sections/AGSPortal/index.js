@@ -9,13 +9,13 @@ import { Hidden } from "@material-ui/core";
 const AgsPortalComponent = (props) => {
     const history = useHistory();
     function parentClick() {
-        window.open("https://agsae.isams.cloud/");
+        window.open`${props?.pSecLink}`;
     }
     function staffClick() {
-        window.open("https://sites.google.com/ags.ae/ags-intranet/home?");
+        window.open`${props?.sSecLink}`;
     }
     function stdClick() {
-        window.open("https://launchpad.classlink.com/ags");
+        window.open`${props?.stdSecLink}`;
     }
     return (
         <div className="ags-portal-page">

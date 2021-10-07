@@ -60,6 +60,7 @@ function MainNavbar(props) {
             history.push("/");
             toggleDrawer(false);
           }}
+          style={{ cursor: "pointer" }}
         />
       </div>
       <List
@@ -252,11 +253,6 @@ function MainNavbar(props) {
 const mapStateToProps = (state) => {
   return {
     user: state.userReducer,
-    products: state?.productReducer?.products,
-    allProducts: state?.productReducer?.allProducts,
-    searchData: state?.productReducer?.searchData,
-    totalProducts: state?.productReducer?.totalProducts,
-    categories: state?.productReducer?.categories,
     global: state.globalReducer,
   };
 };

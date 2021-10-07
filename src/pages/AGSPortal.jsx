@@ -83,16 +83,19 @@ class AgsPortal extends Component {
                             ? content?.arabic?.parentSection
                             : content?.parentSection
                     }
+                    pSecLink={content?.parentSection?.url}
                     staffSec={
                         global?.activeLanguage === "ar"
                             ? content?.arabic?.staffSection
                             : content?.staffSection
                     }
+                    sSecLink={content?.staffSection?.url}
                     studentSec={
                         global?.activeLanguage === "ar"
                             ? content?.arabic?.studentSection
                             : content?.studentSection
                     }
+                    stdSecLink={content?.studentSection?.url}
                     contactSec={
                         global?.activeLanguage === "ar"
                             ? content?.arabic?.contactSection

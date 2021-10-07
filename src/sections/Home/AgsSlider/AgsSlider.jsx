@@ -64,7 +64,7 @@ function AgsSlider(props) {
                                                 </button>
                                                 : ""
                                         )}
-                                        <h5 className={"overview-heading"}>
+                                        <h5 className={"overview-heading text-center"}>
                                             {
                                                 props.isArabic
                                                     ? slides?.arabic?.title

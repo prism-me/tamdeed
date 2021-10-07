@@ -3,6 +3,7 @@ import location_icon from "../../assets/images/contact/map-pin.png";
 import phone_icon from "../../assets/images/contact/phone.png";
 import email_icon from "../../assets/images/contact/mail.png";
 import bg_img from "../../assets/images/agsbanners/contactUs.png";
+import bg_img_arabic from "../../assets/images/agsbanners/ContactUsArabic.png";
 import { STRINGS } from "../../utils/base";
 import { API } from "../../http/API";
 import SnackBar from "../../components/SnackBar/SnackBar";
@@ -333,7 +334,7 @@ const Contact = (props) => {
                     </div>
                 </div>
                 <div className="img-hld">
-                    <img className="sec-bg-img" src={bg_img} alt={"#"} />
+                    <img className="sec-bg-img" src={props.language === "ar" ? bg_img_arabic : bg_img} alt={"#"} />
                 </div>
             </div>
             <div className="contact-footer">

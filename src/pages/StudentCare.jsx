@@ -42,6 +42,7 @@ class StudentCare extends Component {
                     isArabic={
                         global?.activeLanguage === "ar"
                     }
+                    language={global?.activeLanguage}
                 />
             </div>
         );

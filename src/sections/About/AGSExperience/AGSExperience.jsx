@@ -1,9 +1,13 @@
-import React from 'react';
+import { React, useState } from 'react';
 import exp_bg_img from "../../../assets/images/about/AGSExperince.jpg";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import { constants } from "../../../utils/constants"
 
 const AgsExperience = (props) => {
+    const [isReadMore, setIsReadMore] = useState(true);
+    const toggleReadMore = () => {
+        setIsReadMore(!isReadMore);
+    };
     return (
         <div className="AGSExperience">
             <h3 className="Title">
@@ -18,19 +22,44 @@ const AgsExperience = (props) => {
                     <Col sm={12} lg={7}>
                         <p className="subtitle"
                             dangerouslySetInnerHTML={{
-                                __html:
-                                    props.aboutAgs?.description
+                                __html: isReadMore ?
+                                    props.aboutAgs?.description.substr(
+                                        0,
+                                        510
+                                    )
+                                    : props.aboutAgs?.description
                             }}
+                        // dangerouslySetInnerHTML={{
+                        //     __html:
+                        //         props.aboutAgs?.description
+                        // }}
                         >
                             {/* At American Gulf School, an American Curriculum School in Sharjah, we believe that a diverse curriculum broadens not only minds but opportunities too. Our learners are encouraged to question and experiment to find answers to critical thinking questions, giving each learner confidence within their own ability to achieve their full potential. It is designed and delivered to bring out the best in our learners, both academically and personally. We pride ourselves on being one of the best international schools in the UAE. */}
                         </p>
-                        <button className={"viewButton"}>
+                        <p onClick={toggleReadMore}>
+                            {isReadMore ? <button className={"viewButton"}>
+                                {
+                                    constants?.site_content?.view_more[
+                                    props.language
+                                    ]
+                                }
+                                {/* View more */}
+                            </button> : <button className={"viewButton"}>
+                                {
+                                    constants?.site_content?.learn_less[
+                                    props.language
+                                    ]
+                                }
+                                {/* Show less */}
+                            </button>}
+                        </p>
+                        {/* <button className={"viewButton"}>
                             {
                                 constants?.site_content?.view_more[
                                 props.language
                                 ]
                             }
-                        </button>
+                        </button> */}
                     </Col>
                 </Row>
             </Container>

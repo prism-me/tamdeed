@@ -4,7 +4,6 @@ import kindergarten_img from "../../../assets/images/Curriculum/Kindergarten.png
 import middle_school from "../../../assets/images/Curriculum/MiddleSchool.png";
 import p_school from "../../../assets/images/Curriculum/PrimarySchool.png";
 import { useHistory } from "react-router-dom";
-import { STRINGS } from "../../../utils/base";
 
 const AcademicsCurriculum = (props) => {
     const history = useHistory();

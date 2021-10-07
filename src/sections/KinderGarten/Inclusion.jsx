@@ -123,7 +123,7 @@ function Inclusion(props) {
               <div
                 className="d-flex justify-content-center align-items-center imgheight"
 
-                style={{ backgroundImage: `url(${props.secFiveVideo?.image})` }}
+                style={{ backgroundImage: `url(${props.secFiveVideo?.image})`, height: "410px" }}
 
               >
                 <div className="video-promo-content mt-4 ">

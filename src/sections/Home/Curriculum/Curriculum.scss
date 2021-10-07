@@ -55,6 +55,7 @@
           font-weight: 500;
           background: transparent;
           border-bottom: 1px solid black;
+          font-weight: bold;
           border-left: 0;
           border-right: 0;
           border-top: 0;
@@ -75,7 +76,7 @@
         }
         .subtitle{
           margin-top: 0.5rem;
-          font-size: 1rem;
+          font-size: $sub-fonts;
           text-align: justify;
           font-weight: 500;
           @media #{$sm,$md} {

@@ -80,7 +80,7 @@
                   border: none;
                   border-radius: 30px;
                   padding: 7px 10px;
-                  font-size: 16px;
+                  font-size: $sub-fonts;
                   color: white;
                   outline: none;
 
@@ -154,7 +154,7 @@
               margin: 0 2px;
 
               p {
-                font-size: 16px;
+                font-size: $sub-fonts;
                 margin: 0;
                 color: white;
                 @media #{$sm} {
@@ -187,7 +187,7 @@
                   margin: 0.8rem 0;
                 }
                 p {
-                  font-size: 16px;
+                  font-size: $sub-fonts;
                   font-weight: bold;
                   margin: 0;
                   text-transform: uppercase;
@@ -211,6 +211,7 @@
                 }
                 .txt{
                   margin: 0 3px;
+                  font-size: $sub-fonts;
                 }
               }
               .icon-txt-hld.ic{

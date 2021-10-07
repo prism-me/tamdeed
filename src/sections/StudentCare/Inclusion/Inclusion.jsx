@@ -31,7 +31,7 @@ function Inclusion(props) {
                         }
                         id={index} key={index + x.title}
                     >
-                        <Row>
+                        <Row className="align-items-center">
                             <Col sm={4} md={4} lg={4}>
                                 <div className="d-flex justify-content-center align-items-center imgheight"
                                     style={{ backgroundImage: `url(${x.thumbnail})` }}
@@ -59,7 +59,6 @@ function Inclusion(props) {
                                             ? "text-right subTitle"
                                             : "text-left subTitle"
                                     }
-                                    // {isReadMore ? text.slice(0, 1000) : text}
                                     dangerouslySetInnerHTML={{
                                         __html: isReadMore ?
                                             props.isArabic
@@ -83,7 +82,7 @@ function Inclusion(props) {
                                 <p className={"subTitle"}>
                                     Furthermore, our school believes that these learning beliefs are applied to all learners including learners that are in need of special assistance due to exceptional needs. This includes children who are on the gifted end of the learning continuum and children with learning challenges.
                                 </p> */}
-                                {index === 0 ?
+                                {x.description.length >= 810 ?
                                     // <button className={"LearnmoreButton"}>
                                     //     Learn more
                                     // </button>

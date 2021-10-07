@@ -1,13 +1,13 @@
 .Payment{
-  padding-top: 29rem;
+  padding-top: 30rem;
   // padding-top: 3rem;
   @media #{$sm,$md} {
     padding-top: 2rem;
   }
   .FeesButton{
     border-bottom: 1px solid #4838FF;
-    font-weight: 500;
-    font-size: 18px;
+    font-weight: bold;
+    font-size: $sub-fonts;
     color: #4838FF;
     background: transparent;
     border-left: 0;

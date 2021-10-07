@@ -19,6 +19,9 @@
       @media #{$sm} {
         margin-bottom: 0;
       }
+      .Acctitle{
+        font-size: $sub-fonts !important;
+      }
     }
     .accordianBorderStyle{
       border: 1px solid $bg-color;
@@ -36,8 +39,8 @@
     }
     .admissionButton{
       border-bottom: 1px solid #4838FF;
-      font-weight: 500;
-      font-size: 18px;
+      font-size: $sub-fonts;
+      font-weight: bold;
       color: #4838FF;
       background: transparent;
       border-left: 0;

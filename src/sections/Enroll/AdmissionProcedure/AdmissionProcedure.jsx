@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
         width: '100%',
     },
     heading: {
-        fontSize: theme.typography.pxToRem(18),
+        fontSize: theme.typography.pxToRem(17),
         fontWeight: theme.typography.fontWeightRegular,
     },
 }));
@@ -44,7 +44,7 @@ function AdmissionProcedure(props) {
                             id="panel1a-header"
                             className={"accordianBorderStyle"}
                         >
-                            <Typography className={classes.heading}>
+                            <Typography className={"Acctitle"}>
                                 <button
                                     className={"AccButton stretched-link"}
                                     onClick={scrollToBottom}>
@@ -61,13 +61,14 @@ function AdmissionProcedure(props) {
                             id="panel1a-header"
                             className={"accordianBorderStyle"}
                         >
-                            <Typography className={classes.heading}>
+                            <Typography className={"Acctitle"}>
                                 {props.stepTwo?.title}
                                 {/* <b>STEP 2 </b>&mdash; Submit required documents for assessment via email to <u><a href="mailto:admissions@ags.ae" className={"text-dark"}>admissions@ags.ae</a></u> */}
                             </Typography>
                         </AccordionSummary>
                         <AccordionDetails>
                             <Typography
+                                className={"Acctitle"}
                                 dangerouslySetInnerHTML={{
                                     __html:
                                         props.stepTwo?.description
@@ -92,13 +93,14 @@ function AdmissionProcedure(props) {
                             id="panel1a-header"
                             className={"accordianBorderStyle"}
                         >
-                            <Typography className={classes.heading}>
+                            <Typography className={"Acctitle"}>
                                 {props.stepThree?.title}
                                 {/* <b>STEP 3 </b>&mdash; Pay application fee and book an assessment schedule */}
                             </Typography>
                         </AccordionSummary>
                         <AccordionDetails>
                             <Typography
+                                className={"Acctitle"}
                                 dangerouslySetInnerHTML={{
                                     __html:
                                         props.stepThree?.description
@@ -115,13 +117,14 @@ function AdmissionProcedure(props) {
                             id="panel1a-header"
                             className={"accordianBorderStyle"}
                         >
-                            <Typography className={classes.heading}>
+                            <Typography className={"Acctitle"}>
                                 {props.stepFour?.title}
                                 {/* <b>STEP 4 </b>&mdash; Admissions Committee reviews assessment and student’s profile */}
                             </Typography>
                         </AccordionSummary>
                         <AccordionDetails>
                             <Typography
+                                className={"Acctitle"}
                                 dangerouslySetInnerHTML={{
                                     __html:
                                         props.stepFour?.description
@@ -138,13 +141,14 @@ function AdmissionProcedure(props) {
                             id="panel1a-header"
                             className={"accordianBorderStyle"}
                         >
-                            <Typography className={classes.heading}>
+                            <Typography className={"Acctitle"}>
                                 {props.stepFive?.title}
                                 {/* <b>STEP 5 </b>&mdash; Acceptance */}
                             </Typography>
                         </AccordionSummary>
                         <AccordionDetails>
                             <Typography
+                                className={"Acctitle"}
                                 dangerouslySetInnerHTML={{
                                     __html:
                                         props.stepFive?.description

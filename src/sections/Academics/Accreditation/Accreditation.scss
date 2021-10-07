@@ -59,7 +59,7 @@
           }
           .subtitle{
             margin-top: 0.5rem;
-            font-size: 1rem;
+            font-size: $sub-fonts;
             text-align: center;
             font-weight: 500;
             @media #{$sm,$md} {

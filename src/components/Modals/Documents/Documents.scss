@@ -1,30 +1,34 @@
 .Documents {
   z-index: 1111;
-  .Title {
-    font-size: 20px;
-    font-weight: 700;
-    text-align: justify;
-    color: $bg-color;
-    @media #{$sm} {
-      font-size: 18px;
-    }
-  }
-  .UlStyle{
-    color: $bg-color;
-    font-size: 20px;
-    text-align: justify;
-    font-weight: 500;
-    @media #{$sm} {
-      font-size: 18px;
-    }
-  }
     .SubTitle{
-      color: $bg-color;
-      font-size: 20px;
-      font-weight: 500;
-      text-align: justify;
-      @media #{$sm} {
+      h2{
         font-size: 18px;
+        font-weight: 700;
+        text-align: justify;
+        color: $bg-color;
+        @media #{$sm} {
+          font-size: 18px;
+        }
+      }
+      p{
+        color: $bg-color;
+        font-size: $sub-fonts;
+        text-align: justify;
+        font-weight: 500;
+        margin-bottom: 0.3rem;
+        @media #{$sm} {
+          font-size: 17px;
+        }
+      }
+      li{
+        color: $bg-color;
+        font-size: $sub-fonts;
+        text-align: justify;
+        font-weight: 500;
+        margin-bottom: 0.3rem;
+        @media #{$sm} {
+          font-size: 17px;
+        }
       }
     }
     .modalIconArabic{

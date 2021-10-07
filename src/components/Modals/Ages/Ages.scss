@@ -1,18 +1,8 @@
 .Ages {
   z-index: 1111;
-  .Title {
-    font-size: 20px;
-    font-weight: 700;
-    color: $bg-color;
-  }
-  .UlStyle{
-    color: $bg-color;
-    font-size: 20px;
-    font-weight: 500;
-  }
   .SubTitle{
     color: $bg-color;
-    font-size: 20px;
+    font-size: $sub-fonts;
     font-weight: 500;
   }
   .modalIconArabic{
@@ -51,10 +41,12 @@
   .table thead th {
     border-bottom: 1px solid #CDB786;
     border-top: none;
+    font-size: $sub-fonts;
   }
 
   .table td {
     border-bottom: 1px solid #CDB786;
+    font-size: $sub-fonts;
   }
 }
 .agsModalDir{

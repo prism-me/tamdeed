@@ -45,12 +45,12 @@ export const constants = {
       ar: "اقرأ أكثر>",
     },
     learn_more: {
-      en: "Learn More >",
-      ar: "للمزيد >",
+      en: "Learn More ",
+      ar: "للمزيد ",
     },
     learn_less: {
-      en: "Show Less >",
-      ar: "إظهار أقل>",
+      en: "Show Less ",
+      ar: "إظهار أقل",
     },
     waitlist: {
       title: {

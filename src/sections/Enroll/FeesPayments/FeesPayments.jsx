@@ -131,9 +131,9 @@ function FeesPayments(props) {
                                             </tr>
                                         </tbody>
                                     </Table>
-                                    <div className={"d-flex justify-content-center align-items-center font-weight-bold"}>
+                                    <div className={"d-flex justify-content-center align-items-center"}>
                                         <ul>
-                                            <li >
+                                            <li className="subtitle">
                                                 30% discount will be applied to the Academic Year 2021/2022.
                                             </li>
                                         </ul>
@@ -251,9 +251,9 @@ function FeesPayments(props) {
                                     </tr>
                                 </tbody>
                             </Table>
-                            <div className={"d-flex justify-content-center align-items-center font-weight-bold"}>
+                            <div className={"d-flex justify-content-center align-items-center"}>
                                 <ul>
-                                    <li>
+                                    <li className="subtitle">
                                         30% discount will be applied to the Academic Year 2021/2022.
                                     </li>
                                 </ul>

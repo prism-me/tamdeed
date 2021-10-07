@@ -1,26 +1,21 @@
 .GeneralPolicies {
   z-index: 1111;
-  .Title {
-    font-size: 20px;
-    font-weight: 700;
-    text-align: justify;
-    color: $bg-color;
-    @media #{$sm} {
-      font-size: 18px;
-    }
-  }
-  .UlStyle{
-    color: $bg-color;
-    font-size: 20px;
-    font-weight: 500;
-    text-align: justify;
-    @media #{$sm} {
-      font-size: 18px;
-    }
-  }
   .SubTitle{
+    h4{
+      font-size: 18px;
+      font-weight: 700;
+      text-align: justify;
+      text-transform: uppercase;
+      color: $bg-color;
+      @media #{$sm} {
+        font-size: 18px;
+      }
+    }
+    li{
+      color: $bg-color;
+    }
     color: $bg-color;
-    font-size: 20px;
+    font-size: $sub-fonts;
     font-weight: 500;
     text-align: justify;
     @media #{$sm} {

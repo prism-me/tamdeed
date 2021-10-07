@@ -26,12 +26,13 @@ const AccordionItem = ({ question, answer, index }) => {
         aria-controls="panel1a-content"
         id="panel1a-header"
       >
-        <Typography className={classes.heading}>
+        <Typography className={"faqsubTitle"}>
           {question}
         </Typography>
       </AccordionSummary>
       <AccordionDetails>
         <Typography
+          className="faqsubTitle"
           dangerouslySetInnerHTML={{ __html: answer }}
         >
         </Typography>

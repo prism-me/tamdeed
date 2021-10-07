@@ -110,6 +110,7 @@ function Inclusion(props) {
         <Row className="MiddleAlignCenter">
           <Col sm={12} md={12} lg={12} className="pt-3">
             <p className={"subTitle text-center"}
+              style={{ fontSize: "17px" }}
               dangerouslySetInnerHTML={{
                 __html:
                   props.secThree?.description
@@ -122,6 +123,7 @@ function Inclusion(props) {
         <Row className="MiddleAlignCenter">
           <Col sm={12} md={12} lg={12} className="pt-3">
             <p className={"subTitle text-center"}
+              style={{ fontSize: "17px" }}
               dangerouslySetInnerHTML={{
                 __html:
                   props.secFour?.description
@@ -161,6 +163,7 @@ function Inclusion(props) {
                 {/* International Mindedness and Multilingualism */}
               </h3>
               <p className={"subTitle2"}
+                style={{ fontSize: "17px" }}
                 dangerouslySetInnerHTML={{
                   __html:
                     props.secFive?.description

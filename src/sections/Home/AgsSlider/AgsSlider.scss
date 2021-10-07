@@ -76,6 +76,7 @@
       position: absolute;
       // bottom: 5%;
       font-size: 18px;
+      text-transform: uppercase;
       font-weight: 500;
       color: $white;
       bottom: -2%;
@@ -85,12 +86,6 @@
       border-bottom-left-radius: 30px;
       border-bottom-right-radius: 30px;
       height: 25%;
-      .title{
-        font-size: 16px;
-        @media #{$sm,$lsm,$xsm,$tiny,$md} {
-          font-size: 14px;
-        }
-      }
       @media #{$lg} {
         font-size: 16px;
       }

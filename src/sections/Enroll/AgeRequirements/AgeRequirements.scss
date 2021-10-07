@@ -19,7 +19,7 @@
       }
     }
     .subTitle{
-      font-size: 18px;
+      font-size: $sub-fonts;
       font-weight: 500;
       margin: 0 3rem;
       @media #{$sm} {
@@ -30,8 +30,8 @@
     }
     .agereqButton{
       border-bottom: 1px solid #4838FF;
-      font-weight: 500;
-      font-size: 18px;
+      font-size: $sub-fonts;
+      font-weight: bold;
       color: #4838FF;
       background: transparent;
       border-left: 0;

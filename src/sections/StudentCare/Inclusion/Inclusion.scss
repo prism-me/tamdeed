@@ -21,20 +21,17 @@
     }
     .subTitle {
       margin-top: 0 !important;
-      font-size: 16px;
+      font-size: $sub-fonts;
       font-weight: 400;
       margin-bottom: 1rem;
       text-align: justify;
     }
   .LearnmoreButton{
     font-weight: 500;
-    font-size: 16px;
+    font-size: $sub-fonts;
     background: transparent;
-    border-bottom: 1px solid black;
-    border-left: 0;
-    border-right: 0;
-    border-top: 0;
-    //margin: 0 2rem;
+    border:none;
+    font-weight: bold;
     @media #{$sm,$md} {
       margin: 0;
     }

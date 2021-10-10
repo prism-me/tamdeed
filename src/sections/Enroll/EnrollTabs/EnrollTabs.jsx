@@ -32,7 +32,7 @@ export default function EnrollTabs(props) {
             <Hidden smDown>
                 <div className={"EnrollTabs"}>
                     <div className={"buttons-flex"}>
-                        <button className={"TabButton btn-lg"}
+                        <button className={"TabButton btn-lg active"}
                             onClick={scrollToBottom1}
                         >
                             {

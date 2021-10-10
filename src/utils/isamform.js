@@ -1,4 +1,5 @@
-document.write(`<script type="text/javascript">
+document.write(`
+<script type="text/javascript">
 var fwq = {
     apiRootUrl: 'https://agsae.isams.cloud/api/Rest/1.0/',
     apiKey: 'BD5BD032\x2DAA7D\x2D4F5C\x2DAAA4\x2DC7BABAA6A48B',

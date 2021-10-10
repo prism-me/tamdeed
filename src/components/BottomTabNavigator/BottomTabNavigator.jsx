@@ -19,7 +19,7 @@ const useStyles = makeStyles({
   },
 });
 
-function BottomTabNavigator() {
+function BottomTabNavigator(props) {
   const classes = useStyles();
   const [value, setValue] = React.useState("");
   const [modalShow, setModalShow] = React.useState(false);
@@ -36,21 +36,21 @@ function BottomTabNavigator() {
         onChange={handleChange}
         className={classes.root}
       >
-        <Link to="#">
+        <Link to={`/${props.activeLanguage}/agsPortal`}>
           <button className={"BNButton d-flex justify-content-between align-items-center"}>
-            <InputIcon className={"iconSize"}/>
+            <InputIcon className={"iconSize"} />
             <span>AGS Portal</span>
           </button>
         </Link>
-        <Link to="/Enroll">
+        <Link to={`/${props.activeLanguage}/Enroll`}>
           <button className={"BNButton d-flex justify-content-between align-items-center"}>
-            <PersonAddIcon className={"iconSize"}/>
+            <PersonAddIcon className={"iconSize"} />
             <span>ENROLL</span>
           </button>
         </Link>
-        <Link to="#">
+        <Link to={`/${props.activeLanguage}/contact`}>
           <button className={"BNButton d-flex justify-content-between align-items-center"}>
-            <PhoneIcon className={"iconSize"}/>
+            <PhoneIcon className={"iconSize"} />
             <span>Contact Us</span>
           </button>
         </Link>

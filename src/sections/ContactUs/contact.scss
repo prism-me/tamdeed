@@ -47,6 +47,9 @@
           .heading {
             font-size: 25px;
             color: white;
+            @media #{$sm,$md} {
+              margin-top: 2rem;
+            }
           }
         }
 

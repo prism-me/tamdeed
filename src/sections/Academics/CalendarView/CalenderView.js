@@ -3,6 +3,7 @@ import { Modal, Button, Row, Col, Form, Container, Table, Card } from "react-boo
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import { Grid } from "@material-ui/core";
 import { constants } from "../../../utils/constants"
+import dateFormat from 'dateformat';
 
 const CalendarView = (props) => {
     return (
@@ -58,7 +59,10 @@ const CalendarView = (props) => {
                                     <div className="circle-holder">
                                         <div className="_circle">
                                             <div className="_circle-inner">
-                                                {slides.date}
+                                                {/* {slides.date} */}
+                                                {
+                                                    dateFormat(`${slides.date}`, "dS mmmm")
+                                                }
                                                 {/* 29<span className="_circle-em">th</span> */}
                                             </div>
                                             {/* <span className="_circle-month">AUG</span> */}

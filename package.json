@@ -10,6 +10,7 @@
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
+    "dateformat": "^5.0.1",
     "flag-icon-css": "^3.5.0",
     "history": "^5.0.0",
     "i18next": "^20.6.0",

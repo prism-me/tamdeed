@@ -213,7 +213,9 @@ function Layout(props) {
       {props.children}
       <BackToTop />
       <Footer />
-      <BottomTabNavigator />
+      <BottomTabNavigator
+        activeLanguage={global.activeLanguage}
+      />
     </div>
   );
 }
@@ -221,9 +223,6 @@ function Layout(props) {
 
 const mapStateToProps = (state) => {
   return {
-    products: state?.productReducer?.products,
-    totalProducts: state?.productReducer?.totalProducts,
-    categories: state?.productReducer?.categories,
     showSpinner: state?.globalReducer?.showSpinner,
     global: state.globalReducer,
   };
@@ -231,10 +230,6 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    logout: () =>
-      dispatch({
-        type: "LOGOUT",
-      }),
     setActiveLanguage: (language) =>
       dispatch({
         type: types.SET_ACTIVE_LANGUAGE,

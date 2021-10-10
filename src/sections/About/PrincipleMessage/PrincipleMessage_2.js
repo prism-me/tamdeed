@@ -17,15 +17,20 @@ const PrincipleMessage = (props) => {
                     style={{ backgroundImage: `url(${props.PriVideo?.image})` }}
                 >
                     <div className="video-promo-content mt-4 ">
-                        <ModalVideo channel='youtube' youtube={{ autoplay: 1, mute: 1 }} isOpen={isOpen} videoId={props.PriVideo?.video_link?.split("/")[3]} onClose={() => setOpen(false)} />
+                        <ModalVideo channel='vimeo' autoplay={true} isOpen={isOpen} videoId={props.PriVideo?.video_link?.split("/")[3]} onClose={() => setOpen(false)} />
                         <button className="btn video-play-icon" onClick={() => setOpen(true)}>
                             <PlayArrowIcon className={"playSize"} />
                         </button>
                     </div>
                 </div>
                 <hr className="principalmsgHr" />
-                <div className="sucessDiv">
-                    <p className={"subtitle"}
+                <div
+                    // className="sucessDiv"
+                    className={props?.language === "ar" ? "sucessDivArabic" : "sucessDiv"}
+                >
+                    <p
+                        // className={"subtitle"}
+                        className={props?.language === "ar" ? "subtitleArabic" : "subtitle"}
                         dangerouslySetInnerHTML={{
                             __html:
                                 props.PrincipleMsg?.description

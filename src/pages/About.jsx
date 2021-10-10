@@ -109,6 +109,7 @@ class About extends Component {
                             : content?.principalSection
                     }
                     PriVideo={content?.principalSection}
+                    language={global?.activeLanguage}
                 />
                 <AgsEthos
                     AGSEthos={

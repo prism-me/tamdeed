@@ -40,6 +40,10 @@ export const constants = {
       en: "MEET THE MENTORS",
       ar: "قابل المرشدين",
     },
+    meet_colleague: {
+      en: "MEET YOUR COLLEAGUES",
+      ar: "قابل زملائك",
+    },
     read_more: {
       en: "Read More >",
       ar: "اقرأ أكثر>",
@@ -51,6 +55,10 @@ export const constants = {
     learn_less: {
       en: "Show Less ",
       ar: "إظهار أقل",
+    },
+    apply_now: {
+      en: "APPLY NOW",
+      ar: "قدم الآن",
     },
     waitlist: {
       title: {

@@ -56,7 +56,7 @@ export default function PrincipalSlider(props) {
                                         dangerouslySetInnerHTML={{
                                             __html:
                                                 props.isArabic
-                                                    ? slides.description
+                                                    ? slides?.arabic?.description
                                                     : slides.description
                                         }}
                                     ></span>

@@ -3,13 +3,15 @@ import { Grid } from "@material-ui/core";
 import { Card, Col, Row, Container } from "react-bootstrap";
 import bg_img_e from "./../../../assets/images/agsbackgrounds/agscareer.jpg";
 import { Hidden } from "@material-ui/core";
+import { constants } from "../../../utils/constants"
 
-const Positions = () => {
+const Positions = (props) => {
     return (
         <>
             <div className="Position">
                 <h3 className={"Title"}>
-                    OPEN POSITIONS
+                    {props?.openPosition?.title}
+                    {/* OPEN POSITIONS */}
                 </h3>
                 <Hidden smDown>
                     <div
@@ -27,12 +29,20 @@ const Positions = () => {
                                                     <Row>
                                                         <Col xs={12} sm={12} md={12} lg={12}>
                                                             <p className={"subtitle"}>
-                                                                Reading Specialist
+                                                                {props?.reading?.title}
+                                                                {/* Reading Specialist */}
                                                             </p>
                                                         </Col>
                                                         <br />
                                                         <Col xs={12} sm={12} md={12} lg={12} className="d-flex justify-content-center align-items-center">
-                                                            <button class="schoolbtn btn-lg">APPLY NOW</button>
+                                                            <button class="schoolbtn btn-lg">
+                                                                {
+                                                                    constants?.site_content?.apply_now[
+                                                                    props.language
+                                                                    ]
+                                                                }
+                                                                {/* APPLY NOW */}
+                                                            </button>
                                                         </Col>
                                                     </Row>
                                                 </Card.Body>
@@ -45,12 +55,20 @@ const Positions = () => {
                                                 <Row>
                                                     <Col xs={12} sm={12} md={12} lg={12}>
                                                         <p className={"subtitle"}>
-                                                            Academic Counselor
+                                                            {props?.academic?.title}
+                                                            {/* Academic Counselor */}
                                                         </p>
                                                     </Col>
                                                     <br />
                                                     <Col xs={12} sm={12} md={12} lg={12} className="d-flex justify-content-center align-items-center">
-                                                        <button class="schoolbtn btn-lg">APPLY NOW</button>
+                                                        <button class="schoolbtn btn-lg">
+                                                            {
+                                                                constants?.site_content?.apply_now[
+                                                                props.language
+                                                                ]
+                                                            }
+                                                            {/* APPLY NOW */}
+                                                        </button>
                                                     </Col>
                                                 </Row>
                                             </Card.Body>
@@ -62,12 +80,20 @@ const Positions = () => {
                                                 <Row>
                                                     <Col xs={12} sm={12} md={12} lg={12}>
                                                         <p className={"subtitle"}>
-                                                            Social Worker
+                                                            {props?.social?.title}
+                                                            {/* Social Worker */}
                                                         </p>
                                                     </Col>
                                                     <br />
                                                     <Col xs={12} sm={12} md={12} lg={12} className="d-flex justify-content-center align-items-center">
-                                                        <button class="schoolbtn btn-lg">APPLY NOW</button>
+                                                        <button class="schoolbtn btn-lg">
+                                                            {
+                                                                constants?.site_content?.apply_now[
+                                                                props.language
+                                                                ]
+                                                            }
+                                                            {/* APPLY NOW */}
+                                                        </button>
                                                     </Col>
                                                 </Row>
                                             </Card.Body>
@@ -90,12 +116,20 @@ const Positions = () => {
                                                 <Row>
                                                     <Col xs={12} sm={12} md={12} lg={12}>
                                                         <p className={"subtitle"}>
-                                                            Reading Specialist
+                                                            {props?.reading?.title}
+                                                            {/* Reading Specialist */}
                                                         </p>
                                                     </Col>
                                                     <br />
                                                     <Col xs={12} sm={12} md={12} lg={12}>
-                                                        <button class="schoolbtn btn-lg">APPLY NOW</button>
+                                                        <button class="schoolbtn btn-lg">
+                                                            {
+                                                                constants?.site_content?.apply_now[
+                                                                props.language
+                                                                ]
+                                                            }
+                                                            {/* APPLY NOW */}
+                                                        </button>
                                                     </Col>
                                                 </Row>
                                             </Card.Body>
@@ -108,12 +142,20 @@ const Positions = () => {
                                             <Row>
                                                 <Col xs={12} sm={12} md={12} lg={12}>
                                                     <p className={"subtitle"}>
-                                                        Academic Counselor
+                                                        {props?.academic?.title}
+                                                        {/* Academic Counselor */}
                                                     </p>
                                                 </Col>
                                                 <br />
                                                 <Col xs={12} sm={12} md={12} lg={12}>
-                                                    <button class="schoolbtn btn-lg">APPLY NOW</button>
+                                                    <button class="schoolbtn btn-lg">
+                                                        {
+                                                            constants?.site_content?.apply_now[
+                                                            props.language
+                                                            ]
+                                                        }
+                                                        {/* APPLY NOW */}
+                                                    </button>
                                                 </Col>
                                             </Row>
                                         </Card.Body>
@@ -125,12 +167,20 @@ const Positions = () => {
                                             <Row>
                                                 <Col xs={12} sm={12} md={12} lg={12}>
                                                     <p className={"subtitle"}>
-                                                        Social Worker
+                                                        {props?.social?.title}
+                                                        {/* Social Worker */}
                                                     </p>
                                                 </Col>
                                                 <br />
                                                 <Col xs={12} sm={12} md={12} lg={12}>
-                                                    <button class="schoolbtn btn-lg">APPLY NOW</button>
+                                                    <button class="schoolbtn btn-lg">
+                                                        {
+                                                            constants?.site_content?.apply_now[
+                                                            props.language
+                                                            ]
+                                                        }
+                                                        {/* APPLY NOW */}
+                                                    </button>
                                                 </Col>
                                             </Row>
                                         </Card.Body>

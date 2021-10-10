@@ -27,7 +27,8 @@ function Schoolinclusion(props) {
                                 style={{ backgroundImage: `url(${props.secOneVideo?.image})` }}
                             >
                                 <div className="video-promo-content mt-4 ">
-                                    <ModalVideo channel='youtube' youtube={{ autoplay: 1, mute: 1 }} isOpen={isOpen} videoId={props.secOneVideo?.video_link?.split("/")[3]} onClose={() => setOpen(false)} />
+                                    <ModalVideo channel='vimeo'
+                                        autoplay={true} isOpen={isOpen} videoId={props.secOneVideo?.video_link?.split("/")[3]} onClose={() => setOpen(false)} />
                                     <button className="btn video-play-icon" onClick={() => setOpen(true)}>
                                         <PlayArrowIcon className={"playSize"} />
                                     </button>

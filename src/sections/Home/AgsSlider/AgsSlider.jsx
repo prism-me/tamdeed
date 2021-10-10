@@ -2,34 +2,31 @@ import React, { useState } from "react";
 import "react-multi-carousel/lib/styles.css";
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 import ModalVideo from 'react-modal-video'
-import OwlCarousel from "react-owl-carousel";
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel/dist/assets/owl.theme.default.css";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 import { constants } from "../../../utils/constants"
 
 function AgsSlider(props) {
     const [openVideo, setOpenVideo] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    const options = {
-        loop: true,
-        margin: 10,
-        items: 4,
-        autoplay: true,
-        dots: true,
-        responsive: {
-            0: {
-                items: 1,
-            },
-            450: {
-                items: 2,
-            },
-            600: {
-                items: 3,
-            },
-            1000: {
-                items: 4,
-            },
+    const responsive = {
+        superLargeDesktop: {
+            // the naming can be any, depends on you.
+            breakpoint: { max: 4000, min: 3000 },
+            items: 5
+        },
+        desktop: {
+            breakpoint: { max: 3000, min: 1024 },
+            items: 4
+        },
+        tablet: {
+            breakpoint: { max: 1024, min: 464 },
+            items: 2
+        },
+        mobile: {
+            breakpoint: { max: 464, min: 0 },
+            items: 1
         }
     };
     return (
@@ -43,7 +40,23 @@ function AgsSlider(props) {
                 {/* LIFE AT AMERICAN GULF SCHOOL */}
             </h3>
 
-            <OwlCarousel className="owl-theme" {...options}>
+            <Carousel responsive={responsive}
+                swipeable={false}
+                draggable={false}
+                showDots={true}
+                arrows={false}
+                responsive={responsive}
+                ssr={true} // means to render carousel on server-side.
+                infinite={true}
+                autoPlay={true}
+                autoPlaySpeed={3000}
+                keyBoardControl={true}
+                customTransition="all .5"
+                transitionDuration={500}
+                containerClass="carousel-container"
+                dotListClass="custom-dot-list-style"
+                itemClass="listStyle"
+            >
                 {
                     props.lifeagsData.map((slides, index) => (
                         <div className="item">
@@ -78,13 +91,14 @@ function AgsSlider(props) {
                         </div>
                     ))
                 }
-            </OwlCarousel>
+            </Carousel>
             <ModalVideo
-                channel="youtube"
-                youtube={{
-                    autoplay: 1,
-                    mute: 1
-                }}
+                channel='vimeo'
+                autoplay={true}
+                // youtube={{
+                //     autoplay: 1,
+                //     mute: 1
+                // }}
                 isOpen={openVideo}
                 videoId={props.lifeagsData[currentIndex]?.video_link?.split("/")[3]}
                 onClose={() => setOpenVideo(false)}

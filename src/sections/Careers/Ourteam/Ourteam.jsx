@@ -1,30 +1,27 @@
 import React from "react";
 import "react-multi-carousel/lib/styles.css";
-import OwlCarousel from "react-owl-carousel";
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel/dist/assets/owl.theme.default.css";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 import { constants } from "../../../utils/constants"
 
 export default function Ourteam(props) {
-    const options = {
-        loop: true,
-        margin: 10,
-        items: 4,
-        autoplay: true,
-        dots: true,
-        responsive: {
-            0: {
-                items: 1,
-            },
-            450: {
-                items: 2,
-            },
-            600: {
-                items: 3,
-            },
-            1000: {
-                items: 4,
-            },
+    const responsive = {
+        superLargeDesktop: {
+            // the naming can be any, depends on you.
+            breakpoint: { max: 4000, min: 3000 },
+            items: 5
+        },
+        desktop: {
+            breakpoint: { max: 3000, min: 1024 },
+            items: 4
+        },
+        tablet: {
+            breakpoint: { max: 1024, min: 464 },
+            items: 2
+        },
+        mobile: {
+            breakpoint: { max: 464, min: 0 },
+            items: 1
         }
     };
     return (
@@ -37,7 +34,23 @@ export default function Ourteam(props) {
                 }
                 {/* MEET YOUR  COLLEAGUES */}
             </h3>
-            <OwlCarousel className="owl-theme" {...options}>
+            <Carousel responsive={responsive}
+                swipeable={false}
+                draggable={false}
+                showDots={true}
+                arrows={false}
+                responsive={responsive}
+                ssr={true} // means to render carousel on server-side.
+                infinite={true}
+                autoPlay={true}
+                autoPlaySpeed={3000}
+                keyBoardControl={true}
+                customTransition="all .5"
+                transitionDuration={500}
+                containerClass="carousel-container"
+                dotListClass="custom-dot-list-style"
+                itemClass="listStyle"
+            >
                 {
                     props.mentors.map((slides, index) => (
                         <div className={"divstyle"}>
@@ -65,7 +78,7 @@ export default function Ourteam(props) {
                         </div>
                     ))
                 }
-            </OwlCarousel>
+            </Carousel>
         </div>
     )
 }

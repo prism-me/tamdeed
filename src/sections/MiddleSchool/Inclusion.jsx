@@ -25,8 +25,8 @@ function Inclusion(props) {
               >
                 <div className="video-promo-content mt-4 ">
                   <ModalVideo
-                    channel="youtube"
-                    youtube={{ autoplay: 1, mute: 1 }}
+                    channel='vimeo'
+                    autoplay={true}
                     isOpen={isOpen}
                     videoId={props.secOneVideo?.video_link?.split("/")[3]}
                     onClose={() => setOpen(false)}
@@ -90,8 +90,8 @@ function Inclusion(props) {
               >
                 <div className="video-promo-content mt-4 ">
                   <ModalVideo
-                    channel="youtube"
-                    youtube={{ autoplay: 1, mute: 1 }}
+                    channel='vimeo'
+                    autoplay={true}
                     isOpen={isOpen}
                     videoId={props.secTwoVideo?.video_link?.split("/")[3]}
                     onClose={() => setOpen(false)}
@@ -142,8 +142,8 @@ function Inclusion(props) {
               >
                 <div className="video-promo-content mt-4 ">
                   <ModalVideo
-                    channel="youtube"
-                    youtube={{ autoplay: 1, mute: 1 }}
+                    channel='vimeo'
+                    autoplay={true}
                     isOpen={isOpen}
                     videoId={props.secFiveVideo?.video_link?.split("/")[3]}
                     onClose={() => setOpen(false)}
@@ -202,8 +202,8 @@ function Inclusion(props) {
               >
                 <div className="video-promo-content mt-4 ">
                   <ModalVideo
-                    channel="youtube"
-                    youtube={{ autoplay: 1, mute: 1 }}
+                    channel='vimeo'
+                    autoplay={true}
                     isOpen={isOpen}
                     videoId={props.secSixVideo?.video_link?.split("/")[3]}
                     onClose={() => setOpen(false)}

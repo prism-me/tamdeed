@@ -20,6 +20,7 @@ import ClearIcon from '@material-ui/icons/Clear';
 import { types } from "../redux/global/types";
 import "./Layout.scss";
 import { connect } from "react-redux";
+import { Dropdown } from "react-bootstrap";
 
 
 const drawerWidth = 280;
@@ -178,6 +179,41 @@ function Layout(props) {
                     // primary="Contact us"
                     primary={global.activeLanguage === "en" ? "Contact Us" : "اتصل بنا"}
                   />
+                </ListItem>
+                <ListItem button>
+                  <div
+                    className={props.global.activeLanguage === "ar" ? "dropdown ml-2" : "dropdown mr-2"}
+                  >
+                    <Dropdown>
+                      <Dropdown.Toggle
+                        variant=" btn-md"
+                        id="dropdown-basic"
+                        style={{ fontSize: "1.1rem", padding: "0", color: "#1A2C52" }}
+                      >
+                        {props.global.activeLanguage === "en" ? "Language" : "اللغة"}
+                      </Dropdown.Toggle>
+                      <Dropdown.Menu>
+                        <Dropdown.Item as="button"
+                          className={props.global.activeLanguage === "en" ? "active" : ""}
+                        >
+                          <div onClick={() => {
+                            props.setActiveLanguage("en");
+                          }}>
+                            {props.global.activeLanguage === "en" ? "English" : "English"}
+                          </div>
+                        </Dropdown.Item>
+                        <Dropdown.Item as="button"
+                          className={props.global.activeLanguage === "ar" ? "active" : ""}>
+                          <div onClick={() => {
+                            props.setActiveLanguage("ar");
+                          }}
+                          >
+                            {props.global.activeLanguage === "en" ? "العربية" : "العربية"}
+                          </div>
+                        </Dropdown.Item>
+                      </Dropdown.Menu>
+                    </Dropdown>
+                  </div>
                 </ListItem>
                 <ListItem button>
                   <ListItemText

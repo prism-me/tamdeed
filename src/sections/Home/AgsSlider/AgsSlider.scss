@@ -136,5 +136,13 @@
     .owl-dots {
       display: block !important;
     }
+    .listStyle{
+      padding: 2.5rem 0.5rem 2.5rem 0.5rem;
+    }
+    .react-multi-carousel-item{
+      &:hover{
+        z-index: 9999;
+      }
+    }
   }
 }

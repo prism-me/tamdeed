@@ -5,7 +5,7 @@
       padding-top: 2rem;
     }
     .InfoTitle {
-      margin-bottom: 2rem;
+      // margin-bottom: 2rem;
       font-size: 25px;
       text-transform: uppercase;
       text-align: center;
@@ -139,6 +139,14 @@
     }
     .owl-dots {
       display: block !important;
+    }
+    .listStyle{
+      padding: 2.5rem 0.5rem 2.5rem 0.5rem;
+    }
+    .react-multi-carousel-item{
+      &:hover{
+        z-index: 9999;
+      }
     }
   }
 }

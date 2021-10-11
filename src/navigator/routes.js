@@ -11,7 +11,7 @@ import FAQMain from "../pages/FAQMain";
 import OnlineForm from "../pages/OnlineForm";
 import careers from "../pages/Careers";
 import Primaryschool from "../pages/Primaryschool";
-
+import OurTeam from "../pages/OurTeam";
 
 export const routes = [
   {
@@ -109,6 +109,13 @@ export const routes = [
     name: "KinderGarten",
     path: "/KinderGarten",
     component: KinderGarten,
+    isPrivate: false,
+    exact: true,
+  },
+  {
+    name: "OurTeam",
+    path: "/OurTeam",
+    component: OurTeam,
     isPrivate: false,
     exact: true,
   },

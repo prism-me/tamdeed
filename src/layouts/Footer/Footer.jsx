@@ -62,7 +62,7 @@ function Footer(props) {
                   {/* Campus Location  */}
                   {/* </Nav.Link> */}
                 </a>
-                <LinkContainer to="#">
+                <LinkContainer to={`/${global.activeLanguage}/OurTeam`}>
                   <Nav.Link className=" fdeco">
                     {global.activeLanguage === "en" ? "Our Team" : "فريقنا"}
                     {/* Our Team  */}

@@ -98,6 +98,9 @@
 
 .socialIcon{
   padding: 0.5rem 0;
+  @media #{$sm} {
+    text-align: left !important;
+  }
 }
 
 .footerlogo{

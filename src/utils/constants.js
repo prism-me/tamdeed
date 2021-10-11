@@ -44,6 +44,10 @@ export const constants = {
       en: "MEET YOUR COLLEAGUES",
       ar: "قابل زملائك",
     },
+    our_team: {
+      en: "OUR TEAM",
+      ar: "فريقنا",
+    },
     read_more: {
       en: "Read More >",
       ar: "اقرأ أكثر>",

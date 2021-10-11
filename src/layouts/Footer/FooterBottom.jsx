@@ -13,12 +13,10 @@ function FooterBottom(props) {
     <div className="footer-bottom">
       <Container>
         <Row className="">
-          <Col sm={6} xs={6} md={6} lg >
-
+          <Col sm={6} xs={12} md={6} lg >
             <p className={props.language === "ar" ? "copyRight text-right" : "copyRight text-left"} >Copyright By <a href="/">@American Gulf School</a> - 2021 | Powered By <a href="https://www.prism-me.com/"> Prism Digital </a></p>
-
           </Col>
-          <Col sm={6} xs={6} md={6} lg>
+          <Col sm={6} xs={12} md={6} lg>
             <p className={props.language === "ar" ? "socialIcon text-left" : "socialIcon text-right"}>
               {/* <span className="mt-2">SOCIAL</span> */}
               <a href="https://www.facebook.com/American-Gulf-School-Sharjah-106277764954110" className={"footericonsize"} target="_blank">

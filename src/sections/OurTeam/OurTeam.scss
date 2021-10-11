@@ -1,0 +1,69 @@
+.ourteam{
+    padding-top: 7rem;
+    @media #{$sm,$md} {
+      padding-top: 2rem;
+    }
+    .InfoTitle {
+     margin-bottom: 2rem;
+     font-size: 25px;
+     text-transform: uppercase;
+     text-align: center;
+     font-weight: 500;
+     color: $primary-color;
+     @media #{$sm} {
+       font-size: 22px;
+       margin-bottom: 1rem;
+     }
+   }
+   .overview-heading {
+    position: absolute;
+    bottom: -2%;
+    font-size: 18px;
+    font-weight: 500;
+    color: $white;
+    padding: 4%;
+    margin-top: 2rem;
+    background: #00000085;
+    width: 100%;
+    height: 20%;
+    @media #{$lg} {
+      font-size: 18px;
+    }
+    @media #{$sm,$lsm,$xsm,$tiny,$md} {
+      font-size: 18px;
+    }
+  }
+
+  .imgheight{
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    //background-size: cover;
+    background-size: 100%;
+    background-image: linear-gradient(to bottom, rgba(0, 159, 227, 0.05) 0%, rgba(41, 168, 78, 0.05) 100%);
+    height: 307px;
+    transition: background-size 1s ease-in-out;
+    &:hover{
+      background-size: 120% /* work with the background-size */
+    }
+    @media #{$lg,$md} {
+      height: 50vh;
+    }
+    @media #{$sm,$md,$lg} {
+      background-size: cover;
+      transition: none;
+      &:hover{
+        background-size: cover; /* work with the background-size */
+      }
+    }
+    @media #{$sm,$lsm,$xsm,$tiny} {
+      height: 50vh;
+    }
+  }
+  .divstyle {
+    padding: 0 0 30px 0;
+    @media #{$sm ,$md} {
+      padding: 0 15px 30px 15px;
+    }
+  }
+}

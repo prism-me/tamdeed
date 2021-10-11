@@ -26,13 +26,16 @@ function Schoolinclusion(props) {
                             <div className="d-flex justify-content-center align-items-center imgheight"
                                 style={{ backgroundImage: `url(${props.secOneVideo?.image})` }}
                             >
-                                <div className="video-promo-content mt-4 ">
-                                    <ModalVideo channel='vimeo'
-                                        autoplay={true} isOpen={isOpen} videoId={props.secOneVideo?.video_link?.split("/")[3]} onClose={() => setOpen(false)} />
-                                    <button className="btn video-play-icon" onClick={() => setOpen(true)}>
-                                        <PlayArrowIcon className={"playSize"} />
-                                    </button>
-                                </div>
+                                {
+                                    props.secOneVideo?.video_link === null ?
+                                        "" : <div className="video-promo-content mt-4 ">
+                                            <ModalVideo channel='vimeo'
+                                                autoplay={true} isOpen={isOpen} videoId={props.secOneVideo?.video_link?.split("/")[3]} onClose={() => setOpen(false)} />
+                                            <button className="btn video-play-icon" onClick={() => setOpen(true)}>
+                                                <PlayArrowIcon className={"playSize"} />
+                                            </button>
+                                        </div>
+                                }
                             </div>
                         </Col>
                         <Col sm={7} md={7} lg={7} >

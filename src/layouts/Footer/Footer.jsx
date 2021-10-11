@@ -23,8 +23,8 @@ function Footer(props) {
       <footer>
         <Container>
           <Row>
-            <Col sm={6} xs={6} md={6} lg>
-              <Hidden smDown>
+            <Hidden smDown>
+              <Col sm={6} xs={6} md={6} lg>
                 <div className="d-flex justify-contennt-start align-items-center">
                   <img src={logo} alt="AGS-logo"
                     onClick={() => history.push("/")}
@@ -36,28 +36,13 @@ function Footer(props) {
                   GULF SCHOOL */}
                   </h5>
                 </div>
-              </Hidden>
-              <Hidden mdUp>
-                <div className="d-flex justify-content-start align-items-center">
-                  <img src={logo} alt="AGS-logo"
-                    onClick={() => history.push("/")}
-                    className="footerlogo" />
-                </div>
-                <h5 className={"font-weight-bold FooterHeading mt-3 mb-0"}>
-                  {global.activeLanguage === "en" ? "AMERICAN" : "الأمريكية"} <br />
-                  {global.activeLanguage === "en" ? "GULF SCHOOL" : "مدرسة الخليج"}
-                  {/* AMERICAN<br />
-                  GULF SCHOOL */}
-                </h5>
-              </Hidden>
-              <Hidden smDown>
                 <div className="mt-4">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3605.9867160428666!2d55.562873115012394!3d25.338226783830823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ef5f5ef006a4c83%3A0xcf95030e29d9fb7!2sAmerican%20Gulf%20School!5e0!3m2!1sen!2s!4v1632827655730!5m2!1sen!2s"
                     width="100%" style={{ border: "0" }} loading="lazy"></iframe>
                 </div>
-              </Hidden>
-            </Col>
+              </Col>
+            </Hidden>
             <Col sm={6} xs={6} md={6} lg>
               <h5 className={"font-weight-bold FooterHeading"}>
                 {global.activeLanguage === "en" ? "OUR SCHOOL" : "مدرستنا"}

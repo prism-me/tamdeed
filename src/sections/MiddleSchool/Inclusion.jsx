@@ -23,21 +23,25 @@ function Inclusion(props) {
                 className="d-flex justify-content-center align-items-center imgheight"
                 style={{ backgroundImage: `url(${props.secOneVideo?.image})` }}
               >
-                <div className="video-promo-content mt-4 ">
-                  <ModalVideo
-                    channel='vimeo'
-                    autoplay={true}
-                    isOpen={isOpen}
-                    videoId={props.secOneVideo?.video_link?.split("/")[3]}
-                    onClose={() => setOpen(false)}
-                  />
-                  <button
-                    className="btn video-play-icon"
-                    onClick={() => setOpen(true)}
-                  >
-                    <PlayArrowIcon className={"playSize"} />
-                  </button>
-                </div>
+                {
+                  props.secOneVideo?.video_link === null ?
+                    "" :
+                    <div className="video-promo-content mt-4 ">
+                      <ModalVideo
+                        channel='vimeo'
+                        autoplay={true}
+                        isOpen={isOpen}
+                        videoId={props.secOneVideo?.video_link?.split("/")[3]}
+                        onClose={() => setOpen(false)}
+                      />
+                      <button
+                        className="btn video-play-icon"
+                        onClick={() => setOpen(true)}
+                      >
+                        <PlayArrowIcon className={"playSize"} />
+                      </button>
+                    </div>
+                }
               </div>
             </Col>
             <Col sm={12} md={8} lg={12}>
@@ -88,21 +92,25 @@ function Inclusion(props) {
                 className="d-flex justify-content-center align-items-center imgheight"
                 style={{ backgroundImage: `url(${props.secTwoVideo?.image})` }}
               >
-                <div className="video-promo-content mt-4 ">
-                  <ModalVideo
-                    channel='vimeo'
-                    autoplay={true}
-                    isOpen={isOpen}
-                    videoId={props.secTwoVideo?.video_link?.split("/")[3]}
-                    onClose={() => setOpen(false)}
-                  />
-                  <button
-                    className="btn video-play-icon"
-                    onClick={() => setOpen(true)}
-                  >
-                    <PlayArrowIcon className={"playSize"} />
-                  </button>
-                </div>
+                {
+                  props.secTwoVideo?.video_link === null ?
+                    "" :
+                    <div className="video-promo-content mt-4 ">
+                      <ModalVideo
+                        channel='vimeo'
+                        autoplay={true}
+                        isOpen={isOpen}
+                        videoId={props.secTwoVideo?.video_link?.split("/")[3]}
+                        onClose={() => setOpen(false)}
+                      />
+                      <button
+                        className="btn video-play-icon"
+                        onClick={() => setOpen(true)}
+                      >
+                        <PlayArrowIcon className={"playSize"} />
+                      </button>
+                    </div>
+                }
               </div>
             </Col>
           </Row>
@@ -140,21 +148,25 @@ function Inclusion(props) {
                 className="d-flex justify-content-center align-items-center imgheight"
                 style={{ backgroundImage: `url(${props.secFiveVideo?.image})` }}
               >
-                <div className="video-promo-content mt-4 ">
-                  <ModalVideo
-                    channel='vimeo'
-                    autoplay={true}
-                    isOpen={isOpen}
-                    videoId={props.secFiveVideo?.video_link?.split("/")[3]}
-                    onClose={() => setOpen(false)}
-                  />
-                  <button
-                    className="btn video-play-icon"
-                    onClick={() => setOpen(true)}
-                  >
-                    <PlayArrowIcon className={"playSize"} />
-                  </button>
-                </div>
+                {
+                  props.secFiveVideo?.video_link === null ?
+                    "" :
+                    <div className="video-promo-content mt-4 ">
+                      <ModalVideo
+                        channel='vimeo'
+                        autoplay={true}
+                        isOpen={isOpen}
+                        videoId={props.secFiveVideo?.video_link?.split("/")[3]}
+                        onClose={() => setOpen(false)}
+                      />
+                      <button
+                        className="btn video-play-icon"
+                        onClick={() => setOpen(true)}
+                      >
+                        <PlayArrowIcon className={"playSize"} />
+                      </button>
+                    </div>
+                }
               </div>
             </Col>
             <Col sm={12} md={8} lg={8}>
@@ -200,21 +212,25 @@ function Inclusion(props) {
                 className="d-flex justify-content-center align-items-center imgheight"
                 style={{ backgroundImage: `url(${props.secSixVideo?.image})` }}
               >
-                <div className="video-promo-content mt-4 ">
-                  <ModalVideo
-                    channel='vimeo'
-                    autoplay={true}
-                    isOpen={isOpen}
-                    videoId={props.secSixVideo?.video_link?.split("/")[3]}
-                    onClose={() => setOpen(false)}
-                  />
-                  <button
-                    className="btn video-play-icon"
-                    onClick={() => setOpen(true)}
-                  >
-                    <PlayArrowIcon className={"playSize"} />
-                  </button>
-                </div>
+                {
+                  props.secSixVideo?.video_link === null ?
+                    "" :
+                    <div className="video-promo-content mt-4 ">
+                      <ModalVideo
+                        channel='vimeo'
+                        autoplay={true}
+                        isOpen={isOpen}
+                        videoId={props.secSixVideo?.video_link?.split("/")[3]}
+                        onClose={() => setOpen(false)}
+                      />
+                      <button
+                        className="btn video-play-icon"
+                        onClick={() => setOpen(true)}
+                      >
+                        <PlayArrowIcon className={"playSize"} />
+                      </button>
+                    </div>
+                }
               </div>
             </Col>
           </Row>

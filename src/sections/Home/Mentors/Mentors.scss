@@ -67,6 +67,12 @@
       }
     }
   }
+  .react-multi-carousel-dot--active button{
+    background: $bg-color !important;
+  }
+  .react-multi-carousel-dot button{
+    border-color: #80808063 !important;
+  }
 }
 
 

@@ -43,13 +43,12 @@ function ACTabs(props) {
                 draggable={false}
                 showDots={true}
                 arrows={false}
-                responsive={responsive}
                 ssr={true} // means to render carousel on server-side.
                 infinite={true}
                 autoPlay={true}
                 autoPlaySpeed={3000}
                 keyBoardControl={true}
-                customTransition="all .5"
+                customTransition="all .5s"
                 transitionDuration={500}
                 containerClass="carousel-container"
                 dotListClass="custom-dot-list-style"

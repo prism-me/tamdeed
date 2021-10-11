@@ -43,7 +43,9 @@ const AgsEthos = (props) => {
                             ...init,
                             modalShow: false
                         })}
-                            calData={props.eventData}
+                            term1Sec={props?.event1Data}
+                            term2Sec={props?.event2Data}
+                            term3Sec={props?.event3Data}
                             language={props.isArabic}
                             lang={props.language}
                         />
@@ -61,14 +63,6 @@ const AgsEthos = (props) => {
                         }
                         {/* View Calender */}
                     </button>
-                    <CalendarView show={modalShow} onHide={() => setInit({
-                        ...init,
-                        modalShow: false
-                    })}
-                        calData={props.eventData}
-                        language={props.isArabic}
-                        lang={props.language}
-                    />
                 </div>
             </Grid>
             <div className="Accreditation">

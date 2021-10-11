@@ -55,17 +55,25 @@ const CalendarView = (props) => {
                                 </p>
                             </div>
                             <div className="card-sec">
-                                {props.calData.map((slides, index) => (
+                                {props?.term1Sec?.map((slides, index) => (
                                     <div className="circle-holder">
                                         <div className="_circle">
                                             <div className="_circle-inner">
-                                                {/* {slides.date} */}
-                                                {
-                                                    dateFormat(`${slides.date}`, "dS mmmm")
+                                                <span>
+                                                    {
+                                                        dateFormat(`${slides.date}`, "dS mmmm")
+                                                    }
+                                                </span>
+                                                {slides.enddate === null ?
+                                                    "" :
+                                                    <span>
+                                                        &mdash;
+                                                        {
+                                                            dateFormat(`${slides.enddate}`, "dS mmmm")
+                                                        }
+                                                    </span>
                                                 }
-                                                {/* 29<span className="_circle-em">th</span> */}
                                             </div>
-                                            {/* <span className="_circle-month">AUG</span> */}
                                         </div>
                                         <div className="_circle-txt">
                                             <p>
@@ -74,7 +82,6 @@ const CalendarView = (props) => {
                                                         ? slides?.arabic?.name
                                                         : slides.name
                                                 }
-                                                {/* First day of term */}
                                             </p>
                                         </div>
                                     </div>
@@ -93,33 +100,35 @@ const CalendarView = (props) => {
                                 </p>
                             </div>
                             <div className="card-sec">
-                                <div className="circle-holder">
-                                    <div className="_circle">
-                                        <div className="_circle-inner">02<span className="_circle-em">nd</span></div>
-                                        <span className="_circle-month">JAN</span>
+                                {props?.term2Sec?.map((slides, index) => (
+                                    <div className="circle-holder">
+                                        <div className="_circle">
+                                            <div className="_circle-inner">
+                                                <span>
+                                                    {
+                                                        dateFormat(`${slides.date}`, "dS mmmm")
+                                                    }
+                                                </span>
+                                                {slides.enddate === null ?
+                                                    "" :
+                                                    <span>
+                                                        &mdash;
+                                                        {
+                                                            dateFormat(`${slides.enddate}`, "dS mmmm")
+                                                        }
+                                                    </span>
+                                                }
+                                            </div>
+                                        </div>
+                                        <div className="_circle-txt">
+                                            {
+                                                props.language
+                                                    ? slides?.arabic?.name
+                                                    : slides.name
+                                            }
+                                        </div>
                                     </div>
-                                    <div className="_circle-txt">
-                                        <p>First day of term</p>
-                                    </div>
-                                </div>
-                                <div className="circle-holder">
-                                    <div className="_circle">
-                                        <div className="_circle-inner">27<span className="_circle-em">th</span></div>
-                                        <span className="_circle-month">MAR</span>
-                                    </div>
-                                    <div className="_circle-txt">
-                                        <p>Beginning of Spring Break</p>
-                                    </div>
-                                </div>
-                                <div className="circle-holder">
-                                    <div className="_circle">
-                                        <div className="_circle-inner">02<span className="_circle-em">nd</span></div>
-                                        <span className="_circle-month">APRIL</span>
-                                    </div>
-                                    <div className="_circle-txt">
-                                        <p>Start of Ramadan (TBC)</p>
-                                    </div>
-                                </div>
+                                ))}
                             </div>
                         </div>
                         <div className="card-row">
@@ -134,57 +143,35 @@ const CalendarView = (props) => {
                                 </p>
                             </div>
                             <div className="card-sec">
-                                <div className="circle-holder">
-                                    <div className="_circle">
-                                        <div className="_circle-inner">10<span className="_circle-em">th</span></div>
-                                        <span className="_circle-month">APRIL</span>
-                                    </div>
-                                    <div className="_circle-txt">
-                                        <p>First day of term</p>
-                                    </div>
-                                </div>
-                                <div className="circle-holder">
-                                    <div className="_circle">
-                                        <div className="_circle-inner">01<span className="_circle-em">st</span></div>
-                                        <span className="_circle-month">MAY</span>
-                                    </div>
-                                    <div className="_circle-txt">
-                                        <p>Start of Eid al-Fiter</p>
-                                    </div>
-                                </div>
-                                <div className="circle-holder">
-                                    <div className="_circle">
-                                        <div className="_circle-inner">02<span className="_circle-em">nd</span></div>
-                                        <span className="_circle-month">May</span>
-                                    </div>
-                                    <div className="_circle-txt">
-                                        <p>Eid al-Fiter ends</p>
-                                    </div>
-                                </div>
-
-                                <div className="circle-holder lg">
-                                    <div className="_circle lg">
-                                        <div className="_circle-inner">
-                                            01<span className="_circle-em">st</span>
-                                            -
-                                            05<span className="_circle-em">th</span>
+                                {props?.term3Sec?.map((slides, index) => (
+                                    <div className="circle-holder">
+                                        <div className="_circle">
+                                            <div className="_circle-inner">
+                                                <span>
+                                                    {
+                                                        dateFormat(`${slides.date}`, "dS mmmm")
+                                                    }
+                                                </span>
+                                                {slides.enddate === null ?
+                                                    "" :
+                                                    <span>
+                                                        &mdash;
+                                                        {
+                                                            dateFormat(`${slides.enddate}`, "dS mmmm")
+                                                        }
+                                                    </span>
+                                                }
+                                            </div>
                                         </div>
-                                        <span className="_circle-month">May</span>
+                                        <div className="_circle-txt">
+                                            {
+                                                props.language
+                                                    ? slides?.arabic?.name
+                                                    : slides.name
+                                            }
+                                        </div>
                                     </div>
-                                    <div className="_circle-txt">
-                                        <p>Public Holiday</p>
-                                    </div>
-                                </div>
-
-                                <div className="circle-holder">
-                                    <div className="_circle">
-                                        <div className="_circle-inner">03<span className="_circle-em">rd</span></div>
-                                        <span className="_circle-month">July</span>
-                                    </div>
-                                    <div className="_circle-txt">
-                                        <p>Last day of Academic Year</p>
-                                    </div>
-                                </div>
+                                ))}
                             </div>
                         </div>
                     </Grid>

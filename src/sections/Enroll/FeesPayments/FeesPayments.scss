@@ -83,21 +83,27 @@
         }
         .subtitle{
           font-size: $sub-fonts;
-          text-align: justify;
-          font-weight: bold;
-          //@media #{$sm,$md} {
-          //  margin-top: 0;
-          //}
+          color: $bg-color !important;
+          ul {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            font-weight: bold;
+            font-size: $sub-fonts;
+            margin-top: 1rem;
+          }
         }
         .table thead th {
           border-bottom: 1px solid #CDB786;
           border-top: none;
           font-size: $sub-fonts;
+          color: $bg-color !important;
         }
 
         .table td {
           border-bottom: 1px solid #CDB786;
           font-size: $sub-fonts;
+          color: $bg-color !important;
         }
       }
     }
@@ -128,15 +134,24 @@
     }
     .subtitle{
       font-size: $sub-fonts;
-      text-align: justify;
-      font-weight: bold;
+      color: $bg-color !important;
+      ul {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+      }
     }
     .table thead th {
       border-bottom: 1px solid #CDB786;
+      font-size: 15px;
       border-top: none;
+      color: $bg-color !important;
     }
     .table td {
       border-bottom: 1px solid #CDB786;
+      font-size: 15px;
+      color: $bg-color !important;
     }
+   
   }
 }

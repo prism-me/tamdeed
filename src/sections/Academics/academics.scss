@@ -426,12 +426,11 @@
         .circle-holder {
           display: flex;
           flex-direction: column;
-          width: 140px;
+          // width: 140px;
           margin: 0 1rem;
 
           ._circle {
             display: flex;
-            // border-radius: 50%;
             font-weight: bold;
             color: #CDB786;
             background-color: $bg_color;
@@ -441,6 +440,7 @@
             justify-content: center;
             align-items: center;
             text-align: center;
+            height: 110px;
 
             ._circle-inner {
               display: flex;

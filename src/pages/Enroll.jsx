@@ -168,6 +168,11 @@ class Enroll extends Component {
                     language={global?.activeLanguage}
                 />
                 <FeesPayments
+                    feesSec={
+                        global?.activeLanguage === "ar"
+                            ? content?.arabic?.feesPayments
+                            : content?.feesPayments
+                    }
                     language={global?.activeLanguage}
                 />
                 <Payment

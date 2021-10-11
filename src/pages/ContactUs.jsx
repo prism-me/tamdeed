@@ -5,7 +5,6 @@ import { Helmet } from "react-helmet";
 import { constants } from "../utils/constants"
 
 const ContactUs = (props) => {
-
     const { global } = props;
     return (
         <div className="home-page">

@@ -11,7 +11,9 @@ import { constants } from "../utils/constants"
 class Academics extends Component {
     state = {
         mentorsData: [],
-        eventData: [],
+        term1Data: [],
+        term2Data: [],
+        term3Data: [],
         currentPage: null,
         expData: [],
         content: null,
@@ -60,7 +62,21 @@ class Academics extends Component {
             })
 
         API.get('/events').then(response => {
-            this.setState({ eventData: response.data.data });
+            this.setState({ term1Data: response.data.data.filter(x => x.term === "term 1") });
+        })
+            .catch(err => {
+                console.log(err)
+            })
+
+        API.get('/events').then(response => {
+            this.setState({ term2Data: response.data.data.filter(x => x.term === "term 2") });
+        })
+            .catch(err => {
+                console.log(err)
+            })
+
+        API.get('/events').then(response => {
+            this.setState({ term3Data: response.data.data.filter(x => x.term === "term 3") });
         })
             .catch(err => {
                 console.log(err)
@@ -111,7 +127,9 @@ class Academics extends Component {
                             ? content?.arabic?.accreditationsSection
                             : content?.accreditationsSection
                     }
-                    eventData={this.state.eventData}
+                    event1Data={this.state.term1Data}
+                    event2Data={this.state.term2Data}
+                    event3Data={this.state.term3Data}
                     isArabic={global?.activeLanguage === "ar"}
                     language={global?.activeLanguage}
                 />

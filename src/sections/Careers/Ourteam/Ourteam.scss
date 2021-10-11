@@ -67,19 +67,23 @@
         background-size: 120% /* work with the background-size */
       }
       @media #{$lg,$md} {
-        height: 30vh;
+        height: 50vh;
       }
       @media #{$sm,$md,$lg} {
         background-size: cover;
+        transition: none;
+        &:hover{
+          background-size: cover; /* work with the background-size */
+        }
       }
       @media #{$sm,$lsm,$xsm,$tiny} {
-        height: 30vh;
+        height: 50vh;
       }
     }
     .divstyle {
       padding: 0 5px 30px 5px;
       @media #{$sm ,$md} {
-        padding: 0 0 30px 0;
+        padding: 0 15px 30px 15px;
       }
     }
   }

@@ -116,7 +116,6 @@ function Layout(props) {
                 <img
                   src={logo}
                   alt="AGS Logo"
-                  style={{ width: "40%" }}
                   onClick={() => {
                     history.push("/");
                     toggleDrawer(false);

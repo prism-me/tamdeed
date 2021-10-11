@@ -10,8 +10,6 @@ import ModalVideo from 'react-modal-video'
 import Hidden from "@material-ui/core/Hidden";
 import BackGroundVideo from "../../../components/BackGroundVideo/BackGroundVideo";
 import PauseIcon from "@material-ui/icons/Pause";
-// import { withNamespaces } from 'react-i18next';
-// import { useTranslation } from 'react-i18next';
 
 function HomeHeader(props) {
   const [isOpen, setOpen] = useState(false)

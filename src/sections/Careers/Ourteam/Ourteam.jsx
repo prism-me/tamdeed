@@ -36,8 +36,8 @@ export default function Ourteam(props) {
             </h3>
             <Carousel responsive={responsive}
                 swipeable={false}
-                draggable={false}
-                showDots={true}
+                draggable={true}
+                showDots={false}
                 arrows={false}
                 ssr={true} // means to render carousel on server-side.
                 infinite={true}

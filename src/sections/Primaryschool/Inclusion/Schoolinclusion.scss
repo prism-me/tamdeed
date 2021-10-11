@@ -9,7 +9,6 @@
       margin-bottom: 2rem;
       text-align: center;
       @media #{$sm,$md} {
-        margin-top: 2rem;
         margin-bottom: 1rem;
       }
     }
@@ -26,15 +25,6 @@
       margin: 0;
       font-size: $sub-fonts;
       padding-left: 15px;
-    }
-
-    @media #{$sm,$lsm,$xsm,$tiny} {
-      margin-top: 1rem !important;
-      margin-bottom: 1rem !important;
-    }
-    @media #{$md} {
-      margin-top: 1rem !important;
-      margin-bottom: 1rem !important;
     }
     @-webkit-keyframes ripple-white {
       0% {
@@ -104,10 +94,11 @@
       height: 450px;
       border-radius: 30px;
       @media #{$lg,$md} {
-        height: 40vh;
+        height: 450px;
       }
       @media #{$sm,$lsm,$xsm,$tiny} {
-        height: 40vh;
+        height: 384px;
+        margin-bottom: 1rem;
       }
       @media #{$sm,$md} {
         margin-top: 1rem;

@@ -143,7 +143,7 @@ function Inclusion(props) {
                 </div>
               </div>
             </Col>
-            <Col sm={12} md={8} lg={8} className="pl-5 MobileSpacing">
+            <Col sm={12} md={8} lg={8} className="pl-5 MobileSpacing pt-3">
               <p className={"subTitle mt-3"}
                 dangerouslySetInnerHTML={{
                   __html:

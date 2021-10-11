@@ -150,10 +150,10 @@
       height: 350px;
       border-radius: 30px;
       @media #{$lg,$md} {
-        height: 30vh;
+        height: 350px;
       }
       @media #{$sm,$lsm,$xsm,$tiny} {
-        height: 30vh;
+        height: 350px;
       }
       @media #{$sm,$md} {
         margin-top: 1rem;

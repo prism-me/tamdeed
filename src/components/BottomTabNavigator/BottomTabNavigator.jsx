@@ -2,16 +2,9 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import BottomNavigation from "@material-ui/core/BottomNavigation";
 // import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
-import { AiOutlineHome } from "react-icons/ai";
 import InputIcon from '@material-ui/icons/Input';
-import {
-  IoMailOutline,
-  IoPaperPlaneOutline,
-} from "react-icons/io5";
 import { Link } from "react-router-dom";
-import ApplyNow from "../Modals/ApplyNow/ApplyNow";
-import ContactMailIcon from '@material-ui/icons/ContactMail';
-import PhoneIcon from '@material-ui/icons/Phone';
+import RoomIcon from '@material-ui/icons/Room';
 import PersonAddIcon from '@material-ui/icons/PersonAdd';
 const useStyles = makeStyles({
   root: {
@@ -48,12 +41,12 @@ function BottomTabNavigator(props) {
             <span>ENROLL</span>
           </button>
         </Link>
-        <Link to={`/${props.activeLanguage}/contact`}>
+        <a href="https://www.google.com/maps/place/American+Gulf+School/@25.3382268,55.5628731,17z/data=!3m1!4b1!4m5!3m4!1s0x3ef5f5ef006a4c83:0xcf95030e29d9fb7!8m2!3d25.3382268!4d55.5650618?shorturl=1" target="_blank">
           <button className={"BNButton d-flex justify-content-between align-items-center"}>
-            <PhoneIcon className={"iconSize"} />
-            <span>Contact Us</span>
+            <RoomIcon className={"iconSize"} />
+            <span>Location</span>
           </button>
-        </Link>
+        </a>
       </BottomNavigation>
     </div>
   );

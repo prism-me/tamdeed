@@ -23,7 +23,7 @@ export const routes = [
   },
   {
     name: "Home",
-    path: "/AGS",
+    path: "/",
     component: Home,
     isPrivate: false,
     exact: true,

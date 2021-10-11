@@ -132,6 +132,10 @@
     }
     .listStyle{
       padding: 2rem 0.5rem 3rem 0.5rem;
+      @media #{$sm ,$md} {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
     }
     .react-multi-carousel-item{
       &:hover{

@@ -7,26 +7,6 @@
   display: flex;
   position: relative;
   width: 100%;
-
-  //&::before {
-  //  content: "";
-  //  display: block;
-  //  position: absolute;
-  //  bottom: 0;
-  //  top: -100px;
-  //  left: 0;
-  //  z-index: 888;
-  //  width: 100%;
-  //  height: 120px;
-  //  background-image: url("../../assets/images/academics/paths_hd.png");
-  //  background-repeat: no-repeat;
-  //  background-size: cover;
-  //  @media #{$lg,$xl,$xxl} {
-  //    top: -140px;
-  //    height: 141px;
-  //  }
-  //}
-
   .v-calendar-sec {
     position: absolute;
     display: flex;
@@ -37,8 +17,6 @@
     opacity: 0.9;
     color: #000000;
     box-shadow: 0 4px 15px #BEBEBE;
-    //-webkit-backdrop-filter: blur(15px);
-    //backdrop-filter: blur(15px);
     border-radius: 200px;
     background: #ffffff !important;
     padding: 1rem 2rem;
@@ -378,6 +356,9 @@
     display: flex;
     width: 100%;
     padding: 2rem 3rem 0 3rem;
+    @media #{$sm} {
+      padding: 1rem 0 0 0;
+    }
 
     .heading {
       display: flex;
@@ -393,6 +374,9 @@
         font-size: 25px;
         font-weight: bold;
         margin-bottom: 0;
+        @media #{$sm} {
+          font-size: 22px;
+        }
       }
     }
   }

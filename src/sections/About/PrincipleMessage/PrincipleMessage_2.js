@@ -16,12 +16,16 @@ const PrincipleMessage = (props) => {
                 <div className="d-flex justify-content-center align-items-center imgheight"
                     style={{ backgroundImage: `url(${props.PriVideo?.image})` }}
                 >
-                    <div className="video-promo-content mt-4 ">
-                        <ModalVideo channel='vimeo' autoplay={true} isOpen={isOpen} videoId={props.PriVideo?.video_link?.split("/")[3]} onClose={() => setOpen(false)} />
-                        <button className="btn video-play-icon" onClick={() => setOpen(true)}>
-                            <PlayArrowIcon className={"playSize"} />
-                        </button>
-                    </div>
+                    {
+                        props.PriVideo?.video_link === null ?
+                            "" :
+                            <div className="video-promo-content mt-4 ">
+                                <ModalVideo channel='vimeo' autoplay={true} isOpen={isOpen} videoId={props.PriVideo?.video_link?.split("/")[3]} onClose={() => setOpen(false)} />
+                                <button className="btn video-play-icon" onClick={() => setOpen(true)}>
+                                    <PlayArrowIcon className={"playSize"} />
+                                </button>
+                            </div>
+                    }
                 </div>
                 <hr className="principalmsgHr" />
                 <div

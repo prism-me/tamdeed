@@ -24,6 +24,14 @@ export const constants = {
       en: "STUDENT CARE",
       ar: "رعاية الطلاب",
     },
+    meta_team: {
+      en: "OUR TEAM",
+      ar: "فريقنا",
+    },
+    meta_team_description: {
+      en: "OUR TEAM",
+      ar: "فريقنا"
+    },
     meta_career: {
       en: "CAREER",
       ar: "مسار مهني مسار وظيفي",

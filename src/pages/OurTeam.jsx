@@ -25,12 +25,12 @@ class Academics extends Component {
             <div className="home-page">
                 <Helmet>
                     <title>
-                        {`AGS | ${constants?.site_content?.meta_std[global?.activeLanguage]}`}
+                        {`AGS | ${constants?.site_content?.meta_team[global?.activeLanguage]}`}
                     </title>
                     <meta
                         name="description"
                         content={
-                            constants?.site_content?.meta_std_description[global?.activeLanguage]
+                            constants?.site_content?.meta_team_description[global?.activeLanguage]
                         }
                     />
                 </Helmet>

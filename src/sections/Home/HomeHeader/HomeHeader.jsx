@@ -78,7 +78,7 @@ function HomeHeader(props) {
                     <Hidden smDown>
                       <Col sm={{ span: 6 }} className={"iconSpace"}>
                         <div className="video-promo-content">
-                          <button className="btn About-video-play-icon"
+                          {/* <button className="btn About-video-play-icon"
                             onClick={togglePlay}
                           >
                             {isPlaying ? (
@@ -86,7 +86,7 @@ function HomeHeader(props) {
                             ) : (
                               <PlayArrowIcon className={"AboutVideoplaySize"} />
                             )}
-                          </button>
+                          </button> */}
                         </div>
                       </Col>
                     </Hidden>

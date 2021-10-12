@@ -16,14 +16,14 @@ const AcademicHeader = (props) => {
                     <Col sm={12} md={12} lg={5} xs={12}> */}
                     <div className="description-column">
                         <div className="header-logo-wrapper">
-                            <img src={logo} alt="AGS Logo" className="header-logo" />
+                            {/* <img src={logo} alt="AGS Logo" className="header-logo" /> */}
                         </div>
                         <h1 className="intro-title">
-                            {props.banner?.title}
+                            {/* {props.banner?.title} */}
                             {/* AMERICAN GULF SCHOOL */}
                         </h1>
                         <h2 className={"intro-title2"}>
-                            {props.banner?.subtitle}
+                            {/* {props.banner?.subtitle} */}
                             {/* EDUCATION DONE RIGHT */}
                         </h2>
                         {/* <p className={"subtitle"}>

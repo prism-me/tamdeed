@@ -39,12 +39,12 @@ function InfoTabs(props) {
         {/* EXPERIENCE THE AGS DIFFERENCE */}
       </h2>
       <Carousel responsive={responsive}
-        swipeable={false}
-        draggable={false}
+        swipeable={true}
         showDots={true}
         arrows={false}
         ssr={true} // means to render carousel on server-side.
-        infinite={true}
+        infinite={false}
+        draggable={true}
         autoPlay={true}
         autoPlaySpeed={3000}
         keyBoardControl={true}

@@ -62,7 +62,7 @@ function Inclusion(props) {
         </div>
         <div className={"HowToSellspacing featured-section"}>
           <Row className="MiddleAlignCenter ">
-            <Col sm={12} md={8} lg={8} >
+            <Col sm={12} md={7} lg={8} >
               <p className={"subTitle mt-3"}
                 dangerouslySetInnerHTML={{
                   __html:
@@ -72,7 +72,7 @@ function Inclusion(props) {
                 {/* At AGS we ensure that to achieve these goals and expectations, our KG department is flexible, ensuring children’s learning is through play and practical hands-on activities. Our Kindergarten curriculum is designed to foster curiosity, inspire, and teach children to be reflective. To support learning, our classroom environments are set up so learners can move freely around areas for reading, writing, art, construction, imaginative play, science, and mathematics. Class sizes of no more than 15 children are permitted.  Learners benefit from the educational experiences that their teachers provide for them. It is for this reason that each classroom is staffed by a qualified, experienced teacher, one full-time teacher assistant and an academic support teacher when needed. */}
               </p>
             </Col>
-            <Col sm={12} md={4} lg={4} className="MiddleAlignCenter">
+            <Col sm={12} md={5} lg={4} className="MiddleAlignCenter">
               <div
                 className="d-flex justify-content-center align-items-center imgheight"
                 style={{ backgroundImage: `url(${props.secTwoVideo?.image})` }}
@@ -127,7 +127,7 @@ function Inclusion(props) {
 
         <div className={"HowToSellspacing lastSection"}>
           <Row className="MiddleAlignCenter">
-            <Col sm={12} md={4} lg={4} className='MobileBottomSpacing'>
+            <Col sm={12} md={12} lg={4} className='MobileBottomSpacing'>
               <div
                 className="d-flex justify-content-center align-items-center imgheight"
 
@@ -155,7 +155,7 @@ function Inclusion(props) {
                 }
               </div>
             </Col>
-            <Col sm={12} md={8} lg={8} className="pl-5 MobileSpacing pt-3">
+            <Col sm={12} md={12} lg={8} className="pl-5 MobileSpacing pt-3">
               <p className={"subTitle mt-3"}
                 dangerouslySetInnerHTML={{
                   __html:

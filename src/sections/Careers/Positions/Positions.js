@@ -187,7 +187,8 @@ const Positions = (props) => {
                             ))
                         }
                         <ApplyNow
-                            show={modalShow} onHide={() => setModalShow(false)}
+                            show={modalShow}
+                            onHide={() => setModalShow(false)}
                             lang={props.language}
                         />
                     </Carousel>

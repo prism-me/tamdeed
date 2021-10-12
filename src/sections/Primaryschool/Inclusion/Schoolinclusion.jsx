@@ -22,7 +22,7 @@ function Schoolinclusion(props) {
             <Container>
                 <div>
                     <Row className={"justify-content-center align-items-center"}>
-                        <Col sm={5} md={5} lg={5}>
+                        <Col sm={5} md={6} lg={5}>
                             <div className="d-flex justify-content-center align-items-center imgheight"
                                 style={{ backgroundImage: `url(${props.secOneVideo?.image})` }}
                             >
@@ -38,7 +38,7 @@ function Schoolinclusion(props) {
                                 }
                             </div>
                         </Col>
-                        <Col sm={7} md={7} lg={7} >
+                        <Col sm={7} md={6} lg={7} >
                             <p className={"subTitle"}
                                 dangerouslySetInnerHTML={{
                                     __html:

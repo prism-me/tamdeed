@@ -10,7 +10,6 @@ const ApplyNow = (props) => {
       size="lg"
       aria-labelledby="contained-modal-title-vcenter"
       centered
-      // className="Documents"
       className={
         props.lang === "ar"
           ? "ApplyNow agsModalDirArabic"
@@ -18,17 +17,13 @@ const ApplyNow = (props) => {
       }
       style={{ paddingLeft: "0px" }}
     >
-      {/* <Container> */}
-      {/* <Row>
-                    <Col sm="auto"> */}
       <span className={
         props.lang === "ar"
           ? "modalIconArabic modalIcon"
-          : "modalIcon"} onClick={props.onHide}>
+          : "modalIcon"}
+        onClick={props.onHide}>
         <ArrowBackIcon />
       </span>
-      {/* </Col> */}
-      {/* <Col sm> */}
       <Modal.Body>
         <h2 className={"Title"}
         >
@@ -43,14 +38,6 @@ const ApplyNow = (props) => {
           <li>Strong ability to effectively engage with children, parents and staff</li>
           <li>A Creative and innovative thinker</li>
           <li>Hard working, dedicated and committed to the school to ensure Academic Excellence</li>
-          <li>Copy of Family Card (Emirati students only)</li>
-          <li>Copy of parent’s photos</li>
-          <li>Previous school’s Transfer Certificate* (see below) </li>
-          <li>Acceptance Form</li>
-          <li>Completion of student’s Medical Form</li>
-          <li>Completion of student’s Pick-up Authorization Form</li>
-          <li>Completion of Emergency Contact Form</li>
-          <li>Completion of Photography/Social Media Permission Form</li>
         </ul>
         <p className={"SubTitle"}>
           We are committed to the safeguarding and promoting the welfare of children and young people and expect all staff and volunteers to share this commitment. All post holders are subject to appropriate vetting procedures and satisfactory Criminal Background Checks.
@@ -66,7 +53,11 @@ const ApplyNow = (props) => {
           <li>Professional development will be fully/partially funded</li>
         </ul>
         <p className={"SubTitle"}>
-          If this role interest you, please send an email to careers@ags.ae with your latest CV.
+          If this role interest you, please send an email to <a href="mailto:careers@ags.ae" className={"text-decoration-none"}
+            style={{ cursor: "pointer" }}
+          >
+            careers@ags.ae
+          </a> with your latest CV.
         </p>
         <center>
           <a href="mailto:careers@ags.ae" className={"applynow text-decoration-none"}>
@@ -74,9 +65,6 @@ const ApplyNow = (props) => {
           </a>
         </center>
       </Modal.Body>
-      {/* </Col> */}
-      {/* </Row> */}
-      {/* </Container> */}
     </Modal>
   );
 };

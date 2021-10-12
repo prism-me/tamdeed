@@ -24,7 +24,7 @@ function Inclusion(props) {
                         id={index} key={index + x.title}
                     >
                         <Row className="align-items-center">
-                            <Col sm={4} md={4} lg={4}>
+                            <Col sm={4} md={6} lg={4}>
                                 <div className="d-flex justify-content-center align-items-center imgheight"
                                     style={{ backgroundImage: `url(${x.thumbnail})` }}
                                 >
@@ -44,7 +44,7 @@ function Inclusion(props) {
                                     </div>
                                 </div>
                             </Col>
-                            <Col sm md lg >
+                            <Col sm md={6} lg >
                                 <h2 className="title">
                                     {
                                         props.isArabic

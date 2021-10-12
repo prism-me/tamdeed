@@ -8,12 +8,12 @@ import { Suspense } from "react";
 function App() {
   return (
     <BrowserRouter>
-      <Suspense fallback={<p>Loading...</p>}>
-        <ScrollToTop />
-        <Layout>
-          <Navigation />
-        </Layout>
-      </Suspense>
+      {/* <Suspense fallback={<p>Loading...</p>}> */}
+      <ScrollToTop />
+      <Layout>
+        <Navigation />
+      </Layout>
+      {/* </Suspense> */}
     </BrowserRouter>
   );
 }

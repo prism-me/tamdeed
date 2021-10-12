@@ -18,7 +18,7 @@ function Inclusion(props) {
       <Container>
         <div className={"HowToSellspacing"}>
           <Row className="MiddleAlignCenter">
-            <Col sm={12} md={4} lg={12}>
+            <Col sm={12} md={12} lg={12}>
               <div
                 className="d-flex justify-content-center align-items-center imgheight"
                 style={{ backgroundImage: `url(${props.secOneVideo?.image})` }}
@@ -44,7 +44,7 @@ function Inclusion(props) {
                 }
               </div>
             </Col>
-            <Col sm={12} md={8} lg={12}>
+            <Col sm={12} md={12} lg={12}>
               {/* <h3 className="title">Nec ornare.</h3> */}
               <p className={"subTitle"}
                 dangerouslySetInnerHTML={{
@@ -61,7 +61,7 @@ function Inclusion(props) {
         </div>
         <div className={"HowToSellspacing featured-section"}>
           <Row className="TabMobileSpacing">
-            <Col sm={12} md={8} lg={8}>
+            <Col sm={12} md={7} lg={8}>
               <h3 className="title1">
                 {props.secTwo?.title}
                 {/* Middle Years Program */}
@@ -87,7 +87,7 @@ function Inclusion(props) {
               </ul> */}
               {/* <p className={"subTitle1"}>In Grades 9 and 10, learners have the option to take courses from six of the eight subject groups within certain limits, to provide greater flexibility in meeting local requirements and individual learner needs.</p> */}
             </Col>
-            <Col sm={12} md={4} lg={4}>
+            <Col sm={12} md={5} lg={4}>
               <div
                 className="d-flex justify-content-center align-items-center imgheight"
                 style={{ backgroundImage: `url(${props.secTwoVideo?.image})` }}
@@ -143,7 +143,7 @@ function Inclusion(props) {
         </Row>
         <div className={"HowToSellspacing mb-4"}>
           <Row className="TabMobileSpacing">
-            <Col sm={12} md={4} lg={4}>
+            <Col sm={12} md={5} lg={4}>
               <div
                 className="d-flex justify-content-center align-items-center imgheight"
                 style={{ backgroundImage: `url(${props.secFiveVideo?.image})` }}
@@ -169,7 +169,7 @@ function Inclusion(props) {
                 }
               </div>
             </Col>
-            <Col sm={12} md={8} lg={8}>
+            <Col sm={12} md={7} lg={8}>
               <h3 className="title1">
                 {props.secFive?.title}
                 {/* International Mindedness and Multilingualism */}
@@ -190,7 +190,7 @@ function Inclusion(props) {
         </div>
         <div className={"HowToSellspacing"}>
           <Row className="TabMobileSpacing mb-5">
-            <Col sm={12} md={8} lg={8}>
+            <Col sm={12} md={7} lg={8}>
               <h3 className="title1">
                 {props.secSix?.title}
                 {/* Lifelong Learners */}
@@ -207,7 +207,7 @@ function Inclusion(props) {
                 Lifelong learning builds self-awareness and respect for others. Learners develop invaluable leadership skills through learning to plan, negotiate, compromise, and consider. They are taught how to take constructive criticism and act upon it, as well as how to give it in order to get the task completed, therefore learning from it.
               </p> */}
             </Col>
-            <Col sm={12} md={4} lg={4}>
+            <Col sm={12} md={5} lg={4}>
               <div
                 className="d-flex justify-content-center align-items-center imgheight"
                 style={{ backgroundImage: `url(${props.secSixVideo?.image})` }}

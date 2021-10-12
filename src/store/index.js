@@ -12,8 +12,6 @@ import {
 import storage from "redux-persist/lib/storage";
 import createSagaMiddleware from "redux-saga";
 import { all, fork } from "redux-saga/effects";
-import productsWatcher from "./../redux/products/sagas";
-import { productReducer } from "../redux/products";
 import globalReducer from "../redux/global/reducers";
 import globalWatcher from "../redux/global/sagas";
 
@@ -23,14 +21,12 @@ const persistConfig = {
 };
 
 function* rootSaga() {
-    yield all([fork(productsWatcher)]);
     yield all([fork(globalWatcher)]);
 }
 
 const rootReducer = combineReducers({
     globalReducer: globalReducer,
     userReducer: authReducer,
-    productReducer: productReducer,
 });
 
 const persistedReducer = persistReducer(

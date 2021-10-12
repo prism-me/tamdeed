@@ -89,7 +89,7 @@ function Layout(props) {
           background: "rgba(255,255,255,0.6)",
         }}
       >
-        <ClipLoader color={"#e65550"} loading={true} size={80} />
+        <ClipLoader color={"#1a2c52e6"} loading={true} size={80} />
       </div>
 
       <Hidden mdUp>
@@ -255,8 +255,10 @@ function Layout(props) {
   );
 }
 
-
 const mapStateToProps = (state) => {
+  {
+    console.log("spinner", state?.globalReducer?.showSpinner)
+  }
   return {
     showSpinner: state?.globalReducer?.showSpinner,
     global: state.globalReducer,

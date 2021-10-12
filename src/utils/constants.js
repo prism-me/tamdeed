@@ -32,6 +32,14 @@ export const constants = {
       en: "OUR TEAM",
       ar: "فريقنا"
     },
+    meta_form: {
+      en: "ONLINE APPLICATION FORM",
+      ar: "نموذج طلب عبر الإنترنت",
+    },
+    meta_form_description: {
+      en: "ONLINE APPLICATION FORM",
+      ar: "نموذج طلب عبر الإنترنت",
+    },
     meta_career: {
       en: "CAREER",
       ar: "مسار مهني مسار وظيفي",

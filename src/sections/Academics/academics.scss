@@ -68,8 +68,11 @@
         padding: 0.3rem 2.5rem;
         border-radius: 60px;
         @media #{$sm} {
-          padding: 0.6rem;
+          padding: 0.5rem 2.5rem;
           font-size: 12px;
+        }
+        @media #{$md} {
+          padding: 0.3rem 2rem;
         }
       }
     }
@@ -87,8 +90,8 @@
       padding: 0.3rem 2.5rem;
       border-radius: 60px;
       @media #{$sm} {
-        padding: 0.6rem;
-        font-size: 12px;
+        padding: 0.5rem 2rem;
+        font-size: 16px;
       }
     }
   }

@@ -33,30 +33,32 @@
     }
     .modalIconArabic{
       transform: rotate(180deg);
+      margin-left: 0 !important;
+      margin-right: 1rem;
     }
-  .modalIcon{
-    background: $bg-color;
-    color: $white;
-    padding: 0.7rem;
-    border-radius: 100%;
-    margin-top: 1rem;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    @media #{$sm} {
+    .modalIcon{
+      background: $bg-color;
+      color: $white;
+      padding: 1.5rem;
+      border-radius: 100%;
+      margin-top: 1rem;
       margin-left: 1rem;
       width: 20px;
       height: 20px;
-      padding: 1rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-  }
-  .modal-body {
-    padding: 1.5rem 0rem;
-  }
-  .modal-content{
-    border-radius: 60px;
-  }
+    .modal-body {
+      padding: 1.5rem 3rem;
+      @media #{$sm} {
+        padding: 1.5rem 2rem;
+      }
+    }
+    .modal-content{
+      border-radius: 60px;
+    }
 }
 
 .agsModalDir{

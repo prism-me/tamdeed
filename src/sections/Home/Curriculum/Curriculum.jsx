@@ -24,7 +24,15 @@ function Curriculum(props) {
                                     <Row>
                                         <Col xs={12} sm={3} md={12} lg={3} className={"d-flex justify-content-center align-items-center"}>
                                             <h4 className={" intro-title"}>
-                                                {props.Curriculum?.subtitle}
+                                                {
+
+                                                    props.Curriculum?.subtitle.split(" ")[0]
+                                                }
+                                                <br />
+                                                {
+
+                                                    props.Curriculum?.subtitle.split(" ")[1]
+                                                }
                                                 {/* OUR
                                                 <br />
                                                 CURRICULUM */}

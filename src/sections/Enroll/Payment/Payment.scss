@@ -4,6 +4,9 @@
   @media #{$sm,$md} {
     padding-top: 2rem;
   }
+  @media #{$lg} {
+    padding-top: 21rem;
+  }
   .FeesButton{
     border-bottom: 1px solid #4838FF;
     font-weight: bold;

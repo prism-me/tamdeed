@@ -31,8 +31,8 @@
         background-size: 120% /* work with the background-size */
       }
       @media #{$lg} {
-        height: 50vh ;
-        background-size: cover;
+        height: 35vh ;
+        background-size: cover !important;
         padding: 0;
       }
       @media #{$md} {

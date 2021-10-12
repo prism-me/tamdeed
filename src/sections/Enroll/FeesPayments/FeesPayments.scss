@@ -18,7 +18,7 @@
       text-align: center;
     }
     @media #{$lg} {
-      margin-top: 4rem;
+      margin-top: 14rem;
     }
   }
   .FeesPayments {
@@ -37,8 +37,8 @@
       background-size: 120% /* work with the background-size */
     }
     @media #{$lg} {
-      // height: 46vh !important;
-      background-size: cover;
+      height: 60vh;
+      background-size: cover !important;;
     }
     @media #{$md} {
       background-size: cover;
@@ -139,6 +139,11 @@
         justify-content: center;
         align-items: center;
         display: flex;
+      }
+    }
+    .TableMB{
+      @media #{$sm} {
+        width: 818px;
       }
     }
     .table thead th {

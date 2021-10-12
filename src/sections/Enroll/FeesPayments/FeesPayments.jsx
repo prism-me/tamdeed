@@ -24,7 +24,7 @@ function FeesPayments(props) {
                         <Container>
                             <Card className={"cardStyle"}>
                                 <Card.Body>
-                                    <Table responsive="sm" className={"text-center"}>
+                                    <Table responsive className={"text-center"}>
                                         <p className={"subtitle"}
                                             dangerouslySetInnerHTML={{
                                                 __html:
@@ -43,7 +43,7 @@ function FeesPayments(props) {
                 <Container>
                     <Card className={"cardStyleMBL"}>
                         <Card.Body>
-                            <Table responsive="sm" className={"text-center"}>
+                            <Table responsive className={"text-center TableMB"}>
                                 <p className={"subtitle"}
                                     dangerouslySetInnerHTML={{
                                         __html:

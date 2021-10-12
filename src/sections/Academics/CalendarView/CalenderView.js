@@ -61,17 +61,41 @@ const CalendarView = (props) => {
                                             <div className="_circle-inner">
                                                 <span>
                                                     {
-                                                        dateFormat(`${slides.date}`, "dS mmmm")
+
+                                                        slides.date.split("-")[2] + "th"
+                                                    }
+                                                    <br />
+
+                                                    {dateFormat(`${slides.date}`, "dS mmmm").split(" ")[1]
+
                                                     }
                                                 </span>
+                                                {/* <span>
+                                                    {
+                                                        dateFormat(`${slides.date}`, "dS mmmm")
+                                                    }
+                                                </span> */}
                                                 {slides.enddate === null ?
                                                     "" :
-                                                    <span>
-                                                        &mdash;
-                                                        {
-                                                            dateFormat(`${slides.enddate}`, "dS mmmm")
-                                                        }
-                                                    </span>
+                                                    <>
+                                                        <span> &mdash;</span>
+                                                        <span>
+                                                            {
+
+                                                                slides.enddate.split("-")[2] + "th"
+                                                            }
+                                                            <br />
+
+                                                            {dateFormat(`${slides.enddate}`, "dS mmmm").split(" ")[1]
+                                                            }
+                                                        </span>
+                                                    </>
+                                                    // <span>
+                                                    //     &mdash;
+                                                    //     {
+                                                    //         dateFormat(`${slides.enddate}`, "dS mmmm")
+                                                    //     }
+                                                    // </span>
                                                 }
                                             </div>
                                         </div>
@@ -106,17 +130,41 @@ const CalendarView = (props) => {
                                             <div className="_circle-inner">
                                                 <span>
                                                     {
-                                                        dateFormat(`${slides.date}`, "dS mmmm")
+
+                                                        slides.date.split("-")[2] + "th"
+                                                    }
+                                                    <br />
+
+                                                    {dateFormat(`${slides.date}`, "dS mmmm").split(" ")[1]
+
                                                     }
                                                 </span>
+                                                {/* <span>
+                                                    {
+                                                        dateFormat(`${slides.date}`, "dS mmmm")
+                                                    }
+                                                </span> */}
                                                 {slides.enddate === null ?
                                                     "" :
-                                                    <span>
-                                                        &mdash;
-                                                        {
-                                                            dateFormat(`${slides.enddate}`, "dS mmmm")
-                                                        }
-                                                    </span>
+                                                    <>
+                                                        <span> &mdash;</span>
+                                                        <span>
+                                                            {
+
+                                                                slides.enddate.split("-")[2] + "th"
+                                                            }
+                                                            <br />
+
+                                                            {dateFormat(`${slides.enddate}`, "dS mmmm").split(" ")[1]
+                                                            }
+                                                        </span>
+                                                    </>
+                                                    // <span>
+                                                    //     &mdash;
+                                                    //     {
+                                                    //         dateFormat(`${slides.enddate}`, "dS mmmm")
+                                                    //     }
+                                                    // </span>
                                                 }
                                             </div>
                                         </div>
@@ -149,17 +197,41 @@ const CalendarView = (props) => {
                                             <div className="_circle-inner">
                                                 <span>
                                                     {
-                                                        dateFormat(`${slides.date}`, "dS mmmm")
+
+                                                        slides.date.split("-")[2] + "th"
+                                                    }
+                                                    <br />
+
+                                                    {dateFormat(`${slides.date}`, "dS mmmm").split(" ")[1]
+
                                                     }
                                                 </span>
+                                                {/* <span>
+                                                    {
+                                                        dateFormat(`${slides.date}`, "dS mmmm")
+                                                    }
+                                                </span> */}
                                                 {slides.enddate === null ?
                                                     "" :
-                                                    <span>
-                                                        &mdash;
-                                                        {
-                                                            dateFormat(`${slides.enddate}`, "dS mmmm")
-                                                        }
-                                                    </span>
+                                                    <>
+                                                        <span> &mdash;</span>
+                                                        <span>
+                                                            {
+
+                                                                slides.enddate.split("-")[2] + "th"
+                                                            }
+                                                            <br />
+
+                                                            {dateFormat(`${slides.enddate}`, "dS mmmm").split(" ")[1]
+                                                            }
+                                                        </span>
+                                                    </>
+                                                    // <span>
+                                                    //     &mdash;
+                                                    //     {
+                                                    //         dateFormat(`${slides.enddate}`, "dS mmmm")
+                                                    //     }
+                                                    // </span>
                                                 }
                                             </div>
                                         </div>

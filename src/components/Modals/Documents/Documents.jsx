@@ -7,7 +7,7 @@ const Documents = (props) => {
     return (
         <Modal
             {...props}
-            size="xl"
+            size="lg"
             aria-labelledby="contained-modal-title-vcenter"
             centered
             // className="Documents"
@@ -18,26 +18,26 @@ const Documents = (props) => {
             }
             style={{ paddingLeft: "0px" }}
         >
-            <Container>
-                <Row>
-                    <Col sm="auto">
-                        <span className={
-                            props.lang === "ar"
-                                ? "modalIconArabic modalIcon"
-                                : "modalIcon"} onClick={props.onHide}>
-                            <ArrowBackIcon />
-                        </span>
-                    </Col>
-                    <Col sm>
-                        <Modal.Body>
-                            <p className={"SubTitle"}
-                                dangerouslySetInnerHTML={{
-                                    __html:
-                                        props.documentData?.description
-                                }}
-                            >
-                            </p>
-                            {/*<h2 className={"Title"}
+            {/* <Container> */}
+            {/* <Row>
+                    <Col sm="auto"> */}
+            <span className={
+                props.lang === "ar"
+                    ? "modalIconArabic modalIcon"
+                    : "modalIcon"} onClick={props.onHide}>
+                <ArrowBackIcon />
+            </span>
+            {/* </Col> */}
+            {/* <Col sm> */}
+            <Modal.Body>
+                <p className={"SubTitle"}
+                    dangerouslySetInnerHTML={{
+                        __html:
+                            props.documentData?.description
+                    }}
+                >
+                </p>
+                {/*<h2 className={"Title"}
                             >
                                 Documents to be submitted once a student has been accepted and enrolled:
                             </h2>
@@ -93,10 +93,10 @@ const Documents = (props) => {
                                 <li>Cash</li>
                                 <li>Cheques</li>
                             </ul> */}
-                        </Modal.Body>
-                    </Col>
-                </Row>
-            </Container>
+            </Modal.Body>
+            {/* </Col> */}
+            {/* </Row> */}
+            {/* </Container> */}
         </Modal>
     );
 };

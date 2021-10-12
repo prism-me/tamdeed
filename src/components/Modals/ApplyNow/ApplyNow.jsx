@@ -69,9 +69,9 @@ const ApplyNow = (props) => {
           If this role interest you, please send an email to careers@ags.ae with your latest CV.
         </p>
         <center>
-          <button className={"applynow"}>
+          <a href="mailto:careers@ags.ae" className={"applynow text-decoration-none"}>
             APPLY NOW
-          </button>
+          </a>
         </center>
       </Modal.Body>
       {/* </Col> */}

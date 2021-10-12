@@ -1,13 +1,16 @@
 import React from 'react';
 import { Grid } from "@material-ui/core";
 import { Card, Col, Row, Container } from "react-bootstrap";
-import bg_img_e from "./../../../assets/images/agsbackgrounds/agscareer.jpg";
 import { Hidden } from "@material-ui/core";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { constants } from "../../../utils/constants"
+import ApplyNow from "../../../components/Modals/ApplyNow/ApplyNow";
 
 const Positions = (props) => {
+    const [modalShow, setModalShow] = React.useState(false);
+    const [currentIndex, setCurrentIndex] = React.useState(0);
+
     const slidesData = [
         {
             position: "Reading Specialist",
@@ -59,6 +62,7 @@ const Positions = (props) => {
             items: 1
         }
     };
+
     return (
         <>
             <Hidden smDown>
@@ -99,7 +103,14 @@ const Positions = (props) => {
                                                 </Col>
                                                 <br />
                                                 <Col xs={12} sm={12} md={12} lg={12} className="d-flex justify-content-center align-items-center">
-                                                    <button class="schoolbtn btn-lg">
+                                                    <button class="schoolbtn btn-lg"
+
+                                                        onClick={() => {
+                                                            setCurrentIndex(index);
+                                                            setModalShow(true)
+                                                        }
+                                                        }
+                                                    >
                                                         {
                                                             constants?.site_content?.apply_now[
                                                             props.language
@@ -107,6 +118,10 @@ const Positions = (props) => {
                                                         }
                                                         {/* APPLY NOW */}
                                                     </button>
+                                                    <ApplyNow
+                                                        show={modalShow} onHide={() => setModalShow(false)}
+                                                        lang={props.language}
+                                                    />
                                                 </Col>
                                             </Row>
                                         </Card.Body>

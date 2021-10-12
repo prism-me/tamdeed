@@ -1,35 +1,77 @@
-.apply-now {
+.ApplyNow {
   z-index: 1111;
-  .apply-now-header {
-    color: $primary-color;
-  }
-  .query-form-column {
-    input,
-    select {
-      border-radius: 0;
-      //   border: none;
+  .Title {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: justify;
+    color: $bg-color;
+    @media #{$sm} {
+      font-size: 18px;
     }
-    .country_code {
-      @media #{$xsm} {
-        margin-bottom: 1rem;
+  }
+  .UlStyle{
+    color: $bg-color;
+    font-size: 20px;
+    text-align: justify;
+    font-weight: 500;
+    @media #{$sm} {
+      font-size: 18px;
+    }
+  }
+    .SubTitle{
+      color: $bg-color;
+      font-size: 20px;
+      font-weight: 500;
+      text-align: justify;
+      @media #{$sm} {
+        font-size: 18px;
       }
     }
-    p {
+    .applynow{
+      background: $bg-color;
+      border: none;
+      color: white;
+      padding: 0.5rem 3rem;
+      margin-top: 1rem;
+      border-radius: 20px;
+    }
+    .applynow:hover{
+      border: 1px solid $bg-color;
+      background: $hover-color;
       color: $primary-color;
-      line-height: 1.25rem;
-      font-size: 14px;
-      font-weight: 500;
     }
-    .btn-submit {
-      border-radius: 0;
-      background-color: $primary-color;
-      border-color: $primary-color;
-      color: $text-secondary;
-      text-transform: uppercase;
-      font-weight: bold;
-      width: 50%;
-      margin: auto;
-      display: block;
+    .modalIconArabic{
+      transform: rotate(180deg);
+      margin-left: 0 !important;
+      margin-right: 1rem;
     }
-  }
+    .modalIcon{
+      background: $bg-color;
+      color: $white;
+      padding: 1.5rem;
+      border-radius: 100%;
+      margin-top: 1rem;
+      margin-left: 1rem;
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-body {
+      padding: 1.5rem 3rem;
+      @media #{$sm} {
+        padding: 1.5rem 2rem;
+      }
+    }
+    .modal-content{
+      border-radius: 60px;
+    }
+}
+.agsModalDir{
+  direction: ltr;
+}
+.agsModalDirArabic{
+  direction: rtl;
 }

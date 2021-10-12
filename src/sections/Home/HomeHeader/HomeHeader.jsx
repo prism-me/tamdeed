@@ -30,7 +30,7 @@ function HomeHeader(props) {
     setIsPlaying(!isPlaying);
   }
 
-  const videoSource = "https://american-gulf-school.b-cdn.net/videos/PrincipalWelcomeMessage.mp4";
+  // const videoSource = "https://american-gulf-school.b-cdn.net/videos/PrincipalWelcomeMessage.mp4";
 
   // const videoSource = AGSPrincipalWelcomeMessage;
 
@@ -41,7 +41,7 @@ function HomeHeader(props) {
           <BackGroundVideo
             // blur={2}
             bannerImg={props.bannerImg}
-            videoSource={videoSource}
+          // videoSource={videoSource}
           >
             <div className='content'>
               {/*<div className='sub-content' >*/}

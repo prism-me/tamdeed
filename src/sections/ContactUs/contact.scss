@@ -31,7 +31,7 @@
         padding: 1rem 2rem;
         background-color: $bg_color;
         border-radius: 30px;
-        @media #{$sm} {
+        @media #{$sm,$md} {
           margin: 0;
           width: 100%;
           padding: 0;
@@ -40,7 +40,7 @@
         .card-head {
           display: flex;
           padding: 0 1.25rem;
-          @media #{$sm} {
+          @media #{$sm,$md} {
             justify-content: center;
           }
 
@@ -57,7 +57,7 @@
           display: flex;
           width: 100%;
           justify-content: center;
-          @media #{$sm} {
+          @media #{$sm,$md} {
             padding: 1rem;
           }
           .row {
@@ -130,6 +130,9 @@
           display: flex;
           flex-direction: column;
           width: 100%;
+          @media #{$md} {
+            margin-bottom: 1rem;
+          }
 
           .address-label {
             display: flex;
@@ -142,6 +145,9 @@
               padding: 0 1rem;
               align-items: flex-start;
               justify-content: center;
+            }
+            @media #{$md} {
+              padding: 0 0.5rem;
             }
 
             .icon {
@@ -160,7 +166,7 @@
                 font-size: $sub-fonts;
                 margin: 0;
                 color: white;
-                @media #{$sm} {
+                @media #{$sm ,$md} {
                   text-align: center;
                 }
               }
@@ -226,7 +232,7 @@
               }
             }
             .info-item.ic{
-              @media #{$sm} {
+              @media #{$sm, $md} {
                 margin: 0;
               }
             }
@@ -238,7 +244,7 @@
       display: flex;
       justify-content: flex-end;
       width: 100%;
-      @media #{$sm} {
+      @media #{$sm, $md} {
         display: none;
       }
       .sec-bg-img{
@@ -255,7 +261,7 @@
     margin-top: 9rem;
     height: 400px;
     position: relative;
-    @media #{$sm} {
+    @media #{$sm ,$md} {
       margin: 0;
     }
     .address-map{
@@ -264,7 +270,7 @@
       height: inherit;
       bottom: -7rem;
       position: absolute;
-      @media #{$sm} {
+      @media #{$sm ,$md} {
         bottom: 0;
       }
       .btn-hld{
@@ -273,7 +279,7 @@
         justify-content: flex-end;
         position: absolute;
         padding:1rem;
-        @media #{$sm} {
+        @media #{$sm, $md} {
           align-items: center;
           justify-content: center;
           height: 100%;

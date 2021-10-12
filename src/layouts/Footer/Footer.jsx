@@ -29,9 +29,11 @@ function Footer(props) {
                   <img src={logo} alt="AGS-logo"
                     onClick={() => history.push("/")}
                     className="footerlogo" />
-                  <h5 className={"font-weight-bold FooterHeading ml-1"}>
-                    {global.activeLanguage === "en" ? "AMERICAN" : "الأمريكية"} <br />
-                    {global.activeLanguage === "en" ? "GULF SCHOOL" : "مدرسة الخليج"}
+                  <h5
+                    className={global.activeLanguage === "en" ? "font-weight-bold FooterHeading ml-2" : "font-weight-bold FooterHeading mr-2"}
+                  >
+                    {global.activeLanguage === "en" ? "AMERICAN" : "المدرسة "} <br />
+                    {global.activeLanguage === "en" ? "GULF SCHOOL" : "الأمريكية الخليجية"}
                     {/* AMERICAN<br />
                   GULF SCHOOL */}
                   </h5>
@@ -51,32 +53,32 @@ function Footer(props) {
               <Nav className="flex-column">
                 <LinkContainer to={`/${global.activeLanguage}/about`}>
                   <Nav.Link className=" fdeco">
-                    {global.activeLanguage === "en" ? "About Us" : "معلومات عنا"}
+                    {global.activeLanguage === "en" ? "About Us" : "عن المدرسة"}
                     {/* About us  */}
                   </Nav.Link>
                 </LinkContainer>
                 <a href="https://www.google.com/maps/place/American+Gulf+School/@25.3382268,55.5628731,17z/data=!3m1!4b1!4m5!3m4!1s0x3ef5f5ef006a4c83:0xcf95030e29d9fb7!8m2!3d25.3382268!4d55.5650618?shorturl=1"
                   className=" fdeco text-white text-decoration-none" style={{ paddingTop: "8px" }} target="_blank">
                   {/* <Nav.Link className=" fdeco"> */}
-                  {global.activeLanguage === "en" ? "Campus Location" : "موقع الحرم الجامعي"}
+                  {global.activeLanguage === "en" ? "Campus Location" : "موقع المدرسة"}
                   {/* Campus Location  */}
                   {/* </Nav.Link> */}
                 </a>
                 <LinkContainer to={`/${global.activeLanguage}/OurTeam`}>
                   <Nav.Link className=" fdeco">
-                    {global.activeLanguage === "en" ? "Our Team" : "فريقنا"}
+                    {global.activeLanguage === "en" ? "Our Team" : "فريق العمل"}
                     {/* Our Team  */}
                   </Nav.Link>
                 </LinkContainer>
                 <LinkContainer to={`/${global.activeLanguage}/careers`}>
                   <Nav.Link className=" fdeco">
-                    {global.activeLanguage === "en" ? "Join Our Team" : "انضم إلى فريقنا"}
+                    {global.activeLanguage === "en" ? "Join Our Team" : "انضم إلينا"}
                     {/* Join Our Team */}
                   </Nav.Link>
                 </LinkContainer>
                 <LinkContainer to={`/${global.activeLanguage}/FAQ`}>
                   <Nav.Link className=" fdeco">
-                    {global.activeLanguage === "en" ? "FAQs" : "أسئلة وأجوبة"}
+                    {global.activeLanguage === "en" ? "FAQs" : "الأسئلة الشائعة"}
                     {/* FAQs  */}
                   </Nav.Link>
                 </LinkContainer>
@@ -84,13 +86,13 @@ function Footer(props) {
             </Col>
             <Col sm={6} xs={12} md={6} lg>
               <h5 className={"font-weight-bold FooterHeading"}>
-                {global.activeLanguage === "en" ? "ADMISSIONS" : "القبول"}
+                {global.activeLanguage === "en" ? "ADMISSIONS" : "التقديم"}
                 {/* ADMISSIONS */}
               </h5>
               <Nav className="flex-column">
                 <LinkContainer to="#">
                   <Nav.Link className=" fdeco">
-                    {global.activeLanguage === "en" ? "Virtual Admissions" : "القبول الافتراضي"}
+                    {global.activeLanguage === "en" ? "Virtual Admissions" : "التقديم الإفتراضي"}
                     {/* Virtual Admissions  */}
                   </Nav.Link>
                 </LinkContainer>
@@ -102,21 +104,21 @@ function Footer(props) {
                 </LinkContainer>
                 {/* <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.ENROLL}`}> */}
                 <HashLink to={`/${global.activeLanguage}/Enroll` + "#Tuition_Fees"} className={"hashLinkStyling"}>
-                  {global.activeLanguage === "en" ? "Tuition Fees" : "رسوم دراسية"}
+                  {global.activeLanguage === "en" ? "Tuition Fees" : "الرسوم الدراسية"}
                   {/* Tuition Fees */}
                 </HashLink>
                 {/* <Nav.Link className=" fdeco"> Tuition Fees</Nav.Link>
                 </LinkContainer> */}
                 {/* <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.ENROLL}`}> */}
                 <HashLink to={`/${global.activeLanguage}/Enroll` + "#Request_for_a_callback"} className={"hashLinkStyling"}>
-                  {global.activeLanguage === "en" ? "Request for a callback" : "طلب معاودة الاتصال"}
+                  {global.activeLanguage === "en" ? "Request for a callback" : "طلب إتصال"}
                   {/* Request for a callback */}
                 </HashLink>
                 {/* <Nav.Link className=" fdeco"> Request for a callback </Nav.Link>
                 </LinkContainer> */}
                 {/* <LinkContainer to={`/${currentLanguageCode}${STRINGS.ROUTES.ENROLL}`}> */}
                 <HashLink to={`/${global.activeLanguage}/Enroll` + "#School_Tour"} className={"hashLinkStyling"}>
-                  {global.activeLanguage === "en" ? "School Tours" : "جولات المدرسة"}
+                  {global.activeLanguage === "en" ? "School Tours" : "أخذ جولة في المدرسة"}
                   {/* School Tours */}
                 </HashLink>
                 {/* <Nav.Link className=" fdeco"> School Tours</Nav.Link>
@@ -125,7 +127,7 @@ function Footer(props) {
             </Col>
             <Col sm={6} xs={12} md={6} lg>
               <h5 className={"font-weight-bold FooterHeading"}>
-                {global.activeLanguage === "en" ? "ACADEMICS" : "الأكاديميات"}
+                {global.activeLanguage === "en" ? "ACADEMICS" : "الشؤون الأكاديمية"}
                 {/* ACADEMICS */}
               </h5>
               <Nav className="flex-column">
@@ -133,21 +135,21 @@ function Footer(props) {
                   onClick={scrollToBottom1}
                 > */}
                 <HashLink to={`/${global.activeLanguage}/academics` + "#Academic_Calendar"} className={"hashLinkStyling"}>
-                  {global.activeLanguage === "en" ? "Academic Calendar" : "التقويم الاكاديمى"}
+                  {global.activeLanguage === "en" ? "Academic Calendar" : "التقويم الدراسي"}
                   {/* Academic Calendar */}
                 </HashLink>
                 {/* <Nav.Link className=" fdeco"> Academic Calendar </Nav.Link> */}
                 {/* </LinkContainer> */}
                 {/* <LinkContainer to="#"> */}
                 <HashLink to={`/${global.activeLanguage}/academics` + "#Our_Curriculum"} className={"hashLinkStyling"}>
-                  {global.activeLanguage === "en" ? "Our Curriculum" : "منهجنا"}
+                  {global.activeLanguage === "en" ? "Our Curriculum" : "المنهج"}
                   {/* Our Curriculum */}
                 </HashLink>
                 {/* <Nav.Link className=" fdeco">  Our Curriculum </Nav.Link> */}
                 {/* </LinkContainer> */}
                 <LinkContainer to={`/${global.activeLanguage}/Student-care`}>
                   <Nav.Link className=" fdeco">
-                    {global.activeLanguage === "en" ? "Student Care Support " : "دعم رعاية الطلاب"}
+                    {global.activeLanguage === "en" ? "Student Care Support " : "رعاية الطلاب"}
                     {/* Student Care support   */}
                   </Nav.Link>
                 </LinkContainer>
@@ -155,12 +157,12 @@ function Footer(props) {
             </Col>
             <Col sm={6} xs={12} md={6} lg>
               <h5 className={"font-weight-bold FooterHeading"}>
-                {global.activeLanguage === "en" ? "CONTACT US" : "اتصل بنا"}
+                {global.activeLanguage === "en" ? "CONTACT US" : "للتواصل"}
                 {/* Contact Us */}
               </h5>
               <p>
                 {global.activeLanguage === "en" ? " Al Rahmaniya Shaghrafah 4 - Sharjah - United Arab Emirates"
-                  : "الرحمانية الشرفة 4 - الشارقة - الإمارات العربية المتحدة"}
+                  : "الرحمانية - شغرافة 4 - إمارة الشارقةّ - الإمارات العربية المتحدة"}
                 {/* Al Rahmaniya Shaghrafah 4 - Sharjah -
                 United Arab Emirates */}
               </p>
@@ -168,11 +170,15 @@ function Footer(props) {
                 <MailOutlineIcon className="iconSize" /> Info@ags.ae
               </a>
               <p>
-                <a href='tel:06-5061111' class="contact-pannel-btn text-decoration-none text-white fdeco"><PhoneIcon className="iconSize" /> 06-5061111</a>
+                <a href='tel:06-5061111' class="contact-pannel-btn text-decoration-none text-white fdeco">
+                  <PhoneIcon className="iconSize" />
+                  {global.activeLanguage === "en" ? "06-5061111" : "٥٦١١١١-٠٦"}
+                  {/* 06-5061111 */}
+                </a>
               </p>
               <p>
                 {global.activeLanguage === "en" ? "Working Hours : 7:45 AM - 3:45 PM ( Sunday - Thursday )" :
-                  "ساعات العمل: 7:45 ص - 3:45 م (الأحد - الخميس)"}
+                  "ساعات العمل: ٧:٤٥ صباحاً - ٣:٤٥ مساءاً (الأحد -الخميس)"}
                 {/* Working Hours : 7:45 AM - 3:45 PM ( Sunday - Thursday ) */}
               </p>
             </Col>

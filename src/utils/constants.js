@@ -26,11 +26,11 @@ export const constants = {
     },
     meta_team: {
       en: "OUR TEAM",
-      ar: "فريقنا",
+      ar: "فريق العمل",
     },
     meta_team_description: {
       en: "OUR TEAM",
-      ar: "فريقنا"
+      ar: "فريق العمل"
     },
     meta_form: {
       en: "ONLINE APPLICATION FORM",
@@ -50,11 +50,11 @@ export const constants = {
     },
     exp_ags: {
       en: "EXPERIENCE THE AGS DIFFERENCE",
-      ar: "تجربة فرق AGS",
+      ar: "اختبر الفرق مع المدرسة الأمريكية الخليجية",
     },
     meet_mentor: {
       en: "MEET THE MENTORS",
-      ar: "قابل المرشدين",
+      ar: "تعرف على المعلمين",
     },
     meet_colleague: {
       en: "MEET YOUR COLLEAGUES",
@@ -161,7 +161,7 @@ export const constants = {
     contact_us: {
       title: {
         en: "Contact Us",
-        ar: "اتصل بنا"
+        ar: "للتواصل"
       },
       name: {
         en: "Name",

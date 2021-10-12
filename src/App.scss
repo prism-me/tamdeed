@@ -104,12 +104,41 @@
   }
 }
 
+// font AGS Arabic Version
+
+@font-face {
+    font-family: "GE Dinar One"; 
+    src: url("https://db.onlinewebfonts.com/t/82be8da3de85484d7c85b6a6341c398a.eot");
+}
+
+.arabic-direction {
+  body,
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  li,
+  a,
+  span,
+  div,
+  button,
+  input,
+  textarea,
+  label {
+    font-family: "DinarOne" !important;
+  }
+}
+
+
 // body {
 //   font-family: $noto !important;
 //   color: $heading-color;
 // }
 
-// font AGS
+// font AGS English Version
 @import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
 
@@ -122,7 +151,13 @@ h1,h2,h3,h4,h5,h6{
   font-family: 'Marcellus SC', serif;
 }
 
-p,span,div{
+p,span,div, 
+button,
+input,
+textarea,
+body,
+label
+{
   font-family: 'Marcellus',serif;
 }
 

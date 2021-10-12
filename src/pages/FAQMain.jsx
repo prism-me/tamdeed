@@ -2,12 +2,13 @@ import React, { Component } from "react";
 import FAQ from "../sections/FAQMain/FAQMain";
 import { API } from "../http/API";
 import { connect } from "react-redux";
-// import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet";
+import { constants } from "../utils/constants"
 
 class FAQMain extends Component {
     state = {
         currentPage: null,
-        faqData: []
+        faqData: [],
     }
 
     componentDidMount() {
@@ -42,13 +43,36 @@ class FAQMain extends Component {
             .catch((err) => console.log(err));
     }
     render() {
+        const {
+            faqData
+        } = this.state;
+        const { global } = this.props;
         return (
             <div className="home-page">
+                <Helmet>
+                    <title>
+                        {`AGS | ${global?.activeLanguage === "ar"
+                            ? faqData?.arabic?.meta_details?.title ||
+                            constants?.site_content?.site_name :
+                            faqData?.meta_details?.title ||
+                            constants?.site_content?.site_name
+                            }`}
+                    </title>
+                    <meta
+                        name="description"
+                        content={global?.activeLanguage === "ar" ?
+                            faqData?.arabic?.meta_details
+                                ?.description || constants?.site_content?.seo_description
+                            : faqData?.meta_details
+                                ?.description || constants?.site_content?.seo_description
+                        }
+                    />
+                </Helmet>
                 <FAQ
                     faqData={
                         this.props.global?.activeLanguage === "ar"
-                            ? this.state.faqData?.arabic?.faq
-                            : this.state.faqData?.faq
+                            ? faqData?.arabic?.faq
+                            : faqData?.faq
                     }
                     language={this.props.global?.activeLanguage}
                     isArabic={

@@ -104,7 +104,6 @@ const Positions = (props) => {
                                                 <br />
                                                 <Col xs={12} sm={12} md={12} lg={12} className="d-flex justify-content-center align-items-center">
                                                     <button class="schoolbtn btn-lg"
-
                                                         onClick={() => {
                                                             setCurrentIndex(index);
                                                             setModalShow(true)
@@ -118,10 +117,6 @@ const Positions = (props) => {
                                                         }
                                                         {/* APPLY NOW */}
                                                     </button>
-                                                    <ApplyNow
-                                                        show={modalShow} onHide={() => setModalShow(false)}
-                                                        lang={props.language}
-                                                    />
                                                 </Col>
                                             </Row>
                                         </Card.Body>
@@ -129,6 +124,10 @@ const Positions = (props) => {
                                 </div>
                             ))
                         }
+                        <ApplyNow
+                            show={modalShow} onHide={() => setModalShow(false)}
+                            lang={props.language}
+                        />
                     </Carousel>
                 </div>
             </Hidden>
@@ -167,7 +166,13 @@ const Positions = (props) => {
                                                 }
                                             </p>
                                             <div className="d-flex justify-content-center align-items-center">
-                                                <button class="schoolbtn btn-lg">
+                                                <button class="schoolbtn btn-lg"
+                                                    onClick={() => {
+                                                        setCurrentIndex(index);
+                                                        setModalShow(true)
+                                                    }
+                                                    }
+                                                >
                                                     {
                                                         constants?.site_content?.apply_now[
                                                         props.language
@@ -176,12 +181,15 @@ const Positions = (props) => {
                                                     {/* APPLY NOW */}
                                                 </button>
                                             </div>
-
                                         </Card.Body>
                                     </Card>
                                 </div>
                             ))
                         }
+                        <ApplyNow
+                            show={modalShow} onHide={() => setModalShow(false)}
+                            lang={props.language}
+                        />
                     </Carousel>
                 </div>
             </Hidden>

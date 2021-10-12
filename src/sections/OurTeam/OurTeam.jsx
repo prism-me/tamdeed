@@ -23,23 +23,25 @@ function OurTeam(props) {
                                     <div className="imgheight"
                                         style={{ backgroundImage: `url(${slides.avatar})` }}
                                     >
-                                        <h5 className={"overview-heading"}>
+                                        <div className={"overview-heading"}>
                                             {/* {slides.name} */}
-                                            {
-                                                props.isArabic
-                                                    ? slides?.arabic?.name
-                                                    : slides.name
-                                            }
-                                            <br />
-                                            <span
-                                                dangerouslySetInnerHTML={{
-                                                    __html:
-                                                        props.isArabic
-                                                            ? slides?.arabic?.description
-                                                            : slides.description
-                                                }}
-                                            ></span>
-                                        </h5>
+                                            <h5 className={"title"}>
+                                                {
+                                                    props.isArabic
+                                                        ? slides?.arabic?.name
+                                                        : slides.name
+                                                }
+                                                <br />
+                                                <span
+                                                    dangerouslySetInnerHTML={{
+                                                        __html:
+                                                            props.isArabic
+                                                                ? slides?.arabic?.description
+                                                                : slides.description
+                                                    }}
+                                                ></span>
+                                            </h5>
+                                        </div>
                                     </div>
                                 </div>
                             </Col>

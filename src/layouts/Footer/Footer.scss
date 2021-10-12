@@ -99,7 +99,7 @@
 .socialIcon{
   padding: 0.5rem 0;
   @media #{$sm} {
-    text-align: left !important;
+    text-align: center !important;
   }
 }
 
@@ -126,5 +126,8 @@
   }
   .copyRight{
     padding-top: .5rem;
+    @media #{$sm} {
+      text-align: center !important;
+    }
   }
 }

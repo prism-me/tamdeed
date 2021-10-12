@@ -24,7 +24,7 @@ function Footer(props) {
         <Container>
           <Row>
             <Hidden smDown>
-              <Col sm={6} xs={6} md={6} lg>
+              <Col sm={6} xs={12} md={6} lg>
                 <div className="d-flex justify-contennt-start align-items-center">
                   <img src={logo} alt="AGS-logo"
                     onClick={() => history.push("/")}
@@ -43,7 +43,7 @@ function Footer(props) {
                 </div>
               </Col>
             </Hidden>
-            <Col sm={6} xs={6} md={6} lg>
+            <Col sm={6} xs={12} md={6} lg>
               <h5 className={"font-weight-bold FooterHeading"}>
                 {global.activeLanguage === "en" ? "OUR SCHOOL" : "مدرستنا"}
                 {/* OUR SCHOOL */}
@@ -82,7 +82,7 @@ function Footer(props) {
                 </LinkContainer>
               </Nav>
             </Col>
-            <Col sm={6} xs={6} md={6} lg>
+            <Col sm={6} xs={12} md={6} lg>
               <h5 className={"font-weight-bold FooterHeading"}>
                 {global.activeLanguage === "en" ? "ADMISSIONS" : "القبول"}
                 {/* ADMISSIONS */}
@@ -123,7 +123,7 @@ function Footer(props) {
                 </LinkContainer> */}
               </Nav>
             </Col>
-            <Col sm={6} xs={6} md={6} lg>
+            <Col sm={6} xs={12} md={6} lg>
               <h5 className={"font-weight-bold FooterHeading"}>
                 {global.activeLanguage === "en" ? "ACADEMICS" : "الأكاديميات"}
                 {/* ACADEMICS */}
@@ -153,7 +153,7 @@ function Footer(props) {
                 </LinkContainer>
               </Nav>
             </Col>
-            <Col sm={6} xs={6} md={6} lg>
+            <Col sm={6} xs={12} md={6} lg>
               <h5 className={"font-weight-bold FooterHeading"}>
                 {global.activeLanguage === "en" ? "CONTACT US" : "اتصل بنا"}
                 {/* Contact Us */}

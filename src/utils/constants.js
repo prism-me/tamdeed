@@ -34,19 +34,19 @@ export const constants = {
     },
     meta_form: {
       en: "ONLINE APPLICATION FORM",
-      ar: "نموذج طلب عبر الإنترنت",
+      ar: "إستمارة التقديم عبر الإنترنت",
     },
     meta_form_description: {
       en: "ONLINE APPLICATION FORM",
-      ar: "نموذج طلب عبر الإنترنت",
+      ar: "إستمارة التقديم عبر الإنترنت",
     },
     meta_career: {
       en: "CAREER",
-      ar: "مسار مهني مسار وظيفي",
+      ar: "الوظائف",
     },
     meta_career_description: {
       en: "CAREER",
-      ar: "مسار مهني مسار وظيفي",
+      ar: "الوظائف",
     },
     exp_ags: {
       en: "EXPERIENCE THE AGS DIFFERENCE",
@@ -58,7 +58,7 @@ export const constants = {
     },
     meet_colleague: {
       en: "MEET YOUR COLLEAGUES",
-      ar: "قابل زملائك",
+      ar: "تعرف على زملائك",
     },
     our_team: {
       en: "OUR TEAM",
@@ -66,19 +66,19 @@ export const constants = {
     },
     read_more: {
       en: "Read More >",
-      ar: "اقرأ أكثر>",
+      ar: " قرأ المزيد>",
     },
     learn_more: {
       en: "Learn More ",
-      ar: "للمزيد ",
+      ar: "تعرف على المزيد",
     },
     learn_less: {
       en: "Show Less ",
-      ar: "إظهار أقل",
+      ar: "عرض أقل",
     },
     apply_now: {
       en: "APPLY NOW",
-      ar: "قدم الآن",
+      ar: "سجل الآن",
     },
     waitlist: {
       title: {
@@ -87,15 +87,15 @@ export const constants = {
       },
       enter_email: {
         en: "Enter your email address",
-        ar: "أدخل عنوان بريدك الالكتروني"
+        ar: "ادخل عنوان بريدك الإلكتروني"
       },
       enter_name: {
         en: "Enter your name",
-        ar: "أدخل أسمك"
+        ar: "أدخل اسمك"
       },
       enroll: {
         en: "Enroll",
-        ar: "يتسجل"
+        ar: "سَجِّل"
       },
       email_req: {
         en: "Email Required",
@@ -116,7 +116,7 @@ export const constants = {
     },
     view_calender: {
       en: "View Calender",
-      ar: "مشاهدة التقويم",
+      ar: "عرض التقويم",
     },
     calender: {
       title: {
@@ -197,11 +197,11 @@ export const constants = {
       },
       help_desk: {
         en: "HELP DESK & QUERIES",
-        ar: "مكتب المساعدة والاستفسارات"
+        ar: "مكتب الإستفسارات والمساعدة"
       },
       send: {
         en: "Send",
-        ar: "يرسل"
+        ar: "إرسال"
       }
     },
     enrollTabs: {
@@ -232,19 +232,19 @@ export const constants = {
     },
     dec_btn: {
       en: "Click here to view the documents to be submitted once a student has been accepted and enrolled",
-      ar: "انقر هنا لعرض المستندات المطلوب تقديمها بمجرد قبول الطالب وتسجيله"
+      ar: "انقر هنا لعرض الوثائق التي يجب تقديمها بمجرد قبول الطالب وتسجيله"
     },
     age_btn: {
       en: "Click here to view the detailed Age Requirement and Grade Level Placement.",
-      ar: "انقر هنا لعرض المتطلبات العمرية التفصيلية والتنسيب على مستوى الصف."
+      ar: "انقر هنا لعرض تفاصيل متطلبات العمر والتنسيب للمرحلة الصفية."
     },
     genr_policy: {
       en: " Kindly read the General Policies, Fee Details and Payment Methods carefully.",
-      ar: "يرجى قراءة السياسات العامة وتفاصيل الرسوم وطرق الدفع بعناية."
+      ar: "يرجى قراءة السياسات العامة، وتفاصيل وطرق دفع الرسوم  بعناية."
     },
     app_online: {
       en: "Apply Online",
-      ar: "يقدم طلب على الإنترنت"
+      ar: "قم بالتسجيل عبر الإنترنت"
     },
     faq: {
       en: "FREQUENTLY ASKED QUESTIONS",
@@ -252,11 +252,11 @@ export const constants = {
     },
     adm_contact: {
       en: "ADMISSION CONTACT DETAILS",
-      ar: "تفاصيل جهة اتصال القبول"
+      ar: "معلومات الاتصال بقسم القبول"
     },
     adm_email: {
       en: "Email Us here for admission.",
-      ar: "مراسلتنا عبر البريد الإلكتروني هنا للقبول."
+      ar: "راسلنا على هذا البريد الإلكتروني للتسجيل."
     },
     adm_phone: {
       en: "Phone Number:",
@@ -273,7 +273,7 @@ export const constants = {
       },
       enter_pname: {
         en: "Parent/Guardian’s Name",
-        ar: "اسم الوالد / الوصي"
+        ar: "اسم الوالد / ولي الأمر"
       },
       enter_pnumb: {
         en: "Parent/Guardian’s Mobile Number",
@@ -303,11 +303,11 @@ export const constants = {
       },
       enter_pname: {
         en: "Parent/Guardian’s Full Name",
-        ar: "الاسم الكامل لولي الأمر / الوصي"
+        ar: "الاسم الكامل للوالد / ولي الأمر"
       },
       enter_pemail: {
         en: "Parent/Guardian’s Email",
-        ar: "البريد الإلكتروني للوالد / الوصي"
+        ar: "البريد الالكتروني للوالد / ولي الأمر"
       },
       email_req: {
         en: "Parent/Guardian’s Email Required",
@@ -346,7 +346,7 @@ export const constants = {
     },
     online_form_des: {
       en: "Thank you for your interest in American Gulf School, we look forward to receiving your application. Please use this form to submit an application for your son/daughter. Once your application has been received, a member of the admissions team will contact you to request the essential supporting documents required to process your son/daughter’s application. Please note, your application will become ‘active’ once all of the essential supporting documents are received.",
-      ar: "نشكرك على اهتمامك بالمدرسة الخليجية الأمريكية ، ونتطلع إلى تلقي طلبك. يرجى استخدام هذا النموذج لتقديم طلب لابنك / ابنتك. بمجرد استلام طلبك ، سيتصل بك أحد أعضاء فريق القبول لطلب المستندات الداعمة الأساسية المطلوبة لمعالجة طلب ابنك / ابنتك. يرجى ملاحظة أن طلبك سيصبح نشطًا بمجرد استلام جميع المستندات الداعمة الأساسية."
+      ar: "شكرا على اهتمامك بالانضمام إلى المدرسة الأمريكية الخليجية، نحن نتطلع إلى تلقي طلبك. يرجى استخدام هذا النموذج لتقديم الطلب لابنك/ ابنتك. بمجرد استلام طلبك، سيقوم أحد أعضاء فريق القبول بالتواصل معك للحصول على بعض الوثائق الضرورية لمواصلة العمل على طلب ابنك/ ابنتك. يرجى ملاحظة أن طلبك سيصبح مفعلاً بمجرد استلامنا لجميع المستندات الضرورية."
     },
   },
 };

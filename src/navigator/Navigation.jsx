@@ -7,6 +7,7 @@ import Route from "./../components/CustomRoute";
 // import Register from "../components/Modals/Register/Register";
 import Error404 from "../pages/Error404";
 import { connect } from "react-redux";
+import { types } from "../redux/global/types";
 
 class Navigation extends Component {
   state = {

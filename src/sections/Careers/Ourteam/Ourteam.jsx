@@ -38,7 +38,7 @@ export default function Ourteam(props) {
                 swipeable={false}
                 draggable={true}
                 showDots={false}
-                arrows={false}
+                arrows={true}
                 ssr={true} // means to render carousel on server-side.
                 infinite={true}
                 autoPlay={true}

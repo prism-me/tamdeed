@@ -146,7 +146,10 @@ function Schoolinclusion(props) {
                                     <PhoneOutlinedIcon />
                                 </div>
                                 <div className="txt">
-                                    <a href="tel: 05-69990871" className="text-decoration-none PmIcon">  05-69990871</a>
+                                    <a href="tel: 05-69990871" className="text-decoration-none PmIcon">
+                                        {props.language === "en" ? "05-69990871" : "٠٥٦٩٩٩٠٨٧١"}
+                                        {/* 05-69990871 */}
+                                    </a>
                                 </div>
                             </div>
                             <div className="icon-txt-hld">
@@ -174,7 +177,10 @@ function Schoolinclusion(props) {
                                     <PhoneOutlinedIcon />
                                 </div>
                                 <div className="txt">
-                                    <a href="tel:06-5061111" className="text-decoration-none PmIcon"> 06-5061111</a>
+                                    <a href="tel:06-5061111" className="text-decoration-none PmIcon">
+                                        {props.language === "en" ? "06-5061111" : "٥٦١١١١-٠٦"}
+                                        {/* 06-5061111 */}
+                                    </a>
                                 </div>
                             </div>
                             <div className="icon-txt-hld">

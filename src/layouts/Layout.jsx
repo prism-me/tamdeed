@@ -244,7 +244,9 @@ function Layout(props) {
         show={visible}
         toggleDrawer={(show) => toggleDrawer(show)}
       />
-      <Contactpannel />
+      <Contactpannel
+        activeLanguage={global.activeLanguage}
+      />
       {props.children}
       <BackToTop />
       <Footer />

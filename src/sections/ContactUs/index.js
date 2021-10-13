@@ -254,7 +254,10 @@ const Contact = (props) => {
                                             <img alt={"#"} src={phone_icon} />
                                         </div>
                                         <div className="txt">
-                                            <a href="tel: 05-69990871" className="text-decoration-none text-white">  05-69990871</a>
+                                            <a href="tel: 05-69990871" className="text-decoration-none text-white">
+                                                {props.language === "en" ? "05-69990871" : "٠٥٦٩٩٩٠٨٧١"}
+                                                {/* 05-69990871 */}
+                                            </a>
                                         </div>
                                     </div>
                                     <div className="icon-txt-hld">
@@ -283,7 +286,10 @@ const Contact = (props) => {
                                             <img alt={"#"} src={phone_icon} />
                                         </div>
                                         <div className="txt">
-                                            <a href="tel:06-5061111" className="text-decoration-none text-white"> 06-5061111</a>
+                                            <a href="tel:06-5061111" className="text-decoration-none text-white">
+                                                {props.language === "en" ? "06-5061111" : "٥٦١١١١-٠٦"}
+                                                {/* 06-5061111 */}
+                                            </a>
                                         </div>
                                     </div>
                                     <div className="icon-txt-hld">

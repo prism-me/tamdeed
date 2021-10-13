@@ -2,19 +2,19 @@ export const constants = {
   site_content: {
     site_name: {
       en: "AMERICAN GULF SCHOOL",
-      ar: "مدرسة الخليج الأمريكية",
+      ar: "المدرسة الأمريكية الخليجية",
     },
     seo_description: {
       en: "AGS | AMERICAN GULF SCHOOL",
-      ar: "AGS | مدرسة الخليج الأمريكية",
+      ar: "AGS | المدرسة الأمريكية الخليجية",
     },
     meta_cnt: {
       en: "CONTACT US",
-      ar: "اتصل بنا",
+      ar: "للتواصل معنا",
     },
     meta_cnt_description: {
       en: "CONTACT US",
-      ar: "اتصل بنا",
+      ar: "للتواصل معنا",
     },
     meta_std: {
       en: "STUDENT CARE",
@@ -62,7 +62,7 @@ export const constants = {
     },
     our_team: {
       en: "OUR TEAM",
-      ar: "فريقنا",
+      ar: "فريق العمل",
     },
     read_more: {
       en: "Read More >",
@@ -121,25 +121,25 @@ export const constants = {
     calender: {
       title: {
         en: "ACADEMIC CALENDAR 2021 - 2022",
-        ar: "التقويم الأكاديمي 2021 - 2022"
+        ar: " التقويم الدراسي 2021 - 2022"
       },
       term1: {
         en: "TERM 1 : WINTER 2021",
-        ar: "المدة 1: شتاء 2021"
+        ar: "الفصل الدراسي الأول: شتاء 2021"
       },
       term2: {
         en: "TERM 2 : SPRING 2022",
-        ar: "المدة 2: ربيع 2022"
+        ar: "الفصل الدراسي الثاني: ربيع 2022"
       },
       term3: {
         en: "TERM 3 : SUMMER 2022",
-        ar: "المدة 3: صيف 2022"
+        ar: "الفصل الدراسي الثالث: صيف 2022"
       }
     },
     stdTabs: {
       tab1: {
         en: "Inclusion",
-        ar: "تضمين"
+        ar: "إحاطة"
       },
       tab2: {
         en: "Academic Support",
@@ -151,17 +151,17 @@ export const constants = {
       },
       tab4: {
         en: "Academic Guidance",
-        ar: "التوجيه الأكاديمي"
+        ar: "الإرشاد الأكاديمي"
       },
       tab5: {
         en: "Wellbeing",
-        ar: "الرفاهية"
+        ar: "الصحة والسلامة"
       }
     },
     contact_us: {
       title: {
         en: "Contact Us",
-        ar: "للتواصل"
+        ar: "للتواصل معنا"
       },
       name: {
         en: "Name",
@@ -173,7 +173,7 @@ export const constants = {
       },
       email: {
         en: "Email Address",
-        ar: "عنوان البريد الإلكتروني"
+        ar: "البريد الإلكتروني"
       },
       msg: {
         en: "Your Message",
@@ -189,7 +189,7 @@ export const constants = {
       },
       addr: {
         en: "Al Rahmaniya Shaghrafah 4 - Sharjah - United Arab Emirates",
-        ar: "الرحمانية الشرفة 4 - الشارقة - الإمارات العربية المتحدة"
+        ar: "الرحمانية - شغرافة 4 - إمارة الشارقةّ - الإمارات العربية المتحدة"
       },
       admission: {
         en: "FOR ADMISSIONS",
@@ -207,11 +207,11 @@ export const constants = {
     enrollTabs: {
       tab1: {
         en: "Admissions Process",
-        ar: "عملية القبول"
+        ar: "إجراءات القبول"
       },
       tab2: {
         en: "Enquiry",
-        ar: "سؤال"
+        ar: "للإستفسار"
       },
       tab3: {
         en: "Fees and Payments",
@@ -219,7 +219,7 @@ export const constants = {
       },
       tab4: {
         en: "Online Application",
-        ar: "طلب عبر الإنترنت"
+        ar: "التقديم عبر الإنترنت"
       },
       tab5: {
         en: "FAQs",
@@ -228,7 +228,7 @@ export const constants = {
     },
     adm_procd: {
       en: "ADMISSIONS PROCEDURE",
-      ar: "إجراءات القبول"
+      ar: "عملية القبول"
     },
     dec_btn: {
       en: "Click here to view the documents to be submitted once a student has been accepted and enrolled",
@@ -248,7 +248,7 @@ export const constants = {
     },
     faq: {
       en: "FREQUENTLY ASKED QUESTIONS",
-      ar: "أسئلة مكررة"
+      ar: "الأسئلة المتكررة"
     },
     adm_contact: {
       en: "ADMISSION CONTACT DETAILS",
@@ -265,11 +265,11 @@ export const constants = {
     req_call: {
       title: {
         en: "Request A Call Back",
-        ar: "طلب استدعاء"
+        ar: "طلب إتصال"
       },
       subtitle: {
         en: "For more information about admissions and tours, request a call back from our team by filling in the form below.",
-        ar: "لمزيد من المعلومات حول عمليات القبول والجولات ، اطلب معاودة الاتصال من فريقنا عن طريق ملء النموذج أدناه"
+        ar: "لمزيد من المعلومات حول القبول والجولات، اطلب إعادة الاتصال من فريقنا عن طريق ملء النموذج أدناه."
       },
       enter_pname: {
         en: "Parent/Guardian’s Name",
@@ -281,7 +281,7 @@ export const constants = {
       },
       submit: {
         en: "Submit",
-        ar: "يقدم"
+        ar: "إرسال"
       },
       numb_req: {
         en: "Parent/Guardian’s Mobile Number Required",
@@ -299,7 +299,7 @@ export const constants = {
       },
       subtitle: {
         en: "Book a tour with our Admissions team to visit American Gulf School Sharjah, located in Al Rahmaniya 4, Sharjah. To book a tour of American Gulf School, please fill out the form below and a member of our Admissions team will contact you to arrange a suitable time.",
-        ar: "احجز جولة مع فريق القبول لدينا لزيارة American Gulf School الشارقة ، الواقعة في الرحمانية 4 ، الشارقة. لحجز جولة في مدرسة American Gulf School ، يرجى ملء النموذج أدناه وسيتصل بك أحد أعضاء فريق القبول لدينا لترتيب موعد مناسب"
+        ar: "احجز جولة لزيارة المدرسة الأمريكية الخليجية في الشارقة مع فريق القبول لدينا، والتي تقع في منطقة الرحمانية 4، الشارقة. لحجز جولة في المدرسة الأمريكية الخليجية، يرجى ملء النموذج أدناه، وسوف يتصل بك أحد أعضاء فريق القبول لدينا لترتيب وقت مناسب:"
       },
       enter_pname: {
         en: "Parent/Guardian’s Full Name",
@@ -317,7 +317,7 @@ export const constants = {
     footer: {
       logo_title: {
         en: "AMERICAN GULF SCHOOL",
-        ar: "مدرسة الخليج الأمريكية"
+        ar: "المدرسة الأمريكية الخليجية"
       },
       subtitle: {
         en: "For more information about admissions and tours, request a call back from our team by filling in the form below.",
@@ -333,7 +333,7 @@ export const constants = {
       },
       submit: {
         en: "Submit",
-        ar: "يقدم"
+        ar: "إرسال"
       },
       numb_req: {
         en: "Parent/Guardian’s Mobile Number Required",

@@ -21,37 +21,33 @@ class Academics extends Component {
 
     componentDidMount() {
         let currentPage = null;
+        API.get(`/pages`).then((response) => {
+            if (
+                response.status === 200 ||
+                response.status === 201
+            ) {
+                currentPage = response.data.data.find(
+                    (x) => x.slug === "academics-page"
+                );
+                this.setState({ currentPage });
 
-        API.get(`/sections`)
-            .then((response) => {
-                // debugger;
-                if (
-                    response.status === 200 ||
-                    response.status === 201
-                ) {
-                    currentPage = response.data.data.filter(
-                        (x) => x.slug === "academics-page"
-                    );
-
-                    let lastElement = currentPage[currentPage.length - 1];
-                    this.setState({ lastElement });
-                    API.get(`/all_sections/${lastElement.page_id}`)
-                        .then(
-                            (response) => {
-                                if (response.data.data) {
-                                    // debugger;
-                                    this.setState({
-                                        content:
-                                            response.data.data[
-                                                response.data.data?.length - 1
-                                            ]?.content,
-                                    });
-                                }
+                API.get(`/all_sections/${currentPage._id}`)
+                    .then(
+                        (response) => {
+                            if (response.data.data) {
+                                // debugger;
+                                this.setState({
+                                    content:
+                                        response.data.data[
+                                            response.data.data?.length - 1
+                                        ]?.content,
+                                });
                             }
-                        )
-                        .catch((err) => console.log(err));
-                }
-            })
+                        }
+                    )
+                    .catch((err) => console.log(err));
+            }
+        })
             .catch((err) => console.log(err));
 
         API.get('/exp_and_life').then(response => {

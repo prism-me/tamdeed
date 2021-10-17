@@ -3,7 +3,7 @@ import { Modal, Button, Row, Col, Form, Container, Table, Card } from "react-boo
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import { Grid } from "@material-ui/core";
 import { constants } from "../../../utils/constants"
-import dateFormat from 'dateformat';
+// import dateFormat from 'dateformat';
 
 const CalendarView = (props) => {
     return (
@@ -55,6 +55,498 @@ const CalendarView = (props) => {
                                 </p>
                             </div>
                             <div className="card-sec">
+                                <div className="circle-holder">
+                                    <div className="_circle">
+                                        <div className="_circle-inner">
+                                            {
+                                                props.lang === "en" ? "29" : "29"
+                                            }
+                                            {/* 29 */}
+                                            <span className="_circle-em">
+                                                {
+                                                    props.lang === "en" ? "th" : ""
+                                                }
+                                                {/* th */}
+                                            </span></div>
+                                        <span className="_circle-month">
+                                            {
+                                                props.lang === "en" ? "AUG" : "أغسطس"
+                                            }
+                                            {/* AUG */}
+                                        </span>
+                                    </div>
+                                    <div className="_circle-txt">
+                                        <p>
+                                            {
+                                                constants?.site_content?.calender?.term1heading1[
+                                                props.lang
+                                                ]
+                                            }
+                                            {/* First day of term */}
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="circle-holder">
+                                    <div className="_circle">
+                                        <div className="_circle-inner">
+                                            {
+                                                props.lang === "en" ? "21" : "21"
+                                            }
+                                            {/* 21 */}
+                                            <span className="_circle-em">
+                                                {
+                                                    props.lang === "en" ? "st" : ""
+                                                }
+                                                {/* st */}
+                                            </span></div>
+                                        <span className="_circle-month">
+                                            {
+                                                props.lang === "en" ? "OCT" : "أكتوبر"
+                                            }
+                                            {/* OCT */}
+                                        </span>
+                                    </div>
+                                    <div className="_circle-txt">
+                                        <p>
+                                            {
+                                                constants?.site_content?.calender?.term1heading2[
+                                                props.lang
+                                                ]
+                                            }
+                                            {/* Prophet Muhammad's (PBUH) birthday */}
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="circle-holder">
+                                    <div className="_circle">
+                                        <div className="_circle-inner">
+                                            {
+                                                props.lang === "en" ? "03" : "03"
+                                            }
+                                            {/* 03 */}
+                                            <span className="_circle-em">
+                                                {
+                                                    props.lang === "en" ? "rd" : ""
+                                                }
+                                                {/* rd */}
+                                            </span></div>
+                                        <span className="_circle-month">
+                                            {
+                                                props.lang === "en" ? "Nov" : "نو مبر "
+                                            }
+                                            {/* Nov */}
+                                        </span>
+                                    </div>
+                                    <div className="_circle-txt">
+                                        <p>
+                                            {
+                                                constants?.site_content?.calender?.term1heading3[
+                                                props.lang
+                                                ]
+                                            }
+                                            {/* UAE Flag Day */}
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="circle-holder">
+                                    <div className="_circle">
+                                        <div className="_circle-inner">
+                                            {
+                                                props.lang === "en" ? "01" : "01"
+                                            }
+                                            {/* 01 */}
+                                            <span className="_circle-em">
+                                                {
+                                                    props.lang === "en" ? "st" : ""
+                                                }
+                                                {/* st */}
+                                            </span></div>
+                                        <span className="_circle-month">
+                                            {
+                                                props.lang === "en" ? "Dec" : "ديسمبر "
+                                            }
+                                            {/* Dec */}
+                                        </span>
+                                    </div>
+                                    <div className="_circle-txt">
+                                        <p>
+                                            {
+                                                constants?.site_content?.calender?.term1heading4[
+                                                props.lang
+                                                ]
+                                            }
+                                            {/* Commemoration Day */}
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="circle-holder">
+                                    <div className="_circle">
+                                        <div className="_circle-inner">
+                                            {
+                                                props.lang === "en" ? "02" : "02"
+                                            }
+                                            {/* 02 */}
+                                            <span className="_circle-em">
+                                                {
+                                                    props.lang === "en" ? "nd" : ""
+                                                }
+                                                {/* nd */}
+                                            </span></div>
+                                        <span className="_circle-month">
+                                            {
+                                                props.lang === "en" ? "Dec" : "ديسمبر "
+                                            }
+                                            {/* Dec */}
+                                        </span>
+                                    </div>
+                                    <div className="_circle-txt">
+                                        <p>
+                                            {
+                                                constants?.site_content?.calender?.term1heading5[
+                                                props.lang
+                                                ]
+                                            }
+                                            {/* National Day */}
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="circle-holder">
+                                    <div className="_circle">
+                                        <div className="_circle-inner">
+                                            {
+                                                props.lang === "en" ? "12" : "12"
+                                            }
+                                            {/* 12 */}
+                                            <span className="_circle-em">
+                                                {
+                                                    props.lang === "en" ? "th" : ""
+                                                }
+                                                {/* th */}
+                                            </span></div>
+                                        <span className="_circle-month">
+                                            {
+                                                props.lang === "en" ? "Dec" : "ديسمبر "
+                                            }
+                                            {/* Dec */}
+                                        </span>
+                                    </div>
+                                    <div className="_circle-txt">
+                                        <p>
+                                            {
+                                                constants?.site_content?.calender?.term1heading6[
+                                                props.lang
+                                                ]
+                                            }
+                                            {/* Beginning of Winter Break */}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="card-row">
+                            <div className="card-head">
+                                <p>
+                                    {
+                                        constants?.site_content?.calender?.term2[
+                                        props.lang
+                                        ]
+                                    }
+                                    {/* TERM 2 : SPRING 2022 */}
+                                </p>
+                            </div>
+                            <div className="card-sec">
+                                <div className="circle-holder">
+                                    <div className="_circle">
+                                        <div className="_circle-inner">
+                                            {
+                                                props.lang === "en" ? "02" : "02"
+                                            }
+                                            {/* 02 */}
+                                            <span className="_circle-em">
+                                                {
+                                                    props.lang === "en" ? "nd" : ""
+                                                }
+                                                {/* nd */}
+                                            </span></div>
+                                        <span className="_circle-month">
+                                            {
+                                                props.lang === "en" ? "JAN" : "جنوری"
+                                            }
+                                            {/* JAN */}
+                                        </span>
+                                    </div>
+                                    <div className="_circle-txt">
+                                        <p>
+                                            {
+                                                constants?.site_content?.calender?.term2heading1[
+                                                props.lang
+                                                ]
+                                            }
+                                            {/* First day of term */}
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="circle-holder">
+                                    <div className="_circle">
+                                        <div className="_circle-inner">
+                                            {
+                                                props.lang === "en" ? "27" : "27"
+                                            }
+                                            {/* 27 */}
+                                            <span className="_circle-em">
+                                                {
+                                                    props.lang === "en" ? "th" : ""
+                                                }
+                                                {/* th */}
+                                            </span></div>
+                                        <span className="_circle-month">
+                                            {
+                                                props.lang === "en" ? "MAR" : "مارس"
+                                            }
+                                            {/* MAR */}
+                                        </span>
+                                    </div>
+                                    <div className="_circle-txt">
+                                        <p>
+                                            {
+                                                constants?.site_content?.calender?.term2heading2[
+                                                props.lang
+                                                ]
+                                            }
+                                            {/* Beginning of Spring Break */}
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="circle-holder">
+                                    <div className="_circle">
+                                        <div className="_circle-inner">
+                                            {
+                                                props.lang === "en" ? "02" : "02"
+                                            }
+                                            {/* 02 */}
+                                            <span className="_circle-em">
+                                                {
+                                                    props.lang === "en" ? "nd" : ""
+                                                }
+                                                {/* nd */}
+                                            </span></div>
+                                        <span className="_circle-month">
+                                            {
+                                                props.lang === "en" ? "APRIL" : "أبريل"
+                                            }
+                                            {/* APRIL */}
+                                        </span>
+                                    </div>
+                                    <div className="_circle-txt">
+                                        <p>
+                                            {
+                                                constants?.site_content?.calender?.term2heading3[
+                                                props.lang
+                                                ]
+                                            }
+                                            {/* Start of Ramadan (TBC) */}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="card-row">
+                            <div className="card-head">
+                                <p>
+                                    {
+                                        constants?.site_content?.calender?.term3[
+                                        props.lang
+                                        ]
+                                    }
+                                    {/* TERM 3 : SUMMER 2022 */}
+                                </p>
+                            </div>
+                            <div className="card-sec">
+                                <div className="circle-holder">
+                                    <div className="_circle">
+                                        <div className="_circle-inner">
+                                            {
+                                                props.lang === "en" ? "10" : "10"
+                                            }
+                                            {/* 10 */}
+                                            <span className="_circle-em">
+                                                {
+                                                    props.lang === "en" ? "th" : ""
+                                                }
+                                                {/* th */}
+                                            </span></div>
+                                        <span className="_circle-month">
+                                            {
+                                                props.lang === "en" ? "APRIL" : "أبريل"
+                                            }
+                                            {/* APRIL */}
+                                        </span>
+                                    </div>
+                                    <div className="_circle-txt">
+                                        <p>
+                                            {
+                                                constants?.site_content?.calender?.term3heading1[
+                                                props.lang
+                                                ]
+                                            }
+                                            {/* First day of term */}
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="circle-holder">
+                                    <div className="_circle">
+                                        <div className="_circle-inner">
+                                            {
+                                                props.lang === "en" ? "01" : "01"
+                                            }
+                                            {/* 01 */}
+                                            <span className="_circle-em">
+                                                {
+                                                    props.lang === "en" ? "st" : ""
+                                                }
+                                                {/* st */}
+                                            </span></div>
+                                        <span className="_circle-month">
+                                            {
+                                                props.lang === "en" ? "MAY" : "مايو"
+                                            }
+                                            {/* MAY */}
+                                        </span>
+                                    </div>
+                                    <div className="_circle-txt">
+                                        <p>
+                                            {
+                                                constants?.site_content?.calender?.term3heading2[
+                                                props.lang
+                                                ]
+                                            }
+                                            {/* Start of Eid al-Fiter */}
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="circle-holder">
+                                    <div className="_circle">
+                                        <div className="_circle-inner">
+                                            {
+                                                props.lang === "en" ? "02" : "02"
+                                            }
+                                            {/* 02 */}
+                                            <span className="_circle-em">
+                                                {
+                                                    props.lang === "en" ? "nd" : ""
+                                                }
+                                                {/* nd */}
+                                            </span></div>
+                                        <span className="_circle-month">
+                                            {
+                                                props.lang === "en" ? "MAY" : "مايو"
+                                            }
+                                            {/* May */}
+                                        </span>
+                                    </div>
+                                    <div className="_circle-txt">
+                                        <p>
+                                            {
+                                                constants?.site_content?.calender?.term3heading3[
+                                                props.lang
+                                                ]
+                                            }
+                                            {/* Eid al-Fiter ends */}
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div className="circle-holder lg">
+                                    <div className="_circle lg">
+                                        <div className="_circle-inner">
+                                            {
+                                                props.lang === "en" ? "01" : "01"
+                                            }
+                                            {/* 01 */}
+                                            <span className="_circle-em">
+                                                {
+                                                    props.lang === "en" ? "st" : ""
+                                                }
+                                                {/* st */}
+                                            </span>
+                                            -
+                                            05<span className="_circle-em">
+                                                {
+                                                    props.lang === "en" ? "th" : ""
+                                                }
+                                                {/* th */}
+                                            </span>
+                                        </div>
+                                        <span className="_circle-month">
+                                            {
+                                                props.lang === "en" ? "MAY" : "مايو"
+                                            }
+                                            {/* May */}
+                                        </span>
+                                    </div>
+                                    <div className="_circle-txt">
+                                        <p>
+                                            {
+                                                constants?.site_content?.calender?.term3heading4[
+                                                props.lang
+                                                ]
+                                            }
+                                            {/* Public Holiday */}
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div className="circle-holder">
+                                    <div className="_circle">
+                                        <div className="_circle-inner">
+                                            {
+                                                props.lang === "en" ? "03" : "03"
+                                            }
+                                            {/* 03 */}
+                                            <span className="_circle-em">
+                                                {
+                                                    props.lang === "en" ? "rd" : ""
+                                                }
+                                                {/* rd */}
+                                            </span></div>
+                                        <span className="_circle-month">
+                                            {
+                                                props.lang === "en" ? "July" : "يوليو"
+                                            }
+                                            {/* July */}
+                                        </span>
+                                    </div>
+                                    <div className="_circle-txt">
+                                        <p>
+                                            {
+                                                constants?.site_content?.calender?.term3heading5[
+                                                props.lang
+                                                ]
+                                            }
+                                            {/* Last day of Academic Year */}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </Grid>
+                </Grid>
+            </Modal.Body>
+
+            {/* <Modal.Body>
+                <Grid container className="modal-sec">
+                    <Grid item className="card-holder">
+                        <div className="card-row">
+                            <div className="card-head">
+                                <p>
+                                    {
+                                        constants?.site_content?.calender?.term1[
+                                        props.lang
+                                        ]
+                                    }
+                                </p>
+                            </div>
+                            <div className="card-sec">
                                 {props?.term1Sec?.map((slides, index) => (
                                     <div className="circle-holder">
                                         <div className="_circle">
@@ -70,11 +562,6 @@ const CalendarView = (props) => {
 
                                                     }
                                                 </span>
-                                                {/* <span>
-                                                    {
-                                                        dateFormat(`${slides.date}`, "dS mmmm")
-                                                    }
-                                                </span> */}
                                                 {slides.enddate === null ?
                                                     "" :
                                                     <>
@@ -90,12 +577,6 @@ const CalendarView = (props) => {
                                                             }
                                                         </span>
                                                     </>
-                                                    // <span>
-                                                    //     &mdash;
-                                                    //     {
-                                                    //         dateFormat(`${slides.enddate}`, "dS mmmm")
-                                                    //     }
-                                                    // </span>
                                                 }
                                             </div>
                                         </div>
@@ -120,7 +601,6 @@ const CalendarView = (props) => {
                                         props.lang
                                         ]
                                     }
-                                    {/* TERM 2 : SPRING 2022 */}
                                 </p>
                             </div>
                             <div className="card-sec">
@@ -139,11 +619,6 @@ const CalendarView = (props) => {
 
                                                     }
                                                 </span>
-                                                {/* <span>
-                                                    {
-                                                        dateFormat(`${slides.date}`, "dS mmmm")
-                                                    }
-                                                </span> */}
                                                 {slides.enddate === null ?
                                                     "" :
                                                     <>
@@ -159,12 +634,6 @@ const CalendarView = (props) => {
                                                             }
                                                         </span>
                                                     </>
-                                                    // <span>
-                                                    //     &mdash;
-                                                    //     {
-                                                    //         dateFormat(`${slides.enddate}`, "dS mmmm")
-                                                    //     }
-                                                    // </span>
                                                 }
                                             </div>
                                         </div>
@@ -187,7 +656,6 @@ const CalendarView = (props) => {
                                         props.lang
                                         ]
                                     }
-                                    {/* TERM 3 : SUMMER 2022 */}
                                 </p>
                             </div>
                             <div className="card-sec">
@@ -206,11 +674,6 @@ const CalendarView = (props) => {
 
                                                     }
                                                 </span>
-                                                {/* <span>
-                                                    {
-                                                        dateFormat(`${slides.date}`, "dS mmmm")
-                                                    }
-                                                </span> */}
                                                 {slides.enddate === null ?
                                                     "" :
                                                     <>
@@ -226,12 +689,6 @@ const CalendarView = (props) => {
                                                             }
                                                         </span>
                                                     </>
-                                                    // <span>
-                                                    //     &mdash;
-                                                    //     {
-                                                    //         dateFormat(`${slides.enddate}`, "dS mmmm")
-                                                    //     }
-                                                    // </span>
                                                 }
                                             </div>
                                         </div>
@@ -248,7 +705,7 @@ const CalendarView = (props) => {
                         </div>
                     </Grid>
                 </Grid>
-            </Modal.Body>
+            </Modal.Body> */}
         </Modal>
     );
 };

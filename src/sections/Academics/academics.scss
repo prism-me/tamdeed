@@ -7,6 +7,26 @@
   display: flex;
   position: relative;
   width: 100%;
+
+  //&::before {
+  //  content: "";
+  //  display: block;
+  //  position: absolute;
+  //  bottom: 0;
+  //  top: -100px;
+  //  left: 0;
+  //  z-index: 888;
+  //  width: 100%;
+  //  height: 120px;
+  //  background-image: url("../../assets/images/academics/paths_hd.png");
+  //  background-repeat: no-repeat;
+  //  background-size: cover;
+  //  @media #{$lg,$xl,$xxl} {
+  //    top: -140px;
+  //    height: 141px;
+  //  }
+  //}
+
   .v-calendar-sec {
     position: absolute;
     display: flex;
@@ -17,6 +37,8 @@
     opacity: 0.9;
     color: #000000;
     box-shadow: 0 4px 15px #BEBEBE;
+    //-webkit-backdrop-filter: blur(15px);
+    //backdrop-filter: blur(15px);
     border-radius: 200px;
     background: #ffffff !important;
     padding: 1rem 2rem;
@@ -68,11 +90,8 @@
         padding: 0.3rem 2.5rem;
         border-radius: 60px;
         @media #{$sm} {
-          padding: 0.5rem 2.5rem;
+          padding: 0.6rem;
           font-size: 12px;
-        }
-        @media #{$md} {
-          padding: 0.3rem 2rem;
         }
       }
     }
@@ -90,8 +109,8 @@
       padding: 0.3rem 2.5rem;
       border-radius: 60px;
       @media #{$sm} {
-        padding: 0.5rem 2rem;
-        font-size: 16px;
+        padding: 0.6rem;
+        font-size: 12px;
       }
     }
   }
@@ -263,11 +282,16 @@
     position: absolute;
     bottom: 5%;
     left: 12px;
-    font-size: 25px;
-    text-transform: uppercase;
+    font-size: 18px;
     font-weight: 500;
     color: $white;
     padding: 2%;
+    .title{
+      font-size: 16px;
+      @media #{$sm,$lsm,$xsm,$tiny,$md} {
+        font-size: 14px;
+      }
+    }
     @media #{$lg} {
       font-size: 16px;
     }
@@ -277,25 +301,20 @@
   }
   .divstyle {
     transition: .5s;
-    @media #{$sm} {
-      margin-bottom: 1rem;
-    }
   }
   .divstyle:hover {
-    transform:scale(1.2);
-      @media #{$sm} {
-        transform: none;
-      }
+    transform:scale(1.3);
   }
   .curr-sec {
     display: flex;
     width: 100%;
-    padding: 0 2rem;
+    padding: 1rem 2rem;
     text-align: center;
-    font-size: $sub-fonts;
+    font-size: 18px;
     // font-family: "Optima nova LT Medium";
     color: #000000;
     @media #{$xxl} {
+      font-size: 18px;
       width: 84%;
     }
     @media #{$sm} {
@@ -306,7 +325,6 @@
   .curr-footer-text {
     display: flex;
     text-align: center;
-    font-size: $sub-fonts;
     color: #000000;
     margin-top: 3rem;
     @media #{$xxl} {
@@ -321,9 +339,6 @@
   .imgheight.ch {
     height: 450px;
     border-radius: 50px;
-    @media #{$sm, $md} {
-      height: 350px;
-    }
   }
 }
 
@@ -346,12 +361,7 @@
 //    font-size: 2rem;
 //  }
 //}
-.agsModalDir{
-  direction: ltr;
-}
-.agsModalDirArabic{
-  direction: rtl;
-}
+
 .Ages.Academic {
   z-index: 1111;
 
@@ -359,9 +369,6 @@
     display: flex;
     width: 100%;
     padding: 2rem 3rem 0 3rem;
-    @media #{$sm} {
-      padding: 1rem 0 0 0;
-    }
 
     .heading {
       display: flex;
@@ -377,9 +384,6 @@
         font-size: 25px;
         font-weight: bold;
         margin-bottom: 0;
-        @media #{$sm} {
-          font-size: 22px;
-        }
       }
     }
   }
@@ -413,11 +417,12 @@
         .circle-holder {
           display: flex;
           flex-direction: column;
-          // width: 140px;
+          width: 140px;
           margin: 0 1rem;
 
           ._circle {
             display: flex;
+            // border-radius: 50%;
             font-weight: bold;
             color: #CDB786;
             background-color: $bg_color;
@@ -426,14 +431,12 @@
             padding: 1rem;
             justify-content: center;
             align-items: center;
-            text-align: center;
-            height: 110px;
 
             ._circle-inner {
               display: flex;
               align-items: center;
               justify-content: center;
-              font-size: 20px;
+              font-size: 1.5rem;
               // font-family: "Optima nova LT Medium";
               font-weight: lighter;
 

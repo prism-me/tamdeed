@@ -15,13 +15,13 @@ const defaultState = {
     variant: "",
     name: '',
     email: '',
-    number :'',
+    number: '',
 }
 
 function OurPrograms(props) {
     const [init, setInit] = useState(defaultState);
 
-    let { name, email, isRequestPending, isOpen, message, variant } = init;
+    let { name, email, number, isRequestPending, isOpen, message, variant } = init;
 
     const validation = (obj) => {
         let valid = { error: true, message: "" }
@@ -50,6 +50,16 @@ function OurPrograms(props) {
                 ]
                 }`
         }
+        if (obj.number === "") {
+            valid.error = false;
+            valid.message += valid.message ? `\n${constants?.site_content?.contact_us?.numb_req[
+                props.language
+            ]
+                }` : `${constants?.site_content?.contact_us?.numb_req[
+                props.language
+                ]
+                }`
+        }
 
         return valid;
     }
@@ -69,7 +79,7 @@ function OurPrograms(props) {
             let inputData = {
                 name: init.name,
                 email: init.email,
-                number : init.number,
+                number: init.number,
                 flag: "waitlist"
             }
             setInit({
@@ -161,7 +171,7 @@ function OurPrograms(props) {
                                         <Form.Group className="mb-3" controlId="formGroupEmail">
                                             <Form.Control name={"number"} value={number} onChange={handleChange}
                                                 type="text" placeholder={
-                                                    constants?.site_content?.waitlist?.number[
+                                                    constants?.site_content?.contact_us?.phone[
                                                     props.language
                                                     ]
                                                 }

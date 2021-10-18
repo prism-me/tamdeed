@@ -90,13 +90,12 @@ function Footer(props) {
                 {/* ADMISSIONS */}
               </h5>
               <Nav className="flex-column">
-                <LinkContainer to="#">
-                  <Nav.Link className=" fdeco">
-                    {global.activeLanguage === "en" ? "Virtual Admissions" : "التقديم الإفتراضي"}
-                    {/* Virtual Admissions  */}
-                  </Nav.Link>
-                </LinkContainer>
-                <LinkContainer to={`/${global.activeLanguage}/Enroll`}>
+                {/* <LinkContainer to="#"> */}
+                {/* <Nav.Link className=" fdeco"> */}
+                {/* {global.activeLanguage === "en" ? "Virtual Admissions" : "التقديم الإفتراضي"} */}
+                {/* </Nav.Link> */}
+                {/* </LinkContainer> */}
+                <LinkContainer to={`/${global.activeLanguage}/OnlineForm`}>
                   <Nav.Link className=" fdeco">
                     {global.activeLanguage === "en" ? "Enroll Online" : "التسجيل عبر الإنترنت"}
                     {/* Enroll Online */}

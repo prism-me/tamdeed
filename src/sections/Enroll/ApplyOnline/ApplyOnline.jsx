@@ -29,7 +29,7 @@ export default function ApplyOnline(props) {
                                 `/${props.language
                                 }/OnlineForm`
                             );
-                            refreshPage()
+                            // refreshPage()
                         }}
                     >
                         {

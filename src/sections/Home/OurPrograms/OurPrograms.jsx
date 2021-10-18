@@ -14,7 +14,8 @@ const defaultState = {
     message: "",
     variant: "",
     name: '',
-    email: ''
+    email: '',
+    number :'',
 }
 
 function OurPrograms(props) {
@@ -68,6 +69,7 @@ function OurPrograms(props) {
             let inputData = {
                 name: init.name,
                 email: init.email,
+                number : init.number,
                 flag: "waitlist"
             }
             setInit({
@@ -150,6 +152,16 @@ function OurPrograms(props) {
                                             <Form.Control name={"email"} value={email} onChange={handleChange}
                                                 type="text" placeholder={
                                                     constants?.site_content?.waitlist?.enter_email[
+                                                    props.language
+                                                    ]
+                                                }
+                                                className={"formFields"} />
+                                        </Form.Group>
+
+                                        <Form.Group className="mb-3" controlId="formGroupEmail">
+                                            <Form.Control name={"number"} value={number} onChange={handleChange}
+                                                type="text" placeholder={
+                                                    constants?.site_content?.waitlist?.number[
                                                     props.language
                                                     ]
                                                 }

@@ -86,7 +86,7 @@ function MainNavbar(props) {
               toggleDrawer(false);
             }}
             // primary="Academics"
-            primary={props.global.activeLanguage === "en" ? "Academics" : "أكاديميون"}
+            primary={props.global.activeLanguage === "en" ? "Academics" : "شؤون أكاديمية"}
             className={props.global.activeLanguage === "ar" ? "text-right" : ""}
           />
         </ListItem>
@@ -108,7 +108,7 @@ function MainNavbar(props) {
               toggleDrawer(false);
             }}
             // primary="AGS Portal"
-            primary={props.global.activeLanguage === "en" ? "AGS Portal" : "بوابة AGS"}
+            primary={props.global.activeLanguage === "en" ? "AGS Portal" : "بوابة المدرسة الأمريكية الخليجية"}
             className={props.global.activeLanguage === "ar" ? "text-right" : ""}
           />
         </ListItem>
@@ -141,7 +141,7 @@ function MainNavbar(props) {
               width: "43%"
             }}
             >
-              {props.global.activeLanguage === "en" ? "Enroll" : "يتسجل"}
+              {props.global.activeLanguage === "en" ? "Enroll" : "سجل"}
             </button>
           </ListItemText>
         </ListItem>
@@ -216,7 +216,7 @@ function MainNavbar(props) {
               </div>
               <LinkContainer to={`/${props.global.activeLanguage}/Enroll`}>
                 <button className={"enrollButton"}>
-                  {props.global.activeLanguage === "en" ? "Enroll" : "يتسجل"}
+                  {props.global.activeLanguage === "en" ? "Enroll" : "سجل"}
                 </button>
               </LinkContainer>
               <Hidden smDown>

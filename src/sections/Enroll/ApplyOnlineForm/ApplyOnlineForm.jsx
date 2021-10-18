@@ -5,17 +5,6 @@ import { constants } from "../../../utils/constants"
 import "../../../utils/isamform"
 
 function ApplyOnlineForm(props) {
-    const [isLoaded, setIsLoaded] = useState(false);
-    const [isPageLoaded, setIsPageLoaded] = useState(false); //this helps
-    useEffect(() => {
-        setIsLoaded(true);
-    }, []);
-
-    useEffect(() => {
-        if (isLoaded) {
-            setIsPageLoaded(true);
-        }
-    }, [isLoaded]);
     const { global } = props;
     return (
         <div className={"home-page"}>

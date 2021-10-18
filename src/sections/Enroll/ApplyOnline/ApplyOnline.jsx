@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { STRINGS } from "../../../utils/base";
 import { useHistory } from "react-router-dom";
 import { constants } from "../../../utils/constants"
 
@@ -29,7 +28,7 @@ export default function ApplyOnline(props) {
                                 `/${props.language
                                 }/OnlineForm`
                             );
-                            // refreshPage()
+                            refreshPage()
                         }}
                     >
                         {

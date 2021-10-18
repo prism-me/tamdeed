@@ -4,9 +4,9 @@ import { useHistory } from "react-router-dom";
 import { constants } from "../../../utils/constants"
 
 export default function ApplyOnline(props) {
-    function refreshPage() {
-        window.location.reload(false);
-    }
+    // function refreshPage() {
+    //     window.location.reload(false);
+    // }
     const history = useHistory();
     return (
         <div className="ApplyOnline" id={"applyOnline"}>

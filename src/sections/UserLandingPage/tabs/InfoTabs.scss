@@ -1,0 +1,152 @@
+.InfoTabs{
+    margin: 4rem 0;
+    @media #{$sm} {
+      margin: 2rem 0;
+    }
+    .verNavLink {
+      &.active {
+        font-weight: bold !important;
+        background-color: #FCB800 !important;
+        color: black !important;
+        text-transform: uppercase;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 0px 60px 60px 0px;
+        border-bottom: 0 !important;
+      }
+    }
+    .verNavLink{
+      color: black !important;
+    }
+
+    .nav{
+      flex-direction: column;
+      @media #{$md} {
+        flex-direction: row !important;
+        font-size: 12px !important;
+        margin-bottom: 2rem !important;
+      }
+      @media #{$sm,$xsm} {
+        flex-direction: row !important;
+        font-size: 15px !important;
+        margin-bottom: 2rem !important;
+      }
+    }
+
+    .nav-pills .nav-link{
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    }
+
+    .nava{
+      border: 1px solid rgba(0, 0, 0, 0.2);
+    }
+
+    .InfoTitle{
+      text-align: center;
+      font-weight: 600;
+      font-size: 25px;
+      margin-bottom: 2rem;
+      @media #{$sm,$xsm} {
+        font-size: 20px !important;
+      }
+    }
+    .InfoSubtitle{
+      text-align: left !important;
+      font-weight: 600;
+      font-size: 18px;
+      @media #{$sm,$xsm} {
+        font-size: 16px !important;
+        text-align: left !important;
+        padding-bottom: 0 !important;
+      }
+    }
+    .list-items-tabs{
+      padding-left: 1rem;
+      margin-top: 1rem;
+    }
+    .mblviewList{
+      padding-left: 1rem;
+      margin-top: 0;
+    }
+
+    .imgTab{
+      width: 100% !important;
+      //position: absolute;
+      @media #{$sm,$xsm} {
+        width: 100% !important;
+      }
+    }
+
+    .service-tab-panel .MuiBox-root {
+      padding: 0;
+    }
+    .MuiTabs-flexContainer {
+      justify-content: space-between;
+    }
+    .PrivateTabIndicator-colorSecondary-4 {
+      background-color: white;
+    }
+    .MuiTabs-indicator {
+      background: #FCB800 !important;
+      padding: 0.125rem;
+    }
+    button.Mui-selected {
+      .MuiTab-wrapper {
+        font-weight: bold;
+        color: black;
+        //border-top: 4px solid #a6dced;
+      }
+    }
+    button:focus {
+      outline: none !important;
+    }
+
+    .MuiAppBar-colorDefault{
+      background: white !important;
+    }
+
+    .MuiPaper-elevation4{
+      box-shadow: none !important;
+    }
+    .MuiAppBar-root{
+      border-top: 1px solid black;
+    }
+    .MuiTab-root{
+      text-transform: none !important;
+      font-size: 1rem !important;
+    }
+    .MuiSvgIcon-fontSizeSmall{
+      font-size: 2rem !important;
+    }
+
+    .TabBtn{
+      border: 1px solid black;
+      border-radius: 9px;
+    }
+    .TabBtn:hover{
+      border: none;
+      background: #FCB800;
+      color: white;
+    }
+    .bannerBtn{
+      font-weight: 700 ;
+      margin-top: 2rem;
+      font-size: 18px ;
+      text-transform: uppercase;
+      padding: 0.7rem 4rem ;
+      background: $bg-color;
+      box-shadow: 0px 4px 10px rgba(136, 96, 96, 0.1) !important;
+      border-radius: 60px;
+      &:hover {
+        background: black;
+        color: $bg-color;
+      }
+      @media #{$md} {
+        font-size: 16px !important;
+        padding: 0.7rem 3rem !important;
+      }
+      @media #{$sm,$xsm,$tiny} {
+        font-size: 16px !important;
+        padding: 0.5rem 2rem  !important;
+      }
+    }
+  }

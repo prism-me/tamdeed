@@ -1,0 +1,71 @@
+.six-steps{
+    background: rgba(241, 241, 241, 0.5);
+    padding: 3rem;
+    .Title{
+        font-size: 25px;
+        text-align: center;
+        font-weight: 600;
+        margin-bottom: 2rem;
+        @media #{$sm} {
+            font-size: 20px;
+        }
+    }
+    .stepImg{
+      width: 30% !important;
+      margin-bottom: 1rem;
+    }
+    .title{
+        font-weight: 500;
+        font-size: 22px;
+        text-align: left;
+        @media #{$sm} {
+          font-size: 18px !important;
+        }
+    }
+    .subtitle{
+        font-weight: 400;
+        font-size: 16px;
+        text-align: left;
+    }
+    .qliqBtn{
+      font-weight: 700 ;
+      margin-top: 2rem;
+      font-size: 18px ;
+      padding: 0.7rem 4rem ;
+      text-transform: uppercase;
+      background: #FCB800;
+      box-shadow: 0px 4px 10px rgba(136, 96, 96, 0.1) !important;
+      border-radius: 60px;
+      @media #{$md} {
+        font-size: 16px !important;
+        padding: 0.7rem 3rem !important;
+      }
+      @media #{$sm,$xsm,$tiny} {
+        font-size: 16px !important;
+        padding: 0.5rem 2rem  !important;
+      }
+    }
+    .Carouselbutton{
+        border: 0;
+        background: transparent;
+    }
+    .iconcarouselsize{
+      font-size: 30px;
+    }
+.dots-section {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    .circle {
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #C4C4C4;
+      margin-left: 0.5rem;
+      &.active {
+        background: #FCB800 !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.info-grid{
+    padding: 3rem;
+    .Title{
+        font-size: 25px;
+        text-align: center;
+        font-weight: 600;
+        margin-bottom: 2rem;
+        @media #{$sm} {
+            font-size: 20px;
+        }
+    }
+    .numbstyle{
+        border: 1px solid $bg-color;
+        border-radius: 100%;
+        padding: 0.5rem;
+    }
+    .title{
+        font-size: 18px;
+        font-weight: 700;
+        @media #{$sm} {
+            font-size: 16px;
+        }
+    }
+    .subtitle{
+        font-size: 16px;
+        font-weight: 400;
+        @media #{$sm} {
+            font-size: 16px;
+        }
+    }
+}

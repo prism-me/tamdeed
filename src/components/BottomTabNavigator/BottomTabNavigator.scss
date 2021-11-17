@@ -13,44 +13,17 @@
       width: 100%;
       position: fixed;
       bottom: 0;
-      background: $bg-color;
       z-index: 1500;
-      box-shadow: 0px -4px 6px -2px $bg-color;
-      //a {
-      //  // display: flex;
-      //  // flex-direction: column;
-      //  text-align: center;
-      //  color: $heading-color;
-      //  font-weight: 600;
-      //  .tab-icon {
-      //    font-size: 24px;
-      //    font-weight: 600;
-      //  }
-      //  p {
-      //    margin-bottom: 0;
-      //  }
-      //}
-      .BNButton{
-        background: $bg-color;
-        border: 1px solid white;
-        color: $white;
-        font-size: 12px;
-        padding: 0.2rem 1rem;
-        border-radius: 60px;
-        &:hover{
-          border: 1px solid $bg-color;
-          background: $white;
-          color: $primary-color;
-        }
+      padding-top: 1.5rem;
         .iconSize{
-          font-size: 16px;
+          font-size: 20px;
+          color: black;
           margin-right: 0.2rem;
         }
-        .iconSizeArabic{
-          font-size: 16px;
-          margin-left: 0.3rem;
+        .textSize{
+          color: black;
+          text-decoration: none;
         }
-      }
     }
   }
 }

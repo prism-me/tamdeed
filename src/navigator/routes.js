@@ -1,121 +1,42 @@
-import Home from "../pages/Home";
-import About from "../pages/About";
-import Academics from "../pages/Academics";
-import AgsPortal from "../pages/AGSPortal";
-import ContactUs from "../pages/ContactUs";
-import StudentCare from "../pages/StudentCare";
-import MiddleSchool from "../pages/MiddleSchool";
-import KinderGarten from "../pages/KinderGarten";
-import Enroll from "../pages/Enroll";
-import FAQMain from "../pages/FAQMain";
-import OnlineForm from "../pages/OnlineForm";
-import careers from "../pages/Careers";
-import Primaryschool from "../pages/Primaryschool";
-import OurTeam from "../pages/OurTeam";
+import UserLandingPage from "../pages/UserLandingPage";
+import VendorLandingPage from "../pages/VendorLandingPage";
+import DeliveryPartnerLandingPage from "../pages/DeliveryPartnerLandingPage";
+import BrandLandingPage from "../pages/BrandLandingPage";
+import InfluencerLandingPage from "../pages/InfluencerLandingPage";
 
 export const routes = [
   {
-    name: "Home",
+    name: "UserLandingPage",
     path: "/",
-    component: Home,
+    component: UserLandingPage,
     isPrivate: false,
     exact: true,
   },
   {
-    name: "Home",
-    path: "/",
-    component: Home,
+    name: "VendorLandingPage",
+    path: "/vendors",
+    component: VendorLandingPage,
     isPrivate: false,
     exact: true,
   },
   {
-    name: "About",
-    path: "/about",
-    component: About,
+    name: "DeliveryPartnerLandingPage",
+    path: "/delivery-partners",
+    component: DeliveryPartnerLandingPage,
     isPrivate: false,
     exact: true,
   },
   {
-    name: "Academics",
-    path: "/academics",
-    component: Academics,
+    name: "BrandLandingPage",
+    path: "/brands",
+    component: BrandLandingPage,
     isPrivate: false,
     exact: true,
   },
   {
-    name: "AgsPortal",
-    path: "/agsPortal",
-    component: AgsPortal,
-    isPrivate: false,
-    exact: true,
-  },
-  {
-    name: "Contact",
-    path: "/contact",
-    component: ContactUs,
-    isPrivate: false,
-    exact: true,
-  },
-  {
-    name: "StudentCare",
-    path: "/Student-care",
-    component: StudentCare,
-    isPrivate: false,
-    exact: true,
-  },
-  {
-    name: "Enroll",
-    path: "/Enroll",
-    component: Enroll,
-    isPrivate: false,
-    exact: true,
-  },
-  {
-    name: "FAQ",
-    path: "/FAQ",
-    component: FAQMain,
-    isPrivate: false,
-    exact: true,
-  },
-  {
-    name: "OnlineForm",
-    path: "/OnlineForm",
-    component: OnlineForm,
-    isPrivate: false,
-    exact: true,
-  },
-  {
-    name: "careers",
-    path: "/careers",
-    component: careers,
-    isPrivate: false,
-    exact: true,
-  },
-  {
-    name: "MiddleSchool",
-    path: "/Middle-school",
-    component: MiddleSchool,
-    isPrivate: false,
-    exact: true,
-  },
-  {
-    name: "Primary-school",
-    path: "/Primary-school",
-    component: Primaryschool,
-    isPrivate: false,
-    exact: true,
-  },
-  {
-    name: "KinderGarten",
-    path: "/KinderGarten",
-    component: KinderGarten,
-    isPrivate: false,
-    exact: true,
-  },
-  {
-    name: "OurTeam",
-    path: "/OurTeam",
-    component: OurTeam,
+    name: "InfluencerLandingPage",
+    path: "/influencers",
+    component: InfluencerLandingPage,
     isPrivate: false,
     exact: true,
   },

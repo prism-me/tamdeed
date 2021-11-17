@@ -4,7 +4,6 @@ import Footer from "./Footer";
 import Navbar from "./Navbar";
 import Hidden from "@material-ui/core/Hidden";
 import Drawer from "@material-ui/core/Drawer";
-import logo from "../assets/images/agslogo/Logo.png";
 import {
   makeStyles,
   useTheme,
@@ -15,7 +14,6 @@ import ListItemText from "@material-ui/core/ListItemText";
 import { useHistory } from "react-router-dom";
 import ClipLoader from "react-spinners/BounceLoader";
 import BackToTop from "../components/BackToTop";
-import Contactpannel from "../sections/Contactpannel";
 import ClearIcon from '@material-ui/icons/Clear';
 import { types } from "../redux/global/types";
 import "./Layout.scss";
@@ -23,7 +21,7 @@ import { connect } from "react-redux";
 import { Dropdown } from "react-bootstrap";
 
 
-const drawerWidth = 280;
+const drawerWidth = `100%`;
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
@@ -102,8 +100,13 @@ function Layout(props) {
             open={drawerOpen}
             onClose={() => toggleDrawer(false)}
           >
-            <div className="d-flex justify-content-end align-items-center">
-              <span className="DrawerCloseIcon">
+            <div className="d-flex justify-content-between align-items-center"
+              style={{ background: "#FCB800" }}
+            >
+              <p className={"text-white my-0 ml-2"}>
+                Menu
+              </p>
+              <span className="DrawerCloseIcon mr-4">
                 <ClearIcon
                   onClick={() => {
                     toggleDrawer(false);
@@ -112,16 +115,6 @@ function Layout(props) {
               </span>
             </div>
             <div className="drawer-menu">
-              <div className="drawer-logo d-flex justify-content-center align-items-center">
-                <img
-                  src={logo}
-                  alt="AGS Logo"
-                  onClick={() => {
-                    history.push("/");
-                    toggleDrawer(false);
-                  }}
-                />
-              </div>
               <List
                 component="nav"
                 aria-label="main mailbox folders"
@@ -132,107 +125,47 @@ function Layout(props) {
                 >
                   <ListItemText
                     onClick={() => {
-                      history.push(`/${global.activeLanguage}/about`);
+                      history.push(`#`);
                       toggleDrawer(false);
                     }}
-                    // primary="About us"
-                    primary={global.activeLanguage === "en" ? "About Us" : "معلومات عنا"}
+                    primary="Shop"
                   />
                 </ListItem>
                 <ListItem button>
                   <ListItemText
                     onClick={() => {
-                      history.push(`/${global.activeLanguage}/academics`);
+                      history.push(`#`);
                       toggleDrawer(false);
                     }}
-                    // primary="Academics"
-                    primary={global.activeLanguage === "en" ? "Academics" : "شؤون أكاديمية"}
+                    primary="Page1"
                   />
                 </ListItem>
                 <ListItem button>
                   <ListItemText
                     onClick={() => {
-                      history.push(`/${global.activeLanguage}/Student-care`);
+                      history.push(`#`);
                       toggleDrawer(false);
                     }}
-                    // primary="Student care"
-                    primary={global.activeLanguage === "en" ? "Student Care" : "رعاية الطلاب"}
+                    primary="Page2"
                   />
                 </ListItem>
                 <ListItem button>
                   <ListItemText
                     onClick={() => {
-                      history.push(`/${global.activeLanguage}/agsPortal`);
+                      history.push(`#`);
                       toggleDrawer(false);
                     }}
-                    // primary="AGS Portal"
-                    primary={global.activeLanguage === "en" ? "AGS Portal" : "بوابة المدرسة الأمريكية الخليجية"}
+                    primary="Page3"
                   />
                 </ListItem>
                 <ListItem button>
                   <ListItemText
                     onClick={() => {
-                      history.push(`/${global.activeLanguage}/contact`);
+                      history.push(`#`);
                       toggleDrawer(false);
                     }}
-                    // primary="Contact us"
-                    primary={global.activeLanguage === "en" ? "Contact Us" : "اتصل بنا"}
+                    primary="Page4"
                   />
-                </ListItem>
-                <ListItem button>
-                  <div
-                    className={props.global.activeLanguage === "ar" ? "dropdown ml-2" : "dropdown mr-2"}
-                  >
-                    <Dropdown>
-                      <Dropdown.Toggle
-                        variant=" btn-md"
-                        id="dropdown-basic"
-                        style={{ fontSize: "1.1rem", padding: "0", color: "#1A2C52" }}
-                      >
-                        {props.global.activeLanguage === "en" ? "Language" : "اللغة"}
-                      </Dropdown.Toggle>
-                      <Dropdown.Menu>
-                        <Dropdown.Item as="button"
-                          className={props.global.activeLanguage === "en" ? "active" : ""}
-                        >
-                          <div onClick={() => {
-                            props.setActiveLanguage("en");
-                          }}>
-                            {props.global.activeLanguage === "en" ? "English" : "English"}
-                          </div>
-                        </Dropdown.Item>
-                        <Dropdown.Item as="button"
-                          className={props.global.activeLanguage === "ar" ? "active" : ""}>
-                          <div onClick={() => {
-                            props.setActiveLanguage("ar");
-                          }}
-                          >
-                            {props.global.activeLanguage === "en" ? "العربية" : "العربية"}
-                          </div>
-                        </Dropdown.Item>
-                      </Dropdown.Menu>
-                    </Dropdown>
-                  </div>
-                </ListItem>
-                <ListItem button>
-                  <ListItemText
-                    onClick={() => {
-                      history.push(`/${global.activeLanguage}/Enroll`);
-                      toggleDrawer(false);
-                    }}
-                  // primary="Enroll"
-                  >
-                    <button style={{
-                      background: "#1A2C52",
-                      border: "none",
-                      color: "white",
-                      padding: "0.5rem 0rem",
-                      borderRadius: "60px",
-                      width: "100%"
-                    }}>
-                      {global.activeLanguage === "en" ? "Enroll" : "سجل"}
-                    </button>
-                  </ListItemText>
                 </ListItem>
               </List>
             </div>
@@ -244,14 +177,12 @@ function Layout(props) {
         show={visible}
         toggleDrawer={(show) => toggleDrawer(show)}
       />
-      <Contactpannel
-        activeLanguage={global.activeLanguage}
-      />
       {props.children}
       <BackToTop />
       <Footer />
       <BottomTabNavigator
-        activeLanguage={global.activeLanguage}
+        show={visible}
+        toggleDrawer={(show) => toggleDrawer(show)}
       />
     </div>
   );

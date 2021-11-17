@@ -106,9 +106,9 @@ class Navigation extends Component {
         {routes.map((route, index) => {
           return (
             <Route
-              path={index === 0 ? `${route.path}` : `/en${route.path}`}
+              // path={index === 0 ? `${route.path}` : `/en${route.path}`}
               // path={`/${this.props.global.activeLanguage}${route.path}`}
-              // path={route.path}
+              path={route.path}
               exact={route.exact}
               component={route.component}
               isPrivate={route.isPrivate}
@@ -116,7 +116,7 @@ class Navigation extends Component {
           );
         })}
 
-        {routes.map((route, index) => {
+        {/* {routes.map((route, index) => {
           return (
             <Route
               path={index === 0 ? `${route.path}` : `/ar${route.path}`}
@@ -127,10 +127,10 @@ class Navigation extends Component {
               isPrivate={route.isPrivate}
             />
           );
-        })}
+        })} */}
 
-        <Route path="*" component={() => <Error404 />} isPrivate={false} />
-        {/* <Redirect to="/error404" /> */}
+        {/* <Route path="*" component={() => <Error404 />} isPrivate={false} /> */}
+        <Redirect to="/" />
       </Switch>
     );
   }

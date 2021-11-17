@@ -27,69 +27,66 @@
 
 // sections **********************
 
-//home sections
-@import "./sections/Home/HomeHeader/HomeHeader.scss";
-@import "./sections/Home/Welcome/Welcome.scss";
-@import "./sections/Home/InfoTabs/InfoTabs.scss";
-@import "./sections/Home/OurPrograms/OurPrograms.scss";
-@import "./sections/Home/HomeFooter/HomeFooter.scss";
-@import "./sections/Home/VideoSlider/VideoSlider.scss";
-@import "./sections/Home/Curriculum/Curriculum";
-@import "./sections/Home/CovidSafety/CovidSafety";
-@import "./sections/Home/Mentors/Mentors";
-@import "./sections/Home/AgsSlider/AgsSlider";
+//user landing page
 
-//About-Us
-@import "./sections/About/about";
-@import "./sections/About/PrincipalSlider/PrincipalSlider";
-@import "./sections/About/AGSEthos/AGSEthos.scss";
-@import "./sections/About/AGSHealth/AGSHealth.scss";
-@import "./sections/About/PrincipleMessage/PrincipleMessage.scss";
-@import "./sections/About/AGSExperience/AGSExperience.scss";
-//Academics
-@import "./sections/Academics/academics";
-@import "./sections/Academics/ACTabs/ACTabs.scss";
-@import "./sections/Academics/Accreditation/Accreditation.scss";
+@import "./sections/UserLandingPage/banner/Banner.scss";
+@import "./sections/UserLandingPage/intro/Intro.scss";
+@import "./sections/UserLandingPage/tabs/InfoTabs.scss";
+@import "./sections/UserLandingPage/six-steps/SixStep.scss";
+@import "./sections/UserLandingPage/video-banner/VideoBanner.scss";
+@import "./sections/UserLandingPage/brands/Brands.scss";
+@import "./sections/UserLandingPage/product-deals/ProductDeals.scss";
+@import "./sections/UserLandingPage/testimonial/Testimonial.scss";
+@import "./sections/UserLandingPage/earn-with-qliq/EarnWithQLIQ.scss";
+@import "./sections/UserLandingPage/faq/FAQ.scss";
 
-//Ags-Portal
-@import "./sections/AGSPortal/ags_portal";
-//Contact Us
-@import "./sections/ContactUs/contact";
+//vendor landing page
 
-// Student Care
-@import "./sections/StudentCare/Inclusion/Inclusion";
-@import "./sections/StudentCare/Tabs/TabPanel";
+@import "./sections/vendors-landing-page/banner/Banner.scss";
+@import "./sections/vendors-landing-page/intro/Intro.scss";
+@import "./sections/vendors-landing-page/tabs/InfoTabs.scss";
+@import "./sections/vendors-landing-page/steps/Steps.scss";
+@import "./sections/vendors-landing-page/drive-your-sale/DriveYourSale.scss";
+@import "./sections/vendors-landing-page/testimonial/Testimonial.scss";
+@import "./sections/vendors-landing-page/brands/Brands.scss";
+@import "./sections/vendors-landing-page/video-banner/VideoBanner.scss";
+@import "./sections/vendors-landing-page/partner/Partner.scss";
+@import "./sections/vendors-landing-page/qliq-benefit/QliqBenefit.scss";
 
-// Our team
-@import "./sections/OurTeam/OurTeam.scss";
+//delivery partners landing page
 
-// Enroll
-@import "sections/Enroll/FAQ/FAQ";
-@import "sections/Enroll/AdmissionProcedure/AdmissionProcedure";
-@import "sections/Enroll/AgeRequirements/AgeRequirements";
-@import "sections/Enroll/Enquiry/Enquiry";
-@import "sections/Enroll/FeesPayments/FeesPayments";
-@import "sections/Enroll/ApplyOnline/ApplyOnline";
-@import "sections/Enroll/Covid/Covid";
-@import "sections/Enroll/AdmissionContact/AdmissionContact";
-@import "sections/Enroll/Payment/Payment";
-@import "sections/Enroll/EnrollTabs/EnrollTabs";
-@import "sections/Enroll/ApplyOnlineForm/ApplyOnline";
+@import "./sections/DeliveryPartnerLandingPage/banner/Banner.scss";
+@import "./sections/DeliveryPartnerLandingPage/intro/Intro.scss";
+@import "./sections/DeliveryPartnerLandingPage/tabs/InfoTabs.scss";
+@import "./sections/DeliveryPartnerLandingPage/four-steps/FourStep.scss";
+@import "./sections/DeliveryPartnerLandingPage/testimonial/Testimonial.scss";
+@import "./sections/DeliveryPartnerLandingPage/video-banner/VideoBanner.scss";
+@import "./sections/DeliveryPartnerLandingPage/why-join-qliq/WhyJoinQLIQ.scss";
+@import "./sections/DeliveryPartnerLandingPage/life-at-qliq//LifeAtQliq.scss";
 
-//FAQMAIN
-@import "sections/FAQMain/FAQMain/FAQMain";
 
-//PRIMARY SCHOOL
-@import "./sections/Primaryschool/Inclusion/Schoolinclusion";
+//brand landing page
 
-//CAREERS
-@import "./sections/Careers/Ourteam/Ourteam";
-@import "./sections/Careers/Positions/Positions";
-@import "./sections/Careers/jointeam/jointeam.scss";
-@import "./sections/Careers/ContentSection/ContentSection.scss";
+@import "./sections/BrandLandingPage/banner/Banner.scss";
+@import "./sections/BrandLandingPage/intro/Intro.scss";
+@import "./sections/BrandLandingPage/tabs/InfoTabs.scss";
+@import "./sections/BrandLandingPage/steps/Steps.scss";
+@import "./sections/BrandLandingPage/testimonial/Testimonial.scss";
+@import "./sections/BrandLandingPage/infoGrid/InfoGrid.scss";
+@import "./sections/BrandLandingPage/potential-influencer/PotentialInfluencer.scss";
+@import "./sections/BrandLandingPage/blog/Blog.scss";
 
-//CONTACT PANNEL
-@import "./sections/Contactpannel/contactpannel";
+
+//influencers landing page
+
+@import "./sections/InfluencerLandingPage/banner/Banner.scss";
+@import "./sections/InfluencerLandingPage/intro/Intro.scss";
+@import "./sections/InfluencerLandingPage/tabs/InfoTabs.scss";
+@import "./sections/InfluencerLandingPage/steps/Steps.scss";
+@import "./sections/InfluencerLandingPage/testimonial/Testimonial.scss";
+@import "./sections/InfluencerLandingPage/potential-influencer/PotentialInfluencer.scss";
+@import "./sections/InfluencerLandingPage/blog/Blog.scss";
+
 
 // ********************** sections
 
@@ -104,61 +101,12 @@
   }
 }
 
-// font AGS Arabic Version
-
-@font-face {
-    font-family: "GE Dinar One"; 
-    src: url("https://db.onlinewebfonts.com/t/82be8da3de85484d7c85b6a6341c398a.eot");
-}
-
-.arabic-direction {
-  body,
-  p,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  li,
-  a,
-  span,
-  div,
-  button,
-  input,
-  textarea,
-  label {
-    font-family: "DinarOne" !important;
-  }
-}
+// font English Version
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
 
 
-// body {
-//   font-family: $noto !important;
-//   color: $heading-color;
-// }
-
-// font AGS English Version
-@import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
-
-
-// * {
-//   font-family: 'Marcellus SC', serif, 'Marcellus';
-// }
-
-h1,h2,h3,h4,h5,h6{
-  font-family: 'Marcellus SC', serif;
-}
-
-p,span,div, 
-button,
-input,
-textarea,
-body,
-label
-{
-  font-family: 'Marcellus',serif;
+* {
+  font-family: 'Work Sans', sans-serif;
 }
 
 /* Chrome, Safari, Edge, Opera */

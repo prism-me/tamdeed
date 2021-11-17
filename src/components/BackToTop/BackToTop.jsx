@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import { AiOutlineArrowUp } from "react-icons/ai";
 // import ScrollUpButton from "react-scroll-up-button";
 
@@ -20,9 +20,9 @@ const BackToTop = () => {
     useEffect(() => {
         window.addEventListener("scroll", toggleVisibility);
     }, []);
-  return (
-    <div className="back-to-top">
-      {/* <ScrollUpButton
+    return (
+        <div className="back-to-top">
+            {/* <ScrollUpButton
         StopPosition={0}
         ShowAtPosition={150}
         EasingType="easeOutCubic"
@@ -32,21 +32,21 @@ const BackToTop = () => {
         style={{}}
         ToggledStyle={{}}
       ></ScrollUpButton> */}
-        {isVisible &&
-        <div
-            className="outer-circle"
-            onClick={scrollToTop}
-            // onClick={() =>
-            //   window.scrollTo({ top: 0, behavior: "smooth" })
-            // }
-        >
-            <div className="circle">
-                <AiOutlineArrowUp color="#ffffff" />
-            </div>
+            {isVisible &&
+                <div
+                    className="outer-circle"
+                    onClick={scrollToTop}
+                // onClick={() =>
+                //   window.scrollTo({ top: 0, behavior: "smooth" })
+                // }
+                >
+                    <div className="circle">
+                        <AiOutlineArrowUp className={"iconcolor"} />
+                    </div>
+                </div>
+            }
         </div>
-        }
-    </div>
-  );
+    );
 };
 
 export default BackToTop;

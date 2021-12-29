@@ -1,27 +1,24 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import BottomTabNavigator from "../components/BottomTabNavigator";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import Hidden from "@material-ui/core/Hidden";
 import Drawer from "@material-ui/core/Drawer";
+import logo from "../assets/images/logo/logo.png";
 import {
-  makeStyles,
-  useTheme,
+  makeStyles
 } from "@material-ui/core/styles";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import { useHistory } from "react-router-dom";
-import ClipLoader from "react-spinners/BounceLoader";
 import BackToTop from "../components/BackToTop";
 import ClearIcon from '@material-ui/icons/Clear';
-import { types } from "../redux/global/types";
-import "./Layout.scss";
-import { connect } from "react-redux";
-import { Dropdown } from "react-bootstrap";
+import Collapse from '@material-ui/core/Collapse';
+import ExpandLess from '@material-ui/icons/ExpandLess';
+import ExpandMore from '@material-ui/icons/ExpandMore';
 
-
-const drawerWidth = `100%`;
+const drawerWidth = 280;
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
@@ -56,40 +53,25 @@ const useStyles = makeStyles((theme) => ({
   nested: { paddingLeft: theme.spacing(4) }
 }));
 
-function Layout(props) {
+
+export default function Layout(props) {
   const history = useHistory();
   const classes = useStyles();
-  const theme = useTheme();
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
   const [drawerOpen, setDrawerOpen] = useState(false);
+
+  //.......dropdown code
+  const [openDropDown, setOpenDropDown] = useState(false);
+  const handleDropClick = () => {
+    setOpenDropDown(!openDropDown);
+  };
 
   const toggleDrawer = (open) => {
     setDrawerOpen(open);
   };
 
-  const { global } = props;
   return (
-    <div
-      className={`layout ${global?.activeLanguage === "ar"
-        ? "arabic-direction"
-        : "english-direction"
-        }`}
-    >
-      <div
-        className={`${props.showSpinner ? "d-flex" : "d-none"
-          } flex-column text-center align-items-center justify-content-center`}
-        style={{
-          position: "absolute",
-          zIndex: 99999,
-          height: "100%",
-          width: "100%",
-          background: "rgba(255,255,255,0.6)",
-        }}
-      >
-        <ClipLoader color={"#1a2c52e6"} loading={true} size={80} />
-      </div>
-
+    <div>
       <Hidden mdUp>
         <nav className={classes.drawer}>
           <Drawer
@@ -100,13 +82,8 @@ function Layout(props) {
             open={drawerOpen}
             onClose={() => toggleDrawer(false)}
           >
-            <div className="d-flex justify-content-between align-items-center"
-              style={{ background: "#FCB800" }}
-            >
-              <p className={"text-white my-0 ml-2"}>
-                Menu
-              </p>
-              <span className="DrawerCloseIcon mr-4">
+            <div className="d-flex justify-content-end align-items-center">
+              <span className="DrawerCloseIcon">
                 <ClearIcon
                   onClick={() => {
                     toggleDrawer(false);
@@ -115,6 +92,17 @@ function Layout(props) {
               </span>
             </div>
             <div className="drawer-menu">
+              <div className="drawer-logo d-flex justify-content-center align-items-center">
+                <img
+                  src={logo}
+                  alt="AGS Logo"
+                  style={{ width: "65%" }}
+                  onClick={() => {
+                    history.push("/");
+                    toggleDrawer(false);
+                  }}
+                />
+              </div>
               <List
                 component="nav"
                 aria-label="main mailbox folders"
@@ -125,47 +113,73 @@ function Layout(props) {
                 >
                   <ListItemText
                     onClick={() => {
-                      history.push(`#`);
+                      history.push(`/about`);
                       toggleDrawer(false);
                     }}
-                    primary="Shop"
+                    primary="About"
                   />
                 </ListItem>
                 <ListItem button>
                   <ListItemText
                     onClick={() => {
-                      history.push(`#`);
+                      history.push(`/`);
                       toggleDrawer(false);
                     }}
-                    primary="Page1"
+                    primary="Solutions & Services"
                   />
                 </ListItem>
                 <ListItem button>
                   <ListItemText
                     onClick={() => {
-                      history.push(`#`);
+                      history.push(`/`);
                       toggleDrawer(false);
                     }}
-                    primary="Page2"
+                    primary="Industries"
                   />
                 </ListItem>
                 <ListItem button>
                   <ListItemText
                     onClick={() => {
-                      history.push(`#`);
+                      history.push(`/`);
                       toggleDrawer(false);
                     }}
-                    primary="Page3"
+                    primary="Contact us"
                   />
                 </ListItem>
+                <ListItem button onClick={handleDropClick}>
+                  <ListItemText
+                    primary="Media Center"
+                  />
+                  {openDropDown ? <ExpandLess /> : <ExpandMore />}
+                </ListItem>
+                <Collapse in={openDropDown} timeout="auto" unmountOnExit>
+                  <List component="div" disablePadding>
+                    <ListItem button className={classes.nested}>
+                      <ListItemText primary="Media Center"
+                        onClick={() => {
+                          history.push("/");
+                          toggleDrawer(false);
+                        }}
+                      />
+                    </ListItem>
+                  </List>
+                </Collapse>
                 <ListItem button>
                   <ListItemText
                     onClick={() => {
-                      history.push(`#`);
+                      history.push(`/`);
                       toggleDrawer(false);
                     }}
-                    primary="Page4"
-                  />
+                  >
+                    <button style={{
+                      background: "#2C8F8F",
+                      border: "none",
+                      color: "white",
+                      padding: "0.5rem 0rem",
+                      borderRadius: "60px",
+                      width: "100%"
+                    }}>Enquiries</button>
+                  </ListItemText>
                 </ListItem>
               </List>
             </div>
@@ -180,33 +194,7 @@ function Layout(props) {
       {props.children}
       <BackToTop />
       <Footer />
-      <BottomTabNavigator
-        show={visible}
-        toggleDrawer={(show) => toggleDrawer(show)}
-      />
+      <BottomTabNavigator />
     </div>
   );
 }
-
-const mapStateToProps = (state) => {
-  {
-    console.log("spinner", state?.globalReducer?.showSpinner)
-  }
-  return {
-    showSpinner: state?.globalReducer?.showSpinner,
-    global: state.globalReducer,
-  };
-};
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-    setActiveLanguage: (language) =>
-      dispatch({
-        type: types.SET_ACTIVE_LANGUAGE,
-        payload: {
-          language: language,
-        },
-      }),
-  };
-};
-export default connect(mapStateToProps, mapDispatchToProps)(Layout);

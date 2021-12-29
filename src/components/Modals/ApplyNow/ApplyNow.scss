@@ -4,13 +4,13 @@
     font-size: 20px;
     font-weight: 700;
     text-align: justify;
-    color: $bg-color;
+    color: $bg-colors;
     @media #{$sm} {
       font-size: 18px;
     }
   }
   .UlStyle{
-    color: $bg-color;
+    color: $bg-colors;
     font-size: 20px;
     text-align: justify;
     font-weight: 500;
@@ -19,7 +19,7 @@
     }
   }
     .SubTitle{
-      color: $bg-color;
+      color: $bg-colors;
       font-size: 20px;
       font-weight: 500;
       text-align: justify;
@@ -28,7 +28,7 @@
       }
     }
     .applynow{
-      background: $bg-color;
+      background: $bg-colors;
       border: none;
       color: white;
       padding: 0.5rem 3rem;
@@ -36,7 +36,7 @@
       border-radius: 20px;
     }
     .applynow:hover{
-      border: 1px solid $bg-color;
+      border: 1px solid $bg-colors;
       background: $hover-color;
       color: $primary-color;
     }
@@ -46,7 +46,7 @@
       margin-right: 1rem;
     }
     .modalIcon{
-      background: $bg-color;
+      background: $bg-colors;
       color: $white;
       padding: 1.5rem;
       border-radius: 100%;

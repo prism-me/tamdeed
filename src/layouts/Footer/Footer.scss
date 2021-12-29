@@ -1,12 +1,33 @@
 .footer-Wrape {
-  color: black;
-  padding-top: 3rem;
-  background-color: #F8F8F8;
+  color: $white;
+  margin-top: 3rem;
+  padding-top: 8rem;
+  background-color: $backgroundsColors;
+  clip-path: polygon(0 20%, 100% 0%, 100% 100%, 0% 100%);
   @media #{$sm,$md} {
     padding-bottom: 0;
-    padding-top: 2rem;
-    background-color: #F8F8F8;
+    padding-top: 11rem;
+    margin-top: 2rem;
   }
+  .socialIcons{
+    width: 25px;
+    height: 25px;
+    background: $white;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.5rem;
+    a{
+      color: $backgroundsColors;
+      .iconSize{
+      font-size: 15px;
+      }
+    }
+  }
+  .form-group {
+    margin-bottom: 0.5rem;
+}
 
   .hashLinkStyling{
     color: $white;
@@ -27,13 +48,14 @@
   }
 
   .FooterContact{
-    color: $bg-color;
-    font-weight: 600;
-    font-size: 25px;
+    font-weight: 300;
+    font-size: 15px;
+    border-bottom: 1px solid $white;
+    color: $white;
   }
 
   .nav-link{
-    color: black;
+    color: $white;
     padding-top: 0.5rem !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
@@ -65,101 +87,41 @@
   .FooterHeading{
     font-size: 18px;
     font-weight: 500;
+    color: $white;
     @media #{$sm,$xsm,$tiny} {
       font-size: 16px !important;
       margin-top: 1rem;
     }
     @media #{$md} {
-      font-size: 20px !important;
+      font-size: 17px !important;
       margin-top: 1rem !important;
     }
   }
-  .footericonsize1{
-    color:#EE6E11;
-    margin-left: 0.5rem;
-  }
-  .footericonsize2{
-    color: #00C2FF;
-     margin-left: 0.5rem;
-   }
-   .footericonsize3{
-    color: #FF0000;;
-     margin-left: 0.5rem;
-   }
-   .footericonsize4{
-    color: #3633FF;
-     margin-left: 0.5rem;
-   }
-}
-
-.iconSize{
-  font-size: 15px !important;
-}
-
-.socialIcon{
-  padding: 0.5rem 0;
-  @media #{$sm} {
-    text-align: center !important;
-  }
-  .socialText{
-    color: black;
+  .detail{
+    font-weight: 300;
+    font-size: 14px;
   }
 }
-
-.footerlogo{
-  width: 30%;
-  @media #{$sm,$md} {
-    width: 60%;
-  }
-}
-
 
 .footer-bottom{
   margin-top: 2rem;
-  background-color: $bg-color;
+  background-color: $texts-color2;
   padding: .7rem;
   p{
     margin-bottom: 0px;
     font-size: 14px;
+    color: $white;
     a{
       color: $white;
     }
   }
-  .copyRight{
-    color: black;
-    padding-top: .5rem;
+  .socialIcon{
     @media #{$sm} {
       text-align: center !important;
     }
   }
-}
-
-.footer-top{
-  margin-top: 2rem;
-  background-color: $bg-color;
-  padding: .8rem;
-  p{
-    margin-bottom: 0px;
-    font-size: 20px;
-    font-weight: 600;
-  }
-  .registerButton{
-    background: $white;
-    text-transform: uppercase;
-    border: none;
-    border-radius: 60px;
-    font-weight: 700;
-    font-size: 16px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 0.5rem 3rem;
-    &:hover {
-      background: black;
-      color: $bg-color;
-    }
-  }
   .copyRight{
-    color: black;
-    padding-top: .5rem;
+    color: $white;
     @media #{$sm} {
       text-align: center !important;
     }

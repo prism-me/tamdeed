@@ -1,0 +1,45 @@
+.values{
+    padding-top: 2rem;
+    .aboutBG{
+        background-image:url("../../../assets/images/backgrounds/valuebg.png");
+        background-repeat:no-repeat;
+        background-position:center;
+        // padding-top: 2rem;
+    }
+    .Title{
+        color: $bg-colors;
+        font-size: 18px;
+        font-weight: 400;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .subtitle{
+        color: $texts-color2;
+        font-size: 25px;
+        font-weight: 400;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    .valueTitle{
+        color: $texts-color2;
+        font-size: 21px;
+        font-weight: 400;
+    }
+    .valuesubtitle{
+        font-size: 18px;
+        font-weight: 400;
+        text-align: justify;
+    }
+    .iconBg{
+        width: 80px;
+        height: 80px;
+        background: $backgroundsColors;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        .iconImg{
+            width: 45%;
+        }
+    }
+}

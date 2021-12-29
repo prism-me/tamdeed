@@ -21,71 +21,23 @@
 @import "./components/Modals/ApplyNow/ApplyNow.scss";
 @import "./components/BackToTop/BackToTop.scss";
 @import "./components/Modals/Documents/Documents";
-@import "./components/Modals/Ages/Ages";
-@import "./components/Modals/GeneralPolicies/GeneralPolicies";
-@import "./components/BackGroundVideo/BackGroundVideo";
 
 // sections **********************
 
-//user landing page
+//home page
 
-@import "./sections/UserLandingPage/banner/Banner.scss";
-@import "./sections/UserLandingPage/intro/Intro.scss";
-@import "./sections/UserLandingPage/tabs/InfoTabs.scss";
-@import "./sections/UserLandingPage/six-steps/SixStep.scss";
-@import "./sections/UserLandingPage/video-banner/VideoBanner.scss";
-@import "./sections/UserLandingPage/brands/Brands.scss";
-@import "./sections/UserLandingPage/product-deals/ProductDeals.scss";
-@import "./sections/UserLandingPage/testimonial/Testimonial.scss";
-@import "./sections/UserLandingPage/earn-with-qliq/EarnWithQLIQ.scss";
-@import "./sections/UserLandingPage/faq/FAQ.scss";
+@import "./sections/home/banner/Banner.scss";
+@import "./sections/home/partners/Partners.scss";
+@import "./sections/home/about-tamdeed/AboutTamdeed.scss";
+@import "./sections/home/industries/Industries.scss";
+@import "./sections/home/solution-portfolio/Portfolio.scss";
+@import "./sections/home/media-center/MediaCenter.scss";
 
-//vendor landing page
+//About page
 
-@import "./sections/vendors-landing-page/banner/Banner.scss";
-@import "./sections/vendors-landing-page/intro/Intro.scss";
-@import "./sections/vendors-landing-page/tabs/InfoTabs.scss";
-@import "./sections/vendors-landing-page/steps/Steps.scss";
-@import "./sections/vendors-landing-page/drive-your-sale/DriveYourSale.scss";
-@import "./sections/vendors-landing-page/testimonial/Testimonial.scss";
-@import "./sections/vendors-landing-page/brands/Brands.scss";
-@import "./sections/vendors-landing-page/video-banner/VideoBanner.scss";
-@import "./sections/vendors-landing-page/partner/Partner.scss";
-@import "./sections/vendors-landing-page/qliq-benefit/QliqBenefit.scss";
-
-//delivery partners landing page
-
-@import "./sections/DeliveryPartnerLandingPage/banner/Banner.scss";
-@import "./sections/DeliveryPartnerLandingPage/intro/Intro.scss";
-@import "./sections/DeliveryPartnerLandingPage/tabs/InfoTabs.scss";
-@import "./sections/DeliveryPartnerLandingPage/four-steps/FourStep.scss";
-@import "./sections/DeliveryPartnerLandingPage/testimonial/Testimonial.scss";
-@import "./sections/DeliveryPartnerLandingPage/video-banner/VideoBanner.scss";
-@import "./sections/DeliveryPartnerLandingPage/why-join-qliq/WhyJoinQLIQ.scss";
-@import "./sections/DeliveryPartnerLandingPage/life-at-qliq//LifeAtQliq.scss";
-
-
-//brand landing page
-
-@import "./sections/BrandLandingPage/banner/Banner.scss";
-@import "./sections/BrandLandingPage/intro/Intro.scss";
-@import "./sections/BrandLandingPage/tabs/InfoTabs.scss";
-@import "./sections/BrandLandingPage/steps/Steps.scss";
-@import "./sections/BrandLandingPage/testimonial/Testimonial.scss";
-@import "./sections/BrandLandingPage/infoGrid/InfoGrid.scss";
-@import "./sections/BrandLandingPage/potential-influencer/PotentialInfluencer.scss";
-@import "./sections/BrandLandingPage/blog/Blog.scss";
-
-
-//influencers landing page
-
-@import "./sections/InfluencerLandingPage/banner/Banner.scss";
-@import "./sections/InfluencerLandingPage/intro/Intro.scss";
-@import "./sections/InfluencerLandingPage/tabs/InfoTabs.scss";
-@import "./sections/InfluencerLandingPage/steps/Steps.scss";
-@import "./sections/InfluencerLandingPage/testimonial/Testimonial.scss";
-@import "./sections/InfluencerLandingPage/potential-influencer/PotentialInfluencer.scss";
-@import "./sections/InfluencerLandingPage/blog/Blog.scss";
+@import "./sections/about-us/about-banner/AboutBanner.scss";
+@import "./sections/about-us/overview/Overview.scss";
+@import "./sections/about-us/core-values/Values.scss";
 
 
 // ********************** sections
@@ -93,9 +45,6 @@
 //global setting
 
 .container {
-  //   @media #{$xl} {
-  //     max-width: 85% !important;
-  //   }
   @media #{$xxl} {
     max-width: 85% !important;
   }
@@ -103,7 +52,7 @@
 
 // font English Version
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
-
+// @import url('./assets/fonts/NeoTech-Ea8y9.ttf');
 
 * {
   font-family: 'Work Sans', sans-serif;
@@ -121,141 +70,3 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
-/*-----Loader Css-------*/
-.loader,
-.loader:after {
-  border-radius: 50%;
-  width: 10em;
-  height: 10em;
-}
-
-.loader {
-  margin: 60px auto;
-  font-size: 10px;
-  position: relative;
-  text-indent: -9999em;
-  border-top: 1.1em solid rgba(255, 255, 255, 0.2);
-  border-right: 1.1em solid rgba(255, 255, 255, 0.2);
-  border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
-  border-left: 1.1em solid #ffffff;
-  -webkit-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  transform: translateZ(0);
-  -webkit-animation: load8 1.1s infinite linear;
-  animation: load8 1.1s infinite linear;
-}
-
-@-webkit-keyframes load8 {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes load8 {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
-/*-----Loader Css-------*/
-
-/*---Snack Bar Css--*/
-
-.snack_bar {
-  visibility: hidden;
-  min-width: 250px;
-  white-space: pre-wrap;
-  margin-left: -125px;
-  background-color: #333;
-  color: #fff;
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  /*text-align: center;*/
-  padding: 16px;
-  position: fixed;
-  z-index: 999;
-  border-radius: 1em;
-  left: 50%;
-  bottom: 30px;
-  @media #{$sm} {
-    bottom: 70px;
-    min-width: 100%;
-    margin-left: 0;
-    left: 0;
-  }
-}
-
-.snack_bar.show {
-  visibility: visible;
-  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-  animation: fadein 0.5s, fadeout 0.5s 2.5s;
-}
-
-@-webkit-keyframes fadein {
-  from {
-    bottom: 0;
-    opacity: 0;
-  }
-  to {
-    bottom: 30px;
-    opacity: 1;
-    @media #{$sm} {
-      bottom: 70px;
-    }
-  }
-}
-
-@keyframes fadein {
-  from {
-    bottom: 0;
-    opacity: 0;
-  }
-  to {
-    bottom: 30px;
-    opacity: 1;
-    @media #{$sm} {
-      bottom: 70px;
-    }
-  }
-}
-
-.card{
-
-  background: #ffffffcc !important;
-  color: black;
-}
-
-/*@-webkit-keyframes fadeout {*/
-/*    from {*/
-/*        bottom: 30px;*/
-/*        opacity: 1;*/
-/*    }*/
-/*    to {*/
-/*        bottom: 0;*/
-/*        opacity: 0;*/
-/*    }*/
-/*}*/
-
-/*@keyframes fadeout {*/
-/*    from {*/
-/*        bottom: 30px;*/
-/*        opacity: 1;*/
-/*    }*/
-/*    to {*/
-/*        bottom: 0;*/
-/*        opacity: 0;*/
-/*    }*/
-/*}*/
-
-/*---Snack Bar Css--*/

@@ -1,0 +1,32 @@
+.overview{
+    padding: 3rem 0;
+    background: $backgroundsColors;
+    .title{
+        font-weight: 400;
+        font-size: 18px;
+        color: $white;
+    }
+    .subtitle{
+        font-weight: 400;
+        font-size: 20px;
+        color: $white;
+    }
+    .description{
+        font-weight: 400;
+        font-size: 18px;
+        color: $white;
+    }
+    .btnStyle{
+        border: 0;
+        background: $white;
+        border-radius: 56px;
+        color: $bg-colors;
+        padding: 0.5rem 2rem;
+        margin-top: 1rem;
+        &:hover{
+            border: 1px solid $white; 
+            background: $backgroundsColors;
+            color: $white;
+        }
+    }
+}

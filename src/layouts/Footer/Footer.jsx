@@ -1,47 +1,72 @@
 import React from "react";
 import Container from "@material-ui/core/Container";
-import { Col, Nav, Row } from "react-bootstrap";
+import { Col, Nav, Row, Form, InputGroup } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import FooterBottom from "./FooterBottom";
-import FooterTop from "./FooterTop";
+import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import TwitterIcon from '@material-ui/icons/Twitter';
+import InstagramIcon from '@material-ui/icons/Instagram';
+import Facebook from "@material-ui/icons/Facebook";
+
 
 function Footer(props) {
   return (
     <>
-      <FooterTop />
       <div className={"footer-Wrape"}>
         <footer>
           <Container fluid>
             <Row>
-              <Col sm={6} xs={12} md={6} lg>
+              <Col sm={6} xs={12} md={6} lg={4}>
                 <h5 className={"font-weight-bold FooterHeading"}>
-                  Contact Us
+                  About
                 </h5>
-                <p>
-                  Call us 24/7
+                <p className="detail">
+                  Tamdeed Projects was established in 1996 to provide high – end turnkey solutions for all aspects of the cabling infrastructure business.
                 </p>
                 <p>
-                  <a href='tel:1800 97 97 69' class="contact-pannel-btn text-decoration-none fdeco FooterContact">
-                    1800 97 97 69
+                  <a href="#" class="contact-pannel-btn text-decoration-none fdeco FooterContact">
+                    Know More<ChevronRightIcon />
                   </a>
                 </p>
-                <p>
-                  Dis volutpat nisl urna gravida eu tempus. Nunc consectetur imperdiet auctor.
-                </p>
+                <h5 className={"font-weight-bold FooterHeading mt-2"}>
+                  Follow us on
+                </h5>
+                <div className="d-flex justify-content-start align-items-center">
+                  <span className="socialIcons">
+                    <a href="#">
+                      <Facebook className={"iconSize"} />
+                    </a>
+                  </span>
+                  <span className="socialIcons">
+                    <a href="#">
+                      <TwitterIcon className={"iconSize"} />
+                    </a>
+                  </span>
+                  <span className="socialIcons">
+                    <a href="#">
+                      <InstagramIcon className={"iconSize"} />
+                    </a>
+                  </span>
+                </div>
               </Col>
               <Col sm={6} xs={12} md={6} lg>
                 <h5 className={"font-weight-bold FooterHeading"}>
-                  Company
+                  Information
                 </h5>
                 <Nav className="flex-column">
                   <LinkContainer to="#">
                     <Nav.Link className=" fdeco">
-                      About Us
+                      Our Services
                     </Nav.Link>
                   </LinkContainer>
                   <LinkContainer to="#">
                     <Nav.Link className=" fdeco">
-                      Affilate
+                      Upcoming Events
+                    </Nav.Link>
+                  </LinkContainer>
+                  <LinkContainer to="#">
+                    <Nav.Link className=" fdeco">
+                      Careers
                     </Nav.Link>
                   </LinkContainer>
                   <LinkContainer to="#">
@@ -53,62 +78,50 @@ function Footer(props) {
               </Col>
               <Col sm={6} xs={12} md={6} lg>
                 <h5 className={"font-weight-bold FooterHeading"}>
-                  I’m a
+                  Privacy Policy
                 </h5>
                 <Nav className="flex-column">
                   <LinkContainer to="#">
                     <Nav.Link className=" fdeco">
-                      Vendor
-                    </Nav.Link>
-                  </LinkContainer>
-                  <LinkContainer to="#">
-                    <Nav.Link className=" fdeco">
-                      Delivery partner
-                    </Nav.Link>
-                  </LinkContainer>
-                  <LinkContainer to="#">
-                    <Nav.Link className=" fdeco">
-                      Social media influencer
-                    </Nav.Link>
-                  </LinkContainer>
-                  <LinkContainer to="#">
-                    <Nav.Link className=" fdeco">
-                      User
+                      Copyright
                     </Nav.Link>
                   </LinkContainer>
                 </Nav>
               </Col>
-              <Col sm={6} xs={12} md={6} lg>
+              <Col sm={6} xs={12} md={6} lg={"auto"}>
                 <h5 className={"font-weight-bold FooterHeading"}>
-                  Quick links
+                  Enquire more information
                 </h5>
-                <Nav className="flex-column">
-                  <LinkContainer to="#">
-                    <Nav.Link className=" fdeco">
-                      Privacy policy
-                    </Nav.Link>
-                  </LinkContainer>
-                  <LinkContainer to="#">
-                    <Nav.Link className=" fdeco">
-                      Term & Condition
-                    </Nav.Link>
-                  </LinkContainer>
-                  <LinkContainer to="#">
-                    <Nav.Link className=" fdeco">
-                      Shipping
-                    </Nav.Link>
-                  </LinkContainer>
-                  <LinkContainer to="#">
-                    <Nav.Link className=" fdeco">
-                      Return
-                    </Nav.Link>
-                  </LinkContainer>
-                  <LinkContainer to="#">
-                    <Nav.Link className=" fdeco">
-                      FAQs
-                    </Nav.Link>
-                  </LinkContainer>
-                </Nav>
+                <Form>
+                  <Form.Group controlId="formBasicmail">
+                    <InputGroup>
+                      <Form.Control type="email"
+                        // placeholder="Type Your Email"
+                        style={{
+                          background: "#FFFFFF",
+                          borderRadius: "6px 0px 0px 6px"
+                        }}
+                        className={"border-left-0"}
+                      />
+                      <InputGroup.Prepend>
+                        <InputGroup.Text className={"border-left-0"}
+                          style={{
+                            background: "#5AC4CB",
+                            borderRadius: "0px 6px 6px 0px",
+                            border: "0",
+                            color: "#FFFFFF",
+                            cursor: "pointer"
+                          }}
+                        >
+                          Send
+                        </InputGroup.Text>
+                      </InputGroup.Prepend>
+                    </InputGroup>
+                  </Form.Group>
+                  <Form.Group controlId="formBasicCheckbox">
+                    <Form.Check type="checkbox" label="I agree to receive emails from Tamdeed" />
+                  </Form.Group>
+                </Form>
               </Col>
             </Row>
           </Container>

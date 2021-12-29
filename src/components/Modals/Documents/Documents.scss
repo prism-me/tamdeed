@@ -5,13 +5,13 @@
         font-size: 18px;
         font-weight: 700;
         text-align: justify;
-        color: $bg-color;
+        color: $bg-colors;
         @media #{$sm} {
           font-size: 18px;
         }
       }
       p{
-        color: $bg-color;
+        color: $bg-colors;
         font-size: $sub-fonts;
         text-align: justify;
         font-weight: 500;
@@ -21,7 +21,7 @@
         }
       }
       li{
-        color: $bg-color;
+        color: $bg-colors;
         font-size: $sub-fonts;
         text-align: justify;
         font-weight: 500;
@@ -37,7 +37,7 @@
       margin-right: 1rem;
     }
     .modalIcon{
-      background: $bg-color;
+      background: $bg-colors;
       color: $white;
       padding: 1.5rem;
       border-radius: 100%;

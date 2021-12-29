@@ -337,7 +337,7 @@ export const constants = {
       },
       childDob: {
         en: "Child’s Date Of Birth",
-        ar: "تاريخ ميلاد الطفل"
+        ar: "تاريخ ميلاد الطّالب المُراد الاستفسار عنه \ اليوم \ الشّهر \ السّنة"
       },
       submit: {
         en: "Submit",

@@ -1,0 +1,39 @@
+.aboutTamdeed{
+    padding: 4rem 0;
+    margin-top: 2rem;
+    background: $backgroundsColors;
+    @media #{$sm} {
+        margin-top: 2rem;
+    }
+    .aboutBG{
+        background-image:url("../../../assets/images/backgrounds/aboutbg.png");
+        background-repeat:no-repeat;
+        background-position:center;
+        // padding-top: 2rem;
+    }
+    .Title{
+        color: $white;
+        font-size: 25px;
+        font-weight: 400;
+        margin-bottom: 2rem;
+    }
+    .subtitle{
+        color: $white;
+        font-size: 16px;
+        font-weight: 300;
+        text-align: justify;
+    }
+    .btnStyle{
+        border: 0;
+        background: $white;
+        border-radius: 56px;
+        color: $bg-colors;
+        padding: 0.5rem 2rem;
+        margin-top: 2rem;
+        &:hover{
+            border: 1px solid $white; 
+            background: $backgroundsColors;
+            color: $white;
+        }
+    }
+}

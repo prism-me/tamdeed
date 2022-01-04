@@ -36,4 +36,14 @@
         font-weight: 400;
         font-size: 16px;
     }
+    .MuiPaginationItem-page.Mui-selected {
+        background-color: $backgroundsColors;
+    }
+    .MuiPaginationItem-page:hover {
+        background-color: $backgroundsColors;
+    }
+    .MuiPaginationItem-root {
+        color: white;
+        background: #C4C4C4;
+    }
 }

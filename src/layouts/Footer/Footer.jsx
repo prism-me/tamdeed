@@ -24,7 +24,7 @@ function Footer(props) {
                   Tamdeed Projects was established in 1996 to provide high – end turnkey solutions for all aspects of the cabling infrastructure business.
                 </p>
                 <p>
-                  <a href="#" class="contact-pannel-btn text-decoration-none fdeco FooterContact">
+                  <a href="/about" class="contact-pannel-btn text-decoration-none fdeco FooterContact">
                     Know More<ChevronRightIcon />
                   </a>
                 </p>
@@ -69,9 +69,14 @@ function Footer(props) {
                       Careers
                     </Nav.Link>
                   </LinkContainer>
-                  <LinkContainer to="#">
+                  <LinkContainer to="/contact">
                     <Nav.Link className=" fdeco">
                       Contact
+                    </Nav.Link>
+                  </LinkContainer>
+                  <LinkContainer to="/insights">
+                    <Nav.Link className=" fdeco">
+                      Insights
                     </Nav.Link>
                   </LinkContainer>
                 </Nav>

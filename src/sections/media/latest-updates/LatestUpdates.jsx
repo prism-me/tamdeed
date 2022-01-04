@@ -5,6 +5,8 @@ import img2 from "../../../assets/images/mediaImages/latest-updates/lup2.png"
 import img3 from "../../../assets/images/mediaImages/latest-updates/lup3.png"
 import img4 from "../../../assets/images/mediaImages/latest-updates/lup4.png"
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import Pagination from '@material-ui/lab/Pagination';
+
 
 export default function LatestUpdates() {
     const slidesData = [
@@ -68,6 +70,9 @@ export default function LatestUpdates() {
                         </Card>
                     </Col>
                 </Row>
+                <div className="d-flex justify-content-center align-items-center mt-4">
+                    <Pagination count={5} />
+                </div>
             </Container>
         </div>
     )

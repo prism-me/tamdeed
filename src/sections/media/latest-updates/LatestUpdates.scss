@@ -1,0 +1,39 @@
+.latestUpdates{
+    margin-top: 3rem;
+    @media #{$sm} {
+        margin-top: 2rem;
+    }
+    .title{
+        color: $texts-color2;
+        font-size: 25px;
+        font-weight: 400;
+        margin-bottom: 2rem;
+    }
+    .bg-color{
+        background: $backgroundsColors;
+        padding: 1rem 0;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.14);
+    }
+    .bg-color2{
+        background: $backgroundsColors;
+    }
+    // .iconImg{
+    // }
+    .btnStyle{
+        border: 0;
+        border-bottom: 1px solid $white;
+        background: transparent;
+        color: $white;
+    }
+    .latestUpdateTitle{
+        color: $white;
+        font-weight: 300;
+        font-size: 15px;
+        margin-bottom: 0.5rem;
+    }
+    .subtitle{
+        color: $white;
+        font-weight: 400;
+        font-size: 16px;
+    }
+}

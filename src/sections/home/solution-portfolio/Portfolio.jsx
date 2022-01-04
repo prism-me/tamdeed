@@ -42,10 +42,10 @@ export default function Portfolio() {
             </div>
             <div className={"portfolio"}>
                 <div className="aboutBG">
-                    <h3 className={"title"}> Solutions to Power Possibility</h3>
-                    <p className={"subtitle"}>
+                    <p className={"title"}> Solutions to Power Possibility</p>
+                    <h3 className={"subtitle"}>
                         Sales Solution Portfolio
-                    </p>
+                    </h3>
                     <Container>
                         {
                             slidesData.map((slides, index) => (

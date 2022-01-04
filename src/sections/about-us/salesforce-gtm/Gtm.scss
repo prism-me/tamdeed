@@ -1,0 +1,29 @@
+.sales-gtm{
+    // margin-top: 3rem;
+    .title{
+        color: $texts-color2;
+        font-size: 25px;
+        font-weight: 400;
+        margin-bottom: 2rem;
+    }
+    .cardstyle{
+        border: 0;
+        background: transparent;
+        .imgStyle{
+            border-radius: 6px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.13);
+        }
+        .cardTitle{
+            font-weight: 400;
+            font-size: 18px;
+            color: $texts-color2;
+            text-align: center;
+        }
+        .cardSubtitle{
+            font-weight: 400;
+            font-size: 15px;
+            color: $secondary-color;
+            text-align: center;
+        }
+    }
+}

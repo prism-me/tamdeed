@@ -1,0 +1,33 @@
+.AboutPartners{
+    padding: 5rem 0;
+    background-image:url("../../../assets/images/backgrounds/partnerbg.png");
+    background-repeat:no-repeat;
+    background-position:center;
+    @media #{$sm} {
+        padding-top: 2rem;
+    }
+    .Title{
+        font-size: 18px;
+        text-align: center;
+        font-weight: 400;
+        transform: rotate(-90deg);
+        text-transform: uppercase;
+        color: $texts-color2;
+        @media #{$sm} {
+            font-size: 17px;
+        }
+    }
+    .btnStyle{
+        border: 0;
+        background: $bg-colors;
+        border-radius: 56px;
+        color: $white;
+        padding: 0.5rem 2rem;
+        margin-top: 2rem;
+        &:hover{
+            color: $bg-colors;
+            border: 1px solid $bg-colors; 
+            background: $white;
+        }
+    }
+}

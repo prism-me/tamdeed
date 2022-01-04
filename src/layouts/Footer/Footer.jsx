@@ -64,7 +64,7 @@ function Footer(props) {
                       Upcoming Events
                     </Nav.Link>
                   </LinkContainer>
-                  <LinkContainer to="#">
+                  <LinkContainer to="/career">
                     <Nav.Link className=" fdeco">
                       Careers
                     </Nav.Link>

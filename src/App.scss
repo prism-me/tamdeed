@@ -38,7 +38,49 @@
 @import "./sections/about-us/about-banner/AboutBanner.scss";
 @import "./sections/about-us/overview/Overview.scss";
 @import "./sections/about-us/core-values/Values.scss";
+@import "./sections/about-us/executive-management/Management.scss";
+@import "./sections/about-us/b-units/BusinessUnits.scss";
+@import "./sections/about-us/salesforce-gtm/Gtm.scss";
+@import "./sections/about-us/join-tamdeed/JoinTamdeed.scss";
+@import "./sections/about-us/partners/Partners.scss";
 
+//Career page
+
+@import "./sections/career/career-banner/CareerBanner.scss";
+@import "./sections/career/join-team/JoinTeam.scss";
+@import "./sections/career/intro/Intro.scss";
+@import "./sections/career/open-positions/Positions.scss";
+
+//Contact page
+
+@import "./sections/contact-us/contact-banner/ContactBanner.scss";
+@import "./sections/contact-us/contact-form/ContactForm.scss";
+@import "./sections/contact-us/contact-map/ContactMap.scss";
+
+//Industries page
+
+@import "./sections/industries/industries-banner/IndustriesBanner.scss";
+@import "./sections/industries/industries/Industries.scss";
+
+//Media Center page
+
+@import "./sections/media/media-banner/MediaBanner.scss";
+@import "./sections/media/latest-updates/LatestUpdates.scss";
+@import "./sections/media/in-the-news/News.scss";
+
+//Insights page
+
+@import "./sections/insights/insights-banner/InsightsBanner.scss";
+@import "./sections/insights/refrence-projects/ReferenceProjects.scss";
+
+//Solution & Service page
+
+@import "./sections/solution-service/ss-banner/SolutionServiceBanner.scss";
+@import "./sections/solution-service/solution-pillars/SolutionPillars.scss";
+@import "./sections/solution-service/tamdeed-service/TamdeedService.scss";
+@import "./sections/solution-service/managed-service/ManagedService.scss";
+@import "./sections/solution-service/telecom-networking/TelecomNetworking.scss";
+@import "./sections/solution-service/data-center/DataCenter.scss";
 
 // ********************** sections
 
@@ -51,11 +93,28 @@
 }
 
 // font English Version
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
-// @import url('./assets/fonts/NeoTech-Ea8y9.ttf');
+
+@font-face {
+  font-family: "Neo-Tech-Alt-Medium";
+  src: url("./assets/fonts/NeoTechAltMedium.TTF");
+}
+
+@font-face {
+  font-family: "Neo-Tech-Alt-Light";
+  src: url("./assets/fonts/NeoTechAltLight.TTF");
+}
+
+@font-face {
+  font-family: "Neo-Tech-Alt-Regular";
+  src: url("./assets/fonts/NeoTechAltRegular.TTF");
+}
 
 * {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Neo-Tech-Alt-Regular', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Neo-Tech-Alt-Medium', sans-serif;
 }
 
 /* Chrome, Safari, Edge, Opera */

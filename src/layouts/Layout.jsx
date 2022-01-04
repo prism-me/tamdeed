@@ -122,7 +122,7 @@ export default function Layout(props) {
                 <ListItem button>
                   <ListItemText
                     onClick={() => {
-                      history.push(`/`);
+                      history.push(`/solution-service`);
                       toggleDrawer(false);
                     }}
                     primary="Solutions & Services"
@@ -131,7 +131,7 @@ export default function Layout(props) {
                 <ListItem button>
                   <ListItemText
                     onClick={() => {
-                      history.push(`/`);
+                      history.push(`/industries`);
                       toggleDrawer(false);
                     }}
                     primary="Industries"
@@ -140,7 +140,7 @@ export default function Layout(props) {
                 <ListItem button>
                   <ListItemText
                     onClick={() => {
-                      history.push(`/`);
+                      history.push(`/contact`);
                       toggleDrawer(false);
                     }}
                     primary="Contact us"
@@ -157,7 +157,7 @@ export default function Layout(props) {
                     <ListItem button className={classes.nested}>
                       <ListItemText primary="Media Center"
                         onClick={() => {
-                          history.push("/");
+                          history.push("/media-center");
                           toggleDrawer(false);
                         }}
                       />

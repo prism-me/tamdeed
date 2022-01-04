@@ -8,7 +8,7 @@ import icon3 from "../../../assets/images/icons/White/Mask Group-2.png"
 // import icon4 from "../../../assets/images/icons/White/Mask Group-3.png"
 // import icon5 from "../../../assets/images/icons/White/Mask Group-4.png"
 
-const TestimonialSlider = (props) => {
+const Industries = (props) => {
     const responsive = {
         superLargeDesktop: {
             // the naming can be any, depends on you.
@@ -46,13 +46,13 @@ const TestimonialSlider = (props) => {
         }
     ];
     return (
-        <div className="industries">
-            <h3 className={"Title"}>
+        <div className="industries" id={"industries"}>
+            <p className={"Title"}>
                 Our projects
-            </h3>
-            <p className={"subtitle"}>
-                Industries
             </p>
+            <h3 className={"subtitle"}>
+                Industries
+            </h3>
             <Container>
                 <Carousel
                     responsive={responsive}
@@ -98,4 +98,4 @@ const TestimonialSlider = (props) => {
         </div >
     )
 }
-export default TestimonialSlider;
+export default Industries;

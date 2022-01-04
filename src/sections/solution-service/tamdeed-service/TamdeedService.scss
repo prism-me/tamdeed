@@ -1,0 +1,25 @@
+.tamdeed-service{
+    margin-top: 2rem;
+    .Title{
+        color: $bg-colors;
+        font-size: 18px;
+        font-weight: 400;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .subtitle{
+        color: $texts-color2;
+        font-size: 25px;
+        font-weight: 400;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    .cardsubtitle{
+        color: $texts-color2;
+        font-weight: 400;
+        font-size: 16px;
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+}

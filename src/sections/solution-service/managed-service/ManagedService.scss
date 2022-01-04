@@ -1,0 +1,23 @@
+.managed-service{
+    margin-top: 2rem;
+    .Title{
+        color: $bg-colors;
+        font-size: 18px;
+        font-weight: 400;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    .subtitle{
+        color: $texts-color2;
+        font-size: 25px;
+        font-weight: 400;
+        text-align: center;
+    }
+    .cardsubtitle{
+        color: $texts-color2;
+        font-weight: 400;
+        font-size: 16px;
+        margin-bottom: 1rem;
+    }
+
+}

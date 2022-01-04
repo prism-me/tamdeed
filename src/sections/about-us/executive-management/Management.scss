@@ -1,0 +1,82 @@
+.management{
+    margin-top: 2rem;
+    .title{
+        color: $texts-color2;
+        font-size: 25px;
+        font-weight: 400;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    .mngBgDiv{
+        background: $backgroundsColors;
+        padding-bottom: 3rem;
+        position: relative;
+        .subtitle{
+            font-size: 18px;
+            font-weight: 400;
+            text-align: justify;
+            color: $white;
+        }
+        .subtitle1{
+            font-size: 15px;
+            font-weight: 400;
+            color: $white;
+            margin-bottom: 0;
+        }
+        .subtitle2{
+            font-weight: 400;
+            color: $white;
+        }
+        .mgImg{
+            margin-top: -2rem;
+            padding-bottom: 1.3rem;
+            transform: rotate(356deg);
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 200px;
+            background: $texts-color2;
+            clip-path: polygon(100% 50%, 0 100%, 100% 100%);
+          }
+    }
+   .mngBgDiv2{
+       background: $texts-color2;
+       position: relative;
+       &::before{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 200px;
+        background: $white;
+        clip-path: polygon(0 100%, 0 66%, 100% 100%);
+      }
+       .subtitle{
+        font-size: 18px;
+        font-weight: 400;
+        text-align: justify;
+        color: $white;
+    }
+    .subtitle1{
+        font-size: 15px;
+        font-weight: 400;
+        color: $white;
+        margin-bottom: 0;
+    }
+    .subtitle2{
+        font-weight: 400;
+        color: $white;
+    }
+    .mgImg{
+        margin-top: -7rem;
+        transform: rotate(2deg);
+        padding-bottom: 0.5rem;
+    }
+   }
+
+}

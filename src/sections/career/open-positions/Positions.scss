@@ -1,0 +1,42 @@
+.positions{
+    margin: 3rem 0;
+    @media #{$sm} {
+        margin: 2rem 0;
+    }
+    .title{
+        color: $texts-color2;
+        font-size: 25px;
+        font-weight: 400;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    .positionDiv{
+        background: $backgroundsColors;
+        padding: 3rem 0;
+        margin: 0 15rem;
+        box-shadow: 0px 8px 21px rgba(0, 0, 0, 0.15);
+        border-radius: 6px;
+        @media #{$sm} {
+            margin: 0;
+        }
+        .subtitle{
+            color: $white;
+            font-size: 18px;
+            font-weight: 400;
+            text-align: center;
+            margin-top: 1rem;
+        }
+        .iconBg{
+            width: 80px;
+            height: 80px;
+            background: $white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100%;
+            .iconImg{
+                width: 45%;
+            }
+        }
+    }
+}

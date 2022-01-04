@@ -1,0 +1,62 @@
+.news{
+    margin-top: 2rem;
+    @media #{$sm} {
+        margin-top: 2rem;
+    }
+    .title{
+        color: $texts-color2;
+        font-size: 25px;
+        font-weight: 400;
+        margin-bottom: 2rem;
+    }
+    .bg-color{
+        background: $backgroundsColors;
+        padding: 1rem 0;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.14);
+    }
+    .cardStyle{
+        border: 0;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.17);
+        .cardTitle{
+            color: $bg-colors;
+            font-weight: 300;
+            font-size: 15px;
+            margin-bottom: 0.5rem;
+            span{
+                margin-left: 1rem;
+                color: $secondary-color;
+            }
+        }
+        .cardsubtitle{
+            color: $secondary-color;
+            font-weight: 400;
+            font-size: 16px;
+        }
+        .cardbtnStyle{
+            border: 0;
+            background: transparent;
+            font-size: 15px;
+            color: $bg-colors;
+        }
+    }
+    .btnStyle{
+        border: 0;
+        background: transparent;
+        border: 1px solid $bg-colors; 
+        border-radius: 56px;
+        color: $bg-colors;
+        padding: 0.5rem 2rem;
+        margin-top: 2rem;
+        &:hover{
+            color: $white;
+            background: $bg-colors;
+        }
+    }
+    // .iconImg{
+    // }
+    .subtitle{
+        color: $white;
+        font-weight: 400;
+        font-size: 16px;
+    }
+}

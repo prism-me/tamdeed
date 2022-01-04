@@ -1,0 +1,87 @@
+.contact-form{
+    margin-top: 3rem;
+    .Title{
+        color: $bg-colors;
+        font-size: 18px;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+    .subtitle{
+        color: $texts-color2;
+        font-size: 25px;
+        font-weight: 400;
+    }
+    .description{
+        color: $texts-color2;
+        font-weight: 400;
+    }
+    .bgDiv{
+        background-image:url("../../../assets/images/backgrounds/contactbg.png");
+        background-repeat:no-repeat;
+        background-position:center;
+    }
+    .form-control{
+        border: 1px solid #C4C4C4;
+        border-radius: 3px;
+    }
+    .btnStyle{
+        border: 0;
+        background: $bg-colors;
+        border-radius: 56px;
+        color: $white;
+        padding: 0.5rem 2rem;
+        margin-top: 1rem;
+        &:hover{
+            color: $bg-colors;
+            border: 1px solid $bg-colors; 
+            background: $white;
+        }
+    }
+    .contactDiv{
+        background: $backgroundsColors;
+        padding: 2rem 1rem;
+        box-shadow: 0px 8px 21px rgba(0, 0, 0, 0.15);
+        border-radius: 6px;
+        height: 280px;
+        @media #{$sm} {
+            margin: 0;
+        }
+        .subtitle{
+            color: $white;
+            font-size: 18px;
+            font-weight: 400;
+            text-align: center;
+            margin-top: 1rem;
+        }
+        .hrStyle{
+            width: 50%;
+            border: 1px solid $white;
+        }
+        .phone{
+            a{
+                color: $white;
+                text-decoration: none;
+            }
+            text-align: center;
+            margin: 0;
+        }
+        .email{
+            a{
+                color: $white;
+                text-decoration: none;
+            }
+            text-align: center;
+        }
+    }
+    .bottomInfo{
+        a{
+            color: $backgroundsColors;
+            text-decoration: none;
+            margin-right: 0.5rem;
+        }
+        font-weight: 400;
+        font-size: 15px;
+        margin-top: 0.5rem;
+    }
+
+}

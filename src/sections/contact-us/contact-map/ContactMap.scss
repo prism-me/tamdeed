@@ -1,0 +1,36 @@
+.contact-map{
+    margin-top: 3rem;
+    .btnStyle{
+        border: 0;
+        background: $bg-colors;
+        border-radius: 56px;
+        color: $white;
+        padding: 0.5rem 2rem;
+        &:hover{
+            color: $bg-colors;
+            border: 1px solid $bg-colors; 
+            background: $white;
+        }
+    }
+    .iconstyle{
+        width: 40px;
+        height: 40px;
+        background: $bg-colors;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        margin-left: 0.5rem;
+        &:hover{
+            background: $white;
+            border: 1px solid $bg-colors;
+        }
+        .icon{
+            color: $white;
+            font-size: 18px;
+            &:hover{
+                color: $bg-colors;
+            }
+        }
+    }
+}

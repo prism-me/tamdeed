@@ -1,0 +1,22 @@
+.reference-projects{
+    margin-top: 4rem;
+    @media #{$sm} {
+        margin-top: 2rem;
+    }
+    .title{
+        color: $texts-color2;
+        font-size: 25px;
+        font-weight: 400;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    // .iconImg{
+    // }
+    .subtitle{
+        color: $secondary-color;
+        font-weight: 400;
+        font-size: 16px;
+        text-align: center;
+        margin-top: 0.5rem;
+    }
+}

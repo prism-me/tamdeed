@@ -1,0 +1,53 @@
+.industriesProject{
+    padding: 2rem 0;
+    @media #{$sm} {
+        padding: 2rem 0;
+    }
+    .Title{
+        color: $bg-colors;
+        font-size: 18px;
+        font-weight: 400;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .subtitle{
+        color: $texts-color2;
+        font-size: 25px;
+        font-weight: 400;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+        .cardstyle{
+            border: 0;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.17);
+            height: 311px;
+            &:hover{
+                background: $backgroundsColors;
+                color: $white;
+            }
+            .carouselTitle{
+                color: $texts-color2;
+                font-size: 21px;
+                font-weight: 400;
+                text-align: center; 
+                margin-top: 0.5rem;
+            }
+            .carouselSubTitle{
+                font-size: 18px;
+                font-weight: 400;
+                text-align: center;
+            }
+            .iconBg{
+                width: 80px;
+                height: 80px;
+                background: $backgroundsColors;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 100%;
+                .iconImg{
+                    width: 45%;
+                }
+            }
+        }
+}

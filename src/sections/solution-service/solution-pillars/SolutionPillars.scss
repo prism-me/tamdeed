@@ -1,0 +1,37 @@
+.solution-pillars{
+    padding: 3rem 0;
+    background: $backgroundsColors;
+    .Title{
+        color: $white;
+        font-size: 18px;
+        font-weight: 400;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .subtitle{
+        color: $white;
+        font-size: 25px;
+        font-weight: 400;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    .iconBg{
+        width: 80px;
+        height: 80px;
+        background: $white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        .iconImg{
+            width: 45%;
+        }
+    }
+    .cardsubtitle{
+        color: $white;
+        font-weight: 400;
+        font-size: 16px;
+        text-align: center;
+        margin-top: 1rem;
+    }
+}

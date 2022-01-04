@@ -7,10 +7,10 @@ export default function Values() {
 
     return (
         <div className={"values"}>
-            <h3 className={"Title"}>Core values</h3>
-            <p className={"subtitle"}>
+            <p className={"Title"}>Core values</p>
+            <h3 className={"subtitle"}>
                 Our Business Values
-            </p>
+            </h3>
             <div className="aboutBG">
                 <Container>
                     <Row>

@@ -5,7 +5,7 @@ import { LinkContainer } from "react-router-bootstrap";
 import { CgMenuLeftAlt } from "react-icons/cg";
 import logo from "../../assets/images/logo/logo.png";
 import SearchIcon from '@material-ui/icons/Search';
-
+import { HashLink } from "react-router-hash-link"
 
 function MainNavbar(props) {
   return (
@@ -38,17 +38,20 @@ function MainNavbar(props) {
               <LinkContainer to="/about">
                 <Nav.Link>About</Nav.Link>
               </LinkContainer>
-              <LinkContainer to="/Solutions-Services">
+              <LinkContainer to="/solution-service">
                 <Nav.Link>Solutions & Services</Nav.Link>
               </LinkContainer>
-              <LinkContainer to="/industries">
+              <HashLink to={`/` + "#industries"} className={"nav-link"}>
+                Industries
+              </HashLink>
+              {/* <LinkContainer to="/industries">
                 <Nav.Link>Industries</Nav.Link>
-              </LinkContainer>
-              <LinkContainer to="/Contact">
+              </LinkContainer> */}
+              <LinkContainer to="/contact">
                 <Nav.Link>Contact</Nav.Link>
               </LinkContainer>
               <NavDropdown title="Media Center" id="collasible-nav-dropdown">
-                <LinkContainer to="/Media-Center">
+                <LinkContainer to="/media-center">
                   <NavDropdown.Item>Media Center</NavDropdown.Item>
                 </LinkContainer>
               </NavDropdown>

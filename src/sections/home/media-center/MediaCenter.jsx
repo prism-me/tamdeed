@@ -47,7 +47,7 @@ export default function MediaCenter() {
 
     return (
         <div className={"media-center"}>
-            <h3 className={"Title"}>Media Center</h3>
+            <p className={"Title"}>Media Center</p>
             <div className="d-flex justify-content-center align-items-center btnDiv">
                 <button className="btnStyle active"
                     onClick={() => filterItem('latest-updates')}

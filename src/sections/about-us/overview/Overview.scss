@@ -5,6 +5,9 @@
         font-weight: 400;
         font-size: 18px;
         color: $white;
+        @media #{$sm} {
+            margin-top: 1rem;
+        }
     }
     .subtitle{
         font-weight: 400;

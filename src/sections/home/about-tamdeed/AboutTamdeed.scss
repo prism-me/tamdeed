@@ -4,6 +4,7 @@
     background: $backgroundsColors;
     @media #{$sm} {
         margin-top: 2rem;
+        padding: 3rem 0;
     }
     .aboutBG{
         background-image:url("../../../assets/images/backgrounds/aboutbg.png");

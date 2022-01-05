@@ -8,7 +8,10 @@
     position: relative;
     // clip-path: polygon(0 0, 100% 0, 100% 83%, 0 100%);
     @media #{$md} {
-      height: 500px;
+      height: 50vh;
+    }
+    @media #{$lg} {
+      height: 50vh;
     }
     @media #{$sm,$xsm,$tiny} {
       height: 350px;
@@ -71,9 +74,6 @@
         @media #{$sm,$xsm} {
           font-size: 20px ;
         }
-      }
-      .hrStyle{
-        border: 1px solid $white;
       }
       .banner-subtitle{
         font-weight: 400;

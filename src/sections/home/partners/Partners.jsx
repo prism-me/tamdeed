@@ -21,30 +21,30 @@ export default function Partners() {
                     </Col>
                     <Col sm>
                         <Row className={"mb-3"}>
-                            <Col sm>
+                            <Col sm className={"colmblspace"}>
                                 <img src={partner1} alt="brand" className={"img-fluid"} />
                             </Col>
-                            <Col sm>
+                            <Col sm className={"colmblspace"}>
                                 <img src={partner2} alt="brand" className={"img-fluid"} />
                             </Col>
-                            <Col sm>
+                            <Col sm className={"colmblspace"}>
                                 <img src={partner3} alt="brand" className={"img-fluid"} />
                             </Col>
-                            <Col sm>
+                            <Col sm className={"colmblspace"}>
                                 <img src={partner4} alt="brand" className={"img-fluid"} />
                             </Col>
                         </Row>
                         <Row>
-                            <Col sm>
+                            <Col sm className={"colmblspace"}>
                                 <img src={partner5} alt="brand" className={"img-fluid"} />
                             </Col>
-                            <Col sm>
+                            <Col sm className={"colmblspace"}>
                                 <img src={partner6} alt="brand" className={"img-fluid"} />
                             </Col>
-                            <Col sm>
+                            <Col sm className={"colmblspace"}>
                                 <img src={partner7} alt="brand" className={"img-fluid"} />
                             </Col>
-                            <Col sm>
+                            <Col sm className={"colmblspace"}>
                                 <img src={partner8} alt="brand" className={"img-fluid"} />
                             </Col>
                         </Row>

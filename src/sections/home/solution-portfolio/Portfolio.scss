@@ -5,6 +5,9 @@
      margin-top: 2rem;
     clip-path: polygon(0 0, 100% 25%, 100% 100%, 0% 100%);
     z-index: -1;
+    @media #{$sm} {
+        clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%)
+    }
 }
 .mainBottomDIV{
     padding: 8rem 0;
@@ -12,6 +15,9 @@
     background: #2c8f8f57;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 73%);
     z-index: -1 !important;
+    @media #{$sm} {
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 50%);
+    }
 }
 .portfolio{
     position: relative;
@@ -20,9 +26,9 @@
     background: #0D2167;
     clip-path: polygon(0 15%, 100% 0%, 100% 84%, 0% 100%);
     z-index: 1 !important;
-    // @media #{$sm} {
-    //     margin-top: 2rem;
-    // }
+    @media #{$sm} {
+        clip-path: polygon(0 8%, 100% 0%, 100% 84%, 0% 98%);
+    }
     .aboutBG{
         background-image:url("../../../assets/images/backgrounds/portfoliobg.png");
         background-repeat:no-repeat;

@@ -36,6 +36,9 @@
             border: 1px solid $bg-colors; 
             background: $white;
         }
+        @media #{$sm} {
+            margin-bottom: 2rem;
+        }
     }
     .contactDiv{
         background: $backgroundsColors;
@@ -44,7 +47,8 @@
         border-radius: 6px;
         height: 280px;
         @media #{$sm} {
-            margin: 0;
+            margin-bottom: 1rem;
+            height: auto;
         }
         .subtitle{
             color: $white;
@@ -74,6 +78,12 @@
         }
     }
     .bottomInfo{
+        @media #{$sm} {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
         a{
             color: $backgroundsColors;
             text-decoration: none;

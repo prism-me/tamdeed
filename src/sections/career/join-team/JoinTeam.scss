@@ -6,7 +6,7 @@
     align-items: center;
     flex-direction: column;
     @media #{$sm} {
-        padding: 3rem 0rem;
+        padding: 3rem 1rem;
     }
     .title{
         color: $white;

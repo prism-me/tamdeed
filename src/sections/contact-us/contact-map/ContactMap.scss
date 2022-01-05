@@ -1,5 +1,8 @@
 .contact-map{
     margin-top: 3rem;
+    @media #{$sm} {
+        margin-top: 2rem;
+    }
     .btnStyle{
         border: 0;
         background: $bg-colors;

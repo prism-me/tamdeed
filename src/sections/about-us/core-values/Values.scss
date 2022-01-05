@@ -5,6 +5,9 @@
         background-repeat:no-repeat;
         background-position:center;
         padding: 5rem 0;
+        @media #{$sm} {
+            padding: 0;
+        }
     }
     .Title{
         color: $bg-colors;

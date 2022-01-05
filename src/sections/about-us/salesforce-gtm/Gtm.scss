@@ -1,5 +1,7 @@
 .sales-gtm{
-    // margin-top: 3rem;
+    @media #{$sm} {
+        margin-top: 2rem;
+    }
     .title{
         color: $texts-color2;
         font-size: 25px;

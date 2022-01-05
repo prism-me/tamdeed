@@ -11,6 +11,9 @@
         background: $backgroundsColors;
         padding-bottom: 3rem;
         position: relative;
+        @media #{$sm} {
+            padding-top: 2rem;
+        }
         .subtitle{
             font-size: 18px;
             font-weight: 400;
@@ -31,6 +34,11 @@
             margin-top: -2rem;
             padding-bottom: 1.3rem;
             transform: rotate(356deg);
+            @media #{$sm} {
+                transform: rotate(0deg);
+                margin-top: 1rem;
+                padding-bottom: 4rem;
+            }
         }
         &::before{
             content: '';
@@ -46,6 +54,9 @@
    .mngBgDiv2{
        background: $texts-color2;
        position: relative;
+       @media #{$sm} {
+        padding-bottom: 5rem;
+    }
        &::before{
         content: '';
         position: absolute;
@@ -76,6 +87,9 @@
         margin-top: -7rem;
         transform: rotate(2deg);
         padding-bottom: 0.5rem;
+        @media #{$sm} {
+            transform: rotate(0deg);
+        }
     }
    }
 

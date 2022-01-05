@@ -49,7 +49,7 @@ const Gtm = (props) => {
                 <Row>
                     {
                         slidesData.map((slides, index) => (
-                            <Col sm={2} key={index}>
+                            <Col sm md={3} lg={2} key={index}>
                                 <div className="card cardstyle">
                                     <Card.Img varient={"top"} className={"imgStyle"} src={slides.icon}></Card.Img>
                                     <div className="card-body">

@@ -33,6 +33,10 @@
             height: auto;
             margin-bottom: 1.5rem;
         }
+        @media #{$md} {
+            height: auto;
+            margin-bottom: 2rem;
+        }
         .imgStyle{
             clip-path: polygon(0 0, 100% 0, 100% 67%, 0 100%);
         }

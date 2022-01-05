@@ -45,7 +45,7 @@ const Bunits = (props) => {
                     <Row>
                         {
                             slidesData.map((slides, index) => (
-                                <Col sm={3} key={index}>
+                                <Col sm md={6} lg={3} key={index}>
                                     <div className="card cardstyle">
                                         <Card.Img varient={"top"} className={"imgStyle"} src={slides.icon}></Card.Img>
                                         <div className="card-body">

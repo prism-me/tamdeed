@@ -81,7 +81,7 @@ export default function ReferenceProjects() {
                 <h3 className={"title"}>
                     Reference Projects
                 </h3>
-                <Row>
+                <Row className="justify-content-center">
                     {
                         slidesData.map((slides, index) => (
                             <Col sm={4} xs={6} md={3} lg={2} key={index} className={"mb-3"}>

@@ -11,7 +11,32 @@ import partner8 from "../../../assets/images/partners/partner8.png"
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 
 export default function Partners() {
-
+    const slidesData = [
+        {
+            icon: partner1
+        },
+        {
+            icon: partner2
+        },
+        {
+            icon: partner3
+        },
+        {
+            icon: partner4
+        },
+        {
+            icon: partner5
+        },
+        {
+            icon: partner6
+        },
+        {
+            icon: partner7
+        },
+        {
+            icon: partner8
+        }
+    ];
     return (
         <div className={"Partners"}>
             <Container>
@@ -21,32 +46,13 @@ export default function Partners() {
                     </Col>
                     <Col sm>
                         <Row className={"mb-3"}>
-                            <Col sm className={"colmblspace"}>
-                                <img src={partner1} alt="brand" className={"img-fluid"} />
-                            </Col>
-                            <Col sm className={"colmblspace"}>
-                                <img src={partner2} alt="brand" className={"img-fluid"} />
-                            </Col>
-                            <Col sm className={"colmblspace"}>
-                                <img src={partner3} alt="brand" className={"img-fluid"} />
-                            </Col>
-                            <Col sm className={"colmblspace"}>
-                                <img src={partner4} alt="brand" className={"img-fluid"} />
-                            </Col>
-                        </Row>
-                        <Row>
-                            <Col sm className={"colmblspace"}>
-                                <img src={partner5} alt="brand" className={"img-fluid"} />
-                            </Col>
-                            <Col sm className={"colmblspace"}>
-                                <img src={partner6} alt="brand" className={"img-fluid"} />
-                            </Col>
-                            <Col sm className={"colmblspace"}>
-                                <img src={partner7} alt="brand" className={"img-fluid"} />
-                            </Col>
-                            <Col sm className={"colmblspace"}>
-                                <img src={partner8} alt="brand" className={"img-fluid"} />
-                            </Col>
+                            {
+                                slidesData.map((slides, index) => (
+                                    <Col sm={3} xs={6} md={3} lg={3} className={"colmblspace"} key={index}>
+                                        <img src={slides.icon} alt="brand" className={"img-fluid"} />
+                                    </Col>
+                                ))
+                            }
                         </Row>
                     </Col>
                 </Row>

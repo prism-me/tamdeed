@@ -19,6 +19,12 @@
         @media #{$sm} {
             margin: 0;
         }
+        @media #{$md} {
+            margin: 0 2rem;
+        }
+        @media #{$lg} {
+            margin: 0 9rem;
+        }
         .subtitle{
             color: $white;
             font-size: 18px;

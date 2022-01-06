@@ -1,6 +1,6 @@
 .latestUpdates{
-    margin-top: 3rem;
-    @media #{$sm} {
+    margin-top: 6rem;
+    @media #{$sm, $md, $lg} {
         margin-top: 2rem;
     }
     .title{
@@ -13,6 +13,13 @@
         background: $backgroundsColors;
         padding: 1rem 0;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.14);
+        margin-right: 1rem;
+        @media #{$sm} {
+            margin: 15px 0;
+        }
+        @media #{$md} {
+            margin-right: 0rem;;
+        }
     }
     .bg-color2{
         background: $backgroundsColors;

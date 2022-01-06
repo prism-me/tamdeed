@@ -14,12 +14,34 @@
         margin-bottom: 2rem;
         text-align: center;
     }
-    .cardsubtitle{
-        color: $texts-color2;
-        font-weight: 400;
-        font-size: 16px;
-        text-align: center;
-        margin-top: 1rem;
+    .cardstyle{
+        border: 0;
+        background: transparent;
+        .card-body{
+            padding: 0.5rem 1.25rem;
+        }
+        .cardsubtitle{
+            color: $texts-color2;
+            font-weight: 400;
+            font-size: 16px;
+            text-align: center;
+            margin-bottom: 0;
+        }
+        .iconImg{
+            filter: drop-shadow(2px 4px 25px rgba(0, 0, 0, 0.25));
+        }
     }
+    // .row {
+    //     display: flex;
+    //     flex-wrap: wrap;
+    //   }
+    //   .col {
+    //     flex: 1 0 33%; /* The important bit. This percentage decides your columns. 
+    //    The percent can be px. It just represents your minimum starting width.
+    //     */
+    //     // max-width: 18%;
+
+    //   }
+  
 
 }

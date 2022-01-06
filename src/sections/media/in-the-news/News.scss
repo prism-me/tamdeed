@@ -16,6 +16,13 @@
         background: $backgroundsColors;
         padding: 1rem 0;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.14);
+        margin-left: 1rem;
+        @media #{$sm} {
+            margin: 15px 0;
+        }
+        @media #{$md} {
+            margin-left: 0rem;;
+        }
     }
     .cardStyle{
         border: 0;
@@ -61,5 +68,8 @@
         color: $white;
         font-weight: 400;
         font-size: 16px;
+        @media #{$sm} {
+            margin-top: 1rem;
+        }
     }
 }

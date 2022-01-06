@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row, Card } from "react-bootstrap";
 import icon1 from "../../../assets/images/solutionservice/tamdeed-service/ts1.png"
 import icon2 from "../../../assets/images/solutionservice/tamdeed-service/ts2.png"
 import icon3 from "../../../assets/images/solutionservice/tamdeed-service/ts3.png"
@@ -50,20 +50,19 @@ export default function TamdeedService() {
                 <h3 className={"subtitle"}>
                     Tamdeed Services
                 </h3>
-                <Row>
+                <Row className="justify-content-center">
                     {
                         slidesData.map((slides, index) => (
                             <Col sm={4} key={index} className={"mb-3"}>
-                                <Row>
-                                    <Col sm={12} className="d-flex justify-content-center align-items-center" >
-                                        <img src={slides.icon} alt="solution" className={"iconImg img-fluid"} />
-                                    </Col>
-                                    <Col sm={12}>
+                                <div className="card cardstyle">
+                                    <Card.Img varient={"top"} className={"iconImg"} src={slides.icon}></Card.Img>
+                                    <div className="card-body">
                                         <h3 className="cardsubtitle">
                                             {slides.title}
                                         </h3>
-                                    </Col>
-                                </Row>
+                                    </div>
+                                </div>
+
                             </Col>
 
                         ))

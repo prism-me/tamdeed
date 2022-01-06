@@ -5,8 +5,14 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    @media #{$sm} {
+    @media #{$sm, $md} {
         padding: 3rem 1rem;
+    }
+    @media #{$md} {
+        padding: 3rem 2rem;
+    }
+    @media #{$lg} {
+        padding: 3rem 5rem;
     }
     .title{
         color: $white;

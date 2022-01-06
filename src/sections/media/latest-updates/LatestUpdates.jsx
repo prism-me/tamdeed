@@ -53,7 +53,7 @@ export default function LatestUpdates() {
                             ))
                         }
                     </Col>
-                    <Col sm={5}>
+                    <Col sm>
                         <Card className={"border-0"}>
                             <Card.Img variant="top" src={img4} />
                             <Card.Body className={"bg-color2"}>

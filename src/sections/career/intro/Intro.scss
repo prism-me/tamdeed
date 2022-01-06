@@ -5,6 +5,12 @@
         padding: 0rem;
         margin-top: 2rem;
     }
+    @media #{$md} {
+        padding: 0 2rem;
+    }
+    @media #{$lg} {
+        padding: 0 3rem;
+    }
     .title{
         color: $texts-color2;
         font-size: 25px;

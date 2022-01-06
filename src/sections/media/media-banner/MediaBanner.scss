@@ -55,8 +55,8 @@
             left: 50%;
           }
           @media #{$lg} {
-            top: 50%;
-            left: 50%;
+            top: 60%;
+            left: 19%;
           }
           @media #{$sm,$xsm ,$tiny} {
             top: 50%;
@@ -69,6 +69,7 @@
             margin-bottom: 0.5rem;
             color: $texts-color2;
             @media #{$md} {
+              text-align: center;
               font-size: 30px;
             }
             @media #{$sm,$xsm} {
@@ -82,6 +83,7 @@
             color: $texts-color2;
             @media #{$md} {
               font-size: 20px;
+              text-align: center;
             }
             @media #{$sm,$xsm} {
               font-size: 17px ;

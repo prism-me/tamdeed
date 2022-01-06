@@ -86,6 +86,11 @@ function Footer(props) {
                   Privacy Policy
                 </h5>
                 <Nav className="flex-column">
+                  {/* <LinkContainer to="#">
+                    <Nav.Link className=" fdeco">
+                      Privacy Policy
+                    </Nav.Link>
+                  </LinkContainer> */}
                   <LinkContainer to="#">
                     <Nav.Link className=" fdeco">
                       Copyright

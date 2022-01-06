@@ -5,7 +5,12 @@
     background: $white;
     opacity: 0.95;
     position: absolute;
+    // position: fixed;
     @include padding-horizontal(2, "rem");
+
+    @media #{$sm} {
+      display: block;
+    }
    
     .navbar-brand {
       width: 200px;

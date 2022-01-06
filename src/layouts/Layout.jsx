@@ -131,7 +131,7 @@ export default function Layout(props) {
                 <ListItem button>
                   <ListItemText
                     onClick={() => {
-                      history.push(`/industries`);
+                      history.push(`/`);
                       toggleDrawer(false);
                     }}
                     primary="Industries"

@@ -54,8 +54,8 @@
             left: 50%;
           }
           @media #{$lg} {
-            top: 50%;
-            left: 50%;
+            top: 60%;
+            left: 19%;
           }
           @media #{$sm,$xsm ,$tiny} {
             top: 50%;
@@ -69,6 +69,7 @@
             color: $texts-color2;
             @media #{$md} {
               font-size: 30px;
+              text-align: center;
             }
             @media #{$sm,$xsm} {
               font-size: 20px ;
@@ -81,6 +82,7 @@
             color: $texts-color2;
             @media #{$md} {
               font-size: 20px;
+              text-align: center;
             }
             @media #{$sm,$xsm} {
               font-size: 17px ;
@@ -99,6 +101,9 @@
           height: 300px;
           margin-bottom: -38rem;
           z-index: 1;
+          @media #{$lg} {
+            width: 250px;
+          }
         }
       }
 }

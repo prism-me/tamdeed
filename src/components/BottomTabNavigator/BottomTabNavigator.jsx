@@ -2,10 +2,11 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import BottomNavigation from "@material-ui/core/BottomNavigation";
 import { Link } from "react-router-dom";
-import MenuIcon from '@material-ui/icons/Menu';
 import ListIcon from '@material-ui/icons/List';
 import SearchIcon from '@material-ui/icons/Search';
-import LocalMallIcon from '@material-ui/icons/LocalMall';
+import PhoneIcon from '@material-ui/icons/Phone';
+import HomeIcon from '@material-ui/icons/Home';
+
 const useStyles = makeStyles({
   root: {
     width: "100%",
@@ -29,13 +30,11 @@ function BottomTabNavigator(props) {
         onChange={handleChange}
         className={classes.root}
       >
-        <Link to={`#`}>
-          <div className={"d-flex flex-column justify-content-center align-items-center"}
-            onClick={() => props.toggleDrawer(true)}
-          >
-            <MenuIcon className={"iconSize"} />
+        <Link to={`/`}>
+          <div className={"d-flex flex-column justify-content-center align-items-center"}>
+            <HomeIcon className={"iconSize"} />
             <p className={"textSize"}>
-              Menu
+              Home
             </p>
           </div>
         </Link>
@@ -57,9 +56,9 @@ function BottomTabNavigator(props) {
         </Link>
         <Link to={`#`}>
           <div className={"d-flex flex-column justify-content-center align-items-center"}>
-            <LocalMallIcon className={"iconSize"} />
+            <PhoneIcon className={"iconSize"} />
             <p className={"textSize"}>
-              Cart
+              Phone
             </p>
           </div>
         </Link>

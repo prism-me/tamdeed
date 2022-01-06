@@ -84,7 +84,7 @@ export default function ReferenceProjects() {
                 <Row>
                     {
                         slidesData.map((slides, index) => (
-                            <Col sm={2} key={index} className={"mb-3"}>
+                            <Col sm={4} xs={6} md={3} lg={2} key={index} className={"mb-3"}>
                                 <Row>
                                     <Col sm={12} className="d-flex justify-content-center align-items-center" >
                                         <img src={slides.icon} alt="solution" className={"iconImg img-fluid"} />

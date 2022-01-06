@@ -5,7 +5,12 @@ import img2 from "../../../assets/images/mediaImages/latest-updates/lup2.png"
 import img3 from "../../../assets/images/mediaImages/latest-updates/lup3.png"
 import img4 from "../../../assets/images/mediaImages/latest-updates/lup4.png"
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import Pagination from '@material-ui/lab/Pagination';
+// import Pagination from '@material-ui/lab/Pagination';
+import Pagination from '@mui/material/Pagination';
+import PaginationItem from '@mui/material/PaginationItem';
+import Stack from '@mui/material/Stack';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 
 
 export default function LatestUpdates() {
@@ -71,7 +76,18 @@ export default function LatestUpdates() {
                     </Col>
                 </Row>
                 <div className="d-flex justify-content-center align-items-center mt-4">
-                    <Pagination count={5} />
+                    {/* <Pagination count={5} /> */}
+                    <Stack spacing={2}>
+                        <Pagination
+                            count={5}
+                            renderItem={(item) => (
+                                <PaginationItem
+                                    components={{ previous: ArrowBackIcon, next: ArrowForwardIcon }}
+                                    {...item}
+                                />
+                            )}
+                        />
+                    </Stack>
                 </div>
             </Container>
         </div>

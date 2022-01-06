@@ -49,7 +49,7 @@ export default function Partners() {
                             {
                                 slidesData.map((slides, index) => (
                                     <Col sm={3} xs={6} md={3} lg={3} className={"colmblspace"} key={index}>
-                                        <img src={slides.icon} alt="brand" className={"img-fluid"} />
+                                        <img src={slides.icon} alt="brand" className={"img-fluid mblImg"} />
                                     </Col>
                                 ))
                             }

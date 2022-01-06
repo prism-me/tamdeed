@@ -11,7 +11,7 @@
         text-transform: uppercase;
         color: $texts-color2;
         @media #{$sm} {
-            font-size: 17px;
+            font-size: 22px;
             transform: rotate(0deg);
         }
     }
@@ -21,6 +21,11 @@
             display: flex;
             justify-content: center;
             align-items: center;
+        }
+        .mblImg{
+            @media #{$sm} {
+            width: 70%;
+            }
         }
     }
     .btnStyle{

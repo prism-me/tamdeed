@@ -34,12 +34,18 @@ export default function TamdeedService() {
             icon: icon6,
             title: "Managed Telecom Services"
         },
-        {
-            icon: icon7,
-            title: "Engineering & Consultancy Services"
-        }
+        // {
+        //     icon: icon7,
+        //     title: "Engineering & Consultancy Services"
+        // }
 
     ];
+
+    const EngineeringConsultancyServices = {
+        icon: icon7,
+        title: "Engineering & Consultancy Services"
+
+    }
 
     return (
         <div className={"tamdeed-service"}>
@@ -67,6 +73,18 @@ export default function TamdeedService() {
 
                         ))
                     }
+                </Row>
+                <Row className="justify-content-center">
+                    <Col sm={9} className={"mb-3"}>
+                        <div className="card cardstyle">
+                            <Card.Img varient={"top"} className={"iconImg"} src={EngineeringConsultancyServices.icon}></Card.Img>
+                            <div className="card-body">
+                                <h3 className="cardsubtitle">
+                                    {EngineeringConsultancyServices.title}
+                                </h3>
+                            </div>
+                        </div>
+                    </Col>
                 </Row>
             </Container>
         </div>

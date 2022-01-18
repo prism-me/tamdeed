@@ -22,7 +22,7 @@ export default function AboutTamdeed() {
                         </Col>
                     </Row>
                     <div className="d-flex justify-content-start align-items-center">
-                        <button className="btnStyle">View more <ChevronRightIcon /></button>
+                        <button className="btnStyle">Read more <ChevronRightIcon /></button>
                     </div>
                 </Container>
             </div>

@@ -50,8 +50,8 @@ export default function Partners() {
                         <Row className={"mb-3"}>
                             {
                                 slidesData.map((slides, index) => (
-                                    <Col sm={3} xs={6} md={3} lg={3} className={"colmblspace"} key={index}>
-                                        <img src={slides.icon} alt="brand" className={"img-fluid mblImg"} />
+                                    <Col sm={3} xs={6} md={3} lg={3} className={"colmblspace partnerLogoDiv"} key={index}>
+                                        <img src={slides.icon} alt="brand" className={"img-fluid mblImg partnerLogoImg"} />
                                     </Col>
                                 ))
                             }
@@ -59,7 +59,7 @@ export default function Partners() {
                     </Col>
                 </Row>
                 <div className="d-flex justify-content-center align-items-center">
-                    <button className="btnStyle">Learn more <ChevronRightIcon /></button>
+                    <button className="btnStyle">See All <ChevronRightIcon /></button>
                 </div>
             </Container>
         </div>

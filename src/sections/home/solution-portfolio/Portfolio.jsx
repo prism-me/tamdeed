@@ -67,7 +67,7 @@ export default function Portfolio() {
                             ))
                         }
                         <div className="d-flex justify-content-start align-items-center">
-                            <button className="btnStyle">Know more <ChevronRightIcon /></button>
+                            <button className="btnStyle">See All <ChevronRightIcon /></button>
                         </div>
                     </Container>
                 </div>

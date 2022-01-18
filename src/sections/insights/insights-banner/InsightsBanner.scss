@@ -67,7 +67,7 @@
             font-weight: 400;
             font-size: 50px;
             margin-bottom: 0.5rem;
-            color: $texts-color2;
+            color: white;
             @media #{$md} {
               font-size: 30px;
               text-align: center;
@@ -80,7 +80,7 @@
           .banner-subtitle{
             font-weight: 400;
             font-size: 25px;
-            color: $texts-color2;
+            color: white;
             @media #{$md} {
               font-size: 20px;
               text-align: center;

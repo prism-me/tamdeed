@@ -42,3 +42,16 @@
         }
     }
 }
+.partnerLogoDiv {
+    padding: 15px !important;
+    text-align: center !important;
+}
+
+.partnerLogoImg {
+    max-width: 70% !important;
+    filter: grayscale(100);
+    cursor: pointer;
+}
+.partnerLogoImg:hover {
+    filter: grayscale(0);
+}

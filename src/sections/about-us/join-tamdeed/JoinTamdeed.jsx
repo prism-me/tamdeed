@@ -1,5 +1,9 @@
 import React from "react";
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import { LinkContainer } from "react-router-bootstrap";
+import { Nav } from "react-bootstrap";
+
+
 
 export default function JoinTamdeed() {
 
@@ -15,7 +19,11 @@ export default function JoinTamdeed() {
                 We welcome skilled and talented candidates who are interested in joining Tamdeed Projects team to further develop their career.
             </p>
             <div className="d-flex justify-content-center align-items-center">
-                <button className="btnStyle">Join Us <ChevronRightIcon /></button>
+                <LinkContainer to="/career">
+                    <Nav.Link className="btnStyle">
+                        Join Us <ChevronRightIcon />
+                    </Nav.Link>
+                  </LinkContainer>
             </div>
         </div>
     )

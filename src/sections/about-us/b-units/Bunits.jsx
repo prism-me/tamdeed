@@ -52,7 +52,7 @@ const Bunits = (props) => {
                                             <h3 className="cardTitle">
                                                 {slides.title}
                                             </h3>
-                                            <p className="cardSubtitle">
+                                            <p className="cardSubtitle aboutCompanyHeadCard">
                                                 {slides.subtitle}
                                             </p>
                                             <hr className="hrStyle" />

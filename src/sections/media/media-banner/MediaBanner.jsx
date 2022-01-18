@@ -7,8 +7,9 @@ export default function MediaBanner() {
 
     return (
         <div className={"mediaBanner"}>
-            <div className="hero-image"
-            // style={{ backgroundImage: `url(${mediabanner})`, }}
+            <div className="hero-image mediaCenterHeroImg"
+            style={{ background: `linear-gradient(#28030312 , #58648169), url(${mediabanner})`, backgroundSize: "cover" }}
+
             >
                 <Hidden smDown>
                     <div className="d-flex justify-content-end align-items-center">
@@ -23,12 +24,12 @@ export default function MediaBanner() {
                         Lorem Ipsum Dolor Sit Amet
                     </p>
                 </div>
-                <Hidden smDown>
-                    <div className="d-flex justify-content-end align-items-center">
-                        <img src={mediab2} alt={"bannerImg2"} className="bannerImg2" />
-                        <img src={mediabanner} alt={"bannerImg"} className="bannerImg" />
-                    </div>
-                </Hidden>
+                {/* <Hidden smDown>
+                    <div className="d-flex justify-content-end align-items-center"> */}
+                        {/* <img src={mediab2} alt={"bannerImg2"} className="bannerImg2" />
+                        <img src={mediabanner} alt={"bannerImg"} className="bannerImg" /> */}
+                    {/* </div>
+                </Hidden> */}
             </div>
         </div>
     )

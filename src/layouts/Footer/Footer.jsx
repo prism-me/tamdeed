@@ -54,12 +54,12 @@ function Footer(props) {
                   Information
                 </h5>
                 <Nav className="flex-column">
-                  <LinkContainer to="#">
+                  <LinkContainer to="/solution-service">
                     <Nav.Link className=" fdeco">
                       Our Services
                     </Nav.Link>
                   </LinkContainer>
-                  <LinkContainer to="#">
+                  <LinkContainer to="/media-center">
                     <Nav.Link className=" fdeco">
                       Upcoming Events
                     </Nav.Link>

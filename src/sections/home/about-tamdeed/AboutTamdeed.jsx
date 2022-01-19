@@ -1,6 +1,8 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import { LinkContainer } from "react-router-bootstrap";
+import { Nav } from "react-bootstrap";
 
 export default function AboutTamdeed() {
 
@@ -22,7 +24,11 @@ export default function AboutTamdeed() {
                         </Col>
                     </Row>
                     <div className="d-flex justify-content-start align-items-center">
-                        <button className="btnStyle">Read more <ChevronRightIcon /></button>
+                        <LinkContainer to="/about">
+                            <Nav.Link className="btnStyle">
+                                Read more <ChevronRightIcon />
+                            </Nav.Link>
+                        </LinkContainer>
                     </div>
                 </Container>
             </div>

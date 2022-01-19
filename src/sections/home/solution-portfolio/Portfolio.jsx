@@ -6,33 +6,35 @@ import icon3 from "../../../assets/images/icons/Color/Mask Group-2.png"
 import icon4 from "../../../assets/images/icons/Color/Mask Group-3.png"
 import icon5 from "../../../assets/images/icons/Color/Mask Group-4.png"
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import { LinkContainer } from "react-router-bootstrap";
+import { Nav } from "react-bootstrap";
 
 export default function Portfolio() {
     const slidesData = [
         {
             icon: icon1,
-            title: "Telecom",
-            subtitle: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incid."
+            title: "Telecom infrastructure",
+            subtitle: "Industry leading Telecom Infrastructure Services."
         },
         {
             icon: icon2,
-            title: "NETWORKING",
-            subtitle: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incid."
+            title: "Telecom Networking",
+            subtitle: "Designing value in innovative Telecom & Enterprise Communications Solutions and Services."
         },
         {
             icon: icon3,
             title: "ELV Systems",
-            subtitle: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incid."
+            subtitle: "Where connectivity, security and access fits in."
         },
         {
             icon: icon4,
             title: "Cyber Security ",
-            subtitle: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incid."
+            subtitle: "We provide security solutions that is adaptive, context-aware, and synchronized."
         },
         {
             icon: icon5,
             title: "Data Center",
-            subtitle: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incid."
+            subtitle: "Solutions for Data Center Modernization."
         }
     ];
 
@@ -67,7 +69,11 @@ export default function Portfolio() {
                             ))
                         }
                         <div className="d-flex justify-content-start align-items-center">
-                            <button className="btnStyle">See All <ChevronRightIcon /></button>
+                            <LinkContainer to="/solution-service">
+                                <Nav.Link className="btnStyle">
+                                    See All <ChevronRightIcon />
+                                </Nav.Link>
+                            </LinkContainer>
                         </div>
                     </Container>
                 </div>

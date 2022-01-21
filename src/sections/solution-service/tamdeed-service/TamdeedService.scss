@@ -45,3 +45,17 @@
   
 
 }
+
+.mobileImg {
+    display: none;
+    @media (max-width:575px) {
+        display: block;
+    }
+}
+.desktopImg {
+    display: block;
+    @media (max-width:575px) {
+        display: none;
+    }
+}
+

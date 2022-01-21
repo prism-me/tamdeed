@@ -5,6 +5,7 @@ import icon2 from "../../../assets/images/icons/Color/Mask Group-1.png"
 import icon3 from "../../../assets/images/icons/Color/Mask Group-2.png"
 import icon4 from "../../../assets/images/icons/Color/Mask Group-3.png"
 import icon5 from "../../../assets/images/icons/Color/Mask Group-4.png"
+import video from "../../../assets/video/Earth Rotaion_Compress.mp4"
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import { LinkContainer } from "react-router-bootstrap";
 import { Nav } from "react-bootstrap";
@@ -44,11 +45,17 @@ export default function Portfolio() {
             </div>
             <div className={"portfolio"}>
                 <div className="aboutBG">
+                <video id="background-video" loop autoPlay>
+                    <source src={video} type="video/mp4" />
+                </video>
+                <div className="dataOverVideo">
+
+                    
+                    <Container>
                     <p className={"title"}> Solutions to Power Possibility</p>
                     <h3 className={"subtitle"}>
                         Sales Solution Portfolio
                     </h3>
-                    <Container>
                         {
                             slidesData.map((slides, index) => (
                                 <Row key={index} className={"mb-3"}>
@@ -76,6 +83,8 @@ export default function Portfolio() {
                             </LinkContainer>
                         </div>
                     </Container>
+                </div>
+                   
                 </div>
             </div>
             <div className={"mainBottomDIV"}>

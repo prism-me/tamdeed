@@ -7,6 +7,7 @@ import icon4 from "../../../assets/images/solutionservice/tamdeed-service/ts4.pn
 import icon5 from "../../../assets/images/solutionservice/tamdeed-service/ts5.png"
 import icon6 from "../../../assets/images/solutionservice/tamdeed-service/ts6.png"
 import icon7 from "../../../assets/images/solutionservice/tamdeed-service/ts7.png"
+import icon8 from "../../../assets/images/solutionservice/tamdeed-service/With shadows.png"
 
 export default function TamdeedService() {
     const slidesData = [
@@ -77,7 +78,8 @@ export default function TamdeedService() {
                 <Row className="justify-content-center">
                     <Col sm={9} className={"mb-3"}>
                         <div className="card cardstyle">
-                            <Card.Img varient={"top"} className={"iconImg"} src={EngineeringConsultancyServices.icon}></Card.Img>
+                            <Card.Img varient={"top"} className={"iconImg desktopImg"} src={EngineeringConsultancyServices.icon}></Card.Img>
+                            <Card.Img varient={"top"} className={"iconImg mobileImg"} src={icon8}></Card.Img>
                             <div className="card-body">
                                 <h3 className="cardsubtitle">
                                     {EngineeringConsultancyServices.title}

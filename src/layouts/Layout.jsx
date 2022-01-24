@@ -73,8 +73,6 @@ export default function Layout(props) {
       if(location.pathname) {
         console.log(location.pathname)
         setCurrentLink(location.pathname)
-         console.log("===currentLink")
-         console.log(currentLink)
       } 
     }) 
  },[history])

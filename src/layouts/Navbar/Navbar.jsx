@@ -50,11 +50,9 @@ function MainNavbar(props) {
               <LinkContainer to="/contact">
                 <Nav.Link>Contact</Nav.Link>
               </LinkContainer>
-              <NavDropdown title="Media Center" id="collasible-nav-dropdown">
-                <LinkContainer to="/media-center">
-                  <NavDropdown.Item>Media Center</NavDropdown.Item>
-                </LinkContainer>
-              </NavDropdown>
+              <LinkContainer to="/media-center">
+                <Nav.Link>Media Center</Nav.Link>
+              </LinkContainer>
             </Nav>
             <div class="box">
               <div class="container-2">

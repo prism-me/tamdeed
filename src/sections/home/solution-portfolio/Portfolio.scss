@@ -30,7 +30,7 @@
         clip-path: polygon(0 8%, 100% 0%, 100% 84%, 0% 98%);
     }
     .aboutBG{
-        background-image:url("../../../assets/images/backgrounds/portfoliobg.png");
+        // background-image:url("../../../assets/images/backgrounds/portfoliobg.png");
         background-repeat:no-repeat;
         background-position:right;
     }
@@ -87,6 +87,33 @@
 }
 .dataOverVideo {
     position: absolute;
-    top: 25%;
+    top: 20%;
     width: 100%;
+    @media (max-width : 1200px) {
+        top: 15%;
+    }
+    @media (max-width : 1060px) {
+        top: 10%;
+    }
+    @media (max-width : 990px) {
+        top: 10%;
+        position: relative;
+    }
+}
+#background-video {
+    width: 100%;
+    // @media (max-width : 576px) {
+    //     display: none;
+    // }
+    @media (max-width : 990px) {
+        display: none;
+    }
+}
+
+.portfolio-text {
+    @media (max-width : 576px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }

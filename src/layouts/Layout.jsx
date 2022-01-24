@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import BottomTabNavigator from "../components/BottomTabNavigator";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
@@ -59,12 +59,26 @@ export default function Layout(props) {
   const classes = useStyles();
   const [visible, setVisible] = useState(true);
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [currentLink, setCurrentLink] = useState("/");
 
   //.......dropdown code
   const [openDropDown, setOpenDropDown] = useState(false);
   const handleDropClick = () => {
     setOpenDropDown(!openDropDown);
   };
+
+  useEffect(() => {
+    // console.log()
+    return history.listen((location) => {
+      if(location.pathname) {
+        console.log(location.pathname)
+        setCurrentLink(location.pathname)
+         console.log("===currentLink")
+         console.log(currentLink)
+      } 
+    }) 
+ },[history])
+
 
   const toggleDrawer = (open) => {
     setDrawerOpen(open);
@@ -108,9 +122,7 @@ export default function Layout(props) {
                 aria-label="main mailbox folders"
                 className="ListStyle"
               >
-                <ListItem button
-                  selected={true}
-                >
+                <ListItem button >
                   <ListItemText
                     onClick={() => {
                       history.push(`/about`);
@@ -146,12 +158,21 @@ export default function Layout(props) {
                     primary="Contact us"
                   />
                 </ListItem>
-                <ListItem button onClick={handleDropClick}>
+                <ListItem button>
+                  <ListItemText
+                    onClick={() => {
+                      history.push(`/media-center`);
+                      toggleDrawer(false);
+                    }}
+                    primary="Media Center"
+                  />
+                </ListItem>
+                {/* <ListItem button onClick={handleDropClick}>
                   <ListItemText
                     primary="Media Center"
                   />
                   {openDropDown ? <ExpandLess /> : <ExpandMore />}
-                </ListItem>
+                </ListItem> */}
                 <Collapse in={openDropDown} timeout="auto" unmountOnExit>
                   <List component="div" disablePadding>
                     <ListItem button className={classes.nested}>

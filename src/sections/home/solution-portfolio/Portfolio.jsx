@@ -45,9 +45,18 @@ export default function Portfolio() {
             </div>
             <div className={"portfolio"}>
                 <div className="aboutBG">
-                <video id="background-video" loop autoPlay>
-                    <source src={video} type="video/mp4" />
+                <video
+                  id={"background-video"}
+                  autoPlay="autoplay"
+                  loop="loop"
+                  muted
+                >
+                  <source src={video} type="video/mp4" />
+                  {/* <source src="movie.ogg" type="video/ogg"/> */}
                 </video>
+
+                
+                {/* <video id="background-video" src={video}  controls="controls" autoplay="true" loop="true" /> */}
                 <div className="dataOverVideo">
 
                     
@@ -59,12 +68,12 @@ export default function Portfolio() {
                         {
                             slidesData.map((slides, index) => (
                                 <Row key={index} className={"mb-3"}>
-                                    <Col sm={"auto"} className="d-flex justify-content-center align-items-center">
+                                    <Col lg={'auto'} md={3} sm={3} className="d-flex justify-content-center align-items-center">
                                         <span className={"iconBg"}>
                                             <img src={slides.icon} alt="solution" className={"iconImg"} />
                                         </span>
                                     </Col>
-                                    <Col sm={5}>
+                                    <Col lg={5} md={9} sm={9} className="portfolio-text">
                                         <h4 className="portfolioTitle">
                                             {slides.title}
                                         </h4>

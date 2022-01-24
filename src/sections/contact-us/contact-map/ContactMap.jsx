@@ -13,16 +13,15 @@ export default function ContactMap() {
                     width="100%" height="410" style={{ border: "0" }} loading="lazy" />
             </div>
             <div className="d-flex justify-content-center align-items-center my-4">
-                {/* <button className="btnStyle">View Directions <ChevronRightIcon /></button> */}
                 <a className="btnStyle" href="https://www.google.com/maps/dir//Tamdeed+Projects+LLC+7C56%2BF9M+Muhaisnah+-+Muhaisanah+2+-+Dubai/@25.2586732,55.4109627,17z/data=!4m5!4m4!1m0!1m2!1m1!1s0x3e5f63e1e7d144bf:0xddf1a27b45bb430e" target="_blank" style={{textDecoration: 'none'}}>
                     View Directions <ChevronRightIcon />
                 </a>
                 <a href="#" className={"iconstyle"}>
                     <NavigationIcon className="icon" />
                 </a>
-                <a href="#" className={"iconstyle"}>
+                {/* <a href="#" className={"iconstyle"}>
                     <GetAppIcon className="icon" />
-                </a>
+                </a> */}
             </div>
         </div>
     )

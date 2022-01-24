@@ -88,7 +88,7 @@ const Industries = (props) => {
                     arrows={false}
                     showDots={true}
                     swipeable={true}
-                    draggable={false}
+                    draggable={true}
                     ssr={true} // means to render carousel on server-side.
                     infinite={true}
                     autoPlay={true}

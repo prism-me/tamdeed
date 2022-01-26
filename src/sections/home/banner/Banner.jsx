@@ -4,8 +4,9 @@ import { Carousel } from "react-responsive-carousel";
 import homeBanner from "../../../assets//images/banners/homebanner.jpg"
 import { Hidden } from "@material-ui/core"
 
-export default function Banner() {
+export default function Banner(props) {
 
+    const { banner } = props
     const slidesData = [
         {
             title: "Tamdeed Projects",
@@ -40,9 +41,9 @@ export default function Banner() {
                 interval={6000}
             >
                 {
-                    slidesData.map((slides, index) => (
+                    banner && banner.map((slides, index) => (
                         <div className="hero-image"
-                            style={{ backgroundImage: `url(${homeBanner})`, }}
+                            style={{ backgroundImage: `url(${slides.image})`, }}
                             key={index}
                         >
                             <Hidden smDown>

@@ -14,14 +14,14 @@ export default function Values() {
             <div className="aboutBG">
                 <Container>
                     <Row>
-                        <Col sm>
+                        <Col lg={6} md={12} sm={12}>
                             <Row>
-                                <Col sm={"auto"} className="d-flex justify-content-center align-items-center">
+                                <Col lg={3} md={12} sm={12} className="d-flex justify-content-center align-items-center">
                                     <span className={"iconBg"}>
                                         <img src={icon1} alt="solution" className={"iconImg"} />
                                     </span>
                                 </Col>
-                                <Col sm>
+                                <Col lg={9} md={12} sm={12}>
                                     <h4 className="valueTitle">
                                         Our Vision
                                     </h4>
@@ -33,12 +33,12 @@ export default function Values() {
                         </Col>
                         <Col sm>
                             <Row>
-                                <Col sm={"auto"} className="d-flex justify-content-center align-items-center">
+                                <Col lg={3} md={12} sm={12} className="d-flex justify-content-center align-items-center">
                                     <span className={"iconBg"}>
                                         <img src={icon2} alt="solution" className={"iconImg"} />
                                     </span>
                                 </Col>
-                                <Col sm>
+                                <Col lg={9} md={12} sm={12}>
                                     <h4 className="valueTitle">
                                         Our Mission
                                     </h4>

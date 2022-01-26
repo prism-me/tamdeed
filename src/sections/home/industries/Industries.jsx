@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Container } from "react-bootstrap"
@@ -10,8 +10,23 @@ import icon4 from "../../../assets/images/icons/White/Mask Group-4.png"
 import icon5 from "../../../assets/images/icons/White/Mask Group-5.png"
 import icon8 from "../../../assets/images/icons/White/Mask Group-6.png"
 import icon7 from "../../../assets/images/icons/White/Mask Group-7.png"
+import { API } from "../../../http/API";
+
 
 const Industries = (props) => {
+    const [allIndustries, setAllIndustries] = useState([]);
+    useEffect(() => {
+        getAllIndustries()
+    },[])
+
+    const getAllIndustries = () => {
+        API.get(`/industries`, {
+        }).then((response) => {
+            setAllIndustries(response.data.data)
+            console.log("response.data.data",response.data.data)
+        });
+    } 
+
     const responsive = {
         superLargeDesktop: {
             // the naming can be any, depends on you.
@@ -99,7 +114,7 @@ const Industries = (props) => {
                     containerClass="carousel-container"
                 >
                     {
-                        slidesData.map((slides, index) => (
+                        allIndustries && allIndustries.map((slides, index) => (
                             <div className={"carouselmargin container-fluid"}
                                 key={index}
                             >
@@ -107,14 +122,14 @@ const Industries = (props) => {
                                     <div className="card-body">
                                         <div className='d-flex justify-content-center align-items-center'>
                                             <span className={"iconBg"}>
-                                                <img src={slides.icon} alt="solution" className={"iconImg"} />
+                                                <img src={slides.avatar} alt="" className={"iconImg"} />
                                             </span>
                                         </div>
                                         <h3 className="carouselTitle">
-                                            {slides.title}
+                                            {slides.name}
                                         </h3>
                                         <p className="carouselSubTitle">
-                                            {slides.subtitle}
+                                            {slides.description}
                                         </p>
                                     </div>
                                 </div>

@@ -27,6 +27,7 @@
             font-size: 25px;
             font-weight: 400;
             text-align: center;
+            
         }
         .subtitle{
             font-size: 18px;
@@ -61,6 +62,12 @@
         font-size: 25px;
         font-weight: 400;
         text-align: center;
+        @media (max-width: 769px) {
+            min-height: 60px !important;
+        }
+        @media (max-width: 575px) {
+            min-height: 30px !important;
+        }
     }
        .subtitle{
         font-size: 18px;
@@ -72,4 +79,18 @@
         margin-bottom: 1.5rem;
     }
    }
+}
+.content-li {
+    color: white;
+}
+.fixedHeight {
+    min-height: 55px !important;
+    margin-bottom: 1rem !important;
+    
+    @media (max-width : 991px) {
+        min-height: 81px !important;    
+    }
+    @media (max-width: 575px) {
+        min-height: 50px;
+    }
 }

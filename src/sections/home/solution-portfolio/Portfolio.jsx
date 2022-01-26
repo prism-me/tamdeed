@@ -1,44 +1,13 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import icon1 from "../../../assets/images/icons/Color/Mask Group.png"
-import icon2 from "../../../assets/images/icons/Color/Mask Group-1.png"
-import icon3 from "../../../assets/images/icons/Color/Mask Group-2.png"
-import icon4 from "../../../assets/images/icons/Color/Mask Group-3.png"
-import icon5 from "../../../assets/images/icons/Color/Mask Group-4.png"
 import video from "../../../assets/video/Earth Rotaion_Compress.mp4"
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import { LinkContainer } from "react-router-bootstrap";
 import { Nav } from "react-bootstrap";
 
-export default function Portfolio() {
-    const slidesData = [
-        {
-            icon: icon1,
-            title: "Telecom infrastructure",
-            subtitle: "Industry leading Telecom Infrastructure Services."
-        },
-        {
-            icon: icon2,
-            title: "Telecom Networking",
-            subtitle: "Designing value in innovative Telecom & Enterprise Communications Solutions and Services."
-        },
-        {
-            icon: icon3,
-            title: "ELV Systems",
-            subtitle: "Where connectivity, security and access fits in."
-        },
-        {
-            icon: icon4,
-            title: "Cyber Security ",
-            subtitle: "We provide security solutions that is adaptive, context-aware, and synchronized."
-        },
-        {
-            icon: icon5,
-            title: "Data Center",
-            subtitle: "Solutions for Data Center Modernization."
-        }
-    ];
-
+export default function Portfolio(props) {
+    const { portfolio } = props
+    
     return (
         <>
             <div className={"mainBGDIV"}>
@@ -66,11 +35,11 @@ export default function Portfolio() {
                         Sales Solution Portfolio
                     </h3>
                         {
-                            slidesData.map((slides, index) => (
+                            portfolio && portfolio.map((slides, index) => (
                                 <Row key={index} className={"mb-3"}>
                                     <Col lg={'auto'} md={3} sm={3} className="d-flex justify-content-center align-items-center">
                                         <span className={"iconBg"}>
-                                            <img src={slides.icon} alt="solution" className={"iconImg"} />
+                                            <img src={slides.image} alt="solution" className={"iconImg"} />
                                         </span>
                                     </Col>
                                     <Col lg={5} md={9} sm={9} className="portfolio-text">

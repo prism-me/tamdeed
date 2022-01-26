@@ -2,35 +2,28 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import ms1 from "../../../assets/images/solutionservice/ms1.png"
 
-export default function ManagedService() {
+export default function ManagedService(props) {
+    const { managedService } = props
 
     return (
+        managedService &&
         <div className={"managed-service"}>
             <Container>
                 <h3 className={"subtitle"}>
-                    Managed Services
+                    {managedService?.title}
                 </h3>
                 <p className={"Title"}>
-                    Unleash your business potential by leveraging our expert professionals.
+                    {managedService?.sub_title}
                 </p>
                 <Row>
                     <Col sm={7}>
                         <p className="cardsubtitle">
-                            Tamdeed Projects' workforce possesses the necessary expertise and resources to cater in-house to all scales of Telecom and ELV/ICT projects in the UAE and across the region, Managed Services from the ground to the cloud, equipped with the tools, expertise, and delivery framework to provide business-aligned managed solutions
+                            {managedService?.description}
                         </p>
-                        <ul className="cardsubtitle">
-                            <li>Managed Deployment Solutions</li>
-                            <li>Integration Services</li>
-                            <li>Network Monitoring & Management</li>
-                            <li>Managing CPE (Router, Firewall, Edge Devices)</li>
-                            <li>Operation Outsourcing</li>
-                            <li>Network Operation Center Services (Managed NOC)</li>
-                            <li> On Site Technical Services and Staffing</li>
-                            <li>Consultancy & Assessment Services</li>
-                        </ul>
+                        <div className="content" dangerouslySetInnerHTML={{__html: managedService?.bullets}}></div>
                     </Col>
                     <Col sm={5}>
-                        <img src={ms1} alt="solution" className={"iconImg img-fluid"} />
+                        <img src={managedService?.avatar} alt="" className={"iconImg img-fluid"} />
                     </Col>
                 </Row>
             </Container>

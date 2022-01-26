@@ -27,11 +27,17 @@
         color: $texts-color2;
         font-size: 21px;
         font-weight: 400;
+        @media (max-width: 992px) {
+            text-align: center !important;
+        }
     }
     .valuesubtitle{
         font-size: 18px;
         font-weight: 400;
         text-align: justify;
+        @media (max-width: 992px) {
+            text-align: center !important;
+        }
     }
     .iconBg{
         width: 80px;

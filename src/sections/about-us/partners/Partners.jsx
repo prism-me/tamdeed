@@ -98,7 +98,7 @@ export default function Partners() {
                             {
                                 slidesData && slidesData?.map((slides, index) => (
                                     <Col sm={3} xs={6} md={3} lg={3} className={"colmblspace partnerLogoDiv"} key={index}>
-                                        <img src={slides.icon} alt="brand" className={"img-fluid mblImg partnerLogoImg"} />
+                                        <img src={slides.avatar} alt="brand" className={"img-fluid mblImg partnerLogoImg"} />
                                     </Col>
                                 ))
                             }

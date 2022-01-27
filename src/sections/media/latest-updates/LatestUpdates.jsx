@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Col, Container, Row, Card } from "react-bootstrap";
 import img1 from "../../../assets/images/mediaImages/latest-updates/lup1.png"
 import img2 from "../../../assets/images/mediaImages/latest-updates/lup2.png"
@@ -11,9 +11,38 @@ import PaginationItem from '@mui/material/PaginationItem';
 import Stack from '@mui/material/Stack';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
+import { API } from "../../../http/API";
 
 
 export default function LatestUpdates() {
+
+    const [latetUpdates, setLatetUpdates] = useState({data:[],currentPage:0,lastPage:0});
+
+    useEffect(() => {
+        getAllMedia()
+    },[])
+
+    const getAllMedia = () => {
+        let type = "Latest Updates"
+        API.get(`/media-type/Latest Updates`, {
+        }).then((response) => {
+            console.log("response",response.data.message)
+            let data = {...response?.data?.message}
+            setLatetUpdates( { ...latetUpdates, data:data?.data, currentPage: data?.current_page, lastPage: data?.last_page } )
+
+        });
+    }
+    
+    const getMedia = (type, page) => {
+
+        API.get(`/media-type/${type}?page=${page}`, {
+        }).then((response) => {
+            let data = {...response?.data?.message}
+            setLatetUpdates( { ...latetUpdates, data:data?.data, currentPage: data?.current_page, lastPage: data?.last_page } )
+
+        });
+    }
+
     const slidesData = [
         {
             icon: img1,
@@ -32,6 +61,10 @@ export default function LatestUpdates() {
         }
     ];
 
+    const handlePageChange = (type, page) => {
+        getMedia(type, page)
+    }
+
     return (
         <div className={"latestUpdates"}>
             <Container>
@@ -39,47 +72,56 @@ export default function LatestUpdates() {
                     Latest Updates
                 </h3>
                 <Row>
-                    <Col sm={7}>
+                    <Col lg={7} md={12} sm={12}>
                         {
-                            slidesData.map((slides, index) => (
-                                <Row key={index} className={"mb-3 bg-color"}>
-                                    <Col sm={"auto"} className="d-flex justify-content-center align-items-center">
-                                        <img src={slides.icon} alt="solution" className={"iconImg img-fluid"} />
-                                    </Col>
-                                    <Col sm>
-                                        <p className="latestUpdateTitle">
-                                            {slides.title}
-                                        </p>
-                                        <p className="subtitle">
-                                            {slides.subtitle}
-                                        </p>
-                                    </Col>
-                                </Row>
-                            ))
+                            latetUpdates?.data?.map((slides, index) => {
+                                if(index < 3){
+                                    return (
+                                        <Row key={index} className={"mb-3 bg-color"}>
+                                            <Col sm={"auto"} className="d-flex justify-content-center align-items-center">
+                                                <img src={slides.img} alt="solution" className={"iconImg img-fluid"} />
+                                            </Col>
+                                            <Col sm>
+                                                <p className="latestUpdateTitle">
+                                                    {"Today, 2021"}
+                                                </p>
+                                                <p className="subtitle">
+                                                    {slides.short_description}
+                                                </p>
+                                            </Col>
+                                        </Row>
+                                    )
+                                }
+                            })
                         }
                     </Col>
-                    <Col sm>
-                        <Card className={"border-0"}>
-                            <Card.Img variant="top" src={img4} />
-                            <Card.Body className={"bg-color2"}>
-                                <p className="latestUpdateTitle">
-                                    Today, 2021
-                                </p>
-                                <p className="subtitle">
-                                    Tamdeed Projects, an Etisalat Services Holding company – part of Etisalat Group and StarLink - Trusted Cyber & Cloud Advisor, have entered a strategic alliance to collaborate in the Intelligent Automation, Cyber, Cloud and Degital Edge domains by signing an MoU at GITEX Global 2021
-                                </p>
-                                <div className="d-flex justify-content-start align-items-center">
-                                    <button className="btnStyle">Read More<ChevronRightIcon /></button>
-                                </div>
-                            </Card.Body>
-                        </Card>
-                    </Col>
+                    {latetUpdates?.data.length == 4 && 
+                        <Col lg={5} md={12} sm={12} className="rightCard">
+                            <Card className={"border-0"}>
+                                <Card.Img variant="top" src={latetUpdates?.data[3]?.img} />
+                                <Card.Body className={"bg-color2"}>
+                                    <p className="latestUpdateTitle">
+                                        Today, 2021
+                                    </p>
+                                    <p className="subtitle">
+                                        {latetUpdates?.data[3]?.short_description}
+                                        {/* Tamdeed Projects, an Etisalat Services Holding company – part of Etisalat Group and StarLink - Trusted Cyber & Cloud Advisor, have entered a strategic alliance to collaborate in the Intelligent Automation, Cyber, Cloud and Degital Edge domains by signing an MoU at GITEX Global 2021 */}
+                                    </p>
+                                    <div className="d-flex justify-content-start align-items-center">
+                                        <button className="btnStyle">Read More<ChevronRightIcon /></button>
+                                    </div>
+                                </Card.Body>
+                            </Card>
+                        </Col>
+                    }
                 </Row>
                 <div className="d-flex justify-content-center align-items-center mt-4">
                     {/* <Pagination count={5} /> */}
                     <Stack spacing={2}>
                         <Pagination
-                            count={5}
+                            count={latetUpdates.lastPage}
+                            page={latetUpdates.currentPage}
+                            onChange={(e,value) => handlePageChange("Latest Updates",value)}
                             renderItem={(item) => (
                                 <PaginationItem
                                     components={{ previous: ArrowBackIcon, next: ArrowForwardIcon }}

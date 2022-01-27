@@ -4,6 +4,7 @@ import Careers from "../pages/Careers"
 import ContactUs from "../pages/ContactUs"
 import Industries from "../pages/Industries"
 import MediaCenter from "../pages/MediaCenter"
+import MediaInner from "../pages/MediaInner"
 import Insights from "../pages/Insights"
 import SolutionService from "../pages/SolutionService"
 
@@ -61,6 +62,13 @@ export const routes = [
     name: "SolutionService",
     path: "/solution-service",
     component: SolutionService,
+    isPrivate: false,
+    exact: true,
+  },
+  {
+    name: "MediaInner",
+    path: "/media-center/:slug",
+    component: MediaInner,
     isPrivate: false,
     exact: true,
   }

@@ -4,8 +4,45 @@ import mc1 from "../../../assets/images/mediacenter/md1.png"
 import mc2 from "../../../assets/images/mediacenter/md2.png"
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import $ from 'jquery';
+import { API } from "../../../http/API";
 
 export default function MediaCenter() {
+
+    const [inTheNews, setInTheNews] = useState({data:[]});
+    const [hostedEvents, setHostedEvents] = useState({data:[]});
+    const [latetUpdates, setLatetUpdates] = useState({data:[]});
+    const [media, setMedia] = useState();
+
+
+    useEffect(() => {
+        getAllMedia()
+    },[])
+
+    const getAllMedia = () => {
+
+        API.get(`/media-type/Latest Updates`, {
+        }).then((response) => {
+            let data = {...response?.data?.message}
+            setLatetUpdates(data?.data)
+            setMedia(data?.data)
+
+        });
+
+        API.get(`/media-type/In the News`, {
+        }).then((response) => {
+            let data = {...response?.data?.message}
+            setInTheNews(data?.data)
+
+        });
+        
+        API.get(`/media-type/Hosted Events`, {
+        }).then((response) => {
+            let data = {...response?.data?.message}
+            setHostedEvents( data?.data )
+
+        });
+    }
+
 
     $(document).ready(function () {
         $('.btnStyle').click(function () {
@@ -13,6 +50,8 @@ export default function MediaCenter() {
             $(this).addClass("active");
         });
     });
+
+
 
     const slidesData = [
         {
@@ -50,17 +89,17 @@ export default function MediaCenter() {
             <p className={"Title"}>Media Center</p>
             <div className="d-flex justify-content-center align-items-center btnDiv">
                 <button className="btnStyle active"
-                    onClick={() => filterItem('latest-updates')}
+                    onClick={() => setMedia(latetUpdates)}
                 >
                     Latest Updates
                 </button>
                 <button className="btnStyle"
-                    onClick={() => filterItem('hosted-events')}
+                    onClick={() => setMedia(hostedEvents)}
                 >
                     Hosted Events
                 </button>
                 <button className="btnStyle"
-                    onClick={() => filterItem('in-the-news')}
+                    onClick={() => setMedia(inTheNews)}
                 >
                     In the News
                 </button>
@@ -69,16 +108,17 @@ export default function MediaCenter() {
                 <Container>
                     <Row>
                         {
-                            items.map((slides, index) => (
+                            media?.map((slides, index) => (
+                                index < 2 &&
                                 <Col sm={6} key={index} className={"mb-3"}>
                                     <Card className="cardStyle">
-                                        <Card.Img variant="top" src={slides.icon} />
+                                        <Card.Img variant="top" src={slides.img} />
                                         <Card.Body>
                                             <p className="date">
                                                 {slides.date}
                                             </p>
                                             <p className="cardsubtitle">
-                                                {slides.subtitle}
+                                                {slides.short_description}
                                             </p>
                                             <button className="btnStyle">{slides.button}<ChevronRightIcon /></button>
                                         </Card.Body>

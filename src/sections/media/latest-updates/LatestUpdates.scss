@@ -57,3 +57,11 @@
         background-color: $backgroundsColors;
     }
 }
+.rightCard {
+    @media (max-width: 991px) {
+        padding-left: 0px !important;
+    }
+    @media (max-width: 767px) {
+        padding-left: 15px !important;
+    }
+}

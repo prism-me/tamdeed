@@ -70,3 +70,148 @@
         }
     }
 }
+
+.innerpagedescription {
+    color: #344036 !important;
+}
+
+.innerpage {
+    padding-left: 0px !important;
+}
+.innerpageTitle {
+    font-family: 'Neo-Tech-Alt-Regular', sans-serif;
+    font-size: 26px !important;
+    font-weight: 400 !important;
+    line-height: 33px !important;
+    color: #074344 !important;
+}
+.commentSection {
+    border-top: 1px solid rgba(103, 157, 116, 0.31) !important;
+    border-bottom: 1px solid rgba(103, 157, 116, 0.31) !important;
+    padding: 15px 0px !important;
+    // padding-top: 15px !important;
+}
+
+.form-control:focus{
+    border-color: #5AC4CB;
+    box-shadow: 0 0 0 0.1rem #5AC4CB;
+  }
+
+  .submitButton {
+    background: #5AC4CB;
+    border-radius: 56px;
+    color: white;
+    border-color: #5AC4CB !important;
+    width: 20%;
+  }
+  .submitButton:hover {
+    background: #5AC4CB;
+    border-radius: 56px;
+    color: white;
+    border-color: #5AC4CB;
+    box-shadow: 0 0 0 0.1rem #5AC4CB;
+    border-color: #5AC4CB !important;
+  }
+  .submitButton:focus {
+    background: #5AC4CB;
+    border-radius: 56px;
+    color: white;
+    border-color: #5AC4CB;
+    box-shadow: 0 0 0 0.1rem #5AC4CB;
+    border-color: #5AC4CB !important;
+  }
+  #formName,#formBasicEmail {
+    height: 50px;
+  }
+
+  .readArticleLink {
+      color: #0066FF;
+      text-decoration-line: underline;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 20px;
+      width: 50%;
+  }
+  .readArticle {
+    display: flex;
+    align-items: center;
+  }
+
+  .latestUpdateCards {
+    border-top: 1px solid rgba(103, 157, 116, 0.31) !important;
+    padding: 15px 0px !important;
+  }
+
+  .iconsMediaInner {
+    width: 25px;
+    height: 25px;
+    background: #ffffff;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.5rem;
+    a {
+        color: #2C8F8F;
+        display: flex !important;
+    }
+  }
+  .iconsMediaInnerContainer {
+      display: flex;
+      margin: 1rem 0px;
+  }
+  .followUs {
+    margin-bottom: 1rem !important;
+  }
+
+  .rightCardInner {
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+  }
+  .cardMarginInner {
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+    background: white !important;
+    padding: 0px !important;
+  }
+  .readArticleLinkIcons {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .latestUpdateImg {
+      max-width: 169px !important;
+  }
+  .trendingImg {
+      max-width: 145px !important;
+  }
+
+  .innerImageLatestupadates {
+        max-width: 190px !important;
+  }
+  .containerInnerImageLatestupadates {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    @media (max-width: 580px) {
+        padding-top: 15px !important;
+    }
+  }
+
+  .subtitleInner {
+    color: #074344 !important;
+    @media (max-width: 580px) {
+        text-align: center !important;
+    }
+  }
+  .emptyDIv {
+      @media (max-width: 992px) {
+          padding: 30px !important;
+      }
+  }
+  .formSubmitComment {
+      @media (max-width: 480px) {
+          width: 100% !important;
+      }
+  }

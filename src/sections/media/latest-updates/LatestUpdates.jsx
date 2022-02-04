@@ -75,11 +75,11 @@ export default function LatestUpdates() {
                     <Col lg={7} md={12} sm={12}>
                         {
                             latetUpdates?.data?.map((slides, index) => {
-                                if(index < 3){
+                                // if(index < 3){
                                     return (
                                         <Row key={index} className={"mb-3 bg-color"}>
                                             <Col sm={"auto"} className="d-flex justify-content-center align-items-center">
-                                                <img src={slides.img} alt="solution" className={"iconImg img-fluid"} />
+                                                <img src={slides.img} alt="solution" className={"iconImg img-fluid latestUpdateImg"} />
                                             </Col>
                                             <Col sm>
                                                 <p className="latestUpdateTitle">
@@ -91,7 +91,7 @@ export default function LatestUpdates() {
                                             </Col>
                                         </Row>
                                     )
-                                }
+                                // }
                             })
                         }
                     </Col>

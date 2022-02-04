@@ -2,13 +2,15 @@ import React, { useState, useEffect } from "react";
 import { Col, Container, Row, Card } from "react-bootstrap";
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import { API } from "../../../http/API";
+import { useHistory } from "react-router-dom";
 
 export default function News() {
+    const history = useHistory();
     const [inTheNews, setInTheNews] = useState({data:[],currentPage:0,lastPage:0});
     const [hostedEvents, setHostedEvents] = useState({data:[],currentPage:0,lastPage:0});
 
     useEffect(() => {
-        getAllMedia()
+        getAllMedia();
     },[])
 
     const getAllMedia = () => {
@@ -51,6 +53,11 @@ export default function News() {
     const handlePageChange = (type) => {
         getMedia(type)
     }
+    const goToInnerPage = (slug) => {
+        console.log("slug")
+
+        console.log(slug)
+    }
 
     return (
         <div className={"news"}>
@@ -75,7 +82,7 @@ export default function News() {
                                                     {slides.short_description}
                                                 </p>
                                                 <div className="d-flex justify-content-start align-items-center">
-                                                    <button className="cardbtnStyle">Read More<ChevronRightIcon /></button>
+                                                    <button onClick={() => history.push(`/media-center/${slides.slug}`)} className="cardbtnStyle">Read More<ChevronRightIcon /></button>
                                                 </div>
                                             </Card.Body>
                                         </Card>
@@ -95,7 +102,7 @@ export default function News() {
                             hostedEvents?.data?.map((slides, index) => (
                                 <Row key={index} className={"mb-3 bg-color"}>
                                     <Col sm={"auto"} className="d-flex justify-content-center align-items-center">
-                                        <img src={slides.img} alt="solution" className={"iconImg img-fluid"} />
+                                        <img src={slides.img} alt="solution" className={"iconImg img-fluid trendingImg"} />
                                     </Col>
                                     <Col sm>
                                         <p className="subtitle">

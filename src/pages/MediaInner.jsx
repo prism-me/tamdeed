@@ -17,9 +17,6 @@ import Facebook from "@material-ui/icons/Facebook";
 
 class MediaInner extends Component {
 
-
-    
-    
     constructor(props) {
         super(props);
         this.state = {};
@@ -103,7 +100,34 @@ class MediaInner extends Component {
                                 </div>
                                 </div>
                                 <div className="commentSection">
-                                    <Row key={"1"} className={"mb-3 mt-3 pt-3"}>
+                                    { this.state?.currentPage && this.state?.currentPage?.comments?.map((data) => {
+                                        let a = new Date(data.uptated_at);
+                                        console.log(a,"a",data.created_at);
+                                        
+
+                                        return (
+                                            
+                                        <Row key={"1"} className={"mb-3 mt-3 pt-3"}>
+                                            <Col sm={"auto"} className="d-flex justify-content-center align-items-center">
+                                                <img src={elipse} alt="solution" className={"iconImg img-fluid"} />
+                                            </Col>
+                                            <Col sm>
+                                                <p className="latestUpdateTitle innerpageTitle">
+                                                    {data.name}
+                                                </p>
+                                                <p className="latestUpdateTitle innerpagedescription">
+                                                {/* {var ts = new Date();} */}
+                                                {data.created_at}
+                                                </p>
+                                                <p className="subtitle innerpagedescription">
+                                                    {data.comment}
+                                                </p>
+                                            </Col>
+                                        </Row>
+                                        )                                    
+                                    })}
+
+                                    {/* <Row key={"1"} className={"mb-3"}>
                                         <Col sm={"auto"} className="d-flex justify-content-center align-items-center">
                                             <img src={elipse} alt="solution" className={"iconImg img-fluid"} />
                                         </Col>
@@ -118,23 +142,7 @@ class MediaInner extends Component {
                                             Adipiscing nisl habitasse morbi ipsum volutpat. Enim vestibulum, turpis viverra arcu bibendum id odio donec lectus. In est, consequat ullamcorper id bibendum viverra at lobortis praesent. Sodales at.
                                             </p>
                                         </Col>
-                                    </Row>
-                                    <Row key={"1"} className={"mb-3"}>
-                                        <Col sm={"auto"} className="d-flex justify-content-center align-items-center">
-                                            <img src={elipse} alt="solution" className={"iconImg img-fluid"} />
-                                        </Col>
-                                        <Col sm>
-                                            <p className="latestUpdateTitle innerpageTitle">
-                                                {"Rosalina Kelain"}
-                                            </p>
-                                            <p className="latestUpdateTitle innerpagedescription">
-                                                {"Today, 2021"}
-                                            </p>
-                                            <p className="subtitle innerpagedescription">
-                                            Adipiscing nisl habitasse morbi ipsum volutpat. Enim vestibulum, turpis viverra arcu bibendum id odio donec lectus. In est, consequat ullamcorper id bibendum viverra at lobortis praesent. Sodales at.
-                                            </p>
-                                        </Col>
-                                    </Row>
+                                    </Row> */}
                                 </div>
                                 
                                 <div className="">

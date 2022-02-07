@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Container from "@material-ui/core/Container";
 import { Col, Nav, Row, Form, InputGroup } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
@@ -7,9 +7,34 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import Facebook from "@material-ui/icons/Facebook";
+import { API } from "../../http/API"
 
 
 function Footer(props) {
+
+  const [footerContent, setFooterContent] = useState({});
+
+  useEffect(() => {
+    API.get(`/pages`)
+        .then((response) => {
+            // debugger;
+            if (response.status === 200 || response.status === 201) {
+                let currentPage = response.data.data.find((x) => x.slug === "footer");
+
+                API.get(`/all_sections/${currentPage._id}`)
+                    .then((res) => {
+
+                        if(res.data.data.length > 0){
+                          setFooterContent(res.data.data[0]);
+                        }
+                        
+                    })
+                    .catch((err) => console.log(err));
+            }
+        })
+        .catch((err) => console.log(err));
+  }, []);
+
   return (
     <>
       <div className={"footer-Wrape"}>
@@ -33,17 +58,17 @@ function Footer(props) {
                 </h5>
                 <div className="d-flex justify-content-start align-items-center">
                   <span className="socialIcons">
-                    <a href="#">
+                    <a href={footerContent?.content?.facebook} target="_blank">
                       <Facebook className={"iconSize"} />
                     </a>
                   </span>
                   <span className="socialIcons">
-                    <a href="#">
+                    <a href={footerContent?.content?.twitter} target="_blank">
                       <TwitterIcon className={"iconSize"} />
                     </a>
                   </span>
                   <span className="socialIcons">
-                    <a href="#">
+                  <a href={footerContent?.content?.instagram} target="_blank">
                       <InstagramIcon className={"iconSize"} />
                     </a>
                   </span>

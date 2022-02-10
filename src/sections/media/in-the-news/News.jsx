@@ -54,9 +54,6 @@ export default function News() {
         getMedia(type)
     }
     const goToInnerPage = (slug) => {
-        console.log("slug")
-
-        console.log(slug)
     }
 
     return (

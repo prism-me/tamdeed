@@ -71,7 +71,6 @@ export default function Layout(props) {
     // console.log()
     return history.listen((location) => {
       if(location.pathname) {
-        console.log(location.pathname)
         setCurrentLink(location.pathname)
       } 
     }) 

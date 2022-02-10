@@ -3,8 +3,6 @@ import { Col, Container, Row, Card } from "react-bootstrap";
 
 export default function TamdeedService(props) {
     const { services } = props
-    console.log("===services");
-    console.log(services);
     const firstSix = services?.filter((element, index) => { return index < 6 } )
     
     const EngineeringConsultancyServices = {

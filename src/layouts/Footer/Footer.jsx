@@ -7,12 +7,16 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import Facebook from "@material-ui/icons/Facebook";
-import { API } from "../../http/API"
+import { API } from "../../http/API";
+import { Alert } from "react-bootstrap"
 
 
 function Footer(props) {
 
   const [footerContent, setFooterContent] = useState({});
+  const [email, setEmail] = useState("");
+  const [recieveEmail, setRecieveEmail] = useState(false);
+  const [alertData, setAlertData] = useState({varient:"success",alertText:"",show:false});
 
   useEffect(() => {
     API.get(`/pages`)
@@ -34,6 +38,35 @@ function Footer(props) {
         })
         .catch((err) => console.log(err));
   }, []);
+
+  const sendEmail = () => {
+    if(!email.match(
+      /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    )){
+      setAlertData({varient:"danger",alertText:"valid Email is required",show: true})
+      return false;
+    }
+
+    let data = {
+      email:email
+    }
+
+    if(!recieveEmail){
+      setAlertData({varient:"danger",show: true,alertText:"Aagree to receive emails first"})
+      return false;
+    }
+    
+    API.post('/query',data)
+    .then((res) => {
+      setAlertData({varient:"success",show: true,alertText:"Email Recieved Successfully",permission:false})
+    })
+    .catch((err) => console.log(err));
+  }
+
+  const handleChange = (e) => {
+    setRecieveEmail(e.target.checked)
+    // do whatever you want with isChecked value
+  }
 
   return (
     <>
@@ -130,7 +163,7 @@ function Footer(props) {
                 <Form>
                   <Form.Group controlId="formBasicmail">
                     <InputGroup>
-                      <Form.Control type="email"
+                      <Form.Control type="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)}
                         // placeholder="Type Your Email"
                         style={{
                           background: "#FFFFFF",
@@ -145,8 +178,9 @@ function Footer(props) {
                             borderRadius: "0px 6px 6px 0px",
                             border: "0",
                             color: "#FFFFFF",
-                            cursor: "pointer"
+                            cursor: "pointer",
                           }}
+                          onClick={sendEmail}
                         >
                           Send
                         </InputGroup.Text>
@@ -154,9 +188,12 @@ function Footer(props) {
                     </InputGroup>
                   </Form.Group>
                   <Form.Group controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="I agree to receive emails from Tamdeed" />
+                    <Form.Check type="checkbox" label="I agree to receive emails from Tamdeed" onChange={handleChange} />
                   </Form.Group>
                 </Form>
+                <Alert variant={alertData.varient} show={alertData.show} onClose={() => setAlertData({...alertData,show:false})} dismissible>
+                    {alertData.alertText}
+                </Alert>
               </Col>
             </Row>
           </Container>

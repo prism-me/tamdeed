@@ -28,8 +28,6 @@ class HomePage extends Component {
                         .then((res) => {
                             let content = res.data.data[0].content;
                             this.setState({ content });
-                            console.log("===content=== home")
-                            console.log(content)
                         })
                         .catch((err) => console.log(err));
                 }

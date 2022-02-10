@@ -82,7 +82,6 @@ const Login = (props) => {
   };
   //Facebook Login
   const responseFacebook = (response) => {
-    console.log("Response from Facebook login", response);
   };
 
   return (

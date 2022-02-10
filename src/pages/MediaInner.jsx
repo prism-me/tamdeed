@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Banner from "../sections/media/media-banner/MediaBanner";
-import { Col, Container, Row, Card,Form,Button } from "react-bootstrap";
+import { Col, Container, Row, Card,Form,Button, Alert } from "react-bootstrap";
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 // import Pagination from '@material-ui/lab/Pagination';
 import Pagination from '@mui/material/Pagination';
@@ -14,21 +14,43 @@ import elipse from "../assets/images/mediaImages/Ellipse 109.png"
 import TwitterIcon from '@material-ui/icons/Twitter';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import Facebook from "@material-ui/icons/Facebook";
+import { get } from "jquery";
 
 class MediaInner extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+            setShow:false,
+            varient:"",
+            alertText:"",
+            comment: {
+                name:"",
+                email:"",
+                comment:"",
+                post_id:0,
+                comment_id:""
+            }
+        };
     }
     componentDidMount() { 
         this.getAllPartners();
      }
 
      getAllPartners = () => {
+        
+        this.getNews()
+
+        API.get(`/media-type/Latest Updates`, {
+        }).then((response) => {
+            console.log("response",response.data.message)
+            let data = {...response?.data?.message}
+            this.setState({latetUpdates: data})
+        });
+    }
+
+    getNews = () => {
         const slug = this.props.match.params.slug;
-        console.log(slug)
-        console.log("slug")
         API.get(`/news`)
             .then((response) => {
                 // debugger;
@@ -41,14 +63,49 @@ class MediaInner extends Component {
                     
                 }
             })
-            .catch((err) => console.log(err));
+        .catch((err) => console.log(err));
+    }
 
-            API.get(`/media-type/Latest Updates`, {
-            }).then((response) => {
-                console.log("response",response.data.message)
-                let data = {...response?.data?.message}
-                this.setState({latetUpdates: data})
-            });
+    handleValueChange = (e) => {
+        let updatedData = { ...this.state.comment };
+        console.log("this.state.comment",e.target.value,e.target.name)
+        updatedData[e.target.name] = e.target.value;
+        this.setState({comment:updatedData})
+    }
+
+    handleSubmit = () => {
+
+        let updatedData = { ...this.state.comment };
+        
+        if(!updatedData.comment){
+            this.setState({setShow:true,variant:"danger",alertText:"Comment is required"})
+            return false;
+        }
+        if(!updatedData.name){
+            this.setState({setShow:true,variant:"danger",alertText:"name is required"})
+            return false;
+        }
+        if(!updatedData.email.match(
+            /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+          )){
+            this.setState({setShow:true,variant:"danger",alertText:"A valid Email is required"})
+            return false;
+          }
+        // if(!updatedData.email){
+        //     this.setState({setShow:true,variant:"danger",alertText:"email is required"})
+        //     return false;
+        // }
+        
+        updatedData.post_id = this.state.currentPage._id
+
+        API.post(`/comments`, updatedData).then((response) => {
+            console.log("response",response.data.message)
+            this.setState({variant:"success",alertText:"Comment added successfully",setShow:true})
+            // let comments = this.state?.currentPage?.comments
+            // comments.push(this.state.comment)
+            // this.setState({...this.state.currentPage,comments})
+            this.getNews()
+        });
     }
 
     render() {
@@ -76,9 +133,9 @@ class MediaInner extends Component {
                                 </Card>
                                 <div className="readArticle">
                                 <div className="readArticleLink">
-                                    <a href={this.state.currentPage?.link}>Read the article in published platform </a>
+                                    {this.state.currentPage?.link && <a href={this.state.currentPage?.link}>Read the article in published platform </a>}
                                 </div>
-                                <div className="readArticleLinkIcons">
+                                {/* <div className="readArticleLinkIcons">
                                     <div className="shareArticle">Share this article</div>
                                     <div className="iconsMediaInnerContainer">
                                             <span className="socialIcons iconsMediaInner">
@@ -97,54 +154,32 @@ class MediaInner extends Component {
                                                 </a>
                                             </span>
                                     </div>
+                                </div> */}
                                 </div>
-                                </div>
-                                <div className="commentSection">
-                                    { this.state?.currentPage && this.state?.currentPage?.comments?.map((data) => {
-                                        let a = new Date(data.uptated_at);
-                                        console.log(a,"a",data.created_at);
-                                        
-
-                                        return (
-                                            
-                                        <Row key={"1"} className={"mb-3 mt-3 pt-3"}>
-                                            <Col sm={"auto"} className="d-flex justify-content-center align-items-center">
-                                                <img src={elipse} alt="solution" className={"iconImg img-fluid"} />
-                                            </Col>
-                                            <Col sm>
-                                                <p className="latestUpdateTitle innerpageTitle">
-                                                    {data.name}
-                                                </p>
-                                                <p className="latestUpdateTitle innerpagedescription">
-                                                {/* {var ts = new Date();} */}
-                                                {data.created_at}
-                                                </p>
-                                                <p className="subtitle innerpagedescription">
-                                                    {data.comment}
-                                                </p>
-                                            </Col>
-                                        </Row>
-                                        )                                    
-                                    })}
-
-                                    {/* <Row key={"1"} className={"mb-3"}>
-                                        <Col sm={"auto"} className="d-flex justify-content-center align-items-center">
-                                            <img src={elipse} alt="solution" className={"iconImg img-fluid"} />
-                                        </Col>
-                                        <Col sm>
-                                            <p className="latestUpdateTitle innerpageTitle">
-                                                {"Rosalina Kelain"}
-                                            </p>
-                                            <p className="latestUpdateTitle innerpagedescription">
-                                                {"Today, 2021"}
-                                            </p>
-                                            <p className="subtitle innerpagedescription">
-                                            Adipiscing nisl habitasse morbi ipsum volutpat. Enim vestibulum, turpis viverra arcu bibendum id odio donec lectus. In est, consequat ullamcorper id bibendum viverra at lobortis praesent. Sodales at.
-                                            </p>
-                                        </Col>
-                                    </Row> */}
-                                </div>
-                                
+                                { this.state?.currentPage?.comments.length > 0 && 
+                                    <div className="commentSection">
+                                        { this.state?.currentPage && this.state?.currentPage?.comments?.map((data, index) => {
+                                            return (
+                                                <Row key={index} className={"mb-3 mt-3 pt-3"}>
+                                                    <Col sm={"auto"} className="d-flex justify-content-center align-items-center">
+                                                        <img src={elipse} alt="solution" className={"iconImg img-fluid"} />
+                                                    </Col>
+                                                    <Col sm>
+                                                        <p className="latestUpdateTitle innerpageTitle">
+                                                            {data.name}
+                                                        </p>
+                                                        <p className="latestUpdateTitle innerpagedescription">
+                                                        {new Date(data.created_at).toLocaleDateString()}
+                                                        </p>
+                                                        <p className="subtitle innerpagedescription">
+                                                            {data.comment}
+                                                        </p>
+                                                    </Col>
+                                                </Row>
+                                            )                                    
+                                        })}
+                                    </div>
+                                }
                                 <div className="">
                                     
                                     <Row key={"1"} className={"mb-3 mt-3 pt-3"}>
@@ -156,17 +191,31 @@ class MediaInner extends Component {
                                                     as="textarea"
                                                     placeholder="Leave a comment here"
                                                     style={{ height: '150px' }}
+                                                    value={this.state.comment.comment} name="comment"
+                                                    onChange={(e) => this.handleValueChange(e)}
                                                 />
                                                 </Form.Group>
                                                 <Form.Group className="mb-3" controlId="formName">
-                                                    <Form.Control type="textArea" placeholder="Enter Name" />
+                                                    <Form.Control type="text" value={this.state.comment.name} name="name" onChange={(e) => this.handleValueChange(e)} placeholder="Enter Name" />
                                                 </Form.Group>
                                                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                                                    <Form.Control type="email" placeholder="Enter email" />
+                                                    <Form.Control type="email" name="email" value={this.state.comment.email} onChange={(e) => this.handleValueChange(e)} placeholder="Enter email" />
                                                 </Form.Group>
-                                                <Button className="submitButton formSubmitComment" type="submit">
-                                                    Submit
-                                                </Button>
+                                                {
+                                                    this.state.setShow ?
+                                                        <Alert variant={this.state.variant} show={this.state.setShow} onClose={() => {
+                                                            this.setState({setShow:false});
+                                                            }
+                                                        } dismissible>
+                                                            {this.state.alertText}
+                                                        </Alert>
+                                                        :
+                                                        <Button className="submitButton formSubmitComment" type="button" onClick={this.handleSubmit}>
+                                                            Submit
+                                                        </Button>
+
+                                                }
+                                                
                                             </Form>
                                         </Col>
                                     </Row>

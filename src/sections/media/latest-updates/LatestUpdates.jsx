@@ -23,10 +23,8 @@ export default function LatestUpdates() {
     },[])
 
     const getAllMedia = () => {
-        let type = "Latest Updates"
         API.get(`/media-type/Latest Updates`, {
         }).then((response) => {
-            console.log("response",response.data.message)
             let data = {...response?.data?.message}
             setLatetUpdates( { ...latetUpdates, data:data?.data, currentPage: data?.current_page, lastPage: data?.last_page } )
 

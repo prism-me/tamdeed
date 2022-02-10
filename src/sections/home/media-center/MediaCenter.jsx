@@ -5,9 +5,11 @@ import mc2 from "../../../assets/images/mediacenter/md2.png"
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import $ from 'jquery';
 import { API } from "../../../http/API";
+import { useHistory } from "react-router-dom";
 
 export default function MediaCenter() {
 
+    const history = useHistory();
     const [inTheNews, setInTheNews] = useState({data:[]});
     const [hostedEvents, setHostedEvents] = useState({data:[]});
     const [latetUpdates, setLatetUpdates] = useState({data:[]});
@@ -120,7 +122,7 @@ export default function MediaCenter() {
                                             <p className="cardsubtitle">
                                                 {slides.short_description}
                                             </p>
-                                            <button className="btnStyle">{slides.button}<ChevronRightIcon /></button>
+                                            <button className="btnStyle" onClick={() => history.push(`/media-center/${slides.slug}`)} >Read more<ChevronRightIcon /></button>
                                         </Card.Body>
                                     </Card>
                                 </Col>

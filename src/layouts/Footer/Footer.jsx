@@ -59,6 +59,7 @@ function Footer(props) {
     API.post('/query',data)
     .then((res) => {
       setAlertData({varient:"success",show: true,alertText:"Email Recieved Successfully",permission:false})
+      setEmail("");
     })
     .catch((err) => console.log(err));
   }

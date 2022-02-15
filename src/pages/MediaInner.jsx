@@ -43,7 +43,6 @@ class MediaInner extends Component {
 
         API.get(`/media-type/Latest Updates`, {
         }).then((response) => {
-            console.log("response",response.data.message)
             let data = {...response?.data?.message}
             this.setState({latetUpdates: data})
         });
@@ -57,8 +56,6 @@ class MediaInner extends Component {
                 if (response.status === 200 || response.status === 201) {
 
                     let currentPage = response.data.data.find((x) => x.slug == slug);
-                    console.log("===response.data.data",slug,currentPage );
-                    // console.log(response.data.data);
                     this.setState({currentPage})
                     
                 }
@@ -68,7 +65,6 @@ class MediaInner extends Component {
 
     handleValueChange = (e) => {
         let updatedData = { ...this.state.comment };
-        console.log("this.state.comment",e.target.value,e.target.name)
         updatedData[e.target.name] = e.target.value;
         this.setState({comment:updatedData})
     }
@@ -99,7 +95,6 @@ class MediaInner extends Component {
         updatedData.post_id = this.state.currentPage._id
 
         API.post(`/comments`, updatedData).then((response) => {
-            console.log("response",response.data.message)
             this.setState({variant:"success",alertText:"Comment added successfully",setShow:true})
             // let comments = this.state?.currentPage?.comments
             // comments.push(this.state.comment)

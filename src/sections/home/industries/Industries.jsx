@@ -23,7 +23,6 @@ const Industries = (props) => {
         API.get(`/industries`, {
         }).then((response) => {
             setAllIndustries(response.data.data)
-            console.log("response.data.data",response.data.data)
         });
     } 
 

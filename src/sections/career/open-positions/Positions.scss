@@ -1,48 +1,96 @@
-.positions{
+.positions {
     margin: 3rem 0;
+
     @media #{$sm} {
         margin: 2rem 0;
     }
-    .title{
-        color: $texts-color2;
-        font-size: 25px;
-        font-weight: 400;
+
+    .title {
+        color        : $texts-color2;
+        font-size    : 25px;
+        font-weight  : 400;
         margin-bottom: 2rem;
-        text-align: center;
+        text-align   : center;
     }
-    .positionDiv{
-        background: $backgroundsColors;
-        padding: 3rem 0;
-        margin: 0 15rem;
-        box-shadow: 0px 8px 21px rgba(0, 0, 0, 0.15);
+
+    .positionDiv {
+        background   : $backgroundsColors;
+        padding      : 3rem 0;
+        margin       : 0 15rem;
+        box-shadow   : 0px 8px 21px rgba(0, 0, 0, 0.15);
         border-radius: 6px;
+
         @media #{$sm} {
             margin: 0;
         }
+
         @media #{$md} {
             margin: 0 2rem;
         }
+
         @media #{$lg} {
             margin: 0 9rem;
         }
-        .subtitle{
-            color: $white;
-            font-size: 18px;
+
+        .subtitle {
+            color      : $white;
+            font-size  : 18px;
             font-weight: 400;
-            text-align: center;
-            margin-top: 1rem;
+            text-align : center;
+            margin-top : 1rem;
         }
-        .iconBg{
-            width: 80px;
-            height: 80px;
-            background: $white;
-            display: flex;
+
+        .iconBg {
+            width          : 80px;
+            height         : 80px;
+            background     : $white;
+            display        : flex;
             justify-content: center;
-            align-items: center;
-            border-radius: 100%;
-            .iconImg{
+            align-items    : center;
+            border-radius  : 100%;
+
+            .iconImg {
                 width: 45%;
             }
+        }
+    }
+
+    & .allJobs {
+        & .positionDiv {
+            margin    : 1rem 0 !important;
+            padding   : 3rem 1rem;
+            min-height: 375px;
+
+            & .job_description {
+                color      : #fff;
+                text-align : center;
+                font-weight: 300;
+            }
+
+            & a {
+                position            : absolute;
+                bottom              : 3rem;
+                left                : 0;
+                right               : 0;
+                margin              : 0 auto;
+                text-align          : center;
+                color               : #fff;
+                text-decoration-line: underline;
+            }
+        }
+
+        & button.load-more {
+            border          : 1px solid #2C8F8F;
+            margin          : 3rem auto 0 auto;
+            width           : 158px;
+            height          : 32px;
+            box-sizing      : border-box;
+            border-radius   : 56px;
+            background-color: transparent;
+            color           : #2C8F8F;
+            font-weight     : 300;
+            font-size       : 15px;
+            line-height     : 19px;
         }
     }
 }

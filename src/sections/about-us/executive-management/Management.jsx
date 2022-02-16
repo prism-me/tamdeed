@@ -46,10 +46,10 @@ export default function Management(props) {
                                 {/* “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat” */}
                             </p>
                             <p className="subtitle1">
-                                ~ {executiveManagement[0]?.name}
+                                ~ {executiveManagement[1]?.name}
                             </p>
                             <p className="subtitle2">
-                                <small>{executiveManagement[0]?.designation}</small>
+                                <small>{executiveManagement[1]?.designation}</small>
                             </p>
                         </Col>
                     </Row>

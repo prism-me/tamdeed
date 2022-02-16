@@ -191,10 +191,10 @@ class MediaInner extends Component {
                                                 />
                                                 </Form.Group>
                                                 <Form.Group className="mb-3" controlId="formName">
-                                                    <Form.Control type="text" value={this.state.comment.name} name="name" onChange={(e) => this.handleValueChange(e)} placeholder="Enter Name" />
+                                                    <Form.Control type="text" value={this.state.comment.name} name="name" onChange={(e) => this.handleValueChange(e)} placeholder="Enter your Name" />
                                                 </Form.Group>
                                                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                                                    <Form.Control type="email" name="email" value={this.state.comment.email} onChange={(e) => this.handleValueChange(e)} placeholder="Enter email" />
+                                                    <Form.Control type="email" name="email" value={this.state.comment.email} onChange={(e) => this.handleValueChange(e)} placeholder="Enter your email" />
                                                 </Form.Group>
                                                 {
                                                     this.state.setShow ?

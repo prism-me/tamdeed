@@ -12,10 +12,11 @@ import Stack from '@mui/material/Stack';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import { API } from "../../../http/API";
+import { useHistory } from "react-router-dom";
 
 
 export default function LatestUpdates() {
-
+    const history = useHistory();
     const [latetUpdates, setLatetUpdates] = useState({data:[],currentPage:0,lastPage:0});
 
     useEffect(() => {
@@ -75,7 +76,7 @@ export default function LatestUpdates() {
                             latetUpdates?.data?.map((slides, index) => {
                                 // if(index < 3){
                                     return (
-                                        <Row key={index} className={"mb-3 bg-color"}>
+                                        <Row key={index} className={"mb-3 bg-color"} onClick={() => history.push(`/media-center/${slides.slug}`)} style={{cursor:"pointer"}}>
                                             <Col sm={"auto"} className="d-flex justify-content-center align-items-center">
                                                 <img src={slides.img} alt="solution" className={"iconImg img-fluid latestUpdateImg"} />
                                             </Col>
@@ -106,7 +107,7 @@ export default function LatestUpdates() {
                                         {/* Tamdeed Projects, an Etisalat Services Holding company – part of Etisalat Group and StarLink - Trusted Cyber & Cloud Advisor, have entered a strategic alliance to collaborate in the Intelligent Automation, Cyber, Cloud and Degital Edge domains by signing an MoU at GITEX Global 2021 */}
                                     </p>
                                     <div className="d-flex justify-content-start align-items-center">
-                                        <button className="btnStyle">Read More<ChevronRightIcon /></button>
+                                        <button className="btnStyle" onClick={() => history.push(`/media-center/${latetUpdates?.data[3]?.slug}`)} style={{cursor:"pointer"}}>Read More<ChevronRightIcon /></button>
                                     </div>
                                 </Card.Body>
                             </Card>

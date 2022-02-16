@@ -97,7 +97,7 @@ export default function News() {
                         </h3>
                         {
                             hostedEvents?.data?.map((slides, index) => (
-                                <Row key={index} className={"mb-3 bg-color"}>
+                                <Row key={index} className={"mb-3 bg-color"} onClick={() => history.push(`/media-center/${slides.slug}`)} style={{cursor:"pointer"}}>
                                     <Col sm={"auto"} className="d-flex justify-content-center align-items-center">
                                         <img src={slides.img} alt="solution" className={"iconImg img-fluid trendingImg"} />
                                     </Col>

@@ -1,50 +1,43 @@
 import React, { Component } from "react";
 import Banner from "../sections/media/media-banner/MediaBanner";
-import { Col, Container, Row, Card,Form,Button, Alert } from "react-bootstrap";
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import { Col, Container, Row, Card, Form, Button, Alert } from "react-bootstrap";
 // import Pagination from '@material-ui/lab/Pagination';
-import Pagination from '@mui/material/Pagination';
-import PaginationItem from '@mui/material/PaginationItem';
-import Stack from '@mui/material/Stack';
-import ArrowBackIcon from '@material-ui/icons/ArrowBack';
-import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import { API } from "../../src/http/API";
-import ind from "../assets/images/mediaImages/testinner.png"
 import elipse from "../assets/images/mediaImages/Ellipse 109.png"
 import TwitterIcon from '@material-ui/icons/Twitter';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import Facebook from "@material-ui/icons/Facebook";
-import { get } from "jquery";
+import { useHistory } from "react-router-dom";
 
 class MediaInner extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            setShow:false,
-            varient:"",
-            alertText:"",
+            setShow: false,
+            varient: "",
+            alertText: "",
             comment: {
-                name:"",
-                email:"",
-                comment:"",
-                post_id:0,
-                comment_id:""
+                name: "",
+                email: "",
+                comment: "",
+                post_id: 0,
+                comment_id: ""
             }
         };
     }
-    componentDidMount() { 
+    componentDidMount() {
         this.getAllPartners();
-     }
+    }
 
-     getAllPartners = () => {
-        
+    getAllPartners = () => {
+
         this.getNews()
 
         API.get(`/media-type/Latest Updates`, {
         }).then((response) => {
-            let data = {...response?.data?.message}
-            this.setState({latetUpdates: data})
+            let data = { ...response?.data?.message }
+            this.setState({ latetUpdates: data })
         });
     }
 
@@ -56,46 +49,46 @@ class MediaInner extends Component {
                 if (response.status === 200 || response.status === 201) {
 
                     let currentPage = response.data.data.find((x) => x.slug == slug);
-                    this.setState({currentPage})
-                    
+                    this.setState({ currentPage })
+
                 }
             })
-        .catch((err) => console.log(err));
+            .catch((err) => console.log(err));
     }
 
     handleValueChange = (e) => {
         let updatedData = { ...this.state.comment };
         updatedData[e.target.name] = e.target.value;
-        this.setState({comment:updatedData})
+        this.setState({ comment: updatedData })
     }
 
     handleSubmit = () => {
 
         let updatedData = { ...this.state.comment };
-        
-        if(!updatedData.comment){
-            this.setState({setShow:true,variant:"danger",alertText:"Comment is required"})
+
+        if (!updatedData.comment) {
+            this.setState({ setShow: true, variant: "danger", alertText: "Comment is required" })
             return false;
         }
-        if(!updatedData.name){
-            this.setState({setShow:true,variant:"danger",alertText:"name is required"})
+        if (!updatedData.name) {
+            this.setState({ setShow: true, variant: "danger", alertText: "name is required" })
             return false;
         }
-        if(!updatedData.email.match(
+        if (!updatedData.email.match(
             /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-          )){
-            this.setState({setShow:true,variant:"danger",alertText:"A valid Email is required"})
+        )) {
+            this.setState({ setShow: true, variant: "danger", alertText: "A valid Email is required" })
             return false;
-          }
+        }
         // if(!updatedData.email){
         //     this.setState({setShow:true,variant:"danger",alertText:"email is required"})
         //     return false;
         // }
-        
+
         updatedData.post_id = this.state.currentPage._id
 
         API.post(`/comments`, updatedData).then((response) => {
-            this.setState({variant:"success",alertText:"Comment added successfully",setShow:true})
+            this.setState({ variant: "success", alertText: "Comment added successfully", setShow: true })
             // let comments = this.state?.currentPage?.comments
             // comments.push(this.state.comment)
             // this.setState({...this.state.currentPage,comments})
@@ -118,8 +111,8 @@ class MediaInner extends Component {
                                             {this.state.currentPage?.name}
                                         </p>
                                         <p className="subtitle innerpagedescription">
-                                            
-                                        {this.state.currentPage?.long_description}
+
+                                            {this.state.currentPage?.long_description}
                                         </p>
                                         {/* <div className="d-flex justify-content-start align-items-center">
                                             <button className="btnStyle">Read More aaaaa<ChevronRightIcon /></button>
@@ -127,10 +120,10 @@ class MediaInner extends Component {
                                     </Card.Body>
                                 </Card>
                                 <div className="readArticle">
-                                <div className="readArticleLink">
-                                    {this.state.currentPage?.link && <a href={this.state.currentPage?.link}>Read the article in published platform </a>}
-                                </div>
-                                {/* <div className="readArticleLinkIcons">
+                                    <div className="readArticleLink">
+                                        {this.state.currentPage?.link && <a href={this.state.currentPage?.link}>Read the article in published platform </a>}
+                                    </div>
+                                    {/* <div className="readArticleLinkIcons">
                                     <div className="shareArticle">Share this article</div>
                                     <div className="iconsMediaInnerContainer">
                                             <span className="socialIcons iconsMediaInner">
@@ -151,9 +144,9 @@ class MediaInner extends Component {
                                     </div>
                                 </div> */}
                                 </div>
-                                { this.state?.currentPage?.comments.length > 0 && 
+                                {this.state?.currentPage?.comments.length > 0 &&
                                     <div className="commentSection">
-                                        { this.state?.currentPage && this.state?.currentPage?.comments?.map((data, index) => {
+                                        {this.state?.currentPage && this.state?.currentPage?.comments?.map((data, index) => {
                                             return (
                                                 <Row key={index} className={"mb-3 mt-3 pt-3"}>
                                                     <Col sm={"auto"} className="d-flex justify-content-center align-items-center">
@@ -164,31 +157,31 @@ class MediaInner extends Component {
                                                             {data.name}
                                                         </p>
                                                         <p className="latestUpdateTitle innerpagedescription">
-                                                        {new Date(data.created_at).toLocaleDateString()}
+                                                            {new Date(data.created_at).toLocaleDateString()}
                                                         </p>
                                                         <p className="subtitle innerpagedescription">
                                                             {data.comment}
                                                         </p>
                                                     </Col>
                                                 </Row>
-                                            )                                    
+                                            )
                                         })}
                                     </div>
                                 }
                                 <div className="">
-                                    
+
                                     <Row key={"1"} className={"mb-3 mt-3 pt-3"}>
-                                        
+
                                         <Col sm>
                                             <Form>
                                                 <Form.Group className="mb-3" controlId="formComment">
-                                                <Form.Control
-                                                    as="textarea"
-                                                    placeholder="Leave a comment here"
-                                                    style={{ height: '150px' }}
-                                                    value={this.state.comment.comment} name="comment"
-                                                    onChange={(e) => this.handleValueChange(e)}
-                                                />
+                                                    <Form.Control
+                                                        as="textarea"
+                                                        placeholder="Leave a comment here"
+                                                        style={{ height: '150px' }}
+                                                        value={this.state.comment.comment} name="comment"
+                                                        onChange={(e) => this.handleValueChange(e)}
+                                                    />
                                                 </Form.Group>
                                                 <Form.Group className="mb-3" controlId="formName">
                                                     <Form.Control type="text" value={this.state.comment.name} name="name" onChange={(e) => this.handleValueChange(e)} placeholder="Enter your Name" />
@@ -199,8 +192,8 @@ class MediaInner extends Component {
                                                 {
                                                     this.state.setShow ?
                                                         <Alert variant={this.state.variant} show={this.state.setShow} onClose={() => {
-                                                            this.setState({setShow:false});
-                                                            }
+                                                            this.setState({ setShow: false });
+                                                        }
                                                         } dismissible>
                                                             {this.state.alertText}
                                                         </Alert>
@@ -210,14 +203,14 @@ class MediaInner extends Component {
                                                         </Button>
 
                                                 }
-                                                
+
                                             </Form>
                                         </Col>
                                     </Row>
                                 </div>
                             </Col>
                             <Col lg={1} md={0} sm={0} className="rightCard rightCardInner emptyDIv"></Col>
-                             
+
                             <Col lg={5} md={12} sm={12} className="rightCard rightCardInner">
                                 <div>
                                     {/* <div className={"title followUs"}>Follow Us</div> */}
@@ -227,27 +220,33 @@ class MediaInner extends Component {
                                     <div className="iconsMediaInnerContainer">
                                         <span className="socialIcons iconsMediaInner">
                                             <a href="#">
-                                            <Facebook className={"iconSize"} />
+                                                <Facebook className={"iconSize"} />
                                             </a>
                                         </span>
                                         <span className="socialIcons iconsMediaInner">
                                             <a href="#">
-                                            <TwitterIcon className={"iconSize"} />
+                                                <TwitterIcon className={"iconSize"} />
                                             </a>
                                         </span>
                                         <span className="socialIcons iconsMediaInner">
                                             <a href="#">
-                                            <InstagramIcon className={"iconSize"} />
+                                                <InstagramIcon className={"iconSize"} />
                                             </a>
                                         </span>
                                     </div>
                                 </div>
                                 <h3 className={"title latestUpdateCards"}>
-                                Our Latest Articles
+                                    Our Latest Articles
                                 </h3>
                                 {
+                                    // onClick={() => history.push(`/media-center/${slides.slug}`)}
                                     this.state.latetUpdates?.data?.map((slides, index) => (
-                                        <Row key={index} className={"mb-3 bg-color cardMarginInner"}>
+                                        <Row 
+                                        key={index} 
+                                        className={"mb-3 bg-color cardMarginInner"} 
+                                        onClick={() => { window.location.href = `/media-center/${slides.slug}` }} 
+                                        style={{cursor: "pointer"}}
+                                        >
                                             <Col sm={"auto"} className="d-flex justify-content-center align-items-center containerInnerImageLatestupadates">
                                                 <img src={slides.img} alt="solution" className={"iconImg img-fluid innerImageLatestupadates"} />
                                             </Col>
@@ -260,7 +259,7 @@ class MediaInner extends Component {
                                     ))
                                 }
                             </Col>
-                            
+
                         </Row>
                     </Container>
                 </div>

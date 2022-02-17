@@ -26,7 +26,7 @@ export default function Positions() {
     }
 
     return (
-        <div className={"positions"}>
+        <div className={"positions"} id="open_positions">
             <h3 className={"title"}>
                 Open Positions
             </h3>
@@ -56,7 +56,7 @@ export default function Positions() {
                                         </div>
                                         <p className={"subtitle"}>{item.designation}</p>
                                         <p className={"job_description"}>{item.decription}</p>
-                                        <a href="mailto:info@tamdeed.ae" >ApplyNow</a>
+                                        <a href="mailto:info@tamdeed.ae" >Apply Now</a>
                                     </div>
                                 </Col>
                             ))}

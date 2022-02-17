@@ -2,6 +2,7 @@ import React from "react";
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import { LinkContainer } from "react-router-bootstrap";
 import { Nav } from "react-bootstrap";
+import { Link } from 'react-scroll'
 
 export default function JoinTeam() {
 
@@ -18,11 +19,9 @@ export default function JoinTeam() {
             </p>
             <div className="d-flex justify-content-center align-items-center">
                 {/* <button className="btnStyle">View open roles <ChevronRightIcon /></button> */}
-                <LinkContainer to="/career">
-                    <Nav.Link className="btnStyle">
-                        View open roles <ChevronRightIcon />
-                    </Nav.Link>
-                  </LinkContainer>
+                <Link className="btnStyle" to="open_positions" spy={true} smooth={true}>
+                    View open roles <ChevronRightIcon />
+                </Link>
             </div>
         </div>
     )

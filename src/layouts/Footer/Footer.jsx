@@ -150,7 +150,7 @@ function Footer(props) {
                       Privacy Policy
                     </Nav.Link>
                   </LinkContainer> */}
-                  <LinkContainer to="#">
+                  <LinkContainer to="/copyright">
                     <Nav.Link className=" fdeco">
                       Copyright
                     </Nav.Link>

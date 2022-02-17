@@ -7,6 +7,7 @@ import MediaCenter from "../pages/MediaCenter"
 import MediaInner from "../pages/MediaInner"
 import Insights from "../pages/Insights"
 import SolutionService from "../pages/SolutionService"
+import Copyright from "../pages/Copyright"
 
 export const routes = [
   {
@@ -69,6 +70,13 @@ export const routes = [
     name: "MediaInner",
     path: "/media-center/:slug",
     component: MediaInner,
+    isPrivate: false,
+    exact: true,
+  },
+  {
+    name: "Copyright",
+    path: "/copyright",
+    component: Copyright,
     isPrivate: false,
     exact: true,
   }

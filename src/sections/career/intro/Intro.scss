@@ -1,27 +1,51 @@
-.intro{
+.intro {
     margin-top: 3rem;
-    padding: 0 18rem;
+    padding   : 0 18rem;
+
     @media #{$sm} {
-        padding: 0rem;
+        padding   : 0rem;
         margin-top: 2rem;
     }
+
     @media #{$md} {
         padding: 0 2rem;
     }
+
     @media #{$lg} {
         padding: 0 3rem;
     }
-    .title{
-        color: $texts-color2;
-        font-size: 25px;
-        font-weight: 400;
+
+    .title {
+        color        : $texts-color2;
+        font-size    : 25px;
+        font-weight  : 400;
         margin-bottom: 1rem;
-        text-align: center;
+        text-align   : center;
     }
-    .subtitle{
-        color: $secondary-color;
-        font-size: 18px;
+
+    .subtitle {
+        color      : $secondary-color;
+        font-size  : 18px;
         font-weight: 400;
-        text-align: center;
+        text-align : center;
+    }
+}
+
+.privacy_page {
+    padding-top: 10rem;
+
+    h2 {
+        margin-bottom: 2rem;
+        text-align   : center;
+        color        : #074344;
+        font-size    : 32px;
+        font-weight  : 400;
+    }
+
+    p {
+        text-align : justify;
+        color      : #2C2C2C;
+        font-size  : 18px;
+        font-weight: 400;
     }
 }

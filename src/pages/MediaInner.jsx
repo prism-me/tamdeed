@@ -8,6 +8,7 @@ import TwitterIcon from '@material-ui/icons/Twitter';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import Facebook from "@material-ui/icons/Facebook";
 import { useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 class MediaInner extends Component {
 
@@ -121,8 +122,11 @@ class MediaInner extends Component {
                                 </Card>
                                 <div className="readArticle">
                                     <div className="readArticleLink">
-                                        {this.state.currentPage?.link && <a href={this.state.currentPage?.link}>Read the article in published platform </a>}
+                                        {console.log(this.state.currentPage,"this.state.currentPage")}
+                                        
+                                        {this.state.currentPage?.link && <a target='_blank' href={this.state.currentPage?.link}>Read the article in published platform </a>}
                                     </div>
+                                    
                                     {/* <div className="readArticleLinkIcons">
                                     <div className="shareArticle">Share this article</div>
                                     <div className="iconsMediaInnerContainer">

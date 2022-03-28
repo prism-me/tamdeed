@@ -70,11 +70,11 @@ export default function Layout(props) {
   useEffect(() => {
     // console.log()
     return history.listen((location) => {
-      if(location.pathname) {
+      if (location.pathname) {
         setCurrentLink(location.pathname)
-      } 
-    }) 
- },[history])
+      }
+    })
+  }, [history])
 
 
   const toggleDrawer = (open) => {
@@ -189,14 +189,16 @@ export default function Layout(props) {
                       toggleDrawer(false);
                     }}
                   >
-                    <button style={{
-                      background: "#2C8F8F",
-                      border: "none",
-                      color: "white",
-                      padding: "0.5rem 0rem",
-                      borderRadius: "60px",
-                      width: "100%"
-                    }}>Enquiries</button>
+                    <a href="mailto:info@tamdeed.ae"
+                      style={{
+                        background: "#2C8F8F",
+                        border: "none",
+                        color: "white",
+                        padding: "0.5rem 0rem",
+                        borderRadius: "60px",
+                        width: "100%"
+                      }}
+                      className="text-decoration-none">Enquiries</a>
                   </ListItemText>
                 </ListItem>
               </List>

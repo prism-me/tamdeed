@@ -7,8 +7,10 @@ import ti from "../../../assets/images/solutionservice/ti.png"
 import ind from "../../../assets/images/solutionservice/ind.png"
 
 export default function DataCenter(props) {
-    
+
     const { dataCenter, dataCenterSingle } = props
+
+    // console.log("data", dataCenter)
 
     return (
         dataCenter &&
@@ -26,7 +28,7 @@ export default function DataCenter(props) {
                             <p className="subtitle">
                                 {dataCenterSingle?.description}
                             </p>
-                            <div className="content-li" dangerouslySetInnerHTML={{__html: dataCenterSingle?.bullets}}></div>
+                            <div className="content-li" dangerouslySetInnerHTML={{ __html: dataCenterSingle?.bullets }}></div>
                         </Col>
                         <Col sm={5}>
                             <img src={dataCenterSingle?.avatar} alt="" className="img-fluid" />
@@ -39,6 +41,7 @@ export default function DataCenter(props) {
                     <Row>
                         {
                             dataCenter?.map((slides, index) => (
+                                index > 2 &&
                                 <Col sm={6} key={index} className={"mb-4"}>
                                     <h3 className={"datasubtitle"}>
                                         {slides.title}
@@ -51,7 +54,7 @@ export default function DataCenter(props) {
                                             <img src={slides.avatar} alt="" className="img-fluid mgImg" />
                                         </Col>
                                         <Col sm={12} className="d-flex flex-column justify-content-center align-items-start">
-                                            <div className="content-li" dangerouslySetInnerHTML={{__html: dataCenterSingle?.bullets}}></div>
+                                            <div className="content-li" dangerouslySetInnerHTML={{ __html: slides?.bullets }}></div>
                                         </Col>
                                     </Row>
                                 </Col>

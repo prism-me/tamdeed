@@ -11,7 +11,7 @@ export default function SolutionServiceBanner() {
             >
                 <Hidden smDown>
                     <div className="d-flex justify-content-end align-items-center">
-                        <button className="bannerBtn">Enquiries</button>
+                        <a href="mailto:info@tamdeed.ae" className="bannerBtn text-decoration-none">Enquiries</a>
                     </div>
                 </Hidden>
                 <div className="hero-text">

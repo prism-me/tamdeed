@@ -12,20 +12,23 @@ class SolutionService extends Component {
         super(props);
         this.state = {};
     }
-    
-    componentDidMount() { 
-        this.getAllServicesAndSols()
-     }
 
-     getAllServicesAndSols = () => {
+    componentDidMount() {
+        this.getAllServicesAndSols()
+    }
+
+    getAllServicesAndSols = () => {
         API.get(`/solutions`)
             .then((response) => {
                 // debugger;
                 if (response.status === 200 || response.status === 201) {
-                    const dataCenter = response.data.data?.filter((element, index) => { if( 2 < index && index < 7){ return true} return false; } )
+                    const dataCenter = response.data.data?.filter((element) =>
+                        element.type === "solutions"
+                        // if (2 < index && index < 7) { return true } return false;
+                    )
                     const dataCenterSingle = response.data.data[2];
-                    const services = response.data.data?.filter((element, index) => { return index > 6 } )
-                    this.setState({solutions : response.data.data, dataCenter, services, dataCenterSingle});
+                    const services = response.data.data?.filter((element) => element.type === "services")
+                    this.setState({ solutions: response.data.data, dataCenter, services, dataCenterSingle });
                 }
             })
             .catch((err) => console.log(err));
@@ -36,7 +39,7 @@ class SolutionService extends Component {
             <div>
                 <Banner />
                 <SolutionPillars />
-                <ManagedService managedService={this.state.solutions && this.state.solutions.length > 0 ? this.state.solutions[0] : "" } />
+                <ManagedService managedService={this.state.solutions && this.state.solutions.length > 0 ? this.state.solutions[0] : ""} />
                 <TelecomNetworking telecomNetworking={this.state.solutions && this.state.solutions.length > 0 ? this.state.solutions[1] : ""} />
                 <DataCenter dataCenter={this.state.dataCenter && this.state.dataCenter.length > 0 ? this.state.dataCenter : []} dataCenterSingle={this.state.dataCenterSingle ? this.state.dataCenterSingle : ""} />
                 <TamdeedService services={this.state.services && this.state.services.length > 0 ? this.state.services : []} />

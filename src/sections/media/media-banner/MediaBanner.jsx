@@ -8,12 +8,12 @@ export default function MediaBanner() {
     return (
         <div className={"mediaBanner"}>
             <div className="hero-image mediaCenterHeroImg"
-            style={{ background: `linear-gradient(#28030312 , #58648169), url(${mediabanner})`, backgroundSize: "cover" }}
+                style={{ background: `linear-gradient(#28030312 , #58648169), url(${mediabanner})`, backgroundSize: "cover" }}
 
             >
                 <Hidden smDown>
                     <div className="d-flex justify-content-end align-items-center">
-                        <button className="bannerBtn">Enquiries</button>
+                        <a href="mailto:info@tamdeed.ae" className="bannerBtn text-decoration-none">Enquiries</a>
                     </div>
                 </Hidden>
                 <div className="hero-text">
@@ -26,9 +26,9 @@ export default function MediaBanner() {
                 </div>
                 {/* <Hidden smDown>
                     <div className="d-flex justify-content-end align-items-center"> */}
-                        {/* <img src={mediab2} alt={"bannerImg2"} className="bannerImg2" />
+                {/* <img src={mediab2} alt={"bannerImg2"} className="bannerImg2" />
                         <img src={mediabanner} alt={"bannerImg"} className="bannerImg" /> */}
-                    {/* </div>
+                {/* </div>
                 </Hidden> */}
             </div>
         </div>

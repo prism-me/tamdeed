@@ -6,10 +6,10 @@ import { Alert } from "react-bootstrap"
 
 const ContactForm = (props) => {
 
-    let initialObject = {name:"",email:"",phone:"",subject:"",message:""}
-    const [alertData, setAlertData] = useState({varient:"success",alertText:"",show:false});
+    let initialObject = { name: "", email: "", phone: "", subject: "", message: "" }
+    const [alertData, setAlertData] = useState({ varient: "success", alertText: "", show: false });
     const [formData, setFormData] = useState(initialObject);
-    const [formError, setformError] = useState({name:false,email:false,phone:false,message:false});
+    const [formError, setformError] = useState({ name: false, email: false, phone: false, message: false });
 
     const handleChange = (e) => {
         setFormData({
@@ -21,42 +21,42 @@ const ContactForm = (props) => {
     const handleSubmit = (event) => {
 
         event.preventDefault();
-        let upFormError = {...formError}
-        if(!formData.name){
+        let upFormError = { ...formError }
+        if (!formData.name) {
             upFormError.name = true
         } else {
             upFormError.name = false
         }
-        if(!formData.email.match(
+        if (!formData.email.match(
             /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-          )){
+        )) {
             upFormError.email = true
-        }else {
+        } else {
             upFormError.email = false
         }
 
-        if(!formData.phone){
+        if (!formData.phone) {
             upFormError.phone = true
-        }else {
+        } else {
             upFormError.phone = false
         }
 
-        if(!formData.message){
+        if (!formData.message) {
             upFormError.message = true
-        }else {
+        } else {
             upFormError.message = false
         }
 
         setformError(upFormError)
-        if(upFormError.email || upFormError.phone || upFormError.message || upFormError.name) {
+        if (upFormError.email || upFormError.phone || upFormError.message || upFormError.name) {
             return false;
         }
 
         API.post('/contact-us', formData).then((res) => {
-            setAlertData({varient:"success",show: true,alertText:"Data submitted Successfully"})
+            setAlertData({ varient: "success", show: true, alertText: "Data submitted Successfully" })
             setFormData(initialObject)
-          })
-          .catch((err) => setAlertData({varient:"danger",show: true,alertText:"Something went wrong please try later"}));
+        })
+            .catch((err) => setAlertData({ varient: "danger", show: true, alertText: "Something went wrong please try later" }));
 
     }
 
@@ -86,17 +86,17 @@ const ContactForm = (props) => {
                                     </Col> */}
                                     <Col sm={6}>
                                         <Form.Group controlId="name" className="mb-3">
-                                            <Form.Control className='contact-usForm' placeholder="Name*" name="name" value={formData.name} onChange={handleChange}  style={formError.name ? {border: "1px solid red"} : {}} />
+                                            <Form.Control className='contact-usForm' placeholder="Name*" name="name" value={formData.name} onChange={handleChange} style={formError.name ? { border: "1px solid red" } : {}} />
                                         </Form.Group>
                                     </Col>
                                     <Col sm={6}>
                                         <Form.Group controlId="formEmail" className="mb-3">
-                                            <Form.Control className='contact-usForm' placeholder="Email*" name="email" value={formData.email} onChange={handleChange} style={formError.email ? {border: "1px solid red"} : {}} />
+                                            <Form.Control className='contact-usForm' placeholder="Email*" name="email" value={formData.email} onChange={handleChange} style={formError.email ? { border: "1px solid red" } : {}} />
                                         </Form.Group>
                                     </Col>
                                     <Col sm={6}>
                                         <Form.Group controlId="formPhone" className="mb-3">
-                                            <Form.Control className='contact-usForm' placeholder="Phone*" name="phone" value={formData.phone} onChange={handleChange} style={formError.phone ? {border: "1px solid red"} : {}} />
+                                            <Form.Control className='contact-usForm' placeholder="Phone*" name="phone" value={formData.phone} onChange={handleChange} style={formError.phone ? { border: "1px solid red" } : {}} />
                                         </Form.Group>
                                     </Col>
                                     <Col sm={6}>
@@ -111,13 +111,13 @@ const ContactForm = (props) => {
                                                 // style={{ resize: "none" }}
                                                 name="message" value={formData.message}
                                                 onChange={handleChange}
-                                                style={formError.message ? {border: "1px solid red",resize: "none"} : {resize: "none"}}
+                                                style={formError.message ? { border: "1px solid red", resize: "none" } : { resize: "none" }}
                                             />
                                         </Form.Group>
                                     </Col>
                                 </Row>
-                                {alertData.show ? 
-                                    <Alert variant={alertData.varient} show={alertData.show} onClose={() => setAlertData({...alertData,show:false})} dismissible>
+                                {alertData.show ?
+                                    <Alert variant={alertData.varient} show={alertData.show} onClose={() => setAlertData({ ...alertData, show: false })} dismissible>
                                         {alertData.alertText}
                                     </Alert>
                                     :
@@ -125,7 +125,7 @@ const ContactForm = (props) => {
                                         <button className="btnStyle">Submit <ChevronRightIcon /></button>
                                     </div>
                                 }
-                                
+
                             </Form>
                         </Col>
                         <Col sm>
@@ -162,8 +162,8 @@ const ContactForm = (props) => {
                                             </a>
                                         </p>
                                         <p className={"email"}>
-                                            <a href="mailto:ict@tamdeed.ae">
-                                                Email: ict@tamdeed.ae
+                                            <a href="mailto:info@tamdeed.ae">
+                                                Email: info@tamdeed.ae
                                             </a>
                                         </p>
                                     </div>

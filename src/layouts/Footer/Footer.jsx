@@ -9,6 +9,7 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 import Facebook from "@material-ui/icons/Facebook";
 import { API } from "../../http/API";
 import { Alert } from "react-bootstrap"
+import pr1 from "../../assets/images/reference-projects/pr1.png"
 
 
 function Footer(props) {
@@ -16,52 +17,52 @@ function Footer(props) {
   const [footerContent, setFooterContent] = useState({});
   const [email, setEmail] = useState("");
   const [recieveEmail, setRecieveEmail] = useState(false);
-  const [alertData, setAlertData] = useState({varient:"success",alertText:"",show:false});
+  const [alertData, setAlertData] = useState({ varient: "success", alertText: "", show: false });
 
   useEffect(() => {
     API.get(`/pages`)
-        .then((response) => {
-            // debugger;
-            if (response.status === 200 || response.status === 201) {
-                let currentPage = response.data.data.find((x) => x.slug === "footer");
+      .then((response) => {
+        // debugger;
+        if (response.status === 200 || response.status === 201) {
+          let currentPage = response.data.data.find((x) => x.slug === "footer");
 
-                API.get(`/all_sections/${currentPage._id}`)
-                    .then((res) => {
+          API.get(`/all_sections/${currentPage._id}`)
+            .then((res) => {
 
-                        if(res.data.data.length > 0){
-                          setFooterContent(res.data.data[0]);
-                        }
-                        
-                    })
-                    .catch((err) => console.log(err));
-            }
-        })
-        .catch((err) => console.log(err));
+              if (res.data.data.length > 0) {
+                setFooterContent(res.data.data[0]);
+              }
+
+            })
+            .catch((err) => console.log(err));
+        }
+      })
+      .catch((err) => console.log(err));
   }, []);
 
   const sendEmail = () => {
-    if(!email.match(
+    if (!email.match(
       /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-    )){
-      setAlertData({varient:"danger",alertText:"valid Email is required",show: true})
+    )) {
+      setAlertData({ varient: "danger", alertText: "valid Email is required", show: true })
       return false;
     }
 
     let data = {
-      email:email
+      email: email
     }
 
-    if(!recieveEmail){
-      setAlertData({varient:"danger",show: true,alertText:"Aagree to receive emails first"})
+    if (!recieveEmail) {
+      setAlertData({ varient: "danger", show: true, alertText: "Aagree to receive emails first" })
       return false;
     }
-    
-    API.post('/query',data)
-    .then((res) => {
-      setAlertData({varient:"success",show: true,alertText:"Email Recieved Successfully",permission:false})
-      setEmail("");
-    })
-    .catch((err) => console.log(err));
+
+    API.post('/query', data)
+      .then((res) => {
+        setAlertData({ varient: "success", show: true, alertText: "Email Recieved Successfully", permission: false })
+        setEmail("");
+      })
+      .catch((err) => console.log(err));
   }
 
   const handleChange = (e) => {
@@ -102,7 +103,7 @@ function Footer(props) {
                     </a>
                   </span>
                   <span className="socialIcons">
-                  <a href={footerContent?.content?.instagram} target="_blank">
+                    <a href={footerContent?.content?.instagram} target="_blank">
                       <InstagramIcon className={"iconSize"} />
                     </a>
                   </span>
@@ -192,9 +193,13 @@ function Footer(props) {
                     <Form.Check type="checkbox" label="I agree to receive emails from Tamdeed" onChange={handleChange} />
                   </Form.Group>
                 </Form>
-                <Alert variant={alertData.varient} show={alertData.show} onClose={() => setAlertData({...alertData,show:false})} dismissible>
-                    {alertData.alertText}
+                <Alert variant={alertData.varient} show={alertData.show} onClose={() => setAlertData({ ...alertData, show: false })} dismissible>
+                  {alertData.alertText}
                 </Alert>
+
+                <div className="d-flex justify-content-end align-items-center mt-3">
+                  <img src={pr1} alt="etisalat logo" />
+                </div>
               </Col>
             </Row>
           </Container>

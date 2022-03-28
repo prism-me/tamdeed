@@ -10,15 +10,15 @@ export default function Banner(props) {
     const slidesData = [
         {
             title: "Tamdeed Projects",
-            subtitle: "Making communication happen."
+            subtitle: "Modernizing your infrastructure"
         },
         {
             title: "Tamdeed Projects",
-            subtitle: "Making communication happen."
+            subtitle: "Modernizing your infrastructure"
         },
         {
             title: "Tamdeed Projects",
-            subtitle: "Making communication happen."
+            subtitle: "Modernizing your infrastructure"
         },
     ];
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -48,7 +48,7 @@ export default function Banner(props) {
                         >
                             <Hidden smDown>
                                 <div className="d-flex justify-content-end align-items-center">
-                                    <button className="bannerBtn">Enquiries</button>
+                                    <a href="mailto:info@tamdeed.ae" className="bannerBtn text-decoration-none">Enquiries</a>
                                 </div>
                             </Hidden>
                             <div className="hero-text">

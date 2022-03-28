@@ -9,11 +9,11 @@ export default function InsightsBanner() {
     return (
         <div className={"insights"}>
             <div className="hero-image"
-            style={{ background: `linear-gradient(#28030312 , #58648169), url(${Insights})` }}
+                style={{ background: `linear-gradient(#28030312 , #58648169), url(${Insights})` }}
             >
                 <Hidden smDown>
                     <div className="d-flex justify-content-end align-items-center">
-                        <button className="bannerBtn">Enquiries</button>
+                        <a href="mailto:info@tamdeed.ae" className="bannerBtn text-decoration-none">Enquiries</a>
                     </div>
                 </Hidden>
                 <div className="hero-text">

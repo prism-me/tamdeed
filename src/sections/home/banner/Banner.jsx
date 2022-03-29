@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
-import homeBanner1 from "../../../assets//images/banners/1.gif"
-import homeBanner2 from "../../../assets//images/banners/2.gif"
-import homeBanner3 from "../../../assets//images/banners/3.gif"
 
 import { Hidden } from "@material-ui/core"
 
@@ -12,17 +9,17 @@ export default function Banner(props) {
     const { banner } = props
     const slidesData = [
         {
-            img: homeBanner1,
+            img: "https://tamdeed.b-cdn.net/gif/1.gif",
             title: "Tamdeed Projects",
             subtitle: "Modernizing your infrastructure"
         },
         {
-            img: homeBanner2,
+            img: "https://tamdeed.b-cdn.net/gif/2.gif",
             title: "Tamdeed Projects",
             subtitle: "Modernizing your infrastructure"
         },
         {
-            img: homeBanner3,
+            img: "https://tamdeed.b-cdn.net/gif/3.gif",
             title: "Tamdeed Projects",
             subtitle: "Modernizing your infrastructure"
         },

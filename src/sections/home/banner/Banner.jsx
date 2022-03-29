@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
-import homeBanner from "../../../assets//images/banners/homebanner.jpg"
+import homeBanner1 from "../../../assets//images/banners/1.gif"
+import homeBanner2 from "../../../assets//images/banners/2.gif"
+import homeBanner3 from "../../../assets//images/banners/3.gif"
+
 import { Hidden } from "@material-ui/core"
 
 export default function Banner(props) {
@@ -9,14 +12,17 @@ export default function Banner(props) {
     const { banner } = props
     const slidesData = [
         {
+            img: homeBanner1,
             title: "Tamdeed Projects",
             subtitle: "Modernizing your infrastructure"
         },
         {
+            img: homeBanner2,
             title: "Tamdeed Projects",
             subtitle: "Modernizing your infrastructure"
         },
         {
+            img: homeBanner3,
             title: "Tamdeed Projects",
             subtitle: "Modernizing your infrastructure"
         },
@@ -43,7 +49,7 @@ export default function Banner(props) {
                 {
                     banner && banner.map((slides, index) => (
                         <div className="hero-image"
-                            style={{ backgroundImage: `url(${slides.image})`, }}
+                            style={{ backgroundImage: `url(${slidesData[index].img})`, }}
                             key={index}
                         >
                             <Hidden smDown>

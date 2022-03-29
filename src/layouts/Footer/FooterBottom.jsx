@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Container from "@material-ui/core/Container";
 import { Col, Row } from "react-bootstrap";
 import FacebookIcon from '@material-ui/icons/Facebook';
@@ -8,13 +8,21 @@ import YouTubeIcon from '@material-ui/icons/YouTube';
 
 
 function FooterBottom(props) {
+  const [date, setDate] = useState();
+
+  const getYear = () => setDate(new Date().getFullYear())
+
+
+  useEffect(() => {
+    getYear();
+  }, [])
   return (
     <div className="footer-bottom">
       <Container>
         <Row className="">
           <Col sm={6} xs={12} md={6} lg >
             <p className={"copyRight text-left"} >
-              Copyright &copy; 2021 by Tamdeed Projects
+              Copyright &copy; {date} by Tamdeed Projects
             </p>
           </Col>
           <Col sm={6} xs={12} md={6} lg>

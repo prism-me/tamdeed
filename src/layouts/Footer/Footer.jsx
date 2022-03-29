@@ -9,7 +9,7 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 import Facebook from "@material-ui/icons/Facebook";
 import { API } from "../../http/API";
 import { Alert } from "react-bootstrap"
-import pr1 from "../../assets/images/reference-projects/pr1.png"
+import etisalat from "../../assets/images/logo/etisalat.png"
 
 
 function Footer(props) {
@@ -197,8 +197,8 @@ function Footer(props) {
                   {alertData.alertText}
                 </Alert>
 
-                <div className="d-flex justify-content-end align-items-center mt-3">
-                  <img src={pr1} alt="etisalat logo" />
+                <div className="d-flex justify-content-start align-items-center mt-3">
+                  <img src={etisalat} style={{ width: "100px" }} alt="etisalat logo" />
                 </div>
               </Col>
             </Row>

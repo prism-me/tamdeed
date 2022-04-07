@@ -10,6 +10,7 @@ import Facebook from "@material-ui/icons/Facebook";
 import { API } from "../../http/API";
 import { Alert } from "react-bootstrap"
 import etisalat from "../../assets/images/logo/etisalat.png"
+import eandlogo from "../../assets/images/logo/eandlogo.png"
 
 
 function Footer(props) {
@@ -198,6 +199,7 @@ function Footer(props) {
                 </Alert>
 
                 <div className="d-flex justify-content-start align-items-center mt-3">
+                  <img src={eandlogo} style={{ width: "100px", marginRight: "1rem" }} alt="eandlogo" />
                   <img src={etisalat} style={{ width: "100px" }} alt="etisalat logo" />
                 </div>
               </Col>

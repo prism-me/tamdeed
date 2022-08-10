@@ -201,6 +201,7 @@ function Footer(props) {
                 <div className="d-flex justify-content-start align-items-center mt-3">
                   <img src={eandlogo} style={{ width: "100px", marginRight: "1rem" }} alt="eandlogo" />
                   <img src={etisalat} style={{ width: "100px" }} alt="etisalat logo" />
+                  {/* add etisalat logo */}
                 </div>
               </Col>
             </Row>

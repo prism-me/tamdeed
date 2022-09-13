@@ -20,9 +20,9 @@ export default function MediaBanner() {
                     <h1 className={"banner-title"}>
                         Media Center
                     </h1>
-                    <p className="banner-subtitle">
+                    {/* <p className="banner-subtitle">
                         Lorem Ipsum Dolor Sit Amet
-                    </p>
+                    </p> */}
                 </div>
                 {/* <Hidden smDown>
                     <div className="d-flex justify-content-end align-items-center"> */}

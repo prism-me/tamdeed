@@ -54,12 +54,12 @@ function MainNavbar(props) {
                 <Nav.Link>Media Center</Nav.Link>
               </LinkContainer>
             </Nav>
-            <div class="box">
-              <div class="container-2">
-                <span class="icon"><SearchIcon /></span>
+            {/* <div className="box">
+              <div className="container-2">
+                <span className="icon"><SearchIcon /></span>
                 <input type="search" id="search" placeholder="Search..." />
               </div>
-            </div>
+            </div> */}
           </Navbar.Collapse>
         </Navbar>
       </div>

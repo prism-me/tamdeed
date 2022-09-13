@@ -64,7 +64,7 @@ class About extends Component {
                 <Values />
                 <Management executiveManagement={this.state.content?.executiveManagement ? this.state.content.executiveManagement : ""}/>
                 <BusinessUnits />
-                <Gtm />
+                {/* <Gtm /> */}
                 <JoinTamdeed />
                 <Partners />
             </div>

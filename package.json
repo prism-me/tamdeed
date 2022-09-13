@@ -58,13 +58,15 @@
     "scroll-to-element": "^2.0.3",
     "simple-react-lightbox": "^3.6.6",
     "video-react": "^0.14.1",
-    "web-vitals": "^1.0.1"
+    "web-vitals": "^1.0.1",
+    "webpack-dev-server": "^4.11.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "serve": "webpack serve"
   },
   "eslintConfig": {
     "extends": [
@@ -83,5 +85,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "webpack-cli": "^4.10.0"
   }
 }

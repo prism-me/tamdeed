@@ -22,23 +22,20 @@ export default function MediaCenter() {
 
     const getAllMedia = () => {
 
-        API.get(`/media-type/Latest Updates`, {
-        }).then((response) => {
+        API.get(`/media-type/latest-updates`).then((response) => {
             let data = {...response?.data?.message}
             setLatetUpdates(data?.data)
             setMedia(data?.data)
 
         });
 
-        API.get(`/media-type/In the News`, {
-        }).then((response) => {
+        API.get(`/media-type/In-the-News`).then((response) => {
             let data = {...response?.data?.message}
             setInTheNews(data?.data)
 
         });
         
-        API.get(`/media-type/Hosted Events`, {
-        }).then((response) => {
+        API.get(`/media-type/Hosted-Events`).then((response) => {
             let data = {...response?.data?.message}
             setHostedEvents( data?.data )
 

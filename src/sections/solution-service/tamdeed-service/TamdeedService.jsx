@@ -12,7 +12,7 @@ export default function TamdeedService(props) {
     title: services[6]?.title,
   };
 
-  console.log("services ::", services);
+  //   console.log("services ::", services);
 
   return (
     services && (

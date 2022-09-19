@@ -199,8 +199,18 @@ function Footer(props) {
                 </Alert>
 
                 <div className="d-flex justify-content-start align-items-center mt-3">
-                  <img src={eandlogo} style={{ width: "100px", marginRight: "1rem" }} alt="eandlogo" />
-                  <img src={etisalat} style={{ width: "100px" }} alt="etisalat logo" />
+                  {
+                    // console.log(footerContent?.content?.footerPartnersLogo[0].footerlogo)
+
+                    footerContent?.content?.footerPartnersLogo?.map(data => (
+
+                      <a href={data?.logoUrl} >
+                        <img src={data.footerlogo} style={{ width: "100px", marginRight: "1rem" }} alt="Tamdeed Partner" />
+                      </a>
+                    ))
+                  }
+
+                  {/* <img src={etisalat} style={{ width: "100px" }} alt="etisalat logo" /> */}
                   {/* add etisalat logo */}
                 </div>
               </Col>

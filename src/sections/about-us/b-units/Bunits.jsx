@@ -75,10 +75,10 @@ const Bunits = (props) => {
                                             </p>
                                             <hr className="hrStyle" />
                                             <div className="d-flex justify-content-around align-items-center">
-                                                <a href="#" className='iconStyle'> <Facebook /> </a>
-                                                <a href="#" className='iconStyle'> <TwitterIcon /> </a>
-                                                <a href="#" className='iconStyle'> <LinkedInIcon /> </a>
-                                                <a href="#" className='iconStyle'> <InstagramIcon /> </a>
+                                                <a href={slides.fb_link} className='iconStyle'> <Facebook /> </a>
+                                                <a href={slides.twiter_link} className='iconStyle'> <TwitterIcon /> </a>
+                                                <a href={slides.linkedin_link} className='iconStyle'> <LinkedInIcon /> </a>
+                                                <a href={slides.insta_link} className='iconStyle'> <InstagramIcon /> </a>
                                             </div>
                                         </div>
                                     </div>

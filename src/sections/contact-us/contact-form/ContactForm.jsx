@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState ,useRef } from 'react';
 import { Container, Row, Col, Form } from "react-bootstrap"
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import { API } from "../../../http/API";
@@ -10,7 +10,7 @@ const ContactForm = (props) => {
     const [alertData, setAlertData] = useState({ varient: "success", alertText: "", show: false });
     const [formData, setFormData] = useState(initialObject);
     const [formError, setformError] = useState({ name: false, email: false, phone: false, message: false });
-
+    const [isLoading, setIsLoading] = useState(false);
     const handleChange = (e) => {
         setFormData({
             ...formData,
@@ -51,12 +51,20 @@ const ContactForm = (props) => {
         if (upFormError.email || upFormError.phone || upFormError.message || upFormError.name) {
             return false;
         }
-
+        
+        setIsLoading(true);
+        
         API.post('/contact-us', formData).then((res) => {
             setAlertData({ varient: "success", show: true, alertText: "Data submitted Successfully" })
             setFormData(initialObject)
+            setIsLoading(false);
         })
-            .catch((err) => setAlertData({ varient: "danger", show: true, alertText: "Something went wrong please try later" }));
+        .catch((err) => {
+            setAlertData({ varient: "danger", show: true, alertText: "Something went wrong please try later" });
+            
+            setIsLoading(false);
+            }
+    );
 
     }
 
@@ -116,13 +124,23 @@ const ContactForm = (props) => {
                                         </Form.Group>
                                     </Col>
                                 </Row>
+                                { isLoading && 
+                                // (isLoading === true) ? "disabled" : ""   
+                                    <div className="text-center">
+                                    <div class="spinner-border" role="status"></div>
+                                    </div>
+                                } 
                                 {alertData.show ?
                                     <Alert variant={alertData.varient} show={alertData.show} onClose={() => setAlertData({ ...alertData, show: false })} dismissible>
                                         {alertData.alertText}
                                     </Alert>
                                     :
                                     <div className="d-flex justify-content-center align-items-center">
-                                        <button className="btnStyle">Submit <ChevronRightIcon /></button>
+
+                                         <button 
+                                         className="btnStyle"
+                                         >Submit <ChevronRightIcon /></button>
+                                       
                                     </div>
                                 }
 

@@ -27,7 +27,7 @@ function FooterBottom(props) {
           </Col>
           <Col sm={6} xs={12} md={6} lg>
             <p className={"socialIcon text-right"}>
-              Designed by Prism
+              Designed & Developed by <a target="_blank" href="https://www.prism-me.com">Prism</a>
             </p>
           </Col>
         </Row>

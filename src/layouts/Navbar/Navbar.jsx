@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import { Hidden } from "@material-ui/core";
 import { LinkContainer } from "react-router-bootstrap";
@@ -6,8 +6,34 @@ import { CgMenuLeftAlt } from "react-icons/cg";
 import logo from "../../assets/images/logo/logo.png";
 import SearchIcon from '@material-ui/icons/Search';
 import { HashLink } from "react-router-hash-link"
+import { API } from "../../http/API";
+
 
 function MainNavbar(props) {
+
+  const [headerLogoDetail, setHeaderLogoDetail] = useState();
+
+  useEffect(() => {
+    API.get(`/pages`)
+      .then((response) => {
+        // debugger;
+        if (response.status === 200 || response.status === 201) {
+          let currentPage = response.data.data.find((x) => x.slug === "header");
+
+          API.get(`/all_sections/${currentPage._id}`)
+            .then((res) => {
+
+              if (res.data.data.length > 0) {
+                setHeaderLogoDetail(res.data.data[0]);
+              }
+
+            })
+            .catch((err) => console.log(err));
+        }
+      })
+      .catch((err) => console.log(err));
+  }, []);
+
   return (
     <>
       <div className="navbar-wrap">
@@ -16,10 +42,10 @@ function MainNavbar(props) {
             <Navbar.Brand>
               <Hidden smDown>
                 <Navbar.Brand>
-                  <img src={logo} alt="Tamdeed-logo" />
+                  <img src={headerLogoDetail?.content?.hedaerLogo} alt="Tamdeed-logo" />
                   <h2
                     style={{ fontSize: "13.5px", color: "#679D74", marginTop: "-0.6rem" }}
-                  >an Etisalat Services Holding Company</h2>
+                  >{headerLogoDetail?.content?.hedaerLogoText}</h2>
                 </Navbar.Brand>
               </Hidden>
               <Hidden mdUp>
